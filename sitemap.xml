@@ -3,18 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
-    <priority>0</priority>
+    <loc>http://example.org/blog/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://example.org/blog/devops/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/devops/jenkins-host/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/devops/jenkins-plugin-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/devops/jenkins-plugin-develope/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/network/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/network/proxy/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/scm/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/scm/git-checkout/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/scm/git-submodule/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/scm/git/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/opensource/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/translation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/translation/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/translation/jenkins/releasing-experimental-updates/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://example.org/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
   </url>
   
 </urlset>
