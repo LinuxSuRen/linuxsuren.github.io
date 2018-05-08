@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SuRenPi</title>
-    <link>http://example.org/opensource/</link>
+    <link>https://linuxsuren.github.io/opensource/</link>
     <description>Recent content on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://example.org/opensource/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linuxsuren.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

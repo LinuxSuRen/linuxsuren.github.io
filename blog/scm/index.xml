@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SuRenPi</title>
-    <link>http://example.org/blog/scm/</link>
+    <link>https://linuxsuren.github.io/blog/scm/</link>
     <description>Recent content on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://example.org/blog/scm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linuxsuren.github.io/blog/scm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/blog/scm/git-checkout/</link>
+      <link>https://linuxsuren.github.io/blog/scm/git-checkout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/scm/git-checkout/</guid>
+      <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
       <description> checkout 该命令可以切换分支、新建分支等。
 切换分支 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
  场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  </description>
@@ -23,19 +23,20 @@
     
     <item>
       <title></title>
-      <link>http://example.org/blog/scm/git-submodule/</link>
+      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/scm/git-submodule/</guid>
-      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init</description>
+      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
+get submodule update 更新子模块代码</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/blog/scm/git/</link>
+      <link>https://linuxsuren.github.io/blog/scm/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/scm/git/</guid>
+      <guid>https://linuxsuren.github.io/blog/scm/git/</guid>
       <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
 这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
 git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：

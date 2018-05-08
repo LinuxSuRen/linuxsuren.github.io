@@ -20,7 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/scm/index.xml">
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/configuration/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -31,7 +31,7 @@
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/scm/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/configuration/" />
 
 
 
@@ -152,7 +152,7 @@
           
         </h1>
         <div class=" mid-gray f5 f4-l">
-          <p>SCM</p>
+          <p>介绍有关配置的问题</p>
 
         </div>
       </article>
@@ -169,17 +169,15 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/scm/git-checkout/" class="link primary-color dim"></a>
+      <a href="/blog/configuration/ini/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-           checkout 该命令可以切换分支、新建分支等。
-切换分支 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
- 场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  
+          
       
 
-        <a href="/blog/scm/git-checkout/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/configuration/ini/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -196,16 +194,15 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/scm/git-submodule/" class="link primary-color dim"></a>
+      <a href="/blog/configuration/toml/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
-get submodule update 更新子模块代码
+          TOML TOML(Tom&rsquo;s Obvious, Minimal Language) origin
       
 
-        <a href="/blog/scm/git-submodule/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/configuration/toml/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -222,19 +219,15 @@ get submodule update 更新子模块代码
     
 
     <h1 class="near-black f3">
-      <a href="/blog/scm/git/" class="link primary-color dim"></a>
+      <a href="/blog/configuration/yaml/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
-这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
-git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
-git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
-最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。
+          
       
 
-        <a href="/blog/scm/git/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/configuration/yaml/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

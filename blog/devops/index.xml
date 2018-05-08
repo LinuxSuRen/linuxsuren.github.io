@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SuRenPi</title>
-    <link>http://example.org/blog/devops/</link>
+    <link>https://linuxsuren.github.io/blog/devops/</link>
     <description>Recent content on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://example.org/blog/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linuxsuren.github.io/blog/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/blog/devops/jenkins-host/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/devops/jenkins-host/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-host/</guid>
       <description>本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
 提交请求 详细阅读托管要求
@@ -28,24 +28,38 @@ mvn release:prepare release:perform</description>
     
     <item>
       <title></title>
-      <link>http://example.org/blog/devops/jenkins-plugin-debug/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/devops/jenkins-plugin-debug/</guid>
-      <description>Jenkins 插件调试 运行 mvn hpi:run
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</guid>
+      <description>Jenkins 插件调试 运行 在 war 目录下运行：
+mvn hpi:run
+mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_hOME=. 需要在目录 war 下运行，并保证没有 work 目录
 跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
 mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
 指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
+mvn hpi:run -Djenkins.install.runSetupWizard=true
 参考 maven-hpi-plugin</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/blog/devops/jenkins-plugin-develope/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/devops/jenkins-plugin-develope/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</guid>
       <description>Jenkins 插件开发 参考 Extend Jenkins</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/</guid>
+      <description>启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口</description>
     </item>
     
   </channel>
