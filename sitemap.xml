@@ -7,6 +7,18 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/codequality/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/codequality/sonarqube/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/configuration/</loc>
   </url>
   
@@ -31,7 +43,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</loc>
   </url>
   
   <url>
@@ -43,7 +67,39 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/minikube/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-daemon/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/dockerfile/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/document/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</loc>
   </url>
   
   <url>
@@ -55,11 +111,43 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/grep/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/find/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/prompting/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/service/</loc>
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/split/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/wget/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/telnet/</loc>
   </url>
   
   <url>

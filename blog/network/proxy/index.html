@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.40-DEV" />
+     <meta name="generator" content="Hugo 0.41" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -28,13 +28,14 @@
   }
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
+<meta property="og:description" content=" 代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
 pip install shadowsocks
 sudo pip install shadowsocks --upgrade
 使用 sudo sslocal -c shadowsocks.json -d start
 polipo 安装 sudo apt-get install polipo
 brew install polip
-使用 polipo socksParentProxy=127.0.0.1:1080" />
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/network/proxy/" />
 
@@ -54,30 +55,32 @@ brew install polip
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
+<meta itemprop="description" content=" 代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
 pip install shadowsocks
 sudo pip install shadowsocks --upgrade
 使用 sudo sslocal -c shadowsocks.json -d start
 polipo 安装 sudo apt-get install polipo
 brew install polip
-使用 polipo socksParentProxy=127.0.0.1:1080">
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  ">
 
 
 
-<meta itemprop="wordCount" content="35">
+<meta itemprop="wordCount" content="44">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
+<meta name="twitter:description" content=" 代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
 pip install shadowsocks
 sudo pip install shadowsocks --upgrade
 使用 sudo sslocal -c shadowsocks.json -d start
 polipo 安装 sudo apt-get install polipo
 brew install polip
-使用 polipo socksParentProxy=127.0.0.1:1080"/>
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  "/>
 
 
 
@@ -216,6 +219,16 @@ brew install polip
 <h2 id="使用-1">使用</h2>
 
 <p>polipo socksParentProxy=127.0.0.1:1080</p>
+
+<h2 id="配置终端的代理">配置终端的代理</h2>
+
+<pre><code>HTTP_PROXY=http://127.0.0.1:8123
+HTTPS_PROXY=http://127.0.0.1:8123
+SOCKS_PROXY=socks5://127.0.0.1:1080
+no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*,
+
+export HTTP_PROXY HTTPS_PROXY no_proxy
+</code></pre>
 
 </div>
 

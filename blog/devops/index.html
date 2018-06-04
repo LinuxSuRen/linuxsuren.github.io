@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.40-DEV" />
+     <meta name="generator" content="Hugo 0.41" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -201,6 +201,57 @@ mvn release:prepare release:perform
     
 
     <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins-pipeline-declarative/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          
+      
+
+        <a href="/blog/devops/jenkins-pipeline-declarative/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins-pipeline-scripted/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+           流水线 本文介绍 Jenkins 的脚本式流水线。
+触发器 node('local') { echo 'hello' } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '10' ) ), pipelineTriggers([ cron('H 3,12,17 * * *'), scm('H 3,12,17 * * *') ]) ])  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  
+      
+
+        <a href="/blog/devops/jenkins-pipeline-scripted/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/devops/jenkins-plugin-debug/" class="link primary-color dim"></a>
     </h1>
 
@@ -234,12 +285,44 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
 
     <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins-plugin-dev-build/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+           构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 
+      
+
+        <a href="/blog/devops/jenkins-plugin-dev-build/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/devops/jenkins-plugin-develope/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          Jenkins 插件开发 参考 Extend Jenkins
+          Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+参考 Extend Jenkins
       
 
         <a href="/blog/devops/jenkins-plugin-develope/" class="f6 mt2 db link primary-color dim">
@@ -269,6 +352,86 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口
       
 
         <a href="/blog/devops/jenkins/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/k8s/apiserver/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+           ApiServer 
+      
+
+        <a href="/blog/devops/k8s/apiserver/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/k8s/kuberctl/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context
+      
+
+        <a href="/blog/devops/k8s/kuberctl/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/k8s/minikube/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
+然后，添加可执行权限并移动到执行目录下：
+chmodd u+x minikube-linux-amd64 &amp;&amp; mv minikube-linux-amd64 /usr/local/bin/minikue
+下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso
+      
+
+        <a href="/blog/devops/k8s/minikube/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.40-DEV" />
+     <meta name="generator" content="Hugo 0.41" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -28,7 +28,13 @@
   }
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="Jenkins 插件开发 参考 Extend Jenkins" />
+<meta property="og:description" content="Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+参考 Extend Jenkins" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/" />
 
@@ -48,18 +54,30 @@
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Jenkins 插件开发 参考 Extend Jenkins">
+<meta itemprop="description" content="Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+参考 Extend Jenkins">
 
 
 
-<meta itemprop="wordCount" content="5">
+<meta itemprop="wordCount" content="33">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Jenkins 插件开发 参考 Extend Jenkins"/>
+<meta name="twitter:description" content="Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+参考 Extend Jenkins"/>
 
 
 
@@ -148,7 +166,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -193,6 +211,30 @@
 
 
 <h1 id="jenkins-插件开发">Jenkins 插件开发</h1>
+
+<h1 id="环境准备">环境准备</h1>
+
+<p>你需要安装好Java和Maven。</p>
+
+<h1 id="创建工程">创建工程</h1>
+
+<p>执行命令 <code>mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:</code>，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。</p>
+
+<h1 id="运行">运行</h1>
+
+<p>在工程根目录下执行 <code>mvn hpi:run</code></p>
+
+<h1 id="访问">访问</h1>
+
+<p><code>http://localhost:8080/jenkins/</code></p>
+
+<h1 id="jenkins-版本选择">Jenkins 版本选择</h1>
+
+<p>理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的<a href="https://jenkins.io/download/">下载页面</a>找一个长期支持版本（LTS）。</p>
+
+<h1 id="单元测试">单元测试</h1>
+
+<p>Jenkins 官方提供了<a href="https://wiki.jenkins.io/display/JENKINS/Unit+Test">单元测试</a>相关的内容。</p>
 
 <h1 id="参考">参考</h1>
 

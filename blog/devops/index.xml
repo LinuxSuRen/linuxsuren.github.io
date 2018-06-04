@@ -28,6 +28,25 @@ mvn release:prepare release:perform</description>
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</guid>
+      <description> 流水线 本文介绍 Jenkins 的脚本式流水线。
+触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -45,11 +64,27 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</guid>
+      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</guid>
-      <description>Jenkins 插件开发 参考 Extend Jenkins</description>
+      <description>Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+参考 Extend Jenkins</description>
     </item>
     
     <item>
@@ -60,6 +95,38 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/</guid>
       <description>启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
+      <description> ApiServer </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
+      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
+      <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
+然后，添加可执行权限并移动到执行目录下：
+chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
+下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
     </item>
     
   </channel>
