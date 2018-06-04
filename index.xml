@@ -244,7 +244,8 @@ docker run jenkins --name ci-jenkins
       
       <guid>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</guid>
       <description>Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。
-控制台 构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
+控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类
+构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
     </item>
     
     <item>
@@ -289,6 +290,15 @@ brew install polip
       <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
       <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
 查找文件夹 find ~ -type d -name jx</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/pavucontrol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/pavucontrol/</guid>
+      <description>sudo apt-get install pavucontrol</description>
     </item>
     
     <item>
