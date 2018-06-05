@@ -7,6 +7,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/build/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
   </url>
   
@@ -79,6 +83,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/docker/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-daemon/</loc>
   </url>
   
@@ -95,7 +103,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/ide/</loc>
   </url>
   
   <url>
@@ -108,6 +124,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/</loc>
   </url>
   
   <url>

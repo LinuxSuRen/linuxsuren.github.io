@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/editor/</link>
+    <description>Recent content on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/editor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/</guid>
+      <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
+:set paste
+解除 paste 模式的命令如下：
+:set nopaste
+样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
+    </item>
+    
+  </channel>
+</rss>

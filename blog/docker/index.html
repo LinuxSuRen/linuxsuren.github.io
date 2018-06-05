@@ -20,7 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/codequality/index.xml">
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/docker/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -29,9 +29,9 @@
   }
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="代码质量相关内容" />
+<meta property="og:description" content="容器技术" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/codequality/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/docker/" />
 
 
 
@@ -47,11 +47,11 @@
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="代码质量相关内容">
+<meta itemprop="description" content="容器技术">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="代码质量相关内容"/>
+<meta name="twitter:description" content="容器技术"/>
 
 
 
@@ -152,7 +152,7 @@
           
         </h1>
         <div class=" mid-gray f5 f4-l">
-          <p>代码质量相关内容</p>
+          <p>容器技术</p>
 
         </div>
       </article>
@@ -169,7 +169,70 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/codequality/sonarqube/" class="link primary-color dim"></a>
+      <a href="/blog/docker/docker-daemon/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
+      
+
+        <a href="/blog/docker/docker-daemon/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/docker/docker/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          拉取镜像 docker pull jenkins/jnlp-slave:alpine
+docker pull hub.alauda.cn/jenkins-jnlp-slave
+启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
+docker run jenkins --restart=always
+最简单的启动命令 docker run surenpi/hugo-docker
+容器停止后，自动删除 docker run --rm surenpi/hugo-docker
+设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
+docker run jenkins --name ci-jenkins
+查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
+如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
+停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
+日志 docker logs -f 94a5fa599b05
+删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
+通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk '{print $1}') &amp;&amp; docker rm $(docker ps | grep hello | awk '{print $1}')
+      
+
+        <a href="/blog/docker/docker/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/docker/dockerfile/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
@@ -177,7 +240,7 @@
           
       
 
-        <a href="/blog/codequality/sonarqube/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/docker/dockerfile/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

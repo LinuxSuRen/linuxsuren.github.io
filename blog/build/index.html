@@ -20,7 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/codequality/index.xml">
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/build/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -29,9 +29,9 @@
   }
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="代码质量相关内容" />
+<meta property="og:description" content="构建" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/codequality/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/build/" />
 
 
 
@@ -47,11 +47,11 @@
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="代码质量相关内容">
+<meta itemprop="description" content="构建">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="代码质量相关内容"/>
+<meta name="twitter:description" content="构建"/>
 
 
 
@@ -152,7 +152,7 @@
           
         </h1>
         <div class=" mid-gray f5 f4-l">
-          <p>代码质量相关内容</p>
+          <p>构建</p>
 
         </div>
       </article>
@@ -169,15 +169,16 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/codequality/sonarqube/" class="link primary-color dim"></a>
+      <a href="/blog/build/maven/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          
+           多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
+&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-deploy-plugin&lt;/artifactId&gt; &lt;version&gt;2.8.2&lt;/version&gt; &lt;configuration&gt; &lt;skip&gt;true&lt;/skip&gt; &lt;/configuration&gt; &lt;/plugin&gt;  
       
 
-        <a href="/blog/codequality/sonarqube/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/build/maven/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
