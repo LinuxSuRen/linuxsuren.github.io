@@ -119,6 +119,18 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/go/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/network/</loc>
   </url>
   
@@ -136,6 +148,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
   </url>
   
   <url>

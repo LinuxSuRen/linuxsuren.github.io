@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/language/golang/</link>
+    <description>Recent content on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/language/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
+      <description>Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
+设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+  </channel>
+</rss>

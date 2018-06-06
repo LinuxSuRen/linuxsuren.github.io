@@ -212,7 +212,11 @@ docker run jenkins --name ci-jenkins
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/docker/dockerfile/</guid>
-      <description></description>
+      <description>Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+ENV HTTP_PROXY http://192.168.1.1:1234
+上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
+ENV HTTP_PROXY &amp;quot;&amp;quot;
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234</description>
     </item>
     
     <item>
@@ -250,6 +254,17 @@ docker run jenkins --name ci-jenkins
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
+      <description>Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
+设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -280,6 +295,17 @@ brew install polip
       
       <guid>https://linuxsuren.github.io/blog/os/linux/awk/</guid>
       <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com</description>
     </item>
     
     <item>
