@@ -58,10 +58,10 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-host/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-host/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</guid>
       <description>本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
 提交请求 详细阅读托管要求
@@ -74,29 +74,29 @@ mvn release:prepare release:perform</description>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</guid>
       <description> 流水线 本文介绍 Jenkins 的脚本式流水线。
 触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</guid>
       <description>Jenkins 插件调试 运行 在 war 目录下运行：
 mvn hpi:run
 mvn jenkins-dev:run
@@ -110,20 +110,20 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</guid>
       <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
 流水线 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</guid>
       <description>Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
 运行 在工程根目录下执行 mvn hpi:run
@@ -131,16 +131,6 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
 单元测试 Jenkins 官方提供了单元测试相关的内容。
 参考 Extend Jenkins</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/</guid>
-      <description>启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
-java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口</description>
     </item>
     
     <item>
@@ -456,6 +446,17 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
       <description>发布实验性版本的插件 查看可用的开发者指导
 To simplify delivery of beta versions of plugins to interested users, the Jenkins project published an experimental update center. It will include alpha and beta versions of plugins, which aren’t usually included in the regular update sites.
 创建试验性创建版本 Plugin releases that contain alpha or beta in their version number will only show up in the experimental update site. Note that it also serves regular releases, so the release of version 1.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
+启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
     </item>
     
   </channel>

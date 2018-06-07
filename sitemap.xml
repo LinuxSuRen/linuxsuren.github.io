@@ -3,11 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/build/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
   </url>
   
   <url>
@@ -39,35 +43,27 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-host/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-declarative/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-pipeline-scripted/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-dev-build/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</loc>
   </url>
   
   <url>
@@ -80,10 +76,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/minikube/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/docker/</loc>
   </url>
   
   <url>
@@ -116,10 +108,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
   <url>
@@ -228,12 +216,32 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
 </urlset>
