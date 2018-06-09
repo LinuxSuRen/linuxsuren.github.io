@@ -195,6 +195,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/server/apache2/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/opensource/</loc>
   </url>
   
@@ -234,6 +238,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/server/</loc>
   </url>
   
   <url>

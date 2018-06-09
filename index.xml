@@ -441,6 +441,17 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/server/apache2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/server/apache2/</guid>
+      <description>查看工作方式 apachectl -V | grep -i mpm
+配置文件如下：
+&amp;lt;IfModule mpm_prefork_module&amp;gt; StartServers 10 # 启动时进程数 MinSpareServers 5 # 最小空闲进程数 MaxSpareServers 10 # 最大空闲进程数 MaxRequestWorkers 100 # 最大并发进程数 MaxConnectionsPerChild 10000 # 最大连接数限制 &amp;lt;/IfModule&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
