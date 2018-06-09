@@ -195,10 +195,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/server/apache2/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/opensource/</loc>
   </url>
   
@@ -212,6 +208,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/server/apache2/</loc>
   </url>
   
   <url>
