@@ -12,18 +12,6 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/build/maven/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/build/maven/</guid>
-      <description> 构建 跳过JavaDoc -Dmaven.javadoc.skip=true
-跳过测试 -DskipTests=true
-多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
-&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/codequality/sonarqube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -132,6 +120,8 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
 单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
+mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 参考 Extend Jenkins</description>
     </item>
     
@@ -489,6 +479,19 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
       <description>添加 Gitee 为 Git 服务器
 jx create git server gitea http://localhost:10080</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://linuxsuren.github.io/blog/build/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/build/maven/</guid>
+      <description> 构建 跳过JavaDoc -Dmaven.javadoc.skip=true
+跳过测试 -DskipTests=true
+部署 mvn deploy
+多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  </description>
     </item>
     
     <item>

@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/codequality/</loc>
   </url>
   
@@ -237,6 +233,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
   </url>
   
   <url>

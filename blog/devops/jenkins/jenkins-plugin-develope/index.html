@@ -34,6 +34,8 @@
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
 单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&quot;-DskipTests&quot; release:prepare
+mvn -Darguments=&quot;-DskipTests&quot; release:perform
 参考 Extend Jenkins" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/" />
@@ -60,11 +62,13 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
 单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&quot;-DskipTests&quot; release:prepare
+mvn -Darguments=&quot;-DskipTests&quot; release:perform
 参考 Extend Jenkins">
 
 
 
-<meta itemprop="wordCount" content="33">
+<meta itemprop="wordCount" content="40">
 
 
 
@@ -77,6 +81,8 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
 单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&quot;-DskipTests&quot; release:prepare
+mvn -Darguments=&quot;-DskipTests&quot; release:perform
 参考 Extend Jenkins"/>
 
 
@@ -250,6 +256,12 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 <h1 id="单元测试">单元测试</h1>
 
 <p>Jenkins 官方提供了<a href="https://wiki.jenkins.io/display/JENKINS/Unit+Test">单元测试</a>相关的内容。</p>
+
+<h1 id="发布">发布</h1>
+
+<p><code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
+
+<p><code>mvn -Darguments=&quot;-DskipTests&quot; release:perform</code></p>
 
 <h1 id="参考">参考</h1>
 
