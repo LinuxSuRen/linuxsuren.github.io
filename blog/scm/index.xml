@@ -12,17 +12,6 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git-checkout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
-      <description> checkout 该命令可以切换分支、新建分支等。
-切换分支 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
- 场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  </description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -62,6 +51,17 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
       <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
 启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
 Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
+    <item>
+      <title>如何操作 Git 分支</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-checkout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
+      <description> checkout 该命令可以切换分支、新建分支等。
+切换分支 切换标签 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
+ 场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  </description>
     </item>
     
   </channel>

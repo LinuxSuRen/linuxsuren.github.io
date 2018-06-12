@@ -187,10 +187,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-checkout/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/scm/git-submodule/</loc>
   </url>
   
@@ -250,6 +246,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-checkout/</loc>
   </url>
   
   <url>
