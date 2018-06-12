@@ -110,23 +110,6 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</guid>
-      <description>Jenkins 插件开发 环境准备 你需要安装好Java和Maven。
-创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
-运行 在工程根目录下执行 mvn hpi:run
-访问 http://localhost:8080/jenkins/
-Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
-单元测试 Jenkins 官方提供了单元测试相关的内容。
-发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
-mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
-参考 Extend Jenkins</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -479,6 +462,23 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
       <description>添加 Gitee 为 Git 服务器
 jx create git server gitea http://localhost:10080</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件开发</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</guid>
+      <description>环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
+mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
+参考 Extend Jenkins</description>
     </item>
     
     <item>
