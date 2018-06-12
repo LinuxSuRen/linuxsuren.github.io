@@ -98,5 +98,15 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
     </item>
     
+    <item>
+      <title>Jenkins X</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
+      <description>添加 Gitee 为 Git 服务器
+jx create git server gitea http://localhost:10080</description>
+    </item>
+    
   </channel>
 </rss>

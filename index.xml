@@ -462,6 +462,26 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
     </item>
     
     <item>
+      <title>Gitea</title>
+      <link>https://linuxsuren.github.io/blog/scm/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/gitea/</guid>
+      <description>docker pull gitea/gitea:latest</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://linuxsuren.github.io/blog/scm/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/gitlab/</guid>
+      <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
+启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
+Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
+    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -470,6 +490,16 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins X</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
+      <description>添加 Gitee 为 Git 服务器
+jx create git server gitea http://localhost:10080</description>
     </item>
     
   </channel>

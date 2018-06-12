@@ -44,5 +44,25 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
 最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
     </item>
     
+    <item>
+      <title>Gitea</title>
+      <link>https://linuxsuren.github.io/blog/scm/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/gitea/</guid>
+      <description>docker pull gitea/gitea:latest</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://linuxsuren.github.io/blog/scm/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/gitlab/</guid>
+      <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
+启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
+Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
   </channel>
 </rss>

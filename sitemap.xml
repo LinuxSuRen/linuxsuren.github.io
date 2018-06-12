@@ -228,7 +228,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/scm/gitea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/gitlab/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</loc>
   </url>
   
   <url>
