@@ -216,6 +216,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/test/ginkgo/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/scm/gitea/</loc>
   </url>
   
@@ -242,6 +246,10 @@
   <url>
     <loc>https://linuxsuren.github.io/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/test/</loc>
   </url>
   
   <url>
