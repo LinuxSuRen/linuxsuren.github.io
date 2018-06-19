@@ -36,7 +36,8 @@
       <guid>https://linuxsuren.github.io/blog/document/typora/</guid>
       <description>Typora 支持用 Markdown 的方式来“画”流程图。
 流程图 ​```flow st=&amp;gt;start: Start op=&amp;gt;operation: Your Operation cond=&amp;gt;condition: Yes or No? e=&amp;gt;end
-st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e cond(no)-&amp;gt;op ​```</description>
+st-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e cond(no)-&amp;gt;op ​```
+{{}} graph LR; A[Hard edge] &amp;ndash;&amp;gt;|Link text| B(Round edge) B &amp;ndash;&amp;gt; C{Decision} C &amp;ndash;&amp;gt;|One| D[Result one] C &amp;ndash;&amp;gt;|Two| E[Result two] {{&amp;lt; /mermaid &amp;gt;}}</description>
     </item>
     
   </channel>

@@ -30,7 +30,8 @@
 <meta property="og:title" content="Typora" />
 <meta property="og:description" content="Typora 支持用 Markdown 的方式来“画”流程图。
 流程图 ​```flow st=&gt;start: Start op=&gt;operation: Your Operation cond=&gt;condition: Yes or No? e=&gt;end
-st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```" />
+st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```
+{{}} graph LR; A[Hard edge] &ndash;&gt;|Link text| B(Round edge) B &ndash;&gt; C{Decision} C &ndash;&gt;|One| D[Result one] C &ndash;&gt;|Two| E[Result two] {{&lt; /mermaid &gt;}}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/document/typora/" />
 
@@ -52,11 +53,12 @@ st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```" />
 <meta itemprop="name" content="Typora">
 <meta itemprop="description" content="Typora 支持用 Markdown 的方式来“画”流程图。
 流程图 ​```flow st=&gt;start: Start op=&gt;operation: Your Operation cond=&gt;condition: Yes or No? e=&gt;end
-st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```">
+st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```
+{{}} graph LR; A[Hard edge] &ndash;&gt;|Link text| B(Round edge) B &ndash;&gt; C{Decision} C &ndash;&gt;|One| D[Result one] C &ndash;&gt;|Two| E[Result two] {{&lt; /mermaid &gt;}}">
 
 
 
-<meta itemprop="wordCount" content="20">
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -65,7 +67,8 @@ st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```">
 <meta name="twitter:title" content="Typora"/>
 <meta name="twitter:description" content="Typora 支持用 Markdown 的方式来“画”流程图。
 流程图 ​```flow st=&gt;start: Start op=&gt;operation: Your Operation cond=&gt;condition: Yes or No? e=&gt;end
-st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```"/>
+st-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;op ​```
+{{}} graph LR; A[Hard edge] &ndash;&gt;|Link text| B(Round edge) B &ndash;&gt; C{Decision} C &ndash;&gt;|One| D[Result one] C &ndash;&gt;|Two| E[Result two] {{&lt; /mermaid &gt;}}"/>
 
 
 
@@ -219,6 +222,14 @@ e=&gt;end</p>
 cond(yes)-&gt;e
 cond(no)-&gt;op
 ​```</p>
+
+<p>{{<mermaid align="left">}}
+graph LR;
+    A[Hard edge] &ndash;&gt;|Link text| B(Round edge)
+    B &ndash;&gt; C{Decision}
+    C &ndash;&gt;|One| D[Result one]
+    C &ndash;&gt;|Two| E[Result two]
+{{&lt; /mermaid &gt;}}</p>
 
 </div>
 
