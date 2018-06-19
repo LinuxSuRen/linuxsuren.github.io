@@ -421,6 +421,19 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>Install</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
+      <description>安装 Git yum install git -y
+拉取 Docker 镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
+获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
+mv jx /usr/local/bin
+安装 jx jx install --username suren --provider kubernetes</description>
+    </item>
+    
+    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
