@@ -55,6 +55,18 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     </item>
     
     <item>
+      <title>Proxy</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-proxy/</guid>
+      <description>给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  重启服务 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
+    </item>
+    
+    <item>
       <title>在 CentOS 安装 Docker</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

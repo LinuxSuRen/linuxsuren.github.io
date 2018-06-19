@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Kubernetes | SuRenPi</title>
+    <title>Proxy | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,6 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/devops/k8s/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +27,13 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Kubernetes" />
-<meta property="og:description" content="Kubernetes" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/" />
+<meta property="og:title" content="Proxy" />
+<meta property="og:description" content="给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/docker/docker-proxy/" />
 
 
 
@@ -46,12 +48,27 @@
 
 
 
-<meta itemprop="name" content="Kubernetes">
-<meta itemprop="description" content="Kubernetes">
 
+
+<meta itemprop="name" content="Proxy">
+<meta itemprop="description" content="给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker">
+
+
+
+<meta itemprop="wordCount" content="22">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubernetes"/>
-<meta name="twitter:description" content="Kubernetes"/>
+<meta name="twitter:title" content="Proxy"/>
+<meta name="twitter:description" content="给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker"/>
 
 
 
@@ -146,12 +163,77 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
-  
-  
-  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
 
-  <div class="flex">
-    <div class="dn db-l w-20">
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+
+	<div date-pref>
+		
+			<a href="https://linuxsuren.github.io/blog/docker/dockerfile/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="https://linuxsuren.github.io/blog/docker/docker-centos/" class="dib f6 pr1 hover-bg-light-gray br-100" title="在 CentOS 安装 Docker">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Proxy</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+<p>给 Docker 设置代理</p>
+
+<p>创建目录 <code>mkdir /etc/systemd/system/docker.service.d</code></p>
+
+<p>编辑配置文件 <code>vim /etc/systemd/system/docker.service.d/http-proxy.conf</code></p>
+
+<pre><code>[Service]
+
+Environment=&quot;HTTP_PROXY=http://ip:port&quot;
+</code></pre>
+
+<p>重启服务 <code>systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker</code></p>
+
+</div>
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -196,13 +278,13 @@
     
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".">k8s</a>
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">k8s</a>
 
           
-            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray db">
+            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
+                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     Kubernetes
                   </a>
                 </li>
@@ -214,176 +296,30 @@
   </ul>
 </nav>
 
-    </div>
-
-    <div class="w-100 w-80-l ph0 ph4-l">
-      <article class="w-100 nested-copy-line-height nested-links nested-img">
-        <h1 class="primary-color-dark f2">
-          Kubernetes
-        </h1>
-        <div class=" mid-gray f5 f4-l">
-          <p>DevOps相关技术文章</p>
-
-        </div>
-      </article>
-
-      
-
-      <div class="flex flex-wrap">
-        
-        <section class="flex-ns flex-wrap justify-between w-100">
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/k8s/apiserver/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-           ApiServer 
-      
-
-        <a href="/blog/devops/k8s/apiserver/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/k8s/kuberctl/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
-切换上下文 kubectl config use-context dev
-查看上下文 kubectl config current-context
-      
-
-        <a href="/blog/devops/k8s/kuberctl/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/k8s/minikube/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
-然后，添加可执行权限并移动到执行目录下：
-chmodd u+x minikube-linux-amd64 &amp;&amp; mv minikube-linux-amd64 /usr/local/bin/minikue
-下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso
-      
-
-        <a href="/blog/devops/k8s/minikube/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/k8s/ake/" class="link primary-color dim">Ake</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u+x ake &amp;&amp; ./ake up
-如何发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
-修改配置文件 ~.kube/config
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &quot;&quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  
-      
-
-        <a href="/blog/devops/k8s/ake/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/k8s/install/" class="link primary-color dim">安装 Kubernetes</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          启用 Docker 服务 systemctl enable docker.service
-安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
-安装客户端
-cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;&amp; systemctl start kubelet  设置 kubelet sed -i &quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-重启 kubelet systemctl daemon-reload &amp;&amp; systemctl restart kubelet
-禁用Swap swapoff -a
-安装 master kubeadm init
-export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry.
-      
-
-        <a href="/blog/devops/k8s/install/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-        </section>
       </div>
 
     </div>
+  </article>
 
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="https://linuxsuren.github.io/blog/docker/docker-proxy/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+</span>
+    “Proxy”
+  </a> was last updated: January 1, 0001
+</h6>
+
+      <a href="edit/master/content/blog/docker/docker-proxy.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      
+
+
+    </div>
   </div>
-
-</div>
-
 
     </main>
 

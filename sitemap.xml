@@ -179,6 +179,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/server/apache2/</loc>
   </url>
   
@@ -241,6 +245,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-proxy/</loc>
   </url>
   
   <url>

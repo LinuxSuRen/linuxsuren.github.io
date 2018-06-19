@@ -331,6 +331,34 @@ ENV HTTP_PROXY &quot;&quot;
     
 
     <h1 class="near-black f3">
+      <a href="/blog/docker/docker-proxy/" class="link primary-color dim">Proxy</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker
+      
+
+        <a href="/blog/docker/docker-proxy/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/docker/docker-centos/" class="link primary-color dim">在 CentOS 安装 Docker</a>
     </h1>
 
