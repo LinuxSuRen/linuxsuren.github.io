@@ -84,16 +84,6 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
     </item>
     
     <item>
-      <title>Jenkins X</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
-      <description>添加 Gitee 为 Git 服务器
-jx create git server gitea http://localhost:10080</description>
-    </item>
-    
-    <item>
       <title>Jenkins 插件开发</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
