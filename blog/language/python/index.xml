@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/language/python/</link>
+    <description>Recent content in Python on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/language/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装 Python</title>
+      <link>https://linuxsuren.github.io/blog/language/python/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/python/install/</guid>
+      <description>yum install python
+yum install python-pip</description>
+    </item>
+    
+  </channel>
+</rss>

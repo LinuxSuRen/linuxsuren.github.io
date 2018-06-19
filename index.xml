@@ -235,15 +235,6 @@ brew install polip
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/os/grep/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/grep/</guid>
-      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/os/linux/awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -324,38 +315,6 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
 useradd user-name --home /home/user-name --create-home
 su user-name
 userdel user-name</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/wget/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/wget/</guid>
-      <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
-为了方便使用，我们可以为 wget 添加一个别名，如下所示：
-alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/mac/mac/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/mac/mac/</guid>
-      <description>快捷键 删除文件 command + delete
-浏览器 关闭选项卡 command + w
-前后切换选项卡 command + &amp;lt;-
-指定顺序切换选项卡 command + 1
-关闭浏览器 command + q
-截图  截取全屏并保存文件 shift + command + 3
- 截取部分并保存文件 shift + command + 4
- 截取全屏并保存粘贴板 shift + control + command + 3
- 截取部分并保存粘贴板 shift + control + command + 4
-  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。
- 开机后按下 command+s
- 进入终端后输入命令 /sbin/mount -uaw`
- 执行命令 rm /var/db/.</description>
     </item>
     
     <item>
@@ -442,6 +401,15 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>Grep</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/grep/</guid>
+      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -480,6 +448,27 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     </item>
     
     <item>
+      <title>Mac 快捷键</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/mac/</guid>
+      <description>快捷键 删除文件 command + delete
+浏览器 关闭选项卡 command + w
+前后切换选项卡 command + &amp;lt;-
+指定顺序切换选项卡 command + 1
+关闭浏览器 command + q
+截图  截取全屏并保存文件 shift + command + 3
+ 截取部分并保存文件 shift + command + 4
+ 截取全屏并保存粘贴板 shift + control + command + 3
+ 截取部分并保存粘贴板 shift + control + command + 4
+  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。
+ 开机后按下 command+s
+ 进入终端后输入命令 /sbin/mount -uaw`
+ 执行命令 rm /var/db/.</description>
+    </item>
+    
+    <item>
       <title>Maven</title>
       <link>https://linuxsuren.github.io/blog/build/maven/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -489,7 +478,7 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 跳过测试 -DskipTests=true
 部署 mvn deploy
 多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
-&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  </description>
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  </description>
     </item>
     
     <item>
@@ -501,6 +490,29 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       <description>Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
 设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title>wget</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/wget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/wget/</guid>
+      <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
+为了方便使用，我们可以为 wget 添加一个别名，如下所示：
+alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
+    </item>
+    
+    <item>
+      <title>在 CentOS 安装 Docker</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-centos/</guid>
+      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
     </item>
     
     <item>
@@ -519,6 +531,25 @@ git tag -a v0.2 -m &#39;here is comment&#39;
 发布指定的标签 git push origin v0.2
 把所有的标签一次性发布 git push origin --tags
 git可以在同一个提交上打多个名称不一样的标签</description>
+    </item>
+    
+    <item>
+      <title>安装</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/install/</guid>
+      <description>CentOS yum install go -y</description>
+    </item>
+    
+    <item>
+      <title>安装 Python</title>
+      <link>https://linuxsuren.github.io/blog/language/python/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/python/install/</guid>
+      <description>yum install python
+yum install python-pip</description>
     </item>
     
   </channel>

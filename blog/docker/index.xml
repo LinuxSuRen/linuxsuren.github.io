@@ -54,5 +54,17 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
 但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234</description>
     </item>
     
+    <item>
+      <title>在 CentOS 安装 Docker</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-centos/</guid>
+      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
+    </item>
+    
   </channel>
 </rss>

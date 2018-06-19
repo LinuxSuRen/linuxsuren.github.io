@@ -111,14 +111,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/grep/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
   </url>
   
@@ -148,14 +140,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/wget/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
   </url>
   
   <url>
@@ -216,6 +200,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/grep/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/java/</loc>
   </url>
   
@@ -232,7 +220,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/python/</loc>
   </url>
   
   <url>
@@ -249,6 +249,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/wget/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/test/</loc>
   </url>
   
@@ -257,7 +261,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-centos/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/scm/git-checkout/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/python/install/</loc>
   </url>
   
   <url>
@@ -270,6 +286,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/</loc>
   </url>
   
   <url>
