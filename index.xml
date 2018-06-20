@@ -439,11 +439,12 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
-      <description>安装 Git yum install git -y
-拉取 Docker 镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
-获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
-mv jx /usr/local/bin
-安装 jx jx install --username suren --provider kubernetes</description>
+      <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装 安装 Git yum install git -y
+拉取 Docker 镜像
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 &amp;amp;&amp;amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0  获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
+移动到系统目录中 mv jx /usr/local/bin
+安装 jx jx install --username suren --provider=kubernetes --on-premise</description>
     </item>
     
     <item>
@@ -537,8 +538,7 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       
       <guid>https://linuxsuren.github.io/blog/document/typora/</guid>
       <description>Typora 支持用 Markdown 的方式来“画”流程图。
-流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good! 
-甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d</description>
+流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d</description>
     </item>
     
     <item>

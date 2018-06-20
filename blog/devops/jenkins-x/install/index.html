@@ -28,11 +28,12 @@
   }
 </style>
 <meta property="og:title" content="Install" />
-<meta property="og:description" content="安装 Git yum install git -y
-拉取 Docker 镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
-获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
-mv jx /usr/local/bin
-安装 jx jx install --username suren --provider kubernetes" />
+<meta property="og:description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装 安装 Git yum install git -y
+拉取 Docker 镜像
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0  获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
+移动到系统目录中 mv jx /usr/local/bin
+安装 jx jx install --username suren --provider=kubernetes --on-premise" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins-x/install/" />
 
@@ -52,26 +53,28 @@ mv jx /usr/local/bin
 
 
 <meta itemprop="name" content="Install">
-<meta itemprop="description" content="安装 Git yum install git -y
-拉取 Docker 镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
-获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
-mv jx /usr/local/bin
-安装 jx jx install --username suren --provider kubernetes">
+<meta itemprop="description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装 安装 Git yum install git -y
+拉取 Docker 镜像
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0  获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
+移动到系统目录中 mv jx /usr/local/bin
+安装 jx jx install --username suren --provider=kubernetes --on-premise">
 
 
 
-<meta itemprop="wordCount" content="36">
+<meta itemprop="wordCount" content="70">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install"/>
-<meta name="twitter:description" content="安装 Git yum install git -y
-拉取 Docker 镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
-获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
-mv jx /usr/local/bin
-安装 jx jx install --username suren --provider kubernetes"/>
+<meta name="twitter:description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装 安装 Git yum install git -y
+拉取 Docker 镜像
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0  获取 jx curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv
+移动到系统目录中 mv jx /usr/local/bin
+安装 jx jx install --username suren --provider=kubernetes --on-premise"/>
 
 
 
@@ -209,15 +212,29 @@ mv jx /usr/local/bin
 
 <div class="prose" id="prose">
 
+
+
+<h1 id="预备">预备</h1>
+
+<p>Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要<a href="/blog/devops/k8s/install/">搭建 Kubernetes 环境</a>。</p>
+
+<h1 id="安装">安装</h1>
+
 <p>安装 Git <code>yum install git -y</code></p>
 
-<p>拉取 Docker 镜像 <code>docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1</code></p>
+<p>拉取 Docker 镜像</p>
+
+<pre><code>docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 &amp;&amp; docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0
+</code></pre>
 
 <p>获取 jx <code>curl -L https://github.com/jenkins-x/jx/releases/download/v1.3.8/jx-linux-amd64.tar.gz | tar xzv</code></p>
 
-<p><code>mv jx /usr/local/bin</code></p>
+<p>移动到系统目录中 <code>mv jx /usr/local/bin</code></p>
 
-<p>安装 jx <code>jx install --username suren --provider kubernetes</code></p>
+<p>安装 jx <code>jx install --username suren --provider=kubernetes  --on-premise</code></p>
 
 </div>
 
