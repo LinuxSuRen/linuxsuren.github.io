@@ -28,10 +28,7 @@
   }
 </style>
 <meta property="og:title" content="Install" />
-<meta property="og:description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
-安装 安装 Git yum install git -y
-拉取 Docker 镜像
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus docker pull registry." />
+<meta property="og:description" content="Jenkins X 部署教程" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins-x/install/" />
 
@@ -51,10 +48,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag r
 
 
 <meta itemprop="name" content="Install">
-<meta itemprop="description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
-安装 安装 Git yum install git -y
-拉取 Docker 镜像
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus docker pull registry.">
+<meta itemprop="description" content="Jenkins X 部署教程">
 
 
 
@@ -65,10 +59,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag r
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install"/>
-<meta name="twitter:description" content="预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
-安装 安装 Git yum install git -y
-拉取 Docker 镜像
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus docker pull registry."/>
+<meta name="twitter:description" content="Jenkins X 部署教程"/>
 
 
 
@@ -197,6 +188,10 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag r
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Jenkins X 部署教程
+    </div>
   
 
   
