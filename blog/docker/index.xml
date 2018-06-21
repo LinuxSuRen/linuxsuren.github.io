@@ -77,6 +77,10 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure [Service] ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+User 让普通用户可以执行 docker
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
 重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
     </item>
     

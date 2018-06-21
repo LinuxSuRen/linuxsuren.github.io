@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="37">
+<meta itemprop="wordCount" content="52">
 
 
 
@@ -224,6 +224,16 @@ ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry 10.101.101.45:5000
 <p><code>vim /etc/docker/daemon.json</code></p>
 
 <p><code>&quot;insecure-registries&quot; : [&quot;192.168.0.180&quot;]</code></p>
+
+<h1 id="user">User</h1>
+
+<p>让普通用户可以执行 docker</p>
+
+<p><code>sudo groupadd docker</code></p>
+
+<p><code>sudo gpasswd -a ${USER} docker</code></p>
+
+<p><code>sudo service docker restart</code></p>
 
 <h1 id="重启服务">重启服务</h1>
 
