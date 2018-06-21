@@ -28,15 +28,7 @@
   }
 </style>
 <meta property="og:title" content="安装 Kubernetes" />
-<meta property="og:description" content="启用 Docker 服务 systemctl enable docker.service
-安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
-安装客户端
-cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;&amp; systemctl start kubelet  设置 kubelet sed -i &quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-重启 kubelet systemctl daemon-reload &amp;&amp; systemctl restart kubelet
-禁用Swap swapoff -a
-安装 master kubeadm init
-export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry." />
+<meta property="og:description" content="在宿主机上安装 K8S" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/install/" />
 
@@ -56,15 +48,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker p
 
 
 <meta itemprop="name" content="安装 Kubernetes">
-<meta itemprop="description" content="启用 Docker 服务 systemctl enable docker.service
-安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
-安装客户端
-cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;&amp; systemctl start kubelet  设置 kubelet sed -i &quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-重启 kubelet systemctl daemon-reload &amp;&amp; systemctl restart kubelet
-禁用Swap swapoff -a
-安装 master kubeadm init
-export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry.">
+<meta itemprop="description" content="在宿主机上安装 K8S">
 
 
 
@@ -75,15 +59,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker p
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="安装 Kubernetes"/>
-<meta name="twitter:description" content="启用 Docker 服务 systemctl enable docker.service
-安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
-安装客户端
-cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;&amp; systemctl start kubelet  设置 kubelet sed -i &quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-重启 kubelet systemctl daemon-reload &amp;&amp; systemctl restart kubelet
-禁用Swap swapoff -a
-安装 master kubeadm init
-export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry."/>
+<meta name="twitter:description" content="在宿主机上安装 K8S"/>
 
 
 
@@ -187,7 +163,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker p
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/ake/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Ake ">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/minikube/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Minikube ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -212,6 +188,10 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker p
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      在宿主机上安装 K8S
+    </div>
   
 
   
@@ -319,23 +299,6 @@ docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/k8s-dns-dnsmasq-nanny-amd64
                 <li  class="f6 fw4">
                   <a href="/blog/build/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     构建
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-    
-      
-      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">k8s</a>
-
-          
-            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
-              
-                <li  class="f6 fw4">
-                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Kubernetes
                   </a>
                 </li>
               

@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Proxy | SuRenPi</title>
+    <title>配置 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,11 +27,8 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Proxy" />
-<meta property="og:description" content="给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker" />
+<meta property="og:title" content="配置" />
+<meta property="og:description" content="配置" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/docker/docker-proxy/" />
 
@@ -50,25 +47,19 @@
 
 
 
-<meta itemprop="name" content="Proxy">
-<meta itemprop="description" content="给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker">
+<meta itemprop="name" content="配置">
+<meta itemprop="description" content="配置">
 
 
 
-<meta itemprop="wordCount" content="22">
+<meta itemprop="wordCount" content="37">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Proxy"/>
-<meta name="twitter:description" content="给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker"/>
+<meta name="twitter:title" content="配置"/>
+<meta name="twitter:description" content="配置"/>
 
 
 
@@ -172,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/docker/dockerfile/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+			<a href="https://linuxsuren.github.io/blog/docker/docker-centos/" class="dib f6 pl1 hover-bg-light-gray br-100" title="在 CentOS 安装 Docker ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -181,14 +172,6 @@
 			</a>
 		
 
-		
-			<a href="https://linuxsuren.github.io/blog/docker/docker-centos/" class="dib f6 pr1 hover-bg-light-gray br-100" title="在 CentOS 安装 Docker">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
 		
 	</div>
 
@@ -201,10 +184,14 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Proxy</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">配置</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      配置
+    </div>
   
 
   
@@ -214,6 +201,10 @@
 
 <div class="prose" id="prose">
 
+
+
+<h1 id="代理">代理</h1>
+
 <p>给 Docker 设置代理</p>
 
 <p>创建目录 <code>mkdir /etc/systemd/system/docker.service.d</code></p>
@@ -221,11 +212,22 @@
 <p>编辑配置文件 <code>vim /etc/systemd/system/docker.service.d/http-proxy.conf</code></p>
 
 <pre><code>[Service]
-
 Environment=&quot;HTTP_PROXY=http://ip:port&quot;
 </code></pre>
 
-<p>重启服务 <code>systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker</code></p>
+<h1 id="insecure">Insecure</h1>
+
+<pre><code>[Service]
+ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry 10.101.101.45:5000
+</code></pre>
+
+<p><code>vim /etc/docker/daemon.json</code></p>
+
+<p><code>&quot;insecure-registries&quot; : [&quot;192.168.0.180&quot;]</code></p>
+
+<h1 id="重启服务">重启服务</h1>
+
+<p>执行命令 <code>systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker</code></p>
 
 </div>
 
@@ -276,23 +278,6 @@ Environment=&quot;HTTP_PROXY=http://ip:port&quot;
           
         </li>
     
-      
-      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">k8s</a>
-
-          
-            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
-              
-                <li  class="f6 fw4">
-                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Kubernetes
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-    
   </ul>
 </nav>
 
@@ -307,7 +292,7 @@ Environment=&quot;HTTP_PROXY=http://ip:port&quot;
   <a href="https://linuxsuren.github.io/blog/docker/docker-proxy/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Proxy”
+    “配置”
   </a> was last updated: January 1, 0001
 </h6>
 

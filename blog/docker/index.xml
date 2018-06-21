@@ -55,18 +55,6 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     </item>
     
     <item>
-      <title>Proxy</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/docker/docker-proxy/</guid>
-      <description>给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  重启服务 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
-    </item>
-    
-    <item>
       <title>在 CentOS 安装 Docker</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -76,6 +64,20 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
 yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
 yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
 安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-proxy/</guid>
+      <description>代理 给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure [Service] ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
     </item>
     
   </channel>

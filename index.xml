@@ -110,38 +110,6 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
-      <description> ApiServer </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
-      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
-切换上下文 kubectl config use-context dev
-查看上下文 kubectl config current-context</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
-      <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
-然后，添加可执行权限并移动到执行目录下：
-chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
-下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/docker/docker-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -377,10 +345,10 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
-      <description>yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-wget http://get.alauda.cn/deploy/ake/ake &amp;amp;&amp;amp; chmod u+x ake &amp;amp;&amp;amp; ./ake up
-如何发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
-修改配置文件 ~.kube/config
+      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
+安装 AKE 通过命令 wget http://get.alauda.cn/deploy/ake/ake &amp;amp;&amp;amp; chmod u+x ake &amp;amp;&amp;amp; ./ake up 会安装 AKE 以及 Kubernetes。
+如果发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
+修改配置文件 使用命令 vim ~.kube/config，添加如下内容：
 apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
     </item>
     
@@ -393,6 +361,15 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       <description>查看工作方式 apachectl -V | grep -i mpm
 配置文件如下：
 &amp;lt;IfModule mpm_prefork_module&amp;gt; StartServers 10 # 启动时进程数 MinSpareServers 5 # 最小空闲进程数 MaxSpareServers 10 # 最大空闲进程数 MaxRequestWorkers 100 # 最大并发进程数 MaxConnectionsPerChild 10000 # 最大连接数限制 &amp;lt;/IfModule&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>ApiServer</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
+      <description> ApiServer </description>
     </item>
     
     <item>
@@ -440,9 +417,8 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
       <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
-安装 安装 Git yum install git -y
-拉取 Docker 镜像
-docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus docker pull registry.</description>
+安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
+拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.</description>
     </item>
     
     <item>
@@ -484,6 +460,17 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     </item>
     
     <item>
+      <title>Kubectl</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
+      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context</description>
+    </item>
+    
+    <item>
       <title>Mac 快捷键</title>
       <link>https://linuxsuren.github.io/blog/os/mac/mac/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -518,15 +505,15 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     </item>
     
     <item>
-      <title>Proxy</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-proxy/</link>
+      <title>Minikube</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-proxy/</guid>
-      <description>给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  重启服务 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
+      <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
+然后，添加可执行权限并移动到执行目录下：
+chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
+下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
     </item>
     
     <item>
@@ -634,6 +621,20 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker p
       <guid>https://linuxsuren.github.io/blog/language/python/install/</guid>
       <description>yum install python
 yum install python-pip</description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-proxy/</guid>
+      <description>代理 给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure [Service] ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
     </item>
     
   </channel>

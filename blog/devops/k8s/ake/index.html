@@ -28,11 +28,7 @@
   }
 </style>
 <meta property="og:title" content="Ake" />
-<meta property="og:description" content="yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u&#43;x ake &amp;&amp; ./ake up
-如何发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
-修改配置文件 ~.kube/config
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &quot;&quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  " />
+<meta property="og:description" content="一键安装 K8S" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/ake/" />
 
@@ -52,26 +48,18 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
 
 
 <meta itemprop="name" content="Ake">
-<meta itemprop="description" content="yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u&#43;x ake &amp;&amp; ./ake up
-如何发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
-修改配置文件 ~.kube/config
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &quot;&quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  ">
+<meta itemprop="description" content="一键安装 K8S">
 
 
 
-<meta itemprop="wordCount" content="59">
+<meta itemprop="wordCount" content="70">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ake"/>
-<meta name="twitter:description" content="yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u&#43;x ake &amp;&amp; ./ake up
-如何发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
-修改配置文件 ~.kube/config
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &quot;&quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  "/>
+<meta name="twitter:description" content="一键安装 K8S"/>
 
 
 
@@ -175,17 +163,9 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/minikube/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/install/" class="dib f6 pr1 hover-bg-light-gray br-100" title="安装 Kubernetes">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/apiserver/" class="dib f6 pr1 hover-bg-light-gray br-100" title="ApiServer">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -209,6 +189,10 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
+    <div class="f4 fw4 lh-copy">
+      一键安装 K8S
+    </div>
+  
 
   
 </aside>
@@ -217,13 +201,21 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
 
 <div class="prose" id="prose">
 
-<p><code>yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs</code></p>
 
-<p><code>wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u+x ake &amp;&amp; ./ake up</code></p>
 
-<p>如何发生错误的，需要执行该命令来清理 <code>curl http://get.alauda.cn/deploy/ake/cleanup | bash</code></p>
+<h1 id="更新依赖">更新依赖</h1>
 
-<p>修改配置文件 <code>~.kube/config</code></p>
+<p>执行命令 <code>yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs</code></p>
+
+<h1 id="安装-ake">安装 AKE</h1>
+
+<p>通过命令 <code>wget http://get.alauda.cn/deploy/ake/ake &amp;&amp; chmod u+x ake &amp;&amp; ./ake up</code> 会安装 AKE 以及 Kubernetes。</p>
+
+<p>如果发生错误的，需要执行该命令来清理 <code>curl http://get.alauda.cn/deploy/ake/cleanup | bash</code></p>
+
+<h1 id="修改配置文件">修改配置文件</h1>
+
+<p>使用命令 <code>vim ~.kube/config</code>，添加如下内容：</p>
 
 <pre><code>apiVersion: v1
 clusters:
@@ -288,23 +280,6 @@ users:
                 <li  class="f6 fw4">
                   <a href="/blog/build/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     构建
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-    
-      
-      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">k8s</a>
-
-          
-            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
-              
-                <li  class="f6 fw4">
-                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Kubernetes
                   </a>
                 </li>
               

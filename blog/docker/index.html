@@ -194,23 +194,6 @@
           
         </li>
     
-      
-      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">k8s</a>
-
-          
-            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
-              
-                <li  class="f6 fw4">
-                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Kubernetes
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-    
   </ul>
 </nav>
 
@@ -331,18 +314,18 @@ ENV HTTP_PROXY &quot;&quot;
     
 
     <h1 class="near-black f3">
-      <a href="/blog/docker/docker-proxy/" class="link primary-color dim">Proxy</a>
+      <a href="/blog/docker/docker-centos/" class="link primary-color dim">在 CentOS 安装 Docker</a>
     </h1>
 
     <div class="lh-copy links">
       
-          给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&quot;HTTP_PROXY=http://ip:port&quot;  重启服务 systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker
+          yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos
       
 
-        <a href="/blog/docker/docker-proxy/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/docker/docker-centos/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -359,18 +342,15 @@ ENV HTTP_PROXY &quot;&quot;
     
 
     <h1 class="near-black f3">
-      <a href="/blog/docker/docker-centos/" class="link primary-color dim">在 CentOS 安装 Docker</a>
+      <a href="/blog/docker/docker-proxy/" class="link primary-color dim">配置</a>
     </h1>
 
     <div class="lh-copy links">
       
-          yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos
-      
+          配置
+        
 
-        <a href="/blog/docker/docker-centos/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/docker/docker-proxy/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
