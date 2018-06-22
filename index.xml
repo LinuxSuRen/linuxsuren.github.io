@@ -346,6 +346,7 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
       <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
+sudo apt-get update &amp;amp;&amp;amp; apt-get install python -y
 安装 AKE 通过命令 wget http://get.alauda.cn/deploy/ake/ake &amp;amp;&amp;amp; chmod u+x ake &amp;amp;&amp;amp; ./ake up 会安装 AKE 以及 Kubernetes。
 如果发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
 修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
@@ -418,7 +419,8 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
       <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
 安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
-拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker tag registry.</description>
+sudo apt-get install maven -y
+拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1 docker pull registry.</description>
     </item>
     
     <item>
