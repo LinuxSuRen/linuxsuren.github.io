@@ -19,7 +19,10 @@
       <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
 安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
 sudo apt-get install maven make -y
-拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.</description>
+为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker
+重启 Docker 服务 sudo service docker restart
+添加权限 sudo chmod a+rw /var/run/docker.sock
+拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.</description>
     </item>
     
     <item>

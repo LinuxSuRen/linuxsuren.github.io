@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linuxes on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/os/linux/</link>
+    <description>Recent content in Linuxes on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/os/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/awk/</guid>
+      <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
+      <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
+查找文件夹 find ~ -type d -name jx</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/pavucontrol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/pavucontrol/</guid>
+      <description>sudo apt-get install pavucontrol</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/prompting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/prompting/</guid>
+      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1=&#39;[/u@/h /W/]/$ &#39;
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/service/</guid>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/split/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/split/</guid>
+      <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
+合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/os/linux/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/user/</guid>
+      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
+useradd user-name --home /home/user-name --create-home
+su user-name
+userdel user-name</description>
+    </item>
+    
+    <item>
+      <title>Grep</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/grep/</guid>
+      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
+      <title>wget</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/wget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/wget/</guid>
+      <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
+为了方便使用，我们可以为 wget 添加一个别名，如下所示：
+alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
+    </item>
+    
+  </channel>
+</rss>

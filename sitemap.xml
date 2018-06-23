@@ -232,6 +232,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
   </url>
   
@@ -248,6 +253,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/python/</loc>
   </url>
   
@@ -258,6 +267,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/document/typora/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/</loc>
   </url>
   
   <url>

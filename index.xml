@@ -114,7 +114,8 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/docker/docker-daemon/</guid>
-      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。</description>
+      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
+Docker Version vs API Version</description>
     </item>
     
     <item>
@@ -346,7 +347,7 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
       <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-sudo apt-get update &amp;amp;&amp;amp; apt-get install python -y
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
 安装 AKE 通过命令 wget http://get.alauda.cn/deploy/ake/ake &amp;amp;&amp;amp; chmod u+x ake &amp;amp;&amp;amp; ./ake up 会安装 AKE 以及 Kubernetes。
 如果发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
 修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
@@ -370,7 +371,8 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
-      <description> ApiServer </description>
+      <description>ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型</description>
     </item>
     
     <item>
@@ -420,7 +422,10 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
 安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
 sudo apt-get install maven make -y
-拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/heapster:v1.3.0 k8s.gcr.io/heapster:v1.3.0 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/jenkinsx:0.0.25 jenkinsxio/jenkinsx:0.0.25 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.</description>
+为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker
+重启 Docker 服务 sudo service docker restart
+添加权限 sudo chmod a+rw /var/run/docker.sock
+拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.</description>
     </item>
     
     <item>
@@ -470,7 +475,8 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       <description> 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
 切换上下文 kubectl config use-context dev
 查看上下文 kubectl config current-context
-导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash  </description>
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash  或者也可以设置参数
+wget https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh &amp;amp;&amp;amp; chmod u+x *.sh  </description>
     </item>
     
     <item>
@@ -517,6 +523,15 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 然后，添加可执行权限并移动到执行目录下：
 chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
 下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
+    </item>
+    
+    <item>
+      <title>Packing</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</guid>
+      <description>http://packaging.ubuntu.com/html/getting-set-up.html</description>
     </item>
     
     <item>

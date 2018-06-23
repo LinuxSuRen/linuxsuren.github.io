@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="131">
+<meta itemprop="wordCount" content="162">
 
 
 
@@ -214,6 +214,12 @@
 
 <p><code>sudo apt-get install maven make -y</code></p>
 
+<p>为了方便，我们把当前用户加入 Docker 用户组 <code>sudo gpasswd -a ${USER} docker</code></p>
+
+<p>重启 Docker 服务 <code>sudo service docker restart</code></p>
+
+<p>添加权限 <code>sudo chmod a+rw /var/run/docker.sock</code></p>
+
 <h1 id="拉取镜像">拉取镜像</h1>
 
 <pre><code>docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1
@@ -245,6 +251,9 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/jnlp-slave:3.14-1 jenkinsci/
 
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3
 docker tag registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3 k8s.gcr.io/defaultbackend:1.3
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/monocular-ui:v0.6.1
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/monocular-ui:v0.6.1 bitnami/monocular-ui:v0.6.1
 </code></pre>
 
 <h2 id="安装-jx">安装 jx</h2>
@@ -254,6 +263,10 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3 k8s.gcr.i
 <p>移动到系统目录中 <code>mv jx /usr/local/bin</code></p>
 
 <p>安装 jx <code>jx install --username suren --provider=kubernetes  --on-premise</code></p>
+
+<h1 id="连接远程">连接远程</h1>
+
+<p>如果我们想要从本地连接远程的 Kubernetes 集群的话，需要<a href="/blog/devops/k8s/kuberctl/">导出用户证书</a>。</p>
 
 </div>
 
