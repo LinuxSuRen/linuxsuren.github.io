@@ -22,7 +22,8 @@ sudo apt-get install maven make -y
 为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker
 重启 Docker 服务 sudo service docker restart
 添加权限 sudo chmod a+rw /var/run/docker.sock
-拉取镜像 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubernetes-helm/tiller:v2.9.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7 docker pull registry.</description>
+拉取镜像 执行命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-images.sh | bash 拉取 jx 所需要的镜像
+安装 jx 获取 jx curl -LO https://github.com/jenkins-x/jx/releases/download/$(curl -s https://api.github.com/repos/jenkins-x/jx/releases/latest | grep tag_name | cut -d &#39;&amp;quot;&#39; -f 4)/jx-linux-amd64.</description>
     </item>
     
     <item>
