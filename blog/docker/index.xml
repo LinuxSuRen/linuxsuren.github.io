@@ -77,7 +77,7 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 创建目录 mkdir /etc/systemd/system/docker.service.d
 编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
-[Service] ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
 Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
 DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;

@@ -447,7 +447,8 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
       <description>添加 Gitee 为 Git 服务器
-jx create git server gitea http://localhost:10080</description>
+jx create git server gitea http://localhost:10080
+DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。</description>
     </item>
     
     <item>
@@ -652,7 +653,7 @@ yum install python-pip</description>
 创建目录 mkdir /etc/systemd/system/docker.service.d
 编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
-[Service] ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
 Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
 DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
