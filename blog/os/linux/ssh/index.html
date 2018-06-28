@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>在 CentOS 安装 Docker | SuRenPi</title>
+    <title>SSH | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,13 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="在 CentOS 安装 Docker" />
-<meta property="og:description" content="yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos" />
+<meta property="og:title" content="SSH" />
+<meta property="og:description" content="SSH" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/docker/docker-centos/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/ssh/" />
 
 
 
@@ -50,25 +47,19 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 
 
 
-<meta itemprop="name" content="在 CentOS 安装 Docker">
-<meta itemprop="description" content="yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos">
+<meta itemprop="name" content="SSH">
+<meta itemprop="description" content="SSH">
 
 
 
-<meta itemprop="wordCount" content="53">
+<meta itemprop="wordCount" content="21">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 CentOS 安装 Docker"/>
-<meta name="twitter:description" content="yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos"/>
+<meta name="twitter:title" content="SSH"/>
+<meta name="twitter:description" content="SSH"/>
 
 
 
@@ -172,7 +163,7 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Install Docker ">
+			<a href="https://linuxsuren.github.io/blog/os/linux/find/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Find ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -182,7 +173,7 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/docker/docker-config/" class="dib f6 pr1 hover-bg-light-gray br-100" title="配置">
+			<a href="https://linuxsuren.github.io/blog/os/linux/shell/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Shell">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -201,10 +192,14 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">在 CentOS 安装 Docker</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">SSH</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      SSH
+    </div>
   
 
   
@@ -214,35 +209,25 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
 
 <div class="prose" id="prose">
 
-<pre><code>yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-selinux \
-                  docker-engine-selinux \
-                  docker-engine
-</code></pre>
 
-<p>安装依赖：</p>
 
-<pre><code>yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
-</code></pre>
+<p>配置文件 <code>vim /etc/ssh/sshd_config</code></p>
 
-<p>添加库</p>
+<h1 id="允许-root-登陆">允许 Root 登陆</h1>
 
-<pre><code>yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-</code></pre>
+<p>如果你希望允许 <code>root</code> 用户可以通过 <code>ssh</code> 远程登陆的话，可以找到配置文件，并将 <code>PermitRootLogin</code> 设置为 <code>yes</code>。</p>
 
-<p>查看版本 <code>yum list docker-ce --showduplicates | sort -r</code></p>
+<h1 id="无密码登录">无密码登录</h1>
 
-<p>安装 Docker <code>yum install docker-ce</code> 安装执行版本 <code>yum install docker-ce17.12.0.ce-1.el7.centos</code></p>
+<ol>
+<li><p>在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）</p></li>
+
+<li><p>在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容</p></li>
+</ol>
+
+<h1 id="服务重启">服务重启</h1>
+
+<p><code>service ssh restart</code></p>
 
 </div>
 
@@ -304,14 +289,14 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/docker/docker-centos/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/os/linux/ssh/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “在 CentOS 安装 Docker”
+    “SSH”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/docker/docker-centos.md" class="
+      <a href="edit/master/content/blog/os/linux/ssh.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 

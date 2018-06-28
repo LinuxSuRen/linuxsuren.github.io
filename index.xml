@@ -197,6 +197,15 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/network/chromedp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/network/chromedp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -211,36 +220,6 @@ brew install polip
 安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
 使用 polipo socksParentProxy=127.0.0.1:1080
 配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/awk/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/awk/</guid>
-      <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
-      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
-POST curl -d &amp;quot;param&amp;quot; http://baidu.com
-curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/find/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
-      <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
-查找文件夹 find ~ -type d -name jx</description>
     </item>
     
     <item>
@@ -273,28 +252,6 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
       
       <guid>https://linuxsuren.github.io/blog/os/linux/service/</guid>
       <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/split/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/split/</guid>
-      <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
-合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/user/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/user/</guid>
-      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
-useradd user-name --home /home/user-name --create-home
-su user-name
-userdel user-name</description>
     </item>
     
     <item>
@@ -341,6 +298,15 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
     </item>
     
     <item>
+      <title>AWK</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/awk/</guid>
+      <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
+    </item>
+    
+    <item>
       <title>Ake</title>
       <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -348,8 +314,8 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
       <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
-安装 AKE 通过命令 wget http://get.alauda.cn/deploy/ake/ake &amp;amp;&amp;amp; chmod u+x ake &amp;amp;&amp;amp; ./ake up 会安装 AKE 以及 Kubernetes。
-如果发生错误的，需要执行该命令来清理 curl http://get.alauda.cn/deploy/ake/cleanup | bash
+安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
+通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
 修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
 apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
     </item>
@@ -373,6 +339,16 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
       <description>ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
 执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型</description>
+    </item>
+    
+    <item>
+      <title>Find</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
+      <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
+查找文件夹 find ~ -type d -name jx</description>
     </item>
     
     <item>
@@ -405,15 +381,6 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
-      <title>Grep</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/grep/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/grep/</guid>
-      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
-    </item>
-    
-    <item>
       <title>Install</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -427,6 +394,16 @@ sudo apt-get install maven make -y
 添加权限 sudo chmod a+rw /var/run/docker.sock
 拉取镜像 执行命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-images.sh | bash 拉取 jx 所需要的镜像
 安装 jx 获取 jx curl -LO https://github.com/jenkins-x/jx/releases/download/$(curl -s https://api.github.com/repos/jenkins-x/jx/releases/latest | grep tag_name | cut -d &#39;&amp;quot;&#39; -f 4)/jx-linux-amd64.</description>
+    </item>
+    
+    <item>
+      <title>Install Docker</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</guid>
+      <description>查看可用的版本 apt-cache madison docker-ce
+安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
     </item>
     
     <item>
@@ -448,7 +425,8 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
       <description>添加 Gitee 为 Git 服务器
 jx create git server gitea http://localhost:10080
-DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。</description>
+DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。
+因此，我们需要的 Docker 版本为 v17.06。</description>
     </item>
     
     <item>
@@ -474,11 +452,10 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
-      <description> 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
 切换上下文 kubectl config use-context dev
 查看上下文 kubectl config current-context
-导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash  或者也可以设置参数
-wget https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh &amp;amp;&amp;amp; chmod u+x *.sh  </description>
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f</description>
     </item>
     
     <item>
@@ -537,6 +514,28 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>SSH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/ssh/</guid>
+      <description>配置文件 vim /etc/ssh/sshd_config
+允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
+无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
+ 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
+  服务重启 service ssh restart</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/shell/</guid>
+      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2</description>
+    </item>
+    
+    <item>
       <title>Typora</title>
       <link>https://linuxsuren.github.io/blog/document/typora/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -556,6 +555,27 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>curl</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1</description>
+    </item>
+    
+    <item>
+      <title>echo</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/echo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/echo/</guid>
+      <description>参数 -n 不换行</description>
+    </item>
+    
+    <item>
       <title>golang</title>
       <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -564,6 +584,37 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <description>Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
 设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title>grep</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/grep/</guid>
+      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
+      <title>split</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/split/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/split/</guid>
+      <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
+合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
+    </item>
+    
+    <item>
+      <title>user</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/user/</guid>
+      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
+useradd user-name --home /home/user-name --create-home
+su user-name
+userdel user-name</description>
     </item>
     
     <item>

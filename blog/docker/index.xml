@@ -56,6 +56,16 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     </item>
     
     <item>
+      <title>Install Docker</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</guid>
+      <description>查看可用的版本 apt-cache madison docker-ce
+安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
+    </item>
+    
+    <item>
       <title>在 CentOS 安装 Docker</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

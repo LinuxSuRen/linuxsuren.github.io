@@ -99,19 +99,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/network/chromedp/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/find/</loc>
   </url>
   
   <url>
@@ -124,14 +116,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/service/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/split/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
   </url>
   
   <url>
@@ -167,6 +151,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
   </url>
   
@@ -188,6 +176,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/find/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/test/ginkgo/</loc>
   </url>
   
@@ -200,11 +192,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/grep/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</loc>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</loc>
   </url>
   
   <url>
@@ -233,7 +225,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -261,6 +252,14 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/ssh/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/shell/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/tags/</loc>
     <priority>0</priority>
   </url>
@@ -278,11 +277,31 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/echo/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/go/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/grep/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/split/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
   </url>
   
   <url>

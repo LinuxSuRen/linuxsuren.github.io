@@ -225,13 +225,12 @@
 
 <h1 id="导出用户证书">导出用户证书</h1>
 
-<pre><code>curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash
+<pre><code>curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username
 </code></pre>
 
-<p>或者也可以设置参数</p>
+<h1 id="troubleshooting">Troubleshooting</h1>
 
-<pre><code>wget https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh &amp;&amp; chmod u+x *.sh
-</code></pre>
+<p>journalctl -u kubelet -f</p>
 
 </div>
 
