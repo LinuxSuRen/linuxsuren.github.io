@@ -400,6 +400,15 @@ sudo apt-get install maven make -y
     </item>
     
     <item>
+      <title>IntelliJ IDEA 快捷键</title>
+      <link>https://linuxsuren.github.io/blog/editor/idea-shortcut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/idea-shortcut/</guid>
+      <description>Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  </description>
+    </item>
+    
+    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -457,7 +466,14 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/mac/mac/</guid>
-      <description>快捷键 删除文件 command + delete
+      <description>按键符号 ⌘(command)
+⌥(option)
+⇧(shift)
+⇪(caps lock)
+⌃(control)
+↩(return)
+⌅(enter)
+快捷键 删除文件 command + delete
 浏览器 关闭选项卡 command + w
 前后切换选项卡 command + &amp;lt;-
 指定顺序切换选项卡 command + 1
@@ -466,10 +482,7 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
  截取部分并保存文件 shift + command + 4
  截取全屏并保存粘贴板 shift + control + command + 3
  截取部分并保存粘贴板 shift + control + command + 4
-  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。
- 开机后按下 command+s
- 进入终端后输入命令 /sbin/mount -uaw`
- 执行命令 rm /var/db/.</description>
+  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
     </item>
     
     <item>
