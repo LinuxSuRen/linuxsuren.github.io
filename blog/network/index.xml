@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SuRenPi</title>
+    <title>网络 on SuRenPi</title>
     <link>https://linuxsuren.github.io/blog/network/</link>
-    <description>Recent content on SuRenPi</description>
+    <description>Recent content in 网络 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
@@ -20,12 +20,12 @@
     </item>
     
     <item>
-      <title></title>
+      <title>代理</title>
       <link>https://linuxsuren.github.io/blog/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/network/proxy/</guid>
-      <description> 代理 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
+      <description> 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
 CentOS yum install shadowsocks
 pip install shadowsocks
 sudo pip install shadowsocks --upgrade

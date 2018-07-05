@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SuRenPi</title>
+    <title>SCM on SuRenPi</title>
     <link>https://linuxsuren.github.io/blog/scm/</link>
-    <description>Recent content on SuRenPi</description>
+    <description>Recent content in SCM on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
@@ -11,17 +11,7 @@
     
     
     <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
-      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
-get submodule update 更新子模块代码</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Git Remote</title>
       <link>https://linuxsuren.github.io/blog/scm/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -31,6 +21,16 @@ get submodule update 更新子模块代码</description>
 git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
 git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
 最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Submodule</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
+get submodule update 更新子模块代码</description>
     </item>
     
     <item>

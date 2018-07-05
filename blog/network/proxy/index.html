@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>SuRenPi</title>
+    <title>代理 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,17 +27,8 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="" />
-<meta property="og:description" content=" 代理 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
-CentOS yum install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;&amp; make all &amp;&amp; make install
-使用 polipo socksParentProxy=127.0.0.1:1080
-配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  " />
+<meta property="og:title" content="代理" />
+<meta property="og:description" content="如何配置代理" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/network/proxy/" />
 
@@ -56,37 +47,19 @@ brew install polip
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content=" 代理 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
-CentOS yum install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;&amp; make all &amp;&amp; make install
-使用 polipo socksParentProxy=127.0.0.1:1080
-配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  ">
+<meta itemprop="name" content="代理">
+<meta itemprop="description" content="如何配置代理">
 
 
 
-<meta itemprop="wordCount" content="67">
+<meta itemprop="wordCount" content="66">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=" 代理 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
-CentOS yum install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;&amp; make all &amp;&amp; make install
-使用 polipo socksParentProxy=127.0.0.1:1080
-配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  "/>
+<meta name="twitter:title" content="代理"/>
+<meta name="twitter:description" content="如何配置代理"/>
 
 
 
@@ -211,10 +184,14 @@ brew install polip
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark"></h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">代理</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      如何配置代理
+    </div>
   
 
   
@@ -225,8 +202,6 @@ brew install polip
 <div class="prose" id="prose">
 
 
-
-<h1 id="代理">代理</h1>
 
 <h1 id="分类">分类</h1>
 
@@ -304,6 +279,37 @@ export HTTP_PROXY HTTPS_PROXY no_proxy
     
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">OS</a>
+
+          
+            <ul class=" desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/os/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    操作系统
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/blog/devops/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">DevOps Article</a>
+
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/blog/os/linux/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">Linux</a>
+
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">build</a>
 
           
@@ -333,7 +339,7 @@ export HTTP_PROXY HTTPS_PROXY no_proxy
   <a href="https://linuxsuren.github.io/blog/network/proxy/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “”
+    “代理”
   </a> was last updated: January 1, 0001
 </h6>
 

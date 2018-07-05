@@ -110,6 +110,16 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/devops/terraform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/terraform/</guid>
+      <description> title: terraform
+description: todo </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/docker/docker-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -173,23 +183,10 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/</link>
+      <link>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/</guid>
-      <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
-:set paste
-解除 paste 模式的命令如下：
-:set nopaste
-样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</guid>
+      <guid>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</guid>
       <description>Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。
 控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类
 构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
@@ -206,20 +203,16 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/network/proxy/</link>
+      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/network/proxy/</guid>
-      <description> 代理 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
-CentOS yum install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
-使用 polipo socksParentProxy=127.0.0.1:1080
-配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  </description>
+      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
+      <description>&amp;ndash; title: curl
+description: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
     </item>
     
     <item>
@@ -261,29 +254,6 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
       
       <guid>https://linuxsuren.github.io/blog/os/telnet/</guid>
       <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
-      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
-get submodule update 更新子模块代码</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/scm/git/</guid>
-      <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
-这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
-git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
-git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
-最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
     </item>
     
     <item>
@@ -358,6 +328,29 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       
       <guid>https://linuxsuren.github.io/blog/test/ginkgo/</guid>
       <description>Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。</description>
+    </item>
+    
+    <item>
+      <title>Git Remote</title>
+      <link>https://linuxsuren.github.io/blog/scm/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git/</guid>
+      <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
+这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
+git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
+git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
+最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Submodule</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
+get submodule update 更新子模块代码</description>
     </item>
     
     <item>
@@ -532,7 +525,9 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/shell/</guid>
-      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2</description>
+      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+文件路径 从文件路径中提取文件名和目录
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
@@ -555,15 +550,16 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
-      <title>curl</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/curl/</link>
+      <title>Vim</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/curl/</guid>
-      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
-POST curl -d &amp;quot;param&amp;quot; http://baidu.com
-curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
-管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1</description>
+      <guid>https://linuxsuren.github.io/blog/editor/vim/</guid>
+      <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
+:set paste
+解除 paste 模式的命令如下：
+:set nopaste
+样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
     </item>
     
     <item>
@@ -626,6 +622,24 @@ userdel user-name</description>
       <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
 为了方便使用，我们可以为 wget 添加一个别名，如下所示：
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
+    </item>
+    
+    <item>
+      <title>代理</title>
+      <link>https://linuxsuren.github.io/blog/network/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/network/proxy/</guid>
+      <description> 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
+CentOS yum install shadowsocks
+pip install shadowsocks
+sudo pip install shadowsocks --upgrade
+使用 sudo sslocal -c shadowsocks.json -d start
+polipo 安装 sudo apt-get install polipo
+brew install polip
+安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  </description>
     </item>
     
     <item>

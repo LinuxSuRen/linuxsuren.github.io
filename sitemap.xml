@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/codequality/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/codequality/sonarqube/</loc>
   </url>
   
@@ -59,6 +55,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/terraform/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-daemon/</loc>
   </url>
   
@@ -79,23 +79,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/ide/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/ide/eclipse-plugin-dev/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/network/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</loc>
   </url>
   
   <url>
@@ -103,7 +87,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
   </url>
   
   <url>
@@ -120,18 +104,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/telnet/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-submodule/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git/</loc>
   </url>
   
   <url>
@@ -176,11 +148,23 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/eclipse/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/find/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/test/ginkgo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-submodule/</loc>
   </url>
   
   <url>
@@ -252,6 +236,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/scm/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/ssh/</loc>
   </url>
   
@@ -277,7 +265,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
   </url>
   
   <url>
@@ -309,7 +297,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/test/</loc>
+    <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/codequality/</loc>
   </url>
   
   <url>
@@ -357,7 +349,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/test/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/network/</loc>
   </url>
   
   <url>
