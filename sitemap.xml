@@ -19,10 +19,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
   </url>
   
@@ -145,6 +141,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-mirror/</loc>
   </url>
   
   <url>
@@ -370,6 +370,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-config/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/configuration/</loc>
   </url>
   
 </urlset>

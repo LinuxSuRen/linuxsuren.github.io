@@ -312,6 +312,18 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
     </item>
     
     <item>
+      <title>Docker Mirror</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-mirror/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-mirror/</guid>
+      <description>vim /etc/docker/daemon.json
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
+或者，在文件 /etc/default/docker 中添加如下配置：
+DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
+    </item>
+    
+    <item>
       <title>Find</title>
       <link>https://linuxsuren.github.io/blog/os/linux/find/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
