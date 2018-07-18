@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Find | SuRenPi</title>
+    <title>Connect to Mobile | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Find" />
-<meta property="og:description" content="Find" />
+<meta property="og:title" content="Connect to Mobile" />
+<meta property="og:description" content="How to connect mobile device" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/find/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/mobile/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="Find">
-<meta itemprop="description" content="Find">
+<meta itemprop="name" content="Connect to Mobile">
+<meta itemprop="description" content="How to connect mobile device">
 
 
 
-<meta itemprop="wordCount" content="19">
+<meta itemprop="wordCount" content="33">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Find"/>
-<meta name="twitter:description" content="Find"/>
+<meta name="twitter:title" content="Connect to Mobile"/>
+<meta name="twitter:description" content="How to connect mobile device"/>
 
 
 
@@ -163,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/os/linux/mobile/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Connect to Mobile ">
+			<a href="https://linuxsuren.github.io/blog/os/linux/awk/" class="dib f6 pl1 hover-bg-light-gray br-100" title="AWK ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -173,7 +173,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/os/linux/ssh/" class="dib f6 pr1 hover-bg-light-gray br-100" title="SSH">
+			<a href="https://linuxsuren.github.io/blog/os/linux/find/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Find">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -192,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Find</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Connect to Mobile</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Find
+      How to connect mobile device
     </div>
   
 
@@ -211,13 +211,31 @@
 
 
 
-<h1 id="查找大文件">查找大文件</h1>
+<h1 id="ipad">iPad</h1>
 
-<p><code>find / -type f -size +500M</code> 这里的 <code>f</code> 指的是文件类型，并且，大于500M的。而且，字母 <code>M</code> 是大写。</p>
+<p>安装依赖的工具：</p>
 
-<h1 id="查找文件夹">查找文件夹</h1>
+<pre><code>add-apt-repository ppa:pmcenery/ppa
+apt-get update
+apt-get install libimobiledevice-utils
+apt-get install ideviceinstaller
+</code></pre>
 
-<p><code>find ~ -type d -name jx</code></p>
+<p>安装应用 <code>ideviceinstaller -i xxx.ipa</code></p>
+
+<p>卸载应用 <code>ideviceinstaller -U [bundleID]</code></p>
+
+<p>查看系统日志 <code>idevicesyslog</code></p>
+
+<p>查看当前已连接的设备的UUID <code>idevice_id --list</code></p>
+
+<p>截图 <code>idevicescreenshot</code></p>
+
+<p>查看设备信息 <code>videviceinfo</code></p>
+
+<p>获取设备时间 <code>idevicedate</code></p>
+
+<p>参考 <a href="https://github.com/LinuxSuRen/libimobiledevice">https://github.com/LinuxSuRen/libimobiledevice</a></p>
 
 </div>
 
@@ -310,14 +328,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/os/linux/find/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/os/linux/mobile/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Find”
+    “Connect to Mobile”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/os/linux/find.md" class="
+      <a href="edit/master/content/blog/os/linux/mobile.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 
