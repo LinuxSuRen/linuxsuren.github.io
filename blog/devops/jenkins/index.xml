@@ -63,13 +63,23 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     </item>
     
     <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</link>
+      <title>Action</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</guid>
-      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
-流水线 </description>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</guid>
+      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
+接口 你首先需要实现接口 hudson.model.Action 的三个方法:
+ getIconFileName getDisplayName getUrlName  约定 </description>
+    </item>
+    
+    <item>
+      <title>Annotation</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</guid>
+      <description> CheckForNull Extension NoExternalUse </description>
     </item>
     
     <item>
@@ -81,6 +91,19 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins UI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</guid>
+      <description> 按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
+&amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
+&amp;lt;f:textbox/&amp;gt;
+&amp;lt;f:checkbox/&amp;gt;
+凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  </description>
     </item>
     
     <item>
@@ -98,6 +121,16 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 参考 Extend Jenkins</description>
+    </item>
+    
+    <item>
+      <title>扩展 Jenkins 的构建（Builder）任务</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</guid>
+      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 </description>
     </item>
     
   </channel>

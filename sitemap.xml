@@ -47,10 +47,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/terraform/</loc>
   </url>
   
@@ -123,7 +119,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</loc>
   </url>
   
   <url>
@@ -200,6 +204,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/</loc>
   </url>
   
@@ -220,6 +228,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/mplayer/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
   </url>
   
@@ -237,6 +249,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/test/postman/</loc>
   </url>
   
   <url>
@@ -346,6 +362,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</loc>
   </url>
   
   <url>

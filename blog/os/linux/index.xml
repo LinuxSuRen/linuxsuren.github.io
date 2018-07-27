@@ -93,6 +93,15 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     </item>
     
     <item>
+      <title>MPlayer</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/mplayer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/mplayer/</guid>
+      <description>音频 只播放音频 mplayer -vo sample.mp4</description>
+    </item>
+    
+    <item>
       <title>SSH</title>
       <link>https://linuxsuren.github.io/blog/os/linux/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
