@@ -66,6 +66,16 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
     </item>
     
     <item>
+      <title>Base64</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/base64/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/base64/</guid>
+      <description>echo -n 1234 | base64
+echo MTIzNA== | base64 --d</description>
+    </item>
+    
+    <item>
       <title>Connect to Mobile</title>
       <link>https://linuxsuren.github.io/blog/os/linux/mobile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
