@@ -48,58 +48,6 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</guid>
-      <description>本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
-创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
-提交请求 详细阅读托管要求
-在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
-托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
-你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
-发布 等一切就绪，你的插件要发布时，只要执行下面的命令：
-mvn release:prepare release:perform</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</guid>
-      <description> 流水线 本文介绍 Jenkins 的脚本式流水线。
-触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</guid>
-      <description>Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/devops/terraform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -332,6 +280,16 @@ echo MTIzNA== | base64 --d</description>
     </item>
     
     <item>
+      <title>CLI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</guid>
+      <description>扩展点 hudson.cli.CLICommand
+Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
+    </item>
+    
+    <item>
       <title>Connect to Mobile</title>
       <link>https://linuxsuren.github.io/blog/os/linux/mobile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -511,6 +469,39 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     </item>
     
     <item>
+      <title>Jenkins 插件托管</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</guid>
+      <description>创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
+提交请求 详细阅读托管要求
+在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
+托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
+你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
+发布 等一切就绪，你的插件要发布时，只要执行下面的命令：
+mvn release:prepare release:perform
+跳过测试 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</guid>
+      <description>运行 在 war 目录下运行：
+mvn hpi:run
+mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
+mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
+指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
+mvn hpi:run -Djenkins.install.runSetupWizard=true
+参考 maven-hpi-plugin</description>
+    </item>
+    
+    <item>
       <title>Kubectl</title>
       <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -685,6 +676,15 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
+      <title>kaniko</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</guid>
+      <description>Reference https://github.com/GoogleContainerTools/kaniko</description>
+    </item>
+    
+    <item>
       <title>split</title>
       <link>https://linuxsuren.github.io/blog/os/linux/split/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -753,8 +753,8 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
-      <description>checkout 该命令可以切换分支、新建分支等。
-切换分支 切换标签 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
+      <description>分支 git checkout --trace origin/fea/test
+切换标签 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
  场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  标签 git tag v0.1.2-light
 git tag -a v0.2 -m &#39;here is comment&#39;
 切换到标签 git checkout v0.2
@@ -809,6 +809,24 @@ yum install python-pip</description>
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</guid>
       <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
 流水线 </description>
+    </item>
+    
+    <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>脚本式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</guid>
+      <description>触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  循环 node(&#39;suren&#39;) { def dev_path = &#39;/opt/suren/bin&#39; def services = [ [ &#39;name&#39;: &#39;admin&#39;, &#39;project&#39;: &#39;admin&#39;, &#39;port&#39;: &#39;7002&#39;, &#39;jarName&#39;: &#39;admin&#39; ] ]; stage(&#39;Copy Artifact&#39;) { for(service in services){ step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
     </item>
     
     <item>

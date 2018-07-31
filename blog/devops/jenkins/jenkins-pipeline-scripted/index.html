@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>SuRenPi</title>
+    <title>脚本式流水线 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,9 +27,8 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="" />
-<meta property="og:description" content=" 流水线 本文介绍 Jenkins 的脚本式流水线。
-触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  " />
+<meta property="og:title" content="脚本式流水线" />
+<meta property="og:description" content="本文介绍 Jenkins 的脚本式流水线" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/" />
 
@@ -48,21 +47,19 @@
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content=" 流水线 本文介绍 Jenkins 的脚本式流水线。
-触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  ">
+<meta itemprop="name" content="脚本式流水线">
+<meta itemprop="description" content="本文介绍 Jenkins 的脚本式流水线">
 
 
 
-<meta itemprop="wordCount" content="49">
+<meta itemprop="wordCount" content="160">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=" 流水线 本文介绍 Jenkins 的脚本式流水线。
-触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  "/>
+<meta name="twitter:title" content="脚本式流水线"/>
+<meta name="twitter:description" content="本文介绍 Jenkins 的脚本式流水线"/>
 
 
 
@@ -166,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/" class="dib f6 pl1 hover-bg-light-gray br-100" title="申明式流水线 ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -175,14 +172,6 @@
 			</a>
 		
 
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/" class="dib f6 pr1 hover-bg-light-gray br-100" title="">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
 		
 	</div>
 
@@ -195,10 +184,14 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark"></h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">脚本式流水线</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      本文介绍 Jenkins 的脚本式流水线
+    </div>
   
 
   
@@ -209,10 +202,6 @@
 <div class="prose" id="prose">
 
 
-
-<h1 id="流水线">流水线</h1>
-
-<p>本文介绍 Jenkins 的脚本式流水线。</p>
 
 <h2 id="触发器">触发器</h2>
 
@@ -245,6 +234,45 @@ properties([
 		projectName: 'Project')]),
 	pipelineTriggers([])]
 )
+</code></pre>
+
+<h2 id="循环">循环</h2>
+
+<pre><code>node('suren') {
+    def dev_path = '/opt/suren/bin'
+    def services = [
+        [
+            'name': 'admin',
+            'project': 'admin',
+            'port': '7002',
+            'jarName': 'admin'
+        ]
+    ];
+    
+    stage('Copy Artifact') {
+        for(service in services){
+            step([$class: 'CopyArtifact', fingerprintArtifacts: true, flatten: true,
+                projectName: service.project,
+                selector: [$class: 'StatusBuildSelector', stable: false],
+                target: dev_path + '/' + service.name
+            ])
+        }
+    }
+    
+    stage('Stop Service') {
+        for(service in services){
+           sh 'fuser -n tcp -k ' + service.port + ' &gt; redirection &amp;'
+        }
+    }
+    
+    stage('Start Service') {
+        for(service in services){
+            sh 'cd ' + pass_bin + '/' + service.name + ' &amp;&amp; nohup nice java -server -Xms128m -Xmx384m \
+                -jar ' + service.jarName + '.jar \
+                --server.port=' + service.port + ' $&gt; initServer.log 2&gt;&amp;1 &amp;'
+        }
+    }
+}
 </code></pre>
 
 </div>
@@ -341,7 +369,7 @@ properties([
   <a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “”
+    “脚本式流水线”
   </a> was last updated: January 1, 0001
 </h6>
 

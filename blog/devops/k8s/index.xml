@@ -59,6 +59,15 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>kaniko</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</guid>
+      <description>Reference https://github.com/GoogleContainerTools/kaniko</description>
+    </item>
+    
+    <item>
       <title>安装 Kubernetes</title>
       <link>https://linuxsuren.github.io/blog/devops/k8s/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

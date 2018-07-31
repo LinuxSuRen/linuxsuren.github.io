@@ -31,22 +31,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/terraform/</loc>
   </url>
   
@@ -143,6 +127,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -221,6 +209,14 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</loc>
   </url>
   
   <url>
@@ -313,6 +309,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/split/</loc>
   </url>
   
@@ -385,6 +385,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
@@ -394,6 +398,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</loc>
   </url>
   
   <url>

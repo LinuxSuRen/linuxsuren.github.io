@@ -253,122 +253,6 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/jenkins-host/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
-创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
-提交请求 详细阅读托管要求
-在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
-托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
-你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
-发布 等一切就绪，你的插件要发布时，只要执行下面的命令：
-mvn release:prepare release:perform
-      
-
-        <a href="/blog/devops/jenkins/jenkins-host/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/jenkins-pipeline-declarative/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          
-      
-
-        <a href="/blog/devops/jenkins/jenkins-pipeline-declarative/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/jenkins-pipeline-scripted/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-           流水线 本文介绍 Jenkins 的脚本式流水线。
-触发器 node('local') { echo 'hello' } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '10' ) ), pipelineTriggers([ cron('H 3,12,17 * * *'), scm('H 3,12,17 * * *') ]) ])  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  
-      
-
-        <a href="/blog/devops/jenkins/jenkins-pipeline-scripted/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/jenkins-plugin-debug/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin
-      
-
-        <a href="/blog/devops/jenkins/jenkins-plugin-debug/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
       <a href="/blog/devops/jenkins/jenkins-plugin-dev-action/" class="link primary-color dim">Action</a>
     </h1>
 
@@ -403,6 +287,31 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
         
 
         <a href="/blog/devops/jenkins/jenkins-plugin-dev-annotation/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/jenkins-plugin-dev-cli/" class="link primary-color dim">CLI</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Command Line Interface
+        
+
+        <a href="/blog/devops/jenkins/jenkins-plugin-dev-cli/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -494,6 +403,56 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
 
     <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/jenkins-host/" class="link primary-color dim">Jenkins 插件托管</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
+        
+
+        <a href="/blog/devops/jenkins/jenkins-host/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/jenkins-plugin-debug/" class="link primary-color dim">Jenkins 插件调试</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Jenkins 插件调试
+        
+
+        <a href="/blog/devops/jenkins/jenkins-plugin-debug/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/devops/jenkins/jenkins-plugin-dev-build/" class="link primary-color dim">扩展 Jenkins 的构建（Builder）任务</a>
     </h1>
 
@@ -503,6 +462,31 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
         
 
         <a href="/blog/devops/jenkins/jenkins-plugin-dev-build/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/jenkins-pipeline-declarative/" class="link primary-color dim">申明式流水线</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          申明式流水线
+        
+
+        <a href="/blog/devops/jenkins/jenkins-pipeline-declarative/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>SuRenPi</title>
+    <title>Jenkins 插件调试 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,16 +27,8 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="" />
-<meta property="og:description" content="Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin" />
+<meta property="og:title" content="Jenkins 插件调试" />
+<meta property="og:description" content="Jenkins 插件调试" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/" />
 
@@ -55,35 +47,19 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin">
+<meta itemprop="name" content="Jenkins 插件调试">
+<meta itemprop="description" content="Jenkins 插件调试">
 
 
 
-<meta itemprop="wordCount" content="37">
+<meta itemprop="wordCount" content="35">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin"/>
+<meta name="twitter:title" content="Jenkins 插件调试"/>
+<meta name="twitter:description" content="Jenkins 插件调试"/>
 
 
 
@@ -187,7 +163,7 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件托管 ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -197,7 +173,7 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Action">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/" class="dib f6 pr1 hover-bg-light-gray br-100" title="扩展 Jenkins 的构建（Builder）任务">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -216,10 +192,14 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark"></h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件调试</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Jenkins 插件调试
+    </div>
   
 
   
@@ -230,8 +210,6 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 <div class="prose" id="prose">
 
 
-
-<h1 id="jenkins-插件调试">Jenkins 插件调试</h1>
 
 <h1 id="运行">运行</h1>
 
@@ -353,7 +331,7 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
   <a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “”
+    “Jenkins 插件调试”
   </a> was last updated: January 1, 0001
 </h6>
 
