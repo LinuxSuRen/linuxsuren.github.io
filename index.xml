@@ -745,6 +745,30 @@ brew install polip
     </item>
     
     <item>
+      <title>发布Maven工程到中央仓库</title>
+      <link>https://linuxsuren.github.io/blog/build/maven-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/build/maven-release/</guid>
+      <description>介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。
+注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
+sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
+签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
+gpg &amp;ndash;gen-key 生成密钥，成功后，会有类似如下的输出。
+gpg: key 69EC4448C6CE32EB marked as ultimately trusted
+gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
+69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。
+修改settings.xml 增加账户信息：
+&amp;lt;server&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;username&amp;gt;name&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;passwd&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt;  设置gpg的profile：
+&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.executable&amp;gt;gpg2&amp;lt;/gpg.executable&amp;gt; &amp;lt;gpg.passphrase&amp;gt;pass&amp;lt;/gpg.passphrase&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt;  需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：
+69EC4448C6CE32EB
+修改pom文件
+&amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt;  上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
+&amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+    <item>
       <title>在 CentOS 安装 Docker</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
