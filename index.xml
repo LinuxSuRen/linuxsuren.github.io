@@ -573,6 +573,15 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>Nginx</title>
+      <link>https://linuxsuren.github.io/blog/server/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/server/nginx/</guid>
+      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
+    </item>
+    
+    <item>
       <title>Packing</title>
       <link>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
