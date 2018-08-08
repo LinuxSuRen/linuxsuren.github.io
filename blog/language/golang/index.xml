@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>Template</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
+      <description> Action 1.条件语句 2.迭代 3.封装 4.引用
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }}  迭代 {{ range . }} {{ end }}  {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }}  </description>
+    </item>
+    
+    <item>
       <title>Unit Test</title>
       <link>https://linuxsuren.github.io/blog/language/golang/unit_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
