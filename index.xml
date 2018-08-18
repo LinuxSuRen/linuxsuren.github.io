@@ -325,7 +325,8 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       
       <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
       <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
-查找文件夹 find ~ -type d -name jx</description>
+查找文件夹 find ~ -type d -name jx
+查找并执行命令 find . -name *.java | xargs echo 查找完后执行</description>
     </item>
     
     <item>
