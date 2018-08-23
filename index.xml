@@ -94,11 +94,14 @@ docker run jenkins --name ci-jenkins
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/docker/dockerfile/</guid>
-      <description>Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+      <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
 ENV HTTP_PROXY http://192.168.1.1:1234
 上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
 ENV HTTP_PROXY &amp;quot;&amp;quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234</description>
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample</description>
     </item>
     
     <item>
@@ -330,6 +333,27 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
     </item>
     
     <item>
+      <title>GPG</title>
+      <link>https://linuxsuren.github.io/blog/os/gpg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/gpg/</guid>
+      <description> 安装 Windows版本下载地址 https://www.gpg4win.org/download.html
+Ubuntu下安装 sudo apt-get install gpg -y
+Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
+从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2
+命令 gpg --keyserver hkp://pool.sks-keyservers.net --send-k 上传公钥
+gpg --export-secret-key 标识名 &amp;gt; 导出文件名
+gpg -o keyfilename --export-secret-keys KeyID
+gpg -o keyfilename --export KeyID
+gpg --import 密钥文件
+gpg --delete-secret-key hello
+gpg --delete-key hello
+gpg –keyserver pool.sks-keyservers.net –recv-keys surenkey
+异常 gpg: cannot open /dev/tty&#39;: No such device or address can&#39;t connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  </description>
+    </item>
+    
+    <item>
       <title>Ginkgo</title>
       <link>https://linuxsuren.github.io/blog/test/ginkgo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -414,6 +438,15 @@ sudo apt-get install maven make -y
       
       <guid>https://linuxsuren.github.io/blog/editor/idea-shortcut/</guid>
       <description>Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  </description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>https://linuxsuren.github.io/blog/language/java/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/jvm/</guid>
+      <description>查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all</description>
     </item>
     
     <item>
@@ -663,7 +696,7 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
 :set paste
 解除 paste 模式的命令如下：
 :set nopaste
-样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
+样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
     </item>
     
     <item>

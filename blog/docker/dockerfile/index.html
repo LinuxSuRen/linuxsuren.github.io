@@ -28,11 +28,14 @@
   }
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+<meta property="og:description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
 ENV HTTP_PROXY http://192.168.1.1:1234
 上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
 ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234" />
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/docker/dockerfile/" />
 
@@ -52,26 +55,32 @@ ENV HTTP_PROXY &quot;&quot;
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+<meta itemprop="description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
 ENV HTTP_PROXY http://192.168.1.1:1234
 上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
 ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234">
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample">
 
 
 
-<meta itemprop="wordCount" content="19">
+<meta itemprop="wordCount" content="31">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+<meta name="twitter:description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
 ENV HTTP_PROXY http://192.168.1.1:1234
 上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
 ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234"/>
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample"/>
 
 
 
@@ -219,6 +228,12 @@ ENV HTTP_PROXY &quot;&quot;
 
 
 
+<h1 id="基础镜像">基础镜像</h1>
+
+<p>如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：<a href="https://hub.docker.com/_/alpine/">alpine</a>。您可以参考下面的 Dockerfile 写法：</p>
+
+<p><code>FROM alpine:3.8</code></p>
+
 <h1 id="proxy">Proxy</h1>
 
 <p>如果执行 Docker 构建时，需要设置网络代理的化，可以在 <code>Dockerfile</code> 中添加下面的指令：</p>
@@ -230,6 +245,10 @@ ENV HTTP_PROXY &quot;&quot;
 <p><code>ENV HTTP_PROXY &quot;&quot;</code></p>
 
 <p>但是，需要在构建时指定参数：<code>docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234</code></p>
+
+<h1 id="expose">EXPOSE</h1>
+
+<p>指定容器要暴露的端口，例如：<code>EXPOSE 9898</code>。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：<code>docker run -P sample</code></p>
 
 </div>
 

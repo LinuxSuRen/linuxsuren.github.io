@@ -74,7 +74,7 @@
         "title": "",
         "tags": [],
         "description": "",
-        "content": " Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\n"
+        "content": " 基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：\nFROM alpine:3.8\nProxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\nEXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/document/hugo/",
@@ -266,6 +266,13 @@
         "content": " 查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。\n查找文件夹 find ~ -type d -name jx\n查找并执行命令 find . -name *.java | xargs echo 查找完后执行\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/gpg/",
+        "title": "GPG",
+        "tags": [],
+        "description": "GPG",
+        "content": " 安装 Windows版本下载地址 https://www.gpg4win.org/download.html\nUbuntu下安装 sudo apt-get install gpg -y\nMac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载\n从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2\n命令 gpg --keyserver hkp://pool.sks-keyservers.net --send-k 上传公钥\ngpg --export-secret-key 标识名 \u0026gt; 导出文件名\ngpg -o keyfilename --export-secret-keys KeyID\ngpg -o keyfilename --export KeyID\ngpg --import 密钥文件\ngpg --delete-secret-key hello\ngpg --delete-key hello\ngpg –keyserver pool.sks-keyservers.net –recv-keys surenkey\n异常 gpg: cannot open /dev/tty': No such device or address can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/test/ginkgo/",
         "title": "Ginkgo",
         "tags": [],
@@ -320,6 +327,13 @@
         "tags": [],
         "description": "IntelliJ IDEA 快捷键",
         "content": "Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/java/jvm/",
+        "title": "JVM",
+        "tags": [],
+        "description": "JVM",
+        "content": " 查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/java/",
@@ -515,7 +529,7 @@
         "title": "Vim",
         "tags": [],
         "description": "Vim",
-        "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
+        "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/echo/",
