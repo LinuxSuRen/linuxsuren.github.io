@@ -144,6 +144,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/docker/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-mirror/</loc>
   </url>
   
@@ -257,6 +261,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/server/nginx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/openj9/</loc>
   </url>
   
   <url>

@@ -310,6 +310,16 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://linuxsuren.github.io/blog/language/java/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/docker/</guid>
+      <description>内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。
+参考 Docker OpenJDK</description>
+    </item>
+    
+    <item>
       <title>Docker Mirror</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-mirror/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -613,6 +623,15 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       
       <guid>https://linuxsuren.github.io/blog/server/nginx/</guid>
       <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
+    </item>
+    
+    <item>
+      <title>OpenJ9</title>
+      <link>https://linuxsuren.github.io/blog/language/java/openj9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/openj9/</guid>
+      <description>参考 openj9-docs</description>
     </item>
     
     <item>

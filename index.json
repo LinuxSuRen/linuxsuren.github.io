@@ -245,6 +245,13 @@
         "content": "DevOps相关技术文章\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/java/docker/",
+        "title": "Docker",
+        "tags": [],
+        "description": "Docker",
+        "content": " 内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。\n参考 Docker OpenJDK\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-mirror/",
         "title": "Docker Mirror",
         "tags": [],
@@ -446,6 +453,13 @@
         "tags": [],
         "description": "Nginx",
         "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/java/openj9/",
+        "title": "OpenJ9",
+        "tags": [],
+        "description": "OpenJ9",
+        "content": " 参考 openj9-docs\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/",
