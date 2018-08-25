@@ -336,6 +336,13 @@
         "content": " 查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/build/jvm/",
+        "title": "JVM Arguments",
+        "tags": [],
+        "description": "JVM Arguments",
+        "content": "有些情况下，我们需要修改启动 Maven 时的 JVM 参数。\nMAVEN_OPTS=\u0026quot;-Xmx1024m\u0026quot; mvn clean 或 mvn -DjvmArgs=\u0026quot;-Xmx1024m\u0026quot; clean\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/java/",
         "title": "Java",
         "tags": [],
