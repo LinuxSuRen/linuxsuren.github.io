@@ -12,15 +12,6 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/codequality/sonarqube/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/codequality/sonarqube/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/configuration/ini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -674,6 +665,15 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
 path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
+    </item>
+    
+    <item>
+      <title>Sonarqube</title>
+      <link>https://linuxsuren.github.io/blog/codequality/sonarqube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/codequality/sonarqube/</guid>
+      <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
     </item>
     
     <item>

@@ -21,13 +21,6 @@
         "content": "DevOps相关技术文章\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/codequality/sonarqube/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": ""
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/configuration/ini/",
         "title": "",
         "tags": [],
@@ -502,6 +495,13 @@
         "tags": [],
         "description": "Shell",
         "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/codequality/sonarqube/",
+        "title": "Sonarqube",
+        "tags": [],
+        "description": "Sonarqube",
+        "content": " Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  "
     },
     {
         "uri": "https://linuxsuren.github.io/tags/",

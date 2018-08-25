@@ -15,10 +15,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/codequality/sonarqube/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
   </url>
   
@@ -289,6 +285,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/shell/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/codequality/sonarqube/</loc>
   </url>
   
   <url>

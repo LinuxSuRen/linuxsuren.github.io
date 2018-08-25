@@ -11,12 +11,12 @@
     
     
     <item>
-      <title></title>
+      <title>Sonarqube</title>
       <link>https://linuxsuren.github.io/blog/codequality/sonarqube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/codequality/sonarqube/</guid>
-      <description></description>
+      <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
     </item>
     
   </channel>
