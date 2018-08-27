@@ -308,6 +308,13 @@
         "content": " Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。\n启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce\nGitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/network/http_status/",
+        "title": "HTTP Status",
+        "tags": [],
+        "description": "HTTP Status",
+        "content": " 200 300 400 401 未经授权：访问由于凭据无效被拒绝。\n404 无法找到页面\n500 Reference "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
         "title": "Install",
         "tags": [],

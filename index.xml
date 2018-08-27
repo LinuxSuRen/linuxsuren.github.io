@@ -407,6 +407,17 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>HTTP Status</title>
+      <link>https://linuxsuren.github.io/blog/network/http_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/network/http_status/</guid>
+      <description> 200 300 400 401 未经授权：访问由于凭据无效被拒绝。
+404 无法找到页面
+500 Reference </description>
+    </item>
+    
+    <item>
       <title>Install</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
