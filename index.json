@@ -511,6 +511,13 @@
         "content": " Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  "
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/tr/",
+        "title": "TR",
+        "tags": [],
+        "description": "TR",
+        "content": "cat .m2/settings.xml | tr -s [:blank:] 清除空白字符\necho abc | tr a-z A-Z 大小写转换\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/tags/",
         "title": "Tags",
         "tags": [],
@@ -586,6 +593,13 @@
         "tags": [],
         "description": "kaniko",
         "content": " Reference https://github.com/GoogleContainerTools/kaniko\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/sed/",
+        "title": "sed",
+        "tags": [],
+        "description": "sed",
+        "content": "cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/split/",

@@ -296,6 +296,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/tr/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/tags/</loc>
     <priority>0</priority>
   </url>
@@ -338,6 +342,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/sed/</loc>
   </url>
   
   <url>

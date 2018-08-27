@@ -137,6 +137,16 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
+      <title>TR</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/tr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/tr/</guid>
+      <description>cat .m2/settings.xml | tr -s [:blank:] 清除空白字符
+echo abc | tr a-z A-Z 大小写转换</description>
+    </item>
+    
+    <item>
       <title>echo</title>
       <link>https://linuxsuren.github.io/blog/os/linux/echo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -152,6 +162,15 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/grep/</guid>
       <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
+      <title>sed</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/sed/</guid>
+      <description>cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符</description>
     </item>
     
     <item>
