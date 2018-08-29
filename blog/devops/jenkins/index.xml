@@ -52,6 +52,15 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
     </item>
     
     <item>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
       <title>Jenkins UI</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -364,6 +364,13 @@
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\njava -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/",
+        "title": "Jenkins Permission",
+        "tags": [],
+        "description": "Jenkins Permission System",
+        "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/",
         "title": "Jenkins UI",
         "tags": [],
