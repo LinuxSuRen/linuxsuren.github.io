@@ -100,7 +100,8 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
       <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
       <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
 查找文件夹 find ~ -type d -name jx
-查找并执行命令 find . -name *.java | xargs echo 查找完后执行</description>
+查找并执行命令 find . -name *.java | xargs echo 查找完后执行
+查找特定文件 cp $(find core/src/main/resources -type f -name &amp;quot;*_zh_CN.properties&amp;quot;) /tmp</description>
     </item>
     
     <item>
@@ -204,6 +205,15 @@ userdel user-name</description>
       <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
 为了方便使用，我们可以为 wget 添加一个别名，如下所示：
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
+    </item>
+    
+    <item>
+      <title>xargs</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/xargs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/xargs/</guid>
+      <description></description>
     </item>
     
   </channel>

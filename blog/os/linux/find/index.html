@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="28">
+<meta itemprop="wordCount" content="37">
 
 
 
@@ -222,6 +222,10 @@
 <h1 id="查找并执行命令">查找并执行命令</h1>
 
 <p><code>find . -name *.java | xargs echo</code> 查找完后执行</p>
+
+<h1 id="查找特定文件">查找特定文件</h1>
+
+<p><code>cp $(find core/src/main/resources -type f -name &quot;*_zh_CN.properties&quot;) /tmp</code></p>
 
 </div>
 

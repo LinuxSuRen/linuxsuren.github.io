@@ -330,7 +330,8 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       <guid>https://linuxsuren.github.io/blog/os/linux/find/</guid>
       <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
 查找文件夹 find ~ -type d -name jx
-查找并执行命令 find . -name *.java | xargs echo 查找完后执行</description>
+查找并执行命令 find . -name *.java | xargs echo 查找完后执行
+查找特定文件 cp $(find core/src/main/resources -type f -name &amp;quot;*_zh_CN.properties&amp;quot;) /tmp</description>
     </item>
     
     <item>
@@ -339,7 +340,7 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/gpg/</guid>
-      <description> 安装 Windows版本下载地址 https://www.gpg4win.org/download.html
+      <description>安装 Windows版本下载地址 https://www.gpg4win.org/download.html
 Ubuntu下安装 sudo apt-get install gpg -y
 Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
 从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2
@@ -348,10 +349,11 @@ gpg --export-secret-key 标识名 &amp;gt; 导出文件名
 gpg -o keyfilename --export-secret-keys KeyID
 gpg -o keyfilename --export KeyID
 gpg --import 密钥文件
+gpg --list-keys 列出密钥
 gpg --delete-secret-key hello
 gpg --delete-key hello
 gpg –keyserver pool.sks-keyservers.net –recv-keys surenkey
-异常 gpg: cannot open /dev/tty&#39;: No such device or address can&#39;t connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  </description>
+异常 gpg: cannot open /dev/tty&#39;: No such device or address can&#39;t connect to /root/.</description>
     </item>
     
     <item>
@@ -788,6 +790,17 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>maven-gpg-plugin</title>
+      <link>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</guid>
+      <description>[INFO] &amp;mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator &amp;mdash; gpg: directory &amp;lsquo;/home/jenkins/.gnupg&amp;rsquo; created gpg: keybox &amp;lsquo;/home/jenkins/.gnupg/pubring.kbx&amp;rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key
+gpg: signing failed: Inappropriate ioctl for device
+https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51</description>
+    </item>
+    
+    <item>
       <title>sed</title>
       <link>https://linuxsuren.github.io/blog/os/linux/sed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -830,6 +843,15 @@ alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quo
     </item>
     
     <item>
+      <title>xargs</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/xargs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/xargs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>代理</title>
       <link>https://linuxsuren.github.io/blog/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -858,7 +880,7 @@ brew install polip
 新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
 sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
 签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
-gpg &amp;ndash;gen-key 生成密钥，成功后，会有类似如下的输出。
+gpg --gen-key 生成密钥，成功后，会有类似如下的输出。
 gpg: key 69EC4448C6CE32EB marked as ultimately trusted
 gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
 69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。

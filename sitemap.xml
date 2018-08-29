@@ -349,6 +349,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/sed/</loc>
   </url>
   
@@ -362,6 +366,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/wget/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/xargs/</loc>
   </url>
   
   <url>
