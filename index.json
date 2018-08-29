@@ -375,7 +375,7 @@
         "title": "Jenkins UI",
         "tags": [],
         "description": "Jenkins UI 介绍",
-        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt;\n\u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; 验证按钮\n\u0026lt;f:textbox/\u0026gt;\n\u0026lt;f:checkbox/\u0026gt;\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  "
+        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt;\n\u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; 验证按钮\n\u0026lt;f:textbox/\u0026gt;\n\u0026lt;f:checkbox/\u0026gt;\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  https://ci.adoptopenjdk.net/\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/",
@@ -567,6 +567,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/vendor/",
+        "title": "Vendor",
+        "tags": [],
+        "description": "Golang 包依赖",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/",
         "title": "Vim",
         "tags": [],
@@ -574,11 +581,32 @@
         "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/dep/",
+        "title": "dep",
+        "tags": [],
+        "description": "dep",
+        "content": "dep ensure -update\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/echo/",
         "title": "echo",
         "tags": [],
         "description": "echo",
         "content": " 参数 -n 不换行\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/glide/",
+        "title": "glide",
+        "tags": [],
+        "description": "glide",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/godep/",
+        "title": "godep",
+        "tags": [],
+        "description": "godep",
+        "content": "godep update foo/bar\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/",
@@ -592,7 +620,14 @@
         "title": "golang",
         "tags": [],
         "description": "golang",
-        "content": " Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\n"
+        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/govendor/",
+        "title": "govendor",
+        "tags": [],
+        "description": "govendor",
+        "content": "govendor init\ngovendor list\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/grep/",

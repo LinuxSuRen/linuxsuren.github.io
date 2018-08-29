@@ -329,11 +329,27 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/vendor/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/dep/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/echo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/glide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/godep/</loc>
   </url>
   
   <url>
@@ -342,6 +358,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/go/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/govendor/</loc>
   </url>
   
   <url>

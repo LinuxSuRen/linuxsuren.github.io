@@ -499,11 +499,11 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</guid>
-      <description> 按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
 &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
 &amp;lt;f:textbox/&amp;gt;
 &amp;lt;f:checkbox/&amp;gt;
-凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  </description>
+凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  https://ci.adoptopenjdk.net/</description>
     </item>
     
     <item>
@@ -748,6 +748,15 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>Vendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/vendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/vendor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vim</title>
       <link>https://linuxsuren.github.io/blog/editor/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -761,6 +770,15 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>dep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/dep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/dep/</guid>
+      <description>dep ensure -update</description>
+    </item>
+    
+    <item>
       <title>echo</title>
       <link>https://linuxsuren.github.io/blog/os/linux/echo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -770,14 +788,44 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>glide</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/glide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/glide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>godep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/godep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/godep/</guid>
+      <description>godep update foo/bar</description>
+    </item>
+    
+    <item>
       <title>golang</title>
       <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
-      <description>Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
+      <description>Environment 环境变量 GOROOT 是 Golang 的安装根目录
+环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
+ src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
 设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title>govendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/govendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/govendor/</guid>
+      <description>govendor init
+govendor list</description>
     </item>
     
     <item>
