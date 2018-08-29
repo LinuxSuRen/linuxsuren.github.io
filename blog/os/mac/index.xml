@@ -35,5 +35,15 @@
   丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
     </item>
     
+    <item>
+      <title>pbcopy</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/pbcopy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/pbcopy/</guid>
+      <description>cat test.log | pbcopy 通过命令行拷贝
+pbpaste 通过命令粘贴</description>
+    </item>
+    
   </channel>
 </rss>

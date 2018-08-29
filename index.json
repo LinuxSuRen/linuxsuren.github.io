@@ -616,6 +616,13 @@
         "content": "[INFO] \u0026mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator \u0026mdash; gpg: directory \u0026lsquo;/home/jenkins/.gnupg\u0026rsquo; created gpg: keybox \u0026lsquo;/home/jenkins/.gnupg/pubring.kbx\u0026rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key\ngpg: signing failed: Inappropriate ioctl for device\nhttps://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/mac/pbcopy/",
+        "title": "pbcopy",
+        "tags": [],
+        "description": "Copy from mac command line",
+        "content": "cat test.log | pbcopy 通过命令行拷贝\npbpaste 通过命令粘贴\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/sed/",
         "title": "sed",
         "tags": [],

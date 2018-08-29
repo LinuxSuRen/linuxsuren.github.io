@@ -810,6 +810,16 @@ https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenk
     </item>
     
     <item>
+      <title>pbcopy</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/pbcopy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/pbcopy/</guid>
+      <description>cat test.log | pbcopy 通过命令行拷贝
+pbpaste 通过命令粘贴</description>
+    </item>
+    
+    <item>
       <title>sed</title>
       <link>https://linuxsuren.github.io/blog/os/linux/sed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
