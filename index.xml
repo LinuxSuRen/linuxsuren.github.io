@@ -344,16 +344,18 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
 Ubuntu下安装 sudo apt-get install gpg -y
 Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
 从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2
-命令 gpg --keyserver hkp://pool.sks-keyservers.net --send-k 上传公钥
-gpg --export-secret-key 标识名 &amp;gt; 导出文件名
+命令 gpg --export-secret-key 标识名 &amp;gt; 导出文件名
 gpg -o keyfilename --export-secret-keys KeyID
 gpg -o keyfilename --export KeyID
 gpg --import 密钥文件
 gpg --list-keys 列出密钥
 gpg --delete-secret-key hello
 gpg --delete-key hello
-gpg –keyserver pool.sks-keyservers.net –recv-keys surenkey
-异常 gpg: cannot open /dev/tty&#39;: No such device or address can&#39;t connect to /root/.</description>
+上传公钥 gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567
+接收公钥 gpg --keyserver pool.sks-keyservers.net --recv-key 1234567
+gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567 搜索公钥
+公钥服务器 hkp://pool.sks-keyservers.net
+hkp://subkeys.gpg.net</description>
     </item>
     
     <item>
@@ -620,11 +622,16 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/build/maven/</guid>
-      <description> 构建 跳过JavaDoc -Dmaven.javadoc.skip=true
-跳过测试 -DskipTests=true
+      <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
+跳过测试 mvn package -DskipTests=true
+mvn package -U 强制更新快照版本的依赖
 部署 mvn deploy
 多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
-&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  </description>
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树
+mvn dependency:resolve
+mvn dependency:analyze 依赖分析
+mvn help:effective-pom
+调试 mvn package -X 查看调试信息</description>
     </item>
     
     <item>
@@ -685,7 +692,8 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
 允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
 无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
  在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
-  服务重启 service ssh restart</description>
+  证书登陆 ssh -i test.pem root@localhost
+服务重启 service ssh restart</description>
     </item>
     
     <item>
@@ -706,6 +714,16 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
       
       <guid>https://linuxsuren.github.io/blog/codequality/sonarqube/</guid>
       <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
+      <description> 集合 判断 Map 中是否存在指定 Key
+package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } }  </description>
     </item>
     
     <item>

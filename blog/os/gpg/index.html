@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="93">
+<meta itemprop="wordCount" content="187">
 
 
 
@@ -215,8 +215,6 @@
 
 <h1 id="命令">命令</h1>
 
-<p><code>gpg --keyserver hkp://pool.sks-keyservers.net --send-k</code> 上传公钥</p>
-
 <p><code>gpg --export-secret-key</code> 标识名 &gt; 导出文件名</p>
 
 <p><code>gpg -o keyfilename --export-secret-keys KeyID</code></p>
@@ -231,7 +229,45 @@
 
 <p><code>gpg --delete-key hello</code></p>
 
-<p><code>gpg –keyserver pool.sks-keyservers.net –recv-keys surenkey</code></p>
+<h1 id="上传公钥">上传公钥</h1>
+
+<p><code>gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567</code></p>
+
+<h1 id="接收公钥">接收公钥</h1>
+
+<p><code>gpg --keyserver pool.sks-keyservers.net --recv-key 1234567</code></p>
+
+<p><code>gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567</code> 搜索公钥</p>
+
+<h1 id="公钥服务器">公钥服务器</h1>
+
+<p><code>hkp://pool.sks-keyservers.net</code></p>
+
+<p><code>hkp://subkeys.gpg.net</code></p>
+
+<p><code>hkp://keyserver.ubuntu.com</code></p>
+
+<h1 id="加解密">加解密</h1>
+
+<p><code>gpg --recipient 1234567 --output a-encrypt.log --encrypt a.log</code> 加密文件</p>
+
+<p><code>gpg a-encrypt.log</code> 解密文件</p>
+
+<p><code>gpg --decrypt a-encrypt.log</code> 解密文件</p>
+
+<h1 id="签名">签名</h1>
+
+<p><code>gpg --sign a.log</code> 生成二进制签名文件 a.log.gpg</p>
+
+<p><code>gpg --clearsign a.log</code> 生成 ASCII 签名文件 a.log.asc</p>
+
+<p><code>gpg --detach-sign a.log</code> 生成单独的二进制签名文件 a.log.sig</p>
+
+<p><code>gpg --armor --detach-sign a.log</code> 生成单独的 ASCII 签名文件 a.log.asc</p>
+
+<p><code>gpg --verify a.log.asc</code> 验证签名</p>
+
+<p><code>gpg --local-user 1234567 --recipient 1234567 --armor --sign --encrypt a.log</code> 签名并加密</p>
 
 <h1 id="异常">异常</h1>
 
@@ -239,6 +275,33 @@
 can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory
 gpg: can’t connect to the agent: IPC connect call failed
 gpg: signing failed: No secret key
+</code></pre>
+
+<p>如果是用 Maven 插件的话，可以参考下面的配置：</p>
+
+<pre><code>&lt;plugin&gt;
+&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+&lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
+&lt;version&gt;1.6&lt;/version&gt;
+&lt;executions&gt;
+    &lt;execution&gt;
+    &lt;id&gt;sign-artifacts&lt;/id&gt;
+    &lt;phase&gt;verify&lt;/phase&gt;
+    &lt;goals&gt;
+        &lt;goal&gt;sign&lt;/goal&gt;
+    &lt;/goals&gt;
+    &lt;configuration&gt;
+        &lt;gpgArguments&gt;
+        &lt;arg&gt;--pinentry-mode&lt;/arg&gt;
+        &lt;arg&gt;loopback&lt;/arg&gt;
+        &lt;arg&gt;--no-tty&lt;/arg&gt;
+        &lt;/gpgArguments&gt;
+        &lt;interactive&gt;false&lt;/interactive&gt;
+        &lt;passphrase&gt;1233&lt;/passphrase&gt;
+    &lt;/configuration&gt;
+    &lt;/execution&gt;
+&lt;/executions&gt;
+&lt;/plugin&gt;
 </code></pre>
 
 </div>

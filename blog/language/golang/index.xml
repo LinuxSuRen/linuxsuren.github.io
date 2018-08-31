@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>Syntax</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
+      <description> 集合 判断 Map 中是否存在指定 Key
+package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } }  </description>
+    </item>
+    
+    <item>
       <title>Template</title>
       <link>https://linuxsuren.github.io/blog/language/golang/template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

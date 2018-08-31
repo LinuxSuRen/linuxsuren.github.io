@@ -270,7 +270,7 @@
         "title": "GPG",
         "tags": [],
         "description": "GPG",
-        "content": " 安装 Windows版本下载地址 https://www.gpg4win.org/download.html\nUbuntu下安装 sudo apt-get install gpg -y\nMac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载\n从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2\n命令 gpg --keyserver hkp://pool.sks-keyservers.net --send-k 上传公钥\ngpg --export-secret-key 标识名 \u0026gt; 导出文件名\ngpg -o keyfilename --export-secret-keys KeyID\ngpg -o keyfilename --export KeyID\ngpg --import 密钥文件\ngpg --list-keys 列出密钥\ngpg --delete-secret-key hello\ngpg --delete-key hello\ngpg –keyserver pool.sks-keyservers.net –recv-keys surenkey\n异常 gpg: cannot open /dev/tty': No such device or address can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  "
+        "content": " 安装 Windows版本下载地址 https://www.gpg4win.org/download.html\nUbuntu下安装 sudo apt-get install gpg -y\nMac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载\n从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2\n命令 gpg --export-secret-key 标识名 \u0026gt; 导出文件名\ngpg -o keyfilename --export-secret-keys KeyID\ngpg -o keyfilename --export KeyID\ngpg --import 密钥文件\ngpg --list-keys 列出密钥\ngpg --delete-secret-key hello\ngpg --delete-key hello\n上传公钥 gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567\n接收公钥 gpg --keyserver pool.sks-keyservers.net --recv-key 1234567\ngpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567 搜索公钥\n公钥服务器 hkp://pool.sks-keyservers.net\nhkp://subkeys.gpg.net\nhkp://keyserver.ubuntu.com\n加解密 gpg --recipient 1234567 --output a-encrypt.log --encrypt a.log 加密文件\ngpg a-encrypt.log 解密文件\ngpg --decrypt a-encrypt.log 解密文件\n签名 gpg --sign a.log 生成二进制签名文件 a.log.gpg\ngpg --clearsign a.log 生成 ASCII 签名文件 a.log.asc\ngpg --detach-sign a.log 生成单独的二进制签名文件 a.log.sig\ngpg --armor --detach-sign a.log 生成单独的 ASCII 签名文件 a.log.asc\ngpg --verify a.log.asc 验证签名\ngpg --local-user 1234567 --recipient 1234567 --armor --sign --encrypt a.log 签名并加密\n异常 gpg: cannot open /dev/tty': No such device or address can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  如果是用 Maven 插件的话，可以参考下面的配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-gpg-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.6\u0026lt;/version\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;sign-artifacts\u0026lt;/id\u0026gt; \u0026lt;phase\u0026gt;verify\u0026lt;/phase\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;sign\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;gpgArguments\u0026gt; \u0026lt;arg\u0026gt;--pinentry-mode\u0026lt;/arg\u0026gt; \u0026lt;arg\u0026gt;loopback\u0026lt;/arg\u0026gt; \u0026lt;arg\u0026gt;--no-tty\u0026lt;/arg\u0026gt; \u0026lt;/gpgArguments\u0026gt; \u0026lt;interactive\u0026gt;false\u0026lt;/interactive\u0026gt; \u0026lt;passphrase\u0026gt;1233\u0026lt;/passphrase\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt;  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/test/ginkgo/",
@@ -451,8 +451,8 @@
         "uri": "https://linuxsuren.github.io/blog/build/maven/",
         "title": "Maven",
         "tags": [],
-        "description": "",
-        "content": " 构建 跳过JavaDoc -Dmaven.javadoc.skip=true\n跳过测试 -DskipTests=true\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  "
+        "description": "Maven 是非常流行的一个 Java 持续构建工具",
+        "content": " 构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过测试 mvn package -DskipTests=true\nmvn package -U 强制更新快照版本的依赖\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/minikube/",
@@ -508,7 +508,7 @@
         "title": "SSH",
         "tags": [],
         "description": "SSH",
-        "content": " 配置文件 vim /etc/ssh/sshd_config\n允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。\n无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）\n 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容\n  服务重启 service ssh restart\n"
+        "content": " 配置文件 vim /etc/ssh/sshd_config\n允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。\n无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）\n 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容\n  证书登陆 ssh -i test.pem root@localhost\n服务重启 service ssh restart\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/shell/",
@@ -523,6 +523,13 @@
         "tags": [],
         "description": "Sonarqube",
         "content": " Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/syntax/",
+        "title": "Syntax",
+        "tags": [],
+        "description": "Syntax",
+        "content": " 集合 判断 Map 中是否存在指定 Key\npackage main import \u0026quot;fmt\u0026quot; func main() { mapTest := map[string]string{ \u0026quot;hao\u0026quot;: \u0026quot;hao value\u0026quot;, } if _, ok := mapTest[\u0026quot;hao\u0026quot;]; ok { fmt.Println(\u0026quot;ok\u0026quot;) } }  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/tr/",
