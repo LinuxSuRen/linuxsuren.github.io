@@ -133,13 +133,6 @@
         "content": " 退出 首先，按下 Ctrl+] 然后输入 \\q 后，按下回车即可退出 Telnet。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/opensource/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "我的开源\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/translation/",
         "title": "",
         "tags": [],
@@ -789,6 +782,13 @@
         "tags": [],
         "description": "",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/opensource/",
+        "title": "我的开源",
+        "tags": [],
+        "description": "",
+        "content": " Jenkins Hugo Plugin  Jenkins Hugo 构建插件\n Jenkins Chinese Localizatioin Plugin  Jenkins 中文本地化插件\n Jenkins Java Client  Jenkins Java 客户端\n phoenix.webui.framework  基于 Selenium 的自动化测试\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/",

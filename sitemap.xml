@@ -79,10 +79,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/opensource/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/translation/</loc>
   </url>
   
@@ -454,6 +450,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/opensource/</loc>
   </url>
   
   <url>
