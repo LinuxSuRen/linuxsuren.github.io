@@ -231,6 +231,13 @@
         "content": "DevOps相关技术文章\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim-dir/",
+        "title": "Directory",
+        "tags": [],
+        "description": "Directory",
+        "content": ":pwd 查看当前目录\n:cd %:p:h 切换目录到当前文件所在目录\n:lcd %:p:h 切换当前窗口的目录到当前文件所在目录\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/java/docker/",
         "title": "Docker",
         "tags": [],
@@ -243,6 +250,13 @@
         "tags": [],
         "description": "Docker Mirror",
         "content": "vim /etc/docker/daemon.json\n{ \u0026quot;registry-mirrors\u0026quot;: [\u0026quot;https://mirror.gcr.io\u0026quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io\n或者，在文件 /etc/default/docker 中添加如下配置：\nDOCKER_OPTS=\u0026quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io\u0026quot;\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/docker/docker-image/",
+        "title": "Docker 镜像管理",
+        "tags": [],
+        "description": "Docker 镜像管理",
+        "content": "使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/eclipse/",
@@ -357,6 +371,13 @@
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\njava -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/",
+        "title": "Jenkins JUnit",
+        "tags": [],
+        "description": "Jenkins JUnit",
+        "content": " Assert @Test public void basic() { assertThat(\u0026quot;abc\u0026quot;, StringContains.containsString(\u0026quot;a\u0026quot;)); assertThat(\u0026quot;abc\u0026quot;, Matchers.not(StringContains.containsString(\u0026quot;d\u0026quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(\u0026quot;\u0026quot;); assertEquals(\u0026quot;a\u0026quot;, \u0026quot;a\u0026quot;); }  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/",
         "title": "Jenkins Permission",
         "tags": [],
@@ -466,7 +487,7 @@
         "title": "OpenJ9",
         "tags": [],
         "description": "OpenJ9",
-        "content": " 参考 openj9-docs\n"
+        "content": " 参考 openj9-docs openj9-ci\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/",
@@ -518,6 +539,13 @@
         "content": " Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  "
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/java/spacevim/",
+        "title": "SpaceVim",
+        "tags": [],
+        "description": "SpaceVim",
+        "content": " Reference Use Vim as a Java IDE\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/syntax/",
         "title": "Syntax",
         "tags": [],
@@ -567,6 +595,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-go/",
+        "title": "VIM GoLang",
+        "tags": [],
+        "description": "VIM plugin for GoLang",
+        "content": " Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct\nAction :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/vendor/",
         "title": "Vendor",
         "tags": [],
@@ -574,7 +609,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/",
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim/",
         "title": "Vim",
         "tags": [],
         "description": "Vim",

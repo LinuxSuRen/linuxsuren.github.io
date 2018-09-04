@@ -301,6 +301,17 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     </item>
     
     <item>
+      <title>Directory</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim-dir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim-dir/</guid>
+      <description>:pwd 查看当前目录
+:cd %:p:h 切换目录到当前文件所在目录
+:lcd %:p:h 切换当前窗口的目录到当前文件所在目录</description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://linuxsuren.github.io/blog/language/java/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -320,6 +331,15 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
 { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
 或者，在文件 /etc/default/docker 中添加如下配置：
 DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像管理</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-image/</guid>
+      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune</description>
     </item>
     
     <item>
@@ -484,6 +504,15 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins JUnit</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</guid>
+      <description> Assert @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); }  </description>
     </item>
     
     <item>
@@ -661,7 +690,7 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/java/openj9/</guid>
-      <description>参考 openj9-docs</description>
+      <description>参考 openj9-docs openj9-ci</description>
     </item>
     
     <item>
@@ -717,6 +746,15 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
+      <title>SpaceVim</title>
+      <link>https://linuxsuren.github.io/blog/language/java/spacevim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/spacevim/</guid>
+      <description>Reference Use Vim as a Java IDE</description>
+    </item>
+    
+    <item>
       <title>Syntax</title>
       <link>https://linuxsuren.github.io/blog/language/golang/syntax/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -766,6 +804,16 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>VIM GoLang</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim-go/</guid>
+      <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
+Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
+    </item>
+    
+    <item>
       <title>Vendor</title>
       <link>https://linuxsuren.github.io/blog/language/golang/vendor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -776,10 +824,10 @@ echo abc | tr a-z A-Z 大小写转换</description>
     
     <item>
       <title>Vim</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/</link>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/</guid>
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim/</guid>
       <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
 :set paste
 解除 paste 模式的命令如下：

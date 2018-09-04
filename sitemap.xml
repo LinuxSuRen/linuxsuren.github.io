@@ -136,11 +136,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim-dir/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/java/docker/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-mirror/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/docker/docker-image/</loc>
   </url>
   
   <url>
@@ -205,6 +213,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</loc>
   </url>
   
   <url>
@@ -300,6 +312,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/spacevim/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/syntax/</loc>
   </url>
   
@@ -329,11 +345,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-go/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/vendor/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim/</loc>
   </url>
   
   <url>

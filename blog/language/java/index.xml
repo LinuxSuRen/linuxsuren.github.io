@@ -35,7 +35,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/java/openj9/</guid>
-      <description>参考 openj9-docs</description>
+      <description>参考 openj9-docs openj9-ci</description>
+    </item>
+    
+    <item>
+      <title>SpaceVim</title>
+      <link>https://linuxsuren.github.io/blog/language/java/spacevim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/spacevim/</guid>
+      <description>Reference Use Vim as a Java IDE</description>
     </item>
     
   </channel>
