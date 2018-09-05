@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>SCM | SuRenPi</title>
+    <title>Git Stage | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,6 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/scm/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="SCM" />
-<meta property="og:description" content="SCM" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/scm/" />
+<meta property="og:title" content="Git Stage" />
+<meta property="og:description" content="Git Stage" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/scm/git-stage/" />
 
 
 
@@ -46,12 +45,21 @@
 
 
 
-<meta itemprop="name" content="SCM">
-<meta itemprop="description" content="SCM">
 
+
+<meta itemprop="name" content="Git Stage">
+<meta itemprop="description" content="Git Stage">
+
+
+
+<meta itemprop="wordCount" content="21">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SCM"/>
-<meta name="twitter:description" content="SCM"/>
+<meta name="twitter:title" content="Git Stage"/>
+<meta name="twitter:description" content="Git Stage"/>
 
 
 
@@ -146,12 +154,72 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
-  
-  
-  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
 
-  <div class="flex">
-    <div class="dn db-l w-20">
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+
+	<div date-pref>
+		
+			<a href="https://linuxsuren.github.io/blog/scm/git-remote/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Git Remote ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="https://linuxsuren.github.io/blog/scm/git-submodule/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Git Submodule">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Git Stage</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Git Stage
+    </div>
+  
+
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+<p>我们提交文件，要先执行 <code>git add</code> 然后再执行 <code>git commit</code>。但是，如果在执行 <code>commit</code> 时，发现由于误操作导致一些不希望提交的文件也被 <code>add</code> 了。这时候，我们可以执行命令 <code>git reset HEAD readme.md</code> 来取消该操作。</p>
+
+<p><code>git checkout readme.md</code> 可以把 <code>unstage</code> 状态的文件修改丢弃</p>
+
+</div>
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -228,208 +296,30 @@
   </ul>
 </nav>
 
-    </div>
-
-    <div class="w-100 w-80-l ph0 ph4-l">
-      <article class="w-100 nested-copy-line-height nested-links nested-img">
-        <h1 class="primary-color-dark f2">
-          SCM
-        </h1>
-        <div class=" mid-gray f5 f4-l">
-          
-        </div>
-      </article>
-
-      
-
-      <div class="flex flex-wrap">
-        
-        <section class="flex-ns flex-wrap justify-between w-100">
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/git-branch/" class="link primary-color dim">Git Branch</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Git Branch
-        
-
-        <a href="/blog/scm/git-branch/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/git-remote/" class="link primary-color dim">Git Remote</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Git 远程库操作
-        
-
-        <a href="/blog/scm/git-remote/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/git-stage/" class="link primary-color dim">Git Stage</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Git Stage
-        
-
-        <a href="/blog/scm/git-stage/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/git-submodule/" class="link primary-color dim">Git Submodule</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Git 子模块的使用
-        
-
-        <a href="/blog/scm/git-submodule/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/gitea/" class="link primary-color dim">Gitea</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          docker pull gitea/gitea:latest
-      
-
-        <a href="/blog/scm/gitea/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/gitlab/" class="link primary-color dim">Gitlab</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Gitlab 使用介绍
-        
-
-        <a href="/blog/scm/gitlab/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/scm/git-checkout/" class="link primary-color dim">如何操作 Git 分支</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Git 有很强大的分支支持
-        
-
-        <a href="/blog/scm/git-checkout/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-        </section>
       </div>
 
     </div>
+  </article>
 
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="https://linuxsuren.github.io/blog/scm/git-stage/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+</span>
+    “Git Stage”
+  </a> was last updated: January 1, 0001
+</h6>
+
+      <a href="edit/master/content/blog/scm/git-stage.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      
+
+
+    </div>
   </div>
-
-</div>
-
 
     </main>
 

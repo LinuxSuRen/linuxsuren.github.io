@@ -388,16 +388,35 @@ hkp://subkeys.gpg.net</description>
     </item>
     
     <item>
-      <title>Git Remote</title>
-      <link>https://linuxsuren.github.io/blog/scm/git/</link>
+      <title>Git Branch</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-branch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git/</guid>
+      <guid>https://linuxsuren.github.io/blog/scm/git-branch/</guid>
+      <description>删除分支 git branch --delete abc 删除分支 abc</description>
+    </item>
+    
+    <item>
+      <title>Git Remote</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-remote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-remote/</guid>
       <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
 这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
 git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
 git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
 最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Stage</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-stage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-stage/</guid>
+      <description>我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。
+git checkout readme.md 可以把 unstage 状态的文件修改丢弃</description>
     </item>
     
     <item>
@@ -1055,14 +1074,14 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
       <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
       <description>检出分支 git checkout --track origin/fea/test 检出 git 远程分支
 切换标签 git checkout master 切换到 master 分支
-删除分支 git branch --delete abc 删除分支 abc
-放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
- 场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  标签 git tag v0.1.2-light
+标签 git tag v0.1.2-light
 git tag -a v0.2 -m &#39;here is comment&#39;
 切换到标签 git checkout v0.2
 删除标签 git tag -d v0.2
 基于提交记录打标签及 git tag -a v0.2 beab786 -m &#39;from branch hello beab786&#39;
-发布指定的标签 git push origin v0.</description>
+发布指定的标签 git push origin v0.2
+把所有的标签一次性发布 git push origin --tags
+git可以在同一个提交上打多个名称不一样的标签</description>
     </item>
     
     <item>

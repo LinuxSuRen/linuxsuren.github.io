@@ -168,7 +168,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git/</loc>
+    <loc>https://linuxsuren.github.io/blog/scm/git-branch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-remote/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-stage/</loc>
   </url>
   
   <url>
