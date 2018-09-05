@@ -172,7 +172,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-rebase/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/scm/git-remote/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-reset/</loc>
   </url>
   
   <url>
@@ -321,6 +329,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/java/spacevim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/go-sync/</loc>
   </url>
   
   <url>

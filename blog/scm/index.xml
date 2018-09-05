@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Git Rebase</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-rebase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-rebase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Git Remote</title>
       <link>https://linuxsuren.github.io/blog/scm/git-remote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -30,6 +39,15 @@
 git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
 git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
 最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Reset</title>
+      <link>https://linuxsuren.github.io/blog/scm/git-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/scm/git-reset/</guid>
+      <description></description>
     </item>
     
     <item>
