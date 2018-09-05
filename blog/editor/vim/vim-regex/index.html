@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Vim | SuRenPi</title>
+    <title>VIM Replace | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Vim" />
-<meta property="og:description" content="Vim" />
+<meta property="og:title" content="VIM Replace" />
+<meta property="og:description" content="VIM Replace" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/editor/vim/vim/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/editor/vim/vim-regex/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="Vim">
-<meta itemprop="description" content="Vim">
+<meta itemprop="name" content="VIM Replace">
+<meta itemprop="description" content="VIM Replace">
 
 
 
-<meta itemprop="wordCount" content="75">
+<meta itemprop="wordCount" content="64">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Vim"/>
-<meta name="twitter:description" content="Vim"/>
+<meta name="twitter:title" content="VIM Replace"/>
+<meta name="twitter:description" content="VIM Replace"/>
 
 
 
@@ -163,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/editor/vim/vim-regex/" class="dib f6 pl1 hover-bg-light-gray br-100" title="VIM Replace ">
+			<a href="https://linuxsuren.github.io/blog/editor/vim/vim-go/" class="dib f6 pl1 hover-bg-light-gray br-100" title="VIM GoLang ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -172,6 +172,14 @@
 			</a>
 		
 
+		
+			<a href="https://linuxsuren.github.io/blog/editor/vim/vim/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Vim">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
 		
 	</div>
 
@@ -184,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Vim</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">VIM Replace</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Vim
+      VIM Replace
     </div>
   
 
@@ -201,56 +209,48 @@
 
 <div class="prose" id="prose">
 
+<p>简单文本替换
+<code>:[range]s[ubtitute]/{pattern}/{string}/[flags] [count]</code></p>
 
+<p>全局文本替换
+<code>:[range]g[lobal]/{pattern}/[cmd]</code></p>
 
-<h1 id="故障排除">故障排除</h1>
+<p><code>:[range]g[lobal]!/{pattern}/[cmd]</code></p>
 
-<h2 id="粘贴缩进错乱">粘贴缩进错乱</h2>
+<p>示例：</p>
 
-<p>让 <code>vim</code> 进入 <code>paste</code> 模式，命令如下：</p>
+<p>将找到的第一个字符串abc替换为def
+<code>s/abc/def</code></p>
 
-<p><code>:set paste</code></p>
+<p>将找到的所有字符串abc替换为def
+<code>s/abc/def/g</code></p>
 
-<p>解除 <code>paste</code> 模式的命令如下：</p>
+<p>将包含有字符串abc的行删除
+<code>g/abc/ del</code></p>
 
-<p><code>:set nopaste</code></p>
+<p>将行首增加序列号
+<code>let i = 1 | g/./s/^/\=i/ | let i += 1</code></p>
 
-<h1 id="样例配置">样例配置</h1>
+<p>将所有包含image331的行中，替换331为从331开始递增的数字
+<code>let i = 331 | g/image331/s/331/\=i/ | let i += 1</code></p>
 
-<pre><code>set number
-set incsearch
-set hlsearch
-set autoindent
-&quot;set smartindent
-set autochdir
-set ignorecase
-&quot;set textwidth=80
-set colorcolumn=+1
-set tabstop=4
-set shiftwidth=4
-set expandtab '把tab转为空格
-set backspace=indent,start,eol
-set showmatch
-set matchtime=1
-set ruler
-set foldmethod=syntax
-&quot;set foldmethod=indent
-set foldlevel=0
-set encoding=utf-8
-set termencoding=utf-8
-set langmenu=zh_CN.utf-8
+<p>从1358行开始进行替换
+<code>let i = 792 | 1358,$g/resources\/image/s/\d\d\d/\=i/ | let i += 2</code></p>
 
-language message zh_CN.utf-8
+<p>将所有已<para>开头的行在结尾添加</para>
+<code>g/^\s*&lt;para&gt;/ s/$/&lt;\/para&gt;</code></p>
 
-&quot;set titlestring=中文
+<p>把以<para>开头，若干个空白</para>结尾的行删除
+<code>g/^\s*&lt;para&gt;\s*&lt;\/para&gt;$/ del</code></p>
 
-set nolist
-set nocursorline
-set nocursorcolumn
+<p>把以空白字符开头，并且第一个字符不是&lt;的行首添加<para>
+<code>g!/^\s*&lt;/ s/^/&lt;para&gt;</code></p>
 
-syntax on
-filetype on
-</code></pre>
+<p>把<para></para>中间还有尖括号(&lt;&gt;)的行删除
+<code>g/&lt;para&gt;.*[&lt;&gt;].*&lt;\/para&gt;/ del</code></p>
+
+<p>找到没有以</para>结尾的行
+<code>s/para&gt;.*[^(&lt;\/para&gt;)]$</code></p>
 
 </div>
 
@@ -343,14 +343,14 @@ filetype on
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/editor/vim/vim/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/editor/vim/vim-regex/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Vim”
+    “VIM Replace”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/editor/vim/vim.md" class="
+      <a href="edit/master/content/blog/editor/vim/vim-regex.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 
