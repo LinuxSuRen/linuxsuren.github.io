@@ -231,7 +231,7 @@
         "content": "DevOps相关技术文章\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim-dir/",
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-dir/",
         "title": "Directory",
         "tags": [],
         "description": "Directory",
@@ -350,6 +350,13 @@
         "content": " 200 300 400 401 未经授权：访问由于凭据无效被拒绝。\n404 无法找到页面\n500 Reference "
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/idea/",
+        "title": "IDEA",
+        "tags": [],
+        "description": "IDEA",
+        "content": "编辑器\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
         "title": "Install",
         "tags": [],
@@ -364,7 +371,7 @@
         "content": "查看可用的版本 apt-cache madison docker-ce\n安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/idea-shortcut/",
+        "uri": "https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/",
         "title": "IntelliJ IDEA 快捷键",
         "tags": [],
         "description": "IntelliJ IDEA 快捷键",
@@ -630,6 +637,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/",
+        "title": "VIM",
+        "tags": [],
+        "description": "VIM",
+        "content": "编辑器\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-go/",
         "title": "VIM GoLang",
         "tags": [],
@@ -642,6 +656,13 @@
         "tags": [],
         "description": "VIM Replace",
         "content": "简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]\n全局文本替换 :[range]g[lobal]/{pattern}/[cmd]\n:[range]g[lobal]!/{pattern}/[cmd]\n示例：\n将找到的第一个字符串abc替换为def s/abc/def\n将找到的所有字符串abc替换为def s/abc/def/g\n将包含有字符串abc的行删除 g/abc/ del\n将行首增加序列号 let i = 1 | g/./s/^/\\=i/ | let i += 1\n将所有包含image331的行中，替换331为从331开始递增的数字 let i = 331 | g/image331/s/331/\\=i/ | let i += 1\n从1358行开始进行替换 let i = 792 | 1358,$g/resources\\/image/s/\\d\\d\\d/\\=i/ | let i += 2\n将所有已开头的行在结尾添加 g/^\\s*\u0026lt;para\u0026gt;/ s/$/\u0026lt;\\/para\u0026gt;\n把以开头，若干个空白结尾的行删除 g/^\\s*\u0026lt;para\u0026gt;\\s*\u0026lt;\\/para\u0026gt;$/ del\n把以空白字符开头，并且第一个字符不是\u0026lt;的行首添加 g!/^\\s*\u0026lt;/ s/^/\u0026lt;para\u0026gt;\n把中间还有尖括号(\u0026lt;\u0026gt;)的行删除 g/\u0026lt;para\u0026gt;.*[\u0026lt;\u0026gt;].*\u0026lt;\\/para\u0026gt;/ del\n找到没有以结尾的行 s/para\u0026gt;.*[^(\u0026lt;\\/para\u0026gt;)]$\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-bundle/",
+        "title": "VIM bundle",
+        "tags": [],
+        "description": "VIM bundle",
+        "content": " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim\nReference Vundle\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/vendor/",

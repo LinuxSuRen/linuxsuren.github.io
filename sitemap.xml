@@ -136,7 +136,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim-dir/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-dir/</loc>
   </url>
   
   <url>
@@ -204,6 +204,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/idea/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</loc>
   </url>
   
@@ -212,7 +216,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/idea-shortcut/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/</loc>
   </url>
   
   <url>
@@ -365,11 +369,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/vim-go/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/vim-regex/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-bundle/</loc>
   </url>
   
   <url>
