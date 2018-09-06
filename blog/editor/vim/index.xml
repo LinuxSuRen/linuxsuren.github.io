@@ -42,6 +42,8 @@ gUU 切换当前行为大写
 yy 拷贝当前行
 p 粘贴
 格式化 :left 居左对齐 :right 居右对齐
+数字 ctrl+a 数字+1
+ctrl+x 数字-1
 其他 ctrl+g 显示当前文件路径
 编辑模式 Reference Vim documentation: help Vim documentation: change</description>
     </item>

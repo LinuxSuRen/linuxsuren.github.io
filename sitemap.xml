@@ -409,6 +409,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/dep/</loc>
   </url>
   
@@ -466,6 +470,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</loc>
   </url>
   
   <url>

@@ -648,7 +648,7 @@
         "title": "VIM Command",
         "tags": [],
         "description": "VIM Command",
-        "content": " 命令模式 删除文本 x 删除当前字符 X 删除前一个字符\ndd 删除当前行 D 删除当前字符后的文本\ndw 删除当前单词\n字符替换 R 开启字符串替换模式，知道按下 ESC\nr 替换当前字符\n转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。\n通过命令 ~ 可以切换所选或光标所在的字符大小写\ng~~ 切换当前行的大小写\nguu 切换当前行为小写\ngUU 切换当前行为大写\n撤销 u 撤销一次更改 ctrl+r 恢复一次撤销\n剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板\nyy 拷贝当前行\np 粘贴\n格式化 :left 居左对齐 :right 居右对齐\n其他 ctrl+g 显示当前文件路径\n编辑模式 Reference Vim documentation: help Vim documentation: change\n"
+        "content": " 命令模式 删除文本 x 删除当前字符 X 删除前一个字符\ndd 删除当前行 D 删除当前字符后的文本\ndw 删除当前单词\n字符替换 R 开启字符串替换模式，知道按下 ESC\nr 替换当前字符\n转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。\n通过命令 ~ 可以切换所选或光标所在的字符大小写\ng~~ 切换当前行的大小写\nguu 切换当前行为小写\ngUU 切换当前行为大写\n撤销 u 撤销一次更改 ctrl+r 恢复一次撤销\n剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板\nyy 拷贝当前行\np 粘贴\n格式化 :left 居左对齐 :right 居右对齐\n数字 ctrl+a 数字+1\nctrl+x 数字-1\n其他 ctrl+g 显示当前文件路径\n编辑模式 Reference Vim documentation: help Vim documentation: change\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-go/",
@@ -705,6 +705,13 @@
         "tags": [],
         "description": "Vim-Fugitive",
         "content": " Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle\nUsage :Gstatus 查看变更状态，等同于 git status\n:Gcommit % 提交代码，等同于 git commit\n:Gpush 推送代码\n:Gpush -u origin test 推送新的分支\n:Gpull 拉取代码\nReference vim-fugitive vim-scripts\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/",
+        "title": "ctrlp",
+        "tags": [],
+        "description": "ctrlp",
+        "content": " Reference ctrlp\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/dep/",
@@ -810,6 +817,13 @@
         "tags": [],
         "description": "user",
         "content": " 添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等\nuseradd user-name --home /home/user-name --create-home\nsu user-name\nuserdel user-name\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/",
+        "title": "vim-airline",
+        "tags": [],
+        "description": "vim-airline",
+        "content": " Reference vim-airline\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/wget/",

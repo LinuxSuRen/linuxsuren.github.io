@@ -876,6 +876,8 @@ gUU 切换当前行为大写
 yy 拷贝当前行
 p 粘贴
 格式化 :left 居左对齐 :right 居右对齐
+数字 ctrl+a 数字+1
+ctrl+x 数字-1
 其他 ctrl+g 显示当前文件路径
 编辑模式 Reference Vim documentation: help Vim documentation: change</description>
     </item>
@@ -968,6 +970,15 @@ Usage :Gstatus 查看变更状态，等同于 git status
 :Gpush -u origin test 推送新的分支
 :Gpull 拉取代码
 Reference vim-fugitive vim-scripts</description>
+    </item>
+    
+    <item>
+      <title>ctrlp</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</guid>
+      <description>Reference ctrlp</description>
     </item>
     
     <item>
@@ -1106,6 +1117,15 @@ pbpaste 通过命令粘贴</description>
 useradd user-name --home /home/user-name --create-home
 su user-name
 userdel user-name</description>
+    </item>
+    
+    <item>
+      <title>vim-airline</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</guid>
+      <description>Reference vim-airline</description>
     </item>
     
     <item>

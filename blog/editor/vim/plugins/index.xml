@@ -25,5 +25,23 @@ Usage :Gstatus 查看变更状态，等同于 git status
 Reference vim-fugitive vim-scripts</description>
     </item>
     
+    <item>
+      <title>ctrlp</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</guid>
+      <description>Reference ctrlp</description>
+    </item>
+    
+    <item>
+      <title>vim-airline</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</guid>
+      <description>Reference vim-airline</description>
+    </item>
+    
   </channel>
 </rss>
