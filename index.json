@@ -67,7 +67,7 @@
         "title": "",
         "tags": [],
         "description": "",
-        "content": " 基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：\nFROM alpine:3.8\nProxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\nEXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample\nCMD CMD [\u0026ldquo;echo\u0026rdquo;, \u0026ldquo;hello\u0026rdquo;]\n"
+        "content": " 基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：\nFROM alpine:3.8\nProxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\nEXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample\nRUN RUN 为 Docker 镜像在构建时执行的命令\nCMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [\u0026quot;echo\u0026quot;, \u0026quot;hello\u0026quot;]\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/document/hugo/",
@@ -291,7 +291,7 @@
         "title": "Git Branch",
         "tags": [],
         "description": "Git Branch",
-        "content": " 删除分支 git branch --delete abc 删除分支 abc\n"
+        "content": " git branch 列出本地分支\n删除分支 git branch --delete abc 删除分支 abc\ngit push origin --delete abc 删除远程分支\n拉取分支 git checkout -b abc 基于当前分支创建新分支\ngit checkout --track origin/abc 拉取远程分支\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/scm/git-rebase/",
@@ -644,11 +644,32 @@
         "content": "编辑器\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-cmd/",
+        "title": "VIM Command",
+        "tags": [],
+        "description": "VIM Command",
+        "content": " 命令模式 删除文本 x 删除当前字符 X 删除前一个字符\ndd 删除当前行 D 删除当前字符后的文本\ndw 删除当前单词\n字符替换 R 开启字符串替换模式，知道按下 ESC\nr 替换当前字符\n转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。\n通过命令 ~ 可以切换所选或光标所在的字符大小写\ng~~ 切换当前行的大小写\nguu 切换当前行为小写\ngUU 切换当前行为大写\n撤销 u 撤销一次更改 ctrl+r 恢复一次撤销\n剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板\nyy 拷贝当前行\np 粘贴\n格式化 :left 居左对齐 :right 居右对齐\n其他 ctrl+g 显示当前文件路径\n编辑模式 Reference Vim documentation: help Vim documentation: change\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-go/",
         "title": "VIM GoLang",
         "tags": [],
         "description": "VIM plugin for GoLang",
         "content": " Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct\nAction :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-network/",
+        "title": "VIM Network",
+        "tags": [],
+        "description": "Reading and writing files over a network",
+        "content": " VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/\nReference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/",
+        "title": "VIM Plugins",
+        "tags": [],
+        "description": "Here are lots of plugins for VIM",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/vim-regex/",
@@ -677,6 +698,13 @@
         "tags": [],
         "description": "Vim",
         "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/",
+        "title": "Vim-Fugitive",
+        "tags": [],
+        "description": "Vim-Fugitive",
+        "content": " Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle\nUsage :Gstatus 查看变更状态，等同于 git status\n:Gcommit % 提交代码，等同于 git commit\n:Gpush 推送代码\n:Gpush -u origin test 推送新的分支\n:Gpull 拉取代码\nReference vim-fugitive vim-scripts\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/dep/",

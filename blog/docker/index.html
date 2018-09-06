@@ -330,7 +330,8 @@ ENV HTTP_PROXY http://192.168.1.1:1234
 ENV HTTP_PROXY &quot;&quot;
 但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
 EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-CMD CMD [&ldquo;echo&rdquo;, &ldquo;hello&rdquo;]
+RUN RUN 为 Docker 镜像在构建时执行的命令
+CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&quot;, &quot;hello&quot;]
       
 
         <a href="/blog/docker/dockerfile/" class="f6 mt2 db link primary-color dim">

@@ -373,7 +373,19 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/vim-go/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/</loc>
   </url>
   
   <url>
@@ -390,6 +402,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</loc>
   </url>
   
   <url>

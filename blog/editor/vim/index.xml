@@ -22,6 +22,31 @@
     </item>
     
     <item>
+      <title>VIM Command</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</guid>
+      <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符
+dd 删除当前行 D 删除当前字符后的文本
+dw 删除当前单词
+字符替换 R 开启字符串替换模式，知道按下 ESC
+r 替换当前字符
+转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。
+通过命令 ~ 可以切换所选或光标所在的字符大小写
+g~~ 切换当前行的大小写
+guu 切换当前行为小写
+gUU 切换当前行为大写
+撤销 u 撤销一次更改 ctrl+r 恢复一次撤销
+剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板
+yy 拷贝当前行
+p 粘贴
+格式化 :left 居左对齐 :right 居右对齐
+其他 ctrl+g 显示当前文件路径
+编辑模式 Reference Vim documentation: help Vim documentation: change</description>
+    </item>
+    
+    <item>
       <title>VIM GoLang</title>
       <link>https://linuxsuren.github.io/blog/editor/vim/vim-go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -29,6 +54,16 @@
       <guid>https://linuxsuren.github.io/blog/editor/vim/vim-go/</guid>
       <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
 Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
+    </item>
+    
+    <item>
+      <title>VIM Network</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim-network/</guid>
+      <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/
+Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     </item>
     
     <item>

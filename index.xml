@@ -93,7 +93,8 @@ ENV HTTP_PROXY http://192.168.1.1:1234
 ENV HTTP_PROXY &amp;quot;&amp;quot;
 但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
 EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-CMD CMD [&amp;ldquo;echo&amp;rdquo;, &amp;ldquo;hello&amp;rdquo;]</description>
+RUN RUN 为 Docker 镜像在构建时执行的命令
+CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
     </item>
     
     <item>
@@ -394,7 +395,11 @@ hkp://subkeys.gpg.net</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/scm/git-branch/</guid>
-      <description>删除分支 git branch --delete abc 删除分支 abc</description>
+      <description>git branch 列出本地分支
+删除分支 git branch --delete abc 删除分支 abc
+git push origin --delete abc 删除远程分支
+拉取分支 git checkout -b abc 基于当前分支创建新分支
+git checkout --track origin/abc 拉取远程分支</description>
     </item>
     
     <item>
@@ -851,6 +856,31 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>VIM Command</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</guid>
+      <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符
+dd 删除当前行 D 删除当前字符后的文本
+dw 删除当前单词
+字符替换 R 开启字符串替换模式，知道按下 ESC
+r 替换当前字符
+转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。
+通过命令 ~ 可以切换所选或光标所在的字符大小写
+g~~ 切换当前行的大小写
+guu 切换当前行为小写
+gUU 切换当前行为大写
+撤销 u 撤销一次更改 ctrl+r 恢复一次撤销
+剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板
+yy 拷贝当前行
+p 粘贴
+格式化 :left 居左对齐 :right 居右对齐
+其他 ctrl+g 显示当前文件路径
+编辑模式 Reference Vim documentation: help Vim documentation: change</description>
+    </item>
+    
+    <item>
       <title>VIM GoLang</title>
       <link>https://linuxsuren.github.io/blog/editor/vim/vim-go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -858,6 +888,16 @@ echo abc | tr a-z A-Z 大小写转换</description>
       <guid>https://linuxsuren.github.io/blog/editor/vim/vim-go/</guid>
       <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
 Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
+    </item>
+    
+    <item>
+      <title>VIM Network</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/vim-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/vim-network/</guid>
+      <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/
+Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     </item>
     
     <item>
@@ -913,6 +953,21 @@ Reference Vundle</description>
 解除 paste 模式的命令如下：
 :set nopaste
 样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
+    </item>
+    
+    <item>
+      <title>Vim-Fugitive</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</guid>
+      <description>Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle
+Usage :Gstatus 查看变更状态，等同于 git status
+:Gcommit % 提交代码，等同于 git commit
+:Gpush 推送代码
+:Gpush -u origin test 推送新的分支
+:Gpull 拉取代码
+Reference vim-fugitive vim-scripts</description>
     </item>
     
     <item>
