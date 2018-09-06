@@ -357,6 +357,15 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
     </item>
     
     <item>
+      <title>Firefox</title>
+      <link>https://linuxsuren.github.io/blog/browser/firefox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/browser/firefox/</guid>
+      <description>firefox -private</description>
+    </item>
+    
+    <item>
       <title>GPG</title>
       <link>https://linuxsuren.github.io/blog/os/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

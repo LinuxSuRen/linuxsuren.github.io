@@ -273,6 +273,13 @@
         "content": " 查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。\n查找文件夹 find ~ -type d -name jx\n查找并执行命令 find . -name *.java | xargs echo 查找完后执行\n查找特定文件 cp $(find core/src/main/resources -type f -name \u0026quot;*_zh_CN.properties\u0026quot;) /tmp\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/browser/firefox/",
+        "title": "Firefox",
+        "tags": [],
+        "description": "Firefox",
+        "content": "firefox -private\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/gpg/",
         "title": "GPG",
         "tags": [],
