@@ -136,7 +136,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-dir/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/</loc>
   </url>
   
   <url>
@@ -377,15 +377,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-cmd/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-go/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-go/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-network/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-network/</loc>
   </url>
   
   <url>
@@ -393,11 +393,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-regex/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-regex/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim-bundle/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-bundle/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/</loc>
   </url>
   
   <url>
@@ -405,7 +409,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/vim/</loc>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim/</loc>
   </url>
   
   <url>
