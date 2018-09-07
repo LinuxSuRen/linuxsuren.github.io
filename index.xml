@@ -842,7 +842,7 @@ echo abc | tr a-z A-Z 大小写转换</description>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
       <description> Action 1.条件语句 2.迭代 3.封装 4.引用
-条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }}  迭代 {{ range . }} {{ end }}  {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }}  </description>
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }}  迭代 {{ range . }} {{ end }}  {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }}  数组 {{ index &amp;quot;abc&amp;quot; 0 }}  </description>
     </item>
     
     <item>
