@@ -22,6 +22,17 @@
     </item>
     
     <item>
+      <title>VIM Buffer</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/</guid>
+      <description>:ls 或 :buffers 列出所有的缓冲区
+:b 1 切换到指定编号的缓冲区
+:sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口</description>
+    </item>
+    
+    <item>
       <title>VIM Command</title>
       <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -79,6 +90,18 @@ Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
 把以空白字符开头，并且第一个字符不是&amp;lt;的行首添加 g!/^\s*&amp;lt;/ s/^/&amp;lt;para&amp;gt;
 把中间还有尖括号(&amp;lt;&amp;gt;)的行删除 g/&amp;lt;para&amp;gt;.*[&amp;lt;&amp;gt;].*&amp;lt;\/para&amp;gt;/ del
 找到没有以结尾的行 s/para&amp;gt;.*[^(&amp;lt;\/para&amp;gt;)]$</description>
+    </item>
+    
+    <item>
+      <title>VIM tab</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/</guid>
+      <description>:tabnew a.log 新建选项卡
+:tabNext 切换到下一个选项卡
+:tabprevious 切换到上一个选项卡
+:tabclose 关闭选项卡</description>
     </item>
     
     <item>

@@ -651,6 +651,13 @@
         "content": "编辑器\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/",
+        "title": "VIM Buffer",
+        "tags": [],
+        "description": "VIM Buffer",
+        "content": ":ls 或 :buffers 列出所有的缓冲区\n:b 1 切换到指定编号的缓冲区\n:sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/",
         "title": "VIM Command",
         "tags": [],
@@ -698,6 +705,13 @@
         "tags": [],
         "description": "VIM core",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/",
+        "title": "VIM tab",
+        "tags": [],
+        "description": "VIM 中使用选项卡",
+        "content": ":tabnew a.log 新建选项卡\n:tabNext 切换到下一个选项卡\n:tabprevious 切换到上一个选项卡\n:tabclose 关闭选项卡\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/vendor/",
