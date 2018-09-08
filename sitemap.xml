@@ -224,6 +224,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/terminal/iterm2/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/java/jvm/</loc>
   </url>
   
@@ -490,6 +494,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vscode/</loc>
   </url>
   
   <url>
