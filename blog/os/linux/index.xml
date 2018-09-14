@@ -217,5 +217,15 @@ alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quo
       <description></description>
     </item>
     
+    <item>
+      <title>xclip</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/xclip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/xclip/</guid>
+      <description>Install sudo apt-get install xclip
+Example ifconfig | xclip -sel clip</description>
+    </item>
+    
   </channel>
 </rss>

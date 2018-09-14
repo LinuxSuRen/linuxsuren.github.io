@@ -896,6 +896,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/xclip/",
+        "title": "xclip",
+        "tags": [],
+        "description": "command line interface to X selections (clipboard)",
+        "content": " Install sudo apt-get install xclip\nExample ifconfig | xclip -sel clip\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/network/proxy/",
         "title": "代理",
         "tags": [],
