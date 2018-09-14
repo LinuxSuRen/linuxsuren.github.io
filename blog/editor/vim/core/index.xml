@@ -11,6 +11,19 @@
     
     
     <item>
+      <title>Auto complete</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</guid>
+      <description>Ctrl+X+P 整行
+Ctrl+X+N 当前文件
+Ctrl+X+K 字典
+Ctrl+X+I 当前以及包含的文件
+Ctrl+X+F 文件名</description>
+    </item>
+    
+    <item>
       <title>Directory</title>
       <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

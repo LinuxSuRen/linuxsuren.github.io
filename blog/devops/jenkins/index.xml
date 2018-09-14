@@ -133,6 +133,17 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     </item>
     
     <item>
+      <title>Jenkins 调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</guid>
+      <description>mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数</description>
+    </item>
+    
+    <item>
       <title>扩展 Jenkins 的构建（Builder）任务</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

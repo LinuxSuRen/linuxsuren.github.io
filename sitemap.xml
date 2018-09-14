@@ -115,6 +115,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/base64/</loc>
   </url>
   
@@ -273,6 +277,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</loc>
   </url>
   
   <url>

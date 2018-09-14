@@ -266,6 +266,19 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
     </item>
     
     <item>
+      <title>Auto complete</title>
+      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</guid>
+      <description>Ctrl+X+P 整行
+Ctrl+X+N 当前文件
+Ctrl+X+K 字典
+Ctrl+X+I 当前以及包含的文件
+Ctrl+X+F 文件名</description>
+    </item>
+    
+    <item>
       <title>Base64</title>
       <link>https://linuxsuren.github.io/blog/os/linux/base64/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -659,6 +672,17 @@ mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会
 指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
 mvn hpi:run -Djenkins.install.runSetupWizard=true
 参考 maven-hpi-plugin</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</guid>
+      <description>mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数</description>
     </item>
     
     <item>

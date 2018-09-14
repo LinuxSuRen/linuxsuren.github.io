@@ -196,6 +196,13 @@
         "content": " ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/",
+        "title": "Auto complete",
+        "tags": [],
+        "description": "Auto complete",
+        "content": "Ctrl+X+P 整行\nCtrl+X+N 当前文件\nCtrl+X+K 字典\nCtrl+X+I 当前以及包含的文件\nCtrl+X+F 文件名\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/base64/",
         "title": "Base64",
         "tags": [],
@@ -474,6 +481,13 @@
         "tags": [],
         "description": "Jenkins 插件调试",
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\nmvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n参考 maven-hpi-plugin\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/",
+        "title": "Jenkins 调试",
+        "tags": [],
+        "description": "Jenkins 调试",
+        "content": "mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/kuberctl/",
