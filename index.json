@@ -487,7 +487,7 @@
         "title": "Jenkins 调试",
         "tags": [],
         "description": "Jenkins 调试",
-        "content": "mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\n"
+        "content": "mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/kuberctl/",
