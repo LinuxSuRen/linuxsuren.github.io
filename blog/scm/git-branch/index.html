@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="27">
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -210,6 +210,8 @@
 <p><code>git branch --delete abc</code> 删除分支 abc</p>
 
 <p><code>git push origin --delete abc</code> 删除远程分支</p>
+
+<p><code>git branch -v | grep gone | awk '//{print $1}' | xargs git branch -d</code> 删除远程分支不存在的`</p>
 
 <h1 id="拉取分支">拉取分支</h1>
 
