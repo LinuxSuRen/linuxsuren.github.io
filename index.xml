@@ -671,6 +671,7 @@ mvn hpi:run
 mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
 指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
 mvn hpi:run -Djenkins.install.runSetupWizard=true
+指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
 参考 maven-hpi-plugin</description>
     </item>
     
