@@ -79,7 +79,9 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
 &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
 &amp;lt;f:textbox/&amp;gt;
 &amp;lt;f:checkbox/&amp;gt;
-凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  https://ci.adoptopenjdk.net/</description>
+凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  https://ci.adoptopenjdk.net/
+静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：
+http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css</description>
     </item>
     
     <item>

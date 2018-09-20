@@ -445,7 +445,7 @@
         "title": "Jenkins UI",
         "tags": [],
         "description": "Jenkins UI 介绍",
-        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt;\n\u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; 验证按钮\n\u0026lt;f:textbox/\u0026gt;\n\u0026lt;f:checkbox/\u0026gt;\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  https://ci.adoptopenjdk.net/\n"
+        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt;\n\u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; 验证按钮\n\u0026lt;f:textbox/\u0026gt;\n\u0026lt;f:checkbox/\u0026gt;\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  https://ci.adoptopenjdk.net/\n静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：\nhttp://localhost:8080/jenkins/plugin/sample-plugin-id/test.css\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/",
