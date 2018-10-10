@@ -21,6 +21,13 @@
         "content": "DevOps相关技术文章\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/",
+        "title": "Jenkins Pipeline",
+        "tags": [],
+        "description": "Jenkins Pipeline",
+        "content": "Jenkins Pipeline 的使用和开发\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/configuration/ini/",
         "title": "",
         "tags": [],
@@ -355,6 +362,13 @@
         "tags": [],
         "description": "Gitlab 使用介绍",
         "content": " Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。\n启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce\nGitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/",
+        "title": "GlobalVariable",
+        "tags": [],
+        "description": "GlobalVariable Extension",
+        "content": "插件 workflow-cps-plugin 提供了在 Jenkins 中定义全局变量（GlobalVariable）的扩展点。这样的扩展点允许你给用户提供在线的文档。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/network/http_status/",

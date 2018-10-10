@@ -15,6 +15,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
   </url>
   
@@ -205,6 +209,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/scm/gitlab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</loc>
   </url>
   
   <url>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins Pipeline on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</link>
+    <description>Recent content in Jenkins Pipeline on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GlobalVariable</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</guid>
+      <description>插件 workflow-cps-plugin 提供了在 Jenkins 中定义全局变量（GlobalVariable）的扩展点。这样的扩展点允许你给用户提供在线的文档。</description>
+    </item>
+    
+  </channel>
+</rss>

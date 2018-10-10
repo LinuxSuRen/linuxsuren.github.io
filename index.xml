@@ -498,6 +498,15 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>GlobalVariable</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</guid>
+      <description>插件 workflow-cps-plugin 提供了在 Jenkins 中定义全局变量（GlobalVariable）的扩展点。这样的扩展点允许你给用户提供在线的文档。</description>
+    </item>
+    
+    <item>
       <title>HTTP Status</title>
       <link>https://linuxsuren.github.io/blog/network/http_status/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
