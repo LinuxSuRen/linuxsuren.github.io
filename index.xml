@@ -379,6 +379,16 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
     </item>
     
     <item>
+      <title>Firewall</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</guid>
+      <description>systemctl stop firewalld.service 停止firewall
+systemctl disable firewalld.service 禁止firewall开机启动</description>
+    </item>
+    
+    <item>
       <title>GPG</title>
       <link>https://linuxsuren.github.io/blog/os/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -903,6 +913,15 @@ echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
+      <title>U Creator</title>
+      <link>https://linuxsuren.github.io/blog/os/u-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/u-creator/</guid>
+      <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  </description>
+    </item>
+    
+    <item>
       <title>Unit Test</title>
       <link>https://linuxsuren.github.io/blog/language/golang/unit_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1215,7 +1234,8 @@ userdel user-name</description>
       <guid>https://linuxsuren.github.io/blog/os/linux/wget/</guid>
       <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
 为了方便使用，我们可以为 wget 添加一个别名，如下所示：
-alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;</description>
+alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
+递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载</description>
     </item>
     
     <item>

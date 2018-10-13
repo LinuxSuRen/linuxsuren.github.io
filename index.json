@@ -231,6 +231,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/centos/",
+        "title": "CentOS",
+        "tags": [],
+        "description": "CentOS",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/mobile/",
         "title": "Connect to Mobile",
         "tags": [],
@@ -292,6 +299,13 @@
         "tags": [],
         "description": "Firefox",
         "content": "firefox -private\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/centos/firewall/",
+        "title": "Firewall",
+        "tags": [],
+        "description": "Firewall",
+        "content": "systemctl stop firewalld.service 停止firewall\nsystemctl disable firewalld.service 禁止firewall开机启动\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/gpg/",
@@ -665,6 +679,13 @@
         "content": " Typora 支持用 Markdown 的方式来“画”流程图。\n流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d \n参考 https://support.typora.io/Draw-Diagrams-With-Markdown/\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/u-creator/",
+        "title": "U Creator",
+        "tags": [],
+        "description": "U Creator",
+        "content": "$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/ubuntu/",
         "title": "Ubuntu",
         "tags": [],
@@ -900,7 +921,7 @@
         "title": "wget",
         "tags": [],
         "description": "wget",
-        "content": " 代理 通过命令参数设置代理 wget https://google.com -e \u0026quot;https_proxy=http://localhost:1234\u0026quot;\n为了方便使用，我们可以为 wget 添加一个别名，如下所示：\nalias wall-wget='wget -e \u0026quot;https_proxy=http://localhost:8123\u0026quot; '\n"
+        "content": " 代理 通过命令参数设置代理 wget https://google.com -e \u0026quot;https_proxy=http://localhost:1234\u0026quot;\n为了方便使用，我们可以为 wget 添加一个别名，如下所示：\nalias wall-wget='wget -e \u0026quot;https_proxy=http://localhost:8123\u0026quot; '\n递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/xargs/",

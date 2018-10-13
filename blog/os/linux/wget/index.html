@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="28">
 
 
 
@@ -218,6 +218,10 @@
 <p>为了方便使用，我们可以为 <code>wget</code> 添加一个别名，如下所示：</p>
 
 <p><code>alias wall-wget='wget -e &quot;https_proxy=http://localhost:8123&quot; '</code></p>
+
+<h1 id="递归下载">递归下载</h1>
+
+<p><code>wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/</code> 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载</p>
 
 </div>
 
