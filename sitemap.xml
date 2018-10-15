@@ -405,6 +405,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/update-center/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
   </url>
   
@@ -454,6 +458,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/opensource/why-opensource/</loc>
   </url>
   
   <url>
