@@ -609,6 +609,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/sshd/",
+        "title": "SSDH",
+        "tags": [],
+        "description": "SSHD",
+        "content": " 禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config\nPermitRootLogin no\n然后重启服务 service ssh restart\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/ssh/",
         "title": "SSH",
         "tags": [],

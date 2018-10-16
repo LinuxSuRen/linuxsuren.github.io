@@ -821,6 +821,17 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>SSDH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/sshd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/sshd/</guid>
+      <description>禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config
+PermitRootLogin no
+然后重启服务 service ssh restart</description>
+    </item>
+    
+    <item>
       <title>SSH</title>
       <link>https://linuxsuren.github.io/blog/os/linux/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
