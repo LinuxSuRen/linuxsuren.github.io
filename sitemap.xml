@@ -123,6 +123,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/banana-pi/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/base64/</loc>
   </url>
   
@@ -325,6 +329,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/minikube/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/banana-pi/monitor/</loc>
   </url>
   
   <url>

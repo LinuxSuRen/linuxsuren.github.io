@@ -785,6 +785,16 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     </item>
     
     <item>
+      <title>Monitor</title>
+      <link>https://linuxsuren.github.io/blog/banana-pi/monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/banana-pi/monitor/</guid>
+      <description>查看温度 安装软件 apt-get install sensord
+然后执行命令 sensors</description>
+    </item>
+    
+    <item>
       <title>Nginx</title>
       <link>https://linuxsuren.github.io/blog/server/nginx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
