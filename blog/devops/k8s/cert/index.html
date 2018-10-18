@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>ApiServer | SuRenPi</title>
+    <title>K8S 证书 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,11 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="ApiServer" />
-<meta property="og:description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型" />
+<meta property="og:title" content="K8S 证书" />
+<meta property="og:description" content="K8S 证书" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/apiserver/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/cert/" />
 
 
 
@@ -48,21 +47,19 @@
 
 
 
-<meta itemprop="name" content="ApiServer">
-<meta itemprop="description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型">
+<meta itemprop="name" content="K8S 证书">
+<meta itemprop="description" content="K8S 证书">
 
 
 
-<meta itemprop="wordCount" content="16">
+<meta itemprop="wordCount" content="115">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ApiServer"/>
-<meta name="twitter:description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型"/>
+<meta name="twitter:title" content="K8S 证书"/>
+<meta name="twitter:description" content="K8S 证书"/>
 
 
 
@@ -166,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/ake/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Ake ">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/apiserver/" class="dib f6 pl1 hover-bg-light-gray br-100" title="ApiServer ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -176,7 +173,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/cert/" class="dib f6 pr1 hover-bg-light-gray br-100" title="K8S 证书">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/kuberctl/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Kubectl">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -195,10 +192,14 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">ApiServer</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">K8S 证书</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      K8S 证书
+    </div>
   
 
   
@@ -210,13 +211,51 @@
 
 
 
-<h1 id="apiserver">ApiServer</h1>
+<p>根证书公钥(ca.pem)与私钥(ca-key.pem)</p>
 
-<h1 id="类型查看">类型查看</h1>
+<p>API Server 公钥和私钥</p>
 
-<p>查看所有的资源组 <code>curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort</code></p>
+<p>集群管理员公钥和私钥</p>
 
-<p>执行命令 <code>curl --insecure https://localhost:6443/apis/{api.group}/{version}</code> 可以看到所支持的资源类型</p>
+<p>从节点公钥和私钥</p>
+
+<h1 id="根证书">根证书</h1>
+
+<pre><code>openssl genrsa -out ca-key.pem 2048
+openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &quot;/CN=kube-ca&quot;
+</code></pre>
+
+<h1 id="api-server-证书">API Server 证书</h1>
+
+<p>创建 <code>openssl.cnf</code></p>
+
+<pre><code>[req]
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+[req_distinguished_name]
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = kubernetes
+DNS.2 = kubernetes.default
+DNS.3 = kubernetes.default.svc
+DNS.4 = kubernetes.default.svc.cluster.local
+IP.1 = ${K8S_SERVICE_IP}
+IP.2 = ${MASTER_IPV4}
+</code></pre>
+
+<pre><code>openssl genrsa -out apiserver-key.pem 2048
+openssl req -new -key apiserver-key.pem -out apiserver.csr -subj &quot;/CN=kube-apiserver&quot; -config openssl.cnf
+openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf
+</code></pre>
+
+<p>一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 <code>/etc/kubernetes/ssl/</code> 路径下</p>
+
+<h1 id="ref">Ref</h1>
+
+<p><a href="https://blog.csdn.net/shenshouer/article/details/53035948">https://blog.csdn.net/shenshouer/article/details/53035948</a></p>
 
 </div>
 
@@ -309,14 +348,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/k8s/apiserver/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/k8s/cert/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “ApiServer”
+    “K8S 证书”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/devops/k8s/apiserver.md" class="
+      <a href="edit/master/content/blog/devops/k8s/cert.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 
