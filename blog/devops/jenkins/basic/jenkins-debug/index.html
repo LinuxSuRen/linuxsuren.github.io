@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins | SuRenPi</title>
+    <title>Jenkins 调试 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,6 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/devops/jenkins/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins" />
-<meta property="og:description" content="Jenkins 的使用、配置以及插件开发" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/" />
+<meta property="og:title" content="Jenkins 调试" />
+<meta property="og:description" content="Jenkins 调试" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/" />
 
 
 
@@ -46,12 +45,21 @@
 
 
 
-<meta itemprop="name" content="Jenkins">
-<meta itemprop="description" content="Jenkins 的使用、配置以及插件开发">
 
+
+<meta itemprop="name" content="Jenkins 调试">
+<meta itemprop="description" content="Jenkins 调试">
+
+
+
+<meta itemprop="wordCount" content="30">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins"/>
-<meta name="twitter:description" content="Jenkins 的使用、配置以及插件开发"/>
+<meta name="twitter:title" content="Jenkins 调试"/>
+<meta name="twitter:description" content="Jenkins 调试"/>
 
 
 
@@ -146,12 +154,76 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
-  
-  
-  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
 
-  <div class="flex">
-    <div class="dn db-l w-20">
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+
+	<div date-pref>
+		
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件调试 ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Update Center">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 调试</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Jenkins 调试
+    </div>
+  
+
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+<p><code>mvn jenkins-dev:run</code></p>
+
+<p><code>mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=.</code> 需要在目录 <code>war</code> 下运行，并保证没有 <code>work</code> 目录</p>
+
+<p><code>java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/</code> 设置 Jenkins 启动参数</p>
+
+<p><code>mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</code></p>
+
+</div>
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -228,84 +300,30 @@
   </ul>
 </nav>
 
-    </div>
-
-    <div class="w-100 w-80-l ph0 ph4-l">
-      <article class="w-100 nested-copy-line-height nested-links nested-img">
-        <h1 class="primary-color-dark f2">
-          Jenkins
-        </h1>
-        <div class=" mid-gray f5 f4-l">
-          <p>DevOps相关技术文章</p>
-
-        </div>
-      </article>
-
-      
-
-      <div class="flex flex-wrap">
-        
-        <section class="flex-ns flex-wrap justify-between w-100">
-          
-            <div class="relative  weight-2">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/pipeline/" class="link primary-color dim">Jenkins Pipeline</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins Pipeline
-        
-
-        <a href="/blog/devops/jenkins/pipeline/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/" class="link primary-color dim">Jenkins Basic</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins Basic
-        
-
-        <a href="/blog/devops/jenkins/basic/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-        </section>
       </div>
 
     </div>
+  </article>
 
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+</span>
+    “Jenkins 调试”
+  </a> was last updated: January 1, 0001
+</h6>
+
+      <a href="edit/master/content/blog/devops/jenkins/basic/jenkins-debug.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      
+
+
+    </div>
   </div>
-
-</div>
-
 
     </main>
 

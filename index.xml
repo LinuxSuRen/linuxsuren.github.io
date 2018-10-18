@@ -212,10 +212,10 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
     
     <item>
       <title>Action</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</guid>
       <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
  getIconFileName getDisplayName getUrlName  约定 </description>
@@ -237,10 +237,10 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
     
     <item>
       <title>Annotation</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</guid>
       <description> CheckForNull Extension NoExternalUse </description>
     </item>
     
@@ -290,10 +290,10 @@ echo MTIzNA== | base64 --d</description>
     
     <item>
       <title>CLI</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</guid>
       <description>扩展点 hudson.cli.CLICommand
 Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
     </item>
@@ -593,10 +593,10 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
     
     <item>
       <title>Jenkins</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
@@ -604,28 +604,28 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
     
     <item>
       <title>Jenkins JUnit</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</guid>
       <description> Assert @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); }  </description>
     </item>
     
     <item>
       <title>Jenkins Permission</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</guid>
       <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
     </item>
     
     <item>
       <title>Jenkins UI</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</guid>
       <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
 &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
 &amp;lt;f:textbox/&amp;gt;
@@ -649,10 +649,10 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
     
     <item>
       <title>Jenkins 插件开发</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
 运行 在工程根目录下执行 mvn hpi:run
@@ -666,10 +666,10 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     
     <item>
       <title>Jenkins 插件托管</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</guid>
       <description>创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
 提交请求 详细阅读托管要求
 在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
@@ -682,10 +682,10 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
     
     <item>
       <title>Jenkins 插件调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</guid>
       <description>运行 在 war 目录下运行：
 mvn hpi:run
 跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
@@ -698,10 +698,10 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     
     <item>
       <title>Jenkins 调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
       <description>mvn jenkins-dev:run
 mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
 java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
@@ -967,10 +967,10 @@ echo abc | tr a-z A-Z 大小写转换</description>
     
     <item>
       <title>Update Center</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/update-center/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/update-center/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</guid>
       <description>构建项目 mvn package appassembler:assemble -DskipTests
 生成网站目录并缓存插件文件 sh target/appassembler/bin/app -id default -www www -key surenpi.key -certificate surenpi.crt -root-certificate surenpi.crt -root-certificate rootCA/jenkins-update-center-root-ca.crt -whitelist list.properties -cache /Users/mac/IdeaProjects/Github/jenkins-infra/update-center2/tmp -skip-release-history -cacheServer http://blog.surenpi.com/www/download/</description>
     </item>
@@ -1435,29 +1435,29 @@ yum install python-pip</description>
     
     <item>
       <title>扩展 Jenkins 的构建（Builder）任务</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</guid>
       <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
 流水线 </description>
     </item>
     
     <item>
       <title>申明式流水线</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/</guid>
       <description></description>
     </item>
     
     <item>
       <title>脚本式流水线</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/</guid>
       <description>触发器 node(&#39;local&#39;) { echo &#39;hello&#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &#39;&#39;, artifactNumToKeepStr: &#39;&#39;, daysToKeepStr: &#39;5&#39;, numToKeepStr: &#39;10&#39; ) ), pipelineTriggers([ cron(&#39;H 3,12,17 * * *&#39;), scm(&#39;H 3,12,17 * * *&#39;) ]) ])  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  循环 node(&#39;suren&#39;) { def dev_path = &#39;/opt/suren/bin&#39; def services = [ [ &#39;name&#39;: &#39;admin&#39;, &#39;project&#39;: &#39;admin&#39;, &#39;port&#39;: &#39;7002&#39;, &#39;jarName&#39;: &#39;admin&#39; ] ]; stage(&#39;Copy Artifact&#39;) { for(service in services){ step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
     </item>
     

@@ -168,7 +168,7 @@
         "content": " 列出第一列 docker ps | grep hello | awk '{print $1}'\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/",
         "title": "Action",
         "tags": [],
         "description": "Jenkins Plugin Action",
@@ -182,7 +182,7 @@
         "content": " 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install python -y\n安装 Support Docker versions ['1.12.6', '17.03.0', '17.03.1', '17.03.2', '17.12.0']\n通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes\n修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：\napiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: \u0026quot;\u0026quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/",
         "title": "Annotation",
         "tags": [],
         "description": "Jenkins 中的注解类介绍",
@@ -224,7 +224,7 @@
         "content": "echo -n 1234 | base64\necho MTIzNA== | base64 --d\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/",
         "title": "CLI",
         "tags": [],
         "description": "Command Line Interface",
@@ -455,28 +455,35 @@
         "content": "Java\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "Jenkins 是一个开源的 CI 服务",
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\njava -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/",
+        "title": "Jenkins Basic",
+        "tags": [],
+        "description": "Jenkins Basic",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/",
         "title": "Jenkins JUnit",
         "tags": [],
         "description": "Jenkins JUnit",
         "content": " Assert @Test public void basic() { assertThat(\u0026quot;abc\u0026quot;, StringContains.containsString(\u0026quot;a\u0026quot;)); assertThat(\u0026quot;abc\u0026quot;, Matchers.not(StringContains.containsString(\u0026quot;d\u0026quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(\u0026quot;\u0026quot;); assertEquals(\u0026quot;a\u0026quot;, \u0026quot;a\u0026quot;); }  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/",
         "title": "Jenkins Permission",
         "tags": [],
         "description": "Jenkins Permission System",
         "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/",
         "title": "Jenkins UI",
         "tags": [],
         "description": "Jenkins UI 介绍",
@@ -497,28 +504,28 @@
         "content": " 添加 Gitee 为 Git 服务器\njx create git server gitea http://localhost:10080\nDevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep \u0026quot;Storage Driver\u0026quot; 查看 Docker 当前支持的类型。\n因此，我们需要的 Docker 版本为 v17.06。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/",
         "title": "Jenkins 插件开发",
         "tags": [],
         "description": "Jenkins 插件开发教程",
         "content": " 环境准备 你需要安装好Java和Maven。\n创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。\n运行 在工程根目录下执行 mvn hpi:run\n访问 http://localhost:8080/jenkins/\nJenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。\n单元测试 Jenkins 官方提供了单元测试相关的内容。\n发布 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare\nmvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:perform\n参考 Extend Jenkins\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/",
         "title": "Jenkins 插件托管",
         "tags": [],
         "description": "本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。",
         "content": " 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。\n提交请求 详细阅读托管要求\n在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。\n托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。\n你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。\n发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform\n跳过测试 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare\n执行发布准备而且无需输入参数 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare -B\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/",
         "title": "Jenkins 插件调试",
         "tags": [],
         "description": "Jenkins 插件调试",
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/",
         "title": "Jenkins 调试",
         "tags": [],
         "description": "Jenkins 调试",
@@ -728,7 +735,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/update-center/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/",
         "title": "Update Center",
         "tags": [],
         "description": "",
@@ -1071,7 +1078,7 @@
         "content": " Jenkins Hugo Plugin  Jenkins Hugo 构建插件\n Jenkins Chinese Localizatioin Plugin  Jenkins 中文本地化插件\n Jenkins Java Client  Jenkins Java 客户端\n phoenix.webui.framework  基于 Selenium 的自动化测试\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/",
         "title": "扩展 Jenkins 的构建（Builder）任务",
         "tags": [],
         "description": "本文介绍如何扩展 Jenkins 的构建（Builder）任务。",
@@ -1099,7 +1106,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/",
         "title": "申明式流水线",
         "tags": [],
         "description": "申明式流水线",
@@ -1127,7 +1134,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/",
         "title": "脚本式流水线",
         "tags": [],
         "description": "本文介绍 Jenkins 的脚本式流水线",

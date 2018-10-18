@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins | SuRenPi</title>
+    <title>Jenkins Basic | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/devops/jenkins/index.xml">
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/devops/jenkins/basic/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +28,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins" />
-<meta property="og:description" content="Jenkins 的使用、配置以及插件开发" />
+<meta property="og:title" content="Jenkins Basic" />
+<meta property="og:description" content="Jenkins Basic" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/" />
 
 
 
@@ -46,12 +46,12 @@
 
 
 
-<meta itemprop="name" content="Jenkins">
-<meta itemprop="description" content="Jenkins 的使用、配置以及插件开发">
+<meta itemprop="name" content="Jenkins Basic">
+<meta itemprop="description" content="Jenkins Basic">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins"/>
-<meta name="twitter:description" content="Jenkins 的使用、配置以及插件开发"/>
+<meta name="twitter:title" content="Jenkins Basic"/>
+<meta name="twitter:description" content="Jenkins Basic"/>
 
 
 
@@ -233,11 +233,10 @@
     <div class="w-100 w-80-l ph0 ph4-l">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
-          Jenkins
+          Jenkins Basic
         </h1>
         <div class=" mid-gray f5 f4-l">
-          <p>DevOps相关技术文章</p>
-
+          
         </div>
       </article>
 
@@ -247,21 +246,21 @@
         
         <section class="flex-ns flex-wrap justify-between w-100">
           
-            <div class="relative  weight-2">
+            <div class="relative  weight-0">
 
   <div class="bg-white mb2 pa3 pa4-l gray">
     
 
     <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/pipeline/" class="link primary-color dim">Jenkins Pipeline</a>
+      <a href="/blog/devops/jenkins/basic/jenkins-debug/" class="link primary-color dim">Jenkins 调试</a>
     </h1>
 
     <div class="lh-copy links">
       
-          Jenkins Pipeline
+          Jenkins 调试
         
 
-        <a href="/blog/devops/jenkins/pipeline/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/devops/jenkins/basic/jenkins-debug/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -278,15 +277,91 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/" class="link primary-color dim">Jenkins Basic</a>
+      <a href="/blog/devops/jenkins/basic/update-center/" class="link primary-color dim">Update Center</a>
     </h1>
 
     <div class="lh-copy links">
       
-          Jenkins Basic
+          构建项目 mvn package appassembler:assemble -DskipTests
+生成网站目录并缓存插件文件 sh target/appassembler/bin/app -id default -www www -key surenpi.key -certificate surenpi.crt -root-certificate surenpi.crt -root-certificate rootCA/jenkins-update-center-root-ca.crt -whitelist list.properties -cache /Users/mac/IdeaProjects/Github/jenkins-infra/update-center2/tmp -skip-release-history -cacheServer http://blog.surenpi.com/www/download/
+      
+
+        <a href="/blog/devops/jenkins/basic/update-center/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/basic/jenkins-plugin-dev-build/" class="link primary-color dim">扩展 Jenkins 的构建（Builder）任务</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          本文介绍如何扩展 Jenkins 的构建（Builder）任务。
         
 
-        <a href="/blog/devops/jenkins/basic/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/devops/jenkins/basic/jenkins-plugin-dev-build/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/basic/jenkins-pipeline-declarative/" class="link primary-color dim">申明式流水线</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          申明式流水线
+        
+
+        <a href="/blog/devops/jenkins/basic/jenkins-pipeline-declarative/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/basic/jenkins-pipeline-scripted/" class="link primary-color dim">脚本式流水线</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          本文介绍 Jenkins 的脚本式流水线
+        
+
+        <a href="/blog/devops/jenkins/basic/jenkins-pipeline-scripted/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

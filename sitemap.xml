@@ -99,7 +99,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-action/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</loc>
   </url>
   
   <url>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-annotation/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</loc>
   </url>
   
   <url>
@@ -131,7 +131,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-cli/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</loc>
   </url>
   
   <url>
@@ -264,19 +264,23 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-junit/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-permission/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-ui/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</loc>
   </url>
   
   <url>
@@ -288,19 +292,19 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-develope/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-host/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-debug/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-debug/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
   </url>
   
   <url>
@@ -421,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/update-center/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</loc>
   </url>
   
   <url>
@@ -617,7 +621,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin-dev-build/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</loc>
   </url>
   
   <url>
@@ -633,7 +637,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-declarative/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/</loc>
   </url>
   
   <url>
@@ -649,7 +653,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-pipeline-scripted/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/</loc>
   </url>
   
   <url>
