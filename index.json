@@ -280,6 +280,13 @@
         "content": "vim /etc/docker/daemon.json\n{ \u0026quot;registry-mirrors\u0026quot;: [\u0026quot;https://mirror.gcr.io\u0026quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io\n或者，在文件 /etc/default/docker 中添加如下配置：\nDOCKER_OPTS=\u0026quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io\u0026quot;\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/docker/docker-oper/",
+        "title": "Docker Operation",
+        "tags": [],
+        "description": "Docker Operation",
+        "content": " Filter Images 当前支持的过滤如下：\n dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk '{print $3}')\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-image/",
         "title": "Docker 镜像管理",
         "tags": [],
