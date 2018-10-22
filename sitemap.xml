@@ -63,19 +63,19 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/curl/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/curl/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/pavucontrol/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/prompting/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/prompting/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/service/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/service/</loc>
   </url>
   
   <url>
@@ -95,7 +95,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/awk/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/awk/</loc>
   </url>
   
   <url>
@@ -127,7 +127,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/base64/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/base64/</loc>
   </url>
   
   <url>
@@ -144,7 +144,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/mobile/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/mobile/</loc>
   </url>
   
   <url>
@@ -172,7 +172,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/find/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/find/</loc>
   </url>
   
   <url>
@@ -320,7 +320,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/mplayer/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</loc>
   </url>
   
   <url>
@@ -368,15 +372,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/sshd/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/sshd/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/ssh/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/ssh/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/shell/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/shell/</loc>
   </url>
   
   <url>
@@ -396,7 +400,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/tr/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/tr/</loc>
   </url>
   
   <url>
@@ -493,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/echo/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/echo/</loc>
   </url>
   
   <url>
@@ -517,7 +521,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/grep/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/grep/</loc>
   </url>
   
   <url>
@@ -537,15 +541,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/sed/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/sed/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/split/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/split/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/user/</loc>
   </url>
   
   <url>
@@ -557,15 +561,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/wget/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/wget/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/xargs/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/xargs/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/xclip/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/xclip/</loc>
   </url>
   
   <url>

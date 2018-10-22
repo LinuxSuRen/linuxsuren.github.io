@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Linux | SuRenPi</title>
+    <title>wget | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,6 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/os/linux/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Linux" />
-<meta property="og:description" content="Linux OS" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/" />
+<meta property="og:title" content="wget" />
+<meta property="og:description" content="wget" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/wget/" />
 
 
 
@@ -46,12 +45,21 @@
 
 
 
-<meta itemprop="name" content="Linux">
-<meta itemprop="description" content="Linux OS">
 
+
+<meta itemprop="name" content="wget">
+<meta itemprop="description" content="wget">
+
+
+
+<meta itemprop="wordCount" content="273">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux"/>
-<meta name="twitter:description" content="Linux OS"/>
+<meta name="twitter:title" content="wget"/>
+<meta name="twitter:description" content="wget"/>
 
 
 
@@ -146,12 +154,202 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
-  
-  
-  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
 
-  <div class="flex">
-    <div class="dn db-l w-20">
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+
+	<div date-pref>
+		
+			<a href="https://linuxsuren.github.io/blog/os/linux/common/user/" class="dib f6 pl1 hover-bg-light-gray br-100" title="user ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="https://linuxsuren.github.io/blog/os/linux/common/xargs/" class="dib f6 pr1 hover-bg-light-gray br-100" title="xargs">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">wget</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      wget
+    </div>
+  
+
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+
+
+<h1 id="代理">代理</h1>
+
+<p>通过命令参数设置代理 <code>wget https://google.com -e &quot;https_proxy=http://localhost:1234&quot;</code></p>
+
+<p>为了方便使用，我们可以为 <code>wget</code> 添加一个别名，如下所示：</p>
+
+<p><code>alias wall-wget='wget -e &quot;https_proxy=http://localhost:8123&quot; '</code></p>
+
+<h1 id="递归下载">递归下载</h1>
+
+<p><code>wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/</code> 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载</p>
+
+<p>wget各种选项分类列表</p>
+
+<ul>
+<li>启动</li>
+</ul>
+
+<p>-V, –version 显示wget的版本后退出
+-h, –help 打印语法帮助
+-b, –background 启动后转入后台执行
+-e, –execute=COMMAND
+执行`.wgetrc&rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc</p>
+
+<ul>
+<li>记录和输入文件</li>
+</ul>
+
+<p>-o, –output-file=FILE 把记录写到FILE文件中
+-a, –append-output=FILE 把记录追加到FILE文件中
+-d, –debug 打印调试输出
+-q, –quiet 安静模式(没有输出)
+-v, –verbose 冗长模式(这是缺省设置)
+-nv, –non-verbose 关掉冗长模式，但不是安静模式
+-i, –input-file=FILE 下载在FILE文件中出现的URLs
+-F, –force-html 把输入文件当作HTML格式文件对待
+-B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀
+–sslcertfile=FILE 可选客户端证书
+–sslcertkey=KEYFILE 可选客户端证书的KEYFILE
+–egd-file=FILE 指定EGD socket的文件名</p>
+
+<ul>
+<li>下载</li>
+</ul>
+
+<p>–bind-address=ADDRESS
+指定本地使用地址(主机名或IP，当本地有多个IP或名字时使用)
+-t, –tries=NUMBER 设定最大尝试链接次数(0 表示无限制).
+-O –output-document=FILE 把文档写到FILE文件中
+-nc, –no-clobber 不要覆盖存在的文件或使用.#前缀
+-c, –continue 接着下载没下载完的文件
+–progress=TYPE 设定进程条标记
+-N, –timestamping 不要重新下载文件除非比本地文件新
+-S, –server-response 打印服务器的回应
+–spider 不下载任何东西
+-T, –timeout=SECONDS 设定响应超时的秒数
+-w, –wait=SECONDS 两次尝试之间间隔SECONDS秒
+–waitretry=SECONDS 在重新链接之间等待1…SECONDS秒
+–random-wait 在下载之间等待0…2*WAIT秒
+-Y, –proxy=on/off 打开或关闭代理
+-Q, –quota=NUMBER 设置下载的容量限制
+–limit-rate=RATE 限定下载输率</p>
+
+<ul>
+<li>目录</li>
+</ul>
+
+<p>-nd –no-directories 不创建目录
+-x, –force-directories 强制创建目录
+-nH, –no-host-directories 不创建主机目录
+-P, –directory-prefix=PREFIX 将文件保存到目录 PREFIX/…
+–cut-dirs=NUMBER 忽略 NUMBER层远程目录</p>
+
+<ul>
+<li>HTTP 选项</li>
+</ul>
+
+<p>–http-user=USER 设定HTTP用户名为 USER.
+–http-passwd=PASS 设定http密码为 PASS.
+-C, –cache=on/off 允许/不允许服务器端的数据缓存 (一般情况下允许).
+-E, –html-extension 将所有text/html文档以.html扩展名保存
+–ignore-length 忽略 <code>Content-Length'头域
+–header=STRING 在headers中插入字符串 STRING
+–proxy-user=USER 设定代理的用户名为 USER
+–proxy-passwd=PASS 设定代理的密码为 PASS
+–referer=URL 在HTTP请求中包含</code>Referer: URL&rsquo;头
+-s, –save-headers 保存HTTP头到文件
+-U, –user-agent=AGENT 设定代理的名称为 AGENT而不是 Wget/VERSION.
+–no-http-keep-alive 关闭 HTTP活动链接 (永远链接).
+–cookies=off 不使用 cookies.
+–load-cookies=FILE 在开始会话前从文件 FILE中加载cookie
+–save-cookies=FILE 在会话结束后将 cookies保存到 FILE文件中</p>
+
+<ul>
+<li>FTP 选项</li>
+</ul>
+
+<p>-nr, –dont-remove-listing 不移走 `.listing&rsquo;文件
+-g, –glob=on/off 打开或关闭文件名的 globbing机制
+–passive-ftp 使用被动传输模式 (缺省值).
+–active-ftp 使用主动传输模式
+–retr-symlinks 在递归的时候，将链接指向文件(而不是目录)</p>
+
+<ul>
+<li>递归下载</li>
+</ul>
+
+<p>-r, –recursive 递归下载－－慎用!
+-l, –level=NUMBER 最大递归深度 (inf 或 0 代表无穷).
+–delete-after 在现在完毕后局部删除文件
+-k, –convert-links 转换非相对链接为相对链接
+-K, –backup-converted 在转换文件X之前，将之备份为 X.orig
+-m, –mirror 等价于 -r -N -l inf -nr.
+-p, –page-requisites 下载显示HTML文件的所有图片</p>
+
+<ul>
+<li>递归下载中的包含和不包含(accept/reject)</li>
+</ul>
+
+<p>-A, –accept=LIST 分号分隔的被接受扩展名的列表
+-R, –reject=LIST 分号分隔的不被接受的扩展名的列表
+-D, –domains=LIST 分号分隔的被接受域的列表
+–exclude-domains=LIST 分号分隔的不被接受的域的列表
+–follow-ftp 跟踪HTML文档中的FTP链接
+–follow-tags=LIST 分号分隔的被跟踪的HTML标签的列表
+-G, –ignore-tags=LIST 分号分隔的被忽略的HTML标签的列表
+-H, –span-hosts 当递归时转到外部主机
+-L, –relative 仅仅跟踪相对链接
+-I, –include-directories=LIST 允许目录的列表
+-X, –exclude-directories=LIST 不被包含目录的列表
+-np, –no-parent 不要追溯到父目录</p>
+
+</div>
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -203,7 +401,7 @@
     
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="/blog/os/linux/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".">Linux</a>
+        <a href="/blog/os/linux/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">Linux</a>
 
           
         </li>
@@ -228,108 +426,30 @@
   </ul>
 </nav>
 
-    </div>
-
-    <div class="w-100 w-80-l ph0 ph4-l">
-      <article class="w-100 nested-copy-line-height nested-links nested-img">
-        <h1 class="primary-color-dark f2">
-          Linux
-        </h1>
-        <div class=" mid-gray f5 f4-l">
-          
-        </div>
-      </article>
-
-      
-
-      <div class="flex flex-wrap">
-        
-        <section class="flex-ns flex-wrap justify-between w-100">
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/os/linux/centos/" class="link primary-color dim">CentOS</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          CentOS
-        
-
-        <a href="/blog/os/linux/centos/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/os/linux/common/" class="link primary-color dim">Linux Common CLI</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Linux Common CLI
-        
-
-        <a href="/blog/os/linux/common/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/os/linux/ubuntu/" class="link primary-color dim">Ubuntu</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Ubuntu
-        
-
-        <a href="/blog/os/linux/ubuntu/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-        </section>
       </div>
 
     </div>
+  </article>
 
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="https://linuxsuren.github.io/blog/os/linux/common/wget/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+</span>
+    “wget”
+  </a> was last updated: January 1, 0001
+</h6>
+
+      <a href="edit/master/content/blog/os/linux/common/wget.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      
+
+
+    </div>
   </div>
-
-</div>
-
 
     </main>
 

@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Linux | SuRenPi</title>
+    <title>Linux Common CLI | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,7 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
-    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/os/linux/index.xml">
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/blog/os/linux/common/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" /><script src="/js/chart.js"></script>
 <style>
   img.avatar {
@@ -28,10 +28,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Linux" />
-<meta property="og:description" content="Linux OS" />
+<meta property="og:title" content="Linux Common CLI" />
+<meta property="og:description" content="Linux Common CLI" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/" />
 
 
 
@@ -46,12 +46,12 @@
 
 
 
-<meta itemprop="name" content="Linux">
-<meta itemprop="description" content="Linux OS">
+<meta itemprop="name" content="Linux Common CLI">
+<meta itemprop="description" content="Linux Common CLI">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux"/>
-<meta name="twitter:description" content="Linux OS"/>
+<meta name="twitter:title" content="Linux Common CLI"/>
+<meta name="twitter:description" content="Linux Common CLI"/>
 
 
 
@@ -203,7 +203,7 @@
     
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="/blog/os/linux/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".">Linux</a>
+        <a href="/blog/os/linux/" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".">Linux</a>
 
           
         </li>
@@ -233,7 +233,7 @@
     <div class="w-100 w-80-l ph0 ph4-l">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
-          Linux
+          Linux Common CLI
         </h1>
         <div class=" mid-gray f5 f4-l">
           
@@ -252,15 +252,21 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/os/linux/centos/" class="link primary-color dim">CentOS</a>
+      <a href="/blog/os/linux/common/curl/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          CentOS
-        
+          &ndash; title: curl
+description: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &quot;param&quot; http://baidu.com
+curl -H &quot;Content-Type:applicatioin/json&quot; -X POST -d &quot;param&quot; http://baidu.com
+curl &ndash;header &ldquo;Authorization: Bearer $token&rdquo; &ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &ldquo;Content-Type:application/json&rdquo; &ndash;data &lsquo;{&ldquo;url&rdquo;:&ldquo;alauda/cronTabCheck?cronText=sdf&rdquo;}&rsquo;
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&rdquo;
+      
 
-        <a href="/blog/os/linux/centos/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/os/linux/common/curl/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -277,15 +283,15 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/os/linux/common/" class="link primary-color dim">Linux Common CLI</a>
+      <a href="/blog/os/linux/common/pavucontrol/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          Linux Common CLI
-        
+          sudo apt-get install pavucontrol
+      
 
-        <a href="/blog/os/linux/common/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/os/linux/common/pavucontrol/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -302,15 +308,195 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/os/linux/ubuntu/" class="link primary-color dim">Ubuntu</a>
+      <a href="/blog/os/linux/common/prompting/" class="link primary-color dim"></a>
     </h1>
 
     <div class="lh-copy links">
       
-          Ubuntu
+          命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1='[/u@/h /W/]/$ '
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$
+      
+
+        <a href="/blog/os/linux/common/prompting/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/service/" class="link primary-color dim"></a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          #!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &quot;start&quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &gt; /var/www/jenkins/jenkins.log 2&gt; /var/www/ jenkins/jenkins-error.log &amp; ;; stop) echo &quot;stop&quot; ;; *) echo &quot;Usage: $0 (start|stop)&quot; ;; esac  
+      
+
+        <a href="/blog/os/linux/common/service/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/awk/" class="link primary-color dim">AWK</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          AWK
         
 
-        <a href="/blog/os/linux/ubuntu/" class="f6 mt2 db link primary-color dim">
+        <a href="/blog/os/linux/common/awk/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/base64/" class="link primary-color dim">Base64</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Base64
+        
+
+        <a href="/blog/os/linux/common/base64/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/mobile/" class="link primary-color dim">Connect to Mobile</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          How to connect mobile device
+        
+
+        <a href="/blog/os/linux/common/mobile/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/find/" class="link primary-color dim">Find</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Find
+        
+
+        <a href="/blog/os/linux/common/find/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/mplayer/" class="link primary-color dim">MPlayer</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          MPlayer
+        
+
+        <a href="/blog/os/linux/common/mplayer/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/os/linux/common/sshd/" class="link primary-color dim">SSDH</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          SSHD
+        
+
+        <a href="/blog/os/linux/common/sshd/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

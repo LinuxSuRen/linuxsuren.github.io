@@ -105,28 +105,28 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/curl/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/curl/",
         "title": "",
         "tags": [],
         "description": "",
-        "content": " \u0026ndash; title: curl\ndescription: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n"
+        "content": " \u0026ndash; title: curl\ndescription: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\ncurl \u0026ndash;header \u0026ldquo;Authorization: Bearer $token\u0026rdquo; \u0026ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H \u0026ldquo;Content-Type:application/json\u0026rdquo; \u0026ndash;data \u0026lsquo;{\u0026ldquo;url\u0026rdquo;:\u0026ldquo;alauda/cronTabCheck?cronText=sdf\u0026rdquo;}\u0026rsquo;\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/pavucontrol/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/",
         "title": "",
         "tags": [],
         "description": "",
         "content": "sudo apt-get install pavucontrol\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/prompting/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/prompting/",
         "title": "",
         "tags": [],
         "description": "",
         "content": " 命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置\nexport PS1='[/u@/h /W/]/$ '\n\\u 当前用户帐号\n\\h 当前主机名\n\\W 当前路径（大写为相对路径，小写为绝对路径）\n\\$\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/service/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/service/",
         "title": "",
         "tags": [],
         "description": "",
@@ -161,7 +161,7 @@
         "content": " 发布实验性版本的插件 查看可用的开发者指导\nTo simplify delivery of beta versions of plugins to interested users, the Jenkins project published an experimental update center. It will include alpha and beta versions of plugins, which aren’t usually included in the regular update sites.\n创建试验性创建版本 Plugin releases that contain alpha or beta in their version number will only show up in the experimental update site. Note that it also serves regular releases, so the release of version 1.4 will result in 1.3-beta-2 no longer being available.\n配置 Jenkins 使用试验性更新中心 Users who are interested in downloading experimental plugin releases can go to Plugin Manager, then to the Advanced tab, and configure the update center URL https://updates.jenkins.io/experimental/update-center.json. Save, and then select Check Now. Experimental plugin updates will be marked as such on the Available and Updates tabs of the Plugin Manager.\nOnce you install the beta plugins that you wanted, you can switch back to the default https://updates.jenkins.io/update-center.json update center URL.\noriginal link\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/awk/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/awk/",
         "title": "AWK",
         "tags": [],
         "description": "AWK",
@@ -217,7 +217,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/base64/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/base64/",
         "title": "Base64",
         "tags": [],
         "description": "Base64",
@@ -245,7 +245,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/mobile/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/mobile/",
         "title": "Connect to Mobile",
         "tags": [],
         "description": "How to connect mobile device",
@@ -294,7 +294,7 @@
         "content": "Eclipse 的使用以及插件开发\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/find/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/find/",
         "title": "Find",
         "tags": [],
         "description": "Find",
@@ -553,7 +553,14 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/mplayer/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/",
+        "title": "Linux Common CLI",
+        "tags": [],
+        "description": "Linux Common CLI",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/mplayer/",
         "title": "MPlayer",
         "tags": [],
         "description": "MPlayer",
@@ -637,21 +644,21 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/sshd/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/sshd/",
         "title": "SSDH",
         "tags": [],
         "description": "SSHD",
         "content": " 禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config\nPermitRootLogin no\n然后重启服务 service ssh restart\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/ssh/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/ssh/",
         "title": "SSH",
         "tags": [],
         "description": "SSH",
         "content": " 配置文件 vim /etc/ssh/sshd_config\n允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。\n无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）\n 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容\n  证书登陆 ssh -i test.pem root@localhost\n服务重启 service ssh restart\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/shell/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/shell/",
         "title": "Shell",
         "tags": [],
         "description": "Shell",
@@ -686,7 +693,7 @@
         "content": " 集合 判断 Map 中是否存在指定 Key\npackage main import \u0026quot;fmt\u0026quot; func main() { mapTest := map[string]string{ \u0026quot;hao\u0026quot;: \u0026quot;hao value\u0026quot;, } if _, ok := mapTest[\u0026quot;hao\u0026quot;]; ok { fmt.Println(\u0026quot;ok\u0026quot;) } }  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/tr/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/tr/",
         "title": "TR",
         "tags": [],
         "description": "TR",
@@ -854,7 +861,7 @@
         "content": "dep ensure -update\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/echo/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/echo/",
         "title": "echo",
         "tags": [],
         "description": "echo",
@@ -896,7 +903,7 @@
         "content": "govendor init\ngovendor list\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/grep/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/grep/",
         "title": "grep",
         "tags": [],
         "description": "grep",
@@ -931,21 +938,21 @@
         "content": "cat test.log | pbcopy 通过命令行拷贝\npbpaste 通过命令粘贴\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/sed/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/sed/",
         "title": "sed",
         "tags": [],
         "description": "sed",
         "content": "cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/split/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/split/",
         "title": "split",
         "tags": [],
         "description": "spli",
         "content": " 切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-\n合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* \u0026gt; minikube.iso\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/user/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/user/",
         "title": "user",
         "tags": [],
         "description": "user",
@@ -966,21 +973,21 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/wget/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/wget/",
         "title": "wget",
         "tags": [],
         "description": "wget",
         "content": " 代理 通过命令参数设置代理 wget https://google.com -e \u0026quot;https_proxy=http://localhost:1234\u0026quot;\n为了方便使用，我们可以为 wget 添加一个别名，如下所示：\nalias wall-wget='wget -e \u0026quot;https_proxy=http://localhost:8123\u0026quot; '\n递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载\nwget各种选项分类列表\n 启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc\u0026rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc\n 记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名\n 下载  –bind-address=ADDRESS 指定本地使用地址(主机名或IP，当本地有多个IP或名字时使用) -t, –tries=NUMBER 设定最大尝试链接次数(0 表示无限制). -O –output-document=FILE 把文档写到FILE文件中 -nc, –no-clobber 不要覆盖存在的文件或使用.#前缀 -c, –continue 接着下载没下载完的文件 –progress=TYPE 设定进程条标记 -N, –timestamping 不要重新下载文件除非比本地文件新 -S, –server-response 打印服务器的回应 –spider 不下载任何东西 -T, –timeout=SECONDS 设定响应超时的秒数 -w, –wait=SECONDS 两次尝试之间间隔SECONDS秒 –waitretry=SECONDS 在重新链接之间等待1…SECONDS秒 –random-wait 在下载之间等待0…2*WAIT秒 -Y, –proxy=on/off 打开或关闭代理 -Q, –quota=NUMBER 设置下载的容量限制 –limit-rate=RATE 限定下载输率\n 目录  -nd –no-directories 不创建目录 -x, –force-directories 强制创建目录 -nH, –no-host-directories 不创建主机目录 -P, –directory-prefix=PREFIX 将文件保存到目录 PREFIX/… –cut-dirs=NUMBER 忽略 NUMBER层远程目录\n HTTP 选项  –http-user=USER 设定HTTP用户名为 USER. –http-passwd=PASS 设定http密码为 PASS. -C, –cache=on/off 允许/不允许服务器端的数据缓存 (一般情况下允许). -E, –html-extension 将所有text/html文档以.html扩展名保存 –ignore-length 忽略 Content-Length'头域 –header=STRING 在headers中插入字符串 STRING –proxy-user=USER 设定代理的用户名为 USER –proxy-passwd=PASS 设定代理的密码为 PASS –referer=URL 在HTTP请求中包含Referer: URL\u0026rsquo;头 -s, –save-headers 保存HTTP头到文件 -U, –user-agent=AGENT 设定代理的名称为 AGENT而不是 Wget/VERSION. –no-http-keep-alive 关闭 HTTP活动链接 (永远链接). –cookies=off 不使用 cookies. –load-cookies=FILE 在开始会话前从文件 FILE中加载cookie –save-cookies=FILE 在会话结束后将 cookies保存到 FILE文件中\n FTP 选项  -nr, –dont-remove-listing 不移走 `.listing\u0026rsquo;文件 -g, –glob=on/off 打开或关闭文件名的 globbing机制 –passive-ftp 使用被动传输模式 (缺省值). –active-ftp 使用主动传输模式 –retr-symlinks 在递归的时候，将链接指向文件(而不是目录)\n 递归下载  -r, –recursive 递归下载－－慎用! -l, –level=NUMBER 最大递归深度 (inf 或 0 代表无穷). –delete-after 在现在完毕后局部删除文件 -k, –convert-links 转换非相对链接为相对链接 -K, –backup-converted 在转换文件X之前，将之备份为 X.orig -m, –mirror 等价于 -r -N -l inf -nr. -p, –page-requisites 下载显示HTML文件的所有图片\n 递归下载中的包含和不包含(accept/reject)  -A, –accept=LIST 分号分隔的被接受扩展名的列表 -R, –reject=LIST 分号分隔的不被接受的扩展名的列表 -D, –domains=LIST 分号分隔的被接受域的列表 –exclude-domains=LIST 分号分隔的不被接受的域的列表 –follow-ftp 跟踪HTML文档中的FTP链接 –follow-tags=LIST 分号分隔的被跟踪的HTML标签的列表 -G, –ignore-tags=LIST 分号分隔的被忽略的HTML标签的列表 -H, –span-hosts 当递归时转到外部主机 -L, –relative 仅仅跟踪相对链接 -I, –include-directories=LIST 允许目录的列表 -X, –exclude-directories=LIST 不被包含目录的列表 -np, –no-parent 不要追溯到父目录\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/xargs/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/xargs/",
         "title": "xargs",
         "tags": [],
         "description": "xargs",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/xclip/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/xclip/",
         "title": "xclip",
         "tags": [],
         "description": "command line interface to X selections (clipboard)",
