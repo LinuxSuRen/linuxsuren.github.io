@@ -924,6 +924,13 @@
         "content": " Reference https://github.com/GoogleContainerTools/kaniko\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/mac/lsof/",
+        "title": "lsof",
+        "tags": [],
+        "description": "lsof",
+        "content": "查看端口占用 lsof -nP -i4TCP:9091\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/build/maven-gpg-plugin/",
         "title": "maven-gpg-plugin",
         "tags": [],
