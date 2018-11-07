@@ -287,6 +287,13 @@
         "content": " Filter Images 当前支持的过滤如下：\n dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk '{print $3}')\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/docker/docker-api/",
+        "title": "Docker api",
+        "tags": [],
+        "description": "Docker Api",
+        "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v2/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-image/",
         "title": "Docker 镜像管理",
         "tags": [],
@@ -417,7 +424,7 @@
         "title": "Ingress",
         "tags": [],
         "description": "Ingress",
-        "content": " 413 Request Entity Too Large 添加如下 Annotations\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot;  "
+        "content": " 413 Request Entity Too Large 添加如下 Annotations\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
@@ -557,7 +564,7 @@
         "title": "Kubectl",
         "tags": [],
         "description": "Kubectl 的使用",
-        "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\n"
+        "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/",

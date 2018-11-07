@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="24">
+<meta itemprop="wordCount" content="44">
 
 
 
@@ -231,6 +231,10 @@
 <h1 id="troubleshooting">Troubleshooting</h1>
 
 <p>journalctl -u kubelet -f</p>
+
+<h1 id="delete-pod">Delete pod</h1>
+
+<p><code>kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod</code></p>
 
 </div>
 
