@@ -35,6 +35,16 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
     </item>
     
     <item>
+      <title>Ingress</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
+      <description> 413 Request Entity Too Large 添加如下 Annotations
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot;  </description>
+    </item>
+    
+    <item>
       <title>K8S 证书</title>
       <link>https://linuxsuren.github.io/blog/devops/k8s/cert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -413,6 +413,13 @@
         "content": "编辑器\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/k8s/ingress/",
+        "title": "Ingress",
+        "tags": [],
+        "description": "Ingress",
+        "content": " 413 Request Entity Too Large 添加如下 Annotations\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot;  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
         "title": "Install",
         "tags": [],

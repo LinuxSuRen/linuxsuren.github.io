@@ -539,6 +539,16 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>Ingress</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
+      <description> 413 Request Entity Too Large 添加如下 Annotations
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot;  </description>
+    </item>
+    
+    <item>
       <title>Install</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
