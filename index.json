@@ -186,7 +186,7 @@
         "title": "Annotation",
         "tags": [],
         "description": "Jenkins 中的注解类介绍",
-        "content": " CheckForNull Extension NoExternalUse "
+        "content": " CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)\n通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。\nTerminator Usage: @Terminator(after=TermMilestone.STARTED)\n上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。\nRestricted Usage: @Restricted(NoExternalUse.class)\n上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/server/apache2/",
@@ -291,7 +291,7 @@
         "title": "Docker api",
         "tags": [],
         "description": "Docker Api",
-        "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v2/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
+        "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v1/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-image/",
@@ -502,6 +502,13 @@
         "tags": [],
         "description": "Jenkins Permission System",
         "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/",
+        "title": "Jenkins Plugin Dev Credentails",
+        "tags": [],
+        "description": "Jenkins Plugin Dev Credentails",
+        "content": "IdCredentials 规定了具有 ID 的凭据（Credentials）\nCredentialsProvider 凭据提供接口\nCredentialsStore 凭据存储接口\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/",

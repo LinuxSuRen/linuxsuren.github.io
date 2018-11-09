@@ -27,7 +27,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</guid>
-      <description> CheckForNull Extension NoExternalUse </description>
+      <description>CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)
+通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。
+Terminator Usage: @Terminator(after=TermMilestone.STARTED)
+上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。
+Restricted Usage: @Restricted(NoExternalUse.class)
+上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</description>
     </item>
     
     <item>
@@ -67,6 +72,17 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</guid>
       <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Plugin Dev Credentails</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/</guid>
+      <description>IdCredentials 规定了具有 ID 的凭据（Credentials）
+CredentialsProvider 凭据提供接口
+CredentialsStore 凭据存储接口</description>
     </item>
     
     <item>

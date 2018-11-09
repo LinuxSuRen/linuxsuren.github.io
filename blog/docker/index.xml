@@ -89,7 +89,7 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       
       <guid>https://linuxsuren.github.io/blog/docker/docker-api/</guid>
       <description>获取 Token：
-curl -X POST https://hub.docker.com/v2/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
+curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
     </item>
     
     <item>
