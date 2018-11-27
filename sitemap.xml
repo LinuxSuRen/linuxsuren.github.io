@@ -224,6 +224,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/scm/git-tag/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/scm/gitea/</loc>
   </url>
   
@@ -610,10 +614,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/docker/docker-centos/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-checkout/</loc>
   </url>
   
   <url>
