@@ -21,6 +21,15 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
     </item>
     
     <item>
+      <title>Java Annotation Processing and Creating a Builder</title>
+      <link>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</guid>
+      <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
+    </item>
+    
+    <item>
       <title>Maven</title>
       <link>https://linuxsuren.github.io/blog/build/maven/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

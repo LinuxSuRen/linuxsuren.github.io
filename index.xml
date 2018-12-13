@@ -527,7 +527,8 @@ git tag -a v0.2 -m &#39;here is comment&#39;
 发布指定的标签 git push origin v0.2
 把所有的标签一次性发布 git push origin --tags
 git可以在同一个提交上打多个名称不一样的标签
-获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）</description>
+获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）
+删除远程标签 git push --delete origin tagname 删除远程的指定标签</description>
     </item>
     
     <item>
@@ -642,6 +643,15 @@ Reference https://www.iterm2.com</description>
       <guid>https://linuxsuren.github.io/blog/build/jvm/</guid>
       <description>有些情况下，我们需要修改启动 Maven 时的 JVM 参数。
 MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-Xmx1024m&amp;quot; clean</description>
+    </item>
+    
+    <item>
+      <title>Java Annotation Processing and Creating a Builder</title>
+      <link>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</guid>
+      <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
     </item>
     
     <item>
