@@ -11,41 +11,6 @@
     
     
     <item>
-      <title>Action</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</guid>
-      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
-接口 你首先需要实现接口 hudson.model.Action 的三个方法:
- getIconFileName getDisplayName getUrlName  约定 </description>
-    </item>
-    
-    <item>
-      <title>Annotation</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</guid>
-      <description>CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)
-通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。
-Terminator Usage: @Terminator(after=TermMilestone.STARTED)
-上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。
-Restricted Usage: @Restricted(NoExternalUse.class)
-上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</description>
-    </item>
-    
-    <item>
-      <title>CLI</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</guid>
-      <description>扩展点 hudson.cli.CLICommand
-Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
-    </item>
-    
-    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -75,49 +40,6 @@ java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Je
     </item>
     
     <item>
-      <title>Jenkins Plugin Dev Credentails</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/</guid>
-      <description>IdCredentials 规定了具有 ID 的凭据（Credentials）
-CredentialsProvider 凭据提供接口
-CredentialsStore 凭据存储接口</description>
-    </item>
-    
-    <item>
-      <title>Jenkins UI</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</guid>
-      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
-&amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
-&amp;lt;f:textbox/&amp;gt;
-&amp;lt;f:checkbox/&amp;gt;
-凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  https://ci.adoptopenjdk.net/
-静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：
-http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 插件开发</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</guid>
-      <description>环境准备 你需要安装好Java和Maven。
-创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
-运行 在工程根目录下执行 mvn hpi:run
-访问 http://localhost:8080/jenkins/
-Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
-单元测试 Jenkins 官方提供了单元测试相关的内容。
-发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
-mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
-参考 Extend Jenkins</description>
-    </item>
-    
-    <item>
       <title>Jenkins 插件托管</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -131,22 +53,6 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform
 跳过测试 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
 执行发布准备而且无需输入参数 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare -B</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 插件调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</guid>
-      <description>运行 在 war 目录下运行：
-mvn hpi:run
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
-参考 maven-hpi-plugin</description>
     </item>
     
     <item>
@@ -169,16 +75,6 @@ mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javad
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</guid>
       <description>构建项目 mvn package appassembler:assemble -DskipTests
 生成网站目录并缓存插件文件 sh target/appassembler/bin/app -id default -www www -key surenpi.key -certificate surenpi.crt -root-certificate surenpi.crt -root-certificate rootCA/jenkins-update-center-root-ca.crt -whitelist list.properties -cache /Users/mac/IdeaProjects/Github/jenkins-infra/update-center2/tmp -skip-release-history -cacheServer http://blog.surenpi.com/www/download/</description>
-    </item>
-    
-    <item>
-      <title>扩展 Jenkins 的构建（Builder）任务</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</guid>
-      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
-流水线 </description>
     </item>
     
     <item>

@@ -168,7 +168,7 @@
         "content": " 列出第一列 docker ps | grep hello | awk '{print $1}'\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/",
         "title": "Action",
         "tags": [],
         "description": "Jenkins Plugin Action",
@@ -182,7 +182,7 @@
         "content": " 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install python -y\n安装 Support Docker versions ['1.12.6', '17.03.0', '17.03.1', '17.03.2', '17.12.0']\n通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes\n修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：\napiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: \u0026quot;\u0026quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/",
         "title": "Annotation",
         "tags": [],
         "description": "Jenkins 中的注解类介绍",
@@ -224,7 +224,7 @@
         "content": "echo -n 1234 | base64\necho MTIzNA== | base64 --d\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/",
         "title": "CLI",
         "tags": [],
         "description": "Command Line Interface",
@@ -525,14 +525,21 @@
         "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/",
         "title": "Jenkins Plugin Dev Credentails",
         "tags": [],
         "description": "Jenkins Plugin Dev Credentails",
         "content": "IdCredentials 规定了具有 ID 的凭据（Credentials）\nCredentialsProvider 凭据提供接口\nCredentialsStore 凭据存储接口\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/",
+        "title": "Jenkins Plugin Develope",
+        "tags": [],
+        "description": "Jenkins Plugin Develope",
+        "content": "Jenkins 插件开发\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/",
         "title": "Jenkins UI",
         "tags": [],
         "description": "Jenkins UI 介绍",
@@ -553,7 +560,7 @@
         "content": " 添加 Gitee 为 Git 服务器\njx create git server gitea http://localhost:10080\nDevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep \u0026quot;Storage Driver\u0026quot; 查看 Docker 当前支持的类型。\n因此，我们需要的 Docker 版本为 v17.06。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/",
         "title": "Jenkins 插件开发",
         "tags": [],
         "description": "Jenkins 插件开发教程",
@@ -567,7 +574,14 @@
         "content": " 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。\n提交请求 详细阅读托管要求\n在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。\n托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。\n你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。\n发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform\n跳过测试 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare\n执行发布准备而且无需输入参数 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare -B\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/",
+        "title": "Jenkins 插件扩展点",
+        "tags": [],
+        "description": "Jenkins 插件扩展点",
+        "content": " 接口 接口 hudson.ExtensionPoint 用于自动生成文档\n注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。\nDemo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/",
         "title": "Jenkins 插件调试",
         "tags": [],
         "description": "Jenkins 插件调试",
@@ -1134,7 +1148,7 @@
         "content": " Jenkins Hugo Plugin  Jenkins Hugo 构建插件\n Jenkins Chinese Localizatioin Plugin  Jenkins 中文本地化插件\n Jenkins Java Client  Jenkins Java 客户端\n phoenix.webui.framework  基于 Selenium 的自动化测试\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/",
         "title": "扩展 Jenkins 的构建（Builder）任务",
         "tags": [],
         "description": "本文介绍如何扩展 Jenkins 的构建（Builder）任务。",

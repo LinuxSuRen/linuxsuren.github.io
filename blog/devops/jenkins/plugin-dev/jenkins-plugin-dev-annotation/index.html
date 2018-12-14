@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins Permission | SuRenPi</title>
+    <title>Annotation | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins Permission" />
-<meta property="og:description" content="Jenkins Permission System" />
+<meta property="og:title" content="Annotation" />
+<meta property="og:description" content="Jenkins 中的注解类介绍" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="Jenkins Permission">
-<meta itemprop="description" content="Jenkins Permission System">
+<meta itemprop="name" content="Annotation">
+<meta itemprop="description" content="Jenkins 中的注解类介绍">
 
 
 
-<meta itemprop="wordCount" content="1">
+<meta itemprop="wordCount" content="20">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins Permission"/>
-<meta name="twitter:description" content="Jenkins Permission System"/>
+<meta name="twitter:title" content="Annotation"/>
+<meta name="twitter:description" content="Jenkins 中的注解类介绍"/>
 
 
 
@@ -163,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins JUnit ">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Action ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -173,7 +173,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 插件托管">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/" class="dib f6 pr1 hover-bg-light-gray br-100" title="CLI">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -192,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins Permission</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Annotation</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins Permission System
+      Jenkins 中的注解类介绍
     </div>
   
 
@@ -209,7 +209,31 @@
 
 <div class="prose" id="prose">
 
-<p><code>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</code></p>
+
+
+<h1 id="checkfornull">CheckForNull</h1>
+
+<h1 id="extension">Extension</h1>
+
+<h1 id="noexternaluse">NoExternalUse</h1>
+
+<h1 id="initializer">Initializer</h1>
+
+<p>Usage: <code>@Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)</code></p>
+
+<p>通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。</p>
+
+<h1 id="terminator">Terminator</h1>
+
+<p>Usage: <code>@Terminator(after=TermMilestone.STARTED)</code></p>
+
+<p>上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。</p>
+
+<h1 id="restricted">Restricted</h1>
+
+<p>Usage: <code>@Restricted(NoExternalUse.class)</code></p>
+
+<p>上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</p>
 
 </div>
 
@@ -302,14 +326,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Jenkins Permission”
+    “Annotation”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/devops/jenkins/basic/jenkins-permission.md" class="
+      <a href="edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 

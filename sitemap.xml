@@ -99,7 +99,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-action/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</loc>
   </url>
   
   <url>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-annotation/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</loc>
   </url>
   
   <url>
@@ -131,7 +131,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-cli/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</loc>
   </url>
   
   <url>
@@ -304,11 +304,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-credential/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-ui/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</loc>
   </url>
   
   <url>
@@ -320,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-develope/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</loc>
   </url>
   
   <url>
@@ -328,7 +332,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-debug/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</loc>
   </url>
   
   <url>
@@ -653,7 +661,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-plugin-dev-build/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</loc>
   </url>
   
   <url>
