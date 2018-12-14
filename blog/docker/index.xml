@@ -93,6 +93,17 @@ curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&a
     </item>
     
     <item>
+      <title>Docker 时间设置</title>
+      <link>https://linuxsuren.github.io/blog/docker/docker-time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/docker/docker-time/</guid>
+      <description>通过如下配置，就可以实现对容器内的时区设置：
+ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
+docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
+    </item>
+    
+    <item>
       <title>Docker 镜像管理</title>
       <link>https://linuxsuren.github.io/blog/docker/docker-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
