@@ -244,6 +244,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/http/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/network/http_status/</loc>
   </url>
   
@@ -449,6 +453,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/testing/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/document/typora/</loc>
   </url>
   
@@ -458,10 +466,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/language/golang/unit_test/</loc>
   </url>
   
   <url>
