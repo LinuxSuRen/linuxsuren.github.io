@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>maven-gpg-plugin | SuRenPi</title>
+    <title>Maven Repository | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="maven-gpg-plugin" />
-<meta property="og:description" content="maven-gpg-plugin" />
+<meta property="og:title" content="Maven Repository" />
+<meta property="og:description" content="Maven 仓库" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/build/maven-gpg-plugin/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/build/maven-repository/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="maven-gpg-plugin">
-<meta itemprop="description" content="maven-gpg-plugin">
+<meta itemprop="name" content="Maven Repository">
+<meta itemprop="description" content="Maven 仓库">
 
 
 
-<meta itemprop="wordCount" content="39">
+<meta itemprop="wordCount" content="38">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="maven-gpg-plugin"/>
-<meta name="twitter:description" content="maven-gpg-plugin"/>
+<meta name="twitter:title" content="Maven Repository"/>
+<meta name="twitter:description" content="Maven 仓库"/>
 
 
 
@@ -163,7 +163,7 @@
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/build/maven-repository/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Maven Repository ">
+			<a href="https://linuxsuren.github.io/blog/build/maven/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Maven ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -173,7 +173,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/build/maven-release/" class="dib f6 pr1 hover-bg-light-gray br-100" title="发布Maven工程到中央仓库">
+			<a href="https://linuxsuren.github.io/blog/build/maven-gpg-plugin/" class="dib f6 pr1 hover-bg-light-gray br-100" title="maven-gpg-plugin">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -192,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">maven-gpg-plugin</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Maven Repository</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      maven-gpg-plugin
+      Maven 仓库
     </div>
   
 
@@ -209,17 +209,35 @@
 
 <div class="prose" id="prose">
 
-<p>[INFO] &mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator &mdash;
-gpg: directory &lsquo;/home/jenkins/.gnupg&rsquo; created
-gpg: keybox &lsquo;/home/jenkins/.gnupg/pubring.kbx&rsquo; created
-gpg: no default secret key: No secret key
-gpg: signing failed: No secret key</p>
+<p>Maven 仓库（Repository）大致可以分为私有、公有两类。我们暂且认为企业内部的就是私有的，但是，公有的仓库也会有很多（除 Maven 官方的中央仓库以外）。</p>
 
-<p><code>gpg: signing failed: Inappropriate ioctl for device</code></p>
+<p>当我们的 Maven 项目发布到特定仓库以后，可以在需要依赖的 <code>pom.xml</code> 文件中添加明确的仓库地址，这样就可以避免在构建构成中因为找不到而报错了。下面给出一个参考配置：</p>
 
-<p><a href="https://github.com/pstadler/keybase-gpg-github/issues/11">https://github.com/pstadler/keybase-gpg-github/issues/11</a>
-<a href="https://github.com/jenkinsci/remoting/pull/280">https://github.com/jenkinsci/remoting/pull/280</a>
-<a href="https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51">https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51</a></p>
+<pre><code>&lt;project&gt;
+  &lt;repositories&gt;
+    &lt;repository&gt;
+      &lt;id&gt;repo.jenkins-ci.org&lt;/id&gt;
+      &lt;url&gt;http://repo.jenkins-ci.org/public/&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;nexus-oss-snapshots&lt;/id&gt;
+      &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+      &lt;releases&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/releases&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;release&lt;/id&gt;
+      &lt;url&gt;https://oss.sonatype.org/content/repositories/releases&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p><em>注意</em> <code>central</code> 这个 <code>id</code> 是 Maven 官方中央仓库的默认值，如果你设置的仓库使用了该值的话就会覆盖中央仓库。</p>
 
 </div>
 
@@ -312,14 +330,14 @@ gpg: signing failed: No secret key</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/build/maven-gpg-plugin/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/build/maven-repository/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “maven-gpg-plugin”
+    “Maven Repository”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/blog/build/maven-gpg-plugin.md" class="
+      <a href="edit/master/content/blog/build/maven-repository.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 

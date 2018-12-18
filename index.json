@@ -658,6 +658,13 @@
         "content": " 构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过测试 mvn package -DskipTests=true\nmvn package -U 强制更新快照版本的依赖\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/build/maven-repository/",
+        "title": "Maven Repository",
+        "tags": [],
+        "description": "Maven 仓库",
+        "content": "Maven 仓库（Repository）大致可以分为私有、公有两类。我们暂且认为企业内部的就是私有的，但是，公有的仓库也会有很多（除 Maven 官方的中央仓库以外）。\n当我们的 Maven 项目发布到特定仓库以后，可以在需要依赖的 pom.xml 文件中添加明确的仓库地址，这样就可以避免在构建构成中因为找不到而报错了。下面给出一个参考配置：\n\u0026lt;project\u0026gt; \u0026lt;repositories\u0026gt; \u0026lt;repository\u0026gt; \u0026lt;id\u0026gt;repo.jenkins-ci.org\u0026lt;/id\u0026gt; \u0026lt;url\u0026gt;http://repo.jenkins-ci.org/public/\u0026lt;/url\u0026gt; \u0026lt;/repository\u0026gt; \u0026lt;repository\u0026gt; \u0026lt;id\u0026gt;nexus-oss-snapshots\u0026lt;/id\u0026gt; \u0026lt;url\u0026gt;https://oss.sonatype.org/content/repositories/snapshots/\u0026lt;/url\u0026gt; \u0026lt;snapshots\u0026gt; \u0026lt;enabled\u0026gt;true\u0026lt;/enabled\u0026gt; \u0026lt;/snapshots\u0026gt; \u0026lt;releases\u0026gt; \u0026lt;enabled\u0026gt;false\u0026lt;/enabled\u0026gt; \u0026lt;/releases\u0026gt; \u0026lt;/repository\u0026gt; \u0026lt;repository\u0026gt; \u0026lt;id\u0026gt;release\u0026lt;/id\u0026gt; \u0026lt;url\u0026gt;https://oss.sonatype.org/content/repositories/releases\u0026lt;/url\u0026gt; \u0026lt;/repository\u0026gt; \u0026lt;/repositories\u0026gt; \u0026lt;/project\u0026gt;  注意 central 这个 id 是 Maven 官方中央仓库的默认值，如果你设置的仓库使用了该值的话就会覆盖中央仓库。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/minikube/",
         "title": "Minikube",
         "tags": [],

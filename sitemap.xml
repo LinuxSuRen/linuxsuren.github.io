@@ -380,6 +380,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/build/maven-repository/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/minikube/</loc>
   </url>
   
