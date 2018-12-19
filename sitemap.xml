@@ -324,6 +324,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</loc>
   </url>
   
@@ -353,6 +357,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</loc>
   </url>
   
   <url>

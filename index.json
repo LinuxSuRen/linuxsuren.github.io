@@ -560,6 +560,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/",
+        "title": "Jenkins Plugins",
+        "tags": [],
+        "description": "Jenkins Plugins",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/",
         "title": "Jenkins UI",
         "tags": [],
@@ -610,6 +617,13 @@
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/",
+        "title": "Jenkins 简体中文插件",
+        "tags": [],
+        "description": "Jenkins 简体中文插件",
+        "content": "Jenkins 的汉化（简体中文）需要安装中文插件。\n具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。\n这里有一个视频可以供各位参考。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/",
         "title": "Jenkins 简体中文插件",
         "tags": [],
         "description": "Jenkins 简体中文插件",
