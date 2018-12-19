@@ -245,6 +245,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/",
+        "title": "Codes Vs Documents",
+        "tags": [],
+        "description": "Codes Vs Documents",
+        "content": "除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/mobile/",
         "title": "Connect to Mobile",
         "tags": [],
@@ -553,13 +560,6 @@
         "content": "Jenkins 插件开发\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins-plugin/",
-        "title": "Jenkins Plugins",
-        "tags": [],
-        "description": "Jenkins Plugins",
-        "content": ""
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/",
         "title": "Jenkins Plugins",
         "tags": [],
@@ -614,13 +614,6 @@
         "tags": [],
         "description": "Jenkins 插件调试",
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/",
-        "title": "Jenkins 简体中文插件",
-        "tags": [],
-        "description": "Jenkins 简体中文插件",
-        "content": "Jenkins 的汉化（简体中文）需要安装中文插件。\n具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。\n这里有一个视频可以供各位参考。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/",

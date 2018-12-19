@@ -144,6 +144,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/mobile/</loc>
   </url>
   
@@ -320,10 +324,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
   </url>
   
@@ -353,10 +353,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/</loc>
   </url>
   
   <url>

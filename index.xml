@@ -305,6 +305,15 @@ Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</descr
     </item>
     
     <item>
+      <title>Codes Vs Documents</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</guid>
+      <description>除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。</description>
+    </item>
+    
+    <item>
       <title>Connect to Mobile</title>
       <link>https://linuxsuren.github.io/blog/os/linux/common/mobile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -812,17 +821,6 @@ mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会
 mvn hpi:run -Djenkins.install.runSetupWizard=true
 指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
 参考 maven-hpi-plugin</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 简体中文插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin/localization-zh-cn/</guid>
-      <description>Jenkins 的汉化（简体中文）需要安装中文插件。
-具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
-这里有一个视频可以供各位参考。</description>
     </item>
     
     <item>

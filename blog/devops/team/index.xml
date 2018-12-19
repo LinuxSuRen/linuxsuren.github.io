@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Codes Vs Documents</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</guid>
+      <description>除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。</description>
+    </item>
+    
+    <item>
       <title>Git Collaborate</title>
       <link>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
