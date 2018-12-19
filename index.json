@@ -357,6 +357,13 @@
         "content": " 切换标签 git branch 列出本地分支 git checkout master 切换到本地 master 分支\n删除分支 git branch --delete abc 删除分支 abc\ngit push origin --delete abc 删除远程分支\ngit branch -v | grep gone | awk '//{print $1}' | xargs git branch -d 删除远程分支不存在的`\ngit remote prune origin\n拉取分支 git checkout -b abc 基于当前分支创建新分支\ngit checkout --track origin/abc 拉取远程分支\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/team/git-collaborate/",
+        "title": "Git Collaborate",
+        "tags": [],
+        "description": "Git Collaborate",
+        "content": "几乎所有的团队都有自己的沟通系统（工具），像 Jira、Kanban、微信、钉钉等等。而我现在要说的是像 GitHub、Gitlab 等 Git 服务提供的 PR。代码 Review 是件好事情，这一点很多人都认同，但是很明显的痛点在于——这样可能会比较耗时。\n大家不一定能够在看到邮件、钉钉等的消息后，就立刻去做 Review，因此，很多时候就会忘记从而导致这个过程加长。\n如果，能够给每个项目都指定一些必须要进行 Review 的人员，然后，自动地把 PR 的 Review 需求加到像 Jira 这样的任务跟踪系统中的。对，关键点就在于把 Review 也正式地当作工作任务的一部分。\n我相信，这样也许就能解决大家的代码都能够相对高效地被 Review呢。而且，这样也对 Review 的工作量相对可控。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/scm/git-rebase/",
         "title": "Git Rebase",
         "tags": [],
