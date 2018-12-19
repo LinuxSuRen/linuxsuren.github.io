@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="13">
+<meta itemprop="wordCount" content="19">
 
 
 
@@ -213,9 +213,11 @@
 
 
 
-<h1 id="413-request-entity-too-large">413 Request Entity Too Large</h1>
+<h1 id="413">413</h1>
 
-<p>添加如下 Annotations</p>
+<p>在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 <code>Request Entity Too Large</code>。</p>
+
+<p>这时，找到对应的 Ingress 添加如下 Annotations 即可解决：</p>
 
 <pre><code>ingress.kubernetes.io/proxy-body-size: &quot;0&quot;
 nginx.ingress.kubernetes.io/proxy-body-size: &quot;0&quot;

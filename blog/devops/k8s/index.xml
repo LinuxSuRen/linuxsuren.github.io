@@ -40,7 +40,8 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
-      <description> 413 Request Entity Too Large 添加如下 Annotations
+      <description> 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
+这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
 ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
     </item>
     

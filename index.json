@@ -452,7 +452,7 @@
         "title": "Ingress",
         "tags": [],
         "description": "Ingress",
-        "content": " 413 Request Entity Too Large 添加如下 Annotations\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
+        "content": " 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。\n这时，找到对应的 Ingress 添加如下 Annotations 即可解决：\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
