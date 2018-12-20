@@ -1,19 +1,5 @@
 [
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/k8s/",
-        "title": "Kubernetes",
-        "tags": [],
-        "description": "Kubernetes",
-        "content": "DevOps相关技术文章\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/build/",
-        "title": "构建",
-        "tags": [],
-        "description": "程序构建",
-        "content": "构建\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/",
         "title": "Jenkins Pipeline",
         "tags": [],
@@ -131,20 +117,6 @@
         "tags": [],
         "description": "",
         "content": " 退出 首先，按下 Ctrl+] 然后输入 \\q 后，按下回车即可退出 Telnet。\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/translation/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "文章翻译区域\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/translation/jenkins/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "Jenkins 相关的翻译\n"
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/",
@@ -623,6 +595,13 @@
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/translation/jenkins/",
+        "title": "Jenkins 相关的翻译",
+        "tags": [],
+        "description": "Jenkins 相关的翻译",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/",
         "title": "Jenkins 简体中文插件",
         "tags": [],
@@ -649,6 +628,13 @@
         "tags": [],
         "description": "Kubectl 的使用",
         "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/k8s/",
+        "title": "Kubernetes",
+        "tags": [],
+        "description": "Kubernetes",
+        "content": "DevOps相关技术文章\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/",
@@ -1144,7 +1130,7 @@
         "uri": "https://linuxsuren.github.io/blog/",
         "title": "原创文章",
         "tags": [],
-        "description": "sf",
+        "description": "原创文章",
         "content": "原创文章\n"
     },
     {
@@ -1230,6 +1216,20 @@
         "tags": [],
         "description": "文档技术",
         "content": "文档技术\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/translation/",
+        "title": "文章翻译区域",
+        "tags": [],
+        "description": "文章翻译区域",
+        "content": "文章翻译区域\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/build/",
+        "title": "构建",
+        "tags": [],
+        "description": "程序构建",
+        "content": "构建\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/test/",

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SuRenPi</title>
+    <title>Jenkins 相关的翻译 on SuRenPi</title>
     <link>https://linuxsuren.github.io/translation/jenkins/</link>
-    <description>Recent content on SuRenPi</description>
+    <description>Recent content in Jenkins 相关的翻译 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
