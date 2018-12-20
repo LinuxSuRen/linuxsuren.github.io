@@ -3,7 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</loc>
+    <loc>https://linuxsuren.github.io/blog/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/</loc>
   </url>
   
   <url>
@@ -134,10 +138,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/mobile/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/</loc>
   </url>
   
   <url>
@@ -302,6 +302,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</loc>
   </url>
   
   <url>
@@ -671,10 +675,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/python/install/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/docker/</loc>
   </url>
   
   <url>

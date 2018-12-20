@@ -1,10 +1,17 @@
 [
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/",
-        "title": "Jenkins Pipeline",
+        "uri": "https://linuxsuren.github.io/blog/docker/",
+        "title": "容器技术",
         "tags": [],
-        "description": "Jenkins Pipeline",
-        "content": "Jenkins Pipeline 的使用和开发\n"
+        "description": "容器技术",
+        "content": "容器技术\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/",
+        "title": "DevOps",
+        "tags": [],
+        "description": "DevOps相关技术文章",
+        "content": "DevOps相关技术文章\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/configuration/ini/",
@@ -229,13 +236,6 @@
         "tags": [],
         "description": "How to connect mobile device",
         "content": " iPad 安装依赖的工具：\nadd-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa\n卸载应用 ideviceinstaller -U [bundleID]\n查看系统日志 idevicesyslog\n查看当前已连接的设备的UUID idevice_id --list\n截图 idevicescreenshot\n查看设备信息 videviceinfo\n获取设备时间 idevicedate\n参考 https://github.com/LinuxSuRen/libimobiledevice\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/",
-        "title": "DevOps",
-        "tags": [],
-        "description": "DevOps相关技术文章",
-        "content": "DevOps相关技术文章\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/",
@@ -523,6 +523,13 @@
         "tags": [],
         "description": "Jenkins Permission System",
         "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/",
+        "title": "Jenkins Pipeline",
+        "tags": [],
+        "description": "Jenkins Pipeline",
+        "content": "Jenkins Pipeline 的使用和开发\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/",
@@ -1167,13 +1174,6 @@
         "tags": [],
         "description": "",
         "content": "yum install python\nyum install python-pip\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/docker/",
-        "title": "容器技术",
-        "tags": [],
-        "description": "容器技术",
-        "content": "容器技术\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/server/",
