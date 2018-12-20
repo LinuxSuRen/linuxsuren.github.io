@@ -11,10 +11,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</loc>
   </url>
   
@@ -79,7 +75,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/telnet/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/telnet/</loc>
   </url>
   
   <url>
@@ -144,6 +140,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/categories/cicd/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</loc>
   </url>
   
@@ -200,7 +201,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/gpg/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/gpg/</loc>
   </url>
   
   <url>
@@ -297,6 +298,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
   </url>
   
   <url>
@@ -485,7 +490,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/u-creator/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/mac/u-creator/</loc>
   </url>
   
   <url>
@@ -709,7 +714,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/browser/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/terminal/</loc>
   </url>
   
   <url>

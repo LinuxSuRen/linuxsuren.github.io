@@ -14,13 +14,6 @@
         "content": "构建\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/",
-        "title": "Jenkins",
-        "tags": [],
-        "description": "Jenkins 的使用、配置以及插件开发",
-        "content": "DevOps相关技术文章\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/",
         "title": "Jenkins Pipeline",
         "tags": [],
@@ -133,7 +126,7 @@
         "content": "#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo \u0026quot;start\u0026quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 \u0026gt; /var/www/jenkins/jenkins.log 2\u0026gt; /var/www/ jenkins/jenkins-error.log \u0026amp; ;; stop) echo \u0026quot;stop\u0026quot; ;; *) echo \u0026quot;Usage: $0 (start|stop)\u0026quot; ;; esac  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/telnet/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/telnet/",
         "title": "",
         "tags": [],
         "description": "",
@@ -245,6 +238,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/categories/cicd/",
+        "title": "Cicd",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/",
         "title": "Codes Vs Documents",
         "tags": [],
@@ -260,9 +260,9 @@
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/",
-        "title": "DevOps Article",
+        "title": "DevOps",
         "tags": [],
-        "description": "",
+        "description": "DevOps相关技术文章",
         "content": "DevOps相关技术文章\n"
     },
     {
@@ -343,7 +343,7 @@
         "content": "systemctl stop firewalld.service 停止firewall\nsystemctl disable firewalld.service 禁止firewall开机启动\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/gpg/",
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/gpg/",
         "title": "GPG",
         "tags": [],
         "description": "GPG",
@@ -518,6 +518,13 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/",
+        "title": "Jenkins",
+        "tags": [],
+        "description": "Jenkins 的使用、配置以及插件开发",
+        "content": "Jenkins 的使用、配置以及插件开发\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/",
         "title": "Jenkins",
         "tags": [],
@@ -577,7 +584,7 @@
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/",
         "title": "Jenkins X",
         "tags": [],
-        "description": "",
+        "description": "Jenkins X",
         "content": ""
     },
     {
@@ -840,7 +847,7 @@
         "content": " Typora 支持用 Markdown 的方式来“画”流程图。\n流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d \n参考 https://support.typora.io/Draw-Diagrams-With-Markdown/\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/u-creator/",
+        "uri": "https://linuxsuren.github.io/blog/os/mac/u-creator/",
         "title": "U Creator",
         "tags": [],
         "description": "U Creator",
@@ -1221,8 +1228,8 @@
         "uri": "https://linuxsuren.github.io/blog/document/",
         "title": "文档技术",
         "tags": [],
-        "description": "",
-        "content": ""
+        "description": "文档技术",
+        "content": "文档技术\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/test/",
@@ -1232,10 +1239,24 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/browser/",
+        "title": "浏览器",
+        "tags": [],
+        "description": "浏览器",
+        "content": "浏览器\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/",
         "title": "申明式流水线",
         "tags": [],
         "description": "申明式流水线",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/terminal/",
+        "title": "终端",
+        "tags": [],
+        "description": "终端",
         "content": ""
     },
     {

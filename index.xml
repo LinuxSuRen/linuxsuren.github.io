@@ -184,10 +184,10 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/os/telnet/</link>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/telnet/</guid>
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
       <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
     </item>
     
@@ -436,10 +436,10 @@ systemctl disable firewalld.service 禁止firewall开机启动</description>
     
     <item>
       <title>GPG</title>
-      <link>https://linuxsuren.github.io/blog/os/gpg/</link>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/gpg/</guid>
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/gpg/</guid>
       <description>安装 Windows版本下载地址 https://www.gpg4win.org/download.html
 Ubuntu下安装 sudo apt-get install gpg -y
 Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
@@ -1108,10 +1108,10 @@ echo abc | tr a-z A-Z 大小写转换</description>
     
     <item>
       <title>U Creator</title>
-      <link>https://linuxsuren.github.io/blog/os/u-creator/</link>
+      <link>https://linuxsuren.github.io/blog/os/mac/u-creator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/u-creator/</guid>
+      <guid>https://linuxsuren.github.io/blog/os/mac/u-creator/</guid>
       <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  </description>
     </item>
     
