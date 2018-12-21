@@ -18,7 +18,7 @@
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
-War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
 然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 这种方式，方便简单，但是需要有 Java 环境。
 Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。

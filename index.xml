@@ -602,6 +602,24 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     </item>
     
     <item>
+      <title>GoRoutines</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/goroutines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/goroutines/</guid>
+      <description> 简单例子   </description>
+    </item>
+    
+    <item>
+      <title>Golang with JSON</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
+      <description> package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;log&amp;quot; ) func main() { jsonStr := ` [&amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }    </description>
+    </item>
+    
+    <item>
       <title>HTTP</title>
       <link>https://linuxsuren.github.io/blog/language/golang/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -713,7 +731,7 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
-War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
 然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 这种方式，方便简单，但是需要有 Java 环境。
 Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
