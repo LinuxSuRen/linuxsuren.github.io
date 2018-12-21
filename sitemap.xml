@@ -107,6 +107,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/banana-pi/</loc>
   </url>
   
@@ -285,6 +289,16 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
   </url>
   
@@ -297,11 +311,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</loc>
   </url>
   
   <url>
@@ -346,6 +356,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</loc>
   </url>
   
   <url>
@@ -421,6 +435,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/tags/pipeline/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/test/postman/</loc>
   </url>
   
@@ -491,10 +510,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</loc>
   </url>
   
   <url>

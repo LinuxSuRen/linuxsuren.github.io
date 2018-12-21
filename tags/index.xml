@@ -10,5 +10,23 @@
 	<atom:link href="https://linuxsuren.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Jenkins</title>
+      <link>https://linuxsuren.github.io/tags/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pipeline</title>
+      <link>https://linuxsuren.github.io/tags/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/pipeline/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

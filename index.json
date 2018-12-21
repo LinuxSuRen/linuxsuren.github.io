@@ -182,6 +182,13 @@
         "content": "Ctrl+X+P 整行\nCtrl+X+N 当前文件\nCtrl+X+K 字典\nCtrl+X+I 当前以及包含的文件\nCtrl+X+F 文件名\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/",
+        "title": "Bagde 插件",
+        "tags": [],
+        "description": "Bagde 插件",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/banana-pi/",
         "title": "BananaPi",
         "tags": [],
@@ -490,6 +497,20 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "title": "Jenkins",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "title": "Jenkins",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/",
         "title": "Jenkins",
         "tags": [],
@@ -499,9 +520,9 @@
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/",
         "title": "Jenkins",
-        "tags": [],
+        "tags": ["Jenkins"],
         "description": "Jenkins 是一个开源的 CI 服务",
-        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\njava -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n"
+        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\nWar 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/",
@@ -511,16 +532,9 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/",
-        "title": "Jenkins JUnit",
-        "tags": [],
-        "description": "Jenkins JUnit",
-        "content": " Assert @Test public void basic() { assertThat(\u0026quot;abc\u0026quot;, StringContains.containsString(\u0026quot;a\u0026quot;)); assertThat(\u0026quot;abc\u0026quot;, Matchers.not(StringContains.containsString(\u0026quot;d\u0026quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(\u0026quot;\u0026quot;); assertEquals(\u0026quot;a\u0026quot;, \u0026quot;a\u0026quot;); }  "
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/",
         "title": "Jenkins Permission",
-        "tags": [],
+        "tags": ["Jenkins"],
         "description": "Jenkins Permission System",
         "content": "Jenkins.get().checkPermission(Jenkins.ADMINISTER);\n"
     },
@@ -600,6 +614,13 @@
         "tags": [],
         "description": "Jenkins 插件调试",
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/",
+        "title": "Jenkins 流水线插件",
+        "tags": [],
+        "description": "Jenkins 流水线插件",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/",
@@ -728,6 +749,13 @@
         "content": "http://packaging.ubuntu.com/html/getting-set-up.html\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/pipeline/",
+        "title": "Pipeline",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/test/postman/",
         "title": "Postman",
         "tags": [],
@@ -852,13 +880,6 @@
         "tags": [],
         "description": "Ubuntu",
         "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/",
-        "title": "Update Center",
-        "tags": [],
-        "description": "",
-        "content": "构建项目 mvn package appassembler:assemble -DskipTests\n生成网站目录并缓存插件文件 sh target/appassembler/bin/app -id default -www www -key surenpi.key -certificate surenpi.crt -root-certificate surenpi.crt -root-certificate rootCA/jenkins-update-center-root-ca.crt -whitelist list.properties -cache /Users/mac/IdeaProjects/Github/jenkins-infra/update-center2/tmp -skip-release-history -cacheServer http://blog.surenpi.com/www/download/\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/vim/",
@@ -1248,7 +1269,7 @@
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/",
         "title": "申明式流水线",
-        "tags": [],
+        "tags": ["Jenkins"],
         "description": "申明式流水线",
         "content": ""
     },
@@ -1283,7 +1304,7 @@
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/",
         "title": "脚本式流水线",
-        "tags": [],
+        "tags": ["Jenkins", "Pipeline"],
         "description": "本文介绍 Jenkins 的脚本式流水线",
         "content": " 触发器 node('local') { echo 'hello' } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '10' ) ), pipelineTriggers([ cron('H 3,12,17 * * *'), scm('H 3,12,17 * * *') ]) ])  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  循环 node('suren') { def dev_path = '/opt/suren/bin' def services = [ [ 'name': 'admin', 'project': 'admin', 'port': '7002', 'jarName': 'admin' ] ]; stage('Copy Artifact') { for(service in services){ step([$class: 'CopyArtifact', fingerprintArtifacts: true, flatten: true, projectName: service.project, selector: [$class: 'StatusBuildSelector', stable: false], target: dev_path + '/' + service.name ]) } } stage('Stop Service') { for(service in services){ sh 'fuser -n tcp -k ' + service.port + ' \u0026gt; redirection \u0026amp;' } } stage('Start Service') { for(service in services){ sh 'cd ' + pass_bin + '/' + service.name + ' \u0026amp;\u0026amp; nohup nice java -server -Xms128m -Xmx384m \\ -jar ' + service.jarName + '.jar \\ --server.port=' + service.port + ' $\u0026gt; initServer.log 2\u0026gt;\u0026amp;1 \u0026amp;' } } }  "
     },

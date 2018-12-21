@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cicd on SuRenPi</title>
-    <link>https://linuxsuren.github.io/categories/cicd/</link>
-    <description>Recent content in Cicd on SuRenPi</description>
+    <title>Jenkins on SuRenPi</title>
+    <link>https://linuxsuren.github.io/categories/jenkins/</link>
+    <description>Recent content in Jenkins on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/categories/cicd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linuxsuren.github.io/categories/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,15 +27,6 @@ Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
 版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
  生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。
 端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.</description>
-    </item>
-    
-    <item>
-      <title>Jenkins X</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -285,6 +285,15 @@ Ctrl+X+F 文件名</description>
     </item>
     
     <item>
+      <title>Bagde 插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Base64</title>
       <link>https://linuxsuren.github.io/blog/os/linux/common/base64/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -703,25 +712,24 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
-启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
-java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</description>
-    </item>
-    
-    <item>
-      <title>Jenkins JUnit</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-junit/</guid>
-      <description> Assert @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); }  </description>
+部署 Jenkins 支持几种安装（启动）方式：
+War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+这种方式，方便简单，但是需要有 Java 环境。
+Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
+Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
+如果希望看到具体内容请查看这里。
+版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
+ 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。
+端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.</description>
     </item>
     
     <item>
       <title>Jenkins Permission</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-permission/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
       <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
     </item>
     
@@ -821,6 +829,15 @@ mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会
 mvn hpi:run -Djenkins.install.runSetupWizard=true
 指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
 参考 maven-hpi-plugin</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 流水线插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1113,16 +1130,6 @@ echo abc | tr a-z A-Z 大小写转换</description>
       
       <guid>https://linuxsuren.github.io/blog/os/mac/u-creator/</guid>
       <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  </description>
-    </item>
-    
-    <item>
-      <title>Update Center</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/update-center/</guid>
-      <description>构建项目 mvn package appassembler:assemble -DskipTests
-生成网站目录并缓存插件文件 sh target/appassembler/bin/app -id default -www www -key surenpi.key -certificate surenpi.crt -root-certificate surenpi.crt -root-certificate rootCA/jenkins-update-center-root-ca.crt -whitelist list.properties -cache /Users/mac/IdeaProjects/Github/jenkins-infra/update-center2/tmp -skip-release-history -cacheServer http://blog.surenpi.com/www/download/</description>
     </item>
     
     <item>

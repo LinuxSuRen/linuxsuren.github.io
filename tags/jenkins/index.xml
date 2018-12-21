@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jenkins Basic on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/</link>
-    <description>Recent content in Jenkins Basic on SuRenPi</description>
+    <title>Jenkins on SuRenPi</title>
+    <link>https://linuxsuren.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linuxsuren.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,31 +30,12 @@ Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
     </item>
     
     <item>
-      <title>Jenkins 插件托管</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</guid>
-      <description>创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
-提交请求 详细阅读托管要求
-在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
-托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
-你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
-发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform
-跳过测试 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
-执行发布准备而且无需输入参数 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare -B</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
-      <description>mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
-mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</description>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
     </item>
     
     <item>

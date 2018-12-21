@@ -46,6 +46,15 @@ Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</descr
     </item>
     
     <item>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
       <title>Jenkins Plugin Dev Credentails</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
