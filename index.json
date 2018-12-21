@@ -1,5 +1,12 @@
 [
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/",
+        "title": "DevOps",
+        "tags": [],
+        "description": "DevOps相关技术文章",
+        "content": "DevOps相关技术文章\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/docker/",
         "title": "容器技术",
         "tags": [],
@@ -7,11 +14,18 @@
         "content": "容器技术\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/",
-        "title": "DevOps",
+        "uri": "https://linuxsuren.github.io/blog/os/",
+        "title": "操作系统",
         "tags": [],
-        "description": "DevOps相关技术文章",
-        "content": "DevOps相关技术文章\n"
+        "description": "操作系统",
+        "content": "操作系统\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/",
+        "title": "编程语言",
+        "tags": [],
+        "description": "编程语言",
+        "content": "编程语言\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/configuration/ini/",
@@ -1232,13 +1246,6 @@
         "content": " 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。\n流水线 "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/",
-        "title": "操作系统",
-        "tags": [],
-        "description": "操作系统",
-        "content": "操作系统\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/document/",
         "title": "文档技术",
         "tags": [],
@@ -1286,13 +1293,6 @@
         "tags": [],
         "description": "终端",
         "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/language/",
-        "title": "编程语言",
-        "tags": [],
-        "description": "编程语言",
-        "content": "编程语言\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/editor/",

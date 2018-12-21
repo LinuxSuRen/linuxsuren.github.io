@@ -3,11 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/docker/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
   <url>
@@ -713,10 +721,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/document/</loc>
   </url>
   
@@ -742,10 +746,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/terminal/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
   <url>
