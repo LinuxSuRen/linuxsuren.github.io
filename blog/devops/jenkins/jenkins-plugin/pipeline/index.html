@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="41">
 
 
 
@@ -212,6 +212,52 @@
 <div class="prose" id="prose">
 
 
+
+<p>流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。</p>
+
+<h1 id="安装">安装</h1>
+
+<p>在插件管理界面中搜索 <code>workflow-aggregator</code> 后，勾选点击安装。</p>
+
+<h1 id="结构">结构</h1>
+
+
+
+
+
+<div class="code-copy" id="/static/codes/jenkinsfile/simple.groovy">
+	<div class="code-copy-header examplesite"><div class="action-buttons"></div><span class="filename"><i class="icon-website"></i>/codes/jenkinsfile/simple.groovy</span><i class="icon-groovy input"></i></div>
+	<button class="copy-button" title="Copy to clipboard" data-clipboard-snippet>
+			<div class="copy-text"><i class="icon-clipboard"></i> COPY</div>
+	</button>
+	<pre><code class="language-groovy">pipeline {
+    agent any
+
+    stages{
+        stage(&#34;one&#34;) {
+            steps{
+                echo &#34;one&#34;
+            }
+        }
+        stage(&#34;one&#34;) {
+            steps{
+                echo &#34;one&#34;
+            }
+        }
+    }
+}</code></pre>
+	<a role="button" target="_blank" href="/static/codes/jenkinsfile/simple.groovy" title="See /codes/jenkinsfile/simple.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See /codes/jenkinsfile/simple.groovy source on GitHub">Source<i class="icon-github"></i></a>
+</div>
+
+
+<h2 id="计算节点-agent">计算节点 Agent</h2>
+
+<h2 id="阶段-stage">阶段 Stage</h2>
+
+<h2 id="后处理">后处理</h2>
+
+<h1 id="restful-接口">Restful 接口</h1>
+
 </div>
 
 
@@ -230,15 +276,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-pipeline-scripted/">脚本式流水线</a></li>
-	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/badge/">Bagde 插件</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/">Jenkins 简体中文插件</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/global_variable/">GlobalVariable</a></li>
+	
+	<li><a href="/blog/devops/jenkins/basic/jenkins-pipeline-scripted/">脚本式流水线</a></li>
 	
 	<li><a href="/blog/devops/jenkins/basic/jenkins-pipeline-declarative/">申明式流水线</a></li>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/global_variable/">GlobalVariable</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/">Jenkins 简体中文插件</a></li>
 	
 </ul>
 

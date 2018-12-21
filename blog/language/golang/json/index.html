@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="35">
+<meta itemprop="wordCount" content="0">
 
 
 
@@ -217,30 +217,7 @@
 		
 	
 	<div class="code-copy-content nt3" >
-
-		<pre><code class="language-golang">package main
-
-import (
-	&quot;encoding/json&quot;
-	&quot;log&quot;
-)
-
-func main() {
-	jsonStr := `
-	[&quot;one&quot;, &quot;two&quot;]
-	`
-	var array []string
-	err := json.Unmarshal([]byte(jsonStr), &amp;array)
-	if err != nil {
-		log.Println(err)
-	} else {
-		log.Println(array)
-	}
-}
-
-</code></pre>
 </div>
-
 </div>
 
 
@@ -262,9 +239,9 @@ func main() {
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/language/golang/go-sync/">Sync</a></li>
-	
 	<li><a href="/blog/language/golang/goroutines/">GoRoutines</a></li>
+	
+	<li><a href="/blog/language/golang/go-sync/">Sync</a></li>
 	
 </ul>
 

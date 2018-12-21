@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
-      <description> package main import ( &amp;quot;encoding/json&amp;quot; &amp;quot;log&amp;quot; ) func main() { jsonStr := ` [&amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }    </description>
+      <description>   </description>
     </item>
     
     <item>
