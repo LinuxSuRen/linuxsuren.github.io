@@ -91,41 +91,6 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/common/curl/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": " \u0026ndash; title: curl\ndescription: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\ncurl \u0026ndash;header \u0026ldquo;Authorization: Bearer $token\u0026rdquo; \u0026ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H \u0026ldquo;Content-Type:application/json\u0026rdquo; \u0026ndash;data \u0026lsquo;{\u0026ldquo;url\u0026rdquo;:\u0026ldquo;alauda/cronTabCheck?cronText=sdf\u0026rdquo;}\u0026rsquo;\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "sudo apt-get install pavucontrol\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/common/prompting/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": " 命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置\nexport PS1='[/u@/h /W/]/$ '\n\\u 当前用户帐号\n\\h 当前主机名\n\\W 当前路径（大写为相对路径，小写为绝对路径）\n\\$\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/common/service/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo \u0026quot;start\u0026quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 \u0026gt; /var/www/jenkins/jenkins.log 2\u0026gt; /var/www/ jenkins/jenkins-error.log \u0026amp; ;; stop) echo \u0026quot;stop\u0026quot; ;; *) echo \u0026quot;Usage: $0 (start|stop)\u0026quot; ;; esac  "
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/os/linux/common/telnet/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": " 退出 首先，按下 Ctrl+] 然后输入 \\q 后，按下回车即可退出 Telnet。\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/",
         "title": "",
         "tags": [],
@@ -693,6 +658,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/service/",
+        "title": "Linux Service",
+        "tags": [],
+        "description": "Linux Service",
+        "content": "#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo \u0026quot;start\u0026quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 \u0026gt; /var/www/jenkins/jenkins.log 2\u0026gt; /var/www/ jenkins/jenkins-error.log \u0026amp; ;; stop) echo \u0026quot;stop\u0026quot; ;; *) echo \u0026quot;Usage: $0 (start|stop)\u0026quot; ;; esac  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/mplayer/",
         "title": "MPlayer",
         "tags": [],
@@ -1001,6 +973,13 @@
         "content": " Reference ctrlp\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/curl/",
+        "title": "curl",
+        "tags": [],
+        "description": "curl",
+        "content": " GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\ncurl \u0026ndash;header \u0026ldquo;Authorization: Bearer $token\u0026rdquo; \u0026ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H \u0026ldquo;Content-Type:application/json\u0026rdquo; \u0026ndash;data \u0026lsquo;{\u0026ldquo;url\u0026rdquo;:\u0026ldquo;alauda/cronTabCheck?cronText=sdf\u0026rdquo;}\u0026rsquo;\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/dep/",
         "title": "dep",
         "tags": [],
@@ -1109,8 +1088,15 @@
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/split/",
         "title": "split",
         "tags": [],
-        "description": "spli",
+        "description": "split",
         "content": " 切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-\n合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* \u0026gt; minikube.iso\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/telnet/",
+        "title": "telnet",
+        "tags": [],
+        "description": "telnet",
+        "content": " 退出 首先，按下 Ctrl+] 然后输入 \\q 后，按下回车即可退出 Telnet。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/user/",
@@ -1145,7 +1131,7 @@
         "title": "xargs",
         "tags": [],
         "description": "xargs",
-        "content": ""
+        "content": "docker images | grep nginx | awk '{print $3}' | xargs docker rmi 删除包含指定字符的 Docker 镜像\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/xclip/",
@@ -1181,6 +1167,13 @@
         "tags": [],
         "description": "发布Maven工程到中央仓库",
         "content": "介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。\n注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa\n新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21\u0026amp;pid=10134\nsonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。\n签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。\ngpg --gen-key 生成密钥，成功后，会有类似如下的输出。\ngpg: key 69EC4448C6CE32EB marked as ultimately trusted\ngpg: directory \u0026lsquo;/Users/mac/.gnupg/openpgp-revocs.d\u0026rsquo; created\n69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。\n修改settings.xml 增加账户信息：\n\u0026lt;server\u0026gt; \u0026lt;id\u0026gt;hello\u0026lt;/id\u0026gt; \u0026lt;username\u0026gt;name\u0026lt;/username\u0026gt; \u0026lt;password\u0026gt;passwd\u0026lt;/password\u0026gt; \u0026lt;/server\u0026gt;  设置gpg的profile：\n\u0026lt;profile\u0026gt; \u0026lt;id\u0026gt;hello\u0026lt;/id\u0026gt; \u0026lt;activation\u0026gt; \u0026lt;activeByDefault\u0026gt;true\u0026lt;/activeByDefault\u0026gt; \u0026lt;/activation\u0026gt; \u0026lt;properties\u0026gt; \u0026lt;gpg.executable\u0026gt;gpg2\u0026lt;/gpg.executable\u0026gt; \u0026lt;gpg.passphrase\u0026gt;pass\u0026lt;/gpg.passphrase\u0026gt; \u0026lt;/properties\u0026gt; \u0026lt;/profile\u0026gt;  需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：\n69EC4448C6CE32EB\n修改pom文件\n\u0026lt;distributionManagement\u0026gt; \u0026lt;repository\u0026gt; \u0026lt;id\u0026gt;oss-sonatype-staging\u0026lt;/id\u0026gt; \u0026lt;name\u0026gt;Sonatype Staging Repository\u0026lt;/name\u0026gt; \u0026lt;url\u0026gt;https://oss.sonatype.org/service/local/staging/deploy/maven2\u0026lt;/url\u0026gt; \u0026lt;/repository\u0026gt; \u0026lt;snapshotRepository\u0026gt; \u0026lt;id\u0026gt;oss-sonatype-staging\u0026lt;/id\u0026gt; \u0026lt;name\u0026gt;OSS Sonatype Nexus Snapshots\u0026lt;/name\u0026gt; \u0026lt;url\u0026gt;https://oss.sonatype.org/content/repositories/snapshots\u0026lt;/url\u0026gt; \u0026lt;/snapshotRepository\u0026gt; \u0026lt;/distributionManagement\u0026gt;  上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：\n\u0026lt;profiles\u0026gt; \u0026lt;profile\u0026gt; \u0026lt;id\u0026gt;release\u0026lt;/id\u0026gt; \u0026lt;build\u0026gt; \u0026lt;plugins\u0026gt; \u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-gpg-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;sign-artifacts\u0026lt;/id\u0026gt; \u0026lt;phase\u0026gt;verify\u0026lt;/phase\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;sign\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt; \u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-enforcer-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.3.1\u0026lt;/version\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;enforce-no-snapshots\u0026lt;/id\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;enforce\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;rules\u0026gt; \u0026lt;requireReleaseDeps\u0026gt; \u0026lt;message\u0026gt;No Snapshots Allowed!\u0026lt;/message\u0026gt; \u0026lt;/requireReleaseDeps\u0026gt; \u0026lt;/rules\u0026gt; \u0026lt;fail\u0026gt;true\u0026lt;/fail\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt; \u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-javadoc-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.10.3\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;additionalparam\u0026gt;${javadoc.opts}\u0026lt;/additionalparam\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;attach-javadocs\u0026lt;/id\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;jar\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt; \u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-source-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.4\u0026lt;/version\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;attach-sources\u0026lt;/id\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;jar\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt; \u0026lt;/plugins\u0026gt; \u0026lt;/build\u0026gt; \u0026lt;/profile\u0026gt; \u0026lt;profile\u0026gt; \u0026lt;id\u0026gt;doclint-java8-disable\u0026lt;/id\u0026gt; \u0026lt;activation\u0026gt; \u0026lt;jdk\u0026gt;[1.8,)\u0026lt;/jdk\u0026gt; \u0026lt;/activation\u0026gt; \u0026lt;properties\u0026gt; \u0026lt;javadoc.opts\u0026gt;-Xdoclint:none\u0026lt;/javadoc.opts\u0026gt; \u0026lt;/properties\u0026gt; \u0026lt;/profile\u0026gt; \u0026lt;/profiles\u0026gt;  发布 经过上面繁琐的配置后，现在终于可以发布项目到Maven公共仓库了。\n在项目根目录下（根据需要自行选择），执行命令mvn deploy\n如果没有任何报错的话，会先把jar等文件上传（upload）。等上传完成后，你需要登录https://oss.sonatype.org ，点击左侧菜单Staging Repositories。从列表中找到你刚刚上传的工程，选中后点击Close。如果你不想每次手动完成该步骤，可以在pom.xml中添加下面的插件配置来实现自动化：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.sonatype.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;nexus-staging-maven-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.6.7\u0026lt;/version\u0026gt; \u0026lt;extensions\u0026gt;true\u0026lt;/extensions\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;serverId\u0026gt;nexus-snapshots\u0026lt;/serverId\u0026gt; \u0026lt;nexusUrl\u0026gt;https://oss.sonatype.org/\u0026lt;/nexusUrl\u0026gt; \u0026lt;autoReleaseAfterClose\u0026gt;true\u0026lt;/autoReleaseAfterClose\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  多模块 有些Maven工程是多模块工程，这时候，如果我们希望把特定的模块在deploy的时候排除掉，可以通过下面的配置来实现：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  你可以把上面的配置添加到需要排除的模块中。\n参考 本文为原创，如果您当前访问的域名不是surenpi.com，请访问“素人派”。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/prompting/",
+        "title": "命令提示符",
+        "tags": [],
+        "description": "命令提示符",
+        "content": " 命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置\nexport PS1='[/u@/h /W/]/$ '\n\\u 当前用户帐号\n\\h 当前主机名\n\\W 当前路径（大写为相对路径，小写为绝对路径）\n\\$\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-centos/",

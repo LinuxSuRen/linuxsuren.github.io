@@ -137,62 +137,6 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/curl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
-      <description>&amp;ndash; title: curl
-description: curl GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
-POST curl -d &amp;quot;param&amp;quot; http://baidu.com
-curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
-curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
-管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
-curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/</guid>
-      <description>sudo apt-get install pavucontrol</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
-      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
-export PS1=&#39;[/u@/h /W/]/$ &#39;
-\u 当前用户帐号
-\h 当前主机名
-\W 当前路径（大写为相对路径，小写为绝对路径）
-\$</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/service/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
-      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
-      <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -911,6 +855,15 @@ Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kub
     </item>
     
     <item>
+      <title>Linux Service</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
+    </item>
+    
+    <item>
       <title>MPlayer</title>
       <link>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1322,6 +1275,20 @@ Reference vim-fugitive vim-scripts</description>
     </item>
     
     <item>
+      <title>curl</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
+    </item>
+    
+    <item>
       <title>dep</title>
       <link>https://linuxsuren.github.io/blog/language/golang/dep/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1471,6 +1438,15 @@ pbpaste 通过命令粘贴</description>
     </item>
     
     <item>
+      <title>telnet</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
+      <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
+    </item>
+    
+    <item>
       <title>user</title>
       <link>https://linuxsuren.github.io/blog/os/linux/common/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1512,7 +1488,7 @@ wget各种选项分类列表
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/xargs/</guid>
-      <description></description>
+      <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像</description>
     </item>
     
     <item>
@@ -1565,6 +1541,20 @@ gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
 修改pom文件
 &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt;  上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
 &amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+    <item>
+      <title>命令提示符</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
+      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1=&#39;[/u@/h /W/]/$ &#39;
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$</description>
     </item>
     
     <item>

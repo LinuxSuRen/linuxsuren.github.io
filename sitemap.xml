@@ -55,26 +55,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/common/curl/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/common/pavucontrol/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/common/prompting/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/common/service/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/common/telnet/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
   </url>
   
@@ -403,6 +383,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/service/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</loc>
   </url>
   
@@ -581,6 +565,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/curl/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/dep/</loc>
   </url>
   
@@ -645,6 +633,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/telnet/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/user/</loc>
   </url>
   
@@ -682,6 +674,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/build/maven-release/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/prompting/</loc>
   </url>
   
   <url>
