@@ -616,7 +616,7 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
-      <description>   </description>
+      <description> /codes/golang/json/main.go  COPY  package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  Source  </description>
     </item>
     
     <item>
@@ -857,7 +857,7 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
       <description> 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
 安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
-结构 /codes/jenkinsfile/simple.groovy  COPY  pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } } } Source  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+结构 /codes/jenkinsfile/simple.groovy  COPY  pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } Source  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
     </item>
     
     <item>

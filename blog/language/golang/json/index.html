@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="38">
 
 
 
@@ -211,13 +211,36 @@
 
 <div class="prose" id="prose">
 
-<div class="code relative bg-primary-color moon-gray" id="">
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-</div>
+
+
+
+
+<div class="code-copy" id="/static/codes/golang/json/main.go">
+	<div class="code-copy-header examplesite"><div class="action-buttons"></div><span class="filename"><i class="icon-website"></i>/codes/golang/json/main.go</span><i class="icon-go input"></i></div>
+	<button class="copy-button" title="Copy to clipboard" data-clipboard-snippet>
+			<div class="copy-text"><i class="icon-clipboard"></i> COPY</div>
+	</button>
+	<pre><code class="language-golang">package main
+
+import (
+	&#34;encoding/json&#34;
+	&#34;log&#34;
+)
+
+func main() {
+	jsonStr := `
+	[&#34;one&#34;, &#34;two&#34;]
+	`
+	var array []string
+	err := json.Unmarshal([]byte(jsonStr), &amp;array)
+	if err != nil {
+		log.Println(err)
+	} else {
+		log.Println(array)
+	}
+}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/master/static/codes/golang/json/main.go" title="See /codes/golang/json/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See /codes/golang/json/main.go source on GitHub">Source<i class="icon-github"></i></a>
 </div>
 
 
