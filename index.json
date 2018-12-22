@@ -518,6 +518,13 @@
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/",
+        "title": "Jenkins Agent",
+        "tags": [],
+        "description": "Jenkins Agent",
+        "content": " Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。\n默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。\nJenkins 的节点，通常可以配置如下属性：\n 名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量  类型 Jenkins 支持多种与节点通信的方式。\nJNLP 默认支持。\nSSH 需要插件。\nDocker Kubernetes "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/",
         "title": "Jenkins Basic",
         "tags": [],
@@ -558,6 +565,13 @@
         "tags": [],
         "description": "Jenkins Plugins",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/",
+        "title": "Jenkins SSH Agent",
+        "tags": [],
+        "description": "Jenkins SSH Agent",
+        "content": "在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/",

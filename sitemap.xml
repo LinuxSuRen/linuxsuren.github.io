@@ -303,6 +303,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/</loc>
   </url>
   
@@ -324,6 +328,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</loc>
   </url>
   
   <url>

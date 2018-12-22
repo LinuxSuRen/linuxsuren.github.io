@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Action | SuRenPi</title>
+    <title>Jenkins Agent | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Action" />
-<meta property="og:description" content="Jenkins Plugin Action" />
+<meta property="og:title" content="Jenkins Agent" />
+<meta property="og:description" content="Jenkins Agent" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="Action">
-<meta itemprop="description" content="Jenkins Plugin Action">
+<meta itemprop="name" content="Jenkins Agent">
+<meta itemprop="description" content="Jenkins Agent">
 
 
 
-<meta itemprop="wordCount" content="12">
+<meta itemprop="wordCount" content="41">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Action"/>
-<meta name="twitter:description" content="Jenkins Plugin Action"/>
+<meta name="twitter:title" content="Jenkins Agent"/>
+<meta name="twitter:description" content="Jenkins Agent"/>
 
 
 
@@ -165,9 +165,17 @@
 
 	<div date-pref>
 		
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Annotation">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 插件托管">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -186,13 +194,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Action</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins Agent</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins Plugin Action
+      Jenkins Agent
     </div>
   
 
@@ -205,19 +213,38 @@
 
 
 
-<p>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。</p>
+<p>Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。</p>
 
-<h1 id="接口">接口</h1>
+<p>默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。</p>
 
-<p>你首先需要实现接口 <code>hudson.model.Action</code> 的三个方法:</p>
+<p>Jenkins 的节点，通常可以配置如下属性：</p>
 
 <ul>
-<li>getIconFileName</li>
-<li>getDisplayName</li>
-<li>getUrlName</li>
+<li>名称 <em>唯一标示</em></li>
+<li>描述</li>
+<li>并发构建数 <em>同一时刻可执行的任务数</em></li>
+<li>远程工作目录</li>
+<li>标签 <em>空格分割的字符串，通常包含环境信息</em></li>
+<li>启动方式 <em>agent 节点如何启动，通常与 agent 类型相关</em></li>
+<li>工具位置 <em>构建工具的安装位置配置</em></li>
+<li>环境变量</li>
 </ul>
 
-<h1 id="约定">约定</h1>
+<h1 id="类型">类型</h1>
+
+<p>Jenkins 支持多种与节点通信的方式。</p>
+
+<h2 id="jnlp">JNLP</h2>
+
+<p>默认支持。</p>
+
+<h2 id="ssh">SSH</h2>
+
+<p>需要插件。</p>
+
+<h2 id="docker">Docker</h2>
+
+<h2 id="kubernetes">Kubernetes</h2>
 
 </div>
 
@@ -237,15 +264,11 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
+	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
 	
 </ul>
 
@@ -379,14 +402,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Action”
+    “Jenkins Agent”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/jenkins-agent.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
