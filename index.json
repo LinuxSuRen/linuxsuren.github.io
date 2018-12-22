@@ -623,6 +623,13 @@
         "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/",
+        "title": "Jenkins 标签",
+        "tags": [],
+        "description": "Jenkins 标签",
+        "content": "master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/",
         "title": "Jenkins 流水线插件",
         "tags": [],

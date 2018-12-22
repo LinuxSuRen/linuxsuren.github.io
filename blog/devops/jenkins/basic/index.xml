@@ -61,6 +61,15 @@ Docker Kubernetes </description>
     </item>
     
     <item>
+      <title>Jenkins 标签</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
+      <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
+    </item>
+    
+    <item>
       <title>Jenkins 调试</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
