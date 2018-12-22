@@ -613,7 +613,7 @@
         "title": "Jenkins 流水线插件",
         "tags": [],
         "description": "Jenkins 流水线插件",
-        "content": " 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。\n安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。\n结构 /codes/jenkinsfile/simple.groovy  COPY  pipeline { agent any stages{ stage(\u0026#34;one\u0026#34;) { steps{ echo \u0026#34;one\u0026#34; } } stage(\u0026#34;two\u0026#34;) { steps{ echo \u0026#34;two\u0026#34; } } } } Source  计算节点 Agent 阶段 Stage 后处理 Restful 接口 "
+        "content": " 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。\n安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。\n  结构 /codes/jenkinsfile/simple.groovy  COPY  pipeline { agent any stages{ stage(\u0026#34;one\u0026#34;) { steps{ echo \u0026#34;one\u0026#34; } } stage(\u0026#34;two\u0026#34;) { steps{ echo \u0026#34;two\u0026#34; } } } } Source  计算节点 Agent 阶段 Stage 后处理 Restful 接口 "
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/",
