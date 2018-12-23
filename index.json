@@ -217,6 +217,13 @@
         "content": "除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/",
+        "title": "Configuration as Code",
+        "tags": [],
+        "description": "Jenkins Configuration as Code Plugin",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/mobile/",
         "title": "Connect to Mobile",
         "tags": [],
@@ -403,7 +410,7 @@
         "title": "Golang with JSON",
         "tags": [],
         "description": "Golang with JSON",
-        "content": " /codes/golang/json/main.go  COPY  package main import ( \u0026#34;encoding/json\u0026#34; \u0026#34;log\u0026#34; ) func main() { jsonStr := ` [\u0026#34;one\u0026#34;, \u0026#34;two\u0026#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), \u0026amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  Source  "
+        "content": " /codes/golang/json/main.go  拷贝   package main import ( \u0026#34;encoding/json\u0026#34; \u0026#34;log\u0026#34; ) func main() { jsonStr := ` [\u0026#34;one\u0026#34;, \u0026#34;two\u0026#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), \u0026amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/http/",
@@ -522,7 +529,7 @@
         "title": "Jenkins Agent",
         "tags": [],
         "description": "Jenkins Agent",
-        "content": " Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。\n默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。\nJenkins 的节点，通常可以配置如下属性：\n 名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量  类型 Jenkins 支持多种与节点通信的方式。\n  JNLP 默认支持。\nSSH 需要插件。\nDocker Kubernetes "
+        "content": " Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。\n默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。\nJenkins 的节点，通常可以配置如下属性：\n 名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量  类型 Jenkins 支持多种与节点通信的方式。\n  JNLP 默认支持。\nSSH 需要安装插件。\nDocker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。\n静态 Docker 静态的 Docker 容器，是通过命令来启动一个 jnlp 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。\n通常的命令 docker run jenkins/jnlp-slave -url http://jenkins-server:port \u0026lt;secret\u0026gt; \u0026lt;agent name\u0026gt;\n设置 Tunnel 端口 docker run jenkins/jnlp-slave -tunnel :\u0026lt;tunnel port\u0026gt; -url http://jenkins-server:port \u0026lt;secret\u0026gt; \u0026lt;agent name\u0026gt;\n 注意，上面的端口是 Jenkins 的管理界面的端口，secret 则要从 JNLP 节点的状态页面获取，最后需要的是节点的名称。\n  想了解源码的朋友，可以查看这里。\n动态 Docker 这种方式需要 Jenkins 所在的服务器上安装 Docker，它会在流水线执行时动态地创建、销毁容器。优点：无需提前启动计算节点，不依赖 Java 环境，不依赖 JNLP；缺点：架构上与 Docker 紧紧地绑定了，无法做到扩缩容。下面是一种直接指定 Docker 镜像的方式，还有另外一种方式支持动态构建出一个镜像：\ncodes/jenkinsfile/docker-agent.groovy  拷贝   pipeline { agent { docker { image \u0026#39;alpine:3.7\u0026#39; } } stages{ stage(\u0026#34;one\u0026#34;){ steps{ echo \u0026#34;hello\u0026#34; sh \u0026#39;uname -a\u0026#39; } } } } 原文件  Kubernetes 需要安装插件。\n这种动态调度节点的方式，在和使用静态节点的没有区别，都是通过 Jenkins 强大的标签机制来调度。而节点的扩缩容则交给了 K8S 集群。Jenkins 的 master 节点可以运行在任意环境里，这一点是没有任何限制。\n目前，也可能是较长时间内的一个缺点就是：复杂。不过，对于配置复杂的问题，可以借助配置及代码这个插件来解决。异常诊断的问题，也在积极的解决。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/",
@@ -530,6 +537,13 @@
         "tags": [],
         "description": "Jenkins Basic",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/",
+        "title": "Jenkins Kubernetes Plugin",
+        "tags": [],
+        "description": "Jenkins Kubernetes Plugin",
+        "content": "Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/",
@@ -634,7 +648,7 @@
         "title": "Jenkins 流水线插件",
         "tags": [],
         "description": "Jenkins 流水线插件",
-        "content": " 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。\n安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。\n  结构 /codes/jenkinsfile/simple.groovy  COPY  pipeline { agent any stages{ stage(\u0026#34;one\u0026#34;) { steps{ echo \u0026#34;one\u0026#34; } } stage(\u0026#34;two\u0026#34;) { steps{ echo \u0026#34;two\u0026#34; } } } } Source  计算节点 Agent 阶段 Stage 后处理 Restful 接口 "
+        "content": " 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。\n安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。\n  结构 /codes/jenkinsfile/simple.groovy  拷贝   pipeline { agent any stages{ stage(\u0026#34;one\u0026#34;) { steps{ echo \u0026#34;one\u0026#34; } } stage(\u0026#34;two\u0026#34;) { steps{ echo \u0026#34;two\u0026#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 "
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/",

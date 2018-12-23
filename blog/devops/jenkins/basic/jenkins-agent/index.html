@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="41">
+<meta itemprop="wordCount" content="135">
 
 
 
@@ -156,11 +156,27 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
+<main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
     <div class="flex-l">
 
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#类型">类型</a>
+<ul>
+<li><a href="#jnlp">JNLP</a></li>
+<li><a href="#ssh">SSH</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#静态-docker">静态 Docker</a></li>
+<li><a href="#动态-docker">动态 Docker</a></li>
+<li><a href="#kubernetes">Kubernetes</a></li>
+</ul></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -246,11 +262,73 @@
 
 <h2 id="ssh">SSH</h2>
 
-<p>需要插件。</p>
+<p>需要<a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">安装插件</a>。</p>
 
 <h2 id="docker">Docker</h2>
 
+<p>这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。</p>
+
+<h2 id="静态-docker">静态 Docker</h2>
+
+<p>静态的 Docker 容器，是通过命令来启动一个 <code>jnlp</code> 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。</p>
+
+<p>通常的命令 <code>docker run jenkins/jnlp-slave -url http://jenkins-server:port &lt;secret&gt; &lt;agent name&gt;</code></p>
+
+<p>设置 Tunnel 端口 <code>docker run jenkins/jnlp-slave -tunnel :&lt;tunnel port&gt; -url http://jenkins-server:port &lt;secret&gt; &lt;agent name&gt;</code></p>
+
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p><em>注意，上面的端口是 Jenkins 的管理界面的端口，secret 则要从 JNLP 节点的状态页面获取，最后需要的是节点的名称。</em></p>
+</div>
+</aside>
+
+
+<p>想了解源码的朋友，可以查看<a href="https://github.com/jenkinsci/docker-jnlp-slave">这里</a>。</p>
+
+<h2 id="动态-docker">动态 Docker</h2>
+
+<p>这种方式需要 Jenkins 所在的服务器上安装 Docker，它会在流水线执行时动态地创建、销毁容器。优点：无需提前启动计算节点，不依赖 Java 环境，不依赖 JNLP；缺点：架构上与 Docker 紧紧地绑定了，无法做到扩缩容。下面是一种直接指定 Docker 镜像的方式，还有另外一种方式支持动态构建出一个镜像：</p>
+
+
+
+
+
+<div class="code-copy" id="static/codes/jenkinsfile/docker-agent.groovy">
+	<div class="code-copy-header examplesite"><div class="action-buttons"></div><span class="filename"><i class="icon-website"></i>codes/jenkinsfile/docker-agent.groovy</span><i class="icon-groovy input"></i></div>
+	<button class="copy-button" title="Copy to clipboard" data-clipboard-snippet>
+			<div class="copy-text"><i class="icon-clipboard"></i> 拷贝 </div>
+	</button>
+	<pre><code class="language-groovy">pipeline {
+    agent {
+        docker {
+            image &#39;alpine:3.7&#39;
+        }
+    }
+
+    stages{
+        stage(&#34;one&#34;){
+            steps{
+                echo &#34;hello&#34;
+                sh &#39;uname -a&#39;
+            }
+        }
+    }
+}</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/docker-agent.groovy" title="See codes/jenkinsfile/docker-agent.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/docker-agent.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+
+
 <h2 id="kubernetes">Kubernetes</h2>
+
+<p>需要<a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">安装插件</a>。</p>
+
+<p>这种动态调度节点的方式，在和使用静态节点的没有区别，都是通过 Jenkins 强大的<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/">标签</a>机制来调度。而节点的扩缩容则交给了 K8S 集群。Jenkins 的 master 节点可以运行在任意环境里，这一点是没有任何限制。</p>
+
+<p>目前，也可能是较长时间内的一个缺点就是：复杂。不过，对于配置复杂的问题，可以借助<a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">配置及代码</a>这个插件来解决。异常诊断的问题，也在积极的解决。</p>
 
 </div>
 
@@ -272,11 +350,13 @@
 	
 	<li><a href="/blog/devops/jenkins/basic/jenkins-label/">Jenkins 标签</a></li>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
+	
+	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 </ul>
 
@@ -426,6 +506,7 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     </div>
   </div>
+</main>
 
     </main>
 

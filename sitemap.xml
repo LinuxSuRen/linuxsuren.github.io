@@ -129,6 +129,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/mobile/</loc>
   </url>
   
@@ -308,6 +312,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</loc>
   </url>
   
   <url>
