@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jenkins Plugin Develope on SuRenPi</title>
+    <title>Jenkins 插件开发 on SuRenPi</title>
     <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</link>
-    <description>Recent content in Jenkins Plugin Develope on SuRenPi</description>
+    <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
@@ -82,10 +82,10 @@ http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css</description>
     
     <item>
       <title>Jenkins 插件开发</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
 运行 在工程根目录下执行 mvn hpi:run

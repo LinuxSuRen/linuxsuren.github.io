@@ -497,14 +497,14 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
@@ -567,13 +567,6 @@
         "content": "IdCredentials 规定了具有 ID 的凭据（Credentials）\nCredentialsProvider 凭据提供接口\nCredentialsStore 凭据存储接口\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/",
-        "title": "Jenkins Plugin Develope",
-        "tags": [],
-        "description": "Jenkins Plugin Develope",
-        "content": "Jenkins 插件开发\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/",
         "title": "Jenkins Plugins",
         "tags": [],
@@ -609,7 +602,14 @@
         "content": " 添加 Gitee 为 Git 服务器\njx create git server gitea http://localhost:10080\nDevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep \u0026quot;Storage Driver\u0026quot; 查看 Docker 当前支持的类型。\n因此，我们需要的 Docker 版本为 v17.06。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/",
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/",
+        "title": "Jenkins 插件开发",
+        "tags": [],
+        "description": "Jenkins 插件开发",
+        "content": "Jenkins 插件开发\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/",
         "title": "Jenkins 插件开发",
         "tags": [],
         "description": "Jenkins 插件开发教程",

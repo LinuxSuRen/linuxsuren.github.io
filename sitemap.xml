@@ -289,12 +289,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -331,10 +331,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
   </url>
   
@@ -355,7 +351,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</loc>
   </url>
   
   <url>

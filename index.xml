@@ -769,10 +769,10 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
     
     <item>
       <title>Jenkins 插件开发</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-develope/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
 运行 在工程根目录下执行 mvn hpi:run
