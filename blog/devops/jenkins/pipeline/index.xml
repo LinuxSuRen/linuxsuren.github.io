@@ -18,7 +18,7 @@
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
       <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。
-pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  </description>
+codes/jenkinsfile/parameter.groovy  拷贝   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  </description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@ pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultVal
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
-      <description>触发器 node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  循环 node(&#39;suren&#39;) { def dev_path = &#39;/opt/suren/bin&#39; def services = [ [ &#39;name&#39;: &#39;admin&#39;, &#39;project&#39;: &#39;admin&#39;, &#39;port&#39;: &#39;7002&#39;, &#39;jarName&#39;: &#39;admin&#39; ] ]; stage(&#39;Copy Artifact&#39;) { for(service in services){ step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
+      <description>触发器 codes/jenkinsfile/script-trigger.groovy  拷贝   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  循环 node(&#39;suren&#39;) { def dev_path = &#39;/opt/suren/bin&#39; def services = [ [ &#39;name&#39;: &#39;admin&#39;, &#39;project&#39;: &#39;admin&#39;, &#39;port&#39;: &#39;7002&#39;, &#39;jarName&#39;: &#39;admin&#39; ] ]; stage(&#39;Copy Artifact&#39;) { for(service in services){ step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
     </item>
     
   </channel>
