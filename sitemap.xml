@@ -229,10 +229,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/global_variable/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/goroutines/</loc>
   </url>
   
@@ -289,12 +285,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -701,6 +697,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/build/maven-release/</loc>
   </url>
   
@@ -761,10 +761,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-declarative/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/terminal/</loc>
   </url>
   
@@ -773,7 +769,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-pipeline-scripted/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</loc>
   </url>
   
   <url>
