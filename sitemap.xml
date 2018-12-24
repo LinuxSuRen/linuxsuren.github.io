@@ -19,6 +19,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
   </url>
   
@@ -28,10 +32,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/configuration/yaml/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/terraform/</loc>
   </url>
   
   <url>
@@ -766,10 +766,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/terminal/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/editor/</loc>
   </url>
   
   <url>
