@@ -1663,6 +1663,16 @@ yum install python-pip</description>
     </item>
     
     <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
+ codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } stages { stage(&amp;#39;one&amp;#39;) { steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  </description>
+    </item>
+    
+    <item>
       <title>脚本式流水线</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
