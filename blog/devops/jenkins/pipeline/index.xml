@@ -17,8 +17,10 @@
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
       <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
-参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。
- codes/jenkinsfile/parameter.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  </description>
+类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。
+点击这里查看更多的参数类型
+位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：
+ codes/jenkinsfile/parameter.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  执行历史 每次执行时的参数值，都可以在执行历史中看到。</description>
     </item>
     
     <item>

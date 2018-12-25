@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="35">
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -179,7 +179,13 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#类型">类型</a></li>
+<li><a href="#位置">位置</a></li>
+<li><a href="#执行历史">执行历史</a></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -224,9 +230,19 @@
 
 <div class="prose" id="prose">
 
+
+
 <p>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。</p>
 
-<p>参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。</p>
+<h1 id="类型">类型</h1>
+
+<p>流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。</p>
+
+<p><a href="https://jenkins.io/doc/developer/extensions/jenkins-core/#parameterdefinition">点击这里</a>查看更多的参数类型</p>
+
+<h1 id="位置">位置</h1>
+
+<p>参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：</p>
 
 
 
@@ -263,6 +279,10 @@
 </div>
 
 
+<h1 id="执行历史">执行历史</h1>
+
+<p>每次执行时的参数值，都可以在执行历史中看到。</p>
+
 </div>
 
 
@@ -281,11 +301,11 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/pipeline/">Jenkins 流水线插件</a></li>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
 </ul>
 
