@@ -30,7 +30,7 @@
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
       <description>申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
- codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } stages { stage(&amp;#39;one&amp;#39;) { steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  </description>
+ codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } stages { stage(&amp;#39;one&amp;#39;) { steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
     </item>
     
     <item>
