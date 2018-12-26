@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>ffmpeg | SuRenPi</title>
+    <title>Jenkins JUnit | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,10 +27,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="ffmpeg" />
-<meta property="og:description" content="ffmpeg" />
+<meta property="og:title" content="Jenkins JUnit" />
+<meta property="og:description" content="Jenkins JUnit" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/" />
 
 
 
@@ -47,19 +47,19 @@
 
 
 
-<meta itemprop="name" content="ffmpeg">
-<meta itemprop="description" content="ffmpeg">
+<meta itemprop="name" content="Jenkins JUnit">
+<meta itemprop="description" content="Jenkins JUnit">
 
 
 
-<meta itemprop="wordCount" content="48">
+<meta itemprop="wordCount" content="51">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ffmpeg"/>
-<meta name="twitter:description" content="ffmpeg"/>
+<meta name="twitter:title" content="Jenkins JUnit"/>
+<meta name="twitter:description" content="Jenkins JUnit"/>
 
 
 
@@ -178,10 +178,20 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#断言">断言</a></li>
+<li><a href="#数据源">数据源</a></li>
+<li><a href="#框架">框架</a></li>
+<li><a href="#环境变量">环境变量</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/os/linux/common/echo/" class="dib f6 pl1 hover-bg-light-gray br-100" title="echo ">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/" class="dib f6 pl1 hover-bg-light-gray br-100" title="CLI ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -191,7 +201,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/os/linux/common/grep/" class="dib f6 pr1 hover-bg-light-gray br-100" title="grep">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins Permission">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -210,13 +220,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">ffmpeg</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins JUnit</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      ffmpeg
+      Jenkins JUnit
     </div>
   
 
@@ -231,23 +241,43 @@
 
 
 
-<h1 id="静态水印">静态水印</h1>
+<h1 id="断言">断言</h1>
 
-<p><code>ffmpeg -y -i movieFile -vf &quot;movie=watermark.png [watermark]; [in][watermark]  overlay=x:y:opaque [out]&quot; movieWatermark.mp4</code></p>
+<pre><code>@Test
+public void basic() {
+    assertThat(&quot;abc&quot;, StringContains.containsString(&quot;a&quot;));
+    assertThat(&quot;abc&quot;, Matchers.not(StringContains.containsString(&quot;d&quot;)));
+    assertTrue(true);
+    assertFalse(false);
+    assertNull(null);
+    assertNotNull(&quot;&quot;);
+    assertEquals(&quot;a&quot;, &quot;a&quot;);
+}
+</code></pre>
 
-<p><code>ffmpeg -i jenkins.mov -i watermark.png -filter_complex &quot;overlay=10:10&quot; jenkins.mp4</code></p>
+<h1 id="数据源">数据源</h1>
 
-<h1 id="动态水印">动态水印</h1>
+<p>注解 <code>@LocalData</code> 会按照一定的规则去加载 <code>src/test/resources</code> 中的配置文件。</p>
 
-<p><code>ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration  -filter_complex overlay=0:0:1 movieGifFile</code></p>
+<p>例如：该注解加载类 <code>org.test.TestAgent</code> 的方法 <code>test</code> 上的话，就会去加载目录 <code>src/test/resources/org/test/TestAgent/test</code> 中的配置文件。另外，它还有一个 <code>value</code> 参数可以替代使用方法名称。</p>
 
-<p><a href="http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/">http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/</a></p>
+<h1 id="框架">框架</h1>
 
-<h1 id="合并视频">合并视频</h1>
+<p>Jenkins 的测试框架为 <a href="https://github.com/jenkinsci/acceptance-test-harness">acceptance-test-harness</a>。</p>
 
-<p>把视频文件按照顺序写入 <code>files.txt</code>，然后执行命令：</p>
+<p>在 <code>pom.xml</code> 中可以修改框架的版本，如下所示：</p>
 
-<p><code>ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</code></p>
+<pre><code>&lt;properties&gt;&lt;jenkins-test-harness.version&gt;2.28&lt;/jenkins-test-harness.version&gt;&lt;/properties&gt;
+</code></pre>
+
+<p>通过下面的方式修改 Jenkins 运行测试的版本：</p>
+
+<pre><code>&lt;properties&gt;&lt;jenkins.version&gt;2.150.1&lt;/jenkins.version&gt;&lt;/properties&gt;
+</code></pre>
+
+<h1 id="环境变量">环境变量</h1>
+
+<p>如果需要修改运行测试时的 Jenkins 版本，可以在启动 JVM 时指定参数 <code>-Djth.jenkins-war.path=/tmp/jenkins.war</code></p>
 
 </div>
 
@@ -263,6 +293,21 @@
 
 
           
+
+<h2>参考</h2>
+<ul>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	
+	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
+	
+	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	
+</ul>
 
         </div>
       </div>
@@ -396,14 +441,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “ffmpeg”
+    “Jenkins JUnit”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/os/linux/common/ffmpeg.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-junit.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

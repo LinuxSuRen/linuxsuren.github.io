@@ -225,10 +225,10 @@
 本文介绍如何把自己的maven项目发布到OSS中央仓库中。</p>
 
 <p>注册帐号
-<a href="https://issues.sonatype.org/secure/Signup!default.jspa" target="_blank">https://issues.sonatype.org/secure/Signup!default.jspa</a></p>
+<a href="https://issues.sonatype.org/secure/Signup!default.jspa">https://issues.sonatype.org/secure/Signup!default.jspa</a></p>
 
 <p>新建项目
-<a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;pid=10134" target="_blank">https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;pid=10134</a></p>
+<a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;pid=10134">https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;pid=10134</a></p>
 
 <p>sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。</p>
 
@@ -377,7 +377,7 @@
 
 <p>在项目根目录下（根据需要自行选择），执行命令mvn deploy</p>
 
-<p>如果没有任何报错的话，会先把jar等文件上传（upload）。等上传完成后，你需要登录<a href="https://oss.sonatype.org" target="_blank">https://oss.sonatype.org</a> ，点击左侧菜单Staging Repositories。从列表中找到你刚刚上传的工程，选中后点击Close。如果你不想每次手动完成该步骤，可以在pom.xml中添加下面的插件配置来实现自动化：</p>
+<p>如果没有任何报错的话，会先把jar等文件上传（upload）。等上传完成后，你需要登录<a href="https://oss.sonatype.org">https://oss.sonatype.org</a> ，点击左侧菜单Staging Repositories。从列表中找到你刚刚上传的工程，选中后点击Close。如果你不想每次手动完成该步骤，可以在pom.xml中添加下面的插件配置来实现自动化：</p>
 
 <pre><code>&lt;plugin&gt;
   &lt;groupId&gt;org.sonatype.plugins&lt;/groupId&gt;

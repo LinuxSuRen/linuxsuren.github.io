@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="162">
+<meta itemprop="wordCount" content="185">
 
 
 
@@ -181,12 +181,10 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
 <li><a href="#触发器">触发器</a></li>
 <li><a href="#参数化执行">参数化执行</a></li>
+<li><a href="#异常">异常</a></li>
 <li><a href="#循环">循环</a></li>
-</ul></li>
 </ul>
 </nav>
 	
@@ -235,7 +233,7 @@
 
 
 
-<h2 id="触发器">触发器</h2>
+<h1 id="触发器">触发器</h1>
 
 
 
@@ -272,7 +270,7 @@ properties([
 </div>
 
 
-<h2 id="参数化执行">参数化执行</h2>
+<h1 id="参数化执行">参数化执行</h1>
 
 <pre><code class="language-groovy">properties([[$class: 'JobRestrictionProperty'],
 	parameters([run(description: '',
@@ -283,44 +281,91 @@ properties([
 )
 </code></pre>
 
-<h2 id="循环">循环</h2>
+<h1 id="异常">异常</h1>
 
-<pre><code>node('suren') {
-    def dev_path = '/opt/suren/bin'
+<p>你可以利用处理异常的方式来实现类似于<a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/">申明式流水线中</a>的 <code>post</code></p>
+
+
+
+
+
+<div class="code-copy" id="static/codes/jenkinsfile/try-catch.groovy">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/try-catch.groovy</span>
+		<i class="icon-groovy input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-groovy">node {
+    stage(&#34;one&#34;){
+        try {
+            echo &#34;hello&#34;
+        }catch(error){
+            echo error.getMessage()
+        }finally{
+            echo &#34;finally&#34;
+        }
+    }
+}</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/try-catch.groovy" title="See codes/jenkinsfile/try-catch.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/try-catch.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+
+
+<h1 id="循环">循环</h1>
+
+<p>
+
+
+
+<div class="code-copy" id="static/codes/jenkinsfile/loop.groovy">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/loop.groovy</span>
+		<i class="icon-groovy input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-groovy">node(&#39;suren&#39;) {
+    def dev_path = &#39;/opt/suren/bin&#39;
     def services = [
         [
-            'name': 'admin',
-            'project': 'admin',
-            'port': '7002',
-            'jarName': 'admin'
+            &#39;name&#39;: &#39;admin&#39;,
+            &#39;project&#39;: &#39;admin&#39;,
+            &#39;port&#39;: &#39;7002&#39;,
+            &#39;jarName&#39;: &#39;admin&#39;
         ]
     ];
     
-    stage('Copy Artifact') {
+    stage(&#39;Copy Artifact&#39;) {
         for(service in services){
-            step([$class: 'CopyArtifact', fingerprintArtifacts: true, flatten: true,
+            step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true,
                 projectName: service.project,
-                selector: [$class: 'StatusBuildSelector', stable: false],
-                target: dev_path + '/' + service.name
+                selector: [$class: &#39;StatusBuildSelector&#39;, stable: false],
+                target: dev_path &#43; &#39;/&#39; &#43; service.name
             ])
         }
     }
     
-    stage('Stop Service') {
+    stage(&#39;Stop Service&#39;) {
         for(service in services){
-           sh 'fuser -n tcp -k ' + service.port + ' &gt; redirection &amp;'
+           sh &#39;fuser -n tcp -k &#39; &#43; service.port &#43; &#39; &gt; redirection &amp;&#39;
         }
     }
     
-    stage('Start Service') {
+    stage(&#39;Start Service&#39;) {
         for(service in services){
-            sh 'cd ' + pass_bin + '/' + service.name + ' &amp;&amp; nohup nice java -server -Xms128m -Xmx384m \
-                -jar ' + service.jarName + '.jar \
-                --server.port=' + service.port + ' $&gt; initServer.log 2&gt;&amp;1 &amp;'
+            sh &#39;cd &#39; &#43; pass_bin &#43; &#39;/&#39; &#43; service.name &#43; &#39; &amp;&amp; nohup nice java -server -Xms128m -Xmx384m \
+                -jar &#39; &#43; service.jarName &#43; &#39;.jar \
+                --server.port=&#39; &#43; service.port &#43; &#39; $&gt; initServer.log 2&gt;&amp;1 &amp;&#39;
         }
     }
-}
-</code></pre>
+}</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/loop.groovy" title="See codes/jenkinsfile/loop.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/loop.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+</p>
 
 </div>
 
@@ -340,15 +385,15 @@ properties([
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/parameterized/">参数化流水线</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/declarative/">申明式流水线</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
 </ul>
 
