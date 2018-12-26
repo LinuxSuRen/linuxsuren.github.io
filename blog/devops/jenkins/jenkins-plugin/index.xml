@@ -65,7 +65,8 @@
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
       <description>Jenkins 的汉化（简体中文）需要安装中文插件。
 具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
-这里有一个视频可以供各位参考。</description>
+这里有一个视频可以供各位参考。
+  </description>
     </item>
     
   </channel>
