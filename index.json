@@ -98,6 +98,13 @@
         "content": " Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。\n控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类\n构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/editor/vscode/build-extensions/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": "你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：\nnpm install -g yo generator-code\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/network/chromedp/",
         "title": "",
         "tags": [],
@@ -159,13 +166,6 @@
         "tags": [],
         "description": "Auto complete",
         "content": "Ctrl+X+P 整行\nCtrl+X+N 当前文件\nCtrl+X+K 字典\nCtrl+X+I 当前以及包含的文件\nCtrl+X+F 文件名\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/",
-        "title": "Bagde 插件",
-        "tags": [],
-        "description": "Bagde 插件",
-        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/banana-pi/",
@@ -571,7 +571,7 @@
         "title": "Jenkins Plugins",
         "tags": [],
         "description": "Jenkins 插件推荐以及介绍",
-        "content": ""
+        "content": "Jenkins 有非常丰富的插件，这里是我整理出来的一些插件使用说明。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/",
@@ -670,6 +670,13 @@
         "tags": [],
         "description": "Jenkins 调试",
         "content": "mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/",
+        "title": "Jira",
+        "tags": [],
+        "description": "Jira 插件",
+        "content": " Jira 插件 是 Jira 和 Jenkins 集成的一个插件。在系统配置中，添加 Jira 的配置后，如果在 git 提交日志中包含了 Jira ID 的话，就可以在构建的变更记录中直接点击进入到 Jira 对应到页面。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/cert/",

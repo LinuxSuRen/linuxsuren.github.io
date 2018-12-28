@@ -118,6 +118,16 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</guid>
+      <description>你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：
+npm install -g yo generator-code</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/blog/network/chromedp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -216,15 +226,6 @@ Ctrl+X+N 当前文件
 Ctrl+X+K 字典
 Ctrl+X+I 当前以及包含的文件
 Ctrl+X+F 文件名</description>
-    </item>
-    
-    <item>
-      <title>Bagde 插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -875,6 +876,15 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
 mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
 java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
 mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</description>
+    </item>
+    
+    <item>
+      <title>Jira</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</guid>
+      <description>Jira 插件 是 Jira 和 Jenkins 集成的一个插件。在系统配置中，添加 Jira 的配置后，如果在 git 提交日志中包含了 Jira ID 的话，就可以在构建的变更记录中直接点击进入到 Jira 对应到页面。</description>
     </item>
     
     <item>

@@ -59,6 +59,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/network/chromedp/</loc>
   </url>
   
@@ -92,10 +96,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/badge/</loc>
   </url>
   
   <url>
@@ -388,6 +388,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</loc>
   </url>
   
   <url>
