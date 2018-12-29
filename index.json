@@ -28,31 +28,38 @@
         "content": "编程语言\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/",
-        "title": "编辑器",
+        "uri": "https://linuxsuren.github.io/blog/network/",
+        "title": "网络",
         "tags": [],
-        "description": "编辑器",
-        "content": "编辑器\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/configuration/ini/",
-        "title": "",
-        "tags": [],
-        "description": "",
+        "description": "网络相关",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/configuration/toml/",
-        "title": "",
+        "uri": "https://linuxsuren.github.io/blog/scm/",
+        "title": "SCM",
         "tags": [],
-        "description": "",
-        "content": " TOML TOML(Tom\u0026rsquo;s Obvious, Minimal Language) origin\n"
+        "description": "SCM",
+        "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/configuration/yaml/",
-        "title": "",
+        "uri": "https://linuxsuren.github.io/blog/server/",
+        "title": "应用服务",
         "tags": [],
-        "description": "",
+        "description": "有关应用服务的配置",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/test/",
+        "title": "测试",
+        "tags": [],
+        "description": "介绍有关测试的内容",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/",
+        "title": "其他内容",
+        "tags": [],
+        "description": "其他内容",
         "content": ""
     },
     {
@@ -77,39 +84,60 @@
         "content": " 基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：\nFROM alpine:3.8\nProxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\nEXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample\nRUN RUN 为 Docker 镜像在构建时执行的命令\nCMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [\u0026quot;echo\u0026quot;, \u0026quot;hello\u0026quot;]\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/document/hugo/",
+        "uri": "https://linuxsuren.github.io/blog/network/chromedp/",
         "title": "",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/document/markdown/",
+        "uri": "https://linuxsuren.github.io/blog/other/configuration/ini/",
         "title": "",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/",
+        "uri": "https://linuxsuren.github.io/blog/other/configuration/toml/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": " TOML TOML(Tom\u0026rsquo;s Obvious, Minimal Language) origin\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/configuration/yaml/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/document/hugo/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/document/markdown/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/",
         "title": "",
         "tags": [],
         "description": "",
         "content": " Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。\n控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类\n构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vscode/build-extensions/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/",
         "title": "",
         "tags": [],
         "description": "",
         "content": "你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：\nnpm install -g yo generator-code\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/network/chromedp/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/",
@@ -161,14 +189,14 @@
         "content": " ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/",
         "title": "Auto complete",
         "tags": [],
         "description": "Auto complete",
         "content": "Ctrl+X+P 整行\nCtrl+X+N 当前文件\nCtrl+X+K 字典\nCtrl+X+I 当前以及包含的文件\nCtrl+X+F 文件名\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/banana-pi/",
+        "uri": "https://linuxsuren.github.io/blog/other/banana-pi/",
         "title": "BananaPi",
         "tags": [],
         "description": "BananaPi",
@@ -231,7 +259,7 @@
         "content": " iPad 安装依赖的工具：\nadd-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa\n卸载应用 ideviceinstaller -U [bundleID]\n查看系统日志 idevicesyslog\n查看当前已连接的设备的UUID idevice_id --list\n截图 idevicescreenshot\n查看设备信息 videviceinfo\n获取设备时间 idevicedate\n参考 https://github.com/LinuxSuRen/libimobiledevice\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/",
         "title": "Directory",
         "tags": [],
         "description": "Directory",
@@ -280,7 +308,7 @@
         "content": "使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/eclipse/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/eclipse/",
         "title": "Eclipse Plugin",
         "tags": [],
         "description": "Eclipse 的使用以及插件开发",
@@ -294,7 +322,7 @@
         "content": " 查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。\n查找文件夹 find ~ -type d -name jx\n查找并执行命令 find . -name *.java | xargs echo 查找完后执行\n查找特定文件 cp $(find core/src/main/resources -type f -name \u0026quot;*_zh_CN.properties\u0026quot;) /tmp\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/browser/firefox/",
+        "uri": "https://linuxsuren.github.io/blog/other/browser/firefox/",
         "title": "Firefox",
         "tags": [],
         "description": "Firefox",
@@ -420,7 +448,7 @@
         "content": " 200 300 400 401 未经授权：访问由于凭据无效被拒绝。\n404 无法找到页面\n500 Reference "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/idea/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/idea/",
         "title": "IDEA",
         "tags": [],
         "description": "IDEA",
@@ -448,14 +476,14 @@
         "content": "查看可用的版本 apt-cache madison docker-ce\n安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/",
         "title": "IntelliJ IDEA 快捷键",
         "tags": [],
         "description": "IntelliJ IDEA 快捷键",
         "content": "Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/terminal/iterm2/",
+        "uri": "https://linuxsuren.github.io/blog/other/terminal/iterm2/",
         "title": "Iterm2",
         "tags": [],
         "description": "Iterm2",
@@ -469,7 +497,7 @@
         "content": " 查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/jvm/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/jvm/",
         "title": "JVM Arguments",
         "tags": [],
         "description": "JVM Arguments",
@@ -483,7 +511,7 @@
         "content": "Java\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/",
         "title": "Java Annotation Processing and Creating a Builder",
         "tags": [],
         "description": "Java Annotation Processing and Creating a Builder",
@@ -756,14 +784,14 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/maven/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/maven/",
         "title": "Maven",
         "tags": [],
         "description": "Maven 是非常流行的一个 Java 持续构建工具",
         "content": " 构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过测试 mvn package -DskipTests=true\nmvn package -U 强制更新快照版本的依赖\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/maven-repository/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/maven-repository/",
         "title": "Maven Repository",
         "tags": [],
         "description": "Maven 仓库",
@@ -777,7 +805,7 @@
         "content": " 下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64\n然后，添加可执行权限并移动到执行目录下：\nchmodd u+x minikube-linux-amd64 \u0026amp;\u0026amp; mv minikube-linux-amd64 /usr/local/bin/minikue\n下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/banana-pi/monitor/",
+        "uri": "https://linuxsuren.github.io/blog/other/banana-pi/monitor/",
         "title": "Monitor",
         "tags": [],
         "description": "Monitor",
@@ -826,13 +854,6 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/",
-        "title": "SCM",
-        "tags": [],
-        "description": "SCM",
-        "content": ""
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/sshd/",
         "title": "SSDH",
         "tags": [],
@@ -854,7 +875,7 @@
         "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/codequality/sonarqube/",
+        "uri": "https://linuxsuren.github.io/blog/other/codequality/sonarqube/",
         "title": "Sonarqube",
         "tags": [],
         "description": "Sonarqube",
@@ -924,7 +945,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/document/typora/",
+        "uri": "https://linuxsuren.github.io/blog/other/document/typora/",
         "title": "Typora",
         "tags": [],
         "description": "",
@@ -945,70 +966,70 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/",
         "title": "VIM",
         "tags": [],
         "description": "VIM",
         "content": "编辑器\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/",
         "title": "VIM Buffer",
         "tags": [],
         "description": "VIM Buffer",
         "content": ":ls 或 :buffers 列出所有的缓冲区\n:b 1 切换到指定编号的缓冲区\n:sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/",
         "title": "VIM Command",
         "tags": [],
         "description": "VIM Command",
         "content": " 命令模式 删除文本 x 删除当前字符 X 删除前一个字符\ndd 删除当前行 D 删除当前字符后的文本\ndw 删除当前单词\n字符替换 R 开启字符串替换模式，知道按下 ESC\nr 替换当前字符\n转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。\n通过命令 ~ 可以切换所选或光标所在的字符大小写\ng~~ 切换当前行的大小写\nguu 切换当前行为小写\ngUU 切换当前行为大写\n撤销 u 撤销一次更改 ctrl+r 恢复一次撤销\n剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板\nyy 拷贝当前行\np 粘贴\n格式化 :left 居左对齐 :right 居右对齐\n数字 ctrl+a 数字+1\nctrl+x 数字-1\n其他 ctrl+g 显示当前文件路径\n编辑模式 Reference Vim documentation: help Vim documentation: change\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-go/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/",
         "title": "VIM GoLang",
         "tags": [],
         "description": "VIM plugin for GoLang",
         "content": " Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct\nAction :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-network/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/",
         "title": "VIM Network",
         "tags": [],
         "description": "Reading and writing files over a network",
         "content": " VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/\nReference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/",
         "title": "VIM Plugins",
         "tags": [],
         "description": "Here are lots of plugins for VIM",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-regex/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/",
         "title": "VIM Replace",
         "tags": [],
         "description": "VIM Replace",
         "content": "简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]\n全局文本替换 :[range]g[lobal]/{pattern}/[cmd]\n:[range]g[lobal]!/{pattern}/[cmd]\n示例：\n将找到的第一个字符串abc替换为def s/abc/def\n将找到的所有字符串abc替换为def s/abc/def/g\n将包含有字符串abc的行删除 g/abc/ del\n将行首增加序列号 let i = 1 | g/./s/^/\\=i/ | let i += 1\n将所有包含image331的行中，替换331为从331开始递增的数字 let i = 331 | g/image331/s/331/\\=i/ | let i += 1\n从1358行开始进行替换 let i = 792 | 1358,$g/resources\\/image/s/\\d\\d\\d/\\=i/ | let i += 2\n将所有已开头的行在结尾添加 g/^\\s*\u0026lt;para\u0026gt;/ s/$/\u0026lt;\\/para\u0026gt;\n把以开头，若干个空白结尾的行删除 g/^\\s*\u0026lt;para\u0026gt;\\s*\u0026lt;\\/para\u0026gt;$/ del\n把以空白字符开头，并且第一个字符不是\u0026lt;的行首添加 g!/^\\s*\u0026lt;/ s/^/\u0026lt;para\u0026gt;\n把中间还有尖括号(\u0026lt;\u0026gt;)的行删除 g/\u0026lt;para\u0026gt;.*[\u0026lt;\u0026gt;].*\u0026lt;\\/para\u0026gt;/ del\n找到没有以结尾的行 s/para\u0026gt;.*[^(\u0026lt;\\/para\u0026gt;)]$\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-bundle/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/",
         "title": "VIM bundle",
         "tags": [],
         "description": "VIM bundle",
         "content": " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim\nReference Vundle\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/",
         "title": "VIM core",
         "tags": [],
         "description": "VIM core",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/",
         "title": "VIM tab",
         "tags": [],
         "description": "VIM 中使用选项卡",
@@ -1022,14 +1043,14 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/core/vim/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim/",
         "title": "Vim",
         "tags": [],
         "description": "Vim",
         "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/",
         "title": "Vim-Fugitive",
         "tags": [],
         "description": "Vim-Fugitive",
@@ -1043,7 +1064,7 @@
         "content": "为什么要参与开源事业？这是一个非常好的问题。下面，我会对此发表几个观点。\n先说，为什么会考虑参与开源。在工作了几个年头之后，我发现了一个问题——做了很多的项目，或大或小，我的角色只是个 Coding 的劳动力。 也许有人对此有别的看法，但是，对于走进 IT 行业的头三年了去我差不多就是这么理解的。学习几个框架，写段后端逻辑，改改页面上的按钮、菜单。 由于缺少经验，没有自己的想法，提不出好的建议。有些逻辑能力强的人，会感觉自己能够精通几个框架。但是，这些所谓的框架更新换代太快， 我们又不会总是那么年轻，总是有那么多的时间来无尽地学习。\n然后，某个机会，开始对开源慢慢地有些了解。其实，这是非常地有意思的一件事情。我想，从 Java 开始走向编程之路的程序员们，应该不可能 没有听说过、用过开源的项目。但是，国内这些程序员里，却只有少部分的人尝试过去参与开源。\n一开始，我也是抱着试试的态度的。当时，感觉做开源的人应该都很厉害吧，比如当时很流行的 Spring 框架。毕竟，用的都不是很熟悉，怎么可能 去参与开源开发呢。对，这就是很大的一个误区——参与开源项目，不一定只能是参与代码的编写。按照我目前的认识，代码编写，真的只是开源事业 中很小的一部分。\n上面提到了一些企业开发中的痛点，对公司的项目没有足够的参与感。我这里问读者一个问题，不管你现在有几年的工作经验：对于你们公司的项目， 你有多少的话语权呢？项目的功能模块，要做哪些、怎么做，设计与技术架构都是由哪些人来决定的呢？在很长的一段时间内，这些都是由公司的 项目经历来确定的，我只是努力在 Deadline 之前交付。但是，在好的开源社区里，完全不是这么来的。\n喊了多少年的单元测试，不再是说说而已，这是必须的，甚至比业务代码更加重要。\n我感觉项目中，应该加上一个很棒的特性。先在邮件组里发一封邮件，给出原型，大家讨论一下。如果切实可行的话，可能几周、几月内这个功能特性 就上线了。也许，我的这个提议会给很多人带来一些遍历；也许，自己小小的虚荣心会得到满足。总之，好的开源社区一定民主，而不是专制的。\n公司里的那个项目，我才做了一个月就被砍掉了。完全不知道为什么要做那个，也没有学习到任何的东西。在这里，要看你的眼光，选准一个好的社区， 你可以在这个社区里贡献五年、十年，甚至是整个事业周期。也许，你会做这个项目里的每行代码都很熟悉；当你再次说出精通时不再心虚。\n参与开源的好处。\n我在公司里干活，会有人支付我薪水。做开源，甚至都没有人来一步步地告诉我怎么做，完全蒙。更要命的是，没有任何的经济回报。\n是的，参与开源，并不会有人来支付你工资，更没有奖金。我给你一个很虚，也很实在的理由，那就是开源会让你更容易知道归属感，让你不再感觉 自己只是个廉价劳动力。像 Jenkins、Kubernetes 这样的项目，除非你自己决定不再贡献，没有人可以阻止你参与。你也能很容易地看到，有很多 人在使用你参与开发的项目，包括你自己。\n如果你喜欢技术，那么，当你参与某个项目三五年后，你会精通这个项目周边的整个技术栈。你会亲自看着这个项目的兴衰。之后，你还会发现除了 技术还有很多很重要的东西。因为，当你真正地开始关心这个项目后，你会想各种办法来确保她可以健康地发展。你会发现，当初嗤之以鼻的文档 真的太重要了。你会发现，沟通能力也是非常基础的要求。你会发现，你愿意借助各种机会来宣传你的项目。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/",
         "title": "ctrlp",
         "tags": [],
         "description": "ctrlp",
@@ -1134,7 +1155,7 @@
         "content": "查看端口占用 lsof -nP -i4TCP:9091\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/maven-gpg-plugin/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/",
         "title": "maven-gpg-plugin",
         "tags": [],
         "description": "maven-gpg-plugin",
@@ -1183,14 +1204,14 @@
         "content": " 添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等\nuseradd user-name --home /home/user-name --create-home\nsu user-name\nuserdel user-name\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/",
         "title": "vim-airline",
         "tags": [],
         "description": "vim-airline",
         "content": " Reference vim-airline\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/editor/vscode/",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/vscode/",
         "title": "vscode",
         "tags": [],
         "description": "vscode",
@@ -1225,7 +1246,7 @@
         "content": " 分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks\nCentOS yum install shadowsocks\npip install shadowsocks\nsudo pip install shadowsocks --upgrade\n使用 sudo sslocal -c shadowsocks.json -d start\npolipo 安装 sudo apt-get install polipo\nbrew install polip\n安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo \u0026amp;\u0026amp; make all \u0026amp;\u0026amp; make install\n使用 polipo socksParentProxy=127.0.0.1:1080\n配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  参考 如何给 Git 配置代理\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/codequality/",
+        "uri": "https://linuxsuren.github.io/blog/other/codequality/",
         "title": "代码质量",
         "tags": [],
         "description": "代码质量相关内容",
@@ -1246,7 +1267,7 @@
         "content": " 参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。\n类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。\n点击这里查看更多的参数类型\n位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：\n codes/jenkinsfile/parameter.groovy   pipeline { agent { label \u0026#34;master\u0026#34; } parameters { text defaultValue: \u0026#39;Rick\u0026#39;, description: \u0026#39;\u0026#39;, name: \u0026#39;name\u0026#39; } stages{ stage(\u0026#34;one\u0026#34;){ steps{ echo name sh \u0026#39;echo ${name}\u0026#39; } } } } 原文件  执行历史 每次执行时的参数值，都可以在执行历史中看到。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/maven-release/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/maven-release/",
         "title": "发布Maven工程到中央仓库",
         "tags": [],
         "description": "发布Maven工程到中央仓库",
@@ -1288,13 +1309,6 @@
         "content": "yum install python\nyum install python-pip\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/server/",
-        "title": "应用服务",
-        "tags": [],
-        "description": "有关应用服务的配置",
-        "content": ""
-    },
-    {
         "uri": "https://linuxsuren.github.io/",
         "title": "开源的技术网站",
         "tags": [],
@@ -1316,7 +1330,7 @@
         "content": " 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。\n流水线 "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/document/",
+        "uri": "https://linuxsuren.github.io/blog/other/document/",
         "title": "文档技术",
         "tags": [],
         "description": "文档技术",
@@ -1330,21 +1344,14 @@
         "content": "文章翻译区域\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/build/",
+        "uri": "https://linuxsuren.github.io/blog/devops/build/",
         "title": "构建",
         "tags": [],
         "description": "程序构建",
         "content": "构建\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/test/",
-        "title": "测试",
-        "tags": [],
-        "description": "介绍有关测试的内容",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/browser/",
+        "uri": "https://linuxsuren.github.io/blog/other/browser/",
         "title": "浏览器",
         "tags": [],
         "description": "浏览器",
@@ -1358,18 +1365,18 @@
         "content": "流水线插件从 2.5 版本开始支持申明式流水线。\n申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：\n codes/jenkinsfile/declarative.groovy   pipeline { agent { label \u0026#34;master\u0026#34; } stages { stage(\u0026#39;one\u0026#39;) { steps { echo \u0026#39;Hello World\u0026#39; } } } post { always { echo \u0026#39;I will always say Hello again!\u0026#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/terminal/",
+        "uri": "https://linuxsuren.github.io/blog/other/terminal/",
         "title": "终端",
         "tags": [],
         "description": "终端",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/network/",
-        "title": "网络",
+        "uri": "https://linuxsuren.github.io/blog/other/editor/",
+        "title": "编辑器",
         "tags": [],
-        "description": "网络相关",
-        "content": ""
+        "description": "编辑器",
+        "content": "编辑器\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/",
@@ -1386,7 +1393,7 @@
         "content": " 代理 给 Docker 设置代理\n创建目录 mkdir /etc/systemd/system/docker.service.d\n编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf\n[Service] Environment=\u0026quot;HTTP_PROXY=http://ip:port\u0026quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf\n[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json\n\u0026quot;insecure-registries\u0026quot; : [\u0026quot;192.168.0.180\u0026quot;]\nUbuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：\nDOCKER_OPTS=\u0026quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port\u0026quot;\nUser 让普通用户可以执行 docker\nsudo groupadd docker\nsudo gpasswd -a ${USER} docker\nsudo service docker restart\n重启服务 执行命令 systemctl daemon-reload \u0026amp;\u0026amp; systemctl stop docker \u0026amp;\u0026amp; systemctl start docker\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/configuration/",
+        "uri": "https://linuxsuren.github.io/blog/other/configuration/",
         "title": "配置文件",
         "tags": [],
         "description": "介绍各种配置文件",

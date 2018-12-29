@@ -12,33 +12,6 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/ini/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/configuration/ini/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/toml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/configuration/toml/</guid>
-      <description>TOML TOML(Tom&amp;rsquo;s Obvious, Minimal Language) origin</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/yaml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/configuration/yaml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/docker/docker-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -89,28 +62,64 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/document/hugo/</link>
+      <link>https://linuxsuren.github.io/blog/network/chromedp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/document/hugo/</guid>
+      <guid>https://linuxsuren.github.io/blog/network/chromedp/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/document/markdown/</link>
+      <link>https://linuxsuren.github.io/blog/other/configuration/ini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/document/markdown/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/configuration/ini/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</link>
+      <link>https://linuxsuren.github.io/blog/other/configuration/toml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/configuration/toml/</guid>
+      <description>TOML TOML(Tom&amp;rsquo;s Obvious, Minimal Language) origin</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/other/configuration/yaml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/configuration/yaml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/other/document/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/document/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/other/document/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/document/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</guid>
       <description>Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。
 控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类
 构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
@@ -118,21 +127,12 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</guid>
       <description>你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：
 npm install -g yo generator-code</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/network/chromedp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/network/chromedp/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -217,10 +217,10 @@ Restricted Usage: @Restricted(NoExternalUse.class)
     
     <item>
       <title>Auto complete</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</guid>
       <description>Ctrl+X+P 整行
 Ctrl+X+N 当前文件
 Ctrl+X+K 字典
@@ -285,10 +285,10 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     
     <item>
       <title>Directory</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</guid>
       <description>:pwd 查看当前目录
 :cd %:p:h 切换目录到当前文件所在目录
 :lcd %:p:h 切换当前窗口的目录到当前文件所在目录</description>
@@ -370,10 +370,10 @@ docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot
     
     <item>
       <title>Firefox</title>
-      <link>https://linuxsuren.github.io/blog/browser/firefox/</link>
+      <link>https://linuxsuren.github.io/blog/other/browser/firefox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/browser/firefox/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/browser/firefox/</guid>
       <description>firefox -private</description>
     </item>
     
@@ -613,19 +613,19 @@ sudo apt-get install maven make -y
     
     <item>
       <title>IntelliJ IDEA 快捷键</title>
-      <link>https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</guid>
       <description>Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  </description>
     </item>
     
     <item>
       <title>Iterm2</title>
-      <link>https://linuxsuren.github.io/blog/terminal/iterm2/</link>
+      <link>https://linuxsuren.github.io/blog/other/terminal/iterm2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/terminal/iterm2/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/terminal/iterm2/</guid>
       <description>自动完成 CMD+;
 Reference https://www.iterm2.com</description>
     </item>
@@ -641,20 +641,20 @@ Reference https://www.iterm2.com</description>
     
     <item>
       <title>JVM Arguments</title>
-      <link>https://linuxsuren.github.io/blog/build/jvm/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/jvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/jvm/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/jvm/</guid>
       <description>有些情况下，我们需要修改启动 Maven 时的 JVM 参数。
 MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-Xmx1024m&amp;quot; clean</description>
     </item>
     
     <item>
       <title>Java Annotation Processing and Creating a Builder</title>
-      <link>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</guid>
       <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
     </item>
     
@@ -982,10 +982,10 @@ Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kub
     
     <item>
       <title>Maven</title>
-      <link>https://linuxsuren.github.io/blog/build/maven/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/maven/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven/</guid>
       <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
 跳过测试 mvn package -DskipTests=true
 mvn package -U 强制更新快照版本的依赖
@@ -1000,10 +1000,10 @@ mvn help:effective-pom
     
     <item>
       <title>Maven Repository</title>
-      <link>https://linuxsuren.github.io/blog/build/maven-repository/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/maven-repository/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-repository/</guid>
       <description>Maven 仓库（Repository）大致可以分为私有、公有两类。我们暂且认为企业内部的就是私有的，但是，公有的仓库也会有很多（除 Maven 官方的中央仓库以外）。
 当我们的 Maven 项目发布到特定仓库以后，可以在需要依赖的 pom.xml 文件中添加明确的仓库地址，这样就可以避免在构建构成中因为找不到而报错了。下面给出一个参考配置：
 &amp;lt;project&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;repo.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;http://repo.jenkins-ci.org/public/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;nexus-oss-snapshots&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots/&amp;lt;/url&amp;gt; &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt; &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/releases&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;/project&amp;gt;  注意 central 这个 id 是 Maven 官方中央仓库的默认值，如果你设置的仓库使用了该值的话就会覆盖中央仓库。</description>
@@ -1023,10 +1023,10 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     
     <item>
       <title>Monitor</title>
-      <link>https://linuxsuren.github.io/blog/banana-pi/monitor/</link>
+      <link>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/banana-pi/monitor/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</guid>
       <description>查看温度 安装软件 apt-get install sensord
 然后执行命令 sensors</description>
     </item>
@@ -1105,10 +1105,10 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     
     <item>
       <title>Sonarqube</title>
-      <link>https://linuxsuren.github.io/blog/codequality/sonarqube/</link>
+      <link>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/codequality/sonarqube/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</guid>
       <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
     </item>
     
@@ -1208,10 +1208,10 @@ Leader 当前，很多人称带团队的人之为“领导”，亦或者是“�
     
     <item>
       <title>Typora</title>
-      <link>https://linuxsuren.github.io/blog/document/typora/</link>
+      <link>https://linuxsuren.github.io/blog/other/document/typora/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/document/typora/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/document/typora/</guid>
       <description>Typora 支持用 Markdown 的方式来“画”流程图。
 流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d</description>
     </item>
@@ -1227,10 +1227,10 @@ Leader 当前，很多人称带团队的人之为“领导”，亦或者是“�
     
     <item>
       <title>VIM Buffer</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</guid>
       <description>:ls 或 :buffers 列出所有的缓冲区
 :b 1 切换到指定编号的缓冲区
 :sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口</description>
@@ -1238,10 +1238,10 @@ Leader 当前，很多人称带团队的人之为“领导”，亦或者是“�
     
     <item>
       <title>VIM Command</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</guid>
       <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符
 dd 删除当前行 D 删除当前字符后的文本
 dw 删除当前单词
@@ -1265,30 +1265,30 @@ ctrl+x 数字-1
     
     <item>
       <title>VIM GoLang</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-go/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-go/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</guid>
       <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
 Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
     </item>
     
     <item>
       <title>VIM Network</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-network/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-network/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</guid>
       <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/
 Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     </item>
     
     <item>
       <title>VIM Replace</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-regex/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-regex/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</guid>
       <description>简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]
 全局文本替换 :[range]g[lobal]/{pattern}/[cmd]
 :[range]g[lobal]!/{pattern}/[cmd]
@@ -1308,20 +1308,20 @@ Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     
     <item>
       <title>VIM bundle</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-bundle/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-bundle/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</guid>
       <description>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Reference Vundle</description>
     </item>
     
     <item>
       <title>VIM tab</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</guid>
       <description>:tabnew a.log 新建选项卡
 :tabNext 切换到下一个选项卡
 :tabprevious 切换到上一个选项卡
@@ -1339,10 +1339,10 @@ Reference Vundle</description>
     
     <item>
       <title>Vim</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/core/vim/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/core/vim/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</guid>
       <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
 :set paste
 解除 paste 模式的命令如下：
@@ -1352,10 +1352,10 @@ Reference Vundle</description>
     
     <item>
       <title>Vim-Fugitive</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</guid>
       <description>Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle
 Usage :Gstatus 查看变更状态，等同于 git status
 :Gcommit % 提交代码，等同于 git commit
@@ -1387,10 +1387,10 @@ Reference vim-fugitive vim-scripts</description>
     
     <item>
       <title>ctrlp</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</guid>
       <description>Reference ctrlp</description>
     </item>
     
@@ -1510,10 +1510,10 @@ govendor list</description>
     
     <item>
       <title>maven-gpg-plugin</title>
-      <link>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</guid>
       <description>[INFO] &amp;mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator &amp;mdash; gpg: directory &amp;lsquo;/home/jenkins/.gnupg&amp;rsquo; created gpg: keybox &amp;lsquo;/home/jenkins/.gnupg/pubring.kbx&amp;rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key
 gpg: signing failed: Inappropriate ioctl for device
 https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51</description>
@@ -1580,10 +1580,10 @@ userdel user-name</description>
     
     <item>
       <title>vim-airline</title>
-      <link>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</guid>
       <description>Reference vim-airline</description>
     </item>
     
@@ -1654,10 +1654,10 @@ brew install polip
     
     <item>
       <title>发布Maven工程到中央仓库</title>
-      <link>https://linuxsuren.github.io/blog/build/maven-release/</link>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-release/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/build/maven-release/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
       <description>介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。
 注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
 新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134

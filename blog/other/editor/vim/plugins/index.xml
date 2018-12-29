@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VIM Plugins on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/</link>
+    <description>Recent content in VIM Plugins on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/other/editor/vim/plugins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VIM GoLang</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</guid>
+      <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
+Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
+    </item>
+    
+    <item>
+      <title>VIM bundle</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</guid>
+      <description>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+Reference Vundle</description>
+    </item>
+    
+    <item>
+      <title>Vim-Fugitive</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</guid>
+      <description>Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle
+Usage :Gstatus 查看变更状态，等同于 git status
+:Gcommit % 提交代码，等同于 git commit
+:Gpush 推送代码
+:Gpush -u origin test 推送新的分支
+:Gpull 拉取代码
+Reference vim-fugitive vim-scripts</description>
+    </item>
+    
+    <item>
+      <title>ctrlp</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</guid>
+      <description>Reference ctrlp</description>
+    </item>
+    
+    <item>
+      <title>vim-airline</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</guid>
+      <description>Reference vim-airline</description>
+    </item>
+    
+  </channel>
+</rss>

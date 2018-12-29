@@ -19,19 +19,23 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/</loc>
+    <loc>https://linuxsuren.github.io/blog/network/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
+    <loc>https://linuxsuren.github.io/blog/scm/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/toml/</loc>
+    <loc>https://linuxsuren.github.io/blog/server/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/yaml/</loc>
+    <loc>https://linuxsuren.github.io/blog/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/</loc>
   </url>
   
   <url>
@@ -47,23 +51,35 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/document/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/document/markdown/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/editor/eclipse/eclipse-plugin-dev/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vscode/build-extensions/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/network/chromedp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/ini/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/toml/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/yaml/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</loc>
   </url>
   
   <url>
@@ -95,11 +111,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-auto-complete/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/banana-pi/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/banana-pi/</loc>
   </url>
   
   <url>
@@ -137,7 +153,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-dir/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</loc>
   </url>
   
   <url>
@@ -165,7 +181,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/eclipse/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/eclipse/</loc>
   </url>
   
   <url>
@@ -173,7 +189,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/browser/firefox/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/browser/firefox/</loc>
   </url>
   
   <url>
@@ -245,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/idea/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/idea/</loc>
   </url>
   
   <url>
@@ -261,11 +277,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/idea/idea-shortcut/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/terminal/iterm2/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/terminal/iterm2/</loc>
   </url>
   
   <url>
@@ -273,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/jvm/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/jvm/</loc>
   </url>
   
   <url>
@@ -281,7 +297,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/java-annotation-processing-builder/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</loc>
   </url>
   
   <url>
@@ -439,11 +455,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/maven/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/maven-repository/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-repository/</loc>
   </url>
   
   <url>
@@ -451,7 +467,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/banana-pi/monitor/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</loc>
   </url>
   
   <url>
@@ -480,10 +496,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/sshd/</loc>
   </url>
   
@@ -496,7 +508,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/codequality/sonarqube/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</loc>
   </url>
   
   <url>
@@ -537,7 +549,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/document/typora/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/document/typora/</loc>
   </url>
   
   <url>
@@ -549,43 +561,43 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-buffer/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-cmd/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-go/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-network/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-regex/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-bundle/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim-tab/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</loc>
   </url>
   
   <url>
@@ -593,11 +605,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/core/vim/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-fugitive/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</loc>
   </url>
   
   <url>
@@ -605,7 +617,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-ctrlp/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</loc>
   </url>
   
   <url>
@@ -657,7 +669,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/maven-gpg-plugin/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</loc>
   </url>
   
   <url>
@@ -685,11 +697,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vim/plugins/vim-airline/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/editor/vscode/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vscode/</loc>
   </url>
   
   <url>
@@ -709,7 +721,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/codequality/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/codequality/</loc>
   </url>
   
   <url>
@@ -721,7 +733,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/maven-release/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-release/</loc>
   </url>
   
   <url>
@@ -745,10 +757,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/server/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/</loc>
   </url>
   
@@ -761,7 +769,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/document/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/document/</loc>
   </url>
   
   <url>
@@ -769,15 +777,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/build/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/build/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/browser/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/browser/</loc>
   </url>
   
   <url>
@@ -785,11 +789,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/terminal/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/terminal/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/network/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/editor/</loc>
   </url>
   
   <url>
@@ -801,7 +805,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/</loc>
   </url>
   
 </urlset>
