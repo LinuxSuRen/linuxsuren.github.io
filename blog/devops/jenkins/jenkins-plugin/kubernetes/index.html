@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="8">
+<meta itemprop="wordCount" content="17">
 
 
 
@@ -179,7 +179,11 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#多容器">多容器</a></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -232,7 +236,18 @@
 
 <div class="prose" id="prose">
 
+
+
 <p><a href="https://kubernetes.io/">Kubernetes</a> 是一个容器编排的系统，而 <a href="https://plugins.jenkins.io/kubernetes">Kubernetes 插件</a>则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。</p>
+
+<h1 id="多容器">多容器</h1>
+
+<p>Pod 里可以配置多个容器，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：</p>
+
+<pre><code>container(&quot;container_name&quot;){
+    echo &quot;hello&quot;
+}
+</code></pre>
 
 </div>
 
@@ -254,13 +269,13 @@
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
 </ul>
 

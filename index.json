@@ -543,7 +543,7 @@
         "title": "Jenkins Kubernetes Plugin",
         "tags": [],
         "description": "Jenkins Kubernetes Plugin",
-        "content": "Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。\n"
+        "content": " Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。\n多容器 Pod 里可以配置多个容器，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：\ncontainer(\u0026quot;container_name\u0026quot;){ echo \u0026quot;hello\u0026quot; }  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/",
@@ -585,7 +585,7 @@
         "title": "Jenkins UI",
         "tags": [],
         "description": "Jenkins UI 介绍",
-        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt;\n\u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; 验证按钮\n\u0026lt;f:textbox/\u0026gt;\n\u0026lt;f:checkbox/\u0026gt;\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  https://ci.adoptopenjdk.net/\n静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：\nhttp://localhost:8080/jenkins/plugin/sample-plugin-id/test.css\n"
+        "content": " 按钮 \u0026lt;j:jelly xmlns:f=\u0026quot;/lib/form\u0026quot;\u0026gt;\u0026lt;/j:jelly\u0026gt; \u0026lt;f:validateButton title=\u0026quot;Test Connection\u0026quot; method=\u0026quot;verifyConnect\u0026quot; with=\u0026quot;server,credentialsId\u0026quot; progress=\u0026quot;Testing...\u0026quot;\u0026gt;\u0026lt;/f:validateButton\u0026gt; \u0026lt;f:textbox/\u0026gt; \u0026lt;f:checkbox/\u0026gt;  下拉框 在 jelly 文件添加如下标签：\n\u0026lt;f:entry field=\u0026quot;method\u0026quot; title=\u0026quot;${%Method}\u0026quot;\u0026gt; \u0026lt;f:select/\u0026gt; \u0026lt;/f:entry\u0026gt;  在对应的后端类的 DescriptorImpl 中添加如下方法：\npublic ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。\n凭据 \u0026lt;j:jelly xmlns:c=\u0026quot;/lib/credentials\u0026quot;\u0026gt; \u0026lt;c:select/\u0026gt; \u0026lt;/j:jelly\u0026gt;  高级 当有些字段具有默认值，通常情况下也无需修改时，你可以把这些字段隐藏起来（只有点击高级选项的时候才会展示）。\n\u0026lt;f:advanced\u0026gt; \u0026lt;f:entry field=\u0026quot;format\u0026quot; title=\u0026quot;Format\u0026quot;\u0026gt; \u0026lt;f:textbox/\u0026gt; \u0026lt;/f:entry\u0026gt; \u0026lt;/f:advanced\u0026gt;  静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：\nhttp://localhost:8080/jenkins/plugin/sample-plugin-id/test.css\n帮助信息 如果想给你的页面添加帮助信息的话，可以参考这里。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/",
@@ -600,6 +600,20 @@
         "tags": [],
         "description": "Jenkins X 特性介绍",
         "content": " 添加 Gitee 为 Git 服务器\njx create git server gitea http://localhost:10080\nDevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep \u0026quot;Storage Driver\u0026quot; 查看 Docker 当前支持的类型。\n因此，我们需要的 Docker 版本为 v17.06。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/",
+        "title": "Jenkins 主题插件",
+        "tags": [],
+        "description": "Jenkins 主题插件",
+        "content": "如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。\n 从这里你能找到很多已经定制好的主题。先给出一个样例。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/",
+        "title": "Jenkins 帮助信息",
+        "tags": [],
+        "description": "Jenkins 帮助信息",
+        "content": "正如大家看到的，在 Jenkins 的页面中，有很多地方能看到帮助信息。\n只要在某个页面文件（jelly）的同级目录下添加 help.html 后，就能在页面上看到关于该选项的帮助按钮。\n如果给某个字段添加帮助信息的话，也是类似的做法。例如：要对字段 password 添加帮助信息，就添加文件 help-password.html 即可。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/",
@@ -1362,7 +1376,7 @@
         "title": "脚本式流水线",
         "tags": ["Jenkins", "Pipeline"],
         "description": "本文介绍 Jenkins 的脚本式流水线",
-        "content": " 触发器  codes/jenkinsfile/script-trigger.groovy   node(\u0026#39;local\u0026#39;) { echo \u0026#39;hello\u0026#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: \u0026#39;\u0026#39;, artifactNumToKeepStr: \u0026#39;\u0026#39;, daysToKeepStr: \u0026#39;5\u0026#39;, numToKeepStr: \u0026#39;10\u0026#39; ) ), pipelineTriggers([ cron(\u0026#39;H 3,12,17 * * *\u0026#39;), scm(\u0026#39;H 3,12,17 * * *\u0026#39;) ]) ]) 原文件  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post\n codes/jenkinsfile/try-catch.groovy   node { stage(\u0026#34;one\u0026#34;){ try { echo \u0026#34;hello\u0026#34; }catch(error){ echo error.getMessage() }finally{ echo \u0026#34;finally\u0026#34; } } } 原文件  循环   codes/jenkinsfile/loop.groovy   node(\u0026#39;suren\u0026#39;) { def dev_path = \u0026#39;/opt/suren/bin\u0026#39; def services = [ [ \u0026#39;name\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;project\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;port\u0026#39;: \u0026#39;7002\u0026#39;, \u0026#39;jarName\u0026#39;: \u0026#39;admin\u0026#39; ] ]; stage(\u0026#39;Copy Artifact\u0026#39;) { for(service in services){ step([$class: \u0026#39;CopyArtifact\u0026#39;, fingerprintArtifacts: true, flatten: true, projectName: service.project, selector: [$class: \u0026#39;StatusBuildSelector\u0026#39;, stable: false], target: dev_path \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name ]) } } stage(\u0026#39;Stop Service\u0026#39;) { for(service in services){ sh \u0026#39;fuser -n tcp -k \u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; \u0026gt; redirection \u0026amp;\u0026#39; } } stage(\u0026#39;Start Service\u0026#39;) { for(service in services){ sh \u0026#39;cd \u0026#39; \u0026#43; pass_bin \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name \u0026#43; \u0026#39; \u0026amp;\u0026amp; nohup nice java -server -Xms128m -Xmx384m \\ -jar \u0026#39; \u0026#43; service.jarName \u0026#43; \u0026#39;.jar \\ --server.port=\u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; $\u0026gt; initServer.log 2\u0026gt;\u0026amp;1 \u0026amp;\u0026#39; } } } 原文件  "
+        "content": " 触发器  codes/jenkinsfile/script-trigger.groovy   node(\u0026#39;local\u0026#39;) { echo \u0026#39;hello\u0026#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: \u0026#39;\u0026#39;, artifactNumToKeepStr: \u0026#39;\u0026#39;, daysToKeepStr: \u0026#39;5\u0026#39;, numToKeepStr: \u0026#39;10\u0026#39; ) ), pipelineTriggers([ cron(\u0026#39;H 3,12,17 * * *\u0026#39;), scm(\u0026#39;H 3,12,17 * * *\u0026#39;) ]) ]) 原文件  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post\n codes/jenkinsfile/try-catch.groovy   node { stage(\u0026#34;one\u0026#34;){ try { echo \u0026#34;hello\u0026#34; }catch(error){ echo error.getMessage() }finally{ echo \u0026#34;finally\u0026#34; } } } 原文件  循环   codes/jenkinsfile/loop.groovy   node(\u0026#39;suren\u0026#39;) { def dev_path = \u0026#39;/opt/suren/bin\u0026#39; def services = [ [ \u0026#39;name\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;project\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;port\u0026#39;: \u0026#39;7002\u0026#39;, \u0026#39;jarName\u0026#39;: \u0026#39;admin\u0026#39; ] ]; stage(\u0026#39;Copy Artifact\u0026#39;) { for(service in services){ step([$class: \u0026#39;CopyArtifact\u0026#39;, fingerprintArtifacts: true, flatten: true, projectName: service.project, selector: [$class: \u0026#39;StatusBuildSelector\u0026#39;, stable: false], target: dev_path \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name ]) } } stage(\u0026#39;Stop Service\u0026#39;) { for(service in services){ sh \u0026#39;fuser -n tcp -k \u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; \u0026gt; redirection \u0026amp;\u0026#39; } } stage(\u0026#39;Start Service\u0026#39;) { for(service in services){ sh \u0026#39;cd \u0026#39; \u0026#43; pass_bin \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name \u0026#43; \u0026#39; \u0026amp;\u0026amp; nohup nice java -server -Xms128m -Xmx384m \\ -jar \u0026#39; \u0026#43; service.jarName \u0026#43; \u0026#39;.jar \\ --server.port=\u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; $\u0026gt; initServer.log 2\u0026gt;\u0026amp;1 \u0026amp;\u0026#39; } } } 原文件  HTTP 我们有时候需要在流水线中发送 HTTP 请求，下面给出一个例子：\n  codes/jenkinsfile/http.groovy   // dependecy plugin is https://plugins.jenkins.io/phoenix-autotest pipeline { agent { label \u0026#34;master\u0026#34; } stages { stage(\u0026#39;test\u0026#39;) { steps{ script { http url: \u0026#34;http://baidu.com\u0026#34; http url: \u0026#34;http://baidu.com\u0026#34;, responseBody: \u0026#34;body.txt\u0026#34; archiveArtifacts \u0026#34;body.txt\u0026#34; def quy = \u0026#39;https://www.baidu.com/s?wd=\u0026#39; \u0026#43; URLEncoder.encode(\u0026#39;a b\u0026#39;, \u0026#39;UTF-8\u0026#39;) echo quy http url: quy } } } } }  原文件  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/docker/docker-config/",

@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="185">
+<meta itemprop="wordCount" content="238">
 
 
 
@@ -185,6 +185,7 @@
 <li><a href="#参数化执行">参数化执行</a></li>
 <li><a href="#异常">异常</a></li>
 <li><a href="#循环">循环</a></li>
+<li><a href="#http">HTTP</a></li>
 </ul>
 </nav>
 	
@@ -367,6 +368,51 @@ properties([
 </div>
 </p>
 
+<h1 id="http">HTTP</h1>
+
+<p>我们有时候需要在流水线中发送 HTTP 请求，下面给出一个例子：</p>
+
+<p>
+
+
+
+<div class="code-copy" id="static/codes/jenkinsfile/http.groovy">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/http.groovy</span>
+		<i class="icon-groovy input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-groovy">// dependecy plugin is https://plugins.jenkins.io/phoenix-autotest
+pipeline {
+    agent {
+        label &#34;master&#34;
+    }
+    
+    stages {
+      stage(&#39;test&#39;) {
+          steps{
+              script {
+                  http url: &#34;http://baidu.com&#34;
+                  http url: &#34;http://baidu.com&#34;, responseBody: &#34;body.txt&#34;
+                  
+                  archiveArtifacts &#34;body.txt&#34;
+                  
+                  def quy = &#39;https://www.baidu.com/s?wd=&#39; &#43; URLEncoder.encode(&#39;a b&#39;, &#39;UTF-8&#39;)
+                  echo quy
+                  http url: quy
+              }
+          }
+      }
+    }
+}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/http.groovy" title="See codes/jenkinsfile/http.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/http.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+</p>
+
 </div>
 
 
@@ -385,15 +431,15 @@ properties([
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/parameterized/">参数化流水线</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/pipeline/">Jenkins 流水线插件</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/declarative/">申明式流水线</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
+	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
 </ul>
 

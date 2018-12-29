@@ -25,7 +25,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
-      <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。</description>
+      <description> Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。
+多容器 Pod 里可以配置多个容器，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：
+container(&amp;quot;container_name&amp;quot;){ echo &amp;quot;hello&amp;quot; }  </description>
     </item>
     
     <item>
@@ -35,6 +37,16 @@
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</guid>
       <description>在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 主题插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
+ 从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
     </item>
     
     <item>

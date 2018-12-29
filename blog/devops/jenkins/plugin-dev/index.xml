@@ -85,13 +85,24 @@ CredentialsStore 凭据存储接口</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
-      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt;
-&amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; 验证按钮
-&amp;lt;f:textbox/&amp;gt;
-&amp;lt;f:checkbox/&amp;gt;
-凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  https://ci.adoptopenjdk.net/
-静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：
-http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css</description>
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt;  下拉框 在 jelly 文件添加如下标签：
+&amp;lt;f:entry field=&amp;quot;method&amp;quot; title=&amp;quot;${%Method}&amp;quot;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt;  在对应的后端类的 DescriptorImpl 中添加如下方法：
+public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
+凭据 &amp;lt;j:jelly xmlns:c=&amp;quot;/lib/credentials&amp;quot;&amp;gt; &amp;lt;c:select/&amp;gt; &amp;lt;/j:jelly&amp;gt;  高级 当有些字段具有默认值，通常情况下也无需修改时，你可以把这些字段隐藏起来（只有点击高级选项的时候才会展示）。
+&amp;lt;f:advanced&amp;gt; &amp;lt;f:entry field=&amp;quot;format&amp;quot; title=&amp;quot;Format&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; &amp;lt;/f:advanced&amp;gt;  静态资源文件 当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 webapp 下。然后，通过类似下面的地址访问：
+http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css
+帮助信息 如果想给你的页面添加帮助信息的话，可以参考这里。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 帮助信息</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</guid>
+      <description>正如大家看到的，在 Jenkins 的页面中，有很多地方能看到帮助信息。
+只要在某个页面文件（jelly）的同级目录下添加 help.html 后，就能在页面上看到关于该选项的帮助按钮。
+如果给某个字段添加帮助信息的话，也是类似的做法。例如：要对字段 password 添加帮助信息，就添加文件 help-password.html 即可。</description>
     </item>
     
     <item>
