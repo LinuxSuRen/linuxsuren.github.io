@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件调试 | SuRenPi</title>
+    <title>Ssh | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,6 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
+    <link rel="alternate" type="application/rss" href="https://linuxsuren.github.io/tags/ssh/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" />
 <style>
   img.avatar {
@@ -27,10 +28,10 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件调试" />
-<meta property="og:description" content="Jenkins 插件调试" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" />
+<meta property="og:title" content="Ssh" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://linuxsuren.github.io/tags/ssh/" />
 
 
 
@@ -45,21 +46,12 @@
 
 
 
+<meta itemprop="name" content="Ssh">
+<meta itemprop="description" content="">
 
-
-<meta itemprop="name" content="Jenkins 插件调试">
-<meta itemprop="description" content="Jenkins 插件调试">
-
-
-
-<meta itemprop="wordCount" content="30">
-
-
-
-<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins 插件调试"/>
-<meta name="twitter:description" content="Jenkins 插件调试"/>
+<meta name="twitter:title" content="Ssh"/>
+<meta name="twitter:description" content=""/>
 
 
 
@@ -171,136 +163,12 @@
     
     <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
       
-<main>
-  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
-    <div class="flex-l">
-
-      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
-<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
-	
-		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#运行">运行</a></li>
-<li><a href="#跳过测试">跳过测试</a></li>
-<li><a href="#指定端口">指定端口</a></li>
-<li><a href="#指定-jenkins-版本">指定 Jenkins 版本</a></li>
-<li><a href="#参考">参考</a></li>
-</ul>
-</nav>
-	
-
-	<div date-pref>
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件扩展点 ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/" class="dib f6 pr1 hover-bg-light-gray br-100" title="扩展 Jenkins 的构建（Builder）任务">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-	</div>
-
-</aside>
-</div>
-
-      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
-        <div class="documentation-copy center measure-wide-l">
-          <div id="readout" class="fixed right-0 bottom-0">
-          </div>
-          <header class="flex-none w-100">
-  
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件调试</h1>
-</header>
-
-<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-  
-    <div class="f4 fw4 lh-copy">
-      Jenkins 插件调试
-    </div>
-  
-
   
   
-  
-</aside>
+  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
 
-
-
-<div class="prose" id="prose">
-
-
-
-<h1 id="运行">运行</h1>
-
-<p>在 <code>war</code> 目录下运行：</p>
-
-<p><code>mvn hpi:run</code></p>
-
-<h1 id="跳过测试">跳过测试</h1>
-
-<p><code>mvn hpi:run -DskipTests</code> 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：</p>
-
-<p><code>mvn hpi:run -Dmaven.test.skip=true</code> 该命令既不执行测试代码，也不会编译。</p>
-
-<h1 id="指定端口">指定端口</h1>
-
-<p>`mvn hpi:run -Djetty.port=1234&rsquo;</p>
-
-<p><code>mvn hpi:run -Djenkins.install.runSetupWizard=true</code></p>
-
-<h1 id="指定-jenkins-版本">指定 Jenkins 版本</h1>
-
-<p><code>mvn hpi:run -Djenkins.version=2.121.1</code></p>
-
-<h1 id="参考">参考</h1>
-
-<p><a href="https://jenkinsci.github.io/maven-hpi-plugin/run-mojo.html">maven-hpi-plugin</a></p>
-
-</div>
-
-
-
-<script src="https://utteranc.es/client.js"
-        repo="linuxsuren/linuxsuren.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="linuxsuren"
-        async>
-</script>
-
-
-          
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
-</ul>
-
-        </div>
-      </div>
-      <div class="order-0 w-20 dn db-l">
+  <div class="flex">
+    <div class="dn db-l w-20">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -484,33 +352,57 @@
   </ul>
 </nav>
 
-      </div>
-
     </div>
-  </article>
 
-  <div id="backtotop"><a href="#"></a></div>
-
-  <div class="w-100 bg-light-gray">
-    <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Jenkins 插件调试”
-  </a> was last updated: January 1, 0001
-</h6>
-
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug.md" class="
-f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
-" target="_blank">改善此页</a>
+    <div class="w-100 w-80-l ph0 ph4-l">
+      <article class="w-100 nested-copy-line-height nested-links nested-img">
+        <h1 class="primary-color-dark f2">
+          Tag: Ssh
+        </h1>
+        <div class=" mid-gray f5 f4-l">
+          
+        </div>
+      </article>
 
       
 
+      <div class="flex flex-wrap">
+        
+        <section class="flex-ns flex-wrap justify-between w-100">
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/" class="link primary-color dim">Jenkins SSH Agent</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Jenkins SSH Agent
+        
+
+        <a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
 
     </div>
+
+
   </div>
-</main>
+</div>
+
+          
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     </main>
 

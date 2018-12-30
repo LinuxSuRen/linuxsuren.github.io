@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>Agent</title>
+      <link>https://linuxsuren.github.io/tags/agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/agent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://linuxsuren.github.io/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Jenkins</title>
       <link>https://linuxsuren.github.io/tags/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -20,11 +38,38 @@
     </item>
     
     <item>
+      <title>K8s</title>
+      <link>https://linuxsuren.github.io/tags/k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pipeline</title>
       <link>https://linuxsuren.github.io/tags/pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/tags/pipeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plugin</title>
+      <link>https://linuxsuren.github.io/tags/plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>https://linuxsuren.github.io/tags/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     

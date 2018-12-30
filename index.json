@@ -133,6 +133,13 @@
         "content": " 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。\n接口 你首先需要实现接口 hudson.model.Action 的三个方法:\n getIconFileName getDisplayName getUrlName  约定 "
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/agent/",
+        "title": "Agent",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/ake/",
         "title": "Ake",
         "tags": [],
@@ -236,6 +243,13 @@
         "tags": [],
         "description": "Directory",
         "content": ":pwd 查看当前目录\n:cd %:p:h 切换目录到当前文件所在目录\n:lcd %:p:h 切换当前窗口的目录到当前文件所在目录\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/tags/docker/",
+        "title": "Docker",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/java/docker/",
@@ -497,14 +511,14 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
@@ -548,7 +562,7 @@
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/",
         "title": "Jenkins Kubernetes Plugin",
-        "tags": [],
+        "tags": ["k8s", "plugin", "docker", "agent"],
         "description": "Jenkins Kubernetes Plugin",
         "content": "  Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。\n预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。\nDocker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。\nKubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。\nJNLP 的基本原理。\n基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。\n为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。\n然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。\nK8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。\n多容器 Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：\ncontainer(\u0026quot;container_name\u0026quot;){ echo \u0026quot;hello\u0026quot; }  排错 "
     },
@@ -583,7 +597,7 @@
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/",
         "title": "Jenkins SSH Agent",
-        "tags": [],
+        "tags": ["ssh", "plugin", "agent"],
         "description": "Jenkins SSH Agent",
         "content": "在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。\n"
     },
@@ -707,6 +721,13 @@
         "content": " 根证书公钥(ca.pem)与私钥(ca-key.pem)\nAPI Server 公钥和私钥\n集群管理员公钥和私钥\n从节点公钥和私钥\n根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj \u0026quot;/CN=kube-ca\u0026quot;  API Server 证书 创建 openssl.cnf\n[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4}  openssl genrsa -out apiserver-key.pem 2048 openssl req -new -key apiserver-key.pem -out apiserver.csr -subj \u0026quot;/CN=kube-apiserver\u0026quot; -config openssl.cnf openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf  一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 /etc/kubernetes/ssl/ 路径下\nRef https://blog.csdn.net/shenshouer/article/details/53035948\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/k8s/",
+        "title": "K8s",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/kuberctl/",
         "title": "Kubectl",
         "tags": [],
@@ -819,6 +840,13 @@
         "content": ""
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/plugin/",
+        "title": "Plugin",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/test/postman/",
         "title": "Postman",
         "tags": [],
@@ -873,6 +901,13 @@
         "tags": [],
         "description": "SpaceVim",
         "content": " Reference Use Vim as a Java IDE\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/tags/ssh/",
+        "title": "Ssh",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/go-sync/",
