@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="17">
+<meta itemprop="wordCount" content="68">
 
 
 
@@ -181,7 +181,11 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li><a href="#预备知识">预备知识</a></li>
+<li><a href="#基本原理">基本原理</a></li>
+<li><a href="#k8s-代理节点">K8S 代理节点</a></li>
 <li><a href="#多容器">多容器</a></li>
+<li><a href="#排错">排错</a></li>
 </ul>
 </nav>
 	
@@ -238,16 +242,46 @@
 
 
 
-<p><a href="https://kubernetes.io/">Kubernetes</a> 是一个容器编排的系统，而 <a href="https://plugins.jenkins.io/kubernetes">Kubernetes 插件</a>则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。</p>
+<p>
+
+<a href="https://kubernetes.io/" target="_blank">Kubernetes</a> 是一个容器编排的系统，而 
+
+<a href="https://plugins.jenkins.io/kubernetes" target="_blank">Kubernetes 插件</a>则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对
+
+<a href="https://github.com/jenkinsci/kubernetes-plugin" target="_blank">插件源码</a>感兴趣的童鞋可以了解下。</p>
+
+<h1 id="预备知识">预备知识</h1>
+
+<p>要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。</p>
+
+<p>Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。</p>
+
+<p>Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。</p>
+
+<p>JNLP 的基本原理。</p>
+
+<h1 id="基本原理">基本原理</h1>
+
+<p>当<a href="/blog/devops/jenkins/basic/jenkins-label/">标签规则</a>匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。</p>
+
+<p>为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。</p>
+
+<p>然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。</p>
+
+<h1 id="k8s-代理节点">K8S 代理节点</h1>
+
+<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。</p>
 
 <h1 id="多容器">多容器</h1>
 
-<p>Pod 里可以配置多个容器，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：</p>
+<p>Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：</p>
 
 <pre><code>container(&quot;container_name&quot;){
     echo &quot;hello&quot;
 }
 </code></pre>
+
+<h1 id="排错">排错</h1>
 
 </div>
 
@@ -267,15 +301,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
 </ul>
 
