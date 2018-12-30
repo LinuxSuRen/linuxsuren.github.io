@@ -12,20 +12,20 @@
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-daemon/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-daemon/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
       <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
 Docker Version vs API Version</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/docker/docker/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
       <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
 docker pull hub.alauda.cn/jenkins-jnlp-slave
 启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
@@ -44,10 +44,10 @@ docker run jenkins --name ci-jenkins
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/docker/dockerfile/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/dockerfile/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
       <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
 FROM alpine:3.8
 Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
@@ -58,15 +58,6 @@ ENV HTTP_PROXY &amp;quot;&amp;quot;
 EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
 RUN RUN 为 Docker 镜像在构建时执行的命令
 CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/network/chromedp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/network/chromedp/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -137,6 +128,15 @@ npm install -g yo generator-code</description>
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/blog/other/network/chromedp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -196,10 +196,10 @@ Restricted Usage: @Restricted(NoExternalUse.class)
     
     <item>
       <title>Apache2</title>
-      <link>https://linuxsuren.github.io/blog/server/apache2/</link>
+      <link>https://linuxsuren.github.io/blog/other/server/apache2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/server/apache2/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/server/apache2/</guid>
       <description>查看工作方式 apachectl -V | grep -i mpm
 配置文件如下：
 &amp;lt;IfModule mpm_prefork_module&amp;gt; StartServers 10 # 启动时进程数 MinSpareServers 5 # 最小空闲进程数 MaxSpareServers 10 # 最大空闲进程数 MaxRequestWorkers 100 # 最大并发进程数 MaxConnectionsPerChild 10000 # 最大连接数限制 &amp;lt;/IfModule&amp;gt;  </description>
@@ -306,10 +306,10 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     
     <item>
       <title>Docker Mirror</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-mirror/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-mirror/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
       <description>vim /etc/docker/daemon.json
 { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
 或者，在文件 /etc/default/docker 中添加如下配置：
@@ -318,30 +318,30 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
     
     <item>
       <title>Docker Operation</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-oper/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-oper/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
       <description>Filter Images 当前支持的过滤如下：
  dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
     </item>
     
     <item>
       <title>Docker api</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-api/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-api/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-api/</guid>
       <description>获取 Token：
 curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
     </item>
     
     <item>
       <title>Docker 时间设置</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-time/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-time/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-time/</guid>
       <description>通过如下配置，就可以实现对容器内的时区设置：
 ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
 docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
@@ -349,10 +349,10 @@ docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot
     
     <item>
       <title>Docker 镜像管理</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-image/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-image/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
       <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune</description>
     </item>
     
@@ -413,19 +413,19 @@ hkp://subkeys.gpg.net</description>
     
     <item>
       <title>Ginkgo</title>
-      <link>https://linuxsuren.github.io/blog/test/ginkgo/</link>
+      <link>https://linuxsuren.github.io/blog/other/test/ginkgo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/test/ginkgo/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/test/ginkgo/</guid>
       <description>Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。</description>
     </item>
     
     <item>
       <title>Git Branch</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-branch/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-branch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-branch/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-branch/</guid>
       <description>切换标签 git branch 列出本地分支 git checkout master 切换到本地 master 分支
 删除分支 git branch --delete abc 删除分支 abc
 git push origin --delete abc 删除远程分支
@@ -449,19 +449,19 @@ git checkout --track origin/abc 拉取远程分支</description>
     
     <item>
       <title>Git Rebase</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-rebase/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-rebase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-rebase/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-rebase/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git Remote</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-remote/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-remote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-remote/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-remote/</guid>
       <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
 这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
 git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
@@ -471,39 +471,39 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
     
     <item>
       <title>Git Reset</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-reset/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-reset/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-reset/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git Stage</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-stage/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-stage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-stage/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-stage/</guid>
       <description>我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。
 git checkout readme.md 可以把 unstage 状态的文件修改丢弃</description>
     </item>
     
     <item>
       <title>Git Submodule</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-submodule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-submodule/</guid>
       <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
 get submodule update 更新子模块代码</description>
     </item>
     
     <item>
       <title>Git 标签（tag）</title>
-      <link>https://linuxsuren.github.io/blog/scm/git-tag/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-tag/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-tag/</guid>
       <description>标签 git tag v0.1.2-light
 git tag -a v0.2 -m &#39;here is comment&#39;
 切换到标签 git checkout v0.2
@@ -518,19 +518,19 @@ git可以在同一个提交上打多个名称不一样的标签
     
     <item>
       <title>Gitea</title>
-      <link>https://linuxsuren.github.io/blog/scm/gitea/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitea/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/gitea/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitea/</guid>
       <description>docker pull gitea/gitea:latest</description>
     </item>
     
     <item>
       <title>Gitlab</title>
-      <link>https://linuxsuren.github.io/blog/scm/gitlab/</link>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitlab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/gitlab/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitlab/</guid>
       <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
 启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
 Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
@@ -565,10 +565,10 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
     
     <item>
       <title>HTTP Status</title>
-      <link>https://linuxsuren.github.io/blog/network/http_status/</link>
+      <link>https://linuxsuren.github.io/blog/other/network/http_status/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/network/http_status/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/network/http_status/</guid>
       <description> 200 300 400 401 未经授权：访问由于凭据无效被拒绝。
 404 无法找到页面
 500 Reference </description>
@@ -603,10 +603,10 @@ sudo apt-get install maven make -y
     
     <item>
       <title>Install Docker</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</guid>
       <description>查看可用的版本 apt-cache madison docker-ce
 安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
     </item>
@@ -1033,10 +1033,10 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     
     <item>
       <title>Nginx</title>
-      <link>https://linuxsuren.github.io/blog/server/nginx/</link>
+      <link>https://linuxsuren.github.io/blog/other/server/nginx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/server/nginx/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/server/nginx/</guid>
       <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
     </item>
     
@@ -1060,10 +1060,10 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     
     <item>
       <title>Postman</title>
-      <link>https://linuxsuren.github.io/blog/test/postman/</link>
+      <link>https://linuxsuren.github.io/blog/other/test/postman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/test/postman/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/test/postman/</guid>
       <description>利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。</description>
     </item>
     
@@ -1623,10 +1623,10 @@ Example ifconfig | xclip -sel clip</description>
     
     <item>
       <title>代理</title>
-      <link>https://linuxsuren.github.io/blog/network/proxy/</link>
+      <link>https://linuxsuren.github.io/blog/other/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/network/proxy/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/network/proxy/</guid>
       <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
 CentOS yum install shadowsocks
 pip install shadowsocks
@@ -1692,10 +1692,10 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
     
     <item>
       <title>在 CentOS 安装 Docker</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-centos/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-centos/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
       <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
 yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
 yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
@@ -1771,10 +1771,10 @@ yum install python-pip</description>
     
     <item>
       <title>配置</title>
-      <link>https://linuxsuren.github.io/blog/docker/docker-config/</link>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/docker/docker-config/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
       <description>代理 给 Docker 设置代理
 创建目录 mkdir /etc/systemd/system/docker.service.d
 编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf

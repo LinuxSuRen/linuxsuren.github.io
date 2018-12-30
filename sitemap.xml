@@ -7,7 +7,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/</loc>
+    <loc>https://linuxsuren.github.io/blog/language/</loc>
   </url>
   
   <url>
@@ -15,43 +15,23 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/language/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/network/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/server/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/test/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/other/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-daemon/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/dockerfile/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/network/chromedp/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</loc>
   </url>
   
   <url>
@@ -83,6 +63,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/chromedp/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
   </url>
   
@@ -103,7 +87,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/server/apache2/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/server/apache2/</loc>
   </url>
   
   <url>
@@ -161,23 +145,23 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-mirror/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-oper/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-api/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-api/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-time/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-time/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-image/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-image/</loc>
   </url>
   
   <url>
@@ -201,11 +185,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/test/ginkgo/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/test/ginkgo/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-branch/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-branch/</loc>
   </url>
   
   <url>
@@ -213,39 +197,43 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-rebase/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-rebase/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-remote/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-remote/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-reset/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-reset/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-stage/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-stage/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-submodule/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-submodule/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-tag/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-tag/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/gitea/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitea/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/scm/gitlab/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitlab/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/goroutines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/</loc>
   </url>
   
   <url>
@@ -257,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/network/http_status/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/network/http_status/</loc>
   </url>
   
   <url>
@@ -273,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</loc>
   </url>
   
   <url>
@@ -447,11 +435,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/mac/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/os/mac/</loc>
+    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
   </url>
   
   <url>
@@ -471,7 +459,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/server/nginx/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/server/nginx/</loc>
   </url>
   
   <url>
@@ -488,11 +476,15 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/test/postman/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/test/postman/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/</loc>
   </url>
   
   <url>
@@ -645,10 +637,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/language/golang/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/go/</loc>
   </url>
   
@@ -717,7 +705,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/network/proxy/</loc>
   </url>
   
   <url>
@@ -741,7 +729,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-centos/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</loc>
   </url>
   
   <url>
@@ -754,6 +742,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/python/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/server/</loc>
   </url>
   
   <url>
@@ -781,6 +773,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/test/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/other/browser/</loc>
   </url>
   
@@ -797,11 +793,15 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/docker/docker-config/</loc>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-config/</loc>
   </url>
   
   <url>

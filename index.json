@@ -3,92 +3,57 @@
         "uri": "https://linuxsuren.github.io/blog/devops/",
         "title": "DevOps",
         "tags": [],
-        "description": "DevOps相关技术文章",
-        "content": "DevOps相关技术文章\n"
+        "description": "",
+        "content": "DevOps 改变了我们软件生命周期迭代的思维和方法，不管是个人还是企业都可以从中获益。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/",
+        "uri": "https://linuxsuren.github.io/blog/language/",
+        "title": "编程语言",
+        "tags": [],
+        "description": "",
+        "content": "编程语言就是我们的普通话，那就努力讲好普通话。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/",
+        "title": "操作系统",
+        "tags": [],
+        "description": "",
+        "content": "不了解操作系统还怎么开发、测试、运维？\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/",
+        "title": "其他内容",
+        "tags": [],
+        "description": "",
+        "content": "没有归类的部分\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/",
         "title": "容器技术",
         "tags": [],
         "description": "容器技术",
         "content": "容器技术\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/os/",
-        "title": "操作系统",
-        "tags": [],
-        "description": "操作系统",
-        "content": "操作系统\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/language/",
-        "title": "编程语言",
-        "tags": [],
-        "description": "编程语言",
-        "content": "编程语言\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/network/",
-        "title": "网络",
-        "tags": [],
-        "description": "网络相关",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/scm/",
-        "title": "SCM",
-        "tags": [],
-        "description": "SCM",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/server/",
-        "title": "应用服务",
-        "tags": [],
-        "description": "有关应用服务的配置",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/test/",
-        "title": "测试",
-        "tags": [],
-        "description": "介绍有关测试的内容",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/other/",
-        "title": "其他内容",
-        "tags": [],
-        "description": "其他内容",
-        "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-daemon/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-daemon/",
         "title": "",
         "tags": [],
         "description": "",
         "content": " API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。\nDocker Version vs API Version\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker/",
         "title": "",
         "tags": [],
         "description": "",
         "content": " 拉取镜像 docker pull jenkins/jnlp-slave:alpine\ndocker pull hub.alauda.cn/jenkins-jnlp-slave\n启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：\ndocker run jenkins --restart=always\n最简单的启动命令 docker run surenpi/hugo-docker\n容器停止后，自动删除 docker run --rm surenpi/hugo-docker\n设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：\ndocker run jenkins --name ci-jenkins\n查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。\n如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。\n停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。\n日志 docker logs -f 94a5fa599b05\n删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。\n通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk '{print $1}') \u0026amp;\u0026amp; docker rm $(docker ps | grep hello | awk '{print $1}')\n删除所有已经停止的容器 docker rm $(docker ps -a | grep Exited | awk '{print $1}')\n标签 docker tag source-image target-image\n端口映射 docker -p 127.0.0.1:1234:8080 run jenkins\n卷 查看容器所挂载的卷信息 docker inspect 421b094bf94a | grep Mounts -A 20\n构建 设置构建过程中的代理 docker build . --build-arg http_proxy=http://192.168.2.9:8123 --build-arg https_proxy=http://192.168.2.9:8123\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/dockerfile/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/dockerfile/",
         "title": "",
         "tags": [],
         "description": "",
         "content": " 基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：\nFROM alpine:3.8\nProxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：\nENV HTTP_PROXY http://192.168.1.1:1234\n上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：\nENV HTTP_PROXY \u0026quot;\u0026quot;\n但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234\nEXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample\nRUN RUN 为 Docker 镜像在构建时执行的命令\nCMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [\u0026quot;echo\u0026quot;, \u0026quot;hello\u0026quot;]\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/network/chromedp/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/configuration/ini/",
@@ -140,6 +105,13 @@
         "content": "你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：\nnpm install -g yo generator-code\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/network/chromedp/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/",
         "title": "",
         "tags": [],
@@ -175,7 +147,7 @@
         "content": " CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)\n通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。\nTerminator Usage: @Terminator(after=TermMilestone.STARTED)\n上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。\nRestricted Usage: @Restricted(NoExternalUse.class)\n上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/server/apache2/",
+        "uri": "https://linuxsuren.github.io/blog/other/server/apache2/",
         "title": "Apache2",
         "tags": [],
         "description": "Apache2 配置",
@@ -273,35 +245,35 @@
         "content": " 内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。\n参考 Docker OpenJDK\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-mirror/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-mirror/",
         "title": "Docker Mirror",
         "tags": [],
         "description": "Docker Mirror",
         "content": "vim /etc/docker/daemon.json\n{ \u0026quot;registry-mirrors\u0026quot;: [\u0026quot;https://mirror.gcr.io\u0026quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io\n或者，在文件 /etc/default/docker 中添加如下配置：\nDOCKER_OPTS=\u0026quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io\u0026quot;\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-oper/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-oper/",
         "title": "Docker Operation",
         "tags": [],
         "description": "Docker Operation",
         "content": " Filter Images 当前支持的过滤如下：\n dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk '{print $3}')\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-api/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-api/",
         "title": "Docker api",
         "tags": [],
         "description": "Docker Api",
         "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v1/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-time/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-time/",
         "title": "Docker 时间设置",
         "tags": [],
         "description": "Docker 时间设置",
         "content": " 通过如下配置，就可以实现对容器内的时区设置：\nENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \u0026amp;\u0026amp; echo $TZ \u0026gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：\ndocker run -p 8888:8080 -e JAVA_OPTS=\u0026quot;-Duser.timezone=HongKong\u0026quot; jenkins/jenkins:lts\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-image/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-image/",
         "title": "Docker 镜像管理",
         "tags": [],
         "description": "Docker 镜像管理",
@@ -343,14 +315,14 @@
         "content": " 安装 Windows版本下载地址 https://www.gpg4win.org/download.html\nUbuntu下安装 sudo apt-get install gpg -y\nMac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载\n从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2\n命令 gpg --export-secret-key 标识名 \u0026gt; 导出文件名\ngpg -o keyfilename --export-secret-keys KeyID\ngpg -o keyfilename --export KeyID\ngpg --import 密钥文件\ngpg --list-keys 列出密钥\ngpg --delete-secret-key hello\ngpg --delete-key hello\n上传公钥 gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567\n接收公钥 gpg --keyserver pool.sks-keyservers.net --recv-key 1234567\ngpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567 搜索公钥\n公钥服务器 hkp://pool.sks-keyservers.net\nhkp://subkeys.gpg.net\nhkp://keyserver.ubuntu.com\n加解密 gpg --recipient 1234567 --output a-encrypt.log --encrypt a.log 加密文件\ngpg a-encrypt.log 解密文件\ngpg --decrypt a-encrypt.log 解密文件\n签名 gpg --sign a.log 生成二进制签名文件 a.log.gpg\ngpg --clearsign a.log 生成 ASCII 签名文件 a.log.asc\ngpg --detach-sign a.log 生成单独的二进制签名文件 a.log.sig\ngpg --armor --detach-sign a.log 生成单独的 ASCII 签名文件 a.log.asc\ngpg --verify a.log.asc 验证签名\ngpg --local-user 1234567 --recipient 1234567 --armor --sign --encrypt a.log 签名并加密\n异常 gpg: cannot open /dev/tty': No such device or address can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory gpg: can’t connect to the agent: IPC connect call failed gpg: signing failed: No secret key  如果是用 Maven 插件的话，可以参考下面的配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-gpg-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.6\u0026lt;/version\u0026gt; \u0026lt;executions\u0026gt; \u0026lt;execution\u0026gt; \u0026lt;id\u0026gt;sign-artifacts\u0026lt;/id\u0026gt; \u0026lt;phase\u0026gt;verify\u0026lt;/phase\u0026gt; \u0026lt;goals\u0026gt; \u0026lt;goal\u0026gt;sign\u0026lt;/goal\u0026gt; \u0026lt;/goals\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;gpgArguments\u0026gt; \u0026lt;arg\u0026gt;--pinentry-mode\u0026lt;/arg\u0026gt; \u0026lt;arg\u0026gt;loopback\u0026lt;/arg\u0026gt; \u0026lt;arg\u0026gt;--no-tty\u0026lt;/arg\u0026gt; \u0026lt;/gpgArguments\u0026gt; \u0026lt;interactive\u0026gt;false\u0026lt;/interactive\u0026gt; \u0026lt;passphrase\u0026gt;1233\u0026lt;/passphrase\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/execution\u0026gt; \u0026lt;/executions\u0026gt; \u0026lt;/plugin\u0026gt;  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/test/ginkgo/",
+        "uri": "https://linuxsuren.github.io/blog/other/test/ginkgo/",
         "title": "Ginkgo",
         "tags": [],
         "description": "",
         "content": "Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-branch/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-branch/",
         "title": "Git Branch",
         "tags": [],
         "description": "Git Branch",
@@ -364,56 +336,56 @@
         "content": "几乎所有的团队都有自己的沟通系统（工具），像 Jira、Kanban、微信、钉钉等等。而我现在要说的是像 GitHub、Gitlab 等 Git 服务提供的 PR。代码 Review 是件好事情，这一点很多人都认同，但是很明显的痛点在于——这样可能会比较耗时。\n大家不一定能够在看到邮件、钉钉等的消息后，就立刻去做 Review，因此，很多时候就会忘记从而导致这个过程加长。\n如果，能够给每个项目都指定一些必须要进行 Review 的人员，然后，自动地把 PR 的 Review 需求加到像 Jira 这样的任务跟踪系统中的。对，关键点就在于把 Review 也正式地当作工作任务的一部分。\n我相信，这样也许就能解决大家的代码都能够相对高效地被 Review呢。而且，这样也对 Review 的工作量相对可控。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-rebase/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-rebase/",
         "title": "Git Rebase",
         "tags": [],
         "description": "Git Rebase",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-remote/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-remote/",
         "title": "Git Remote",
         "tags": [],
         "description": "Git 远程库操作",
         "content": " remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。\n这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。\ngit remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：\ngit remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。\n最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-reset/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-reset/",
         "title": "Git Reset",
         "tags": [],
         "description": "Git Reset",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-stage/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-stage/",
         "title": "Git Stage",
         "tags": [],
         "description": "Git Stage",
         "content": "我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。\ngit checkout readme.md 可以把 unstage 状态的文件修改丢弃\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-submodule/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-submodule/",
         "title": "Git Submodule",
         "tags": [],
         "description": "Git 子模块的使用",
         "content": " 子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init\nget submodule update 更新子模块代码\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/git-tag/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-tag/",
         "title": "Git 标签（tag）",
         "tags": [],
         "description": "Git 标签（tag）的相关操作",
         "content": " 标签 git tag v0.1.2-light\ngit tag -a v0.2 -m 'here is comment'\n切换到标签 git checkout v0.2\n删除标签 git tag -d v0.2\n基于提交记录打标签及 git tag -a v0.2 beab786 -m 'from branch hello beab786'\n发布指定的标签 git push origin v0.2\n把所有的标签一次性发布 git push origin --tags\ngit可以在同一个提交上打多个名称不一样的标签\n获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）\n删除远程标签 git push --delete origin tagname 删除远程的指定标签\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/gitea/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/gitea/",
         "title": "Gitea",
         "tags": [],
         "description": "",
         "content": "docker pull gitea/gitea:latest\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/scm/gitlab/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/gitlab/",
         "title": "Gitlab",
         "tags": [],
         "description": "Gitlab 使用介绍",
@@ -425,6 +397,13 @@
         "tags": [],
         "description": "GoRoutines",
         "content": " 简单例子   "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/",
+        "title": "Golang",
+        "tags": [],
+        "description": "Golang",
+        "content": "Golang\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/json/",
@@ -441,7 +420,7 @@
         "content": " 创建 Response 结构 import ( \u0026quot;net/http\u0026quot; \u0026quot;io/ioutil\u0026quot; ) http.Response{ StatusCode: http.StatusOK, Body: ioutil.NopCloser(bytes.NewReader([]byte(\u0026quot;test\u0026quot;))), }  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/network/http_status/",
+        "uri": "https://linuxsuren.github.io/blog/other/network/http_status/",
         "title": "HTTP Status",
         "tags": [],
         "description": "HTTP Status",
@@ -469,7 +448,7 @@
         "content": " 预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。\n安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y\nsudo apt-get install maven make -y\n为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker\n重启 Docker 服务 sudo service docker restart\n添加权限 sudo chmod a+rw /var/run/docker.sock\n拉取镜像 执行命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-images.sh | bash 拉取 jx 所需要的镜像\n安装 jx 获取 jx curl -LO https://github.com/jenkins-x/jx/releases/download/$(curl -s https://api.github.com/repos/jenkins-x/jx/releases/latest | grep tag_name | cut -d '\u0026quot;' -f 4)/jx-linux-amd64.tar.gz | tar xzv\n移动到系统目录中 mv jx /usr/local/bin\n安装 jx jx install --username suren --provider=kubernetes --on-premise\n连接远程 如果我们想要从本地连接远程的 Kubernetes 集群的话，需要导出用户证书。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-ubuntu-install/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/",
         "title": "Install Docker",
         "tags": [],
         "description": "How to install docker in Ubuntu",
@@ -739,13 +718,13 @@
         "title": "Kubernetes",
         "tags": [],
         "description": "Kubernetes",
-        "content": "DevOps相关技术文章\n"
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/",
         "title": "Linux",
         "tags": [],
-        "description": "Linux OS",
+        "description": "Linux 操作系统",
         "content": ""
     },
     {
@@ -770,18 +749,18 @@
         "content": " 音频 只播放音频 mplayer -vo sample.mp4\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/mac/",
+        "title": "Mac",
+        "tags": [],
+        "description": "Mac 操作系统",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/mac/mac/",
         "title": "Mac 快捷键",
         "tags": [],
         "description": "Mac 快捷键",
         "content": " 按键符号 ⌘(command)\n⌥(option)\n⇧(shift)\n⇪(caps lock)\n⌃(control)\n↩(return)\n⌅(enter)\n快捷键 删除文件 command + delete\n浏览器 关闭选项卡 command + w\n前后切换选项卡 command + \u0026lt;-\n指定顺序切换选项卡 command + 1\n关闭浏览器 command + q\n截图  截取全屏并保存文件 shift + command + 3\n 截取部分并保存文件 shift + command + 4\n 截取全屏并保存粘贴板 shift + control + command + 3\n 截取部分并保存粘贴板 shift + control + command + 4\n  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。\n 开机后按下 command+s\n 进入终端后输入命令 /sbin/mount -uaw`\n 执行命令 rm /var/db/.applesetupdone\n  操作系统重启后，会提示用户重新创建一个管理员身份。注意，这不会删除之前的用户信息。登陆系统后，你可以用户管理功能再次把之前的用户身份找回来。\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/os/mac/",
-        "title": "Mac 操作系统",
-        "tags": [],
-        "description": "Mac 操作系统",
-        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/build/maven/",
@@ -812,7 +791,7 @@
         "content": " 查看温度 安装软件 apt-get install sensord\n然后执行命令 sensors\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/server/nginx/",
+        "uri": "https://linuxsuren.github.io/blog/other/server/nginx/",
         "title": "Nginx",
         "tags": [],
         "description": "Nginx",
@@ -840,7 +819,7 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/test/postman/",
+        "uri": "https://linuxsuren.github.io/blog/other/test/postman/",
         "title": "Postman",
         "tags": [],
         "description": "Postman",
@@ -851,6 +830,13 @@
         "title": "Python",
         "tags": [],
         "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/",
+        "title": "SCM",
+        "tags": [],
+        "description": "SCM",
         "content": ""
     },
     {
@@ -1113,13 +1099,6 @@
         "content": "godep update foo/bar\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/language/golang/",
-        "title": "golang",
-        "tags": [],
-        "description": "golang",
-        "content": "golang\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/go/",
         "title": "golang",
         "tags": [],
@@ -1239,7 +1218,7 @@
         "content": " Install sudo apt-get install xclip\nExample ifconfig | xclip -sel clip\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/network/proxy/",
+        "uri": "https://linuxsuren.github.io/blog/other/network/proxy/",
         "title": "代理",
         "tags": [],
         "description": "如何配置代理",
@@ -1281,7 +1260,7 @@
         "content": " 命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置\nexport PS1='[/u@/h /W/]/$ '\n\\u 当前用户帐号\n\\h 当前主机名\n\\W 当前路径（大写为相对路径，小写为绝对路径）\n\\$\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-centos/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-centos/",
         "title": "在 CentOS 安装 Docker",
         "tags": [],
         "description": "",
@@ -1307,6 +1286,13 @@
         "tags": [],
         "description": "",
         "content": "yum install python\nyum install python-pip\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/server/",
+        "title": "应用服务",
+        "tags": [],
+        "description": "有关应用服务的配置",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/",
@@ -1351,6 +1337,13 @@
         "content": "构建\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/test/",
+        "title": "测试",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/browser/",
         "title": "浏览器",
         "tags": [],
@@ -1379,6 +1372,13 @@
         "content": "编辑器\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/network/",
+        "title": "网络",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/",
         "title": "脚本式流水线",
         "tags": ["Jenkins", "Pipeline"],
@@ -1386,7 +1386,7 @@
         "content": " 触发器  codes/jenkinsfile/script-trigger.groovy   node(\u0026#39;local\u0026#39;) { echo \u0026#39;hello\u0026#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: \u0026#39;\u0026#39;, artifactNumToKeepStr: \u0026#39;\u0026#39;, daysToKeepStr: \u0026#39;5\u0026#39;, numToKeepStr: \u0026#39;10\u0026#39; ) ), pipelineTriggers([ cron(\u0026#39;H 3,12,17 * * *\u0026#39;), scm(\u0026#39;H 3,12,17 * * *\u0026#39;) ]) ]) 原文件  参数化执行 properties([[$class: 'JobRestrictionProperty'], parameters([run(description: '', filter: 'ALL', name: 'Name', projectName: 'Project')]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post\n codes/jenkinsfile/try-catch.groovy   node { stage(\u0026#34;one\u0026#34;){ try { echo \u0026#34;hello\u0026#34; }catch(error){ echo error.getMessage() }finally{ echo \u0026#34;finally\u0026#34; } } } 原文件  循环   codes/jenkinsfile/loop.groovy   node(\u0026#39;suren\u0026#39;) { def dev_path = \u0026#39;/opt/suren/bin\u0026#39; def services = [ [ \u0026#39;name\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;project\u0026#39;: \u0026#39;admin\u0026#39;, \u0026#39;port\u0026#39;: \u0026#39;7002\u0026#39;, \u0026#39;jarName\u0026#39;: \u0026#39;admin\u0026#39; ] ]; stage(\u0026#39;Copy Artifact\u0026#39;) { for(service in services){ step([$class: \u0026#39;CopyArtifact\u0026#39;, fingerprintArtifacts: true, flatten: true, projectName: service.project, selector: [$class: \u0026#39;StatusBuildSelector\u0026#39;, stable: false], target: dev_path \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name ]) } } stage(\u0026#39;Stop Service\u0026#39;) { for(service in services){ sh \u0026#39;fuser -n tcp -k \u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; \u0026gt; redirection \u0026amp;\u0026#39; } } stage(\u0026#39;Start Service\u0026#39;) { for(service in services){ sh \u0026#39;cd \u0026#39; \u0026#43; pass_bin \u0026#43; \u0026#39;/\u0026#39; \u0026#43; service.name \u0026#43; \u0026#39; \u0026amp;\u0026amp; nohup nice java -server -Xms128m -Xmx384m \\ -jar \u0026#39; \u0026#43; service.jarName \u0026#43; \u0026#39;.jar \\ --server.port=\u0026#39; \u0026#43; service.port \u0026#43; \u0026#39; $\u0026gt; initServer.log 2\u0026gt;\u0026amp;1 \u0026amp;\u0026#39; } } } 原文件  HTTP 我们有时候需要在流水线中发送 HTTP 请求，下面给出一个例子：\n  codes/jenkinsfile/http.groovy   // dependecy plugin is https://plugins.jenkins.io/phoenix-autotest pipeline { agent { label \u0026#34;master\u0026#34; } stages { stage(\u0026#39;test\u0026#39;) { steps{ script { http url: \u0026#34;http://baidu.com\u0026#34; http url: \u0026#34;http://baidu.com\u0026#34;, responseBody: \u0026#34;body.txt\u0026#34; archiveArtifacts \u0026#34;body.txt\u0026#34; def quy = \u0026#39;https://www.baidu.com/s?wd=\u0026#39; \u0026#43; URLEncoder.encode(\u0026#39;a b\u0026#39;, \u0026#39;UTF-8\u0026#39;) echo quy http url: quy } } } } }  原文件  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/docker/docker-config/",
+        "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-config/",
         "title": "配置",
         "tags": [],
         "description": "配置",

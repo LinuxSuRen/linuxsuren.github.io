@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/other/network/</link>
+    <description>Recent content in 网络 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/other/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/blog/other/network/chromedp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTP Status</title>
+      <link>https://linuxsuren.github.io/blog/other/network/http_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/http_status/</guid>
+      <description> 200 300 400 401 未经授权：访问由于凭据无效被拒绝。
+404 无法找到页面
+500 Reference </description>
+    </item>
+    
+    <item>
+      <title>代理</title>
+      <link>https://linuxsuren.github.io/blog/other/network/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/proxy/</guid>
+      <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
+CentOS yum install shadowsocks
+pip install shadowsocks
+sudo pip install shadowsocks --upgrade
+使用 sudo sslocal -c shadowsocks.json -d start
+polipo 安装 sudo apt-get install polipo
+brew install polip
+安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  参考 如何给 Git 配置代理</description>
+    </item>
+    
+  </channel>
+</rss>
