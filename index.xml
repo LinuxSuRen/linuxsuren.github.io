@@ -118,16 +118,6 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</guid>
-      <description>你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：
-npm install -g yo generator-code</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/other/network/chromedp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -164,20 +154,6 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
  getIconFileName getDisplayName getUrlName  约定 </description>
-    </item>
-    
-    <item>
-      <title>Ake</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
-      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
-安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
-通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
-修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
     </item>
     
     <item>
@@ -813,6 +789,7 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+ 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
 运行 在工程根目录下执行 mvn hpi:run
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
@@ -1496,15 +1473,6 @@ govendor list</description>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/grep/</guid>
       <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
-    </item>
-    
-    <item>
-      <title>kaniko</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</guid>
-      <description>Reference https://github.com/GoogleContainerTools/kaniko</description>
     </item>
     
     <item>

@@ -59,10 +59,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/other/network/chromedp/</loc>
   </url>
   
@@ -81,10 +77,6 @@
   <url>
     <loc>https://linuxsuren.github.io/tags/agent/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
   </url>
   
   <url>
@@ -671,10 +663,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/grep/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/k8s/kaniko/</loc>
   </url>
   
   <url>

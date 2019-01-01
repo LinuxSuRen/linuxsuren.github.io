@@ -10,15 +10,5 @@
 	<atom:link href="https://linuxsuren.github.io/blog/other/editor/vscode/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/editor/vscode/build-extensions/</guid>
-      <description>你需要有 NodeJs 和 Git，然后通过下面的命令安装 Yeoman 和 VS-Code 生成器：
-npm install -g yo generator-code</description>
-    </item>
-    
   </channel>
 </rss>
