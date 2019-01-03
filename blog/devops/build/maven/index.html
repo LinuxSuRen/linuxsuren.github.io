@@ -52,7 +52,7 @@
 
 
 
-<meta itemprop="wordCount" content="65">
+<meta itemprop="wordCount" content="74">
 
 
 
@@ -182,6 +182,21 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#构建">构建</a></li>
+<li><a href="#离线">离线</a></li>
+<li><a href="#部署">部署</a></li>
+<li><a href="#多模块">多模块</a>
+<ul>
+<li><a href="#部署-1">部署</a></li>
+</ul></li>
+<li><a href="#查看依赖">查看依赖</a></li>
+<li><a href="#调试">调试</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		
@@ -242,6 +257,12 @@
 <p>跳过测试 <code>mvn package -DskipTests=true</code></p>
 
 <p><code>mvn package -U</code> 强制更新快照版本的依赖</p>
+
+<h1 id="离线">离线</h1>
+
+<p>通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：</p>
+
+<p><code>mvn clean package --offline</code></p>
 
 <h1 id="部署">部署</h1>
 
