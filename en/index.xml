@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SuRenPi</title>
+    <link>https://linuxsuren.github.io/en/</link>
+    <description>Recent content on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 03 Jan 2019 16:24:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Core</title>
+      <link>https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/</link>
+      <pubDate>Thu, 03 Jan 2019 16:24:48 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/</guid>
+      <description>You can access Jenkins by url, like below:
+curl http://localhost:8080/job/jobName/api/json -u user:passwd
+Header Way You can also put your user and token into http header:
+curl http://localhost:8080/job/jobName/api/json --header &amp;quot;Authorization: Basicecho -n &amp;lsquo;user:passwd&amp;rsquo; | base64&amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>

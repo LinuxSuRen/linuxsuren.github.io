@@ -35,13 +35,6 @@
         "content": "容器技术\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/core.en/",
-        "title": "Core",
-        "tags": [],
-        "description": "Core",
-        "content": "You can access Jenkins by url, like below:\ncurl http://localhost:8080/job/jobName/api/json?pretty=true -u user:passwd\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-daemon/",
         "title": "",
         "tags": [],
