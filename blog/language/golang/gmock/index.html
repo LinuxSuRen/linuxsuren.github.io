@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>脚本式流水线 | SuRenPi</title>
+    <title>GoMock | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="脚本式流水线" />
-<meta property="og:description" content="本文介绍 Jenkins 的脚本式流水线" />
+<meta property="og:title" content="GoMock" />
+<meta property="og:description" content="GoMock" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/language/golang/gmock/" /><meta property="article:published_time" content="2019-01-04T16:17:15&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-04T16:17:15&#43;08:00"/>
 
-<meta itemprop="name" content="脚本式流水线">
-<meta itemprop="description" content="本文介绍 Jenkins 的脚本式流水线">
-
-
-
-<meta itemprop="wordCount" content="238">
+<meta itemprop="name" content="GoMock">
+<meta itemprop="description" content="GoMock">
 
 
+<meta itemprop="datePublished" content="2019-01-04T16:17:15&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-04T16:17:15&#43;08:00" />
+<meta itemprop="wordCount" content="98">
 
-<meta itemprop="keywords" content="Jenkins,Pipeline," />
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="脚本式流水线"/>
-<meta name="twitter:description" content="本文介绍 Jenkins 的脚本式流水线"/>
+<meta name="twitter:title" content="GoMock"/>
+<meta name="twitter:description" content="GoMock"/>
 
 
 
@@ -159,26 +161,25 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#触发器">触发器</a></li>
-<li><a href="#参数化执行">参数化执行</a></li>
-<li><a href="#异常">异常</a></li>
-<li><a href="#循环">循环</a></li>
-<li><a href="#http">HTTP</a></li>
+<li><a href="#安装">安装</a></li>
+<li><a href="#编写接口-测试用">编写接口（测试用）</a></li>
+<li><a href="#生成-mock-接口">生成 Mock 接口</a></li>
+<li><a href="#测试用例">测试用例</a></li>
 </ul>
 </nav>
 	
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/" class="dib f6 pl1 hover-bg-light-gray br-100" title="申明式流水线 ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+
+		
+			<a href="https://linuxsuren.github.io/blog/language/golang/goroutines/" class="dib f6 pr1 hover-bg-light-gray br-100" title="GoRoutines">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg>
 
 			</a>
-		
-
 		
 	</div>
 
@@ -191,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">脚本式流水线</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">GoMock</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      本文介绍 Jenkins 的脚本式流水线
+      GoMock
     </div>
   
 
@@ -212,182 +213,89 @@
 
 
 
-<h1 id="触发器">触发器</h1>
+<p>
+
+<a href="https://github.com/golang/mock" target="_blank">GoMock</a> 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 <code>testing</code> 包集成。</p>
+
+<h1 id="安装">安装</h1>
+
+<p>你只要安装了 Go 就可以通过下面的命令来安装 <code>gomock</code> 和 <code>mockgen</code> 工具。</p>
+
+<pre><code>go get github.com/golang/mock/gomock
+go install github.com/golang/mock/mockgen
+</code></pre>
+
+<h1 id="编写接口-测试用">编写接口（测试用）</h1>
 
 
 
 
 
-<div class="code-copy" id="static/codes/jenkinsfile/script-trigger.groovy">
+<div class="code-copy" id="static/codes/golang/gmock/foo.go">
 	
 		<div class="action-buttons"></div>
-		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/script-trigger.groovy</span>
-		<i class="icon-groovy input"></i>
+		<span class="filename"><i class="icon-website"></i>codes/golang/gmock/foo.go</span>
+		<i class="icon-go input"></i>
 	
 		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
 		</button>
 	
-	<pre><code class="language-groovy">node(&#39;local&#39;) {
-	echo &#39;hello&#39;
+	<pre><code class="language-golang">package main
+
+// Foo no-sense interface demo
+type Foo interface {
+	Max(a, b int) int
 }
 
-properties([
-	buildDiscarder(
-		logRotator(
-			artifactDaysToKeepStr: &#39;&#39;,
-			artifactNumToKeepStr: &#39;&#39;,
-			daysToKeepStr: &#39;5&#39;,
-			numToKeepStr: &#39;10&#39;
-		)
-	),
-	pipelineTriggers([
-		cron(&#39;H 3,12,17 * * *&#39;),
-		scm(&#39;H 3,12,17 * * *&#39;)
-	])
-])</code></pre>
-	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/script-trigger.groovy" title="See codes/jenkinsfile/script-trigger.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/script-trigger.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+func main() {}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/golang/gmock/foo.go" title="See codes/golang/gmock/foo.go source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/golang/gmock/foo.go source on GitHub">原文件<i class="icon-github"></i></a>
 </div>
 
 
-<h1 id="参数化执行">参数化执行</h1>
+<h1 id="生成-mock-接口">生成 Mock 接口</h1>
 
-<pre><code class="language-groovy">properties([[$class: 'JobRestrictionProperty'],
-	parameters([run(description: '',
-		filter: 'ALL', 
-		name: 'Name', 
-		projectName: 'Project')]),
-	pipelineTriggers([])]
+<p>执行命令 <code>mockgen --source=foo.go --destination foo-mock.go</code></p>
+
+<h1 id="测试用例">测试用例</h1>
+
+
+
+
+
+<div class="code-copy" id="static/codes/golang/gmock/foo_test.go">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/golang/gmock/foo_test.go</span>
+		<i class="icon-go input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-golang">package main
+
+import (
+	&#34;testing&#34;
+
+	&#34;./mock_main&#34;
+
+	&#34;github.com/golang/mock/gomock&#34;
 )
-</code></pre>
 
-<h1 id="异常">异常</h1>
+func TestFoo(t *testing.T) {
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+	expect := 2
 
-<p>你可以利用处理异常的方式来实现类似于<a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/">申明式流水线中</a>的 <code>post</code></p>
+	m := mock_main.NewMockFoo(ctrl)
+	m.EXPECT().Max(1, 2).Return(expect)
 
-
-
-
-
-<div class="code-copy" id="static/codes/jenkinsfile/try-catch.groovy">
-	
-		<div class="action-buttons"></div>
-		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/try-catch.groovy</span>
-		<i class="icon-groovy input"></i>
-	
-		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-	
-	<pre><code class="language-groovy">node {
-    stage(&#34;one&#34;){
-        try {
-            echo &#34;hello&#34;
-        }catch(error){
-            echo error.getMessage()
-        }finally{
-            echo &#34;finally&#34;
-        }
-    }
-}</code></pre>
-	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/try-catch.groovy" title="See codes/jenkinsfile/try-catch.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/try-catch.groovy source on GitHub">原文件<i class="icon-github"></i></a>
-</div>
-
-
-<h1 id="循环">循环</h1>
-
-
-
-
-
-<div class="code-copy" id="static/codes/jenkinsfile/loop.groovy">
-	
-		<div class="action-buttons"></div>
-		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/loop.groovy</span>
-		<i class="icon-groovy input"></i>
-	
-		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-	
-	<pre><code class="language-groovy">node(&#39;suren&#39;) {
-    def dev_path = &#39;/opt/suren/bin&#39;
-    def services = [
-        [
-            &#39;name&#39;: &#39;admin&#39;,
-            &#39;project&#39;: &#39;admin&#39;,
-            &#39;port&#39;: &#39;7002&#39;,
-            &#39;jarName&#39;: &#39;admin&#39;
-        ]
-    ];
-    
-    stage(&#39;Copy Artifact&#39;) {
-        for(service in services){
-            step([$class: &#39;CopyArtifact&#39;, fingerprintArtifacts: true, flatten: true,
-                projectName: service.project,
-                selector: [$class: &#39;StatusBuildSelector&#39;, stable: false],
-                target: dev_path &#43; &#39;/&#39; &#43; service.name
-            ])
-        }
-    }
-    
-    stage(&#39;Stop Service&#39;) {
-        for(service in services){
-           sh &#39;fuser -n tcp -k &#39; &#43; service.port &#43; &#39; &gt; redirection &amp;&#39;
-        }
-    }
-    
-    stage(&#39;Start Service&#39;) {
-        for(service in services){
-            sh &#39;cd &#39; &#43; pass_bin &#43; &#39;/&#39; &#43; service.name &#43; &#39; &amp;&amp; nohup nice java -server -Xms128m -Xmx384m \
-                -jar &#39; &#43; service.jarName &#43; &#39;.jar \
-                --server.port=&#39; &#43; service.port &#43; &#39; $&gt; initServer.log 2&gt;&amp;1 &amp;&#39;
-        }
-    }
-}</code></pre>
-	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/loop.groovy" title="See codes/jenkinsfile/loop.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/loop.groovy source on GitHub">原文件<i class="icon-github"></i></a>
-</div>
-
-
-<h1 id="http">HTTP</h1>
-
-<p>我们有时候需要在流水线中发送 HTTP 请求，下面给出一个例子：</p>
-
-
-
-
-
-<div class="code-copy" id="static/codes/jenkinsfile/http.groovy">
-	
-		<div class="action-buttons"></div>
-		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/http.groovy</span>
-		<i class="icon-groovy input"></i>
-	
-		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-	
-	<pre><code class="language-groovy">// dependecy plugin is https://plugins.jenkins.io/phoenix-autotest
-pipeline {
-    agent {
-        label &#34;master&#34;
-    }
-    
-    stages {
-      stage(&#39;test&#39;) {
-          steps{
-              script {
-                  http url: &#34;http://baidu.com&#34;
-                  http url: &#34;http://baidu.com&#34;, responseBody: &#34;body.txt&#34;
-                  
-                  archiveArtifacts &#34;body.txt&#34;
-                  
-                  def quy = &#39;https://www.baidu.com/s?wd=&#39; &#43; URLEncoder.encode(&#39;a b&#39;, &#39;UTF-8&#39;)
-                  echo quy
-                  http url: quy
-              }
-          }
-      }
-    }
+	if m.Max(1, 2) != expect {
+		t.Errorf(&#34;max result is wrong, should be %d\n&#34;, expect)
+	}
 }
 </code></pre>
-	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/http.groovy" title="See codes/jenkinsfile/http.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/http.groovy source on GitHub">原文件<i class="icon-github"></i></a>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/golang/gmock/foo_test.go" title="See codes/golang/gmock/foo_test.go source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/golang/gmock/foo_test.go source on GitHub">原文件<i class="icon-github"></i></a>
 </div>
 
 
@@ -405,21 +313,6 @@ pipeline {
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-agent/">Jenkins Agent</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -617,80 +510,18 @@ pipeline {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/language/golang/gmock/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “脚本式流水线”
-  </a> was last updated: January 1, 0001
+    “GoMock”
+  </a> was last updated: January 4, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/pipeline/scripted.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/language/golang/gmock.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
       
-
-  
-  
-  
-
-  <div class="nested-lh-copy">
-    <ul class="list dib nested-links ml0 pl0">
-      
-        <li class="db mb2 b">
-          Tags:
-        </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/jenkins">
-              Jenkins
-            </a>
-          </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/pipeline">
-              Pipeline
-            </a>
-          </li>
-        
-              
-      
-        
-        
-          <li class="db dib-l mb2 mr3">
-            <a href="/blog/devops/jenkins/basic/jenkins/" class="link">
-              Jenkins
-            </a>
-          </li>
-        
-      
-        
-          <li class="db b mt4 mb2 mr2">
-            Related entries:
-          </li>
-        
-        
-          <li class="db dib-l mb2 mr3">
-            <a href="/blog/devops/jenkins/plugin-dev/jenkins-permission/" class="link">
-              Jenkins Permission
-            </a>
-          </li>
-        
-      
-        
-        
-          <li class="db dib-l mb2 mr3">
-            <a href="/blog/devops/jenkins/pipeline/declarative/" class="link">
-              申明式流水线
-            </a>
-          </li>
-        
-      
-        
-        
-      
-    </ul>
-  </div>
 
 
     </div>

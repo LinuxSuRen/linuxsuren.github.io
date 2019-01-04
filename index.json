@@ -35,6 +35,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/gmock/",
+        "title": "GoMock",
+        "tags": [],
+        "description": "GoMock",
+        "content": "  GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。\n安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。\ngo get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen  编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go\n测试用例  codes/golang/gmock/foo_test.go   package main import ( \u0026#34;testing\u0026#34; \u0026#34;./mock_main\u0026#34; \u0026#34;github.com/golang/mock/gomock\u0026#34; ) func TestFoo(t *testing.T) { ctrl := gomock.NewController(t) defer ctrl.Finish() expect := 2 m := mock_main.NewMockFoo(ctrl) m.EXPECT().Max(1, 2).Return(expect) if m.Max(1, 2) != expect { t.Errorf(\u0026#34;max result is wrong, should be %d\\n\u0026#34;, expect) } }  原文件  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/docker/docker-daemon/",
         "title": "",
         "tags": [],

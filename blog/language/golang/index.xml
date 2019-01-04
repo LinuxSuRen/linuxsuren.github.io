@@ -6,9 +6,22 @@
     <description>Recent content in Golang on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 04 Jan 2019 16:17:15 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/language/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GoMock</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/gmock/</link>
+      <pubDate>Fri, 04 Jan 2019 16:17:15 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/gmock/</guid>
+      <description>GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。
+安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。
+go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen  编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
+测试用例  codes/golang/gmock/foo_test.go   package main import ( &amp;#34;testing&amp;#34; &amp;#34;.</description>
+    </item>
     
     <item>
       <title>GoRoutines</title>
