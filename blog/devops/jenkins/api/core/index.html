@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Annotation | SuRenPi</title>
+    <title>Jenkins 核心 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Annotation" />
-<meta property="og:description" content="Jenkins 中的注解类介绍" />
+<meta property="og:title" content="Jenkins 核心" />
+<meta property="og:description" content="Jenkins 核心的 API" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/api/core/" /><meta property="article:published_time" content="2019-01-03T16:29:11&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-03T16:29:11&#43;08:00"/>
 
-<meta itemprop="name" content="Annotation">
-<meta itemprop="description" content="Jenkins 中的注解类介绍">
+<meta itemprop="name" content="Jenkins 核心">
+<meta itemprop="description" content="Jenkins 核心的 API">
 
 
-
-<meta itemprop="wordCount" content="20">
+<meta itemprop="datePublished" content="2019-01-03T16:29:11&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-03T16:29:11&#43;08:00" />
+<meta itemprop="wordCount" content="90">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Annotation"/>
-<meta name="twitter:description" content="Jenkins 中的注解类介绍"/>
+<meta name="twitter:title" content="Jenkins 核心"/>
+<meta name="twitter:description" content="Jenkins 核心的 API"/>
 
 
 
@@ -136,7 +138,24 @@
 </form>
 </div>
 
-    <div class="list ma0 pa0 dn dib-l"></div>
+    <div class="list ma0 pa0 dn dib-l">
+/blog/devops/jenkins/api/core/
+
+<ul class="list ma0 pa0 dn dib-l">
+
+  <li class="f5 dib mr4" role="menuitem">
+    
+    
+    <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/" class="dim gray">中文</a>
+  </li>
+
+  <li class="f5 dib mr4" role="menuitem">
+    
+    
+    <a href="https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/" class="dim gray">English</a>
+  </li>
+
+</ul></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -156,29 +175,16 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
-
-	<div date-pref>
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Action ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/" class="dib f6 pr1 hover-bg-light-gray br-100" title="CLI">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-	</div>
-
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#单个任务">单个任务</a></li>
+<li><a href="#构建历史">构建历史</a></li>
+<li><a href="#重启">重启</a></li>
+<li><a href="#认证">认证</a></li>
+</ul>
+</nav>
+	
 </aside>
 </div>
 
@@ -188,13 +194,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Annotation</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 核心</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins 中的注解类介绍
+      Jenkins 核心的 API
     </div>
   
 
@@ -209,29 +215,54 @@
 
 
 
-<h1 id="checkfornull">CheckForNull</h1>
+<p>你可以通过如下的方式来访问 Jenkins：</p>
 
-<h1 id="extension">Extension</h1>
+<h1 id="单个任务">单个任务</h1>
 
-<h1 id="noexternaluse">NoExternalUse</h1>
+<p><code>curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true</code> 获取任务信息</p>
 
-<h1 id="initializer">Initializer</h1>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/build</code> 触发构建</p>
 
-<p>Usage: <code>@Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)</code></p>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello</code> 添加描述信息</p>
 
-<p>通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。</p>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/disable</code> 禁用任务</p>
 
-<h1 id="terminator">Terminator</h1>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/enable</code> 启用任务</p>
 
-<p>Usage: <code>@Terminator(after=TermMilestone.STARTED)</code></p>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/doDelete</code> 删除任务</p>
 
-<p>上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。</p>
+<h1 id="构建历史">构建历史</h1>
 
-<h1 id="restricted">Restricted</h1>
+<p><code>curl http://localhost:8080/jenkins/job/jobName/1/consoleText</code> 获取构建历史的控制台日志</p>
 
-<p>Usage: <code>@Restricted(NoExternalUse.class)</code></p>
+<p><code>curl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0</code> 获取部分日志，并返回是否还有未输出的日志。协议头中的 <code>X-Text-Size</code> 为日志内容的大小，<code>X-More-Data</code> 的值如果为 <code>true</code> 的话则标示还有未输出的日志。</p>
 
-<p>上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</p>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete</code> 删除构建历史</p>
+
+<p>下面是特定情况的构建：</p>
+
+<p><code>curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText</code> 最近一次构建的日志</p>
+
+<p><code>curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText</code> 最近一次失败构建的日志</p>
+
+<p><code>curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText</code> 最近一次未成功的构建日志</p>
+
+<p><code>curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText</code> 最近一次完成的构建日志</p>
+
+<h1 id="重启">重启</h1>
+
+<p><code>curl -X POST http://localhost:8080/jenkins/safeRestart</code> 必须使用 <code>POST</code> 请求</p>
+
+<h1 id="认证">认证</h1>
+
+<p>这里既支持密码也支持 Token 的方式</p>
+
+<p><code>curl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd</code></p>
+
+<p>在 HTTP 协议头中添加认证信息：</p>
+
+<pre><code>curl http://localhost:8080/jenkins/job/jobName/api/json --header &quot;Authorization: Basic `echo -n user:passwd | base64`&quot;
+</code></pre>
 
 </div>
 
@@ -247,21 +278,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -459,14 +475,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Annotation”
-  </a> was last updated: January 1, 0001
+    “Jenkins 核心”
+  </a> was last updated: January 3, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/api/core.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
