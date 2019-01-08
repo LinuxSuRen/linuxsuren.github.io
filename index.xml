@@ -22,6 +22,7 @@
 机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
 自由风格 在 Jenkins 中新建自由风格任务
 在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。
+上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。
 流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：
 dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39;</description>
     </item>
