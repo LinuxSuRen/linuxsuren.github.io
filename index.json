@@ -39,7 +39,7 @@
         "title": "Dingding Notifications",
         "tags": [],
         "description": "Dingding Notifications",
-        "content": " 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。\n在 Jenkins 中新建任务\n自由风格 在构建后操作中添加钉钉通知器配置。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。\n"
+        "content": " 安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。\n新建机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。\n在 Jenkins 中新建任务\n自由风格 在构建后操作中添加钉钉通知器配置。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/gmock/",
