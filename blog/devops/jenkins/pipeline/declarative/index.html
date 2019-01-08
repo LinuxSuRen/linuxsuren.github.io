@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.53" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="43">
+<meta itemprop="wordCount" content="48">
 
 
 
@@ -229,11 +229,14 @@
 	
 	<pre><code class="language-groovy">pipeline {
     agent {
-        label &#34;master&#34;
+        label &#39;master&#39;
     }
 
     stages {
         stage(&#39;one&#39;) {
+            when {
+                branch &#39;master&#39;
+            }
             steps {
                 echo &#39;Hello World&#39;
             }
@@ -253,10 +256,6 @@
 
 </div>
 
-<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-
-</aside>
-
 
 
 <script src="https://utteranc.es/client.js"
@@ -268,7 +267,6 @@
 </script>
 
 
-
           
 
 <h2>参考</h2>
@@ -276,11 +274,11 @@
 	
 	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/parameterized/">参数化流水线</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/pipeline/">Jenkins 流水线插件</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/parameterized/">参数化流水线</a></li>
 	
 </ul>
 

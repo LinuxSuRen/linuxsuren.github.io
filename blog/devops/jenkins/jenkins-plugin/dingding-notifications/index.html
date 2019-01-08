@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.53" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -39,7 +39,7 @@
 
 <meta itemprop="datePublished" content="2019-01-08T11:08:06&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-08T11:08:06&#43;08:00" />
-<meta itemprop="wordCount" content="48">
+<meta itemprop="wordCount" content="42">
 
 
 
@@ -234,8 +234,6 @@
 
 <p>在 <em>构建后操作</em> 中 <em>添加钉钉通知器配置</em> 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。</p>
 
-<p>上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 <code>Sending Message To Ding Talk</code>。在高级选项里可以设置。</p>
-
 <h1 id="流水线">流水线</h1>
 
 <p>你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：</p>
@@ -244,47 +242,6 @@
 </code></p>
 
 </div>
-
-<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-
-<table>
-    <tr>
-        <td>类型</td><td>编号</td><td>描述</td>
-    </tr>
-
-
-
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55441" target="_blank">JENKINS-55441</a>
-        </td>
-        <td>
-            Lack of the Chinese Localization
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55440" target="_blank">JENKINS-55440</a>
-        </td>
-        <td>
-            Typo jenkins
-        </td>
-    </tr>
-    
-
-</table>
-
-
-</aside>
 
 
 
@@ -295,7 +252,6 @@
         crossorigin="linuxsuren"
         async>
 </script>
-
 
 
           

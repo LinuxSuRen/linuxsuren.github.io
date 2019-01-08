@@ -39,7 +39,7 @@
         "title": "钉钉通知",
         "tags": [],
         "description": "钉钉通知",
-        "content": " 支持的特性包括：\n 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。\n机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。\n自由风格 在 Jenkins 中新建自由风格任务\n在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。\n上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。\n流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：\ndingTalk accessToken: 'token', imageUrl: 'imageUrl', jenkinsUrl: 'http://localhost/jenkins', message: 'messages', notifyPeople: '18211192837' \n"
+        "content": " 支持的特性包括：\n 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。\n机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。\n自由风格 在 Jenkins 中新建自由风格任务\n在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。\n流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：\ndingTalk accessToken: 'token', imageUrl: 'imageUrl', jenkinsUrl: 'http://localhost/jenkins', message: 'messages', notifyPeople: '18211192837' \n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/gmock/",
@@ -742,11 +742,11 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/k8s/kubectl/",
+        "uri": "https://linuxsuren.github.io/blog/devops/k8s/kuberctl/",
         "title": "Kubectl",
         "tags": [],
         "description": "Kubectl 的使用",
-        "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\n"
+        "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/",
@@ -1397,7 +1397,7 @@
         "title": "申明式流水线",
         "tags": ["Jenkins"],
         "description": "申明式流水线",
-        "content": "流水线插件从 2.5 版本开始支持申明式流水线。\n申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：\n codes/jenkinsfile/declarative.groovy   pipeline { agent { label \u0026#34;master\u0026#34; } stages { stage(\u0026#39;one\u0026#39;) { steps { echo \u0026#39;Hello World\u0026#39; } } } post { always { echo \u0026#39;I will always say Hello again!\u0026#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。\n"
+        "content": "流水线插件从 2.5 版本开始支持申明式流水线。\n申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：\n codes/jenkinsfile/declarative.groovy   pipeline { agent { label \u0026#39;master\u0026#39; } stages { stage(\u0026#39;one\u0026#39;) { when { branch \u0026#39;master\u0026#39; } steps { echo \u0026#39;Hello World\u0026#39; } } } post { always { echo \u0026#39;I will always say Hello again!\u0026#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/terminal/",
