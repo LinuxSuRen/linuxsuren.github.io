@@ -23,8 +23,28 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</loc>
+    <lastmod>2019-01-08T11:08:06+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/gmock/</loc>
     <lastmod>2019-01-04T16:17:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</loc>
+    <lastmod>2019-01-03T16:29:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/"
+                />
   </url>
   
   <url>
@@ -326,6 +346,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/</loc>
+    <lastmod>2019-01-03T16:29:11+08:00</lastmod>
   </url>
   
   <url>
@@ -358,6 +379,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
+    <lastmod>2019-01-08T11:08:06+08:00</lastmod>
   </url>
   
   <url>
@@ -803,7 +825,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
-    <lastmod>2019-01-04T16:17:15+08:00</lastmod>
+    <lastmod>2019-01-08T11:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
