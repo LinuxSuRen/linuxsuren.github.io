@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Dingding Notifications | SuRenPi</title>
+    <title>钉钉通知 | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,26 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Dingding Notifications" />
-<meta property="og:description" content="Dingding Notifications" />
+<meta property="og:title" content="钉钉通知" />
+<meta property="og:description" content="钉钉通知" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/" /><meta property="article:published_time" content="2019-01-08T11:08:06&#43;08:00"/>
 <meta property="article:modified_time" content="2019-01-08T11:08:06&#43;08:00"/>
 
-<meta itemprop="name" content="Dingding Notifications">
-<meta itemprop="description" content="Dingding Notifications">
+<meta itemprop="name" content="钉钉通知">
+<meta itemprop="description" content="钉钉通知">
 
 
 <meta itemprop="datePublished" content="2019-01-08T11:08:06&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-08T11:08:06&#43;08:00" />
-<meta itemprop="wordCount" content="38">
+<meta itemprop="wordCount" content="42">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dingding Notifications"/>
-<meta name="twitter:description" content="Dingding Notifications"/>
+<meta name="twitter:title" content="钉钉通知"/>
+<meta name="twitter:description" content="钉钉通知"/>
 
 
 
@@ -162,7 +162,7 @@
   	<nav id="TableOfContents">
 <ul>
 <li><a href="#安装插件">安装插件</a></li>
-<li><a href="#新建机器人">新建机器人</a></li>
+<li><a href="#机器人">机器人</a></li>
 <li><a href="#自由风格">自由风格</a></li>
 <li><a href="#流水线">流水线</a></li>
 </ul>
@@ -192,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Dingding Notifications</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">钉钉通知</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Dingding Notifications
+      钉钉通知
     </div>
   
 
@@ -224,7 +224,7 @@
 
 <p>在 <em>系统管理》插件管理》可选插件</em> 中搜索 <code>dingding-notifications</code> 并安装。</p>
 
-<h1 id="新建机器人">新建机器人</h1>
+<h1 id="机器人">机器人</h1>
 
 <p>在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。</p>
 
@@ -232,11 +232,11 @@
 
 <p>在 Jenkins 中新建自由风格任务</p>
 
-<p>在<code>构建后操作</code>中添加<code>钉钉通知器配置</code>。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。</p>
+<p>在 <em>构建后操作</em> 中 <em>添加钉钉通知器配置</em> 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。</p>
 
 <h1 id="流水线">流水线</h1>
 
-<p>下面是 DSL 的写法：</p>
+<p>你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：</p>
 
 <p><code>dingTalk accessToken: 'token', imageUrl: 'imageUrl', jenkinsUrl: 'http://localhost/jenkins', message: 'messages', notifyPeople: '18211192837'
 </code></p>
@@ -455,7 +455,7 @@
   <a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Dingding Notifications”
+    “钉钉通知”
   </a> was last updated: January 8, 2019
 </h6>
 
