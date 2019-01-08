@@ -39,7 +39,7 @@
 
 <meta itemprop="datePublished" content="2019-01-08T11:08:06&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-08T11:08:06&#43;08:00" />
-<meta itemprop="wordCount" content="20">
+<meta itemprop="wordCount" content="38">
 
 
 
@@ -164,6 +164,7 @@
 <li><a href="#安装插件">安装插件</a></li>
 <li><a href="#新建机器人">新建机器人</a></li>
 <li><a href="#自由风格">自由风格</a></li>
+<li><a href="#流水线">流水线</a></li>
 </ul>
 </nav>
 	
@@ -212,6 +213,13 @@
 
 
 
+<p>支持的特性包括：</p>
+
+<ul>
+<li>发送任务状态</li>
+<li>发送文本类型的消息</li>
+</ul>
+
 <h1 id="安装插件">安装插件</h1>
 
 <p>在 <em>系统管理》插件管理》可选插件</em> 中搜索 <code>dingding-notifications</code> 并安装。</p>
@@ -220,11 +228,18 @@
 
 <p>在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。</p>
 
-<p>在 Jenkins 中新建任务</p>
-
 <h1 id="自由风格">自由风格</h1>
 
+<p>在 Jenkins 中新建自由风格任务</p>
+
 <p>在<code>构建后操作</code>中添加<code>钉钉通知器配置</code>。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。</p>
+
+<h1 id="流水线">流水线</h1>
+
+<p>下面是 DSL 的写法：</p>
+
+<p><code>dingTalk accessToken: 'token', imageUrl: 'imageUrl', jenkinsUrl: 'http://localhost/jenkins', message: 'messages', notifyPeople: '18211192837'
+</code></p>
 
 </div>
 
