@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>JVM | SuRenPi</title>
+    <title>Github | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="JVM" />
-<meta property="og:description" content="JVM" />
+<meta property="og:title" content="Github" />
+<meta property="og:description" content="Github" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/language/java/jvm/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/" /><meta property="article:published_time" content="2019-01-08T21:48:43&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-08T21:48:43&#43;08:00"/>
 
-<meta itemprop="name" content="JVM">
-<meta itemprop="description" content="JVM">
+<meta itemprop="name" content="Github">
+<meta itemprop="description" content="Github">
 
 
-
-<meta itemprop="wordCount" content="11">
+<meta itemprop="datePublished" content="2019-01-08T21:48:43&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-08T21:48:43&#43;08:00" />
+<meta itemprop="wordCount" content="15">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JVM"/>
-<meta name="twitter:description" content="JVM"/>
+<meta name="twitter:title" content="Github"/>
+<meta name="twitter:description" content="Github"/>
 
 
 
@@ -156,6 +158,13 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#webhook">webhook</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -167,17 +176,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/language/java/docker/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Docker ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/language/java/openj9/" class="dib f6 pr1 hover-bg-light-gray br-100" title="OpenJ9">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/" class="dib f6 pr1 hover-bg-light-gray br-100" title="钉钉通知">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -196,13 +197,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">JVM</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Github</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      JVM
+      Github
     </div>
   
 
@@ -217,13 +218,232 @@
 
 
 
-<h1 id="查看最大内存">查看最大内存</h1>
+<h1 id="webhook">webhook</h1>
 
-<p>执行命令 <code>java -XX:+PrintFlagsFinal -version | grep HeapSize</code> 或 <code>java -XshowSettings:all</code></p>
+<p>该插件提供的默认 <code>webhook</code> 地址为：<code>http://localhost/github-webhook/</code>。</p>
+
+<p>同时，也提供修改该地址的配置。</p>
+
+<p>我们需要在 GitHub 的 webhook 设置页面添加，<code>Content type</code> 要选择 <code>application/json</code></p>
+
+<p>如果要支持多分支流水线的话，主要需要确保勾选事件：<code>Pull Request</code></p>
 
 </div>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+
+<table>
+    <tr>
+        <td>类型</td><td>编号</td><td>描述</td>
+    </tr>
+
+
+
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55330" target="_blank">JENKINS-55330</a>
+        </td>
+        <td>
+            multi-branch pipeline project: github tag not found when building a tag 
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Improvement</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55324" target="_blank">JENKINS-55324</a>
+        </td>
+        <td>
+            GitHub Plugin tries to register webhook on groovy repository
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-54980" target="_blank">JENKINS-54980</a>
+        </td>
+        <td>
+            Jobs are stopped being triggered - java.lang.NullPointerException: There is no credentials with admin access to manage hooks on GitHubRepositoryName[host=github.com,username=myorgname,repository=myreponame]
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Improvement</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-54785" target="_blank">JENKINS-54785</a>
+        </td>
+        <td>
+            Allow users to configure SCM hosts that will be ignored
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-54577" target="_blank">JENKINS-54577</a>
+        </td>
+        <td>
+            Remove github server in &#34;Configure System&#34; page does not have any effect
+        </td>
+    </tr>
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+</table>
+
+一共：242个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520github-plugin" target="_blank">查看更多</a>
+
 
 </aside>
 
@@ -437,14 +657,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/language/java/jvm/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “JVM”
-  </a> was last updated: January 1, 0001
+    “Github”
+  </a> was last updated: January 8, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/language/java/jvm.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/jenkins-plugin/github.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
