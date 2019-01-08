@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件调试 | SuRenPi</title>
+    <title>Kubectl | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,24 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件调试" />
-<meta property="og:description" content="Jenkins 插件调试" />
+<meta property="og:title" content="Kubectl" />
+<meta property="og:description" content="Kubectl 的使用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/kubectl/" />
 
-<meta itemprop="name" content="Jenkins 插件调试">
-<meta itemprop="description" content="Jenkins 插件调试">
+<meta itemprop="name" content="Kubectl">
+<meta itemprop="description" content="Kubectl 的使用">
 
 
 
-<meta itemprop="wordCount" content="30">
+<meta itemprop="wordCount" content="66">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins 插件调试"/>
-<meta name="twitter:description" content="Jenkins 插件调试"/>
+<meta name="twitter:title" content="Kubectl"/>
+<meta name="twitter:description" content="Kubectl 的使用"/>
 
 
 
@@ -159,18 +159,20 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#运行">运行</a></li>
-<li><a href="#跳过测试">跳过测试</a></li>
-<li><a href="#指定端口">指定端口</a></li>
-<li><a href="#指定-jenkins-版本">指定 Jenkins 版本</a></li>
-<li><a href="#参考">参考</a></li>
+<li><a href="#下载">下载</a></li>
+<li><a href="#切换上下文">切换上下文</a></li>
+<li><a href="#查看上下文">查看上下文</a></li>
+<li><a href="#导出用户证书">导出用户证书</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#delete-pod">Delete pod</a></li>
+<li><a href="#节点">节点</a></li>
 </ul>
 </nav>
 	
 
 	<div date-pref>
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件扩展点 ">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/cert/" class="dib f6 pl1 hover-bg-light-gray br-100" title="K8S 证书 ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -180,7 +182,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/" class="dib f6 pr1 hover-bg-light-gray br-100" title="扩展 Jenkins 的构建（Builder）任务">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/minikube/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Minikube">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -199,13 +201,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件调试</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Kubectl</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins 插件调试
+      Kubectl 的使用
     </div>
   
 
@@ -220,31 +222,40 @@
 
 
 
-<h1 id="运行">运行</h1>
+<h1 id="下载">下载</h1>
 
-<p>在 <code>war</code> 目录下运行：</p>
+<p><code>wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl</code></p>
 
-<p><code>mvn hpi:run</code></p>
+<h1 id="切换上下文">切换上下文</h1>
 
-<h1 id="跳过测试">跳过测试</h1>
+<p><code>kubectl config use-context dev</code></p>
 
-<p><code>mvn hpi:run -DskipTests</code> 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：</p>
+<h1 id="查看上下文">查看上下文</h1>
 
-<p><code>mvn hpi:run -Dmaven.test.skip=true</code> 该命令既不执行测试代码，也不会编译。</p>
+<p><code>kubectl config current-context</code></p>
 
-<h1 id="指定端口">指定端口</h1>
+<h1 id="导出用户证书">导出用户证书</h1>
 
-<p>`mvn hpi:run -Djetty.port=1234&rsquo;</p>
+<pre><code>curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username
+</code></pre>
 
-<p><code>mvn hpi:run -Djenkins.install.runSetupWizard=true</code></p>
+<h1 id="troubleshooting">Troubleshooting</h1>
 
-<h1 id="指定-jenkins-版本">指定 Jenkins 版本</h1>
+<p>journalctl -u kubelet -f</p>
 
-<p><code>mvn hpi:run -Djenkins.version=2.121.1</code></p>
+<h1 id="delete-pod">Delete pod</h1>
 
-<h1 id="参考">参考</h1>
+<p><code>kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod</code></p>
 
-<p><a href="https://jenkinsci.github.io/maven-hpi-plugin/run-mojo.html">maven-hpi-plugin</a></p>
+<h1 id="节点">节点</h1>
+
+<p>查看节点列表 <code>kubectl get node</code></p>
+
+<p>查看节点详情 <code>kubectl get node -o wide</code></p>
+
+<p>显示标签 <code>kubectl get node --show-labels=true</code></p>
+
+<p>添加标签 <code>kubectl label node nodeName jenkinsAgent=maven</code></p>
 
 </div>
 
@@ -260,21 +271,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -472,14 +468,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/k8s/kubectl/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Jenkins 插件调试”
+    “Kubectl”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/k8s/kubectl.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
