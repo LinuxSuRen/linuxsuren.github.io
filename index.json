@@ -1,5 +1,12 @@
 [
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/",
+        "title": "Jenkins",
+        "tags": [],
+        "description": "Jenkins 的使用、配置以及插件开发",
+        "content": "Jenkins 的使用、配置以及插件开发\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/",
         "title": "DevOps",
         "tags": [],
@@ -33,6 +40,20 @@
         "tags": [],
         "description": "容器技术",
         "content": "容器技术\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/",
+        "title": "CrumIssuer",
+        "tags": [],
+        "description": "跨站请求伪造保护",
+        "content": "如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token\ncurl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json\n返回值类似于，而如果没有启用该配置的话会返回 404\n{\u0026quot;_class\u0026quot;:\u0026quot;hudson.security.csrf.DefaultCrumbIssuer\u0026quot;,\u0026quot;crumb\u0026quot;:\u0026quot;6e78c5725ea0c522bdcb787d548465aa\u0026quot;,\u0026quot;crumbRequestField\u0026quot;:\u0026quot;Jenkins-Crumb\u0026quot;}  使用该 Crumb 的方式如下：\ncurl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header \u0026quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa\u0026quot;\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/",
+        "title": "多分支流水线",
+        "tags": [],
+        "description": "多分支流水线",
+        "content": " 扫描多分支 curl -X POST -u user:passwd http://localhost:8080/jenkins/job/jobName/build --header \u0026quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa\u0026quot;\nJenkins-Crumb 需要单独获取。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/",
@@ -537,13 +558,6 @@
         "tags": [],
         "description": "",
         "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/",
-        "title": "Jenkins",
-        "tags": [],
-        "description": "Jenkins 的使用、配置以及插件开发",
-        "content": "Jenkins 的使用、配置以及插件开发\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/",

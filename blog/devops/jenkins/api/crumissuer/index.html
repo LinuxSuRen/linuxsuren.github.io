@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>参数化流水线 | SuRenPi</title>
+    <title>CrumIssuer | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="参数化流水线" />
-<meta property="og:description" content="参数化流水线" />
+<meta property="og:title" content="CrumIssuer" />
+<meta property="og:description" content="跨站请求伪造保护" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" /><meta property="article:published_time" content="2019-01-09T17:35:18&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-09T17:35:18&#43;08:00"/>
 
-<meta itemprop="name" content="参数化流水线">
-<meta itemprop="description" content="参数化流水线">
+<meta itemprop="name" content="CrumIssuer">
+<meta itemprop="description" content="跨站请求伪造保护">
 
 
-
-<meta itemprop="wordCount" content="43">
+<meta itemprop="datePublished" content="2019-01-09T17:35:18&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-09T17:35:18&#43;08:00" />
+<meta itemprop="wordCount" content="21">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="参数化流水线"/>
-<meta name="twitter:description" content="参数化流水线"/>
+<meta name="twitter:title" content="CrumIssuer"/>
+<meta name="twitter:description" content="跨站请求伪造保护"/>
 
 
 
@@ -157,13 +159,7 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#类型">类型</a></li>
-<li><a href="#位置">位置</a></li>
-<li><a href="#执行历史">执行历史</a></li>
-</ul>
-</nav>
+  	
 	
 
 	<div date-pref>
@@ -178,7 +174,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/" class="dib f6 pr1 hover-bg-light-gray br-100" title="申明式流水线">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/" class="dib f6 pr1 hover-bg-light-gray br-100" title="多分支流水线">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -197,13 +193,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">参数化流水线</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">CrumIssuer</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      参数化流水线
+      跨站请求伪造保护
     </div>
   
 
@@ -216,58 +212,18 @@
 
 <div class="prose" id="prose">
 
+<p>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token</p>
 
+<p><code>curl -u user:passwd  http:/localhost:8080/jenkins/crumbIssuer/api/json</code></p>
 
-<p>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。</p>
+<p>返回值类似于，而如果没有启用该配置的话会返回 <code>404</code></p>
 
-<h1 id="类型">类型</h1>
+<pre><code>{&quot;_class&quot;:&quot;hudson.security.csrf.DefaultCrumbIssuer&quot;,&quot;crumb&quot;:&quot;6e78c5725ea0c522bdcb787d548465aa&quot;,&quot;crumbRequestField&quot;:&quot;Jenkins-Crumb&quot;}
+</code></pre>
 
-<p>流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。</p>
+<p>使用该 Crumb 的方式如下：</p>
 
-<p><a href="https://jenkins.io/doc/developer/extensions/jenkins-core/#parameterdefinition">点击这里</a>查看更多的参数类型</p>
-
-<h1 id="位置">位置</h1>
-
-<p>参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：</p>
-
-
-
-
-
-<div class="code-copy" id="static/codes/jenkinsfile/parameter.groovy">
-	
-		<div class="action-buttons"></div>
-		<span class="filename"><i class="icon-website"></i>codes/jenkinsfile/parameter.groovy</span>
-		<i class="icon-groovy input"></i>
-	
-		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-	
-	<pre><code class="language-groovy">pipeline {
-    agent {
-        label &#34;master&#34;
-    }
-
-    parameters {
-        text defaultValue: &#39;Rick&#39;, description: &#39;&#39;, name: &#39;name&#39;
-    }
-
-    stages{
-        stage(&#34;one&#34;){
-            steps{
-                echo name
-                sh &#39;echo ${name}&#39;
-            }
-        }
-    }
-}</code></pre>
-	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/jenkinsfile/parameter.groovy" title="See codes/jenkinsfile/parameter.groovy source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/jenkinsfile/parameter.groovy source on GitHub">原文件<i class="icon-github"></i></a>
-</div>
-
-
-<h1 id="执行历史">执行历史</h1>
-
-<p>每次执行时的参数值，都可以在执行历史中看到。</p>
+<p><code>curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&quot;</code></p>
 
 </div>
 
@@ -290,19 +246,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
-	
-	<li><a href="/blog/devops/jenkins/pipeline/declarative/">申明式流水线</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/pipeline/">Jenkins 流水线插件</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/ssh-slaves/">Jenkins SSH Agent</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -500,14 +443,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “参数化流水线”
-  </a> was last updated: January 1, 0001
+    “CrumIssuer”
+  </a> was last updated: January 9, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/pipeline/parameterized.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/api/crumIssuer.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
