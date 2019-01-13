@@ -21,6 +21,29 @@
     </item>
     
     <item>
+      <title>CrumIssuer</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</link>
+      <pubDate>Wed, 09 Jan 2019 17:35:18 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</guid>
+      <description>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token
+curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
+返回值类似于，而如果没有启用该配置的话会返回 404
+{&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;}  使用该 Crumb 的方式如下：
+curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>多分支流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</link>
+      <pubDate>Wed, 09 Jan 2019 15:44:33 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</guid>
+      <description>扫描多分支 curl -X POST -u user:passwd http://localhost:8080/jenkins/job/jobName/build --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
+Jenkins-Crumb 需要单独获取。</description>
+    </item>
+    
+    <item>
       <title>Github</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</link>
       <pubDate>Tue, 08 Jan 2019 21:48:43 +0800</pubDate>
@@ -995,15 +1018,19 @@ API Server 公钥和私钥
     
     <item>
       <title>Kubectl</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
       <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
 切换上下文 kubectl config use-context dev
 查看上下文 kubectl config current-context
 导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f
-Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod</description>
+Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+节点 查看节点列表 kubectl get node
+查看节点详情 kubectl get node -o wide
+显示标签 kubectl get node --show-labels=true
+添加标签 kubectl label node nodeName jenkinsAgent=maven</description>
     </item>
     
     <item>
@@ -1718,8 +1745,7 @@ brew install polip
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
-      <description>介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。
-注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
 新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
 sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
 签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
