@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.53" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="72">
 
 
 
@@ -156,6 +156,13 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#创建-response-结构">创建 Response 结构</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -217,6 +224,57 @@
 
 
 
+
+
+
+
+<div class="code-copy" id="static/codes/golang/http/main.go">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/golang/http/main.go</span>
+		<i class="icon-go input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-golang">package main
+
+import (
+	&#34;fmt&#34;
+	&#34;io/ioutil&#34;
+	&#34;net/http&#34;
+	&#34;net/url&#34;
+)
+
+func main() {
+	url := url.URL{
+		Host:   &#34;linuxsuren.github.io&#34;,
+		Path:   &#34;/index.json&#34;,
+		Scheme: &#34;https&#34;,
+	}
+
+	fmt.Println(url.RequestURI())
+	fmt.Println(url.String())
+
+	response, err := http.Get(url.String())
+	if err != nil {
+		fmt.Printf(&#34;get error %v\n&#34;, err)
+		return
+	}
+
+	data, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		fmt.Printf(&#34;read error %v\n&#34;, err)
+		return
+	}
+
+	fmt.Println(string(data))
+}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/golang/http/main.go" title="See codes/golang/http/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/golang/http/main.go source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+
+
 <h1 id="创建-response-结构">创建 Response 结构</h1>
 
 <pre><code>import (
@@ -266,14 +324,14 @@ http.Response{
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               
