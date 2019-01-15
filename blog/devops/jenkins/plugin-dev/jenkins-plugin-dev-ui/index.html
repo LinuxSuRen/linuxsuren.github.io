@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.53" />
+     <meta name="generator" content="Hugo 0.52" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="64">
+<meta itemprop="wordCount" content="123">
 
 
 
@@ -161,6 +161,7 @@
 <ul>
 <li><a href="#按钮">按钮</a></li>
 <li><a href="#下拉框">下拉框</a></li>
+<li><a href="#校验">校验</a></li>
 <li><a href="#凭据">凭据</a></li>
 <li><a href="#高级">高级</a></li>
 <li><a href="#静态资源文件">静态资源文件</a></li>
@@ -258,6 +259,30 @@
 
 <p>细心的童鞋肯定能看出来，<code>doFillMethodItems</code> 中间的 <code>Method</code> 就对应页面上的字段名称。</p>
 
+<h1 id="校验">校验</h1>
+
+<p>如果你的表单里有一个字段 <code>crontab</code> 希望能添加数据格式校验的话，可以在对应类的 <code>DescriptorImpl</code> 中添加方法来实现：</p>
+
+<pre><code>&lt;f:entry title=&quot;${%Crontab}&quot; field=&quot;crontab&quot;&gt;
+&lt;f:textbox/&gt;
+&lt;/f:entry&gt;
+</code></pre>
+
+<pre><code>public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) {
+    try {
+        CronTabList ctl = CronTabList.create(fixNull(value), item != null ? Hash.from(item.getFullName()) : null);
+        Collection&lt;FormValidation&gt; validations = new ArrayList&lt;&gt;();
+        updateValidationsForSanity(validations, ctl);
+        updateValidationsForNextRun(validations, ctl);
+        return FormValidation.aggregate(validations);
+    } catch (ANTLRException e) {
+        if (value.trim().indexOf('\n')==-1 &amp;&amp; value.contains(&quot;**&quot;))
+            return FormValidation.error(Messages.TimerTrigger_MissingWhitespace());
+        return FormValidation.error(e.getMessage());
+    }
+}
+</code></pre>
+
 <h1 id="凭据">凭据</h1>
 
 <pre><code>&lt;j:jelly xmlns:c=&quot;/lib/credentials&quot;&gt;
@@ -311,15 +336,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
 	
 </ul>
 
@@ -338,14 +363,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
