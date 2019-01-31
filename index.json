@@ -35,6 +35,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/init/",
+        "title": "Init",
+        "tags": [],
+        "description": "Init",
+        "content": " init 函数定义在包（package）中，并有如下的用处：\n 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：\n 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数   包初始化只会执行一次，即使会被导入多次。\n  属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。\ninit 函数可以定义多次。\n只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：\nimport _ \u0026quot;image/png\u0026quot;\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/netcat/",
         "title": "Netcat",
         "tags": [],

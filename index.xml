@@ -6,10 +6,25 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 13 Jan 2019 19:33:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Jan 2019 15:18:58 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Init</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/init/</link>
+      <pubDate>Thu, 31 Jan 2019 15:18:58 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/init/</guid>
+      <description>init 函数定义在包（package）中，并有如下的用处：
+ 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
+ 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数   包初始化只会执行一次，即使会被导入多次。
+  属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。
+init 函数可以定义多次。
+只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：
+import _ &amp;quot;image/png&amp;quot;</description>
+    </item>
     
     <item>
       <title>Netcat</title>
