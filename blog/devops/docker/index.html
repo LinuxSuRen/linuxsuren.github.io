@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.53" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -161,14 +161,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray db">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               
@@ -357,88 +357,15 @@
     
 
     <h1 class="near-black f3">
-      <a href="/blog/devops/docker/docker-daemon/" class="link primary-color dim"></a>
+      <a href="/blog/devops/docker/docker-daemon/" class="link primary-color dim">Docker Daemon</a>
     </h1>
 
     <div class="lh-copy links">
       
-          API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
-Docker Version vs API Version
-      
+          Docker Daemon
+        
 
         <a href="/blog/devops/docker/docker-daemon/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/docker/docker/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          拉取镜像 docker pull jenkins/jnlp-slave:alpine
-docker pull hub.alauda.cn/jenkins-jnlp-slave
-启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
-docker run jenkins --restart=always
-最简单的启动命令 docker run surenpi/hugo-docker
-容器停止后，自动删除 docker run --rm surenpi/hugo-docker
-设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
-docker run jenkins --name ci-jenkins
-查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
-如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
-停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
-日志 docker logs -f 94a5fa599b05
-删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
-通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk '{print $1}') &amp;&amp; docker rm $(docker ps | grep hello | awk '{print $1}')
-      
-
-        <a href="/blog/devops/docker/docker/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/docker/dockerfile/" class="link primary-color dim"></a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
-FROM alpine:3.8
-Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
-ENV HTTP_PROXY http://192.168.1.1:1234
-上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
-ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
-EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-RUN RUN 为 Docker 镜像在构建时执行的命令
-CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&quot;, &quot;hello&quot;]
-      
-
-        <a href="/blog/devops/docker/dockerfile/" class="f6 mt2 db link primary-color dim">
           查看更多 &raquo;
         </a>
 
@@ -530,6 +457,31 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
     
 
     <h1 class="near-black f3">
+      <a href="/blog/devops/docker/docker/" class="link primary-color dim">Docker 命令</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Docker 命令
+        
+
+        <a href="/blog/devops/docker/docker/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/devops/docker/docker-time/" class="link primary-color dim">Docker 时间设置</a>
     </h1>
 
@@ -580,6 +532,31 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
     
 
     <h1 class="near-black f3">
+      <a href="/blog/devops/docker/dockerfile/" class="link primary-color dim">Dockerfile</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Dockerfile
+        
+
+        <a href="/blog/devops/docker/dockerfile/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/blog/devops/docker/docker-ubuntu-install/" class="link primary-color dim">Install Docker</a>
     </h1>
 
@@ -610,11 +587,8 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
 
     <div class="lh-copy links">
       
-          yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos
-      
+          在 CentOS 安装 Docker
+        
 
         <a href="/blog/devops/docker/docker-centos/" class="f6 mt2 db link primary-color dim">
           查看更多 &raquo;
