@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="68">
+<meta itemprop="wordCount" content="86">
 
 
 
@@ -161,6 +161,7 @@
 <ul>
 <li><a href="#预备知识">预备知识</a></li>
 <li><a href="#基本原理">基本原理</a></li>
+<li><a href="#pod-模板">Pod 模板</a></li>
 <li><a href="#k8s-代理节点">K8S 代理节点</a></li>
 <li><a href="#多容器">多容器</a></li>
 <li><a href="#排错">排错</a></li>
@@ -254,9 +255,15 @@
 
 <p>然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。</p>
 
+<h1 id="pod-模板">Pod 模板</h1>
+
+<p>一个 Pod 对应 Jenkins 中的一个执行节点，</p>
+
 <h1 id="k8s-代理节点">K8S 代理节点</h1>
 
-<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。</p>
+<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</p>
+
+<p>对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。</p>
 
 <h1 id="多容器">多容器</h1>
 
@@ -281,6 +288,32 @@
 
 
 
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55860" target="_blank">JENKINS-55860</a>
+        </td>
+        <td>
+            Unable to clean up the pod with the status Error
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55788" target="_blank">JENKINS-55788</a>
+        </td>
+        <td>
+            Error when configuring Kubernetes Plugin v1.14.3
+        </td>
+    </tr>
+    
 
 
     
@@ -317,32 +350,6 @@
         </td>
         <td>
             Builds fail randomly when running sh in container
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55467" target="_blank">JENKINS-55467</a>
-        </td>
-        <td>
-            Long waiting for kubernetes executor
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55392" target="_blank">JENKINS-55392</a>
-        </td>
-        <td>
-            java.util.concurrent.RejectedExecutionException AGAIN
         </td>
     </tr>
     
@@ -484,7 +491,7 @@
 
 </table>
 
-一共：373个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：375个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -507,15 +514,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
-	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
 </ul>
 

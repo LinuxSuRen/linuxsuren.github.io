@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>SuRenPi</title>
+    <title>Dockerfile | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,31 +27,13 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="" />
-<meta property="og:description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
-FROM alpine:3.8
-Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
-ENV HTTP_PROXY http://192.168.1.1:1234
-上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
-ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
-EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-RUN RUN 为 Docker 镜像在构建时执行的命令
-CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&quot;, &quot;hello&quot;]" />
+<meta property="og:title" content="Dockerfile" />
+<meta property="og:description" content="Dockerfile" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/docker/dockerfile/" />
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
-FROM alpine:3.8
-Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
-ENV HTTP_PROXY http://192.168.1.1:1234
-上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
-ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
-EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-RUN RUN 为 Docker 镜像在构建时执行的命令
-CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&quot;, &quot;hello&quot;]">
+<meta itemprop="name" content="Dockerfile">
+<meta itemprop="description" content="Dockerfile">
 
 
 
@@ -61,17 +43,8 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
-FROM alpine:3.8
-Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
-ENV HTTP_PROXY http://192.168.1.1:1234
-上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
-ENV HTTP_PROXY &quot;&quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
-EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-RUN RUN 为 Docker 镜像在构建时执行的命令
-CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&quot;, &quot;hello&quot;]"/>
+<meta name="twitter:title" content="Dockerfile"/>
+<meta name="twitter:description" content="Dockerfile"/>
 
 
 
@@ -183,6 +156,17 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#基础镜像">基础镜像</a></li>
+<li><a href="#proxy">Proxy</a></li>
+<li><a href="#expose">EXPOSE</a></li>
+<li><a href="#run">RUN</a></li>
+<li><a href="#cmd">CMD</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -194,7 +178,7 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/docker/docker/" class="dib f6 pl1 hover-bg-light-gray br-100" title=" ">
+			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-image/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Docker 镜像管理 ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -204,7 +188,7 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-mirror/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Docker Mirror">
+			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Install Docker">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -223,10 +207,14 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark"></h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Dockerfile</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Dockerfile
+    </div>
   
 
   
@@ -491,7 +479,7 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&quot;echo&
   <a href="https://linuxsuren.github.io/blog/devops/docker/dockerfile/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “”
+    “Dockerfile”
   </a> was last updated: January 1, 0001
 </h6>
 

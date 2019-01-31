@@ -6,10 +6,33 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 19 Jan 2019 19:22:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jan 2019 15:28:28 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git GC</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-gc/</link>
+      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-gc/</guid>
+      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。
+鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。
+一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：
+git config --global gc.auto 0
+本地分支 查看已经合并过的分支
+git branch --merged
+查看未合并过的分支
+git branch --no-merged
+远程分支 清理远程过期的分支引用
+git remote prune origin
+我们也可以在拉取远程分支信息的时候执行清理任务
+git fetch -p
+查看已经合并过的远程分支
+git branch -r --merged
+更多的分支操作</description>
+    </item>
     
     <item>
       <title>Selenium</title>
@@ -130,56 +153,6 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
-      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
-Docker Version vs API Version</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
-      <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
-docker pull hub.alauda.cn/jenkins-jnlp-slave
-启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
-docker run jenkins --restart=always
-最简单的启动命令 docker run surenpi/hugo-docker
-容器停止后，自动删除 docker run --rm surenpi/hugo-docker
-设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
-docker run jenkins --name ci-jenkins
-查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
-如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
-停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
-日志 docker logs -f 94a5fa599b05
-删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
-通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk &#39;{print $1}&#39;) &amp;amp;&amp;amp; docker rm $(docker ps | grep hello | awk &#39;{print $1}&#39;)</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
-      <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
-FROM alpine:3.8
-Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
-ENV HTTP_PROXY http://192.168.1.1:1234
-上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
-ENV HTTP_PROXY &amp;quot;&amp;quot;
-但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
-EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
-RUN RUN 为 Docker 镜像在构建时执行的命令
-CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/blog/other/configuration/ini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -241,6 +214,15 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
       
       <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</guid>
+      <description>Open source community in China</description>
     </item>
     
     <item>
@@ -399,6 +381,16 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     </item>
     
     <item>
+      <title>Docker Daemon</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
+      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
+Docker Version vs API Version</description>
+    </item>
+    
+    <item>
       <title>Docker Mirror</title>
       <link>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -431,6 +423,28 @@ curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&a
     </item>
     
     <item>
+      <title>Docker 命令</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
+      <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
+docker pull hub.alauda.cn/jenkins-jnlp-slave
+启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
+docker run jenkins --restart=always
+最简单的启动命令 docker run surenpi/hugo-docker
+容器停止后，自动删除 docker run --rm surenpi/hugo-docker
+设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
+docker run jenkins --name ci-jenkins
+查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
+如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
+停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
+日志 docker logs -f 94a5fa599b05
+删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
+通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk &#39;{print $1}&#39;) &amp;amp;&amp;amp; docker rm $(docker ps | grep hello | awk &#39;{print $1}&#39;)</description>
+    </item>
+    
+    <item>
       <title>Docker 时间设置</title>
       <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -448,6 +462,24 @@ docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
       <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
+      <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+ENV HTTP_PROXY http://192.168.1.1:1234
+上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
+ENV HTTP_PROXY &amp;quot;&amp;quot;
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
+RUN RUN 为 Docker 镜像在构建时执行的命令
+CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
     </item>
     
     <item>
@@ -809,7 +841,7 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
-      <description>  Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。
+      <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。
 预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。
 Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。
 Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。
@@ -817,9 +849,8 @@ JNLP 的基本原理。
 基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。
 为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。
 然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。
-K8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。
-多容器 Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：
-container(&amp;quot;container_name&amp;quot;){ echo &amp;quot;hello&amp;quot; }  排错 </description>
+Pod 模板 一个 Pod 对应 Jenkins 中的一个执行节点，
+K8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</description>
     </item>
     
     <item>

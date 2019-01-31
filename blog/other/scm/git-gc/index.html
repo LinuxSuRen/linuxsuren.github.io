@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件扩展点 | SuRenPi</title>
+    <title>Git GC | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,26 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件扩展点" />
-<meta property="og:description" content="Jenkins 插件扩展点" />
+<meta property="og:title" content="Git GC" />
+<meta property="og:description" content="清理无用的文件并优化本地仓库" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/other/scm/git-gc/" /><meta property="article:published_time" content="2019-01-29T15:28:28&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-29T15:28:28&#43;08:00"/>
 
-<meta itemprop="name" content="Jenkins 插件扩展点">
-<meta itemprop="description" content="Jenkins 插件扩展点">
+<meta itemprop="name" content="Git GC">
+<meta itemprop="description" content="清理无用的文件并优化本地仓库">
 
 
-
-<meta itemprop="wordCount" content="10">
+<meta itemprop="datePublished" content="2019-01-29T15:28:28&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-29T15:28:28&#43;08:00" />
+<meta itemprop="wordCount" content="39">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins 插件扩展点"/>
-<meta name="twitter:description" content="Jenkins 插件扩展点"/>
+<meta name="twitter:title" content="Git GC"/>
+<meta name="twitter:description" content="清理无用的文件并优化本地仓库"/>
 
 
 
@@ -159,9 +161,8 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#接口">接口</a></li>
-<li><a href="#注解">注解</a></li>
-<li><a href="#demo">Demo</a></li>
+<li><a href="#本地分支">本地分支</a></li>
+<li><a href="#远程分支">远程分支</a></li>
 </ul>
 </nav>
 	
@@ -176,17 +177,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件开发 ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 插件调试">
+			<a href="https://linuxsuren.github.io/blog/other/scm/git-branch/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Git Branch">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -205,13 +198,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件扩展点</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Git GC</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins 插件扩展点
+      清理无用的文件并优化本地仓库
     </div>
   
 
@@ -226,18 +219,39 @@
 
 
 
-<h1 id="接口">接口</h1>
+<p>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。</p>
 
-<p>接口 <code>hudson.ExtensionPoint</code> 用于自动生成文档</p>
+<p>鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。</p>
 
-<h1 id="注解">注解</h1>
+<p>一些 <code>git</code> 命令会自动执行 <code>git gc</code>。查看参数 <code>--auto</code> 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：</p>
 
-<p>注解 <code>@hudson.Extension</code> 加在实现类上，就可以获取扩展点的实现类列表。</p>
+<p><code>git config --global gc.auto 0</code></p>
 
-<h1 id="demo">Demo</h1>
+<h1 id="本地分支">本地分支</h1>
 
-<pre><code>Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);
-</code></pre>
+<p>查看已经合并过的分支</p>
+
+<p><code>git branch --merged</code></p>
+
+<p>查看未合并过的分支</p>
+
+<p><code>git branch --no-merged</code></p>
+
+<h1 id="远程分支">远程分支</h1>
+
+<p>清理远程过期的分支引用</p>
+
+<p><code>git remote prune origin</code></p>
+
+<p>我们也可以在拉取远程分支信息的时候执行清理任务</p>
+
+<p><code>git fetch -p</code></p>
+
+<p>查看已经合并过的远程分支</p>
+
+<p><code>git branch -r --merged</code></p>
+
+<p><a href="https://linuxsuren.github.io/blog/other/scm/git-branch/">更多的分支操作</a></p>
 
 </div>
 
@@ -260,21 +274,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -472,14 +471,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/other/scm/git-gc/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Jenkins 插件扩展点”
-  </a> was last updated: January 1, 0001
+    “Git GC”
+  </a> was last updated: January 29, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/other/scm/git-gc.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
