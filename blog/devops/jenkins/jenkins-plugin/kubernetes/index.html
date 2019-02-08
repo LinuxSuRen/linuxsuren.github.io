@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.53" />
+     <meta name="generator" content="Hugo 0.52" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="68">
+<meta itemprop="wordCount" content="86">
 
 
 
@@ -161,6 +161,7 @@
 <ul>
 <li><a href="#预备知识">预备知识</a></li>
 <li><a href="#基本原理">基本原理</a></li>
+<li><a href="#pod-模板">Pod 模板</a></li>
 <li><a href="#k8s-代理节点">K8S 代理节点</a></li>
 <li><a href="#多容器">多容器</a></li>
 <li><a href="#排错">排错</a></li>
@@ -254,9 +255,15 @@
 
 <p>然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。</p>
 
+<h1 id="pod-模板">Pod 模板</h1>
+
+<p>一个 Pod 对应 Jenkins 中的一个执行节点，</p>
+
 <h1 id="k8s-代理节点">K8S 代理节点</h1>
 
-<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。</p>
+<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</p>
+
+<p>对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。</p>
 
 <h1 id="多容器">多容器</h1>
 
@@ -273,6 +280,219 @@
 
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+
+<table>
+    <tr>
+        <td>类型</td><td>编号</td><td>描述</td>
+    </tr>
+
+
+
+
+
+    
+    <tr>
+        <td>Improvement</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56049" target="_blank">JENKINS-56049</a>
+        </td>
+        <td>
+            Limit pods&#39; access to cluster resources
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56029" target="_blank">JENKINS-56029</a>
+        </td>
+        <td>
+            Kubernetes Plugin: Concurrent builds do not have their own unique workspaces
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55960" target="_blank">JENKINS-55960</a>
+        </td>
+        <td>
+            Missing DeclarativePipeline podTemplate parameters 
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Task</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55904" target="_blank">JENKINS-55904</a>
+        </td>
+        <td>
+            Kubernetes pod template with persistance volume
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-55903" target="_blank">JENKINS-55903</a>
+        </td>
+        <td>
+            High latency networks add extra time to a job completion
+        </td>
+    </tr>
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+</table>
+
+一共：382个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+
 
 </aside>
 
@@ -294,15 +514,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
 </ul>
 
@@ -321,14 +541,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
