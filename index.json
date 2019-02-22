@@ -109,7 +109,7 @@
         "title": "Jenkins 培训",
         "tags": [],
         "description": "Jenkins 培训大纲",
-        "content": " class: center, middle\nJenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线  计算节点管理  静态 动态  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 社区介绍  "
+        "content": " class: center, middle\nJenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线 API  计算节点管理  静态 动态   大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter \u0026amp;\u0026amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施   安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。\n 安装手册 Docker  插件管理  介绍 仓库 托管  计算节点管理  节点类型  固定 动态（虚拟机、Docker、Kubernetes）  通道  SSH JNLP  标签（label）  表达式   流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。\n快速入手，参考：\n 语法生成器 步骤列表 例子 复用 IDE 插件  .left[.footnote[https://linuxsuren.github.io/blog/devops/jenkins/pipeline/]]\n多分支流水线（Multi-branch Pipeline） 对于使用 Git 作为代码仓库的团队来说，Jenkins 的多分支流水线能够充分地利用 Git 的分支功能，简化重复的工作。简单来说，它可以根据既定的策略动态地创建、删除流水线。而对于部分 Git 服务，还能很好地支持 Pull Request 的流水线构建。\nAPI Jenkins 的大部分操作支持通过 HTTP API 进行调用，可以返回 JSON、XML 的数据格式。\nclass: center, middle\n社区介绍 Jenkins Community\n沟通交流 推荐的交流途径包括：Gitter、Google 邮件组。不同的主题，会有不同频道、组。\n 普通用户（中文、英文） 开发者 特别兴趣小组  .left[.footnote[https://remarkjs.com]]\nMeetup 线上、线下交流活动。每年，在国内很多城市都组织一些线下交流活动。\n 北京 西安 上海 深圳  分享的主题通常包括：特性介绍、案例分享、工作坊等。\n.left[.footnote[https://www.meetup.com/Beijing-Jenkins-Area-Meetup/]]\nclass: center, middle\n特别兴趣小组 Jenkins Special Interest Groups\n.left[.footnote[SIGs]]\n??? here is the note\n中文本地化 致力于改善 Jenkins 的中文用户的使用体验。涉及的范围包括： Jenkins 核心和插件以及官方网站。欢迎加入！\n 官网（Jenkins、JX） Jenkins 及其插件 Jenkins 官方微信公众号 定期会议  .footnote[Chinese Localization]\n宣传与推广 平台 "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/core/",
@@ -168,11 +168,18 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/speach/kubecon-2019-shanghai/",
+        "uri": "https://linuxsuren.github.io/speach/jenkins-world-2019/",
         "title": "",
         "tags": [],
         "description": "",
         "content": "Open source community in China\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/speach/kubecon-2019-shanghai/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": "Title: The battle of CI/CD in Cloud Native Abstract: As a bridge between source codes and product value, CI/CD is playing a very important role. There\u0026rsquo;re many solutions was emerged. Some of them are an open source project, or some just provide the service. Jenkins has a great and very active open community, also has a long history. How does Jenkins could continuously keep a leader ship in the cloud native ecosystem? Especially more and more companies put their products in the kubernetes. Argo is another wonderful CI/CD platform which is kubernetes-based. Let\u0026rsquo;s see how do we choose between Jenkins X, Argo and other solution! Benefit: Introduce the full picture of CI/CD ecosystem. Giving some deep thoughts from a contributor of the Jenkins community. Github: https://github.com/linuxsuren\nTitle: Cloud Native\u0026rsquo;s CI/CD battle Abstract: As a bridge between source code and product value, Cloud Native CI/CD solutions are playing a very important role, hence many solutions are continuously emerging: From open source projects to SaaS. With the increasing adoptions of Kubernetes by multiple enterprises, choosing the correct CI/CD solution can be crucial to quickly achieve success. Jenkins, besides its great and very active and vibrant community, has a long and successful history. How can Jenkins continuously keep its leadership in the Cloud Native ecosystem? Argo is another wonderful, Kubernetes native, CI/CD platform. In this talk, we will deeply explore multiple CI/CD solutions for Kubernetes, their benefits, and pitfalls. Benefit: Introduce the full picture of CI/CD ecosystem. Providing some deep thoughts from a Jenkins community contributor.\nTitle: How to build a Serverless CI/CD Pipeline Abstract: We are facing the a big problem in a demanding CI/CD system. What\u0026rsquo;s really impossible keeping one master always alives. Do we have a better solution? Multiple master or not? I belive that a serverless CI/CD pipeline system could brings you a wonderful experience. Using the strengths of Kubernetes to focus on the real requirement, don\u0026rsquo;t need to manage nodes anymore. No cost for idel time. Launch 10,000+ builds/containers in seconds. Thoese are what a Serverless CI/CD Pipeline system could offers you. Benefit: A chance for community members and enterprises to build their own high availabe, less idel and easy maintenance CI/CD pipeline.\nTitle: How to build a Serverless CI/CD Pipeline Abstract: With more demanding CI/CD requirements, it becomes critical to keep all workflows responsive at all time. To achieve such goal the architecture of the CI/CD system is of paramount importance. In some systems having Master/Node approach, such as Jenkins, keeping the Master alive is crucial. Are there any other solutions that not only solve this problem but take it even further? To make the best use of all available resources, a Kubernetes based Serverless CI/CD solution, would not only solve resource management challenges but also improve the overall user experience, without creating step learning curves to its maintainers. In this talk, we will explore together a solution that is able to launch 10,000+ builds/containers in seconds. Benefit: A chance for community members and enterprises to build their own high available, less idle and easy maintenance CI/CD pipeline.\n"
     },
     {
         "uri": "https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/",
@@ -201,6 +208,13 @@
         "tags": [],
         "description": "",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/k8s/ake/",
+        "title": "Ake",
+        "tags": [],
+        "description": "一键安装 K8S",
+        "content": " 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install python -y\n安装 Support Docker versions ['1.12.6', '17.03.0', '17.03.1', '17.03.2', '17.12.0']\n通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes\n修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：\napiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: \u0026quot;\u0026quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/",
@@ -529,7 +543,7 @@
         "title": "Ingress",
         "tags": [],
         "description": "Ingress",
-        "content": " 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。\n这时，找到对应的 Ingress 添加如下 Annotations 即可解决：\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
+        "content": " Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.\nRewrite Ingress 支持地址重写，具体请查看参考。\n413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。\n这时，找到对应的 Ingress 添加如下 Annotations 即可解决：\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins-x/install/",
@@ -588,14 +602,14 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",

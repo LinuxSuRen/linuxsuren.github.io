@@ -120,6 +120,10 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/speach/jenkins-world-2019/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</loc>
   </url>
   
@@ -138,6 +142,10 @@
   <url>
     <loc>https://linuxsuren.github.io/tags/agent/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
   </url>
   
   <url>
@@ -375,12 +383,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   

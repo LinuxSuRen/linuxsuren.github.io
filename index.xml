@@ -138,8 +138,9 @@ go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen  
       <pubDate>Thu, 03 Jan 2019 22:50:02 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</guid>
-      <description> class: center, middle
-Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线  计算节点管理  静态 动态  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 社区介绍  </description>
+      <description>class: center, middle
+Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线 API  计算节点管理  静态 动态   大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施   安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
+ 安装手册 Docker  插件管理  介绍 仓库 托管  计算节点管理  节点类型  固定 动态（虚拟机、Docker、Kubernetes）  通道  SSH JNLP  标签（label）  表达式   流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
     </item>
     
     <item>
@@ -233,11 +234,20 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
     
     <item>
       <title></title>
+      <link>https://linuxsuren.github.io/speach/jenkins-world-2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/speach/jenkins-world-2019/</guid>
+      <description>Open source community in China</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</guid>
-      <description>Open source community in China</description>
+      <description>Title: The battle of CI/CD in Cloud Native Abstract: As a bridge between source codes and product value, CI/CD is playing a very important role. There&amp;rsquo;re many solutions was emerged. Some of them are an open source project, or some just provide the service. Jenkins has a great and very active open community, also has a long history. How does Jenkins could continuously keep a leader ship in the cloud native ecosystem?</description>
     </item>
     
     <item>
@@ -269,6 +279,20 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
  getIconFileName getDisplayName getUrlName  约定 </description>
+    </item>
+    
+    <item>
+      <title>Ake</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
+      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
+安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
+通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
+修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
+apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
     </item>
     
     <item>
@@ -721,7 +745,9 @@ Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
-      <description> 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
+      <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
+Rewrite Ingress 支持地址重写，具体请查看参考。
+413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
 这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
 ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
     </item>
