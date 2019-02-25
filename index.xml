@@ -326,8 +326,14 @@ Restricted Usage: @Restricted(NoExternalUse.class)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
-      <description>ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型</description>
+      <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
+认证 首先，需要从 Secret 中获取 Token，参考命令如下：
+kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
+上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
+然后，通过如下类似的命令即可访问到集群的 API：
+curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
+  </description>
     </item>
     
     <item>
@@ -349,8 +355,8 @@ Ctrl+X+F 文件名</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
-      <description>echo -n 1234 | base64
-echo MTIzNA== | base64 --d</description>
+      <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
+解密 echo MTIzNA== | base64 --d</description>
     </item>
     
     <item>
@@ -890,8 +896,8 @@ JNLP 的基本原理。
 基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。
 为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。
 然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。
-Pod 模板 一个 Pod 对应 Jenkins 中的一个执行节点，
-K8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</description>
+认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。
+导出 Kubernetes 认证文件的命令：</description>
     </item>
     
     <item>
@@ -1103,7 +1109,8 @@ API Server 公钥和私钥
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
-      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+      <description>查看集群信息 kubectl cluster-info
+下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
 切换上下文 kubectl config use-context dev
 查看上下文 kubectl config current-context
 导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f

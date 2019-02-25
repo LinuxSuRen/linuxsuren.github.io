@@ -24,8 +24,8 @@ JNLP 的基本原理。
 基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。
 为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。
 然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。
-Pod 模板 一个 Pod 对应 Jenkins 中的一个执行节点，
-K8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</description>
+认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。
+导出 Kubernetes 认证文件的命令：</description>
     </item>
     
   </channel>

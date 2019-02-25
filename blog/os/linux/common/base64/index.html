@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="10">
+<meta itemprop="wordCount" content="15">
 
 
 
@@ -156,6 +156,14 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#加密">加密</a></li>
+<li><a href="#解密">解密</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -215,7 +223,13 @@
 
 <div class="prose" id="prose">
 
-<p><code>echo -n 1234 | base64</code></p>
+
+
+<h1 id="加密">加密</h1>
+
+<p><code>echo -n 1234 | base64</code> 这里的参数 <code>n</code> 很重要，如果没有的话，会把换行符也包含进去。</p>
+
+<h1 id="解密">解密</h1>
 
 <p><code>echo MTIzNA== | base64 --d</code></p>
 
@@ -240,6 +254,13 @@
 
 
           
+
+<h2>参考</h2>
+<ul>
+	
+	<li><a href="/blog/devops/k8s/apiserver/">ApiServer</a></li>
+	
+</ul>
 
         </div>
       </div>

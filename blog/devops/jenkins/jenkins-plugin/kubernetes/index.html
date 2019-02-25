@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="86">
+<meta itemprop="wordCount" content="104">
 
 
 
@@ -161,6 +161,7 @@
 <ul>
 <li><a href="#预备知识">预备知识</a></li>
 <li><a href="#基本原理">基本原理</a></li>
+<li><a href="#认证">认证</a></li>
 <li><a href="#pod-模板">Pod 模板</a></li>
 <li><a href="#k8s-代理节点">K8S 代理节点</a></li>
 <li><a href="#多容器">多容器</a></li>
@@ -254,6 +255,14 @@
 <p>为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。</p>
 
 <p>然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。</p>
+
+<h1 id="认证">认证</h1>
+
+<p>有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 <code>Secret File</code> 类型，并把文件 <code>~/.kube/config</code> 上传即可。这里有<a href="/blog/devops/k8s/kubectl/">如何导出 k8s 集群认证文件</a>的介绍。</p>
+
+<p>导出 Kubernetes 认证文件的命令：</p>
+
+<p><code>curl https://raw.githubusercontent.com/LinuxSuRen/surenpi/master/static/codes/shell/k8s/export-k8s-crt.sh|bash</code></p>
 
 <h1 id="pod-模板">Pod 模板</h1>
 
@@ -518,11 +527,11 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
 	
 </ul>
 

@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="96">
+<meta itemprop="wordCount" content="123">
 
 
 
@@ -170,7 +170,10 @@
 <li><a href="#参数">参数</a>
 <ul>
 <li><a href="#端口">端口</a></li>
+<li><a href="#jenkins-home">JENKINS_HOME</a></li>
 <li><a href="#时区">时区</a></li>
+<li><a href="#向导">向导</a></li>
+<li><a href="#用户">用户</a></li>
 </ul></li>
 <li><a href="#重启">重启</a></li>
 </ul>
@@ -300,11 +303,27 @@
 
 <p><code>java -jar jenkins.war --httpPort=1234</code> 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</p>
 
+<h2 id="jenkins-home">JENKINS_HOME</h2>
+
+<p>我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 <code>.jenkins</code>。参数（<code>-D</code> 参数必须要在 <code>-jar</code> 之前）如下：</p>
+
+<p><code>java -DJENKINS_HOME=. -jar jenkins.war</code> 或者 <code>java -Duser.home=. -jar jenkins.war</code></p>
+
 <h2 id="时区">时区</h2>
 
 <p>如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。</p>
 
 <p><code>docker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts</code></p>
+
+<h2 id="向导">向导</h2>
+
+<p>Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：</p>
+
+<p><code>java -Djenkins.install.runSetupWizard=false -jar jenkins.war</code></p>
+
+<h2 id="用户">用户</h2>
+
+<p><code>--argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin</code></p>
 
 <h1 id="重启">重启</h1>
 
@@ -337,15 +356,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
 	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-label/">Jenkins 标签</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-junit/">Jenkins JUnit</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-agent/">Jenkins Agent</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
 </ul>
 

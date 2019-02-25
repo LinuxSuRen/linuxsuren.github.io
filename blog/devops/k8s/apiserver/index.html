@@ -28,26 +28,23 @@
   }
 </style>
 <meta property="og:title" content="ApiServer" />
-<meta property="og:description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型" />
+<meta property="og:description" content="ApiServer" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/k8s/apiserver/" />
 
 <meta itemprop="name" content="ApiServer">
-<meta itemprop="description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型">
+<meta itemprop="description" content="ApiServer">
 
 
 
-<meta itemprop="wordCount" content="16">
+<meta itemprop="wordCount" content="52">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ApiServer"/>
-<meta name="twitter:description" content="ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
-执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型"/>
+<meta name="twitter:description" content="ApiServer"/>
 
 
 
@@ -159,6 +156,14 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#类型查看">类型查看</a></li>
+<li><a href="#认证">认证</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -204,6 +209,10 @@
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
+    <div class="f4 fw4 lh-copy">
+      ApiServer
+    </div>
+  
 
   
   
@@ -216,13 +225,35 @@
 
 
 
-<h1 id="apiserver">ApiServer</h1>
-
 <h1 id="类型查看">类型查看</h1>
 
 <p>查看所有的资源组 <code>curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort</code></p>
 
 <p>执行命令 <code>curl --insecure https://localhost:6443/apis/{api.group}/{version}</code> 可以看到所支持的资源类型</p>
+
+<h1 id="认证">认证</h1>
+
+<p>首先，需要从 <code>Secret</code> 中获取 <code>Token</code>，参考命令如下：</p>
+
+<p><code>kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &gt; token</code></p>
+
+<p>上面的命令，我们从当前的命名空间（namespace）里默认的 <code>Secret</code> 中获取 <code>Token</code>，进行 <code>base64</code> 解密后保存为文件。</p>
+
+<p>然后，通过如下类似的命令即可访问到集群的 API：</p>
+
+<pre><code>curl -k  https://localhost:6443/api/v1/namespaces --header &quot;Authorization: Bearer `cat token`&quot;
+</code></pre>
+
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>需要确保的是，所使用 <code>Token</code> 对应的 <code>ServiceAccount</code> 具有所访问的资源的权限。</p>
+</div>
+</aside>
+
 
 </div>
 
@@ -245,6 +276,15 @@
 
 
           
+
+<h2>参考</h2>
+<ul>
+	
+	<li><a href="/blog/os/linux/common/curl/">curl</a></li>
+	
+	<li><a href="/blog/os/linux/common/base64/">Base64</a></li>
+	
+</ul>
 
         </div>
       </div>

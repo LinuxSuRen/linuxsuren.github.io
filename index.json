@@ -234,8 +234,8 @@
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/apiserver/",
         "title": "ApiServer",
         "tags": [],
-        "description": "",
-        "content": " ApiServer 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n"
+        "description": "ApiServer",
+        "content": " 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n认证 首先，需要从 Secret 中获取 Token，参考命令如下：\nkubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d \u0026gt; token\n上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。\n然后，通过如下类似的命令即可访问到集群的 API：\ncurl -k https://localhost:6443/api/v1/namespaces --header \u0026quot;Authorization: Bearer `cat token`\u0026quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。\n  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/",
@@ -256,7 +256,7 @@
         "title": "Base64",
         "tags": [],
         "description": "Base64",
-        "content": "echo -n 1234 | base64\necho MTIzNA== | base64 --d\n"
+        "content": " 加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。\n解密 echo MTIzNA== | base64 --d\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/",
@@ -620,7 +620,7 @@
         "title": "Jenkins",
         "tags": ["Jenkins"],
         "description": "Jenkins 是一个开源的 CI 服务",
-        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n"
+        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\nJENKINS_HOME 我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 .jenkins。参数（-D 参数必须要在 -jar 之前）如下：\njava -DJENKINS_HOME=. -jar jenkins.war 或者 java -Duser.home=. -jar jenkins.war\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n向导 Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：\njava -Djenkins.install.runSetupWizard=false -jar jenkins.war\n用户 --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/",
@@ -655,7 +655,7 @@
         "title": "Jenkins Kubernetes Plugin",
         "tags": ["k8s", "plugin", "docker", "agent"],
         "description": "Jenkins Kubernetes Plugin",
-        "content": "  Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。\n预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。\nDocker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。\nKubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。\nJNLP 的基本原理。\n基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。\n为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。\n然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。\nPod 模板 一个 Pod 对应 Jenkins 中的一个执行节点，\nK8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。\n对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。\n多容器 Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：\ncontainer(\u0026quot;container_name\u0026quot;){ echo \u0026quot;hello\u0026quot; }  排错 "
+        "content": "  Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。\n预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。\nDocker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。\nKubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。\nJNLP 的基本原理。\n基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。\n为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。\n然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。\n认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。\n导出 Kubernetes 认证文件的命令：\ncurl https://raw.githubusercontent.com/LinuxSuRen/surenpi/master/static/codes/shell/k8s/export-k8s-crt.sh|bash\nPod 模板 一个 Pod 对应 Jenkins 中的一个执行节点，\nK8S 代理节点 该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。\n对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。\n多容器 Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：\ncontainer(\u0026quot;container_name\u0026quot;){ echo \u0026quot;hello\u0026quot; }  排错 "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/",
@@ -823,7 +823,7 @@
         "title": "Kubectl",
         "tags": [],
         "description": "Kubectl 的使用",
-        "content": " 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\n"
+        "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/k8s/",
