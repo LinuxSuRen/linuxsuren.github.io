@@ -35,8 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
-      <description>echo -n 1234 | base64
-echo MTIzNA== | base64 --d</description>
+      <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
+解密 echo MTIzNA== | base64 --d</description>
     </item>
     
     <item>

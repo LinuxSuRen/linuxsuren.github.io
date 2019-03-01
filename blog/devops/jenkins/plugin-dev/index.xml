@@ -6,9 +6,20 @@
     <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>扩展 Jenkins 的构建（Builder）任务</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</guid>
+      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 </description>
+    </item>
     
     <item>
       <title>Action</title>
@@ -146,16 +157,6 @@ mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会
 mvn hpi:run -Djenkins.install.runSetupWizard=true
 指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
 参考 maven-hpi-plugin</description>
-    </item>
-    
-    <item>
-      <title>扩展 Jenkins 的构建（Builder）任务</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</guid>
-      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
-流水线 </description>
     </item>
     
   </channel>
