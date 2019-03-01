@@ -37,18 +37,11 @@
 
 
 
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="28">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git Reset"/>
-<meta name="twitter:description" content="Git Reset"/>
-
-
-
-
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -147,7 +140,7 @@
 </nav>
 
     
-    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
 <main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
@@ -155,6 +148,13 @@
 
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#撤销对某个文件的修改">撤销对某个文件的修改</a></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -196,6 +196,12 @@
           </div>
           <header class="flex-none w-100">
   
+    
+      <a href="/categories/scm" class="f6 fw8 mb0 link mid-gray dim mr3">
+        SCM
+      </a>
+    
+  
   <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Git Reset</h1>
 </header>
 
@@ -215,6 +221,19 @@
 
 <div class="prose" id="prose">
 
+
+
+<h1 id="撤销对某个文件的修改">撤销对某个文件的修改</h1>
+
+<p>当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：</p>
+
+<p>首先，获取某个文件的提交记录，命令为：<code>git log &lt;filename&gt;</code></p>
+
+<p>找到需要恢复到的那次提交记录，执行撤销命令： <code>git reset &lt;commit-id&gt; &lt;filename&gt;</code> 然后 <code>git checkout &lt;filename&gt;</code></p>
+
+<p>最后，确认修改：<code>git commit --amend &amp;&amp; git push</code></p>
+
+<p>如果在上述的操作之前，<code>push</code> 过的话，记得再次 <code>push</code> 时需要添加 <code>-f</code> 参数。</p>
 
 </div>
 
@@ -253,14 +272,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               

@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/</loc>
   </url>
   
@@ -32,28 +28,8 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-gc/</loc>
-    <lastmod>2019-01-29T15:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/other/test/selenium/</loc>
-    <lastmod>2019-01-19T19:22:23+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/netcat/</loc>
     <lastmod>2019-01-13T19:33:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</loc>
-    <lastmod>2019-01-09T17:35:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</loc>
-    <lastmod>2019-01-09T15:44:33+08:00</lastmod>
   </url>
   
   <url>
@@ -120,14 +96,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/speach/jenkins-world-2019/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
   </url>
   
@@ -142,10 +110,6 @@
   <url>
     <loc>https://linuxsuren.github.io/tags/agent/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
   </url>
   
   <url>
@@ -393,12 +357,16 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</loc>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/</loc>
-    <lastmod>2019-01-09T17:35:18+08:00</lastmod>
+    <lastmod>2019-01-03T16:29:11+08:00</lastmod>
   </url>
   
   <url>
@@ -508,12 +476,26 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/kubernetes/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -593,7 +575,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/scm/</loc>
-    <lastmod>2019-01-29T15:28:28+08:00</lastmod>
   </url>
   
   <url>
@@ -602,6 +583,11 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/os/linux/common/ssh/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/scm/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -614,11 +600,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/language/java/spacevim/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/speach/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -920,7 +901,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/test/</loc>
-    <lastmod>2019-01-19T19:22:23+08:00</lastmod>
   </url>
   
   <url>

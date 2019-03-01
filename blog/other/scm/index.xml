@@ -6,33 +6,9 @@
     <description>Recent content in SCM on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 29 Jan 2019 15:28:28 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/other/scm/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Git GC</title>
-      <link>https://linuxsuren.github.io/blog/other/scm/git-gc/</link>
-      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/scm/git-gc/</guid>
-      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。
-鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。
-一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：
-git config --global gc.auto 0
-本地分支 查看已经合并过的分支
-git branch --merged
-查看未合并过的分支
-git branch --no-merged
-远程分支 清理远程过期的分支引用
-git remote prune origin
-我们也可以在拉取远程分支信息的时候执行清理任务
-git fetch -p
-查看已经合并过的远程分支
-git branch -r --merged
-更多的分支操作</description>
-    </item>
     
     <item>
       <title>Git Branch</title>
@@ -77,7 +53,11 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
-      <description></description>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：
+首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;
+找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;
+最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push
+如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
     </item>
     
     <item>

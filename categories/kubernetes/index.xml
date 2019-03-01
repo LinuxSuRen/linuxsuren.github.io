@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on SuRenPi</title>
+    <link>https://linuxsuren.github.io/categories/kubernetes/</link>
+    <description>Recent content in Kubernetes on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubectl</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
+      <description>查看集群信息 kubectl cluster-info
+下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f
+Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+节点 查看节点列表 kubectl get node
+查看节点详情 kubectl get node -o wide
+显示标签 kubectl get node --show-labels=true
+添加标签 kubectl label node nodeName jenkinsAgent=maven</description>
+    </item>
+    
+  </channel>
+</rss>

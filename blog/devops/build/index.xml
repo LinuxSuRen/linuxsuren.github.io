@@ -75,7 +75,8 @@ https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenk
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
-      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+      <description>介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。
+注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
 新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
 sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
 签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。

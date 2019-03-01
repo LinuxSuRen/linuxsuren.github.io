@@ -37,18 +37,11 @@
 
 
 
-<meta itemprop="wordCount" content="69">
+<meta itemprop="wordCount" content="95">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubectl"/>
-<meta name="twitter:description" content="Kubectl 的使用"/>
-
-
-
-
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -147,7 +140,7 @@
 </nav>
 
     
-    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
 <main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
@@ -167,6 +160,7 @@
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 <li><a href="#delete-pod">Delete pod</a></li>
 <li><a href="#节点">节点</a></li>
+<li><a href="#patch">Patch</a></li>
 </ul>
 </nav>
 	
@@ -191,7 +185,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/k8s/minikube/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Minikube">
+			<a href="https://linuxsuren.github.io/blog/devops/k8s/kuberctl/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Kubectl">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -209,6 +203,16 @@
           <div id="readout" class="fixed right-0 bottom-0">
           </div>
           <header class="flex-none w-100">
+  
+    
+      <a href="/categories/kubernetes" class="f6 fw8 mb0 link mid-gray dim mr3">
+        KUBERNETES
+      </a>
+    
+      <a href="/categories/k8s" class="f6 fw8 mb0 link mid-gray dim mr3">
+        K8S
+      </a>
+    
   
   <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Kubectl</h1>
 </header>
@@ -270,6 +274,14 @@
 
 <p>添加标签 <code>kubectl label node nodeName jenkinsAgent=maven</code></p>
 
+<h1 id="patch">Patch</h1>
+
+<p>在调试的时候，我们可能需要反复地修改 <code>k8s</code> 资源中的某几个字段。如果，每次都使用 <code>kubectl edit</code> 命令操作的话，会比较麻烦。通过 <code>kubectl</code> 的子命令 <code>patch</code> 可以实现快速地实现这个过程。</p>
+
+<p>该命令，可以通过 <code>json</code> 或者 <code>yaml</code> 格式来对资源*打补丁*。下面，给出一个使用 <code>json</code> 的例子：</p>
+
+<p><code>kubectl patch deploy template -n namespace --patch '{&quot;status&quot;:{&quot;phase&quot;:&quot;Pending&quot;}}'</code></p>
+
 </div>
 
 
@@ -307,14 +319,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               

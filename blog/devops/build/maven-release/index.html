@@ -28,27 +28,20 @@
   }
 </style>
 <meta property="og:title" content="发布Maven工程到中央仓库" />
-<meta property="og:description" content="本文介绍如何把自己的maven项目发布到OSS中央仓库中" />
+<meta property="og:description" content="发布Maven工程到中央仓库" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/build/maven-release/" />
 
 <meta itemprop="name" content="发布Maven工程到中央仓库">
-<meta itemprop="description" content="本文介绍如何把自己的maven项目发布到OSS中央仓库中">
+<meta itemprop="description" content="发布Maven工程到中央仓库">
 
 
 
-<meta itemprop="wordCount" content="173">
+<meta itemprop="wordCount" content="177">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="发布Maven工程到中央仓库"/>
-<meta name="twitter:description" content="本文介绍如何把自己的maven项目发布到OSS中央仓库中"/>
-
-
-
-
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -147,7 +140,7 @@
 </nav>
 
     
-    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
 <main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
@@ -155,13 +148,6 @@
 
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
-	
-		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#签名">签名</a></li>
-</ul>
-</nav>
 	
 
 	<div date-pref>
@@ -201,7 +187,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      本文介绍如何把自己的maven项目发布到OSS中央仓库中
+      发布Maven工程到中央仓库
     </div>
   
 
@@ -214,7 +200,8 @@
 
 <div class="prose" id="prose">
 
-
+<p>介绍
+本文介绍如何把自己的maven项目发布到OSS中央仓库中。</p>
 
 <p>注册帐号
 <a href="https://issues.sonatype.org/secure/Signup!default.jspa">https://issues.sonatype.org/secure/Signup!default.jspa</a></p>
@@ -224,9 +211,8 @@
 
 <p>sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。</p>
 
-<h1 id="签名">签名</h1>
-
-<p>参考这里安装gpg。完成后，按照下面的步骤生成密钥。</p>
+<p>签名
+参考这里安装gpg。完成后，按照下面的步骤生成密钥。</p>
 
 <p><code>gpg --gen-key</code> 生成密钥，成功后，会有类似如下的输出。</p>
 
@@ -400,6 +386,9 @@
 
 <p>你可以把上面的配置添加到需要排除的模块中。</p>
 
+<p>参考
+本文为原创，如果您当前访问的域名不是surenpi.com，请访问“素人派”。</p>
+
 </div>
 
 
@@ -437,14 +426,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               

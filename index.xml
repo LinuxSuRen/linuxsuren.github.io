@@ -27,69 +27,12 @@ import _ &amp;quot;image/png&amp;quot;</description>
     </item>
     
     <item>
-      <title>Git GC</title>
-      <link>https://linuxsuren.github.io/blog/other/scm/git-gc/</link>
-      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/scm/git-gc/</guid>
-      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。
-鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。
-一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：
-git config --global gc.auto 0
-本地分支 查看已经合并过的分支
-git branch --merged
-查看未合并过的分支
-git branch --no-merged
-远程分支 清理远程过期的分支引用
-git remote prune origin
-我们也可以在拉取远程分支信息的时候执行清理任务
-git fetch -p
-查看已经合并过的远程分支
-git branch -r --merged
-更多的分支操作</description>
-    </item>
-    
-    <item>
-      <title>Selenium</title>
-      <link>https://linuxsuren.github.io/blog/other/test/selenium/</link>
-      <pubDate>Sat, 19 Jan 2019 19:22:23 +0800</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/test/selenium/</guid>
-      <description>远程模式 在 下载页面中，找到 Selenium Standalone Server 并下砸，然后执行如下的命令：
-java -jar selenium-server-standalone-{VERSION}.jar
-然后就可以访问 http://localhost:4444/wd/hub</description>
-    </item>
-    
-    <item>
       <title>Netcat</title>
       <link>https://linuxsuren.github.io/blog/os/linux/common/netcat/</link>
       <pubDate>Sun, 13 Jan 2019 19:33:01 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/netcat/</guid>
       <description>nc -l 9090 启动一个监听指定端口的服务</description>
-    </item>
-    
-    <item>
-      <title>CrumIssuer</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</link>
-      <pubDate>Wed, 09 Jan 2019 17:35:18 +0800</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</guid>
-      <description>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token
-curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
-返回值类似于，而如果没有启用该配置的话会返回 404
-{&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;}  使用该 Crumb 的方式如下：
-curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>多分支流水线</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</link>
-      <pubDate>Wed, 09 Jan 2019 15:44:33 +0800</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</guid>
-      <description>扫描多分支 curl -X POST -u user:passwd http://localhost:8080/jenkins/job/jobName/build --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
-Jenkins-Crumb 需要单独获取。</description>
     </item>
     
     <item>
@@ -234,24 +177,6 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/speach/jenkins-world-2019/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/speach/jenkins-world-2019/</guid>
-      <description>Open source community in China</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</guid>
-      <description>Title: The battle of CI/CD in Cloud Native Abstract: As a bridge between source codes and product value, CI/CD is playing a very important role. There&amp;rsquo;re many solutions was emerged. Some of them are an open source project, or some just provide the service. Jenkins has a great and very active open community, also has a long history. How does Jenkins could continuously keep a leader ship in the cloud native ecosystem?</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -279,20 +204,6 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
  getIconFileName getDisplayName getUrlName  约定 </description>
-    </item>
-    
-    <item>
-      <title>Ake</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
-      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
-sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
-安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
-通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
-修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
     </item>
     
     <item>
@@ -355,8 +266,8 @@ Ctrl+X+F 文件名</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
-      <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
-解密 echo MTIzNA== | base64 --d</description>
+      <description>echo -n 1234 | base64
+echo MTIzNA== | base64 --d</description>
     </item>
     
     <item>
@@ -646,7 +557,11 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
-      <description></description>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：
+首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;
+找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;
+最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push
+如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
     </item>
     
     <item>
@@ -1119,6 +1034,19 @@ Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kub
 查看节点详情 kubectl get node -o wide
 显示标签 kubectl get node --show-labels=true
 添加标签 kubectl label node nodeName jenkinsAgent=maven</description>
+    </item>
+    
+    <item>
+      <title>Kubectl</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kuberctl/</guid>
+      <description>下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f
+Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod</description>
     </item>
     
     <item>
@@ -1833,7 +1761,8 @@ brew install polip
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
-      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+      <description>介绍 本文介绍如何把自己的maven项目发布到OSS中央仓库中。
+注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
 新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
 sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
 签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。

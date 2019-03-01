@@ -42,13 +42,6 @@
 
 
 <meta itemprop="keywords" content="k8s,plugin,docker,agent," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins Kubernetes Plugin"/>
-<meta name="twitter:description" content="Jenkins Kubernetes Plugin"/>
-
-
-
-
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -147,7 +140,7 @@
 </nav>
 
     
-    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
 <main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
@@ -301,6 +294,32 @@
 
     
     <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56308" target="_blank">JENKINS-56308</a>
+        </td>
+        <td>
+            Lost vars in kubernetes declarative pipeline
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>New Feature</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56307" target="_blank">JENKINS-56307</a>
+        </td>
+        <td>
+            Create a NodeProvisioner.Strategy for Kubernetes plugin to reduce provisioning time
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
         <td>Improvement</td>
         <td>
             <a href="https://issues.jenkins-ci.org/browse/JENKINS-56238" target="_blank">JENKINS-56238</a>
@@ -333,32 +352,6 @@
         </td>
         <td>
             Failed to count the # of live instances on Kubernetes because of expired bearer token
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>New Feature</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56133" target="_blank">JENKINS-56133</a>
-        </td>
-        <td>
-            Embed build url of calling job into  pod annotations
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Improvement</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56121" target="_blank">JENKINS-56121</a>
-        </td>
-        <td>
-            Configuration data in build log
         </td>
     </tr>
     
@@ -500,7 +493,7 @@
 
 </table>
 
-一共：389个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：391个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -523,15 +516,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
 </ul>
 
@@ -550,14 +543,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               

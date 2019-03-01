@@ -37,18 +37,11 @@
 
 
 
-<meta itemprop="wordCount" content="123">
+<meta itemprop="wordCount" content="120">
 
 
 
 <meta itemprop="keywords" content="Jenkins," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jenkins"/>
-<meta name="twitter:description" content="Jenkins 是一个开源的 CI 服务"/>
-
-
-
-
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -147,7 +140,7 @@
 </nav>
 
     
-    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
 <main>
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
@@ -173,7 +166,6 @@
 <li><a href="#jenkins-home">JENKINS_HOME</a></li>
 <li><a href="#时区">时区</a></li>
 <li><a href="#向导">向导</a></li>
-<li><a href="#用户">用户</a></li>
 </ul></li>
 <li><a href="#重启">重启</a></li>
 </ul>
@@ -321,10 +313,6 @@
 
 <p><code>java -Djenkins.install.runSetupWizard=false -jar jenkins.war</code></p>
 
-<h2 id="用户">用户</h2>
-
-<p><code>--argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin</code></p>
-
 <h1 id="重启">重启</h1>
 
 <p>如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。</p>
@@ -356,15 +344,15 @@
 <h2>参考</h2>
 <ul>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-junit/">Jenkins JUnit</a></li>
 	
 </ul>
 
@@ -383,14 +371,14 @@
             <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    Jenkins
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
                   </a>
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    容器技术
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
                   </a>
                 </li>
               
