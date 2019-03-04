@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/os/mac/</link>
+    <description>Recent content in Mac on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/os/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac 快捷键</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/mac/</guid>
+      <description>按键符号 ⌘(command)
+⌥(option)
+⇧(shift)
+⇪(caps lock)
+⌃(control)
+↩(return)
+⌅(enter)
+快捷键 删除文件 command + delete
+浏览器 关闭选项卡 command + w
+前后切换选项卡 command + &amp;lt;-
+指定顺序切换选项卡 command + 1
+关闭浏览器 command + q
+截图  截取全屏并保存文件 shift + command + 3
+ 截取部分并保存文件 shift + command + 4
+ 截取全屏并保存粘贴板 shift + control + command + 3
+ 截取部分并保存粘贴板 shift + control + command + 4
+  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
+    </item>
+    
+    <item>
+      <title>U Creator</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/u-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/u-creator/</guid>
+      <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  </description>
+    </item>
+    
+    <item>
+      <title>lsof</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/lsof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/lsof/</guid>
+      <description>查看端口占用 lsof -nP -i4TCP:9091</description>
+    </item>
+    
+    <item>
+      <title>open</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/open/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/open/</guid>
+      <description>open http://surenpi.com 打开浏览器</description>
+    </item>
+    
+    <item>
+      <title>pbcopy</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/pbcopy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/pbcopy/</guid>
+      <description>cat test.log | pbcopy 通过命令行拷贝
+pbpaste 通过命令粘贴</description>
+    </item>
+    
+  </channel>
+</rss>

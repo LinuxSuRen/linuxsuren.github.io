@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on SuRenPi</title>
+    <link>https://linuxsuren.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
+部署 Jenkins 支持几种安装（启动）方式：
+  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+这种方式，方便简单，但是需要有 Java 环境。
+Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
+Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
+如果希望看到具体内容请查看这里。
+KubeApps 上也可以找到 Jenkins
+版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
+ 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。
+端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>流水线插件从 2.5 版本开始支持申明式流水线。
+申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
+ codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+    </item>
+    
+    <item>
+      <title>脚本式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
+      <description>触发器  codes/jenkinsfile/script-trigger.groovy   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
+ codes/jenkinsfile/try-catch.groovy   node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件  循环  codes/jenkinsfile/loop.</description>
+    </item>
+    
+  </channel>
+</rss>

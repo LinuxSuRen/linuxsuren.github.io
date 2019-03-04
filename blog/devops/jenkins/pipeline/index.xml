@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins Pipeline on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</link>
+    <description>Recent content in Jenkins Pipeline on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>参数化流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
+      <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
+类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。
+点击这里查看更多的参数类型
+位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：
+ codes/jenkinsfile/parameter.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  执行历史 每次执行时的参数值，都可以在执行历史中看到。</description>
+    </item>
+    
+    <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>流水线插件从 2.5 版本开始支持申明式流水线。
+申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
+ codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+    </item>
+    
+    <item>
+      <title>脚本式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
+      <description>触发器  codes/jenkinsfile/script-trigger.groovy   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
+ codes/jenkinsfile/try-catch.groovy   node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件  循环  codes/jenkinsfile/loop.</description>
+    </item>
+    
+  </channel>
+</rss>

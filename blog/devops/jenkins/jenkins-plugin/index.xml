@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins Plugins on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</link>
+    <description>Recent content in Jenkins Plugins on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 08 Jan 2019 21:48:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Github</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</link>
+      <pubDate>Tue, 08 Jan 2019 21:48:43 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</guid>
+      <description>webhook 该插件提供的默认 webhook 地址为：http://localhost/github-webhook/。
+同时，也提供修改该地址的配置。
+我们需要在 GitHub 的 webhook 设置页面添加，Content type 要选择 application/json
+如果要支持多分支流水线的话，主要需要确保勾选事件：Pull Request</description>
+    </item>
+    
+    <item>
+      <title>钉钉通知</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</link>
+      <pubDate>Tue, 08 Jan 2019 11:08:06 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
+      <description>支持的特性包括：
+ 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
+机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
+自由风格 在 Jenkins 中新建自由风格任务
+在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。
+上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。
+流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：
+dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39;</description>
+    </item>
+    
+    <item>
+      <title>Configuration as Code</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jenkins Kubernetes Plugin</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
+      <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。
+预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。
+Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。
+Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。
+JNLP 的基本原理。
+基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。
+为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。
+然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。
+认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。
+导出 Kubernetes 认证文件的命令：</description>
+    </item>
+    
+    <item>
+      <title>Jenkins SSH Agent</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</guid>
+      <description>在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 主题插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
+ 从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 流水线插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
+      <description> 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
+安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
+  结构  /codes/jenkinsfile/simple.groovy   pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 简体中文插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
+      <description>Jenkins 的汉化（简体中文）需要安装中文插件。
+具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
+这里有一个视频可以供各位参考。
+  </description>
+    </item>
+    
+    <item>
+      <title>Jira</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</guid>
+      <description>Jira 插件 是 Jira 和 Jenkins 集成的一个插件。在系统配置中，添加 Jira 的配置后，如果在 git 提交日志中包含了 Jira ID 的话，就可以在构建的变更记录中直接点击进入到 Jira 对应到页面。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,111 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/ini/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/toml/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/configuration/yaml/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-host/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/document/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/network/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/network/proxy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/service/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/os/linux/user/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-checkout/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git-submodule/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/blog/scm/git/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/opensource/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/translation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/translation/jenkins/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/</loc>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>https://linuxsuren.github.io/zh/sitemap.xml</loc>
+		
+	   	<lastmod>2019-03-01T00:00:00+00:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://linuxsuren.github.io/en/sitemap.xml</loc>
+		
+	   	<lastmod>2019-01-03T16:24:48+08:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

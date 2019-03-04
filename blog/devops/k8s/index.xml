@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/k8s/</link>
+    <description>Recent content in Kubernetes on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/k8s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ake</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
+      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
+安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
+通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
+修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
+apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
+    </item>
+    
+    <item>
+      <title>ApiServer</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
+      <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
+认证 首先，需要从 Secret 中获取 Token，参考命令如下：
+kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
+上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
+然后，通过如下类似的命令即可访问到集群的 API：
+curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
+  </description>
+    </item>
+    
+    <item>
+      <title>Ingress</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
+      <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
+Rewrite Ingress 支持地址重写，具体请查看参考。
+413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
+这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>K8S 证书</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/cert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/cert/</guid>
+      <description>根证书公钥(ca.pem)与私钥(ca-key.pem)
+API Server 公钥和私钥
+集群管理员公钥和私钥
+从节点公钥和私钥
+根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;quot;/CN=kube-ca&amp;quot;  API Server 证书 创建 openssl.cnf
+[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.</description>
+    </item>
+    
+    <item>
+      <title>Kubectl</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
+      <description>查看集群信息 kubectl cluster-info
+下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f
+Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+节点 查看节点列表 kubectl get node
+查看节点详情 kubectl get node -o wide
+显示标签 kubectl get node --show-labels=true
+添加标签 kubectl label node nodeName jenkinsAgent=maven</description>
+    </item>
+    
+    <item>
+      <title>Minikube</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
+      <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
+然后，添加可执行权限并移动到执行目录下：
+chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
+下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
+    </item>
+    
+    <item>
+      <title>安装 Kubernetes</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/install/</guid>
+      <description>启用 Docker 服务 systemctl enable docker.service
+安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
+安装客户端
+cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;amp;&amp;amp; systemctl start kubelet  设置 kubelet sed -i &amp;quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&amp;quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+重启 kubelet systemctl daemon-reload &amp;amp;&amp;amp; systemctl restart kubelet
+禁用Swap swapoff -a
+安装 master kubeadm init
+export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry.</description>
+    </item>
+    
+  </channel>
+</rss>

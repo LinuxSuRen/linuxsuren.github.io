@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Common CLI on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/os/linux/common/</link>
+    <description>Recent content in Linux Common CLI on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 13 Jan 2019 19:33:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/os/linux/common/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Netcat</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/netcat/</link>
+      <pubDate>Sun, 13 Jan 2019 19:33:01 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/netcat/</guid>
+      <description>nc -l 9090 启动一个监听指定端口的服务</description>
+    </item>
+    
+    <item>
+      <title>AWK</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/awk/</guid>
+      <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
+    </item>
+    
+    <item>
+      <title>Base64</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/base64/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
+      <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
+解密 echo MTIzNA== | base64 --d</description>
+    </item>
+    
+    <item>
+      <title>Connect to Mobile</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/mobile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/mobile/</guid>
+      <description>iPad 安装依赖的工具：
+add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa
+卸载应用 ideviceinstaller -U [bundleID]
+查看系统日志 idevicesyslog
+查看当前已连接的设备的UUID idevice_id --list
+截图 idevicescreenshot
+查看设备信息 videviceinfo
+获取设备时间 idevicedate
+参考 https://github.com/LinuxSuRen/libimobiledevice</description>
+    </item>
+    
+    <item>
+      <title>Find</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/find/</guid>
+      <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
+查找文件夹 find ~ -type d -name jx
+查找并执行命令 find . -name *.java | xargs echo 查找完后执行
+查找特定文件 cp $(find core/src/main/resources -type f -name &amp;quot;*_zh_CN.properties&amp;quot;) /tmp</description>
+    </item>
+    
+    <item>
+      <title>GPG</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/gpg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/gpg/</guid>
+      <description>安装 Windows版本下载地址 https://www.gpg4win.org/download.html
+Ubuntu下安装 sudo apt-get install gpg -y
+Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
+从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2
+命令 gpg --export-secret-key 标识名 &amp;gt; 导出文件名
+gpg -o keyfilename --export-secret-keys KeyID
+gpg -o keyfilename --export KeyID
+gpg --import 密钥文件
+gpg --list-keys 列出密钥
+gpg --delete-secret-key hello
+gpg --delete-key hello
+上传公钥 gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567
+接收公钥 gpg --keyserver pool.sks-keyservers.net --recv-key 1234567
+gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567 搜索公钥
+公钥服务器 hkp://pool.sks-keyservers.net
+hkp://subkeys.gpg.net</description>
+    </item>
+    
+    <item>
+      <title>Linux Service</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
+    </item>
+    
+    <item>
+      <title>MPlayer</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</guid>
+      <description>音频 只播放音频 mplayer -vo sample.mp4</description>
+    </item>
+    
+    <item>
+      <title>SSDH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/sshd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/sshd/</guid>
+      <description>禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config
+PermitRootLogin no
+然后重启服务 service ssh restart</description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/ssh/</guid>
+      <description>配置文件 vim /etc/ssh/sshd_config
+允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
+无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
+ 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
+  证书登陆 ssh -i test.pem root@localhost
+服务重启 service ssh restart</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
+      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+文件路径 从文件路径中提取文件名和目录
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
+    </item>
+    
+    <item>
+      <title>TR</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/tr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/tr/</guid>
+      <description>cat .m2/settings.xml | tr -s [:blank:] 清除空白字符
+echo abc | tr a-z A-Z 大小写转换</description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>echo</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/echo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/echo/</guid>
+      <description>参数 -n 不换行</description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</guid>
+      <description>静态水印 ffmpeg -y -i movieFile -vf &amp;quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]&amp;quot; movieWatermark.mp4
+ffmpeg -i jenkins.mov -i watermark.png -filter_complex &amp;quot;overlay=10:10&amp;quot; jenkins.mp4
+动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile
+http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/
+合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：
+ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
+    </item>
+    
+    <item>
+      <title>grep</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/grep/</guid>
+      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
+      <title>sed</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/sed/</guid>
+      <description>cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符</description>
+    </item>
+    
+    <item>
+      <title>split</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/split/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/split/</guid>
+      <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
+合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
+    </item>
+    
+    <item>
+      <title>telnet</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
+      <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
+    </item>
+    
+    <item>
+      <title>user</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/user/</guid>
+      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
+useradd user-name --home /home/user-name --create-home
+su user-name
+userdel user-name</description>
+    </item>
+    
+    <item>
+      <title>wget</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/wget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/wget/</guid>
+      <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
+为了方便使用，我们可以为 wget 添加一个别名，如下所示：
+alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
+递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载
+wget各种选项分类列表
+ 启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
+ 记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
+    </item>
+    
+    <item>
+      <title>xargs</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/xargs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/xargs/</guid>
+      <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像</description>
+    </item>
+    
+    <item>
+      <title>xclip</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/xclip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/xclip/</guid>
+      <description>Install sudo apt-get install xclip
+Example ifconfig | xclip -sel clip</description>
+    </item>
+    
+    <item>
+      <title>命令提示符</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
+      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1=&#39;[/u@/h /W/]/$ &#39;
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$</description>
+    </item>
+    
+  </channel>
+</rss>

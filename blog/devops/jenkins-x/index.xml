@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins X on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins-x/</link>
+    <description>Recent content in Jenkins X on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins-x/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
+      <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
+sudo apt-get install maven make -y
+为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker
+重启 Docker 服务 sudo service docker restart
+添加权限 sudo chmod a+rw /var/run/docker.sock
+拉取镜像 执行命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-images.sh | bash 拉取 jx 所需要的镜像
+安装 jx 获取 jx curl -LO https://github.com/jenkins-x/jx/releases/download/$(curl -s https://api.github.com/repos/jenkins-x/jx/releases/latest | grep tag_name | cut -d &#39;&amp;quot;&#39; -f 4)/jx-linux-amd64.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins X</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
+      <description>添加 Gitee 为 Git 服务器
+jx create git server gitea http://localhost:10080
+DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。
+因此，我们需要的 Docker 版本为 v17.06。</description>
+    </item>
+    
+  </channel>
+</rss>

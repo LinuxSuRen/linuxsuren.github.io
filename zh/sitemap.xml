@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/init/</loc>
+    <lastmod>2019-01-31T15:18:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-gc/</loc>
+    <lastmod>2019-01-29T15:28:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/test/selenium/</loc>
+    <lastmod>2019-01-19T19:22:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/netcat/</loc>
+    <lastmod>2019-01-13T19:33:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</loc>
+    <lastmod>2019-01-09T17:35:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</loc>
+    <lastmod>2019-01-09T15:44:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</loc>
+    <lastmod>2019-01-08T21:48:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</loc>
+    <lastmod>2019-01-08T11:08:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/gmock/</loc>
+    <lastmod>2019-01-04T16:17:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</loc>
+    <lastmod>2019-01-03T22:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</loc>
+    <lastmod>2019-01-03T16:29:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/ini/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/toml/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/yaml/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/chromedp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/speach/jenkins-world-2019/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/translation/jenkins/releasing-experimental-updates/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/awk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/agent/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/ake/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/server/apache2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/banana-pi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/base64/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/centos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/cicd/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/mobile/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/docker/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-time/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-image/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/eclipse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/find/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/browser/firefox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/gpg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/test/ginkgo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-branch/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-rebase/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-remote/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-reset/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-stage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-submodule/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-tag/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitlab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/goroutines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/</loc>
+    <lastmod>2019-01-31T15:18:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/json/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/http/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/http_status/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/idea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/ingress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/terminal/iterm2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/jvm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/jvm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/</loc>
+    <lastmod>2019-01-09T17:35:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</loc>
+    <lastmod>2019-01-08T21:48:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/translation/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/cert/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/kubernetes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/</loc>
+    <lastmod>2019-01-13T19:33:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/service/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/mac/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-repository/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/minikube/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/server/nginx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/openj9/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/pipeline/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/plugin/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/test/postman/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/</loc>
+    <lastmod>2019-01-29T15:28:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/sshd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/ssh/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/categories/scm/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/shell/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/java/spacevim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/speach/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/ssh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/go-sync/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/syntax/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/tr/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/team-building/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/template/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/testing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/typora/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/u-creator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/ubuntu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/vendor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/opensource/why-opensource/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/curl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/dep/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/echo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/glide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/godep/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/go/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/govendor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/grep/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/lsof/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/open/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/mac/pbcopy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/sed/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/split/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/telnet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/user/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/vscode/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/wget/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/xargs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/xclip/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/proxy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/codequality/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/maven-release/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/os/linux/common/prompting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/k8s/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/python/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/server/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/opensource/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/document/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/translation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/build/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/test/</loc>
+    <lastmod>2019-01-19T19:22:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/browser/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/terminal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/editor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/devops/docker/docker-config/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/configuration/</loc>
+  </url>
+  
+</urlset>

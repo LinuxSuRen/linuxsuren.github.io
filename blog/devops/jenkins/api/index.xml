@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins API 介绍 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/api/</link>
+    <description>Recent content in Jenkins API 介绍 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 09 Jan 2019 17:35:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CrumIssuer</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</link>
+      <pubDate>Wed, 09 Jan 2019 17:35:18 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</guid>
+      <description>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token
+curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
+返回值类似于，而如果没有启用该配置的话会返回 404
+{&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;}  使用该 Crumb 的方式如下：
+curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>多分支流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</link>
+      <pubDate>Wed, 09 Jan 2019 15:44:33 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</guid>
+      <description>扫描多分支 curl -X POST -u user:passwd http://localhost:8080/jenkins/job/jobName/build --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
+Jenkins-Crumb 需要单独获取。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 核心</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</link>
+      <pubDate>Thu, 03 Jan 2019 16:29:11 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</guid>
+      <description>你可以通过如下的方式来访问 Jenkins：
+单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息
+curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建
+curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息
+curl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务
+curl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务
+curl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务
+构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志
+curl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。
+curl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史
+下面是特定情况的构建：
+curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志
+curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
+curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
+curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
+重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求</description>
+    </item>
+    
+  </channel>
+</rss>

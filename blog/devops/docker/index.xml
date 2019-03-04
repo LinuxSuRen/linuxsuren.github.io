@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>容器技术 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/docker/</link>
+    <description>Recent content in 容器技术 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker Daemon</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
+      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
+Docker Version vs API Version</description>
+    </item>
+    
+    <item>
+      <title>Docker Mirror</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
+      <description>vim /etc/docker/daemon.json
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
+或者，在文件 /etc/default/docker 中添加如下配置：
+DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Docker Operation</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
+      <description>Filter Images 当前支持的过滤如下：
+ dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker api</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-api/</guid>
+      <description>获取 Token：
+curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
+    </item>
+    
+    <item>
+      <title>Docker 命令</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
+      <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
+docker pull hub.alauda.cn/jenkins-jnlp-slave
+启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
+docker run jenkins --restart=always
+最简单的启动命令 docker run surenpi/hugo-docker
+容器停止后，自动删除 docker run --rm surenpi/hugo-docker
+设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
+docker run jenkins --name ci-jenkins
+查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
+如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
+停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
+日志 docker logs -f 94a5fa599b05
+删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
+通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk &#39;{print $1}&#39;) &amp;amp;&amp;amp; docker rm $(docker ps | grep hello | awk &#39;{print $1}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker 时间设置</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-time/</guid>
+      <description>通过如下配置，就可以实现对容器内的时区设置：
+ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
+docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像管理</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
+      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
+      <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+ENV HTTP_PROXY http://192.168.1.1:1234
+上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
+ENV HTTP_PROXY &amp;quot;&amp;quot;
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
+RUN RUN 为 Docker 镜像在构建时执行的命令
+CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
+    </item>
+    
+    <item>
+      <title>Install Docker</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</guid>
+      <description>查看可用的版本 apt-cache madison docker-ce
+安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
+    </item>
+    
+    <item>
+      <title>在 CentOS 安装 Docker</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
+      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
+      <description>代理 给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
+DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
+User 让普通用户可以执行 docker
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,166 +6,273 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Jenkins 调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
+      <description>mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
+mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true
+Docker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。
+添加如下环境变量
+JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y</description>
+    </item>
+    
+    <item>
+      <title>扩展 Jenkins 的构建（Builder）任务</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</guid>
+      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 </description>
+    </item>
+    
+    <item>
+      <title>Init</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/init/</link>
+      <pubDate>Thu, 31 Jan 2019 15:18:58 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/init/</guid>
+      <description>init 函数定义在包（package）中，并有如下的用处：
+ 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
+ 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数   包初始化只会执行一次，即使会被导入多次。
+  属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。
+init 函数可以定义多次。
+只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：
+import _ &amp;quot;image/png&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Git GC</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-gc/</link>
+      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-gc/</guid>
+      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。
+鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。
+一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：
+git config --global gc.auto 0
+本地分支 查看已经合并过的分支
+git branch --merged
+查看未合并过的分支
+git branch --no-merged
+远程分支 清理远程过期的分支引用
+git remote prune origin
+我们也可以在拉取远程分支信息的时候执行清理任务
+git fetch -p
+查看已经合并过的远程分支
+git branch -r --merged
+更多的分支操作</description>
+    </item>
+    
+    <item>
+      <title>Selenium</title>
+      <link>https://linuxsuren.github.io/blog/other/test/selenium/</link>
+      <pubDate>Sat, 19 Jan 2019 19:22:23 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/selenium/</guid>
+      <description>远程模式 在 下载页面中，找到 Selenium Standalone Server 并下砸，然后执行如下的命令：
+java -jar selenium-server-standalone-{VERSION}.jar
+然后就可以访问 http://localhost:4444/wd/hub</description>
+    </item>
+    
+    <item>
+      <title>Netcat</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/netcat/</link>
+      <pubDate>Sun, 13 Jan 2019 19:33:01 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/netcat/</guid>
+      <description>nc -l 9090 启动一个监听指定端口的服务</description>
+    </item>
+    
+    <item>
+      <title>CrumIssuer</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</link>
+      <pubDate>Wed, 09 Jan 2019 17:35:18 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/</guid>
+      <description>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token
+curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
+返回值类似于，而如果没有启用该配置的话会返回 404
+{&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;}  使用该 Crumb 的方式如下：
+curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>多分支流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</link>
+      <pubDate>Wed, 09 Jan 2019 15:44:33 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/</guid>
+      <description>扫描多分支 curl -X POST -u user:passwd http://localhost:8080/jenkins/job/jobName/build --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
+Jenkins-Crumb 需要单独获取。</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</link>
+      <pubDate>Tue, 08 Jan 2019 21:48:43 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</guid>
+      <description>webhook 该插件提供的默认 webhook 地址为：http://localhost/github-webhook/。
+同时，也提供修改该地址的配置。
+我们需要在 GitHub 的 webhook 设置页面添加，Content type 要选择 application/json
+如果要支持多分支流水线的话，主要需要确保勾选事件：Pull Request</description>
+    </item>
+    
+    <item>
+      <title>钉钉通知</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</link>
+      <pubDate>Tue, 08 Jan 2019 11:08:06 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
+      <description>支持的特性包括：
+ 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
+机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
+自由风格 在 Jenkins 中新建自由风格任务
+在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。
+上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。
+流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：
+dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39;</description>
+    </item>
+    
+    <item>
+      <title>GoMock</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/gmock/</link>
+      <pubDate>Fri, 04 Jan 2019 16:17:15 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/gmock/</guid>
+      <description>GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。
+安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。
+go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen  编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
+测试用例  codes/golang/gmock/foo_test.go   package main import ( &amp;#34;testing&amp;#34; &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 培训</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</link>
+      <pubDate>Thu, 03 Jan 2019 22:50:02 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</guid>
+      <description>class: center, middle
+Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线 API  计算节点管理  静态 动态   大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施   安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
+ 安装手册 Docker  插件管理  介绍 仓库 托管  计算节点管理  节点类型  固定 动态（虚拟机、Docker、Kubernetes）  通道  SSH JNLP  标签（label）  表达式   流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 核心</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</link>
+      <pubDate>Thu, 03 Jan 2019 16:29:11 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/core/</guid>
+      <description>你可以通过如下的方式来访问 Jenkins：
+单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息
+curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建
+curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息
+curl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务
+curl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务
+curl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务
+构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志
+curl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。
+curl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史
+下面是特定情况的构建：
+curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志
+curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
+curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
+curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
+重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求</description>
+    </item>
+    
+    <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/ini/</link>
+      <link>https://linuxsuren.github.io/blog/other/configuration/ini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/configuration/ini/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/configuration/ini/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/toml/</link>
+      <link>https://linuxsuren.github.io/blog/other/configuration/toml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/configuration/toml/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/configuration/toml/</guid>
       <description>TOML TOML(Tom&amp;rsquo;s Obvious, Minimal Language) origin</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/configuration/yaml/</link>
+      <link>https://linuxsuren.github.io/blog/other/configuration/yaml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/configuration/yaml/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/configuration/yaml/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-host/</link>
+      <link>https://linuxsuren.github.io/blog/other/document/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-host/</guid>
-      <description>本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
-创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
-提交请求 详细阅读托管要求
-在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
-托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
-你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
-发布 等一切就绪，你的插件要发布时，只要执行下面的命令：
-mvn release:prepare release:perform</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-debug/</guid>
-      <description>Jenkins 插件调试 运行 在 war 目录下运行：
-mvn hpi:run
-mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_hOME=. 需要在目录 war 下运行，并保证没有 work 目录
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-参考 maven-hpi-plugin</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-plugin-develope/</guid>
-      <description>Jenkins 插件开发 参考 Extend Jenkins</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/</guid>
-      <description>启动 java -jar jenkins.war 这样启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
-java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/document/hugo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/document/hugo/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/document/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/network/proxy/</link>
+      <link>https://linuxsuren.github.io/blog/other/document/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/network/proxy/</guid>
-      <description>代理 分类 ssh shadowsocks sudo apt-get install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-使用 polipo socksParentProxy=127.0.0.1:1080</description>
+      <guid>https://linuxsuren.github.io/blog/other/document/markdown/</guid>
+      <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/service/</link>
+      <link>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/service/</guid>
-      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
+      <guid>https://linuxsuren.github.io/blog/other/editor/eclipse/eclipse-plugin-dev/</guid>
+      <description>Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。
+控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类
+构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/os/linux/user/</link>
+      <link>https://linuxsuren.github.io/blog/other/network/chromedp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/user/</guid>
-      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
-useradd user-name --home /home/user-name --create-home
-su user-name
-userdel user-name</description>
+      <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
+      <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git-checkout/</link>
+      <link>https://linuxsuren.github.io/speach/jenkins-world-2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-checkout/</guid>
-      <description> checkout 该命令可以切换分支、新建分支等。
-切换分支 新建分支 放弃修改 git checkout somefile 通过该命令，可以放弃对某个文件的修改。
- 场景1 当我使用命令 git pull 更新代码时，发现由于和本地对某个文件的修改发生冲突，而且确定可以放弃本地的修改时。  </description>
+      <guid>https://linuxsuren.github.io/speach/jenkins-world-2019/</guid>
+      <description>Open source community in China</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git-submodule/</link>
+      <link>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/scm/git-submodule/</guid>
-      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
-get submodule update 更新子模块代码</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/blog/scm/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/scm/git/</guid>
-      <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
-这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
-git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
-git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
-最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+      <guid>https://linuxsuren.github.io/speach/kubecon-2019-shanghai/</guid>
+      <description>Title: The battle of CI/CD in Cloud Native Abstract: As a bridge between source codes and product value, CI/CD is playing a very important role. There&amp;rsquo;re many solutions was emerged. Some of them are an open source project, or some just provide the service. Jenkins has a great and very active open community, also has a long history. How does Jenkins could continuously keep a leader ship in the cloud native ecosystem?</description>
     </item>
     
     <item>
@@ -177,6 +284,1691 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
       <description>发布实验性版本的插件 查看可用的开发者指导
 To simplify delivery of beta versions of plugins to interested users, the Jenkins project published an experimental update center. It will include alpha and beta versions of plugins, which aren’t usually included in the regular update sites.
 创建试验性创建版本 Plugin releases that contain alpha or beta in their version number will only show up in the experimental update site. Note that it also serves regular releases, so the release of version 1.</description>
+    </item>
+    
+    <item>
+      <title>AWK</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/awk/</guid>
+      <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;</description>
+    </item>
+    
+    <item>
+      <title>Action</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
+      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
+接口 你首先需要实现接口 hudson.model.Action 的三个方法:
+ getIconFileName getDisplayName getUrlName  约定 </description>
+    </item>
+    
+    <item>
+      <title>Ake</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
+      <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
+安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
+通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
+修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
+apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {}  </description>
+    </item>
+    
+    <item>
+      <title>Annotation</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</guid>
+      <description>CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)
+通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。
+Terminator Usage: @Terminator(after=TermMilestone.STARTED)
+上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。
+Restricted Usage: @Restricted(NoExternalUse.class)
+上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</description>
+    </item>
+    
+    <item>
+      <title>Apache2</title>
+      <link>https://linuxsuren.github.io/blog/other/server/apache2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/server/apache2/</guid>
+      <description>查看工作方式 apachectl -V | grep -i mpm
+配置文件如下：
+&amp;lt;IfModule mpm_prefork_module&amp;gt; StartServers 10 # 启动时进程数 MinSpareServers 5 # 最小空闲进程数 MaxSpareServers 10 # 最大空闲进程数 MaxRequestWorkers 100 # 最大并发进程数 MaxConnectionsPerChild 10000 # 最大连接数限制 &amp;lt;/IfModule&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>ApiServer</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
+      <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
+认证 首先，需要从 Secret 中获取 Token，参考命令如下：
+kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
+上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
+然后，通过如下类似的命令即可访问到集群的 API：
+curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
+  </description>
+    </item>
+    
+    <item>
+      <title>Auto complete</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</guid>
+      <description>Ctrl+X+P 整行
+Ctrl+X+N 当前文件
+Ctrl+X+K 字典
+Ctrl+X+I 当前以及包含的文件
+Ctrl+X+F 文件名</description>
+    </item>
+    
+    <item>
+      <title>Base64</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/base64/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
+      <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
+解密 echo MTIzNA== | base64 --d</description>
+    </item>
+    
+    <item>
+      <title>CLI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</guid>
+      <description>扩展点 hudson.cli.CLICommand
+Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
+    </item>
+    
+    <item>
+      <title>Codes Vs Documents</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</guid>
+      <description>除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。</description>
+    </item>
+    
+    <item>
+      <title>Configuration as Code</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Connect to Mobile</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/mobile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/mobile/</guid>
+      <description>iPad 安装依赖的工具：
+add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa
+卸载应用 ideviceinstaller -U [bundleID]
+查看系统日志 idevicesyslog
+查看当前已连接的设备的UUID idevice_id --list
+截图 idevicescreenshot
+查看设备信息 videviceinfo
+获取设备时间 idevicedate
+参考 https://github.com/LinuxSuRen/libimobiledevice</description>
+    </item>
+    
+    <item>
+      <title>Directory</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</guid>
+      <description>:pwd 查看当前目录
+:cd %:p:h 切换目录到当前文件所在目录
+:lcd %:p:h 切换当前窗口的目录到当前文件所在目录</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://linuxsuren.github.io/blog/language/java/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/docker/</guid>
+      <description>内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。
+参考 Docker OpenJDK</description>
+    </item>
+    
+    <item>
+      <title>Docker Daemon</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
+      <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
+Docker Version vs API Version</description>
+    </item>
+    
+    <item>
+      <title>Docker Mirror</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
+      <description>vim /etc/docker/daemon.json
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
+或者，在文件 /etc/default/docker 中添加如下配置：
+DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Docker Operation</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
+      <description>Filter Images 当前支持的过滤如下：
+ dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker api</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-api/</guid>
+      <description>获取 Token：
+curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
+    </item>
+    
+    <item>
+      <title>Docker 命令</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
+      <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
+docker pull hub.alauda.cn/jenkins-jnlp-slave
+启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
+docker run jenkins --restart=always
+最简单的启动命令 docker run surenpi/hugo-docker
+容器停止后，自动删除 docker run --rm surenpi/hugo-docker
+设置名称 当你启动 Docker 容器后，容器的名称时随机生成的。为了方便后续的查找，我们可以通过参数给容器设置一个名称：
+docker run jenkins --name ci-jenkins
+查看容器 我们可以使用命令 docker ps ，查看所有运行状态的容器。
+如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
+停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
+日志 docker logs -f 94a5fa599b05
+删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
+通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk &#39;{print $1}&#39;) &amp;amp;&amp;amp; docker rm $(docker ps | grep hello | awk &#39;{print $1}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker 时间设置</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-time/</guid>
+      <description>通过如下配置，就可以实现对容器内的时区设置：
+ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
+docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像管理</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
+      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune</description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
+      <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
+FROM alpine:3.8
+Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
+ENV HTTP_PROXY http://192.168.1.1:1234
+上面的方法，在容器运行期，也会走代理。如果只是希望在构建期间设置网络代理的化，可以把 ENV 设置为空：
+ENV HTTP_PROXY &amp;quot;&amp;quot;
+但是，需要在构建时指定参数：docker build --build-arg HTTP_PROXY=http://192.168.1.1:1234
+EXPOSE 指定容器要暴露的端口，例如：EXPOSE 9898。在执行容器时，可以通过参数来自动暴露给一个本地的随机端口，例如：docker run -P sample
+RUN RUN 为 Docker 镜像在构建时执行的命令
+CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;echo&amp;quot;, &amp;quot;hello&amp;quot;]</description>
+    </item>
+    
+    <item>
+      <title>Find</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/find/</guid>
+      <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
+查找文件夹 find ~ -type d -name jx
+查找并执行命令 find . -name *.java | xargs echo 查找完后执行
+查找特定文件 cp $(find core/src/main/resources -type f -name &amp;quot;*_zh_CN.properties&amp;quot;) /tmp</description>
+    </item>
+    
+    <item>
+      <title>Firefox</title>
+      <link>https://linuxsuren.github.io/blog/other/browser/firefox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/browser/firefox/</guid>
+      <description>firefox -private</description>
+    </item>
+    
+    <item>
+      <title>Firewall</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</guid>
+      <description>systemctl stop firewalld.service 停止firewall
+systemctl disable firewalld.service 禁止firewall开机启动</description>
+    </item>
+    
+    <item>
+      <title>GPG</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/gpg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/gpg/</guid>
+      <description>安装 Windows版本下载地址 https://www.gpg4win.org/download.html
+Ubuntu下安装 sudo apt-get install gpg -y
+Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
+从 https://sourceforge.net/p/gpgosx/docu/Download/ 下载 gpg2
+命令 gpg --export-secret-key 标识名 &amp;gt; 导出文件名
+gpg -o keyfilename --export-secret-keys KeyID
+gpg -o keyfilename --export KeyID
+gpg --import 密钥文件
+gpg --list-keys 列出密钥
+gpg --delete-secret-key hello
+gpg --delete-key hello
+上传公钥 gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567
+接收公钥 gpg --keyserver pool.sks-keyservers.net --recv-key 1234567
+gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567 搜索公钥
+公钥服务器 hkp://pool.sks-keyservers.net
+hkp://subkeys.gpg.net</description>
+    </item>
+    
+    <item>
+      <title>Ginkgo</title>
+      <link>https://linuxsuren.github.io/blog/other/test/ginkgo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/ginkgo/</guid>
+      <description>Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。</description>
+    </item>
+    
+    <item>
+      <title>Git Branch</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-branch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-branch/</guid>
+      <description>切换标签 git branch 列出本地分支 git checkout master 切换到本地 master 分支
+删除分支 git branch --delete abc 删除分支 abc
+git push origin --delete abc 删除远程分支
+git branch -v | grep gone | awk &#39;//{print $1}&#39; | xargs git branch -d 删除远程分支不存在的`
+git remote prune origin
+拉取分支 git checkout -b abc 基于当前分支创建新分支
+git checkout --track origin/abc 拉取远程分支</description>
+    </item>
+    
+    <item>
+      <title>Git Collaborate</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</guid>
+      <description>几乎所有的团队都有自己的沟通系统（工具），像 Jira、Kanban、微信、钉钉等等。而我现在要说的是像 GitHub、Gitlab 等 Git 服务提供的 PR。代码 Review 是件好事情，这一点很多人都认同，但是很明显的痛点在于——这样可能会比较耗时。
+大家不一定能够在看到邮件、钉钉等的消息后，就立刻去做 Review，因此，很多时候就会忘记从而导致这个过程加长。
+如果，能够给每个项目都指定一些必须要进行 Review 的人员，然后，自动地把 PR 的 Review 需求加到像 Jira 这样的任务跟踪系统中的。对，关键点就在于把 Review 也正式地当作工作任务的一部分。
+我相信，这样也许就能解决大家的代码都能够相对高效地被 Review呢。而且，这样也对 Review 的工作量相对可控。</description>
+    </item>
+    
+    <item>
+      <title>Git Rebase</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-rebase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-rebase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Remote</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-remote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-remote/</guid>
+      <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
+这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
+git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
+git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
+最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Reset</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：
+首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;
+找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;
+最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push
+如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
+    </item>
+    
+    <item>
+      <title>Git Stage</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-stage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-stage/</guid>
+      <description>我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。
+git checkout readme.md 可以把 unstage 状态的文件修改丢弃</description>
+    </item>
+    
+    <item>
+      <title>Git Submodule</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
+get submodule update 更新子模块代码</description>
+    </item>
+    
+    <item>
+      <title>Git 标签（tag）</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-tag/</guid>
+      <description>标签 git tag v0.1.2-light
+git tag -a v0.2 -m &#39;here is comment&#39;
+切换到标签 git checkout v0.2
+删除标签 git tag -d v0.2
+基于提交记录打标签及 git tag -a v0.2 beab786 -m &#39;from branch hello beab786&#39;
+发布指定的标签 git push origin v0.2
+把所有的标签一次性发布 git push origin --tags
+git可以在同一个提交上打多个名称不一样的标签
+获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）
+删除远程标签 git push --delete origin tagname 删除远程的指定标签</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitea/</guid>
+      <description>docker pull gitea/gitea:latest</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitlab/</guid>
+      <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
+启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
+Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
+    <item>
+      <title>GoRoutines</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/goroutines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/goroutines/</guid>
+      <description> 简单例子   </description>
+    </item>
+    
+    <item>
+      <title>Golang with JSON</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
+      <description>  /codes/golang/json/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  </description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/http/</guid>
+      <description>codes/golang/http/main.go   package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; ) func main() { url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) }  原文件  创建 Response 结构 import ( &amp;quot;net/http&amp;quot; &amp;quot;io/ioutil&amp;quot; ) http.</description>
+    </item>
+    
+    <item>
+      <title>HTTP Status</title>
+      <link>https://linuxsuren.github.io/blog/other/network/http_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/http_status/</guid>
+      <description> 200 300 400 401 未经授权：访问由于凭据无效被拒绝。
+404 无法找到页面
+500 Reference </description>
+    </item>
+    
+    <item>
+      <title>Ingress</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
+      <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
+Rewrite Ingress 支持地址重写，具体请查看参考。
+413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
+这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Install</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
+      <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
+安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
+sudo apt-get install maven make -y
+为了方便，我们把当前用户加入 Docker 用户组 sudo gpasswd -a ${USER} docker
+重启 Docker 服务 sudo service docker restart
+添加权限 sudo chmod a+rw /var/run/docker.sock
+拉取镜像 执行命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-images.sh | bash 拉取 jx 所需要的镜像
+安装 jx 获取 jx curl -LO https://github.com/jenkins-x/jx/releases/download/$(curl -s https://api.github.com/repos/jenkins-x/jx/releases/latest | grep tag_name | cut -d &#39;&amp;quot;&#39; -f 4)/jx-linux-amd64.</description>
+    </item>
+    
+    <item>
+      <title>Install Docker</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</guid>
+      <description>查看可用的版本 apt-cache madison docker-ce
+安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
+    </item>
+    
+    <item>
+      <title>IntelliJ IDEA 快捷键</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/idea/idea-shortcut/</guid>
+      <description>Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句  </description>
+    </item>
+    
+    <item>
+      <title>Iterm2</title>
+      <link>https://linuxsuren.github.io/blog/other/terminal/iterm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/terminal/iterm2/</guid>
+      <description>自动完成 CMD+;
+Reference https://www.iterm2.com</description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>https://linuxsuren.github.io/blog/language/java/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/jvm/</guid>
+      <description>查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all</description>
+    </item>
+    
+    <item>
+      <title>JVM Arguments</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/jvm/</guid>
+      <description>有些情况下，我们需要修改启动 Maven 时的 JVM 参数。
+MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-Xmx1024m&amp;quot; clean</description>
+    </item>
+    
+    <item>
+      <title>Java Annotation Processing and Creating a Builder</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</guid>
+      <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
+部署 Jenkins 支持几种安装（启动）方式：
+  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+这种方式，方便简单，但是需要有 Java 环境。
+Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
+Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
+如果希望看到具体内容请查看这里。
+KubeApps 上也可以找到 Jenkins
+版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
+ 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。
+端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Agent</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</guid>
+      <description>Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。
+默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。
+Jenkins 的节点，通常可以配置如下属性：
+ 名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量  类型 Jenkins 支持多种与节点通信的方式。
+  JNLP 默认支持。
+SSH 需要安装插件。
+Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。
+静态 Docker 静态的 Docker 容器，是通过命令来启动一个 jnlp 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。
+通常的命令 docker run jenkins/jnlp-slave -url http://jenkins-server:port &amp;lt;secret&amp;gt; &amp;lt;agent name&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Jenkins JUnit</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</guid>
+      <description>断言 @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); }  数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
+例如：该注解加载类 org.test.TestAgent 的方法 test 上的话，就会去加载目录 src/test/resources/org/test/TestAgent/test 中的配置文件。另外，它还有一个 value 参数可以替代使用方法名称。
+框架 Jenkins 的测试框架为 acceptance-test-harness。
+在 pom.xml 中可以修改框架的版本，如下所示：
+&amp;lt;properties&amp;gt;&amp;lt;jenkins-test-harness.version&amp;gt;2.28&amp;lt;/jenkins-test-harness.version&amp;gt;&amp;lt;/properties&amp;gt;  通过下面的方式修改 Jenkins 运行测试的版本：
+&amp;lt;properties&amp;gt;&amp;lt;jenkins.version&amp;gt;2.150.1&amp;lt;/jenkins.version&amp;gt;&amp;lt;/properties&amp;gt;  环境变量 如果需要修改运行测试时的 Jenkins 版本，可以在启动 JVM 时指定参数 -Djth.jenkins-war.path=/tmp/jenkins.war</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Kubernetes Plugin</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
+      <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。
+预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。
+Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。
+Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。
+JNLP 的基本原理。
+基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。
+为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。
+然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。
+认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。
+导出 Kubernetes 认证文件的命令：</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Plugin Dev Credentails</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</guid>
+      <description>IdCredentials 规定了具有 ID 的凭据（Credentials）
+CredentialsProvider 凭据提供接口
+CredentialsStore 凭据存储接口</description>
+    </item>
+    
+    <item>
+      <title>Jenkins SSH Agent</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</guid>
+      <description>在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins UI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt;  下拉框 在 jelly 文件添加如下标签：
+&amp;lt;f:entry field=&amp;quot;method&amp;quot; title=&amp;quot;${%Method}&amp;quot;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt;  在对应的后端类的 DescriptorImpl 中添加如下方法：
+public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
+校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
+&amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt;  public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins X</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
+      <description>添加 Gitee 为 Git 服务器
+jx create git server gitea http://localhost:10080
+DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。
+因此，我们需要的 Docker 版本为 v17.06。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 主题插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
+ 从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 帮助信息</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</guid>
+      <description>正如大家看到的，在 Jenkins 的页面中，有很多地方能看到帮助信息。
+只要在某个页面文件（jelly）的同级目录下添加 help.html 后，就能在页面上看到关于该选项的帮助按钮。
+如果给某个字段添加帮助信息的话，也是类似的做法。例如：要对字段 password 添加帮助信息，就添加文件 help-password.html 即可。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件开发</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
+      <description>环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+ 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
+mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
+参考 Extend Jenkins</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件托管</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</guid>
+      <description>创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
+提交请求 详细阅读托管要求
+在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
+托管 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
+你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
+发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform
+跳过测试 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
+执行发布准备而且无需输入参数 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare -B</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件扩展点</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</guid>
+      <description> 接口 接口 hudson.ExtensionPoint 用于自动生成文档
+注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。
+Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);  </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</guid>
+      <description>运行 在 war 目录下运行：
+mvn hpi:run
+跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
+mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
+指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
+mvn hpi:run -Djenkins.install.runSetupWizard=true
+指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
+参考 maven-hpi-plugin</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 标签</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
+      <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 流水线插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
+      <description> 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
+安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
+  结构  /codes/jenkinsfile/simple.groovy   pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 简体中文插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
+      <description>Jenkins 的汉化（简体中文）需要安装中文插件。
+具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
+这里有一个视频可以供各位参考。
+  </description>
+    </item>
+    
+    <item>
+      <title>Jira</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</guid>
+      <description>Jira 插件 是 Jira 和 Jenkins 集成的一个插件。在系统配置中，添加 Jira 的配置后，如果在 git 提交日志中包含了 Jira ID 的话，就可以在构建的变更记录中直接点击进入到 Jira 对应到页面。</description>
+    </item>
+    
+    <item>
+      <title>K8S 证书</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/cert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/cert/</guid>
+      <description>根证书公钥(ca.pem)与私钥(ca-key.pem)
+API Server 公钥和私钥
+集群管理员公钥和私钥
+从节点公钥和私钥
+根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;quot;/CN=kube-ca&amp;quot;  API Server 证书 创建 openssl.cnf
+[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.</description>
+    </item>
+    
+    <item>
+      <title>Kubectl</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
+      <description>查看集群信息 kubectl cluster-info
+下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+切换上下文 kubectl config use-context dev
+查看上下文 kubectl config current-context
+导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f
+Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kubectl delete pod
+节点 查看节点列表 kubectl get node
+查看节点详情 kubectl get node -o wide
+显示标签 kubectl get node --show-labels=true
+添加标签 kubectl label node nodeName jenkinsAgent=maven</description>
+    </item>
+    
+    <item>
+      <title>Linux Service</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
+    </item>
+    
+    <item>
+      <title>MPlayer</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</guid>
+      <description>音频 只播放音频 mplayer -vo sample.mp4</description>
+    </item>
+    
+    <item>
+      <title>Mac 快捷键</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/mac/</guid>
+      <description>按键符号 ⌘(command)
+⌥(option)
+⇧(shift)
+⇪(caps lock)
+⌃(control)
+↩(return)
+⌅(enter)
+快捷键 删除文件 command + delete
+浏览器 关闭选项卡 command + w
+前后切换选项卡 command + &amp;lt;-
+指定顺序切换选项卡 command + 1
+关闭浏览器 command + q
+截图  截取全屏并保存文件 shift + command + 3
+ 截取部分并保存文件 shift + command + 4
+ 截取全屏并保存粘贴板 shift + control + command + 3
+ 截取部分并保存粘贴板 shift + control + command + 4
+  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven/</guid>
+      <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
+跳过测试 mvn package -DskipTests=true
+mvn package -U 强制更新快照版本的依赖
+离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：
+mvn clean package --offline
+部署 mvn deploy
+多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树
+mvn dependency:resolve
+mvn dependency:analyze 依赖分析</description>
+    </item>
+    
+    <item>
+      <title>Maven Repository</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-repository/</guid>
+      <description>Maven 仓库（Repository）大致可以分为私有、公有两类。我们暂且认为企业内部的就是私有的，但是，公有的仓库也会有很多（除 Maven 官方的中央仓库以外）。
+当我们的 Maven 项目发布到特定仓库以后，可以在需要依赖的 pom.xml 文件中添加明确的仓库地址，这样就可以避免在构建构成中因为找不到而报错了。下面给出一个参考配置：
+&amp;lt;project&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;repo.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;http://repo.jenkins-ci.org/public/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;nexus-oss-snapshots&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots/&amp;lt;/url&amp;gt; &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt; &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/releases&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;/project&amp;gt;  注意 central 这个 id 是 Maven 官方中央仓库的默认值，如果你设置的仓库使用了该值的话就会覆盖中央仓库。</description>
+    </item>
+    
+    <item>
+      <title>Minikube</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
+      <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
+然后，添加可执行权限并移动到执行目录下：
+chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
+下载ISO wget https://storage.googleapis.com/minikube/iso/minikube-v0.26.0.iso</description>
+    </item>
+    
+    <item>
+      <title>Monitor</title>
+      <link>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/banana-pi/monitor/</guid>
+      <description>查看温度 安装软件 apt-get install sensord
+然后执行命令 sensors</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://linuxsuren.github.io/blog/other/server/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/server/nginx/</guid>
+      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
+    </item>
+    
+    <item>
+      <title>OpenJ9</title>
+      <link>https://linuxsuren.github.io/blog/language/java/openj9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/openj9/</guid>
+      <description>参考 openj9-docs openj9-ci</description>
+    </item>
+    
+    <item>
+      <title>Packing</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/ubuntu/packing/</guid>
+      <description>http://packaging.ubuntu.com/html/getting-set-up.html</description>
+    </item>
+    
+    <item>
+      <title>Postman</title>
+      <link>https://linuxsuren.github.io/blog/other/test/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/postman/</guid>
+      <description>利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。</description>
+    </item>
+    
+    <item>
+      <title>SSDH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/sshd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/sshd/</guid>
+      <description>禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config
+PermitRootLogin no
+然后重启服务 service ssh restart</description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/ssh/</guid>
+      <description>配置文件 vim /etc/ssh/sshd_config
+允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
+无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
+ 在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
+  证书登陆 ssh -i test.pem root@localhost
+服务重启 service ssh restart</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
+      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+文件路径 从文件路径中提取文件名和目录
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
+    </item>
+    
+    <item>
+      <title>Sonarqube</title>
+      <link>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/codequality/sonarqube/</guid>
+      <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
+    </item>
+    
+    <item>
+      <title>SpaceVim</title>
+      <link>https://linuxsuren.github.io/blog/language/java/spacevim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/spacevim/</guid>
+      <description>Reference Use Vim as a Java IDE</description>
+    </item>
+    
+    <item>
+      <title>Sync</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go-sync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go-sync/</guid>
+      <description>package main import ( &amp;quot;sync&amp;quot; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() }  </description>
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
+      <description> 集合 判断 Map 中是否存在指定 Key
+package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } }  </description>
+    </item>
+    
+    <item>
+      <title>TR</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/tr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/tr/</guid>
+      <description>cat .m2/settings.xml | tr -s [:blank:] 清除空白字符
+echo abc | tr a-z A-Z 大小写转换</description>
+    </item>
+    
+    <item>
+      <title>Team Building</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/team-building/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/team-building/</guid>
+      <description>做很多事情，都是需要一个团队的。我主要介绍的是如何才能打造一个有自己文化的越来越好的软件研发团队。这里涉及到了三个问题：为什么需要打造、什么是团队文化、好团队的标准。
+打造 首先，我不认为花钱把一堆人招聘过来，然后每天拼命地加班干活，就算是一个团队了。尤其对于新组建，或者是队伍中新加入的成员比较多的情况，“团队建设”就是一件非常重要的事情。对，我认为团队是“建设”起来的，而不是“买”来，更加不是通过“伞兵空降”来的。而建设这个词，大家应该多少有点认识吧，绝非是一朝一夕来的——即使是3D打印技术也是要一个一个部件来打印的。
+一把好剑，是打铁匠一锤一锤地用心打造出来的。这样的剑，锋利无比；这样的剑，能在关键时刻发挥应有的作用；这样的剑，是受众人的肯定的。一个好的团队，同样是需要Leader带领每个成员一同打造的。这样的团队中，每个成员之间都不仅仅是工作和任务的关系；这样的团队中，每个成员都是有其重要的位置；这样的团队中，每个成员都尽可能快乐地得到成长；这样的团队中，每个成员都是在积极主动地向前奔跑；这样的团队中，自己的文化不会丢失。
+每个年轻的团队，都会有很多值得改进和提升的地方。而什么的团队，是我这里说的“年轻”的团队呢？某个公司成立十年，而某个项目组又是从一开始就存在的；这样的团队就一定不是年轻的团队吗？我这里的“年轻”更加强调的是——幼稚、没有形成自己的做事风格。每个团队，都会有人员的变动；如果变动的过于频繁，也是“年轻”的一个体现。这里简单地引入一个思考：如果一个新加入的成员，效率或者态度让人有点不满意，那我们该怎么办，直接抛弃呢还是任其发展呢？
+文化 什么是文化呢？这个问题很难回答，只能是谈一点自己的认识。有自己文化的团队，并不需要依靠公司制度、强制加班等等生硬的东西来改造成员。文化应该是能够在团队中每个人的一言一行中传播的，是熏陶出来，不是加工好的。
+强迫大家每天加班到很晚是一个件非常自私的事情（排除公司制度要求的情况），这完全是Leader害怕完成不了项目而出的下下策。在绝大多数情况下，必须通过加班才能搞定的事情，其实不加班也能搞定。那么，你有没有反复地思考这个问题呢？怎么样才能不加班就把“活儿”干完呢？
+如何才能做到团队成员之间沟通交流都比较Open，想要说、敢说、会说意见或者建议。这是Leader每天都应该思考的问题。没有了平等、积极的沟通，团队就是一潭死水。
+标准 每时每刻，每人都应该在积极主动地思考：如何才能进一步提高工作效率（我这里的效率，当然是建立在高质量的基础上）。这是我所认为的好团队，这样的团队不是只会搞定上面分配的任务，而会有团队内部的沉淀，是有自己文化的团队。
+对团队成员整体研发素质的提高，减少木桶效应带来的问题。是Leader或者团队中的技术达人所值得思考的问题。自己能够在不断地成长，很简单；能带领整个团队一起成长才是件有挑战的事情。
+让大家的基础技术能力、意识保持在一个比较均衡的状态。
+利用一个工具来来做到能对团队成员的技能分布有个清晰的认识。人类之所以伟大的一个特点，就在于学会了使用工具。工欲善其事必先利其器，没有一整套高效率的工具的支撑，那么你的团队还处在并将长期处在原始阶段。
+测试人员 测试人员不能仅仅停留在手工测试，看功能能不能完成、有没有页面上的错误提示等。
+程序或者系统、工具，开发完成后，都是要实施的，仅仅把功能测试完成并不算结束。在实施和运维的阶段，也可能会出现很多问题。所以，我的想法是要让测试人员提前介入到这些阶段。
+测试还要对系统的部署过程进行测试。例如：要学会安装程序、数据库使用、服务的启动和停止等。
+系统运行起来后，最好要查看日志文件中是否有不应该出现的异常、报错，浏览器控制台是否有错误信息，是否有无法加载的js、css、image等资源。
+开发人员 很多开发人员，只知道Coding，对Web应用部署、Jenkins持续构建工具、Linux操作系统等都不了解。这是非常不应该的——如果连自己写的系统或者程序都不会部署，怎么能说的过去呢。
+资产沉淀 对一个团队来说，一定会有很多资产需要持续地积累、沉淀，包括：制度、开发规范、项目文档、技术资料等等。那么用什么形式来维护比较好呢，word是我不推荐的一种方式。
+我维护过的一些帮助文档，有一些是非常大的，可能会有几十甚至上百页，每次修改都是很痛苦的。除了它的笨重以外，还有很多致命的缺点：无法多人协作、难以进行版本维护、难以检索。经验证明，难用的文档就约等于没有。wiki这种web的形式就是非常好的，还可以生成多种格式的文档。
+分享 在团队中，每个人的具体职责不同，所专长的领域也不同。我们应该逐渐建立起来成员之间热衷于分享的精神。
+对于开发人员来说，每当解决一个较大模块的问题时，就可以给其他人做个分享。第一，可以检验自己对这个问题理解的是否够清楚明白；第二，其他人再次遇到这类问题时，就可以减少不必要的重复劳动，当然会提高效率。
+更多有关分享的介绍，请参考《Java开发成长之路第七年》。
+Leader 当前，很多人称带团队的人之为“领导”，亦或者是“老大”。前者有“官僚”之嫌，后则有“专政”之嫌，最后很容易给人这样一种感觉——我们这些底层coding的人就是个“干活儿”的。
+项目是大家的，每个人都应该有主人翁意识。这样的话，我经常听到，但都是在“打江山”尽义务的时候；到享受权利的时候就体现不到了。如果是“一家人”，就不应该有隐瞒、有秘密，不应该有“小九九”。如果你正处于“领导”的位置上，而又做不到我刚说的那一点的话，就别说什么“一家人”。
+如果我是项目的负责人（一家三口人的话，每个人都应该是这个家的负责人，荣辱与共），项目就是我的孩子，无条件地想要做对“孩子”好的事情。
+上面都是废话，我之所以用“Leader”而不是“领导”，只是为了说明一点——团队需要的是带头人，而不是专政的“君主”。一切都应当是民主的，而身为“带头人”是应该时时刻刻考虑“家里人”的健康成长。为了团队中的每位争取奖金，考虑每个人是否都有了应有的成长。
+知识体系 只有成体系了，才能发挥更大的作用。
+只有成体系了，才能发现自己的不足和漏洞。
+我建议，把自己所涉及过的内容，都归纳到一棵树上。这棵树，要有树枝树叶，要有树根。
+要是有了这棵树以后，就可以有计划地来丰富自己的知识体系了。</description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
+      <description> Action 1.条件语句 2.迭代 3.封装 4.引用
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }}  迭代 {{ range . }} {{ end }}  {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }}  数组 {{ index &amp;quot;abc&amp;quot; 0 }}  </description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typora</title>
+      <link>https://linuxsuren.github.io/blog/other/document/typora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/document/typora/</guid>
+      <description>Typora 支持用 Markdown 的方式来“画”流程图。
+流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  参考 https://support.</description>
+    </item>
+    
+    <item>
+      <title>U Creator</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/u-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/u-creator/</guid>
+      <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝  diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3.  brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1  </description>
+    </item>
+    
+    <item>
+      <title>VIM Buffer</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</guid>
+      <description>:ls 或 :buffers 列出所有的缓冲区
+:b 1 切换到指定编号的缓冲区
+:sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口</description>
+    </item>
+    
+    <item>
+      <title>VIM Command</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</guid>
+      <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符
+dd 删除当前行 D 删除当前字符后的文本
+dw 删除当前单词
+字符替换 R 开启字符串替换模式，知道按下 ESC
+r 替换当前字符
+转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。
+通过命令 ~ 可以切换所选或光标所在的字符大小写
+g~~ 切换当前行的大小写
+guu 切换当前行为小写
+gUU 切换当前行为大写
+撤销 u 撤销一次更改 ctrl+r 恢复一次撤销
+剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板
+yy 拷贝当前行
+p 粘贴
+格式化 :left 居左对齐 :right 居右对齐
+数字 ctrl+a 数字+1
+ctrl+x 数字-1
+其他 ctrl+g 显示当前文件路径
+编辑模式 Reference Vim documentation: help Vim documentation: change</description>
+    </item>
+    
+    <item>
+      <title>VIM GoLang</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-go/</guid>
+      <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct
+Action :GoRun :GoBuild :GoTest :GoDef :GoRename  Reference vim-go vim-go-tutorial</description>
+    </item>
+    
+    <item>
+      <title>VIM Network</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</guid>
+      <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/
+Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
+    </item>
+    
+    <item>
+      <title>VIM Replace</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</guid>
+      <description>简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]
+全局文本替换 :[range]g[lobal]/{pattern}/[cmd]
+:[range]g[lobal]!/{pattern}/[cmd]
+示例：
+将找到的第一个字符串abc替换为def s/abc/def
+将找到的所有字符串abc替换为def s/abc/def/g
+将包含有字符串abc的行删除 g/abc/ del
+将行首增加序列号 let i = 1 | g/./s/^/\=i/ | let i += 1
+将所有包含image331的行中，替换331为从331开始递增的数字 let i = 331 | g/image331/s/331/\=i/ | let i += 1
+从1358行开始进行替换 let i = 792 | 1358,$g/resources\/image/s/\d\d\d/\=i/ | let i += 2
+将所有已开头的行在结尾添加 g/^\s*&amp;lt;para&amp;gt;/ s/$/&amp;lt;\/para&amp;gt;
+把以开头，若干个空白结尾的行删除 g/^\s*&amp;lt;para&amp;gt;\s*&amp;lt;\/para&amp;gt;$/ del
+把以空白字符开头，并且第一个字符不是&amp;lt;的行首添加 g!/^\s*&amp;lt;/ s/^/&amp;lt;para&amp;gt;
+把中间还有尖括号(&amp;lt;&amp;gt;)的行删除 g/&amp;lt;para&amp;gt;.*[&amp;lt;&amp;gt;].*&amp;lt;\/para&amp;gt;/ del
+找到没有以结尾的行 s/para&amp;gt;.*[^(&amp;lt;\/para&amp;gt;)]$</description>
+    </item>
+    
+    <item>
+      <title>VIM bundle</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-bundle/</guid>
+      <description>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+Reference Vundle</description>
+    </item>
+    
+    <item>
+      <title>VIM tab</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</guid>
+      <description>:tabnew a.log 新建选项卡
+:tabNext 切换到下一个选项卡
+:tabprevious 切换到上一个选项卡
+:tabclose 关闭选项卡</description>
+    </item>
+    
+    <item>
+      <title>Vendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/vendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/vendor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</guid>
+      <description> 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
+:set paste
+解除 paste 模式的命令如下：
+:set nopaste
+样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  </description>
+    </item>
+    
+    <item>
+      <title>Vim-Fugitive</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/</guid>
+      <description>Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle
+Usage :Gstatus 查看变更状态，等同于 git status
+:Gcommit % 提交代码，等同于 git commit
+:Gpush 推送代码
+:Gpush -u origin test 推送新的分支
+:Gpull 拉取代码
+Reference vim-fugitive vim-scripts</description>
+    </item>
+    
+    <item>
+      <title>Why OpenSource</title>
+      <link>https://linuxsuren.github.io/opensource/why-opensource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/opensource/why-opensource/</guid>
+      <description>为什么要参与开源事业？这是一个非常好的问题。下面，我会对此发表几个观点。
+先说，为什么会考虑参与开源。在工作了几个年头之后，我发现了一个问题——做了很多的项目，或大或小，我的角色只是个 Coding 的劳动力。 也许有人对此有别的看法，但是，对于走进 IT 行业的头三年了去我差不多就是这么理解的。学习几个框架，写段后端逻辑，改改页面上的按钮、菜单。 由于缺少经验，没有自己的想法，提不出好的建议。有些逻辑能力强的人，会感觉自己能够精通几个框架。但是，这些所谓的框架更新换代太快， 我们又不会总是那么年轻，总是有那么多的时间来无尽地学习。
+然后，某个机会，开始对开源慢慢地有些了解。其实，这是非常地有意思的一件事情。我想，从 Java 开始走向编程之路的程序员们，应该不可能 没有听说过、用过开源的项目。但是，国内这些程序员里，却只有少部分的人尝试过去参与开源。
+一开始，我也是抱着试试的态度的。当时，感觉做开源的人应该都很厉害吧，比如当时很流行的 Spring 框架。毕竟，用的都不是很熟悉，怎么可能 去参与开源开发呢。对，这就是很大的一个误区——参与开源项目，不一定只能是参与代码的编写。按照我目前的认识，代码编写，真的只是开源事业 中很小的一部分。
+上面提到了一些企业开发中的痛点，对公司的项目没有足够的参与感。我这里问读者一个问题，不管你现在有几年的工作经验：对于你们公司的项目， 你有多少的话语权呢？项目的功能模块，要做哪些、怎么做，设计与技术架构都是由哪些人来决定的呢？在很长的一段时间内，这些都是由公司的 项目经历来确定的，我只是努力在 Deadline 之前交付。但是，在好的开源社区里，完全不是这么来的。
+喊了多少年的单元测试，不再是说说而已，这是必须的，甚至比业务代码更加重要。
+我感觉项目中，应该加上一个很棒的特性。先在邮件组里发一封邮件，给出原型，大家讨论一下。如果切实可行的话，可能几周、几月内这个功能特性 就上线了。也许，我的这个提议会给很多人带来一些遍历；也许，自己小小的虚荣心会得到满足。总之，好的开源社区一定民主，而不是专制的。
+公司里的那个项目，我才做了一个月就被砍掉了。完全不知道为什么要做那个，也没有学习到任何的东西。在这里，要看你的眼光，选准一个好的社区， 你可以在这个社区里贡献五年、十年，甚至是整个事业周期。也许，你会做这个项目里的每行代码都很熟悉；当你再次说出精通时不再心虚。
+参与开源的好处。
+我在公司里干活，会有人支付我薪水。做开源，甚至都没有人来一步步地告诉我怎么做，完全蒙。更要命的是，没有任何的经济回报。
+是的，参与开源，并不会有人来支付你工资，更没有奖金。我给你一个很虚，也很实在的理由，那就是开源会让你更容易知道归属感，让你不再感觉 自己只是个廉价劳动力。像 Jenkins、Kubernetes 这样的项目，除非你自己决定不再贡献，没有人可以阻止你参与。你也能很容易地看到，有很多 人在使用你参与开发的项目，包括你自己。
+如果你喜欢技术，那么，当你参与某个项目三五年后，你会精通这个项目周边的整个技术栈。你会亲自看着这个项目的兴衰。之后，你还会发现除了 技术还有很多很重要的东西。因为，当你真正地开始关心这个项目后，你会想各种办法来确保她可以健康地发展。你会发现，当初嗤之以鼻的文档 真的太重要了。你会发现，沟通能力也是非常基础的要求。你会发现，你愿意借助各种机会来宣传你的项目。</description>
+    </item>
+    
+    <item>
+      <title>ctrlp</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-ctrlp/</guid>
+      <description>Reference ctrlp</description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+POST curl -d &amp;quot;param&amp;quot; http://baidu.com
+curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
+管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>dep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/dep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/dep/</guid>
+      <description>dep ensure -update</description>
+    </item>
+    
+    <item>
+      <title>echo</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/echo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/echo/</guid>
+      <description>参数 -n 不换行</description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</guid>
+      <description>静态水印 ffmpeg -y -i movieFile -vf &amp;quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]&amp;quot; movieWatermark.mp4
+ffmpeg -i jenkins.mov -i watermark.png -filter_complex &amp;quot;overlay=10:10&amp;quot; jenkins.mp4
+动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile
+http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/
+合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：
+ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
+    </item>
+    
+    <item>
+      <title>glide</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/glide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/glide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>godep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/godep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/godep/</guid>
+      <description>godep update foo/bar</description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
+      <description>Environment 环境变量 GOROOT 是 Golang 的安装根目录
+环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
+ src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
+设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title>govendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/govendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/govendor/</guid>
+      <description>govendor init
+govendor list</description>
+    </item>
+    
+    <item>
+      <title>grep</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/grep/</guid>
+      <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
+    </item>
+    
+    <item>
+      <title>lsof</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/lsof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/lsof/</guid>
+      <description>查看端口占用 lsof -nP -i4TCP:9091</description>
+    </item>
+    
+    <item>
+      <title>maven-gpg-plugin</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</guid>
+      <description>[INFO] &amp;mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator &amp;mdash; gpg: directory &amp;lsquo;/home/jenkins/.gnupg&amp;rsquo; created gpg: keybox &amp;lsquo;/home/jenkins/.gnupg/pubring.kbx&amp;rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key
+gpg: signing failed: Inappropriate ioctl for device
+https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51</description>
+    </item>
+    
+    <item>
+      <title>open</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/open/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/open/</guid>
+      <description>open http://surenpi.com 打开浏览器</description>
+    </item>
+    
+    <item>
+      <title>pbcopy</title>
+      <link>https://linuxsuren.github.io/blog/os/mac/pbcopy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/mac/pbcopy/</guid>
+      <description>cat test.log | pbcopy 通过命令行拷贝
+pbpaste 通过命令粘贴</description>
+    </item>
+    
+    <item>
+      <title>sed</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/sed/</guid>
+      <description>cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符</description>
+    </item>
+    
+    <item>
+      <title>split</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/split/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/split/</guid>
+      <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
+合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
+    </item>
+    
+    <item>
+      <title>telnet</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
+      <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
+    </item>
+    
+    <item>
+      <title>user</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/user/</guid>
+      <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
+useradd user-name --home /home/user-name --create-home
+su user-name
+userdel user-name</description>
+    </item>
+    
+    <item>
+      <title>vim-airline</title>
+      <link>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-airline/</guid>
+      <description>Reference vim-airline</description>
+    </item>
+    
+    <item>
+      <title>wget</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/wget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/wget/</guid>
+      <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
+为了方便使用，我们可以为 wget 添加一个别名，如下所示：
+alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
+递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载
+wget各种选项分类列表
+ 启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
+ 记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
+    </item>
+    
+    <item>
+      <title>xargs</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/xargs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/xargs/</guid>
+      <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像</description>
+    </item>
+    
+    <item>
+      <title>xclip</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/xclip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/xclip/</guid>
+      <description>Install sudo apt-get install xclip
+Example ifconfig | xclip -sel clip</description>
+    </item>
+    
+    <item>
+      <title>代理</title>
+      <link>https://linuxsuren.github.io/blog/other/network/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/network/proxy/</guid>
+      <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
+CentOS yum install shadowsocks
+pip install shadowsocks
+sudo pip install shadowsocks --upgrade
+使用 sudo sslocal -c shadowsocks.json -d start
+polipo 安装 sudo apt-get install polipo
+brew install polip
+安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy  参考 如何给 Git 配置代理</description>
+    </item>
+    
+    <item>
+      <title>参数化流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
+      <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
+类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。
+点击这里查看更多的参数类型
+位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：
+ codes/jenkinsfile/parameter.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  执行历史 每次执行时的参数值，都可以在执行历史中看到。</description>
+    </item>
+    
+    <item>
+      <title>发布Maven工程到中央仓库</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
+      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
+sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
+签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
+gpg --gen-key 生成密钥，成功后，会有类似如下的输出。
+gpg: key 69EC4448C6CE32EB marked as ultimately trusted
+gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
+69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。
+修改settings.xml 增加账户信息：
+&amp;lt;server&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;username&amp;gt;name&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;passwd&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt;  设置gpg的profile：
+&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.executable&amp;gt;gpg2&amp;lt;/gpg.executable&amp;gt; &amp;lt;gpg.passphrase&amp;gt;pass&amp;lt;/gpg.passphrase&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt;  需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：
+69EC4448C6CE32EB
+修改pom文件
+&amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt;  上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
+&amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+    <item>
+      <title>命令提示符</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
+      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1=&#39;[/u@/h /W/]/$ &#39;
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$</description>
+    </item>
+    
+    <item>
+      <title>在 CentOS 安装 Docker</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
+      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
+    </item>
+    
+    <item>
+      <title>安装</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/install/</guid>
+      <description>CentOS yum install go -y</description>
+    </item>
+    
+    <item>
+      <title>安装 Kubernetes</title>
+      <link>https://linuxsuren.github.io/blog/devops/k8s/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/k8s/install/</guid>
+      <description>启用 Docker 服务 systemctl enable docker.service
+安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
+安装客户端
+cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg EOF setenforce 0 yum install -y kubelet kubeadm kubectl systemctl enable kubelet &amp;amp;&amp;amp; systemctl start kubelet  设置 kubelet sed -i &amp;quot;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&amp;quot; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+重启 kubelet systemctl daemon-reload &amp;amp;&amp;amp; systemctl restart kubelet
+禁用Swap swapoff -a
+安装 master kubeadm init
+export LC_ALL=en_US.utf-8 export LANG=en_US.utf-8
+docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/etcd-amd64:3.0.17 docker pull registry.</description>
+    </item>
+    
+    <item>
+      <title>安装 Python</title>
+      <link>https://linuxsuren.github.io/blog/language/python/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/python/install/</guid>
+      <description>yum install python
+yum install python-pip</description>
+    </item>
+    
+    <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>流水线插件从 2.5 版本开始支持申明式流水线。
+申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
+ codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+    </item>
+    
+    <item>
+      <title>脚本式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
+      <description>触发器  codes/jenkinsfile/script-trigger.groovy   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
+ codes/jenkinsfile/try-catch.groovy   node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件  循环  codes/jenkinsfile/loop.</description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
+      <description>代理 给 Docker 设置代理
+创建目录 mkdir /etc/systemd/system/docker.service.d
+编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
+&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
+DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
+User 让普通用户可以执行 docker
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
     </item>
     
   </channel>

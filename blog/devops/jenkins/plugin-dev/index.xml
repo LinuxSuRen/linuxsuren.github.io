@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins 插件开发 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/</link>
+    <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>扩展 Jenkins 的构建（Builder）任务</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</guid>
+      <description> 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。
+流水线 </description>
+    </item>
+    
+    <item>
+      <title>Action</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
+      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
+接口 你首先需要实现接口 hudson.model.Action 的三个方法:
+ getIconFileName getDisplayName getUrlName  约定 </description>
+    </item>
+    
+    <item>
+      <title>Annotation</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</guid>
+      <description>CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)
+通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。
+Terminator Usage: @Terminator(after=TermMilestone.STARTED)
+上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。
+Restricted Usage: @Restricted(NoExternalUse.class)
+上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</description>
+    </item>
+    
+    <item>
+      <title>CLI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</guid>
+      <description>扩展点 hudson.cli.CLICommand
+Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
+    </item>
+    
+    <item>
+      <title>Jenkins JUnit</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</guid>
+      <description>断言 @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); }  数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
+例如：该注解加载类 org.test.TestAgent 的方法 test 上的话，就会去加载目录 src/test/resources/org/test/TestAgent/test 中的配置文件。另外，它还有一个 value 参数可以替代使用方法名称。
+框架 Jenkins 的测试框架为 acceptance-test-harness。
+在 pom.xml 中可以修改框架的版本，如下所示：
+&amp;lt;properties&amp;gt;&amp;lt;jenkins-test-harness.version&amp;gt;2.28&amp;lt;/jenkins-test-harness.version&amp;gt;&amp;lt;/properties&amp;gt;  通过下面的方式修改 Jenkins 运行测试的版本：
+&amp;lt;properties&amp;gt;&amp;lt;jenkins.version&amp;gt;2.150.1&amp;lt;/jenkins.version&amp;gt;&amp;lt;/properties&amp;gt;  环境变量 如果需要修改运行测试时的 Jenkins 版本，可以在启动 JVM 时指定参数 -Djth.jenkins-war.path=/tmp/jenkins.war</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Permission</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Plugin Dev Credentails</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</guid>
+      <description>IdCredentials 规定了具有 ID 的凭据（Credentials）
+CredentialsProvider 凭据提供接口
+CredentialsStore 凭据存储接口</description>
+    </item>
+    
+    <item>
+      <title>Jenkins UI</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt;  下拉框 在 jelly 文件添加如下标签：
+&amp;lt;f:entry field=&amp;quot;method&amp;quot; title=&amp;quot;${%Method}&amp;quot;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt;  在对应的后端类的 DescriptorImpl 中添加如下方法：
+public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
+校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
+&amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt;  public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 帮助信息</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</guid>
+      <description>正如大家看到的，在 Jenkins 的页面中，有很多地方能看到帮助信息。
+只要在某个页面文件（jelly）的同级目录下添加 help.html 后，就能在页面上看到关于该选项的帮助按钮。
+如果给某个字段添加帮助信息的话，也是类似的做法。例如：要对字段 password 添加帮助信息，就添加文件 help-password.html 即可。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件开发</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
+      <description>环境准备 你需要安装好Java和Maven。
+创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
+ 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
+运行 在工程根目录下执行 mvn hpi:run
+访问 http://localhost:8080/jenkins/
+Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
+单元测试 Jenkins 官方提供了单元测试相关的内容。
+发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
+mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
+参考 Extend Jenkins</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件扩展点</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</guid>
+      <description> 接口 接口 hudson.ExtensionPoint 用于自动生成文档
+注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。
+Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);  </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</guid>
+      <description>运行 在 war 目录下运行：
+mvn hpi:run
+跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
+mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
+指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
+mvn hpi:run -Djenkins.install.runSetupWizard=true
+指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
+参考 maven-hpi-plugin</description>
+    </item>
+    
+  </channel>
+</rss>

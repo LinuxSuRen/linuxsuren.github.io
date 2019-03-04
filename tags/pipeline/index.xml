@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pipeline on SuRenPi</title>
+    <link>https://linuxsuren.github.io/tags/pipeline/</link>
+    <description>Recent content in Pipeline on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/tags/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>脚本式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
+      <description>触发器  codes/jenkinsfile/script-trigger.groovy   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &#39;JobRestrictionProperty&#39;], parameters([run(description: &#39;&#39;, filter: &#39;ALL&#39;, name: &#39;Name&#39;, projectName: &#39;Project&#39;)]), pipelineTriggers([])] )  异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
+ codes/jenkinsfile/try-catch.groovy   node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件  循环  codes/jenkinsfile/loop.</description>
+    </item>
+    
+  </channel>
+</rss>

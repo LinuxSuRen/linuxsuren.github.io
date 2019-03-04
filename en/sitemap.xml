@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/</loc>
+    <lastmod>2019-01-03T16:24:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/en/blog/</loc>
+    <lastmod>2019-01-03T16:24:48+08:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/en/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/en/</loc>
+    <lastmod>2019-01-03T16:24:48+08:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/en/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/tags/"
+                />
+  </url>
+  
+</urlset>

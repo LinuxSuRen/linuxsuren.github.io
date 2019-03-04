@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/other/test/</link>
+    <description>Recent content in 测试 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Jan 2019 19:22:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/other/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium</title>
+      <link>https://linuxsuren.github.io/blog/other/test/selenium/</link>
+      <pubDate>Sat, 19 Jan 2019 19:22:23 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/selenium/</guid>
+      <description>远程模式 在 下载页面中，找到 Selenium Standalone Server 并下砸，然后执行如下的命令：
+java -jar selenium-server-standalone-{VERSION}.jar
+然后就可以访问 http://localhost:4444/wd/hub</description>
+    </item>
+    
+    <item>
+      <title>Ginkgo</title>
+      <link>https://linuxsuren.github.io/blog/other/test/ginkgo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/ginkgo/</guid>
+      <description>Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。</description>
+    </item>
+    
+    <item>
+      <title>Postman</title>
+      <link>https://linuxsuren.github.io/blog/other/test/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/test/postman/</guid>
+      <description>利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。</description>
+    </item>
+    
+  </channel>
+</rss>

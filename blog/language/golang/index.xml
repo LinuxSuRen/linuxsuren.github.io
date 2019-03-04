@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/language/golang/</link>
+    <description>Recent content in Golang on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 31 Jan 2019 15:18:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/language/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Init</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/init/</link>
+      <pubDate>Thu, 31 Jan 2019 15:18:58 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/init/</guid>
+      <description>init 函数定义在包（package）中，并有如下的用处：
+ 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
+ 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数   包初始化只会执行一次，即使会被导入多次。
+  属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。
+init 函数可以定义多次。
+只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：
+import _ &amp;quot;image/png&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>GoMock</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/gmock/</link>
+      <pubDate>Fri, 04 Jan 2019 16:17:15 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/gmock/</guid>
+      <description>GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。
+安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。
+go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen  编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
+测试用例  codes/golang/gmock/foo_test.go   package main import ( &amp;#34;testing&amp;#34; &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>GoRoutines</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/goroutines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/goroutines/</guid>
+      <description> 简单例子   </description>
+    </item>
+    
+    <item>
+      <title>Golang with JSON</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/json/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
+      <description>  /codes/golang/json/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  </description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/http/</guid>
+      <description>codes/golang/http/main.go   package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; ) func main() { url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) }  原文件  创建 Response 结构 import ( &amp;quot;net/http&amp;quot; &amp;quot;io/ioutil&amp;quot; ) http.</description>
+    </item>
+    
+    <item>
+      <title>Sync</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go-sync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go-sync/</guid>
+      <description>package main import ( &amp;quot;sync&amp;quot; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() }  </description>
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
+      <description> 集合 判断 Map 中是否存在指定 Key
+package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } }  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
+      <description> Action 1.条件语句 2.迭代 3.封装 4.引用
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }}  迭代 {{ range . }} {{ end }}  {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }}  数组 {{ index &amp;quot;abc&amp;quot; 0 }}  </description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/vendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/vendor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/dep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/dep/</guid>
+      <description>dep ensure -update</description>
+    </item>
+    
+    <item>
+      <title>glide</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/glide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/glide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>godep</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/godep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/godep/</guid>
+      <description>godep update foo/bar</description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
+      <description>Environment 环境变量 GOROOT 是 Golang 的安装根目录
+环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
+ src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
+设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+    </item>
+    
+    <item>
+      <title>govendor</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/govendor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/govendor/</guid>
+      <description>govendor init
+govendor list</description>
+    </item>
+    
+    <item>
+      <title>安装</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/install/</guid>
+      <description>CentOS yum install go -y</description>
+    </item>
+    
+  </channel>
+</rss>

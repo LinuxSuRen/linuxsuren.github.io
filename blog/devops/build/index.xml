@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>构建 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/devops/build/</link>
+    <description>Recent content in 构建 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/devops/build/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JVM Arguments</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/jvm/</guid>
+      <description>有些情况下，我们需要修改启动 Maven 时的 JVM 参数。
+MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-Xmx1024m&amp;quot; clean</description>
+    </item>
+    
+    <item>
+      <title>Java Annotation Processing and Creating a Builder</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/java-annotation-processing-builder/</guid>
+      <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven/</guid>
+      <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
+跳过测试 mvn package -DskipTests=true
+mvn package -U 强制更新快照版本的依赖
+离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：
+mvn clean package --offline
+部署 mvn deploy
+多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树
+mvn dependency:resolve
+mvn dependency:analyze 依赖分析</description>
+    </item>
+    
+    <item>
+      <title>Maven Repository</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-repository/</guid>
+      <description>Maven 仓库（Repository）大致可以分为私有、公有两类。我们暂且认为企业内部的就是私有的，但是，公有的仓库也会有很多（除 Maven 官方的中央仓库以外）。
+当我们的 Maven 项目发布到特定仓库以后，可以在需要依赖的 pom.xml 文件中添加明确的仓库地址，这样就可以避免在构建构成中因为找不到而报错了。下面给出一个参考配置：
+&amp;lt;project&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;repo.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;http://repo.jenkins-ci.org/public/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;nexus-oss-snapshots&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots/&amp;lt;/url&amp;gt; &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt; &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/releases&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;/project&amp;gt;  注意 central 这个 id 是 Maven 官方中央仓库的默认值，如果你设置的仓库使用了该值的话就会覆盖中央仓库。</description>
+    </item>
+    
+    <item>
+      <title>maven-gpg-plugin</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-gpg-plugin/</guid>
+      <description>[INFO] &amp;mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator &amp;mdash; gpg: directory &amp;lsquo;/home/jenkins/.gnupg&amp;rsquo; created gpg: keybox &amp;lsquo;/home/jenkins/.gnupg/pubring.kbx&amp;rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key
+gpg: signing failed: Inappropriate ioctl for device
+https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51</description>
+    </item>
+    
+    <item>
+      <title>发布Maven工程到中央仓库</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
+      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
+sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
+签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
+gpg --gen-key 生成密钥，成功后，会有类似如下的输出。
+gpg: key 69EC4448C6CE32EB marked as ultimately trusted
+gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
+69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。
+修改settings.xml 增加账户信息：
+&amp;lt;server&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;username&amp;gt;name&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;passwd&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt;  设置gpg的profile：
+&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.executable&amp;gt;gpg2&amp;lt;/gpg.executable&amp;gt; &amp;lt;gpg.passphrase&amp;gt;pass&amp;lt;/gpg.passphrase&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt;  需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：
+69EC4448C6CE32EB
+修改pom文件
+&amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt;  上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
+&amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+  </channel>
+</rss>

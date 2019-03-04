@@ -1,0 +1,36 @@
+[
+    {
+        "uri": "https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/",
+        "title": "Core",
+        "tags": [],
+        "description": "API from the Jenkins Core",
+        "content": " You can access Jenkins by url, like below:\ncurl http://localhost:8080/job/jobName/api/json -u user:passwd\nHeader Way You can also put your user and token into http header:\ncurl http://localhost:8080/job/jobName/api/json --header \u0026quot;Authorization: Basicecho -n \u0026lsquo;user:passwd\u0026rsquo; | base64\u0026quot;\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/en/blog/",
+        "title": "Blogs",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/en/categories/",
+        "title": "Categories",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/en/",
+        "title": "SuRenPi",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/en/tags/",
+        "title": "Tags",
+        "tags": [],
+        "description": "",
+        "content": ""
+    }]

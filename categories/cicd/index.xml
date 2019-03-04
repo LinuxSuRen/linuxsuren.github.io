@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cicd on SuRenPi</title>
+    <link>https://linuxsuren.github.io/categories/cicd/</link>
+    <description>Recent content in Cicd on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/categories/cicd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
+部署 Jenkins 支持几种安装（启动）方式：
+  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
+这种方式，方便简单，但是需要有 Java 环境。
+Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
+Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
+如果希望看到具体内容请查看这里。
+KubeApps 上也可以找到 Jenkins
+版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
+ 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。
+端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins X</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

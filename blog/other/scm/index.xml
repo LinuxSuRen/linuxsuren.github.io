@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SCM on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/other/scm/</link>
+    <description>Recent content in SCM on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 29 Jan 2019 15:28:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/other/scm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git GC</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-gc/</link>
+      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-gc/</guid>
+      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。
+鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。
+一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：
+git config --global gc.auto 0
+本地分支 查看已经合并过的分支
+git branch --merged
+查看未合并过的分支
+git branch --no-merged
+远程分支 清理远程过期的分支引用
+git remote prune origin
+我们也可以在拉取远程分支信息的时候执行清理任务
+git fetch -p
+查看已经合并过的远程分支
+git branch -r --merged
+更多的分支操作</description>
+    </item>
+    
+    <item>
+      <title>Git Branch</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-branch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-branch/</guid>
+      <description>切换标签 git branch 列出本地分支 git checkout master 切换到本地 master 分支
+删除分支 git branch --delete abc 删除分支 abc
+git push origin --delete abc 删除远程分支
+git branch -v | grep gone | awk &#39;//{print $1}&#39; | xargs git branch -d 删除远程分支不存在的`
+git remote prune origin
+拉取分支 git checkout -b abc 基于当前分支创建新分支
+git checkout --track origin/abc 拉取远程分支</description>
+    </item>
+    
+    <item>
+      <title>Git Rebase</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-rebase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-rebase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Remote</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-remote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-remote/</guid>
+      <description>remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。
+这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。
+git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：
+git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。
+最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。</description>
+    </item>
+    
+    <item>
+      <title>Git Reset</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：
+首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;
+找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;
+最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push
+如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
+    </item>
+    
+    <item>
+      <title>Git Stage</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-stage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-stage/</guid>
+      <description>我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。
+git checkout readme.md 可以把 unstage 状态的文件修改丢弃</description>
+    </item>
+    
+    <item>
+      <title>Git Submodule</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init
+get submodule update 更新子模块代码</description>
+    </item>
+    
+    <item>
+      <title>Git 标签（tag）</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-tag/</guid>
+      <description>标签 git tag v0.1.2-light
+git tag -a v0.2 -m &#39;here is comment&#39;
+切换到标签 git checkout v0.2
+删除标签 git tag -d v0.2
+基于提交记录打标签及 git tag -a v0.2 beab786 -m &#39;from branch hello beab786&#39;
+发布指定的标签 git push origin v0.2
+把所有的标签一次性发布 git push origin --tags
+git可以在同一个提交上打多个名称不一样的标签
+获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）
+删除远程标签 git push --delete origin tagname 删除远程的指定标签</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitea/</guid>
+      <description>docker pull gitea/gitea:latest</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/gitlab/</guid>
+      <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
+启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
+Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
+  </channel>
+</rss>

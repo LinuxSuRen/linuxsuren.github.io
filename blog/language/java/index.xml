@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/language/java/</link>
+    <description>Recent content in Java on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/language/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://linuxsuren.github.io/blog/language/java/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/docker/</guid>
+      <description>内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。
+参考 Docker OpenJDK</description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>https://linuxsuren.github.io/blog/language/java/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/jvm/</guid>
+      <description>查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all</description>
+    </item>
+    
+    <item>
+      <title>OpenJ9</title>
+      <link>https://linuxsuren.github.io/blog/language/java/openj9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/openj9/</guid>
+      <description>参考 openj9-docs openj9-ci</description>
+    </item>
+    
+    <item>
+      <title>SpaceVim</title>
+      <link>https://linuxsuren.github.io/blog/language/java/spacevim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/java/spacevim/</guid>
+      <description>Reference Use Vim as a Java IDE</description>
+    </item>
+    
+  </channel>
+</rss>

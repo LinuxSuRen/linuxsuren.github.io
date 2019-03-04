@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scm on SuRenPi</title>
+    <link>https://linuxsuren.github.io/categories/scm/</link>
+    <description>Recent content in Scm on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://linuxsuren.github.io/categories/scm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Reset</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-reset/</guid>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：
+首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;
+找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;
+最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push
+如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
+    </item>
+    
+  </channel>
+</rss>
