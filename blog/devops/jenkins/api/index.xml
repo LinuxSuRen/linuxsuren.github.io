@@ -55,7 +55,7 @@ curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一�
 curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
 curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
-重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求</description>
+插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F &amp;quot;name=@target/demo.hpi&amp;quot; 上传插件</description>
     </item>
     
   </channel>

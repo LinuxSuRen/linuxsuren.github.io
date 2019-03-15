@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Sample illustrating the use of Push Messaging and Notifications.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Push Messaging &amp; Notifications</title>
+
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/push/mages/touch/chrome-touch-icon-192x192.png">
+
+    
+    <meta name="apple-mobile-web-app-title" content="Push Messaging and Notifications Sample">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="/push/images/apple-touch-icon-precomposed.png">
+
+    
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="icon" href="../images/favicon.ico">
+
+    
+    <link rel="manifest" href="/push/manifest.json">
+
+  </head>
+
+  <body>
+    <h1>Push Messaging &amp; Notifications</h1>
+
+    <p>Available in <a href="https://www.chromestatus.com/feature/5416033485586432">Chrome 42+</a> &amp; <a href="https://www.chromestatus.com/feature/5480344312610816">Chrome 42+</a></p>
+
+    <p>To use this sample please do the following:</p>
+
+    <ol>
+      <li>Create a project in the <a href="https://console.firebase.google.com"  target="_blank">Firebase Developer Console</a>.</li>
+      <li>Go to Settings (The cog near the top left corner), click the 'Cloud Messaging Tab'.</li>
+      <li>Create a copy of [config.sample.js](config.sample.js) called config.js.</li>
+      <li>Create a copy of [manifest.sample.json](manifest.sample.json) called manifest.json.</li>
+      <li>Replace "&lt;Your Cloud Messaging API Key ...&gt;" in your new `config.js` file with your own API key from your new project on Firebase Developer Console.</li>
+      <li>Replace "&lt;Your Cloud Sender ID ...&gt;" in your new `manifest.json` with your own sender ID from the Firebase Developer Console project.</li>
+    </ol>
+
+
+    <p>
+        <button class="js-push-button" disabled>
+          Enable Push Messages
+        </button>
+    </p>
+
+    <br />
+    <br />
+
+    <h2>cURL Command to Send Push</h2>
+    <div class="js-curl-command"></div>
+
+    <script src="/push/config.js"></script>
+    <script src="/push/demo.js"></script>
+    <script src="/push/main.js"></script>
+    <script>
+       
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-53563471-1', 'auto');
+      ga('send', 'pageview');
+       
+    </script>
+    
+  </body>
+</html>

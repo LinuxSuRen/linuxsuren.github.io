@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/",
+        "title": "Jenkins 调试",
+        "tags": [],
+        "description": "Jenkins 调试",
+        "content": " mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\nDocker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。\n添加如下环境变量\nJAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/",
         "title": "扩展 Jenkins 的构建（Builder）任务",
         "tags": [],
@@ -123,7 +130,7 @@
         "title": "Jenkins 核心",
         "tags": [],
         "description": "Jenkins 核心的 API",
-        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  "
+        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/configuration/ini/",
@@ -173,6 +180,13 @@
         "tags": [],
         "description": "",
         "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/push/test/",
+        "title": "",
+        "tags": [],
+        "description": "",
+        "content": "sdsdds\n"
     },
     {
         "uri": "https://linuxsuren.github.io/speach/jenkins-world-2019/",
@@ -609,14 +623,14 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
@@ -627,7 +641,7 @@
         "title": "Jenkins",
         "tags": ["Jenkins"],
         "description": "Jenkins 是一个开源的 CI 服务",
-        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\nJENKINS_HOME 我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 .jenkins。参数（-D 参数必须要在 -jar 之前）如下：\njava -DJENKINS_HOME=. -jar jenkins.war 或者 java -Duser.home=. -jar jenkins.war\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n向导 Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：\njava -Djenkins.install.runSetupWizard=false -jar jenkins.war\n用户 --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n"
+        "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\nJENKINS_HOME 我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 .jenkins。参数（-D 参数必须要在 -jar 之前）如下：\njava -DJENKINS_HOME=. -jar jenkins.war 或者 java -Duser.home=. -jar jenkins.war\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n向导 Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：\njava -Djenkins.install.runSetupWizard=false -jar jenkins.war\n用户 --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n公钥 访问下面的地址可以得到 Jenkins 的公钥：\nhttp://localhost:8080/instance-identity/\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/",
@@ -798,13 +812,6 @@
         "content": "Jenkins 的汉化（简体中文）需要安装中文插件。\n具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。\n这里有一个视频可以供各位参考。\n  "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/",
-        "title": "Jenkins 调试",
-        "tags": [],
-        "description": "Jenkins 调试",
-        "content": "mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\n"
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/",
         "title": "Jira",
         "tags": [],
@@ -819,14 +826,14 @@
         "content": " 根证书公钥(ca.pem)与私钥(ca-key.pem)\nAPI Server 公钥和私钥\n集群管理员公钥和私钥\n从节点公钥和私钥\n根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj \u0026quot;/CN=kube-ca\u0026quot;  API Server 证书 创建 openssl.cnf\n[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4}  openssl genrsa -out apiserver-key.pem 2048 openssl req -new -key apiserver-key.pem -out apiserver.csr -subj \u0026quot;/CN=kube-apiserver\u0026quot; -config openssl.cnf openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf  一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 /etc/kubernetes/ssl/ 路径下\nRef https://blog.csdn.net/shenshouer/article/details/53035948\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/k8s/",
+        "uri": "https://linuxsuren.github.io/categories/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/k8s/",
+        "uri": "https://linuxsuren.github.io/tags/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
@@ -928,7 +935,7 @@
         "title": "Nginx",
         "tags": [],
         "description": "Nginx",
-        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  "
+        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/java/openj9/",
@@ -964,6 +971,13 @@
         "tags": [],
         "description": "Postman",
         "content": "利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/push/",
+        "title": "Pushes",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/python/",

@@ -6,10 +6,25 @@
     <description>Recent content in Jenkins Basic on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Jan 2019 22:50:02 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jenkins 调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
+      <description>mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
+mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true
+Docker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。
+添加如下环境变量
+JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y</description>
+    </item>
     
     <item>
       <title>Jenkins 培训</title>
@@ -82,18 +97,6 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
       <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
-      <description>mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
-mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</description>
     </item>
     
   </channel>

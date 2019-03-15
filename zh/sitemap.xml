@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -122,6 +127,10 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/network/chromedp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/push/test/</loc>
   </url>
   
   <url>
@@ -388,12 +397,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -412,7 +421,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/</loc>
-    <lastmod>2019-01-03T22:50:02+08:00</lastmod>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -502,10 +511,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</loc>
   </url>
   
@@ -514,12 +519,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -601,6 +606,11 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/test/postman/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/push/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

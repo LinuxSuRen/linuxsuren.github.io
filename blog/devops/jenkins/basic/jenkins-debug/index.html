@@ -30,14 +30,15 @@
 <meta property="og:title" content="Jenkins 调试" />
 <meta property="og:description" content="Jenkins 调试" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/" /><meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Jenkins 调试">
 <meta itemprop="description" content="Jenkins 调试">
 
 
-
-<meta itemprop="wordCount" content="30">
+<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -149,6 +150,13 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#docker">Docker</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -160,15 +168,15 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 标签 ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+
+		
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/course/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 培训">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg>
 
 			</a>
-		
-
 		
 	</div>
 
@@ -200,6 +208,8 @@
 
 <div class="prose" id="prose">
 
+
+
 <p><code>mvn jenkins-dev:run</code></p>
 
 <p><code>mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=.</code> 需要在目录 <code>war</code> 下运行，并保证没有 <code>work</code> 目录</p>
@@ -207,6 +217,14 @@
 <p><code>java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/</code> 设置 Jenkins 启动参数</p>
 
 <p><code>mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</code></p>
+
+<h1 id="docker">Docker</h1>
+
+<p>如果需要调试运行在 <code>Docker</code> 中的 <code>Jenkins</code> 实例的话，可以通过增加 <code>JVM</code> 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅<a href="https://github.com/jenkinsci/docker/blob/master/jenkins.sh">jenkins.sh</a>来了解更多细节。</p>
+
+<p>添加如下环境变量</p>
+
+<p><code>JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y</code></p>
 
 </div>
 
@@ -430,7 +448,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Jenkins 调试”
-  </a> was last updated: January 1, 0001
+  </a> was last updated: March 1, 2019
 </h6>
 
       <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/jenkins-debug.md" class="

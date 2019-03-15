@@ -12,6 +12,21 @@
     
     
     <item>
+      <title>Jenkins 调试</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
+      <description>mvn jenkins-dev:run
+mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
+java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
+mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true
+Docker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。
+添加如下环境变量
+JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y</description>
+    </item>
+    
+    <item>
       <title>扩展 Jenkins 的构建（Builder）任务</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
@@ -174,7 +189,7 @@ curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一�
 curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
 curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
-重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求</description>
+插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F &amp;quot;name=@target/demo.hpi&amp;quot; 上传插件</description>
     </item>
     
     <item>
@@ -240,6 +255,15 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
       
       <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linuxsuren.github.io/push/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/push/test/</guid>
+      <description>sdsdds</description>
     </item>
     
     <item>
@@ -1083,18 +1107,6 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
     </item>
     
     <item>
-      <title>Jenkins 调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
-      <description>mvn jenkins-dev:run
-mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
-java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
-mvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true</description>
-    </item>
-    
-    <item>
       <title>Jira</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1235,7 +1247,7 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/server/nginx/</guid>
-      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
+      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS </description>
     </item>
     
     <item>
