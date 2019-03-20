@@ -37,6 +37,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git-config/</loc>
+    <lastmod>2019-02-26T18:04:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/init/</loc>
     <lastmod>2019-01-31T15:18:58+08:00</lastmod>
   </url>
@@ -397,12 +402,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -519,12 +524,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -619,7 +624,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/scm/</loc>
-    <lastmod>2019-01-29T15:28:28+08:00</lastmod>
+    <lastmod>2019-02-26T18:04:00+08:00</lastmod>
   </url>
   
   <url>

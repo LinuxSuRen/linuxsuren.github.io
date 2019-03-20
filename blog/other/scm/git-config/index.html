@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Annotation | SuRenPi</title>
+    <title>Git Config | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,17 +27,19 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Annotation" />
-<meta property="og:description" content="Jenkins 中的注解类介绍" />
+<meta property="og:title" content="Git Config" />
+<meta property="og:description" content="Git Config" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/other/scm/git-config/" /><meta property="article:published_time" content="2019-02-26T18:04:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-26T18:04:00&#43;08:00"/>
 
-<meta itemprop="name" content="Annotation">
-<meta itemprop="description" content="Jenkins 中的注解类介绍">
+<meta itemprop="name" content="Git Config">
+<meta itemprop="description" content="Git Config">
 
 
-
-<meta itemprop="wordCount" content="20">
+<meta itemprop="datePublished" content="2019-02-26T18:04:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-26T18:04:00&#43;08:00" />
+<meta itemprop="wordCount" content="24">
 
 
 
@@ -152,12 +154,9 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#checkfornull">CheckForNull</a></li>
-<li><a href="#extension">Extension</a></li>
-<li><a href="#noexternaluse">NoExternalUse</a></li>
-<li><a href="#initializer">Initializer</a></li>
-<li><a href="#terminator">Terminator</a></li>
-<li><a href="#restricted">Restricted</a></li>
+<li><a href="#修改作者">修改作者</a></li>
+<li><a href="#修改提交记录">修改提交记录</a></li>
+<li><a href="#本地-全局">本地/全局</a></li>
 </ul>
 </nav>
 	
@@ -172,17 +171,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Action ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/" class="dib f6 pr1 hover-bg-light-gray br-100" title="CLI">
+			<a href="https://linuxsuren.github.io/blog/other/scm/git-gc/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Git GC">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -201,13 +192,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Annotation</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Git Config</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins 中的注解类介绍
+      Git Config
     </div>
   
 
@@ -222,29 +213,21 @@
 
 
 
-<h1 id="checkfornull">CheckForNull</h1>
+<h1 id="修改作者">修改作者</h1>
 
-<h1 id="extension">Extension</h1>
+<p>git commit &ndash;amend &ndash;author=&ldquo;Author Name <a href="mailto:name@email.com">name@email.com</a>&ldquo;</p>
 
-<h1 id="noexternaluse">NoExternalUse</h1>
+<h1 id="修改提交记录">修改提交记录</h1>
 
-<h1 id="initializer">Initializer</h1>
+<p><code>git commit --amend</code> 执行该命令后直接修改上次的提交记录即可</p>
 
-<p>Usage: <code>@Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)</code></p>
+<h1 id="本地-全局">本地/全局</h1>
 
-<p>通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。</p>
+<p>通过参数可以指定是对全局还是当前项目的修改</p>
 
-<h1 id="terminator">Terminator</h1>
+<p><code>git config --local user.email &lt;name@email.com&gt;</code></p>
 
-<p>Usage: <code>@Terminator(after=TermMilestone.STARTED)</code></p>
-
-<p>上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。</p>
-
-<h1 id="restricted">Restricted</h1>
-
-<p>Usage: <code>@Restricted(NoExternalUse.class)</code></p>
-
-<p>上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</p>
+<p><code>git config --global user.email &lt;name@email.com&gt;</code></p>
 
 </div>
 
@@ -267,21 +250,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -479,14 +447,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/other/scm/git-config/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Annotation”
-  </a> was last updated: January 1, 0001
+    “Git Config”
+  </a> was last updated: February 26, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/other/scm/git-config.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

@@ -37,6 +37,19 @@ JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y<
     </item>
     
     <item>
+      <title>Git Config</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-config/</link>
+      <pubDate>Tue, 26 Feb 2019 18:04:00 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-config/</guid>
+      <description>修改作者 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;Author Name name@email.com&amp;ldquo;
+修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可
+本地/全局 通过参数可以指定是对全局还是当前项目的修改
+git config --local user.email &amp;lt;name@email.com&amp;gt;
+git config --global user.email &amp;lt;name@email.com&amp;gt;</description>
+    </item>
+    
+    <item>
       <title>Init</title>
       <link>https://linuxsuren.github.io/blog/language/golang/init/</link>
       <pubDate>Thu, 31 Jan 2019 15:18:58 +0800</pubDate>
@@ -104,7 +117,9 @@ java -jar selenium-server-standalone-{VERSION}.jar
 curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
 返回值类似于，而如果没有启用该配置的话会返回 404
 {&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;}  使用该 Crumb 的方式如下：
-curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;</description>
+curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
+使用 Python 获取 Crumb 值：
+export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s) issuer=$(python -c &amp;quot;import json;import os;issuer=os.getenv(&#39;issuer&#39;);issuer=json.loads(issuer);print issuer[&#39;crumb&#39;]&amp;quot;)  </description>
     </item>
     
     <item>
@@ -1308,9 +1323,10 @@ PermitRootLogin no
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
-      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
+$(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</description>
     </item>
     
     <item>
@@ -1610,12 +1626,15 @@ Reference vim-fugitive vim-scripts</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
-      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+      <description> GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
 curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
 curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
 管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
-curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;</description>
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;
+状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
+输出格式 支持的变量包括：
+ content_type filename_effective http_code http_connect http_version  </description>
     </item>
     
     <item>
@@ -1678,7 +1697,8 @@ ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
 环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
  src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
-设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;
+Troubleshooting --oom-kill-disable=false</description>
     </item>
     
     <item>

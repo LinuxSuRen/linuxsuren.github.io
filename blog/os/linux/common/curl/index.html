@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="46">
+<meta itemprop="wordCount" content="67">
 
 
 
@@ -227,6 +227,22 @@
 <p>我们可以通过 curl 下载并执行脚本，例如： <code>curl http://test.com/test.sh | bash -s arg1</code></p>
 
 <p>curl <a href="http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts">http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts</a> -F &ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&rdquo;</p>
+
+<h1 id="状态码">状态码</h1>
+
+<p><code>curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com</code> 这样获取 HTTP 状态码</p>
+
+<h1 id="输出格式">输出格式</h1>
+
+<p>支持的变量包括：</p>
+
+<ul>
+<li>content_type</li>
+<li>filename_effective</li>
+<li>http_code</li>
+<li>http_connect</li>
+<li>http_version</li>
+</ul>
 
 </div>
 

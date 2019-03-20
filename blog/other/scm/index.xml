@@ -6,10 +6,23 @@
     <description>Recent content in SCM on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 29 Jan 2019 15:28:28 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 Feb 2019 18:04:00 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/other/scm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Config</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git-config/</link>
+      <pubDate>Tue, 26 Feb 2019 18:04:00 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git-config/</guid>
+      <description>修改作者 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;Author Name name@email.com&amp;ldquo;
+修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可
+本地/全局 通过参数可以指定是对全局还是当前项目的修改
+git config --local user.email &amp;lt;name@email.com&amp;gt;
+git config --global user.email &amp;lt;name@email.com&amp;gt;</description>
+    </item>
     
     <item>
       <title>Git GC</title>

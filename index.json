@@ -56,6 +56,13 @@
         "content": " 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。\n流水线 "
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git-config/",
+        "title": "Git Config",
+        "tags": [],
+        "description": "Git Config",
+        "content": " 修改作者 git commit \u0026ndash;amend \u0026ndash;author=\u0026ldquo;Author Name name@email.com\u0026ldquo;\n修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可\n本地/全局 通过参数可以指定是对全局还是当前项目的修改\ngit config --local user.email \u0026lt;name@email.com\u0026gt;\ngit config --global user.email \u0026lt;name@email.com\u0026gt;\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/init/",
         "title": "Init",
         "tags": [],
@@ -88,7 +95,7 @@
         "title": "CrumIssuer",
         "tags": [],
         "description": "跨站请求伪造保护",
-        "content": "如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token\ncurl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json\n返回值类似于，而如果没有启用该配置的话会返回 404\n{\u0026quot;_class\u0026quot;:\u0026quot;hudson.security.csrf.DefaultCrumbIssuer\u0026quot;,\u0026quot;crumb\u0026quot;:\u0026quot;6e78c5725ea0c522bdcb787d548465aa\u0026quot;,\u0026quot;crumbRequestField\u0026quot;:\u0026quot;Jenkins-Crumb\u0026quot;}  使用该 Crumb 的方式如下：\ncurl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header \u0026quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa\u0026quot;\n"
+        "content": "如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token\ncurl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json\n返回值类似于，而如果没有启用该配置的话会返回 404\n{\u0026quot;_class\u0026quot;:\u0026quot;hudson.security.csrf.DefaultCrumbIssuer\u0026quot;,\u0026quot;crumb\u0026quot;:\u0026quot;6e78c5725ea0c522bdcb787d548465aa\u0026quot;,\u0026quot;crumbRequestField\u0026quot;:\u0026quot;Jenkins-Crumb\u0026quot;}  使用该 Crumb 的方式如下：\ncurl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header \u0026quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa\u0026quot;\n使用 Python 获取 Crumb 值：\nexport issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s) issuer=$(python -c \u0026quot;import json;import os;issuer=os.getenv('issuer');issuer=json.loads(issuer);print issuer['crumb']\u0026quot;)  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/",
@@ -623,14 +630,14 @@
         "content": " See also https://www.baeldung.com/java-annotation-processing-builder\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
+        "uri": "https://linuxsuren.github.io/tags/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/jenkins/",
+        "uri": "https://linuxsuren.github.io/categories/jenkins/",
         "title": "Jenkins",
         "tags": [],
         "description": "",
@@ -826,14 +833,14 @@
         "content": " 根证书公钥(ca.pem)与私钥(ca-key.pem)\nAPI Server 公钥和私钥\n集群管理员公钥和私钥\n从节点公钥和私钥\n根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj \u0026quot;/CN=kube-ca\u0026quot;  API Server 证书 创建 openssl.cnf\n[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4}  openssl genrsa -out apiserver-key.pem 2048 openssl req -new -key apiserver-key.pem -out apiserver.csr -subj \u0026quot;/CN=kube-apiserver\u0026quot; -config openssl.cnf openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf  一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 /etc/kubernetes/ssl/ 路径下\nRef https://blog.csdn.net/shenshouer/article/details/53035948\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/k8s/",
+        "uri": "https://linuxsuren.github.io/tags/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/tags/k8s/",
+        "uri": "https://linuxsuren.github.io/categories/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
@@ -1019,7 +1026,7 @@
         "title": "Shell",
         "tags": [],
         "description": "Shell",
-        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  "
+        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径\n$(dirname \u0026quot;${BASH_SOURCE[0]}\u0026quot;) 脚本所在的相对目录\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/codequality/sonarqube/",
@@ -1236,7 +1243,7 @@
         "title": "curl",
         "tags": [],
         "description": "curl",
-        "content": " GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\ncurl \u0026ndash;header \u0026ldquo;Authorization: Bearer $token\u0026rdquo; \u0026ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H \u0026ldquo;Content-Type:application/json\u0026rdquo; \u0026ndash;data \u0026lsquo;{\u0026ldquo;url\u0026rdquo;:\u0026ldquo;alauda/cronTabCheck?cronText=sdf\u0026rdquo;}\u0026rsquo;\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n"
+        "content": " GET 使用 GET 方法请求一个URL地址 curl http://baidu.com\nPOST curl -d \u0026quot;param\u0026quot; http://baidu.com\ncurl -H \u0026quot;Content-Type:applicatioin/json\u0026quot; -X POST -d \u0026quot;param\u0026quot; http://baidu.com\ncurl \u0026ndash;header \u0026ldquo;Authorization: Bearer $token\u0026rdquo; \u0026ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H \u0026ldquo;Content-Type:application/json\u0026rdquo; \u0026ndash;data \u0026lsquo;{\u0026ldquo;url\u0026rdquo;:\u0026ldquo;alauda/cronTabCheck?cronText=sdf\u0026rdquo;}\u0026rsquo;\n管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1\ncurl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F \u0026ldquo;chart=@jenkins-x-platform-0.0.1607.tgz\u0026rdquo;\n状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码\n输出格式 支持的变量包括：\n content_type filename_effective http_code http_connect http_version  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/dep/",
@@ -1278,7 +1285,7 @@
         "title": "golang",
         "tags": [],
         "description": "golang",
-        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\n"
+        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\nTroubleshooting --oom-kill-disable=false\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/govendor/",

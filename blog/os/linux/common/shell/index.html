@@ -37,7 +37,7 @@
 
 
 
-<meta itemprop="wordCount" content="17">
+<meta itemprop="wordCount" content="46">
 
 
 
@@ -222,6 +222,22 @@
 echo $(basename $path)
 echo $(dirname $path)
 </code></pre>
+
+<h1 id="文件是否存在">文件是否存在</h1>
+
+<pre><code>if [ ! -f &quot;env.sh&quot; ]; then
+    echo &quot;we need the env.sh to setup vars&quot;
+    exit -1
+else
+    echo &quot;file exists&quot;
+fi
+</code></pre>
+
+<h1 id="脚本相关">脚本相关</h1>
+
+<p><code>${BASH_SOURCE[0]}</code> 脚本所在的相对路径</p>
+
+<p><code>$(dirname &quot;${BASH_SOURCE[0]}&quot;)</code> 脚本所在的相对目录</p>
 
 </div>
 
