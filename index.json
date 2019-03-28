@@ -1257,7 +1257,7 @@
         "title": "ffmpeg",
         "tags": [],
         "description": "ffmpeg",
-        "content": " 静态水印 ffmpeg -y -i movieFile -vf \u0026quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]\u0026quot; movieWatermark.mp4\nffmpeg -i jenkins.mov -i watermark.png -filter_complex \u0026quot;overlay=10:10\u0026quot; jenkins.mp4\n动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile\nhttp://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/\n合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：\nffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4\n格式转换 ffmpeg -i source.mkv -codec copy target.mp4\n"
+        "content": " 静态水印 ffmpeg -y -i movieFile -vf \u0026quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]\u0026quot; movieWatermark.mp4\nffmpeg -i jenkins.mov -i watermark.png -filter_complex \u0026quot;overlay=10:10\u0026quot; jenkins.mp4\n动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile\nhttp://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/\n合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：\nffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4\n格式转换 通过下面的命令，可以实现视频格式的转换：\nffmpeg -i demo.mkv -codec copy demo.mp4\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/glide/",
