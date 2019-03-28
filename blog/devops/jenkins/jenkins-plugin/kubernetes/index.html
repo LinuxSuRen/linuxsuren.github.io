@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.54.0" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -31,6 +31,7 @@
 <meta property="og:description" content="Jenkins Kubernetes Plugin" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/" />
+
 
 <meta itemprop="name" content="Jenkins Kubernetes Plugin">
 <meta itemprop="description" content="Jenkins Kubernetes Plugin">
@@ -294,12 +295,25 @@
 
     
     <tr>
-        <td>Bug</td>
+        <td>Improvement</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56608" target="_blank">JENKINS-56608</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56781" target="_blank">JENKINS-56781</a>
         </td>
         <td>
-            When multiple builds are started at the same time, the POD is not created according to the specified yaml file
+            Option to use a variable for &#39;container&#39; reference
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>New Feature</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56757" target="_blank">JENKINS-56757</a>
+        </td>
+        <td>
+            podAffinity is ignored in YAML definition
         </td>
     </tr>
     
@@ -309,23 +323,10 @@
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56598" target="_blank">JENKINS-56598</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56735" target="_blank">JENKINS-56735</a>
         </td>
         <td>
-            Unable to bind withCredentials variables inside running pod
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56593" target="_blank">JENKINS-56593</a>
-        </td>
-        <td>
-            Jenkins git clone fails intermittently
+            Builds hanging after pod start in version 1.14.9
         </td>
     </tr>
     
@@ -335,10 +336,10 @@
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56546" target="_blank">JENKINS-56546</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56687" target="_blank">JENKINS-56687</a>
         </td>
         <td>
-            Pod Yaml in Jenkinsfile not being honored
+            Restrict pipeline support to authorized folders not working correctly
         </td>
     </tr>
     
@@ -346,12 +347,12 @@
 
     
     <tr>
-        <td>Bug</td>
+        <td>Improvement</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56491" target="_blank">JENKINS-56491</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56673" target="_blank">JENKINS-56673</a>
         </td>
         <td>
-            overeager provisioning of k8s nodes
+            Better handling of ChannelClosedException in Declarative pipeline
         </td>
     </tr>
     
@@ -493,7 +494,7 @@
 
 </table>
 
-一共：403个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：408个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -518,11 +519,11 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
@@ -662,6 +663,12 @@
                 <li  class="f6 fw4">
                   <a href="/blog/other/server/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     应用服务
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/recommendation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    推荐信息
                   </a>
                 </li>
               

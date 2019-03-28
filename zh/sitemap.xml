@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</loc>
+    <lastmod>2019-03-28T14:28:05+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -132,10 +137,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/network/chromedp/</loc>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/push/test/</loc>
   </url>
   
   <url>
@@ -614,11 +615,6 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/push/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://linuxsuren.github.io/blog/language/python/</loc>
   </url>
   
@@ -921,7 +917,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-28T14:28:05+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -936,6 +932,11 @@
   
   <url>
     <loc>https://linuxsuren.github.io/opensource/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/recommendation/</loc>
+    <lastmod>2019-03-28T14:28:05+08:00</lastmod>
   </url>
   
   <url>

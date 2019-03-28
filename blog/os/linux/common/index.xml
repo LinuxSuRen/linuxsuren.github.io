@@ -141,10 +141,9 @@ PermitRootLogin no
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
-      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
-$(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
@@ -194,7 +193,8 @@ ffmpeg -i jenkins.mov -i watermark.png -filter_complex &amp;quot;overlay=10:10&a
 动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile
 http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/
 合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：
-ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
+ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4
+格式转换 ffmpeg -i source.mkv -codec copy target.mp4</description>
     </item>
     
     <item>

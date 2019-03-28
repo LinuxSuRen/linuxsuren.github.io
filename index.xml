@@ -6,10 +6,19 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2019 14:28:05 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Technical Website</title>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</link>
+      <pubDate>Thu, 28 Mar 2019 14:28:05 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</guid>
+      <description>{{ exref &amp;ldquo;dev.to&amp;rdquo; &amp;ldquo;https://dev.to&amp;quot; }}</description>
+    </item>
     
     <item>
       <title>Jenkins 调试</title>
@@ -270,15 +279,6 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
       
       <guid>https://linuxsuren.github.io/blog/other/network/chromedp/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://linuxsuren.github.io/push/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/push/test/</guid>
-      <description>sdsdds</description>
     </item>
     
     <item>
@@ -1262,7 +1262,7 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/server/nginx/</guid>
-      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS </description>
+      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
     </item>
     
     <item>
@@ -1323,10 +1323,9 @@ PermitRootLogin no
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
-      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
-$(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
     </item>
     
     <item>
@@ -1666,7 +1665,8 @@ ffmpeg -i jenkins.mov -i watermark.png -filter_complex &amp;quot;overlay=10:10&a
 动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile
 http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/
 合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：
-ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
+ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4
+格式转换 ffmpeg -i source.mkv -codec copy target.mp4</description>
     </item>
     
     <item>
@@ -1697,8 +1697,7 @@ ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</description>
 环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
  src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
-设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;
-Troubleshooting --oom-kill-disable=false</description>
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
     </item>
     
     <item>

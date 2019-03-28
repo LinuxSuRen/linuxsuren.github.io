@@ -14,7 +14,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.52" />
+     <meta name="generator" content="Hugo 0.54.0" />
 
       
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -32,12 +32,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/shell/" />
 
+
 <meta itemprop="name" content="Shell">
 <meta itemprop="description" content="Shell">
 
 
 
-<meta itemprop="wordCount" content="46">
+<meta itemprop="wordCount" content="17">
 
 
 
@@ -223,22 +224,6 @@ echo $(basename $path)
 echo $(dirname $path)
 </code></pre>
 
-<h1 id="文件是否存在">文件是否存在</h1>
-
-<pre><code>if [ ! -f &quot;env.sh&quot; ]; then
-    echo &quot;we need the env.sh to setup vars&quot;
-    exit -1
-else
-    echo &quot;file exists&quot;
-fi
-</code></pre>
-
-<h1 id="脚本相关">脚本相关</h1>
-
-<p><code>${BASH_SOURCE[0]}</code> 脚本所在的相对路径</p>
-
-<p><code>$(dirname &quot;${BASH_SOURCE[0]}&quot;)</code> 脚本所在的相对目录</p>
-
 </div>
 
 
@@ -395,6 +380,12 @@ fi
                 <li  class="f6 fw4">
                   <a href="/blog/other/server/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     应用服务
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/recommendation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    推荐信息
                   </a>
                 </li>
               

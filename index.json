@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/recommendation/technical-website/",
+        "title": "Technical Website",
+        "tags": [],
+        "description": "Technical Website",
+        "content": "{{ exref \u0026ldquo;dev.to\u0026rdquo; \u0026ldquo;https://dev.to\u0026quot; }}\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/",
         "title": "Jenkins 调试",
         "tags": [],
@@ -187,13 +194,6 @@
         "tags": [],
         "description": "",
         "content": ""
-    },
-    {
-        "uri": "https://linuxsuren.github.io/push/test/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "sdsdds\n"
     },
     {
         "uri": "https://linuxsuren.github.io/speach/jenkins-world-2019/",
@@ -942,7 +942,7 @@
         "title": "Nginx",
         "tags": [],
         "description": "Nginx",
-        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS "
+        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/java/openj9/",
@@ -978,13 +978,6 @@
         "tags": [],
         "description": "Postman",
         "content": "利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。\n"
-    },
-    {
-        "uri": "https://linuxsuren.github.io/push/",
-        "title": "Pushes",
-        "tags": [],
-        "description": "",
-        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/python/",
@@ -1026,7 +1019,7 @@
         "title": "Shell",
         "tags": [],
         "description": "Shell",
-        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径\n$(dirname \u0026quot;${BASH_SOURCE[0]}\u0026quot;) 脚本所在的相对目录\n"
+        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/codequality/sonarqube/",
@@ -1264,7 +1257,7 @@
         "title": "ffmpeg",
         "tags": [],
         "description": "ffmpeg",
-        "content": " 静态水印 ffmpeg -y -i movieFile -vf \u0026quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]\u0026quot; movieWatermark.mp4\nffmpeg -i jenkins.mov -i watermark.png -filter_complex \u0026quot;overlay=10:10\u0026quot; jenkins.mp4\n动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile\nhttp://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/\n合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：\nffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4\n"
+        "content": " 静态水印 ffmpeg -y -i movieFile -vf \u0026quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]\u0026quot; movieWatermark.mp4\nffmpeg -i jenkins.mov -i watermark.png -filter_complex \u0026quot;overlay=10:10\u0026quot; jenkins.mp4\n动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile\nhttp://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/\n合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：\nffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4\n格式转换 ffmpeg -i source.mkv -codec copy target.mp4\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/glide/",
@@ -1285,7 +1278,7 @@
         "title": "golang",
         "tags": [],
         "description": "golang",
-        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\nTroubleshooting --oom-kill-disable=false\n"
+        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/govendor/",
@@ -1482,6 +1475,13 @@
         "tags": [],
         "description": "",
         "content": " Jenkins Hugo Plugin  Jenkins Hugo 构建插件\n Jenkins Chinese Localizatioin Plugin  Jenkins 中文本地化插件\n Jenkins Java Client  Jenkins Java 客户端\n phoenix.webui.framework  基于 Selenium 的自动化测试\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/recommendation/",
+        "title": "推荐信息",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/document/",

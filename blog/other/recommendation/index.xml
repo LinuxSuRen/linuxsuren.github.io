@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>推荐信息 on SuRenPi</title>
+    <link>https://linuxsuren.github.io/blog/other/recommendation/</link>
+    <description>Recent content in 推荐信息 on SuRenPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 28 Mar 2019 14:28:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://linuxsuren.github.io/blog/other/recommendation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technical Website</title>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</link>
+      <pubDate>Thu, 28 Mar 2019 14:28:05 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</guid>
+      <description>{{ exref &amp;ldquo;dev.to&amp;rdquo; &amp;ldquo;https://dev.to&amp;quot; }}</description>
+    </item>
+    
+  </channel>
+</rss>
