@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="48">
+<meta itemprop="wordCount" content="56">
 
 
 
@@ -228,6 +228,12 @@
 <p>把视频文件按照顺序写入 <code>files.txt</code>，然后执行命令：</p>
 
 <p><code>ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</code></p>
+
+<h1 id="格式转换">格式转换</h1>
+
+<p>通过下面的命令，可以实现视频格式的转换：</p>
+
+<p><code>ffmpeg -i demo.mkv -codec copy demo.mp4</code></p>
 
 </div>
 
