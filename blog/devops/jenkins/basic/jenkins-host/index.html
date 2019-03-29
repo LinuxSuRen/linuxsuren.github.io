@@ -28,17 +28,17 @@
   }
 </style>
 <meta property="og:title" content="Jenkins 插件托管" />
-<meta property="og:description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。" />
+<meta property="og:description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/" />
 
 
 <meta itemprop="name" content="Jenkins 插件托管">
-<meta itemprop="description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。">
+<meta itemprop="description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上">
 
 
 
-<meta itemprop="wordCount" content="38">
+<meta itemprop="wordCount" content="41">
 
 
 
@@ -173,11 +173,8 @@
   	<nav id="TableOfContents">
 <ul>
 <li><a href="#创建库">创建库</a></li>
-<li><a href="#提交请求">提交请求</a>
-<ul>
-<li><a href="#托管">托管</a></li>
+<li><a href="#提交请求">提交请求</a></li>
 <li><a href="#上传">上传</a></li>
-</ul></li>
 <li><a href="#发布">发布</a></li>
 </ul>
 </nav>
@@ -228,7 +225,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上。
+      本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上
     </div>
   
 
@@ -243,6 +240,8 @@
 
 
 
+<p>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。</p>
+
 <h1 id="创建库">创建库</h1>
 
 <p>你需要在 <a href="https://github.com/">GitHub</a> 上申请一个账号，然后，把你的工程提交上去。</p>
@@ -253,9 +252,7 @@
 
 <p>在 <a href="https://issues.jenkins-ci.org">Jira</a> 上申请一个账号，然后<a href="https://issues.jenkins-ci.org/projects/HOSTING">创建</a>一个 issues，等待管理员的审核。</p>
 
-<h2 id="托管">托管</h2>
-
-<h2 id="上传">上传</h2>
+<h1 id="上传">上传</h1>
 
 <p>首先，在 Jenkins 的<a href="https://repo.jenkins-ci.org/">成品库</a>上，用上面 Jira 的账号登陆一次，保证该账号是可用的。</p>
 
@@ -268,6 +265,8 @@
 <p>跳过测试 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
 
 <p>执行发布准备而且无需输入参数 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare -B</code></p>
+
+<p>如果上述的过程没有任何错误的话，大概两个小时左右，你就可以在<a href="https://plugins.jenkins.io/">插件官网</a>中找到你的插件了。</p>
 
 </div>
 
@@ -296,13 +295,13 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-label/">Jenkins 标签</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
 	
 </ul>
 
