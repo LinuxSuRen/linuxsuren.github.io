@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>孤儿插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/adopt/</link>
+      <pubDate>Wed, 27 Mar 2019 10:39:37 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/adopt/</guid>
+      <description>Jenkins 有众多的插件，但由于各种原因，有些插件的作者不再维护。如果你对这一类插件感兴趣，希望能继续维护下去的话，可以去认领。
+需要被认领的插件.</description>
+    </item>
+    
+    <item>
       <title>Jenkins 调试</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
