@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/",
+        "title": "Embeddable Build Status",
+        "tags": [],
+        "description": "Embeddable Build Status",
+        "content": "Embeddable Build Status 可以让你在其他的页面中显示的你的项目构建状态。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/recommendation/technical-website/",
         "title": "Technical Website",
         "tags": [],

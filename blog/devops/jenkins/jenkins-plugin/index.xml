@@ -6,10 +6,19 @@
     <description>Recent content in Jenkins Plugins on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 Mar 2019 10:39:37 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2019 10:22:52 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Embeddable Build Status</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</link>
+      <pubDate>Fri, 29 Mar 2019 10:22:52 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</guid>
+      <description>Embeddable Build Status 可以让你在其他的页面中显示的你的项目构建状态。</description>
+    </item>
     
     <item>
       <title>孤儿插件</title>
