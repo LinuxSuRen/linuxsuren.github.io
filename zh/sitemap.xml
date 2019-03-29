@@ -413,12 +413,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -535,12 +535,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
