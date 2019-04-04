@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>CrumIssuer | SuRenPi</title>
+    <title>Approve | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,20 +27,20 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="CrumIssuer" />
-<meta property="og:description" content="跨站请求伪造保护" />
+<meta property="og:title" content="Approve" />
+<meta property="og:description" content="Approve" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" />
-<meta property="article:published_time" content="2019-01-09T17:35:18&#43;08:00"/>
-<meta property="article:modified_time" content="2019-01-09T17:35:18&#43;08:00"/>
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/api/approve/" />
+<meta property="article:published_time" content="2019-04-04T10:49:47&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-04T10:49:47&#43;08:00"/>
 
-<meta itemprop="name" content="CrumIssuer">
-<meta itemprop="description" content="跨站请求伪造保护">
+<meta itemprop="name" content="Approve">
+<meta itemprop="description" content="Approve">
 
 
-<meta itemprop="datePublished" content="2019-01-09T17:35:18&#43;08:00" />
-<meta itemprop="dateModified" content="2019-01-09T17:35:18&#43;08:00" />
-<meta itemprop="wordCount" content="38">
+<meta itemprop="datePublished" content="2019-04-04T10:49:47&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-04T10:49:47&#43;08:00" />
+<meta itemprop="wordCount" content="94">
 
 
 
@@ -172,7 +172,16 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#通过">通过</a>
+<ul>
+<li><a href="#无参数">无参数</a></li>
+<li><a href="#有参数">有参数</a></li>
+</ul></li>
+<li><a href="#拒绝">拒绝</a></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -185,17 +194,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/approve/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Approve ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/" class="dib f6 pr1 hover-bg-light-gray br-100" title="多分支流水线">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" class="dib f6 pr1 hover-bg-light-gray br-100" title="CrumIssuer">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -214,13 +215,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">CrumIssuer</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Approve</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      跨站请求伪造保护
+      Approve
     </div>
   
 
@@ -233,23 +234,56 @@
 
 <div class="prose" id="prose">
 
-<p>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token</p>
 
-<p><code>curl -u user:passwd  http:/localhost:8080/jenkins/crumbIssuer/api/json</code></p>
 
-<p>返回值类似于，而如果没有启用该配置的话会返回 <code>404</code></p>
+<p>这里介绍的是<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/">核准插件</a>中的 API 使用。</p>
 
-<pre><code>{&quot;_class&quot;:&quot;hudson.security.csrf.DefaultCrumbIssuer&quot;,&quot;crumb&quot;:&quot;6e78c5725ea0c522bdcb787d548465aa&quot;,&quot;crumbRequestField&quot;:&quot;Jenkins-Crumb&quot;}
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 <code>inputid</code>。</p>
+</div>
+</aside>
+
+
+<h1 id="通过">通过</h1>
+
+<p><code>input</code> 这个 DSL 支持接收参数。</p>
+
+<h2 id="无参数">无参数</h2>
+
+<p>对于没有参数的情况，可以使用下面的两个 API 来核准。</p>
+
+<pre><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \
+--header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
 </code></pre>
 
-<p>使用该 Crumb 的方式如下：</p>
+<p>下面的 API 是直接无参数的调用</p>
 
-<p><code>curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&quot;</code></p>
+<pre><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \
+--header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
+</code></pre>
 
-<p>使用 Python 获取 Crumb 值：</p>
+<h2 id="有参数">有参数</h2>
 
-<pre><code>export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s)
-issuer=$(python -c &quot;import json;import os;issuer=os.getenv('issuer');issuer=json.loads(issuer);print issuer['crumb']&quot;)
+<p>参数需要以 JSON 数组的形式传递。</p>
+
+<pre><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \
+--header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; \
+-X POST -d 'json={&quot;parameter&quot;: [{&quot;name&quot;: &quot;name&quot;, &quot;value&quot;: &quot;bob&quot;}, {&quot;name&quot;: &quot;age&quot;, &quot;value&quot;: &quot;12&quot;}]}'
+</code></pre>
+
+<p>如果缺少参数的话，会返回 <code>400</code></p>
+
+<h1 id="拒绝">拒绝</h1>
+
+<p>拒绝执行，可以调用下面的 API</p>
+
+<pre><code>curl http://localhost:8080/job/pipeline/1/input/inputid/abort \
+--header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
 </code></pre>
 
 </div>
@@ -476,14 +510,14 @@ issuer=$(python -c &quot;import json;import os;issuer=os.getenv('issuer');issuer
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/approve/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “CrumIssuer”
-  </a> was last updated: January 9, 2019
+    “Approve”
+  </a> was last updated: April 4, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/api/crumIssuer.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/api/approve.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

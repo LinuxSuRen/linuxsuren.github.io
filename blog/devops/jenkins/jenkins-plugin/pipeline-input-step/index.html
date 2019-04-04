@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>CrumIssuer | SuRenPi</title>
+    <title>Pipeline Input Step | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,20 +27,20 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="CrumIssuer" />
-<meta property="og:description" content="跨站请求伪造保护" />
+<meta property="og:title" content="Pipeline Input Step" />
+<meta property="og:description" content="Pipeline Input Step" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" />
-<meta property="article:published_time" content="2019-01-09T17:35:18&#43;08:00"/>
-<meta property="article:modified_time" content="2019-01-09T17:35:18&#43;08:00"/>
+<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/" />
+<meta property="article:published_time" content="2019-04-04T11:14:39&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-04T11:14:39&#43;08:00"/>
 
-<meta itemprop="name" content="CrumIssuer">
-<meta itemprop="description" content="跨站请求伪造保护">
+<meta itemprop="name" content="Pipeline Input Step">
+<meta itemprop="description" content="Pipeline Input Step">
 
 
-<meta itemprop="datePublished" content="2019-01-09T17:35:18&#43;08:00" />
-<meta itemprop="dateModified" content="2019-01-09T17:35:18&#43;08:00" />
-<meta itemprop="wordCount" content="38">
+<meta itemprop="datePublished" content="2019-04-04T11:14:39&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-04T11:14:39&#43;08:00" />
+<meta itemprop="wordCount" content="66">
 
 
 
@@ -172,7 +172,12 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#示例">示例</a></li>
+<li><a href="#api">API</a></li>
+</ul>
+</nav>
 	
 
 	<div date-pref>
@@ -185,17 +190,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/approve/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Approve ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/multi-branch/" class="dib f6 pr1 hover-bg-light-gray br-100" title="多分支流水线">
+			<a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Embeddable Build Status">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -214,13 +211,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">CrumIssuer</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Pipeline Input Step</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      跨站请求伪造保护
+      Pipeline Input Step
     </div>
   
 
@@ -233,24 +230,36 @@
 
 <div class="prose" id="prose">
 
-<p>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token</p>
 
-<p><code>curl -u user:passwd  http:/localhost:8080/jenkins/crumbIssuer/api/json</code></p>
 
-<p>返回值类似于，而如果没有启用该配置的话会返回 <code>404</code></p>
+<p>
 
-<pre><code>{&quot;_class&quot;:&quot;hudson.security.csrf.DefaultCrumbIssuer&quot;,&quot;crumb&quot;:&quot;6e78c5725ea0c522bdcb787d548465aa&quot;,&quot;crumbRequestField&quot;:&quot;Jenkins-Crumb&quot;}
+<a href="https://plugins.jenkins.io/pipeline-input-step" target="_blank">该插件</a>实现了一个在构建过程中
+允许人工干预的功能，
+
+<a href="https://github.com/jenkinsci/pipeline-input-step-plugin" target="_blank">源代码</a>托管在 Jenkins 的官方仓库中。</p>
+
+<p>它提供的 DSL 语句为 <code>input</code>，执行到该语句的时候，需要人工决定“通过”或者“拒绝”。它还支持设置允许点击”通过“的人或者组，以及
+确认该操作时输入一些参数。</p>
+
+<h1 id="示例">示例</h1>
+
+<p>在下面的例子中，通过的话会打印用户输入的参数 <code>name</code> 的值；如果拒绝的话，当前流水线会直接失败</p>
+
+<pre><code>script {
+    def approver = input id: 'approveId', message: 'need your approve', parameters: [string(defaultValue: '', description: 'Your name', name: 'name', trim: false), string(defaultValue: '', description: 'Your age', name: 'age', trim: false)]
+
+    if (approver != null) {
+        print approver.name
+    } else {
+        print &quot;no data from approver&quot;
+    }
+}
 </code></pre>
 
-<p>使用该 Crumb 的方式如下：</p>
+<h1 id="api">API</h1>
 
-<p><code>curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&quot;</code></p>
-
-<p>使用 Python 获取 Crumb 值：</p>
-
-<pre><code>export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s)
-issuer=$(python -c &quot;import json;import os;issuer=os.getenv('issuer');issuer=json.loads(issuer);print issuer['crumb']&quot;)
-</code></pre>
+<p>对于“通过”或者“拒绝“这样的操作，你可以<a href="https://linuxsuren.github.io/blog/devops/jenkins/api/approve/">使用 API 调用</a>的方式来实现。</p>
 
 </div>
 
@@ -476,14 +485,14 @@ issuer=$(python -c &quot;import json;import os;issuer=os.getenv('issuer');issuer
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/api/crumissuer/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “CrumIssuer”
-  </a> was last updated: January 9, 2019
+    “Pipeline Input Step”
+  </a> was last updated: April 4, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/api/crumIssuer.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/jenkins-plugin/pipeline-input-step.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

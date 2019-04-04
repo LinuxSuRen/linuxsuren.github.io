@@ -6,10 +6,25 @@
     <description>Recent content in Jenkins API 介绍 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Jan 2019 17:35:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 10:49:47 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/api/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Approve</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/approve/</link>
+      <pubDate>Thu, 04 Apr 2019 10:49:47 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/approve/</guid>
+      <description>这里介绍的是核准插件中的 API 使用。
+ 该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。
+  通过 input 这个 DSL 支持接收参数。
+无参数 对于没有参数的情况，可以使用下面的两个 API 来核准。
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; -X POST  下面的 API 是直接无参数的调用
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; -X POST  有参数 参数需要以 JSON 数组的形式传递。
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; \ -X POST -d &#39;json={&amp;quot;parameter&amp;quot;: [{&amp;quot;name&amp;quot;: &amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;bob&amp;quot;}, {&amp;quot;name&amp;quot;: &amp;quot;age&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;12&amp;quot;}]}&#39;  如果缺少参数的话，会返回 400</description>
+    </item>
     
     <item>
       <title>CrumIssuer</title>

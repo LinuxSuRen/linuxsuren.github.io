@@ -42,6 +42,20 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/",
+        "title": "Pipeline Input Step",
+        "tags": [],
+        "description": "Pipeline Input Step",
+        "content": "  该插件实现了一个在构建过程中 允许人工干预的功能， 源代码托管在 Jenkins 的官方仓库中。\n它提供的 DSL 语句为 input，执行到该语句的时候，需要人工决定“通过”或者“拒绝”。它还支持设置允许点击”通过“的人或者组，以及 确认该操作时输入一些参数。\n示例 在下面的例子中，通过的话会打印用户输入的参数 name 的值；如果拒绝的话，当前流水线会直接失败\nscript { def approver = input id: 'approveId', message: 'need your approve', parameters: [string(defaultValue: '', description: 'Your name', name: 'name', trim: false), string(defaultValue: '', description: 'Your age', name: 'age', trim: false)] if (approver != null) { print approver.name } else { print \u0026quot;no data from approver\u0026quot; } }  API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/approve/",
+        "title": "Approve",
+        "tags": [],
+        "description": "Approve",
+        "content": " 这里介绍的是核准插件中的 API 使用。\n 该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。\n  通过 input 这个 DSL 支持接收参数。\n无参数 对于没有参数的情况，可以使用下面的两个 API 来核准。\ncurl http://localhost:8080/job/pipeline/1/input/inputid/proceed \\ --header \u0026quot;Authorization: Basic `echo -n admin:token | base64`\u0026quot; -X POST  下面的 API 是直接无参数的调用\ncurl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \\ --header \u0026quot;Authorization: Basic `echo -n admin:token | base64`\u0026quot; -X POST  有参数 参数需要以 JSON 数组的形式传递。\ncurl http://localhost:8080/job/pipeline/1/input/inputid/proceed \\ --header \u0026quot;Authorization: Basic `echo -n admin:token | base64`\u0026quot; \\ -X POST -d 'json={\u0026quot;parameter\u0026quot;: [{\u0026quot;name\u0026quot;: \u0026quot;name\u0026quot;, \u0026quot;value\u0026quot;: \u0026quot;bob\u0026quot;}, {\u0026quot;name\u0026quot;: \u0026quot;age\u0026quot;, \u0026quot;value\u0026quot;: \u0026quot;12\u0026quot;}]}'  如果缺少参数的话，会返回 400\n拒绝 拒绝执行，可以调用下面的 API\ncurl http://localhost:8080/job/pipeline/1/input/inputid/abort \\ --header \u0026quot;Authorization: Basic `echo -n admin:token | base64`\u0026quot; -X POST  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/",
         "title": "Embeddable Build Status",
         "tags": [],
