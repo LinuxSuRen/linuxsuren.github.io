@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/github/github-robot/</loc>
+    <lastmod>2019-04-06T20:57:38+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/</loc>
     <lastmod>2019-04-04T11:14:39+08:00</lastmod>
   </url>
@@ -360,6 +365,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/scm/github/</loc>
+    <lastmod>2019-04-06T20:57:38+08:00</lastmod>
   </url>
   
   <url>
@@ -953,7 +959,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
-    <lastmod>2019-04-04T11:14:39+08:00</lastmod>
+    <lastmod>2019-04-06T20:57:38+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
