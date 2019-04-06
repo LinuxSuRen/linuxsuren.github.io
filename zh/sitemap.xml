@@ -62,7 +62,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-config/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-config/</loc>
     <lastmod>2019-02-26T18:04:00+08:00</lastmod>
   </url>
   
@@ -72,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-gc/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-gc/</loc>
     <lastmod>2019-01-29T15:28:28+08:00</lastmod>
   </url>
   
@@ -322,7 +322,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-branch/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/</loc>
+    <lastmod>2019-02-26T18:04:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-branch/</loc>
   </url>
   
   <url>
@@ -330,27 +335,35 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-rebase/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-rebase/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-remote/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-remote/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-reset/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-reset/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-stage/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-stage/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-submodule/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-submodule/</loc>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/git-tag/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/git/git-tag/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/github/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitlab/</loc>
   </url>
   
   <url>
@@ -358,7 +371,11 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/blog/other/scm/gitlab/</loc>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitea/gitea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/other/scm/gitlab/gitlab/</loc>
   </url>
   
   <url>
@@ -640,7 +657,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/scm/</loc>
-    <lastmod>2019-02-26T18:04:00+08:00</lastmod>
   </url>
   
   <url>

@@ -91,7 +91,7 @@
         "content": " 构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。\n流水线 "
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-config/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-config/",
         "title": "Git Config",
         "tags": [],
         "description": "Git Config",
@@ -105,7 +105,7 @@
         "content": " init 函数定义在包（package）中，并有如下的用处：\n 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：\n 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数   包初始化只会执行一次，即使会被导入多次。\n  属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。\ninit 函数可以定义多次。\n只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：\nimport _ \u0026quot;image/png\u0026quot;\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-gc/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-gc/",
         "title": "Git GC",
         "tags": [],
         "description": "清理无用的文件并优化本地仓库",
@@ -483,7 +483,14 @@
         "content": "Ginkgo是一个基于Go语言的BDD测试框架,一般用于Go服务的集成测试。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-branch/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/",
+        "title": "Git",
+        "tags": [],
+        "description": "Git",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-branch/",
         "title": "Git Branch",
         "tags": [],
         "description": "Git Branch",
@@ -497,56 +504,77 @@
         "content": "几乎所有的团队都有自己的沟通系统（工具），像 Jira、Kanban、微信、钉钉等等。而我现在要说的是像 GitHub、Gitlab 等 Git 服务提供的 PR。代码 Review 是件好事情，这一点很多人都认同，但是很明显的痛点在于——这样可能会比较耗时。\n大家不一定能够在看到邮件、钉钉等的消息后，就立刻去做 Review，因此，很多时候就会忘记从而导致这个过程加长。\n如果，能够给每个项目都指定一些必须要进行 Review 的人员，然后，自动地把 PR 的 Review 需求加到像 Jira 这样的任务跟踪系统中的。对，关键点就在于把 Review 也正式地当作工作任务的一部分。\n我相信，这样也许就能解决大家的代码都能够相对高效地被 Review呢。而且，这样也对 Review 的工作量相对可控。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-rebase/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-rebase/",
         "title": "Git Rebase",
         "tags": [],
         "description": "Git Rebase",
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-remote/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-remote/",
         "title": "Git Remote",
         "tags": [],
         "description": "Git 远程库操作",
         "content": " remote git remote show origin 可以查看仓库的分支信息,虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。\n这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。\ngit remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：\ngit remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。\n最后，你还需要再把本地的分支删除，命令是 git branch --delete dev 。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-reset/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-reset/",
         "title": "Git Reset",
         "tags": [],
         "description": "Git Reset",
         "content": " 撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：\n首先，获取某个文件的提交记录，命令为：git log \u0026lt;filename\u0026gt;\n找到需要恢复到的那次提交记录，执行撤销命令： git reset \u0026lt;commit-id\u0026gt; \u0026lt;filename\u0026gt; 然后 git checkout \u0026lt;filename\u0026gt;\n最后，确认修改：git commit --amend \u0026amp;\u0026amp; git push\n如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-stage/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-stage/",
         "title": "Git Stage",
         "tags": [],
         "description": "Git Stage",
         "content": "我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。\ngit checkout readme.md 可以把 unstage 状态的文件修改丢弃\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-submodule/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-submodule/",
         "title": "Git Submodule",
         "tags": [],
         "description": "Git 子模块的使用",
         "content": " 子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init\nget submodule update 更新子模块代码\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/git-tag/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/git/git-tag/",
         "title": "Git 标签（tag）",
         "tags": [],
         "description": "Git 标签（tag）的相关操作",
         "content": " 标签 git tag v0.1.2-light\ngit tag -a v0.2 -m 'here is comment'\n切换到标签 git checkout v0.2\n删除标签 git tag -d v0.2\n基于提交记录打标签及 git tag -a v0.2 beab786 -m 'from branch hello beab786'\n发布指定的标签 git push origin v0.2\n把所有的标签一次性发布 git push origin --tags\ngit可以在同一个提交上打多个名称不一样的标签\n获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）\n删除远程标签 git push --delete origin tagname 删除远程的指定标签\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/github/",
+        "title": "GitHub",
+        "tags": [],
+        "description": "GitHub",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/gitlab/",
+        "title": "GitLab",
+        "tags": [],
+        "description": "GitLab",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/scm/gitea/",
+        "title": "Gitea",
+        "tags": [],
+        "description": "Gitea",
+        "content": ""
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/other/scm/gitea/gitea/",
         "title": "Gitea",
         "tags": [],
         "description": "",
         "content": "docker pull gitea/gitea:latest\n"
     },
     {
-        "uri": "https://linuxsuren.github.io/blog/other/scm/gitlab/",
+        "uri": "https://linuxsuren.github.io/blog/other/scm/gitlab/gitlab/",
         "title": "Gitlab",
         "tags": [],
         "description": "Gitlab 使用介绍",

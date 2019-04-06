@@ -316,6 +316,32 @@
     <tr>
         <td>Bug</td>
         <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56921" target="_blank">JENKINS-56921</a>
+        </td>
+        <td>
+            Pod template does not honor the namespace field
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56889" target="_blank">JENKINS-56889</a>
+        </td>
+        <td>
+            Kubernetes creates too many slaves
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
             <a href="https://issues.jenkins-ci.org/browse/JENKINS-56823" target="_blank">JENKINS-56823</a>
         </td>
         <td>
@@ -346,32 +372,6 @@
         </td>
         <td>
             podAffinity is ignored in YAML definition
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56735" target="_blank">JENKINS-56735</a>
-        </td>
-        <td>
-            Builds hanging after pod start in version 1.14.9
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-56687" target="_blank">JENKINS-56687</a>
-        </td>
-        <td>
-            Restrict pipeline support to authorized folders not working correctly
         </td>
     </tr>
     
@@ -513,7 +513,7 @@
 
 </table>
 
-一共：409个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：411个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -538,13 +538,13 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
+	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
 	
 </ul>
 
@@ -668,8 +668,26 @@
                 </li>
               
                 <li  class="f6 fw4">
-                  <a href="/blog/other/scm/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-                    SCM
+                  <a href="/blog/other/scm/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Git
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/scm/github/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    GitHub
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/scm/gitlab/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    GitLab
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/scm/gitea/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Gitea
                   </a>
                 </li>
               
