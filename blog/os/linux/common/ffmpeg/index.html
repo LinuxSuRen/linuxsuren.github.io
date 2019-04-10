@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="56">
+<meta itemprop="wordCount" content="117">
 
 
 
@@ -169,6 +169,17 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#静态水印">静态水印</a></li>
+<li><a href="#动态水印">动态水印</a></li>
+<li><a href="#合并视频">合并视频</a></li>
+<li><a href="#格式转换">格式转换</a></li>
+<li><a href="#图片缩放">图片缩放</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -253,6 +264,26 @@
 <p>通过下面的命令，可以实现视频格式的转换：</p>
 
 <p><code>ffmpeg -i demo.mkv -codec copy demo.mp4</code></p>
+
+<h1 id="图片缩放">图片缩放</h1>
+
+<p>假设图片 <code>input.jpg</code> 的尺寸为：320⨉207</p>
+
+<p><code>ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png</code> 强制设置图片的尺寸</p>
+
+<p><code>ffmpeg -i input.jpg -vf scale=320:-1 output_320.png</code> 保留缩放比（输入和输出文件不能相同），输出的图片尺寸为：320⨉207</p>
+
+<p><code>ffmpeg -i input.jpg -vf scale=320:-2 output_320.png</code> 这样可以让图片的宽、高都被 <code>n</code> 整除，输出的图片尺寸为：320⨉206</p>
+
+<p><code>ffmpeg -i input.jpg -vf scale=iw*2:ih input_double_width.png</code> 使用变量设置宽、高，<code>iw</code> 代表输入的宽度，<code>ih</code> 代表输入的高度</p>
+
+<p><code>ffmpeg -i input.jpg -vf &quot;scale=iw/2:ih/2&quot; input_half_size.png</code> 使得图片的宽、高为原来的一半</p>
+
+<p><code>ffmpeg -i input.jpg -vf &quot;scale='min(320,iw)':'min(240,ih)'&quot; input_not_upscaled.png</code></p>
+
+<p><code>ffmpeg -i input.jpg -vf scale=w=320:h=240:force_original_aspect_ratio=decrease output_320.png</code></p>
+
+<p><code>ffmpeg -i input.jpg -vf &quot;scale=320:240:force_original_aspect_ratio=decrease,pad=320:240:(ow-iw)/2:(oh-ih)/2&quot; output_320_padding.png</code></p>
 
 </div>
 

@@ -195,7 +195,10 @@ http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters
 合并视频 把视频文件按照顺序写入 files.txt，然后执行命令：
 ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4
 格式转换 通过下面的命令，可以实现视频格式的转换：
-ffmpeg -i demo.mkv -codec copy demo.mp4</description>
+ffmpeg -i demo.mkv -codec copy demo.mp4
+图片缩放 假设图片 input.jpg 的尺寸为：320⨉207
+ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png 强制设置图片的尺寸
+ffmpeg -i input.</description>
     </item>
     
     <item>
@@ -268,7 +271,8 @@ wget各种选项分类列表
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/xargs/</guid>
-      <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像</description>
+      <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像
+参数 ls | xargs -I {} mv {} {}.bak 多次使用参数</description>
     </item>
     
     <item>
