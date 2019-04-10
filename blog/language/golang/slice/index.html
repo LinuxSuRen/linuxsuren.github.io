@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件托管 | SuRenPi</title>
+    <title>Slice | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,18 +27,20 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件托管" />
-<meta property="og:description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上" />
+<meta property="og:title" content="Slice" />
+<meta property="og:description" content="Slice" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/language/golang/slice/" />
+<meta property="article:published_time" content="2019-01-03T10:38:18&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-03T10:38:18&#43;08:00"/>
+
+<meta itemprop="name" content="Slice">
+<meta itemprop="description" content="Slice">
 
 
-<meta itemprop="name" content="Jenkins 插件托管">
-<meta itemprop="description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上">
-
-
-
-<meta itemprop="wordCount" content="41">
+<meta itemprop="datePublished" content="2019-01-03T10:38:18&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-03T10:38:18&#43;08:00" />
+<meta itemprop="wordCount" content="59">
 
 
 
@@ -170,14 +172,7 @@
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#创建库">创建库</a></li>
-<li><a href="#提交请求">提交请求</a></li>
-<li><a href="#上传">上传</a></li>
-<li><a href="#发布">发布</a></li>
-</ul>
-</nav>
+  	
 	
 
 	<div date-pref>
@@ -190,7 +185,7 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins Agent ">
+			<a href="https://linuxsuren.github.io/blog/language/golang/gmock/" class="dib f6 pl1 hover-bg-light-gray br-100" title="GoMock ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -200,7 +195,7 @@
 		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 标签">
+			<a href="https://linuxsuren.github.io/blog/language/golang/interface/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Interface">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -219,13 +214,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件托管</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Slice</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上
+      Slice
     </div>
   
 
@@ -240,33 +235,54 @@
 
 
 
-<p>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。</p>
 
-<h1 id="创建库">创建库</h1>
 
-<p>你需要在 <a href="https://github.com/">GitHub</a> 上申请一个账号，然后，把你的工程提交上去。</p>
+<div class="code-copy" id="static/codes/golang/slice/main.go">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>codes/golang/slice/main.go</span>
+		<i class="icon-go input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-golang">package main
 
-<h1 id="提交请求">提交请求</h1>
+import &#34;fmt&#34;
 
-<p><a href="https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins#HostingPlugins-Contents">详细阅读托管要求</a></p>
+func main() {
+	demo4Array()
 
-<p>在 <a href="https://issues.jenkins-ci.org">Jira</a> 上申请一个账号，然后<a href="https://issues.jenkins-ci.org/projects/HOSTING">创建</a>一个 issues，等待管理员的审核。</p>
+	demo4Map()
+}
 
-<h1 id="上传">上传</h1>
+func demo4Map() {
+	var strMap map[string]string
 
-<p>首先，在 Jenkins 的<a href="https://repo.jenkins-ci.org/">成品库</a>上，用上面 Jira 的账号登陆一次，保证该账号是可用的。</p>
+	strMap = make(map[string]string)
+	strMap[&#34;name&#34;] = &#34;link&#34;
 
-<p>你需要 Fork <a href="https://github.com/jenkins-infra/repository-permissions-updater">上传权限申请</a>，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。</p>
+	fmt.Println(strMap)
+}
 
-<h1 id="发布">发布</h1>
+func demo4Array() {
+	var array []string
+	array = make([]string, 1)
 
-<p>等一切就绪，你的插件要发布时，只要执行 <code>mvn release:prepare release:perform</code></p>
+	array[0] = &#34;one&#34;
+	array = append(array, &#34;two&#34;)
+	array = append(array, &#34;three&#34;, &#34;four&#34;)
 
-<p>跳过测试 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
+	others := []string{&#34;1&#34;, &#34;2&#34;}
+	array = append(array, others...)
 
-<p>执行发布准备而且无需输入参数 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare -B</code></p>
+	fmt.Println(array)
+	fmt.Println(len(array))
+}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/golang/slice/main.go" title="See codes/golang/slice/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/golang/slice/main.go source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
 
-<p>如果上述的过程没有任何错误的话，大概两个小时左右，你就可以在<a href="https://plugins.jenkins.io/">插件官网</a>中找到你的插件了。</p>
 
 </div>
 
@@ -289,21 +305,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-junit/">Jenkins JUnit</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins-label/">Jenkins 标签</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -507,14 +508,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/language/golang/slice/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Jenkins 插件托管”
-  </a> was last updated: January 1, 0001
+    “Slice”
+  </a> was last updated: January 3, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/jenkins-host.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/language/golang/slice.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

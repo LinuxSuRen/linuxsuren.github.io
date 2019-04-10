@@ -112,6 +112,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/ginkgo/</loc>
+    <lastmod>2019-01-04T16:17:49+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/language/golang/gmock/</loc>
     <lastmod>2019-01-04T16:17:15+08:00</lastmod>
   </url>
@@ -134,6 +139,16 @@
                 hreflang="zh"
                 href="https://linuxsuren.github.io/blog/devops/jenkins/api/core/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/slice/</loc>
+    <lastmod>2019-01-03T10:38:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/blog/language/golang/interface/</loc>
+    <lastmod>2019-01-03T10:15:44+08:00</lastmod>
   </url>
   
   <url>

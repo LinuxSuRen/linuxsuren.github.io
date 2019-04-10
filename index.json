@@ -161,6 +161,13 @@
         "content": " 支持的特性包括：\n 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。\n机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。\n自由风格 在 Jenkins 中新建自由风格任务\n在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。\n上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。\n流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：\ndingTalk accessToken: 'token', imageUrl: 'imageUrl', jenkinsUrl: 'http://localhost/jenkins', message: 'messages', notifyPeople: '18211192837' \n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/ginkgo/",
+        "title": "Ginkgo",
+        "tags": [],
+        "description": "Ginkgo",
+        "content": "  Ginkgo 是 Golang 的 BDD 测试框架\n执行测试 ginkgo test pkg/registry/generic\nIDE 插件 VS-Code 的插件 vscode-ginkgo\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/language/golang/gmock/",
         "title": "GoMock",
         "tags": [],
@@ -180,6 +187,20 @@
         "tags": [],
         "description": "Jenkins 核心的 API",
         "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/slice/",
+        "title": "Slice",
+        "tags": [],
+        "description": "Slice",
+        "content": "  codes/golang/slice/main.go   package main import \u0026#34;fmt\u0026#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[\u0026#34;name\u0026#34;] = \u0026#34;link\u0026#34; fmt.Println(strMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = \u0026#34;one\u0026#34; array = append(array, \u0026#34;two\u0026#34;) array = append(array, \u0026#34;three\u0026#34;, \u0026#34;four\u0026#34;) others := []string{\u0026#34;1\u0026#34;, \u0026#34;2\u0026#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/language/golang/interface/",
+        "title": "Interface",
+        "tags": [],
+        "description": "Interface",
+        "content": " 定义 type InterfaceTypeName interface { Print() }  实现方法的区别 type Demo struct{} func (i InterfaceTypeName) Print(){} type Demo2 struct {} func (i *InterfaceTypeName) Print(){}  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/configuration/ini/",
@@ -1341,7 +1362,7 @@
         "title": "golang",
         "tags": [],
         "description": "golang",
-        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\n"
+        "content": " Environment 环境变量 GOROOT 是 Golang 的安装根目录\n环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：\n src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案\n设置全局代理 git config --global http.proxy 'http://192.168.2.9:8123'\n设置忽略的代理 git config --global no.proxy '*.github.com'\nTroubleshooting --oom-kill-disable=false\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/govendor/",
@@ -1501,7 +1522,7 @@
         "uri": "https://linuxsuren.github.io/blog/language/golang/install/",
         "title": "安装",
         "tags": [],
-        "description": "",
+        "description": "如何按照 Golang",
         "content": "CentOS yum install go -y\n"
     },
     {

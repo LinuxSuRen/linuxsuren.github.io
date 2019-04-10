@@ -228,6 +228,17 @@ dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl:
     </item>
     
     <item>
+      <title>Ginkgo</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/ginkgo/</link>
+      <pubDate>Fri, 04 Jan 2019 16:17:49 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/ginkgo/</guid>
+      <description>Ginkgo 是 Golang 的 BDD 测试框架
+执行测试 ginkgo test pkg/registry/generic
+IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
+    </item>
+    
+    <item>
       <title>GoMock</title>
       <link>https://linuxsuren.github.io/blog/language/golang/gmock/</link>
       <pubDate>Fri, 04 Jan 2019 16:17:15 +0800</pubDate>
@@ -272,6 +283,24 @@ curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最�
 curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
 curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
 插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F &amp;quot;name=@target/demo.hpi&amp;quot; 上传插件</description>
+    </item>
+    
+    <item>
+      <title>Slice</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/slice/</link>
+      <pubDate>Thu, 03 Jan 2019 10:38:18 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/slice/</guid>
+      <description>  codes/golang/slice/main.go   package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  </description>
+    </item>
+    
+    <item>
+      <title>Interface</title>
+      <link>https://linuxsuren.github.io/blog/language/golang/interface/</link>
+      <pubDate>Thu, 03 Jan 2019 10:15:44 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/language/golang/interface/</guid>
+      <description> 定义 type InterfaceTypeName interface { Print() }  实现方法的区别 type Demo struct{} func (i InterfaceTypeName) Print(){} type Demo2 struct {} func (i *InterfaceTypeName) Print(){}  </description>
     </item>
     
     <item>
@@ -1761,7 +1790,8 @@ ffmpeg -i input.</description>
 环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
  src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
-设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;</description>
+设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;
+Troubleshooting --oom-kill-disable=false</description>
     </item>
     
     <item>
