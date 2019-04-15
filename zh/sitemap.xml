@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/other/recommendation/video/</loc>
+    <lastmod>2019-04-15T12:18:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/other/scm/github/github-robot/</loc>
     <lastmod>2019-04-06T20:57:38+08:00</lastmod>
   </url>
@@ -457,12 +462,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
+    <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -579,12 +584,12 @@
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
+    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://linuxsuren.github.io/categories/k8s/</loc>
+    <loc>https://linuxsuren.github.io/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -970,7 +975,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
-    <lastmod>2019-04-06T20:57:38+08:00</lastmod>
+    <lastmod>2019-04-15T12:18:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -989,7 +994,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/other/recommendation/</loc>
-    <lastmod>2019-03-28T14:28:05+08:00</lastmod>
+    <lastmod>2019-04-15T12:18:24+08:00</lastmod>
   </url>
   
   <url>
