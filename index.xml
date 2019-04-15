@@ -300,7 +300,7 @@ curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText �
       <pubDate>Thu, 03 Jan 2019 10:38:18 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/slice/</guid>
-      <description>  codes/golang/slice/main.go   package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  </description>
+      <description>  codes/golang/slice/main.go   package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) initMap := map[string]string{ &amp;#34;one&amp;#34;: &amp;#34;first man&amp;#34;, } fmt.Println(initMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  </description>
     </item>
     
     <item>
