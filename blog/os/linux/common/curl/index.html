@@ -169,6 +169,17 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#get">GET</a></li>
+<li><a href="#post">POST</a></li>
+<li><a href="#管道">管道</a></li>
+<li><a href="#状态码">状态码</a></li>
+<li><a href="#输出格式">输出格式</a></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -238,15 +249,16 @@
 
 <p><code>curl -d &quot;param&quot; http://baidu.com</code></p>
 
-<p><code>curl -H &quot;Content-Type:applicatioin/json&quot; -X POST -d &quot;param&quot; http://baidu.com</code></p>
+<p><code>curl -H &quot;Content-Type:application/json&quot; -X POST -d &quot;param&quot; http://baidu.com</code></p>
 
-<p>curl &ndash;header &ldquo;Authorization: Bearer $token&rdquo; &ndash;insecure <a href="https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy">https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy</a> -X POST -H &ldquo;Content-Type:application/json&rdquo; &ndash;data &lsquo;{&ldquo;url&rdquo;:&ldquo;alauda/cronTabCheck?cronText=sdf&rdquo;}&rsquo;</p>
+<pre><code>curl --header &quot;Authorization: Bearer $token&quot; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &quot;Content-Type:application/json&quot; --data '{&quot;url&quot;:&quot;alauda/cronTabCheck?cronText=sdf&quot;}'
+</code></pre>
 
 <h1 id="管道">管道</h1>
 
 <p>我们可以通过 curl 下载并执行脚本，例如： <code>curl http://test.com/test.sh | bash -s arg1</code></p>
 
-<p>curl <a href="http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts">http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts</a> -F &ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&rdquo;</p>
+<p><code>curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &quot;chart=@jenkins-x-platform-0.0.1607.tgz&quot;</code></p>
 
 <h1 id="状态码">状态码</h1>
 

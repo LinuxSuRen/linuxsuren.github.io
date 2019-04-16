@@ -1721,10 +1721,9 @@ Reference vim-fugitive vim-scripts</description>
       <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
       <description> GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
-curl -H &amp;quot;Content-Type:applicatioin/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
-curl &amp;ndash;header &amp;ldquo;Authorization: Bearer $token&amp;rdquo; &amp;ndash;insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;ldquo;Content-Type:application/json&amp;rdquo; &amp;ndash;data &amp;lsquo;{&amp;ldquo;url&amp;rdquo;:&amp;ldquo;alauda/cronTabCheck?cronText=sdf&amp;rdquo;}&amp;rsquo;
-管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
-curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;ldquo;chart=@jenkins-x-platform-0.0.1607.tgz&amp;rdquo;
+curl -H &amp;quot;Content-Type:application/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
+curl --header &amp;quot;Authorization: Bearer $token&amp;quot; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;quot;Content-Type:application/json&amp;quot; --data &#39;{&amp;quot;url&amp;quot;:&amp;quot;alauda/cronTabCheck?cronText=sdf&amp;quot;}&#39;  管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;chart=@jenkins-x-platform-0.0.1607.tgz&amp;quot;
 状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
 输出格式 支持的变量包括：
  content_type filename_effective http_code http_connect http_version  </description>
