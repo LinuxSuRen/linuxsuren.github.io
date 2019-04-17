@@ -51,7 +51,7 @@ script { def approver = input id: &#39;approveId&#39;, message: &#39;need your a
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/approve/</guid>
       <description>这里介绍的是核准插件中的 API 使用。
- 该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。
+ 该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。另外，下面提到的 API 并不是基于 Restful 风格 编写的，实际上是以表单的方式来提交的。也就是说，需要在发送请求时，在协议头中加入 Content-Type: application/x-www-form-urlencoded
   通过 input 这个 DSL 支持接收参数。
 无参数 对于没有参数的情况，可以使用下面的两个 API 来核准。
 curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; -X POST  下面的 API 是直接无参数的调用
