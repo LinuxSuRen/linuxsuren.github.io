@@ -42,6 +42,20 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/api/open-api/",
+        "title": "OpenAPI",
+        "tags": [],
+        "description": "OpenAPI",
+        "content": " 类型约束 F0416 03:23:25.690611 1 openapi.go:40] Failed to register open api spec for root: non-body Restful parameter type should be a simple type, but got :  遇到这个错误，可以把复杂对象的数组变成为一个指针对象，然后，在对象里添加数组。\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/",
+        "title": "Multi Branch Pipeline",
+        "tags": [],
+        "description": "Multi Branch Pipeline",
+        "content": " 背景 通常的 Git 分支策略中，会有固定分支和临时分支。对于固定的，我们可以给每个分支都创建一条流水线。 但对于临时分支，有些团队的做法，会把分支作为参数。\n但实际上，单个代码仓库完全可以使用同一个流水线，也就是多分支流水线\n特点 支持基于一定的策略，扫描分支、PR、标签（tag），对符合过滤条件的会动态创建流水线。 当分支等被删除后，多分支流水线可以把之前创建出来的流水线删除。\n多分支流水线，本质上是存放流水线的容器（类似于文件夹）。\n缺点 对于 PR 的动态发现，目前只有GitHub 和 Bitbucket 支持。\n"
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/recommendation/video/",
         "title": "Video",
         "tags": [],
@@ -89,6 +103,13 @@
         "tags": [],
         "description": "孤儿插件",
         "content": "Jenkins 有众多的插件，但由于各种原因，有些插件的作者不再维护。如果你对这一类插件感兴趣，希望能继续维护下去的话，可以去认领。\n需要被认领的插件.\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-initialization/",
+        "title": "Jenkins Initialization",
+        "tags": [],
+        "description": "Jenkins Initialization",
+        "content": "你可以创建一个 Groovy 脚本文件，例如 $JENKINS_HOME/init.groovy 或者目录 $JENKINS_HOME/init.groovy.d/ 下的任意脚本 .grooy. 它就会在 Jenkins 启动后执行。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/",
@@ -278,6 +299,13 @@
         "tags": [],
         "description": "",
         "content": " 发布实验性版本的插件 查看可用的开发者指导\nTo simplify delivery of beta versions of plugins to interested users, the Jenkins project published an experimental update center. It will include alpha and beta versions of plugins, which aren’t usually included in the regular update sites.\n创建试验性创建版本 Plugin releases that contain alpha or beta in their version number will only show up in the experimental update site. Note that it also serves regular releases, so the release of version 1.4 will result in 1.3-beta-2 no longer being available.\n配置 Jenkins 使用试验性更新中心 Users who are interested in downloading experimental plugin releases can go to Plugin Manager, then to the Advanced tab, and configure the update center URL https://updates.jenkins.io/experimental/update-center.json. Save, and then select Check Now. Experimental plugin updates will be marked as such on the Available and Updates tabs of the Plugin Manager.\nOnce you install the beta plugins that you wanted, you can switch back to the default https://updates.jenkins.io/update-center.json update center URL.\noriginal link\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/api/",
+        "title": "API",
+        "tags": [],
+        "description": "API",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/awk/",
