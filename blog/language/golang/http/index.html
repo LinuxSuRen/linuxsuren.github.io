@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="72">
+<meta itemprop="wordCount" content="145">
 
 
 
@@ -257,9 +257,11 @@ import (
 	&#34;io/ioutil&#34;
 	&#34;net/http&#34;
 	&#34;net/url&#34;
+	&#34;strings&#34;
 )
 
 func main() {
+	test()
 	url := url.URL{
 		Host:   &#34;linuxsuren.github.io&#34;,
 		Path:   &#34;/index.json&#34;,
@@ -282,6 +284,37 @@ func main() {
 	}
 
 	fmt.Println(string(data))
+}
+
+func test() {
+	data := `json={&#34;parameter&#34;:[{&#34;name&#34;:&#34;name&#34;,&#34;value&#34;:&#34;bob&#34;},{&#34;name&#34;:&#34;age&#34;,&#34;value&#34;:&#34;12&#34;}]}`
+	inputURL := &amp;url.URL{
+		Host:   &#34;jenkins.k8s.surenpi.com&#34;,
+		Path:   &#34;job/demo/job/demo-input-request-3/6/input/6be09e0ef4dcfd27eb2c985c3cff02ae/proceed&#34;,
+		Scheme: &#34;http&#34;,
+	}
+	fmt.Println(data)
+	fmt.Println(inputURL)
+	formData := url.Values{&#34;json&#34;: {`{&#34;parameter&#34;:[{&#34;name&#34;:&#34;name&#34;,&#34;value&#34;:&#34;bob&#34;},{&#34;name&#34;:&#34;age&#34;,&#34;value&#34;:&#34;12&#34;}]}`}}
+	payload := strings.NewReader(formData.Encode())
+	fmt.Println(formData.Encode())
+	fmt.Println(payload)
+	fmt.Println(inputURL.String())
+	request, err := http.NewRequest(http.MethodPost, inputURL.String(), payload)
+	request.Header.Add(&#34;Content-Type&#34;, &#34;application/x-www-form-urlencoded&#34;)
+	request.SetBasicAuth(&#34;user&#34;, &#34;passwd&#34;)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		client := &amp;http.Client{}
+		resp, err := client.Do(request)
+		if err != nil {
+			fmt.Println(err)
+		} else {
+			data, _ := ioutil.ReadAll(resp.Body)
+			fmt.Println(string(data))
+		}
+	}
 }
 </code></pre>
 	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/masterstatic/codes/golang/http/main.go" title="See codes/golang/http/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See codes/golang/http/main.go source on GitHub">原文件<i class="icon-github"></i></a>
