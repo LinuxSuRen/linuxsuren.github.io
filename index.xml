@@ -96,7 +96,8 @@ curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;
       <pubDate>Thu, 28 Mar 2019 14:28:05 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</guid>
-      <description>dev.to X-lab 开放实验室阅读俱乐部</description>
+      <description>dev.to X-lab 开放实验室阅读俱乐部
+Code Cartoon</description>
     </item>
     
     <item>
