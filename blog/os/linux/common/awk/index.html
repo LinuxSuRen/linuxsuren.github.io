@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="10">
+<meta itemprop="wordCount" content="22">
 
 
 
@@ -169,6 +169,17 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li><a href="#列出第一列">列出第一列</a></li>
+<li><a href="#特殊字符">特殊字符</a>
+<ul>
+<li><a href="#冒号">冒号</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -233,6 +244,14 @@
 <h1 id="列出第一列">列出第一列</h1>
 
 <p><code>docker ps | grep hello | awk '{print $1}'</code></p>
+
+<h1 id="特殊字符">特殊字符</h1>
+
+<p>有些情况下，我们要打印出一些特殊字符，下面给出一些示例来。</p>
+
+<h2 id="冒号">冒号</h2>
+
+<p><code>docker images | grep jenkins | awk '{print $1&quot;:&quot;$2}'</code></p>
 
 </div>
 

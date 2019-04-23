@@ -312,7 +312,7 @@
         "title": "AWK",
         "tags": [],
         "description": "AWK",
-        "content": " 列出第一列 docker ps | grep hello | awk '{print $1}'\n"
+        "content": " 列出第一列 docker ps | grep hello | awk '{print $1}'\n特殊字符 有些情况下，我们要打印出一些特殊字符，下面给出一些示例来。\n冒号 docker images | grep jenkins | awk '{print $1\u0026quot;:\u0026quot;$2}'\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/",
