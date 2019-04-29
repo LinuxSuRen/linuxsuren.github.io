@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins UI | SuRenPi</title>
+    <title>Devops | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -20,6 +20,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       
 
+    <link rel="alternate" type="application/rss&#43;xml" href="https://linuxsuren.github.io/categories/devops/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" />
 <style>
   img.avatar {
@@ -27,22 +28,15 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins UI" />
-<meta property="og:description" content="Jenkins UI 介绍" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/" />
+<meta property="og:title" content="Devops" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://linuxsuren.github.io/categories/devops/" />
 
 
-<meta itemprop="name" content="Jenkins UI">
-<meta itemprop="description" content="Jenkins UI 介绍">
+<meta itemprop="name" content="Devops">
+<meta itemprop="description" content="">
 
-
-
-<meta itemprop="wordCount" content="123">
-
-
-
-<meta itemprop="keywords" content="" />
 
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
@@ -162,208 +156,12 @@
     
     <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
-<main>
-  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
-    <div class="flex-l">
-
-      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
-<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
-	
-		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#按钮">按钮</a></li>
-<li><a href="#下拉框">下拉框</a></li>
-<li><a href="#校验">校验</a></li>
-<li><a href="#凭据">凭据</a></li>
-<li><a href="#高级">高级</a></li>
-<li><a href="#静态资源文件">静态资源文件</a></li>
-<li><a href="#帮助信息">帮助信息</a></li>
-</ul>
-</nav>
-	
-
-	<div date-pref>
-		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-      <path transform="rotate(90 11.704999923706055,12.000000000000002) " d="m15.41,7.41l-1.41,-1.41l-6,6l6,6l1.41,-1.41l-4.58,-4.59l4.58,-4.59z" id="svg_1"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-		</a>
-
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins Plugin Dev Credentails ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-
-		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 帮助信息">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-	</div>
-
-</aside>
-</div>
-
-      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
-        <div class="documentation-copy center measure-wide-l">
-          <div id="readout" class="fixed right-0 bottom-0">
-          </div>
-          <header class="flex-none w-100">
-  
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins UI</h1>
-</header>
-
-<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-  
-    <div class="f4 fw4 lh-copy">
-      Jenkins UI 介绍
-    </div>
-  
-
   
   
-  
-</aside>
+  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
 
-
-
-<div class="prose" id="prose">
-
-
-
-<h1 id="按钮">按钮</h1>
-
-<pre><code>&lt;j:jelly  xmlns:f=&quot;/lib/form&quot;&gt;&lt;/j:jelly&gt;
-&lt;f:validateButton title=&quot;Test Connection&quot; method=&quot;verifyConnect&quot; with=&quot;server,credentialsId&quot; progress=&quot;Testing...&quot;&gt;&lt;/f:validateButton&gt;
-&lt;f:textbox/&gt;
-&lt;f:checkbox/&gt;
-</code></pre>
-
-<h1 id="下拉框">下拉框</h1>
-
-<p>在 <code>jelly</code> 文件添加如下标签：</p>
-
-<pre><code>&lt;f:entry field=&quot;method&quot; title=&quot;${%Method}&quot;&gt;
-    &lt;f:select/&gt;
-&lt;/f:entry&gt;
-</code></pre>
-
-<p>在对应的后端类的 <code>DescriptorImpl</code> 中添加如下方法：</p>
-
-<pre><code>public ListBoxModel doFillMethodItems() {
-    ListBoxModel listBoxModel = new ListBoxModel();
-    listBoxModel.add(HttpPost.METHOD_NAME);
-    listBoxModel.add(HttpGet.METHOD_NAME);
-    return listBoxModel;
-}
-</code></pre>
-
-<p>细心的童鞋肯定能看出来，<code>doFillMethodItems</code> 中间的 <code>Method</code> 就对应页面上的字段名称。</p>
-
-<h1 id="校验">校验</h1>
-
-<p>如果你的表单里有一个字段 <code>crontab</code> 希望能添加数据格式校验的话，可以在对应类的 <code>DescriptorImpl</code> 中添加方法来实现：</p>
-
-<pre><code>&lt;f:entry title=&quot;${%Crontab}&quot; field=&quot;crontab&quot;&gt;
-&lt;f:textbox/&gt;
-&lt;/f:entry&gt;
-</code></pre>
-
-<pre><code>public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) {
-    try {
-        CronTabList ctl = CronTabList.create(fixNull(value), item != null ? Hash.from(item.getFullName()) : null);
-        Collection&lt;FormValidation&gt; validations = new ArrayList&lt;&gt;();
-        updateValidationsForSanity(validations, ctl);
-        updateValidationsForNextRun(validations, ctl);
-        return FormValidation.aggregate(validations);
-    } catch (ANTLRException e) {
-        if (value.trim().indexOf('\n')==-1 &amp;&amp; value.contains(&quot;**&quot;))
-            return FormValidation.error(Messages.TimerTrigger_MissingWhitespace());
-        return FormValidation.error(e.getMessage());
-    }
-}
-</code></pre>
-
-<h1 id="凭据">凭据</h1>
-
-<pre><code>&lt;j:jelly xmlns:c=&quot;/lib/credentials&quot;&gt;
-&lt;c:select/&gt;
-&lt;/j:jelly&gt;
-</code></pre>
-
-<h1 id="高级">高级</h1>
-
-<p>当有些字段具有默认值，通常情况下也无需修改时，你可以把这些字段隐藏起来（只有点击高级选项的时候才会展示）。</p>
-
-<pre><code>&lt;f:advanced&gt;
-    &lt;f:entry field=&quot;format&quot; title=&quot;Format&quot;&gt;
-        &lt;f:textbox/&gt;
-    &lt;/f:entry&gt;
-&lt;/f:advanced&gt;
-</code></pre>
-
-<h1 id="静态资源文件">静态资源文件</h1>
-
-<p>当我们需要在 Jenkins 插件中添加静态文件时，可以把静态访问放到 <code>webapp</code> 下。然后，通过类似下面的地址访问：</p>
-
-<p><code>http://localhost:8080/jenkins/plugin/sample-plugin-id/test.css</code></p>
-
-<h1 id="帮助信息">帮助信息</h1>
-
-<p>如果想给你的页面添加帮助信息的话，可以<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/">参考这里</a>。</p>
-
-</div>
-
-
-<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-
-</aside>
-
-
-
-
-<script src="https://utteranc.es/client.js"
-        repo="linuxsuren/linuxsuren.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="linuxsuren"
-        async>
-</script>
-
-
-
-          
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-</ul>
-
-        </div>
-      </div>
-      <div class="order-0 w-20 dn db-l">
+  <div class="flex">
+    <div class="dn db-l w-20">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -559,33 +357,60 @@
   </ul>
 </nav>
 
-      </div>
+    </div>
+
+    <div class="w-100 w-80-l ph0 ph4-l">
+      <article class="w-100 nested-copy-line-height nested-links nested-img">
+        <h1 class="primary-color-dark f2">
+          Category: Devops
+        </h1>
+        <div class=" mid-gray f5 f4-l">
+          
+        </div>
+      </article>
+
+      
+
+      <div class="flex flex-wrap">
+        
+        <section class="flex-ns flex-wrap justify-between w-100">
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/blog/devops/jenkins/basic/jenkins/" class="link primary-color dim">Jenkins</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Jenkins 是一个开源的 CI 服务
+        
+
+        <a href="/blog/devops/jenkins/basic/jenkins/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
 
     </div>
-  </article>
 
-  <div id="backtotop"><a href="#"></a></div>
 
-  <div class="w-100 bg-light-gray">
-    <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Jenkins UI”
-  </a> was last updated: January 1, 0001
-</h6>
+  </div>
+</div>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui.md" class="
-f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
-" target="_blank">改善此页</a>
+          
+        </section>
+      </div>
 
       
 
 
     </div>
+
   </div>
-</main>
+
+</div>
 
     </main>
 

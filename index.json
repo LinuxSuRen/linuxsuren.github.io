@@ -427,6 +427,13 @@
         "content": " iPad 安装依赖的工具：\nadd-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa\n卸载应用 ideviceinstaller -U [bundleID]\n查看系统日志 idevicesyslog\n查看当前已连接的设备的UUID idevice_id --list\n截图 idevicescreenshot\n查看设备信息 videviceinfo\n获取设备时间 idevicedate\n参考 https://github.com/LinuxSuRen/libimobiledevice\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/categories/devops/",
+        "title": "Devops",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/",
         "title": "Directory",
         "tags": [],
@@ -672,6 +679,13 @@
         "content": " 200 300 400 401 未经授权：访问由于凭据无效被拒绝。\n404 无法找到页面\n500 Reference "
     },
     {
+        "uri": "https://linuxsuren.github.io/tags/helm/",
+        "title": "Helm",
+        "tags": [],
+        "description": "",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/editor/idea/",
         "title": "IDEA",
         "tags": [],
@@ -749,16 +763,9 @@
         "content": ""
     },
     {
-        "uri": "https://linuxsuren.github.io/categories/jenkins/",
-        "title": "Jenkins",
-        "tags": [],
-        "description": "",
-        "content": ""
-    },
-    {
         "uri": "https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/",
         "title": "Jenkins",
-        "tags": ["Jenkins"],
+        "tags": ["Docker", "Helm", "Kubernetes", "Jenkins"],
         "description": "Jenkins 是一个开源的 CI 服务",
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\nKubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\nJENKINS_HOME 我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 .jenkins。参数（-D 参数必须要在 -jar 之前）如下：\njava -DJENKINS_HOME=. -jar jenkins.war 或者 java -Duser.home=. -jar jenkins.war\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n向导 Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：\njava -Djenkins.install.runSetupWizard=false -jar jenkins.war\n用户 --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n公钥 访问下面的地址可以得到 Jenkins 的公钥：\nhttp://localhost:8080/instance-identity/\n"
     },
@@ -964,6 +971,13 @@
         "tags": [],
         "description": "Kubectl 的使用",
         "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\nPatch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某几个字段。如果，每次都使用 kubectl edit 命令操作的话，会比较麻烦。通过 kubectl 的子命令 patch 可以实现快速地实现这个过程。\n该命令，可以通过 json 或者 yaml 格式来对资源*打补丁*。下面，给出一个使用 json 的例子：\nkubectl patch deploy template -n namespace --patch '{\u0026quot;status\u0026quot;:{\u0026quot;phase\u0026quot;:\u0026quot;Pending\u0026quot;}}'\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/tags/kubernetes/",
+        "title": "Kubernetes",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "https://linuxsuren.github.io/categories/kubernetes/",

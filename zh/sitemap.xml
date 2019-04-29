@@ -298,6 +298,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/categories/devops/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</loc>
   </url>
   
@@ -442,6 +447,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/tags/helm/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/other/editor/idea/</loc>
   </url>
   
@@ -483,11 +493,6 @@
   
   <url>
     <loc>https://linuxsuren.github.io/tags/jenkins/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://linuxsuren.github.io/categories/jenkins/</loc>
     <priority>0</priority>
   </url>
   
@@ -615,6 +620,11 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://linuxsuren.github.io/tags/kubernetes/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
