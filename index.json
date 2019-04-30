@@ -1341,7 +1341,7 @@
         "title": "Vim",
         "tags": [],
         "description": "Vim",
-        "content": " 故障排除 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
+        "content": " 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：\n:set paste\n解除 paste 模式的命令如下：\n:set nopaste\n字符 :set invlist 显示不可见字符\n:set nolist 隐藏不可见字符\n样例配置 set number set incsearch set hlsearch set autoindent \u0026quot;set smartindent set autochdir set ignorecase \u0026quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab '把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax \u0026quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 \u0026quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/editor/vim/plugins/vim-fugitive/",

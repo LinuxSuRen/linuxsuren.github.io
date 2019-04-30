@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="75">
+<meta itemprop="wordCount" content="81">
 
 
 
@@ -169,6 +169,18 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#粘贴缩进错乱">粘贴缩进错乱</a></li>
+<li><a href="#字符">字符</a></li>
+<li><a href="#样例配置">样例配置</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -222,8 +234,6 @@
 
 
 
-<h1 id="故障排除">故障排除</h1>
-
 <h2 id="粘贴缩进错乱">粘贴缩进错乱</h2>
 
 <p>让 <code>vim</code> 进入 <code>paste</code> 模式，命令如下：</p>
@@ -234,7 +244,13 @@
 
 <p><code>:set nopaste</code></p>
 
-<h1 id="样例配置">样例配置</h1>
+<h2 id="字符">字符</h2>
+
+<p><code>:set invlist</code> 显示不可见字符</p>
+
+<p><code>:set nolist</code> 隐藏不可见字符</p>
+
+<h2 id="样例配置">样例配置</h2>
 
 <pre><code>set number
 set incsearch
