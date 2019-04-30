@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件开发 | SuRenPi</title>
+    <title>Unzip | SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,18 +27,20 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件开发" />
-<meta property="og:description" content="Jenkins 插件开发教程" />
+<meta property="og:title" content="Unzip" />
+<meta property="og:description" content="Unzip" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/" />
+<meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/unzip/" />
+<meta property="article:published_time" content="2019-04-30T15:26:05&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-30T15:26:05&#43;08:00"/>
+
+<meta itemprop="name" content="Unzip">
+<meta itemprop="description" content="Unzip">
 
 
-<meta itemprop="name" content="Jenkins 插件开发">
-<meta itemprop="description" content="Jenkins 插件开发教程">
-
-
-
-<meta itemprop="wordCount" content="43">
+<meta itemprop="datePublished" content="2019-04-30T15:26:05&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-30T15:26:05&#43;08:00" />
+<meta itemprop="wordCount" content="15">
 
 
 
@@ -172,14 +174,12 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#环境准备">环境准备</a></li>
-<li><a href="#创建工程">创建工程</a></li>
-<li><a href="#运行">运行</a></li>
-<li><a href="#访问">访问</a></li>
-<li><a href="#jenkins-版本选择">Jenkins 版本选择</a></li>
-<li><a href="#单元测试">单元测试</a></li>
-<li><a href="#发布">发布</a></li>
-<li><a href="#参考">参考</a></li>
+<li>
+<ul>
+<li><a href="#解压">解压</a></li>
+<li><a href="#列出压缩包中的文件">列出压缩包中的文件</a></li>
+<li><a href="#输入压缩包中的文件内容">输入压缩包中的文件内容</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -194,17 +194,9 @@
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 帮助信息 ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 插件扩展点">
+			<a href="https://linuxsuren.github.io/blog/os/linux/common/netcat/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Netcat">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -223,13 +215,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件开发</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Unzip</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins 插件开发教程
+      Unzip
     </div>
   
 
@@ -244,43 +236,17 @@
 
 
 
-<h1 id="环境准备">环境准备</h1>
+<h2 id="解压">解压</h2>
 
-<p>你需要安装好Java和Maven。</p>
+<p><code>unzip git.zip</code></p>
 
-<h1 id="创建工程">创建工程</h1>
+<h2 id="列出压缩包中的文件">列出压缩包中的文件</h2>
 
-<p>执行命令 <code>mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:</code>，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。</p>
+<p><code>unzip -l git.zip</code></p>
 
-<p>
+<h2 id="输入压缩包中的文件内容">输入压缩包中的文件内容</h2>
 
-<a href="https://github.com/jenkinsci/plugin-pom" target="_blank">插件工程的父 POM</a> 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。</p>
-
-<h1 id="运行">运行</h1>
-
-<p>在工程根目录下执行 <code>mvn hpi:run</code></p>
-
-<h1 id="访问">访问</h1>
-
-<p><code>http://localhost:8080/jenkins/</code></p>
-
-<h1 id="jenkins-版本选择">Jenkins 版本选择</h1>
-
-<p>理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的<a href="https://jenkins.io/download/">下载页面</a>找一个长期支持版本（LTS）。</p>
-
-<h1 id="单元测试">单元测试</h1>
-
-<p>Jenkins 官方提供了<a href="https://wiki.jenkins.io/display/JENKINS/Unit+Test">单元测试</a>相关的内容。</p>
-
-<h1 id="发布">发布</h1>
-
-<p><code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
-
-<p><code>mvn -Darguments=&quot;-DskipTests&quot; release:perform</code></p>
-
-<h1 id="参考">参考</h1>
-
-<p><a href="https://wiki.jenkins.io/display/JENKINS/Extend+Jenkins">Extend Jenkins</a></p>
+<p>我们可以把 zip 压缩包中的文件内容解压后读取，但也可以做到直接读取而无需解压 <code>unzip -c git.zip META-INF/MANIFEST.MF</code></p>
 
 </div>
 
@@ -303,21 +269,6 @@
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -527,14 +478,14 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/" class="hide-child link primary-color">
+  <a href="https://linuxsuren.github.io/blog/os/linux/common/unzip/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Jenkins 插件开发”
-  </a> was last updated: January 1, 0001
+    “Unzip”
+  </a> was last updated: April 30, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/os/linux/common/unzip.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

@@ -6,10 +6,21 @@
     <description>Recent content in Linux Common CLI on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 13 Jan 2019 19:33:01 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 15:26:05 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/blog/os/linux/common/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unzip</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/unzip/</link>
+      <pubDate>Tue, 30 Apr 2019 15:26:05 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/unzip/</guid>
+      <description>解压 unzip git.zip
+列出压缩包中的文件 unzip -l git.zip
+输入压缩包中的文件内容 我们可以把 zip 压缩包中的文件内容解压后读取，但也可以做到直接读取而无需解压 unzip -c git.zip META-INF/MANIFEST.MF</description>
+    </item>
     
     <item>
       <title>Netcat</title>
