@@ -1033,6 +1033,7 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
 然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 这种方式，方便简单，但是需要有 Java 环境。
 Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
+需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175
 挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts
 Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
 如果希望看到具体内容请查看这里。

@@ -38,7 +38,7 @@
 
 
 
-<meta itemprop="wordCount" content="134">
+<meta itemprop="wordCount" content="140">
 
 
 
@@ -288,6 +288,8 @@
 
 <p>用容器的方式来运行 Jenkins 也很方便。只要执行命令 <code>docker run -p 8080:8080 jenkins/jenkins:lts</code> 即可。</p>
 
+<p>需要每周更新版的话，直接加上版本号即可 <code>docker run -p 12345:8080 jenkins/jenkins:2.175</code></p>
+
 <p>挂载卷 <code>docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts</code></p>
 
 <h2 id="kubernetes">Kubernetes</h2>
@@ -380,13 +382,13 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
 	<li><a href="/blog/devops/jenkins/basic/jenkins-host/">Jenkins 插件托管</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 </ul>
 
