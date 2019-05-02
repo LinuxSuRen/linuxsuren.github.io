@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linuxsuren.github.io/en/blog/other/recommendation/learning-english/</loc>
+    <lastmod>2019-05-02T08:48:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://linuxsuren.github.io/blog/other/recommendation/learning-english/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://linuxsuren.github.io/en/blog/other/recommendation/learning-english/"
+                />
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/en/blog/devops/jenkins/api/core/</loc>
     <lastmod>2019-01-03T16:24:48+08:00</lastmod>
     <xhtml:link
@@ -19,7 +34,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/en/blog/</loc>
-    <lastmod>2019-01-03T16:24:48+08:00</lastmod>
+    <lastmod>2019-05-02T08:48:03+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -50,7 +65,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/en/</loc>
-    <lastmod>2019-01-03T16:24:48+08:00</lastmod>
+    <lastmod>2019-05-02T08:48:03+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
