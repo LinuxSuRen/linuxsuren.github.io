@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/sort/",
+        "title": "Sort",
+        "tags": [],
+        "description": "Sort",
+        "content": " 文件列表排序 使用降序对当前目录中的文件（夹）进行排序 ls | sort -r\n版本号 我们可以借助 sort 命令对版本号进行排序，只需要使用参数 -V 即可，下面的参数 -r 是降序的意思\necho \u0026quot;2.0 10.0 3.0\u0026quot; | sort -Vr  从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：\necho \u0026quot;v2.0 v10.0 v3.0\u0026quot; | sort -V  "
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/",
         "title": "English Abbreviations",
         "tags": [],
@@ -61,6 +68,20 @@
         "tags": [],
         "description": "介绍一些学习英语的技巧与资源",
         "content": " 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。\n网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：\n   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   Google no 支持很多种语言    "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/zip/",
+        "title": "Zip",
+        "tags": [],
+        "description": "Zip",
+        "content": " 删除文件 我们可以在不解压的前提下直接把压缩包中的文件删除 zip --delete demo.jar \u0026quot;**/*_zh_CN*\u0026quot;\n"
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/os/linux/common/shell-troubleshooting/",
+        "title": "Shell Troubleshooting",
+        "tags": [],
+        "description": "Shell Troubleshooting",
+        "content": " line 33: syntax error: unexpected end of file 通常情况下面，遇到这个问题，可能是由于换换行符导致的，我们可以通过执行下面的命令来解决：\ndos2unix yourfile.sh\n但是，如发现报错的行数根本不存在（没有那么多）的话，就可能是由于一些语法错误导致的。\n例如：if 对应的结束符是 fi，如果没有用对，就会报错。\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/unzip/",
@@ -1172,8 +1193,8 @@
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/shell/",
         "title": "Shell",
         "tags": [],
-        "description": "Shell",
-        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  "
+        "description": "Linux Shell 的基本介绍",
+        "content": " 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  if [ ! -d \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径\n$(dirname \u0026quot;${BASH_SOURCE[0]}\u0026quot;) 脚本所在的相对目录\n参数 Shell 脚本可以像其他的命令行一样接收参数\n   变量名称 解释     $1 第一个参数   $2 第二个参数   $@ 完整的参数列表   $# 参数个数    逻辑判断 if [[ \u0026quot;1\u0026quot; == \u0026quot;1\u0026quot; \u0026amp;\u0026amp; \u0026quot;2\u0026quot; == \u0026quot;2\u0026quot; ]]; then echo \u0026quot;equal\u0026quot; fi  循环 获取当前目录下的文件并循环打印出文件名：\nfor f in `ls`; do echo $f done  函数 我们可以在 shell 脚本中用下面的方式来定义函数：\nfunction_name(){ echo \u0026quot;hello\u0026quot; } function_name  "
     },
     {
         "uri": "https://linuxsuren.github.io/blog/other/codequality/sonarqube/",

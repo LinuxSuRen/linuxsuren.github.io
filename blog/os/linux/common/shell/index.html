@@ -28,17 +28,17 @@
   }
 </style>
 <meta property="og:title" content="Shell" />
-<meta property="og:description" content="Shell" />
+<meta property="og:description" content="Linux Shell 的基本介绍" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://linuxsuren.github.io/blog/os/linux/common/shell/" />
 
 
 <meta itemprop="name" content="Shell">
-<meta itemprop="description" content="Shell">
+<meta itemprop="description" content="Linux Shell 的基本介绍">
 
 
 
-<meta itemprop="wordCount" content="17">
+<meta itemprop="wordCount" content="115">
 
 
 
@@ -169,6 +169,23 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#下载并执行">下载并执行</a></li>
+<li><a href="#文件路径">文件路径</a></li>
+<li><a href="#文件是否存在">文件是否存在</a></li>
+<li><a href="#脚本相关">脚本相关</a></li>
+<li><a href="#参数">参数</a></li>
+<li><a href="#逻辑判断">逻辑判断</a></li>
+<li><a href="#循环">循环</a></li>
+<li><a href="#函数">函数</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -215,7 +232,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Shell
+      Linux Shell 的基本介绍
     </div>
   
 
@@ -230,17 +247,103 @@
 
 
 
-<h1 id="下载并执行">下载并执行</h1>
+<h2 id="下载并执行">下载并执行</h2>
 
 <p><code>curl http://test.com/test.sh | bash -s arg1 arg2</code></p>
 
-<h1 id="文件路径">文件路径</h1>
+<h2 id="文件路径">文件路径</h2>
 
 <p>从文件路径中提取文件名和目录</p>
 
 <pre><code>path=/var/www/1.log
 echo $(basename $path)
 echo $(dirname $path)
+</code></pre>
+
+<h2 id="文件是否存在">文件是否存在</h2>
+
+<pre><code>if [ ! -f &quot;env.sh&quot; ]; then
+    echo &quot;we need the env.sh to setup vars&quot;
+    exit -1
+else
+    echo &quot;file exists&quot;
+fi
+</code></pre>
+
+<pre><code>if [ ! -d &quot;env.sh&quot; ]; then
+    echo &quot;we need the env.sh to setup vars&quot;
+    exit -1
+else
+    echo &quot;file exists&quot;
+fi
+</code></pre>
+
+<h2 id="脚本相关">脚本相关</h2>
+
+<p><code>${BASH_SOURCE[0]}</code> 脚本所在的相对路径</p>
+
+<p><code>$(dirname &quot;${BASH_SOURCE[0]}&quot;)</code> 脚本所在的相对目录</p>
+
+<h2 id="参数">参数</h2>
+
+<p>Shell 脚本可以像其他的命令行一样接收参数</p>
+
+<table>
+<thead>
+<tr>
+<th>变量名称</th>
+<th>解释</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>$1</code></td>
+<td>第一个参数</td>
+</tr>
+
+<tr>
+<td><code>$2</code></td>
+<td>第二个参数</td>
+</tr>
+
+<tr>
+<td><code>$@</code></td>
+<td>完整的参数列表</td>
+</tr>
+
+<tr>
+<td><code>$#</code></td>
+<td>参数个数</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="逻辑判断">逻辑判断</h2>
+
+<pre><code>if [[ &quot;1&quot; == &quot;1&quot; &amp;&amp; &quot;2&quot; == &quot;2&quot; ]]; then
+        echo &quot;equal&quot;
+fi
+</code></pre>
+
+<h2 id="循环">循环</h2>
+
+<p>获取当前目录下的文件并循环打印出文件名：</p>
+
+<pre><code>for f in `ls`;
+do
+        echo $f
+done
+</code></pre>
+
+<h2 id="函数">函数</h2>
+
+<p>我们可以在 <code>shell</code> 脚本中用下面的方式来定义函数：</p>
+
+<pre><code>function_name(){
+    echo &quot;hello&quot;
+}
+function_name
 </code></pre>
 
 </div>

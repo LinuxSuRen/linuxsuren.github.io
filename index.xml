@@ -6,10 +6,22 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 May 2019 21:21:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 May 2019 09:30:25 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sort</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/sort/</link>
+      <pubDate>Sun, 05 May 2019 09:30:25 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/sort/</guid>
+      <description> 文件列表排序 使用降序对当前目录中的文件（夹）进行排序 ls | sort -r
+版本号 我们可以借助 sort 命令对版本号进行排序，只需要使用参数 -V 即可，下面的参数 -r 是降序的意思
+echo &amp;quot;2.0 10.0 3.0&amp;quot; | sort -Vr  从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
+echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V  </description>
+    </item>
     
     <item>
       <title>English Abbreviations</title>
@@ -39,6 +51,27 @@
       <description> 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
 网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
    名称 梯子 备注     BusinessDictionary no 商业相关的词汇   Google no 支持很多种语言    </description>
+    </item>
+    
+    <item>
+      <title>Zip</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/zip/</link>
+      <pubDate>Wed, 01 May 2019 00:45:56 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/zip/</guid>
+      <description>删除文件 我们可以在不解压的前提下直接把压缩包中的文件删除 zip --delete demo.jar &amp;quot;**/*_zh_CN*&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Shell Troubleshooting</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/shell-troubleshooting/</link>
+      <pubDate>Tue, 30 Apr 2019 21:50:19 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/shell-troubleshooting/</guid>
+      <description>line 33: syntax error: unexpected end of file 通常情况下面，遇到这个问题，可能是由于换换行符导致的，我们可以通过执行下面的命令来解决：
+dos2unix yourfile.sh
+但是，如发现报错的行数根本不存在（没有那么多）的话，就可能是由于一些语法错误导致的。
+例如：if 对应的结束符是 fi，如果没有用对，就会报错。</description>
     </item>
     
     <item>
@@ -1493,9 +1526,10 @@ PermitRootLogin no
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
-      <description> 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  </description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
+$(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</description>
     </item>
     
     <item>
