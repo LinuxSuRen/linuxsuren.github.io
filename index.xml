@@ -6,10 +6,29 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 May 2019 09:30:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 11:54:58 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Token</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/token/</link>
+      <pubDate>Tue, 07 May 2019 11:54:58 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/token/</guid>
+      <description>curl http://localhost:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken --header &amp;quot;Authorization: Basic `echo -n admin:1182fc5ef9b28a630986cb50c0319eb9d0 | base64`&amp;quot; -X POST -d &#39;newTokenName=name&#39;  返回的数据如下所示：
+{&amp;quot;status&amp;quot;:&amp;quot;ok&amp;quot;,&amp;quot;data&amp;quot;:{&amp;quot;tokenName&amp;quot;:&amp;quot;test&amp;quot;,&amp;quot;tokenUuid&amp;quot;:&amp;quot;3a07e7d7-c864-4474-bc3c-d217938e460e&amp;quot;,&amp;quot;tokenValue&amp;quot;:&amp;quot;1123acbf5d3e93e628a38dc0a671cf0194&amp;quot;}}  </description>
+    </item>
+    
+    <item>
+      <title>Pipeline</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/api/pipeline/</link>
+      <pubDate>Sun, 05 May 2019 10:26:05 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/pipeline/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Sort</title>

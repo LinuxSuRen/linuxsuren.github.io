@@ -42,6 +42,20 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/token/",
+        "title": "Token",
+        "tags": [],
+        "description": "Token",
+        "content": "curl http://localhost:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken --header \u0026quot;Authorization: Basic `echo -n admin:1182fc5ef9b28a630986cb50c0319eb9d0 | base64`\u0026quot; -X POST -d 'newTokenName=name'  返回的数据如下所示：\n{\u0026quot;status\u0026quot;:\u0026quot;ok\u0026quot;,\u0026quot;data\u0026quot;:{\u0026quot;tokenName\u0026quot;:\u0026quot;test\u0026quot;,\u0026quot;tokenUuid\u0026quot;:\u0026quot;3a07e7d7-c864-4474-bc3c-d217938e460e\u0026quot;,\u0026quot;tokenValue\u0026quot;:\u0026quot;1123acbf5d3e93e628a38dc0a671cf0194\u0026quot;}}  "
+    },
+    {
+        "uri": "https://linuxsuren.github.io/blog/devops/jenkins/api/pipeline/",
+        "title": "Pipeline",
+        "tags": [],
+        "description": "Pipeline",
+        "content": ""
+    },
+    {
         "uri": "https://linuxsuren.github.io/blog/os/linux/common/sort/",
         "title": "Sort",
         "tags": [],
