@@ -44,6 +44,15 @@
 
 <meta itemprop="keywords" content="k8s,plugin,docker,agent," />
 
+      <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5281185c68056bb7f9819259f3aaccc8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
   </head>
   <body class="ma0 sans-serif bg-primary-color-light">
     
@@ -314,25 +323,51 @@
 
     
     <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57548" target="_blank">JENKINS-57548</a>
+        </td>
+        <td>
+            Cannot use inheritFrom when PodTemplateContext exists
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Task</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57496" target="_blank">JENKINS-57496</a>
+        </td>
+        <td>
+            Can&#39;t use customized jenkins-jnlp images when added the Kubernetes Plugin 
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57449" target="_blank">JENKINS-57449</a>
+        </td>
+        <td>
+            Unable to use kubernetes agent block in declarative pipeline
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
         <td>Improvement</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57256" target="_blank">JENKINS-57256</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57380" target="_blank">JENKINS-57380</a>
         </td>
         <td>
-            Kubernetes plugin Windows agent support
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57214" target="_blank">JENKINS-57214</a>
-        </td>
-        <td>
-            NPE on getYaml when using Config-as-code
+            Set k8s labels on pod
         </td>
     </tr>
     
@@ -342,36 +377,10 @@
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57184" target="_blank">JENKINS-57184</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57352" target="_blank">JENKINS-57352</a>
         </td>
         <td>
-            Kubernetes Plugin inversely applies NodeSelector
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57155" target="_blank">JENKINS-57155</a>
-        </td>
-        <td>
-             Not able to connect to aws EKS 
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-57116" target="_blank">JENKINS-57116</a>
-        </td>
-        <td>
-            Version 1.15.1 does not create pods
+            Test connection fails and also unable to get K8s pods via Jenkins using service account
         </td>
     </tr>
     
@@ -513,7 +522,7 @@
 
 </table>
 
-一共：420个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：425个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -538,13 +547,13 @@
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
 </ul>
 
