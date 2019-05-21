@@ -181,7 +181,12 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#签名">签名</a></li>
+<li><a href="#修改pom文件">修改pom文件</a></li>
+<li><a href="#发布">发布</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -246,7 +251,7 @@
 
 <p>sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。</p>
 
-<h1 id="签名">签名</h1>
+<h2 id="签名">签名</h2>
 
 <p>参考这里安装gpg。完成后，按照下面的步骤生成密钥。</p>
 
@@ -294,7 +299,7 @@
 &lt;/profile&gt;
 </code></pre>
 
-<p>修改pom文件</p>
+<h2 id="修改pom文件">修改pom文件</h2>
 
 <pre><code>&lt;distributionManagement&gt;
     &lt;repository&gt;
@@ -395,8 +400,9 @@
 &lt;/profiles&gt;
 </code></pre>
 
-<p>发布
-经过上面繁琐的配置后，现在终于可以发布项目到Maven公共仓库了。</p>
+<h2 id="发布">发布</h2>
+
+<p>经过上面繁琐的配置后，现在终于可以发布项目到Maven公共仓库了。</p>
 
 <p>在项目根目录下（根据需要自行选择），执行命令mvn deploy</p>
 

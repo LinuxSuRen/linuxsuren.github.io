@@ -178,6 +178,23 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#命令">命令</a></li>
+<li><a href="#上传公钥">上传公钥</a></li>
+<li><a href="#接收公钥">接收公钥</a></li>
+<li><a href="#公钥服务器">公钥服务器</a></li>
+<li><a href="#加解密">加解密</a></li>
+<li><a href="#签名">签名</a></li>
+<li><a href="#异常">异常</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -239,7 +256,7 @@
 
 
 
-<h1 id="安装">安装</h1>
+<h2 id="安装">安装</h2>
 
 <p>Windows版本下载地址 <a href="https://www.gpg4win.org/download.html">https://www.gpg4win.org/download.html</a></p>
 
@@ -249,7 +266,7 @@
 
 <p>从 <a href="https://sourceforge.net/p/gpgosx/docu/Download/">https://sourceforge.net/p/gpgosx/docu/Download/</a> 下载 gpg2</p>
 
-<h1 id="命令">命令</h1>
+<h2 id="命令">命令</h2>
 
 <p><code>gpg --export-secret-key</code> 标识名 &gt; 导出文件名</p>
 
@@ -265,17 +282,17 @@
 
 <p><code>gpg --delete-key hello</code></p>
 
-<h1 id="上传公钥">上传公钥</h1>
+<h2 id="上传公钥">上传公钥</h2>
 
 <p><code>gpg --keyserver hkp://pool.sks-keyservers.net --send-key 1234567</code></p>
 
-<h1 id="接收公钥">接收公钥</h1>
+<h2 id="接收公钥">接收公钥</h2>
 
 <p><code>gpg --keyserver pool.sks-keyservers.net --recv-key 1234567</code></p>
 
 <p><code>gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 1234567</code> 搜索公钥</p>
 
-<h1 id="公钥服务器">公钥服务器</h1>
+<h2 id="公钥服务器">公钥服务器</h2>
 
 <p><code>hkp://pool.sks-keyservers.net</code></p>
 
@@ -283,7 +300,7 @@
 
 <p><code>hkp://keyserver.ubuntu.com</code></p>
 
-<h1 id="加解密">加解密</h1>
+<h2 id="加解密">加解密</h2>
 
 <p><code>gpg --recipient 1234567 --output a-encrypt.log --encrypt a.log</code> 加密文件</p>
 
@@ -291,7 +308,7 @@
 
 <p><code>gpg --decrypt a-encrypt.log</code> 解密文件</p>
 
-<h1 id="签名">签名</h1>
+<h2 id="签名">签名</h2>
 
 <p><code>gpg --sign a.log</code> 生成二进制签名文件 a.log.gpg</p>
 
@@ -305,7 +322,7 @@
 
 <p><code>gpg --local-user 1234567 --recipient 1234567 --armor --sign --encrypt a.log</code> 签名并加密</p>
 
-<h1 id="异常">异常</h1>
+<h2 id="异常">异常</h2>
 
 <pre><code>gpg: cannot open /dev/tty': No such device or address
 can't connect to /root/.gnupg/S.gpg-agent’: No such file or directory
