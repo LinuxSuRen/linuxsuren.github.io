@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://linuxsuren.github.io/blog/devops/team/jira/</loc>
+    <lastmod>2019-05-22T14:39:52+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxsuren.github.io/blog/devops/jenkins/api/token/</loc>
     <lastmod>2019-05-07T11:54:58+08:00</lastmod>
   </url>
@@ -830,6 +835,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/blog/devops/team/</loc>
+    <lastmod>2019-05-22T14:39:52+08:00</lastmod>
   </url>
   
   <url>
@@ -1060,7 +1066,7 @@
   
   <url>
     <loc>https://linuxsuren.github.io/</loc>
-    <lastmod>2019-05-07T11:54:58+08:00</lastmod>
+    <lastmod>2019-05-22T14:39:52+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

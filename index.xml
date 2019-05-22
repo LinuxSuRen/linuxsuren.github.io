@@ -6,10 +6,19 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2019 11:54:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 14:39:52 +0800</lastBuildDate>
     
 	<atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jira</title>
+      <link>https://linuxsuren.github.io/blog/devops/team/jira/</link>
+      <pubDate>Wed, 22 May 2019 14:39:52 +0800</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/team/jira/</guid>
+      <description>docker pull cptactionhank/atlassian-jira-software:latest</description>
+    </item>
     
     <item>
       <title>Token</title>
