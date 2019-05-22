@@ -193,7 +193,7 @@
         "title": "Git Config",
         "tags": [],
         "description": "Git Config",
-        "content": " 修改作者 git commit \u0026ndash;amend \u0026ndash;author=\u0026ldquo;Author Name name@email.com\u0026ldquo;\n修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可\n本地/全局 通过参数可以指定是对全局还是当前项目的修改\ngit config --local user.email \u0026lt;name@email.com\u0026gt;\ngit config --global user.email \u0026lt;name@email.com\u0026gt;\n"
+        "content": " 修改作者 git commit --amend --author=\u0026quot;Author Name \u0026lt;name@email.com\u0026gt;\u0026quot;\n修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可\n本地/全局 通过参数可以指定是对全局还是当前项目的修改\ngit config --local user.email \u0026lt;name@email.com\u0026gt;\ngit config --global user.email \u0026lt;name@email.com\u0026gt;\n"
     },
     {
         "uri": "https://linuxsuren.github.io/blog/language/golang/init/",
