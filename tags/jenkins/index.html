@@ -9,15 +9,22 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins | SuRenPi</title>
+    <title>Jenkins - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+
+    
+    <meta name="description" content="某个开源人的博客，记录开源路上的故事。">
+    
+    
+    <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
+    
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
      <meta name="generator" content="Hugo 0.54.0" />
 
       
-        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
     <link rel="alternate" type="application/rss&#43;xml" href="https://linuxsuren.github.io/tags/jenkins/index.xml">
@@ -38,6 +45,30 @@
 <meta itemprop="description" content="">
 
 
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4216293-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4216293-5');
+
+
+
+var trackOutboundLink = function(id, url) {
+  console.log("track:", id, url)
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': id,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+
+</script>
+
+      
       <script>
       var _hmt = _hmt || [];
       (function() {
