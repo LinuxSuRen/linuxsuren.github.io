@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>配置文件 on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/other/configuration/</link>
+    <link>http://surenpi.com/blog/other/configuration/</link>
     <description>Recent content in 配置文件 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/other/configuration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/other/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/other/configuration/ini/</link>
+      <link>http://surenpi.com/blog/other/configuration/ini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/configuration/ini/</guid>
+      <guid>http://surenpi.com/blog/other/configuration/ini/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/other/configuration/toml/</link>
+      <link>http://surenpi.com/blog/other/configuration/toml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/configuration/toml/</guid>
+      <guid>http://surenpi.com/blog/other/configuration/toml/</guid>
       <description>TOML TOML(Tom&amp;rsquo;s Obvious, Minimal Language) origin</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://linuxsuren.github.io/blog/other/configuration/yaml/</link>
+      <link>http://surenpi.com/blog/other/configuration/yaml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/configuration/yaml/</guid>
+      <guid>http://surenpi.com/blog/other/configuration/yaml/</guid>
       <description></description>
     </item>
     

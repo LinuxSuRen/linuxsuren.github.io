@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Team on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/team/</link>
+    <link>http://surenpi.com/blog/devops/team/</link>
     <description>Recent content in Team on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 22 May 2019 14:39:52 +0800</lastBuildDate>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/team/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/devops/team/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jira</title>
-      <link>https://linuxsuren.github.io/blog/devops/team/jira/</link>
+      <link>http://surenpi.com/blog/devops/team/jira/</link>
       <pubDate>Wed, 22 May 2019 14:39:52 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/team/jira/</guid>
+      <guid>http://surenpi.com/blog/devops/team/jira/</guid>
       <description>docker pull cptactionhank/atlassian-jira-software:latest</description>
     </item>
     
     <item>
       <title>Codes Vs Documents</title>
-      <link>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</link>
+      <link>http://surenpi.com/blog/devops/team/codes-vs-documents/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/team/codes-vs-documents/</guid>
+      <guid>http://surenpi.com/blog/devops/team/codes-vs-documents/</guid>
       <description>除了 API 文档（可以自动生成）以外，我们在项目中还经常需要一些说明性的文档。例如：描述项目的结构、快速入门等等。因此，我建议项目目录中，以某种目录结构来编写相应的 Markdown 文件来说明这些。</description>
     </item>
     
     <item>
       <title>Git Collaborate</title>
-      <link>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</link>
+      <link>http://surenpi.com/blog/devops/team/git-collaborate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/team/git-collaborate/</guid>
+      <guid>http://surenpi.com/blog/devops/team/git-collaborate/</guid>
       <description>几乎所有的团队都有自己的沟通系统（工具），像 Jira、Kanban、微信、钉钉等等。而我现在要说的是像 GitHub、Gitlab 等 Git 服务提供的 PR。代码 Review 是件好事情，这一点很多人都认同，但是很明显的痛点在于——这样可能会比较耗时。
 大家不一定能够在看到邮件、钉钉等的消息后，就立刻去做 Review，因此，很多时候就会忘记从而导致这个过程加长。
 如果，能够给每个项目都指定一些必须要进行 Review 的人员，然后，自动地把 PR 的 Review 需求加到像 Jira 这样的任务跟踪系统中的。对，关键点就在于把 Review 也正式地当作工作任务的一部分。
@@ -43,10 +43,10 @@
     
     <item>
       <title>Team Building</title>
-      <link>https://linuxsuren.github.io/blog/devops/team/team-building/</link>
+      <link>http://surenpi.com/blog/devops/team/team-building/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/team/team-building/</guid>
+      <guid>http://surenpi.com/blog/devops/team/team-building/</guid>
       <description>做很多事情，都是需要一个团队的。我主要介绍的是如何才能打造一个有自己文化的越来越好的软件研发团队。这里涉及到了三个问题：为什么需要打造、什么是团队文化、好团队的标准。
 打造 首先，我不认为花钱把一堆人招聘过来，然后每天拼命地加班干活，就算是一个团队了。尤其对于新组建，或者是队伍中新加入的成员比较多的情况，“团队建设”就是一件非常重要的事情。对，我认为团队是“建设”起来的，而不是“买”来，更加不是通过“伞兵空降”来的。而建设这个词，大家应该多少有点认识吧，绝非是一朝一夕来的——即使是3D打印技术也是要一个一个部件来打印的。
 一把好剑，是打铁匠一锤一锤地用心打造出来的。这样的剑，锋利无比；这样的剑，能在关键时刻发挥应有的作用；这样的剑，是受众人的肯定的。一个好的团队，同样是需要Leader带领每个成员一同打造的。这样的团队中，每个成员之间都不仅仅是工作和任务的关系；这样的团队中，每个成员都是有其重要的位置；这样的团队中，每个成员都尽可能快乐地得到成长；这样的团队中，每个成员都是在积极主动地向前奔跑；这样的团队中，自己的文化不会丢失。

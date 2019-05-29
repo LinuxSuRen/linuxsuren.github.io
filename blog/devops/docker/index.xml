@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>容器技术 on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/docker/</link>
+    <link>http://surenpi.com/blog/devops/docker/</link>
     <description>Recent content in 容器技术 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/devops/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker Daemon</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-daemon/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-daemon/</guid>
       <description>API 通过命令 /usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:1234 启动 Docker Daemon 的话，可以设置 API 的访问。
 Docker Version vs API Version</description>
     </item>
     
     <item>
       <title>Docker Mirror</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-mirror/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-mirror/</guid>
       <description>vim /etc/docker/daemon.json
 { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] }  或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
 或者，在文件 /etc/default/docker 中添加如下配置：
@@ -34,30 +34,30 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
     
     <item>
       <title>Docker Operation</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-oper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-oper/</guid>
       <description>Filter Images 当前支持的过滤如下：
  dangling（布尔值，true 或 false） label（label= 或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
     </item>
     
     <item>
       <title>Docker api</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-api/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-api/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-api/</guid>
       <description>获取 Token：
 curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
     </item>
     
     <item>
       <title>Docker 命令</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker/</guid>
       <description>拉取镜像 docker pull jenkins/jnlp-slave:alpine
 docker pull hub.alauda.cn/jenkins-jnlp-slave
 启动 自启动 当 Docker 服务启动后，默认情况下，所有的容器都不会启动。如果在每次启动时 Docker 服务时，自动启动容器，可以通过添加下面的参数实现：
@@ -76,10 +76,10 @@ docker run jenkins --name ci-jenkins
     
     <item>
       <title>Docker 时间设置</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-time/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-time/</guid>
       <description>通过如下配置，就可以实现对容器内的时区设置：
 ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone  Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
 docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
@@ -87,10 +87,10 @@ docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot
     
     <item>
       <title>Docker 镜像管理</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-image/</guid>
       <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune
 修改 Docker 镜像可以和 Git 一样，进行修改，然后重新推送回去。
 首先，运行一个镜像 docker run -it demo:v1.0 bash
@@ -101,10 +101,10 @@ docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot
     
     <item>
       <title>Dockerfile</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</link>
+      <link>http://surenpi.com/blog/devops/docker/dockerfile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/dockerfile/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/dockerfile/</guid>
       <description>基础镜像 如果没有特殊要求的话，建议尽可能选择较小的基础镜像。例如：alpine。您可以参考下面的 Dockerfile 写法：
 FROM alpine:3.8
 Proxy 如果执行 Docker 构建时，需要设置网络代理的化，可以在 Dockerfile 中添加下面的指令：
@@ -119,20 +119,20 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     
     <item>
       <title>Install Docker</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-ubuntu-install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-ubuntu-install/</guid>
       <description>查看可用的版本 apt-cache madison docker-ce
 安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
     </item>
     
     <item>
       <title>在 CentOS 安装 Docker</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-centos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-centos/</guid>
       <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine  安装依赖：
 yum install -y yum-utils \ device-mapper-persistent-data \ lvm2  添加库
 yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo  查看版本 yum list docker-ce --showduplicates | sort -r
@@ -141,10 +141,10 @@ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docke
     
     <item>
       <title>配置</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
+      <link>http://surenpi.com/blog/devops/docker/docker-config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
+      <guid>http://surenpi.com/blog/devops/docker/docker-config/</guid>
       <description>代理 给 Docker 设置代理
 创建目录 mkdir /etc/systemd/system/docker.service.d
 编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf

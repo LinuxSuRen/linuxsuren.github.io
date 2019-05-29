@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/k8s/</link>
+    <link>http://surenpi.com/blog/devops/k8s/</link>
     <description>Recent content in Kubernetes on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/k8s/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/devops/k8s/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ake</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/ake/</link>
+      <link>http://surenpi.com/blog/devops/k8s/ake/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/ake/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/ake/</guid>
       <description> 更新依赖 执行命令 yum upgrade libsepol libsemanage libselinux libsemanage libselinux audit-libs
 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
 安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
@@ -26,10 +26,10 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
     
     <item>
       <title>ApiServer</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</link>
+      <link>http://surenpi.com/blog/devops/k8s/apiserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/apiserver/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/apiserver/</guid>
       <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
 执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
 认证 首先，需要从 Secret 中获取 Token，参考命令如下：
@@ -42,10 +42,10 @@ curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorizatio
     
     <item>
       <title>Ingress</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/ingress/</link>
+      <link>http://surenpi.com/blog/devops/k8s/ingress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/ingress/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/ingress/</guid>
       <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
 Rewrite Ingress 支持地址重写，具体请查看参考。
 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
@@ -55,10 +55,10 @@ ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kuber
     
     <item>
       <title>K8S 证书</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/cert/</link>
+      <link>http://surenpi.com/blog/devops/k8s/cert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/cert/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/cert/</guid>
       <description>根证书公钥(ca.pem)与私钥(ca-key.pem)
 API Server 公钥和私钥
 集群管理员公钥和私钥
@@ -69,10 +69,10 @@ API Server 公钥和私钥
     
     <item>
       <title>Kubectl</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</link>
+      <link>http://surenpi.com/blog/devops/k8s/kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/kubectl/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/kubectl/</guid>
       <description>查看集群信息 kubectl cluster-info
 下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
 切换上下文 kubectl config use-context dev
@@ -87,10 +87,10 @@ Delete pod kubectl get pods -a | grep Error | cut -d&#39; &#39; -f 1 | xargs kub
     
     <item>
       <title>Minikube</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/minikube/</link>
+      <link>http://surenpi.com/blog/devops/k8s/minikube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/minikube/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/minikube/</guid>
       <description>下载 wget https://github.com/kubernetes/minikube/releases/download/v0.26.1/minikube-linux-amd64
 然后，添加可执行权限并移动到执行目录下：
 chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/local/bin/minikue
@@ -99,10 +99,10 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
     
     <item>
       <title>安装 Kubernetes</title>
-      <link>https://linuxsuren.github.io/blog/devops/k8s/install/</link>
+      <link>http://surenpi.com/blog/devops/k8s/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/k8s/install/</guid>
+      <guid>http://surenpi.com/blog/devops/k8s/install/</guid>
       <description>启用 Docker 服务 systemctl enable docker.service
 安装 go 依赖 go get github.com/kubernetes-incubator/cri-tools/cmd/crictl
 安装客户端

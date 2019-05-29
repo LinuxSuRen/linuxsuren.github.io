@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Common CLI on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/os/linux/common/</link>
+    <link>http://surenpi.com/blog/os/linux/common/</link>
     <description>Recent content in Linux Common CLI on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 05 May 2019 09:30:25 +0800</lastBuildDate>
     
-	<atom:link href="https://linuxsuren.github.io/blog/os/linux/common/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/os/linux/common/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sort</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/sort/</link>
+      <link>http://surenpi.com/blog/os/linux/common/sort/</link>
       <pubDate>Sun, 05 May 2019 09:30:25 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/sort/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/sort/</guid>
       <description> 文件列表排序 使用降序对当前目录中的文件（夹）进行排序 ls | sort -r
 版本号 我们可以借助 sort 命令对版本号进行排序，只需要使用参数 -V 即可，下面的参数 -r 是降序的意思
 echo &amp;quot;2.0 10.0 3.0&amp;quot; | sort -Vr  从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
@@ -25,19 +25,19 @@ echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V  </description>
     
     <item>
       <title>Zip</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/zip/</link>
+      <link>http://surenpi.com/blog/os/linux/common/zip/</link>
       <pubDate>Wed, 01 May 2019 00:45:56 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/zip/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/zip/</guid>
       <description>删除文件 我们可以在不解压的前提下直接把压缩包中的文件删除 zip --delete demo.jar &amp;quot;**/*_zh_CN*&amp;quot;</description>
     </item>
     
     <item>
       <title>Shell Troubleshooting</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/shell-troubleshooting/</link>
+      <link>http://surenpi.com/blog/os/linux/common/shell-troubleshooting/</link>
       <pubDate>Tue, 30 Apr 2019 21:50:19 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/shell-troubleshooting/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/shell-troubleshooting/</guid>
       <description>line 33: syntax error: unexpected end of file 通常情况下面，遇到这个问题，可能是由于换换行符导致的，我们可以通过执行下面的命令来解决：
 dos2unix yourfile.sh
 但是，如发现报错的行数根本不存在（没有那么多）的话，就可能是由于一些语法错误导致的。
@@ -46,10 +46,10 @@ dos2unix yourfile.sh
     
     <item>
       <title>Unzip</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/unzip/</link>
+      <link>http://surenpi.com/blog/os/linux/common/unzip/</link>
       <pubDate>Tue, 30 Apr 2019 15:26:05 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/unzip/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/unzip/</guid>
       <description>解压 unzip git.zip
 列出压缩包中的文件 unzip -l git.zip
 输入压缩包中的文件内容 我们可以把 zip 压缩包中的文件内容解压后读取，但也可以做到直接读取而无需解压 unzip -c git.zip META-INF/MANIFEST.MF</description>
@@ -57,19 +57,19 @@ dos2unix yourfile.sh
     
     <item>
       <title>Netcat</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/netcat/</link>
+      <link>http://surenpi.com/blog/os/linux/common/netcat/</link>
       <pubDate>Sun, 13 Jan 2019 19:33:01 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/netcat/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/netcat/</guid>
       <description>nc -l 9090 启动一个监听指定端口的服务</description>
     </item>
     
     <item>
       <title>AWK</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/awk/</link>
+      <link>http://surenpi.com/blog/os/linux/common/awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/awk/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/awk/</guid>
       <description>列出第一列 docker ps | grep hello | awk &#39;{print $1}&#39;
 特殊字符 有些情况下，我们要打印出一些特殊字符，下面给出一些示例来。
 冒号 docker images | grep jenkins | awk &#39;{print $1&amp;quot;:&amp;quot;$2}&#39;</description>
@@ -77,20 +77,20 @@ dos2unix yourfile.sh
     
     <item>
       <title>Base64</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/base64/</link>
+      <link>http://surenpi.com/blog/os/linux/common/base64/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/base64/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/base64/</guid>
       <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
 解密 echo MTIzNA== | base64 --d</description>
     </item>
     
     <item>
       <title>Connect to Mobile</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/mobile/</link>
+      <link>http://surenpi.com/blog/os/linux/common/mobile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/mobile/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/mobile/</guid>
       <description>iPad 安装依赖的工具：
 add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledevice-utils apt-get install ideviceinstaller  安装应用 ideviceinstaller -i xxx.ipa
 卸载应用 ideviceinstaller -U [bundleID]
@@ -104,10 +104,10 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     
     <item>
       <title>Find</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/find/</link>
+      <link>http://surenpi.com/blog/os/linux/common/find/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/find/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/find/</guid>
       <description>查找大文件 find / -type f -size +500M 这里的 f 指的是文件类型，并且，大于500M的。而且，字母 M 是大写。
 查找文件夹 find ~ -type d -name jx
 查找并执行命令 find . -name *.java | xargs echo 查找完后执行
@@ -116,10 +116,10 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
     
     <item>
       <title>GPG</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/gpg/</link>
+      <link>http://surenpi.com/blog/os/linux/common/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/gpg/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/gpg/</guid>
       <description>安装 Windows版本下载地址 https://www.gpg4win.org/download.html
 Ubuntu下安装 sudo apt-get install gpg -y
 Mac下安装 brew install gpg 或者从 https://gpgtools.org/ 下载
@@ -140,28 +140,28 @@ hkp://subkeys.gpg.net</description>
     
     <item>
       <title>Linux Service</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/service/</link>
+      <link>http://surenpi.com/blog/os/linux/common/service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/service/</guid>
       <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac  </description>
     </item>
     
     <item>
       <title>MPlayer</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</link>
+      <link>http://surenpi.com/blog/os/linux/common/mplayer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/mplayer/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/mplayer/</guid>
       <description>音频 只播放音频 mplayer -vo sample.mp4</description>
     </item>
     
     <item>
       <title>SSDH</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/sshd/</link>
+      <link>http://surenpi.com/blog/os/linux/common/sshd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/sshd/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/sshd/</guid>
       <description>禁止root用户远程登录 修改sshd配置文件 /etc/ssh/sshd_config
 PermitRootLogin no
 然后重启服务 service ssh restart</description>
@@ -169,10 +169,10 @@ PermitRootLogin no
     
     <item>
       <title>SSH</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/ssh/</link>
+      <link>http://surenpi.com/blog/os/linux/common/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/ssh/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/ssh/</guid>
       <description>配置文件 vim /etc/ssh/sshd_config
 允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
 无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
@@ -183,10 +183,10 @@ PermitRootLogin no
     
     <item>
       <title>Shell</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/shell/</link>
+      <link>http://surenpi.com/blog/os/linux/common/shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/shell/</guid>
       <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
 path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
@@ -195,20 +195,20 @@ $(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</de
     
     <item>
       <title>TR</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/tr/</link>
+      <link>http://surenpi.com/blog/os/linux/common/tr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/tr/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/tr/</guid>
       <description>cat .m2/settings.xml | tr -s [:blank:] 清除空白字符
 echo abc | tr a-z A-Z 大小写转换</description>
     </item>
     
     <item>
       <title>curl</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/curl/</link>
+      <link>http://surenpi.com/blog/os/linux/common/curl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/curl/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/curl/</guid>
       <description> GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
 curl -H &amp;quot;Content-Type:application/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
@@ -221,19 +221,19 @@ curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;ch
     
     <item>
       <title>echo</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/echo/</link>
+      <link>http://surenpi.com/blog/os/linux/common/echo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/echo/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/echo/</guid>
       <description>参数 -n 不换行</description>
     </item>
     
     <item>
       <title>ffmpeg</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</link>
+      <link>http://surenpi.com/blog/os/linux/common/ffmpeg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/ffmpeg/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/ffmpeg/</guid>
       <description>静态水印 ffmpeg -y -i movieFile -vf &amp;quot;movie=watermark.png [watermark]; [in][watermark] overlay=x:y:opaque [out]&amp;quot; movieWatermark.mp4
 ffmpeg -i jenkins.mov -i watermark.png -filter_complex &amp;quot;overlay=10:10&amp;quot; jenkins.mp4
 动态水印 ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration -filter_complex overlay=0:0:1 movieGifFile
@@ -249,47 +249,47 @@ ffmpeg -i input.</description>
     
     <item>
       <title>grep</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/grep/</link>
+      <link>http://surenpi.com/blog/os/linux/common/grep/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/grep/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/grep/</guid>
       <description>反向查找 查找不包含特定字符的数据 ps -ef | grep -v running</description>
     </item>
     
     <item>
       <title>sed</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/sed/</link>
+      <link>http://surenpi.com/blog/os/linux/common/sed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/sed/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/sed/</guid>
       <description>cat .m2/settings.xml | sed s/[[:space:]]//g 清除空白字符</description>
     </item>
     
     <item>
       <title>split</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/split/</link>
+      <link>http://surenpi.com/blog/os/linux/common/split/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/split/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/split/</guid>
       <description>切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-
 合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* &amp;gt; minikube.iso</description>
     </item>
     
     <item>
       <title>telnet</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/telnet/</link>
+      <link>http://surenpi.com/blog/os/linux/common/telnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/telnet/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/telnet/</guid>
       <description>退出 首先，按下 Ctrl+] 然后输入 \q 后，按下回车即可退出 Telnet。</description>
     </item>
     
     <item>
       <title>user</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/user/</link>
+      <link>http://surenpi.com/blog/os/linux/common/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/user/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/user/</guid>
       <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
 useradd user-name --home /home/user-name --create-home
 su user-name
@@ -298,10 +298,10 @@ userdel user-name</description>
     
     <item>
       <title>wget</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/wget/</link>
+      <link>http://surenpi.com/blog/os/linux/common/wget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/wget/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/wget/</guid>
       <description>代理 通过命令参数设置代理 wget https://google.com -e &amp;quot;https_proxy=http://localhost:1234&amp;quot;
 为了方便使用，我们可以为 wget 添加一个别名，如下所示：
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
@@ -313,30 +313,30 @@ wget各种选项分类列表
     
     <item>
       <title>xargs</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/xargs/</link>
+      <link>http://surenpi.com/blog/os/linux/common/xargs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/xargs/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/xargs/</guid>
       <description>docker images | grep nginx | awk &#39;{print $3}&#39; | xargs docker rmi 删除包含指定字符的 Docker 镜像
 参数 ls | xargs -I {} mv {} {}.bak 多次使用参数</description>
     </item>
     
     <item>
       <title>xclip</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/xclip/</link>
+      <link>http://surenpi.com/blog/os/linux/common/xclip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/xclip/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/xclip/</guid>
       <description>Install sudo apt-get install xclip
 Example ifconfig | xclip -sel clip</description>
     </item>
     
     <item>
       <title>命令提示符</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
+      <link>http://surenpi.com/blog/os/linux/common/prompting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
+      <guid>http://surenpi.com/blog/os/linux/common/prompting/</guid>
       <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
 export PS1=&#39;[/u@/h /W/]/$ &#39;
 \u 当前用户帐号

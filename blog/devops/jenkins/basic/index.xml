@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jenkins Basic on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/</link>
+    <link>http://surenpi.com/blog/devops/jenkins/basic/</link>
     <description>Recent content in Jenkins Basic on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 26 Mar 2019 14:35:09 +0800</lastBuildDate>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jenkins Initialization</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-initialization/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-initialization/</link>
       <pubDate>Tue, 26 Mar 2019 14:35:09 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-initialization/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-initialization/</guid>
       <description>你可以创建一个 Groovy 脚本文件，例如 $JENKINS_HOME/init.groovy 或者目录 $JENKINS_HOME/init.groovy.d/ 下的任意脚本 .grooy. 它就会在 Jenkins 启动后执行。</description>
     </item>
     
     <item>
       <title>Jenkins 调试</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</guid>
       <description>mvn jenkins-dev:run
 mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
 java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
@@ -37,10 +37,10 @@ JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y<
     
     <item>
       <title>Jenkins 培训</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/course/</link>
       <pubDate>Thu, 03 Jan 2019 22:50:02 +0800</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/course/</guid>
       <description>class: center, middle
 Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线 API  计算节点管理  静态 动态   大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施   安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
  安装手册 Docker  插件管理  介绍 仓库 托管  计算节点管理  节点类型  固定 动态（虚拟机、Docker、Kubernetes）  通道  SSH JNLP  标签（label）  表达式   流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
@@ -48,10 +48,10 @@ Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器
     
     <item>
       <title>Jenkins</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
   War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
@@ -69,10 +69,10 @@ KubeApps 上也可以找到 Jenkins
     
     <item>
       <title>Jenkins Agent</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-agent/</guid>
       <description>Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。
 默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。
 Jenkins 的节点，通常可以配置如下属性：
@@ -86,10 +86,10 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
     
     <item>
       <title>Jenkins 插件托管</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/</guid>
       <description>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。
 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
 提交请求 详细阅读托管要求
@@ -104,10 +104,10 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
     
     <item>
       <title>Jenkins 标签</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/</guid>
       <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
     </item>
     

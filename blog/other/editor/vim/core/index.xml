@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VIM core on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/other/editor/vim/core/</link>
+    <link>http://surenpi.com/blog/other/editor/vim/core/</link>
     <description>Recent content in VIM core on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/other/editor/vim/core/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/other/editor/vim/core/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Auto complete</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-auto-complete/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-auto-complete/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-auto-complete/</guid>
       <description>Ctrl+X+P 整行
 Ctrl+X+N 当前文件
 Ctrl+X+K 字典
@@ -25,10 +25,10 @@ Ctrl+X+F 文件名</description>
     
     <item>
       <title>Directory</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-dir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-dir/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-dir/</guid>
       <description>:pwd 查看当前目录
 :cd %:p:h 切换目录到当前文件所在目录
 :lcd %:p:h 切换当前窗口的目录到当前文件所在目录</description>
@@ -36,10 +36,10 @@ Ctrl+X+F 文件名</description>
     
     <item>
       <title>VIM Buffer</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-buffer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-buffer/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-buffer/</guid>
       <description>:ls 或 :buffers 列出所有的缓冲区
 :b 1 切换到指定编号的缓冲区
 :sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口</description>
@@ -47,10 +47,10 @@ Ctrl+X+F 文件名</description>
     
     <item>
       <title>VIM Command</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-cmd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-cmd/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-cmd/</guid>
       <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符
 dd 删除当前行 D 删除当前字符后的文本
 dw 删除当前单词
@@ -74,20 +74,20 @@ ctrl+x 数字-1
     
     <item>
       <title>VIM Network</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-network/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-network/</guid>
       <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/
 Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     </item>
     
     <item>
       <title>VIM Replace</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-regex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-regex/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-regex/</guid>
       <description>简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]
 全局文本替换 :[range]g[lobal]/{pattern}/[cmd]
 :[range]g[lobal]!/{pattern}/[cmd]
@@ -107,10 +107,10 @@ Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     
     <item>
       <title>VIM tab</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim-tab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim-tab/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim-tab/</guid>
       <description>:tabnew a.log 新建选项卡
 :tabNext 切换到下一个选项卡
 :tabprevious 切换到上一个选项卡
@@ -119,10 +119,10 @@ Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
     
     <item>
       <title>Vim</title>
-      <link>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</link>
+      <link>http://surenpi.com/blog/other/editor/vim/core/vim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/other/editor/vim/core/vim/</guid>
+      <guid>http://surenpi.com/blog/other/editor/vim/core/vim/</guid>
       <description> 粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：
 :set paste
 解除 paste 模式的命令如下：

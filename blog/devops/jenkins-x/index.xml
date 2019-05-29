@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jenkins X on SuRenPi</title>
-    <link>https://linuxsuren.github.io/blog/devops/jenkins-x/</link>
+    <link>http://surenpi.com/blog/devops/jenkins-x/</link>
     <description>Recent content in Jenkins X on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/blog/devops/jenkins-x/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/blog/devops/jenkins-x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</link>
+      <link>http://surenpi.com/blog/devops/jenkins-x/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/install/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins-x/install/</guid>
       <description>预备 Jenkins X 是基于容器化来实现的 CI/CD 平台，因此，我们首先需要搭建 Kubernetes 环境。
 安装依赖 安装 Git yum install git -y 安装 Maven yum install maven -y
 sudo apt-get install maven make -y
@@ -28,10 +28,10 @@ sudo apt-get install maven make -y
     
     <item>
       <title>Jenkins X</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</link>
+      <link>http://surenpi.com/blog/devops/jenkins-x/jenkins-x/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins-x/jenkins-x/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins-x/jenkins-x/</guid>
       <description>添加 Gitee 为 Git 服务器
 jx create git server gitea http://localhost:10080
 DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker info | grep &amp;quot;Storage Driver&amp;quot; 查看 Docker 当前支持的类型。

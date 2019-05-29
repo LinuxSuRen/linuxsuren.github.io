@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on SuRenPi</title>
-    <link>https://linuxsuren.github.io/tags/kubernetes/</link>
+    <link>http://surenpi.com/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://linuxsuren.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://surenpi.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jenkins</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
   War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
