@@ -27,6 +27,16 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/other/scm/github/hub/</loc>
+    <lastmod>2019-05-29T17:50:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/other/scm/git/git-log/</loc>
+    <lastmod>2019-05-29T17:41:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/team/jira/</loc>
     <lastmod>2019-05-22T14:39:52+08:00</lastmod>
   </url>
@@ -429,7 +439,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/other/scm/git/</loc>
-    <lastmod>2019-02-26T18:04:00+08:00</lastmod>
+    <lastmod>2019-05-29T17:41:55+08:00</lastmod>
   </url>
   
   <url>
@@ -466,7 +476,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/other/scm/github/</loc>
-    <lastmod>2019-04-06T20:57:38+08:00</lastmod>
+    <lastmod>2019-05-29T17:50:23+08:00</lastmod>
   </url>
   
   <url>
@@ -757,6 +767,10 @@
   <url>
     <loc>http://surenpi.com/tags/plugin/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/other/database/postgres/</loc>
   </url>
   
   <url>
@@ -1066,7 +1080,7 @@
   
   <url>
     <loc>http://surenpi.com/</loc>
-    <lastmod>2019-05-22T14:39:52+08:00</lastmod>
+    <lastmod>2019-05-29T17:50:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1086,6 +1100,10 @@
   <url>
     <loc>http://surenpi.com/blog/other/recommendation/</loc>
     <lastmod>2019-05-02T21:21:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/other/database/</loc>
   </url>
   
   <url>

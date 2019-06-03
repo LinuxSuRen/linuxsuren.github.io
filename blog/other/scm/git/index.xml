@@ -6,10 +6,21 @@
     <description>Recent content in Git on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 26 Feb 2019 18:04:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 17:41:55 +0800</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/other/scm/git/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Log</title>
+      <link>http://surenpi.com/blog/other/scm/git/git-log/</link>
+      <pubDate>Wed, 29 May 2019 17:41:55 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/scm/git/git-log/</guid>
+      <description>返回最新的一次提交记录 git log -1
+查看某个文件的提交记录 git log somefile
+查看某个文件的变更内容 git log -p Jenkinsfile</description>
+    </item>
     
     <item>
       <title>Git Config</title>
