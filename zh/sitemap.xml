@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/other/scm/github/hub/</loc>
     <lastmod>2019-05-29T17:50:23+08:00</lastmod>
   </url>
@@ -352,6 +357,7 @@
   
   <url>
     <loc>http://surenpi.com/categories/cicd/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -369,6 +375,7 @@
   
   <url>
     <loc>http://surenpi.com/categories/devops/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -378,6 +385,7 @@
   
   <url>
     <loc>http://surenpi.com/tags/docker/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -518,6 +526,7 @@
   
   <url>
     <loc>http://surenpi.com/tags/helm/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -563,11 +572,8 @@
   
   <url>
     <loc>http://surenpi.com/tags/jenkins/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</loc>
   </url>
   
   <url>
@@ -581,7 +587,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/devops/jenkins/basic/</loc>
-    <lastmod>2019-03-26T14:35:09+08:00</lastmod>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -694,6 +700,7 @@
   
   <url>
     <loc>http://surenpi.com/tags/kubernetes/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -834,6 +841,7 @@
   
   <url>
     <loc>http://surenpi.com/tags/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -1080,7 +1088,7 @@
   
   <url>
     <loc>http://surenpi.com/</loc>
-    <lastmod>2019-05-29T17:50:23+08:00</lastmod>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
