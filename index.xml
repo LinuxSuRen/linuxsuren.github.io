@@ -1305,6 +1305,10 @@ Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins �
 单元测试 Jenkins 官方提供了单元测试相关的内容。
 发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
+实验性版本发布 为了简化发布 beta 版本的插件到特定感兴趣的人群，Jenkins 有一个实验性的更新中心。它包括 alpha 和 beta 版本的插件，这些通常不会包含在常规的更新中心里。
+如果插件的版本中包含 alpha 或 beta 的插件，发布后就会出现在实验性的更新中心里，而不会出现在常规的更新中心。但是，实验性的更新中心也包含常规的版本发布。在所有的更新中心，较新的发布会隐藏掉较老的版本。例如：1.4版本会使得1.3-beta-2在实验中心里看不到。
+用户要使用实验性更新中心的话，只需要在插件管理-》高级的选项卡页面中，设置更新中心地址为 https://updates.jenkins.io/experimental/update-center.json。
+常规的更新中心地址为 https://updates.jenkins.io/update-center.json。
 参考 Extend Jenkins</description>
     </item>
     

@@ -45,7 +45,7 @@
 
 
 
-<meta itemprop="wordCount" content="43">
+<meta itemprop="wordCount" content="61">
 
 
 
@@ -212,14 +212,20 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#环境准备">环境准备</a></li>
 <li><a href="#创建工程">创建工程</a></li>
 <li><a href="#运行">运行</a></li>
 <li><a href="#访问">访问</a></li>
 <li><a href="#jenkins-版本选择">Jenkins 版本选择</a></li>
 <li><a href="#单元测试">单元测试</a></li>
-<li><a href="#发布">发布</a></li>
+<li><a href="#发布">发布</a>
+<ul>
+<li><a href="#实验性版本发布">实验性版本发布</a></li>
+</ul></li>
 <li><a href="#参考">参考</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -284,11 +290,11 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="环境准备">环境准备</h1>
+<h2 id="环境准备">环境准备</h2>
 
 <p>你需要安装好Java和Maven。</p>
 
-<h1 id="创建工程">创建工程</h1>
+<h2 id="创建工程">创建工程</h2>
 
 <p>执行命令 <code>mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:</code>，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。</p>
 
@@ -296,29 +302,39 @@ var trackOutboundLink = function(id, url) {
 
 <a href="https://github.com/jenkinsci/plugin-pom" target="_blank">插件工程的父 POM</a> 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。</p>
 
-<h1 id="运行">运行</h1>
+<h2 id="运行">运行</h2>
 
 <p>在工程根目录下执行 <code>mvn hpi:run</code></p>
 
-<h1 id="访问">访问</h1>
+<h2 id="访问">访问</h2>
 
 <p><code>http://localhost:8080/jenkins/</code></p>
 
-<h1 id="jenkins-版本选择">Jenkins 版本选择</h1>
+<h2 id="jenkins-版本选择">Jenkins 版本选择</h2>
 
 <p>理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的<a href="https://jenkins.io/download/">下载页面</a>找一个长期支持版本（LTS）。</p>
 
-<h1 id="单元测试">单元测试</h1>
+<h2 id="单元测试">单元测试</h2>
 
 <p>Jenkins 官方提供了<a href="https://wiki.jenkins.io/display/JENKINS/Unit+Test">单元测试</a>相关的内容。</p>
 
-<h1 id="发布">发布</h1>
+<h2 id="发布">发布</h2>
 
 <p><code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
 
 <p><code>mvn -Darguments=&quot;-DskipTests&quot; release:perform</code></p>
 
-<h1 id="参考">参考</h1>
+<h3 id="实验性版本发布">实验性版本发布</h3>
+
+<p>为了简化发布 beta 版本的插件到特定感兴趣的人群，Jenkins 有一个实验性的更新中心。它包括 alpha 和 beta 版本的插件，这些通常不会包含在常规的更新中心里。</p>
+
+<p>如果插件的版本中包含 <code>alpha</code> 或 <code>beta</code> 的插件，发布后就会出现在实验性的更新中心里，而不会出现在常规的更新中心。但是，实验性的更新中心也包含常规的版本发布。在所有的更新中心，较新的发布会隐藏掉较老的版本。例如：1.4版本会使得1.3-beta-2在实验中心里看不到。</p>
+
+<p>用户要使用实验性更新中心的话，只需要在插件管理-》高级的选项卡页面中，设置更新中心地址为 <code>https://updates.jenkins.io/experimental/update-center.json</code>。</p>
+
+<p>常规的更新中心地址为 <code>https://updates.jenkins.io/update-center.json</code>。</p>
+
+<h2 id="参考">参考</h2>
 
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Extend+Jenkins">Extend Jenkins</a></p>
 
@@ -349,13 +365,13 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
 </ul>
 

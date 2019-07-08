@@ -305,7 +305,7 @@
         "title": "Jenkins 核心",
         "tags": [],
         "description": "Jenkins 核心的 API",
-        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n搜索任务 curl https://localhost:8080/jenkins/search/suggest?query=test 通过关键字搜索任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  "
+        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n搜索任务 curl https://localhost:8080/jenkins/search/suggest?query=test 通过关键字搜索任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  https://129.28.182.197/jenkins/asynchPeople/api/json //user/admin/submitDescription //user/admin/delete //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/rename //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/Revoke\n"
     },
     {
         "uri": "http://surenpi.com/blog/language/golang/slice/",
@@ -977,7 +977,7 @@
         "title": "Jenkins 插件开发",
         "tags": [],
         "description": "Jenkins 插件开发教程",
-        "content": " 环境准备 你需要安装好Java和Maven。\n创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。\n 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。\n运行 在工程根目录下执行 mvn hpi:run\n访问 http://localhost:8080/jenkins/\nJenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。\n单元测试 Jenkins 官方提供了单元测试相关的内容。\n发布 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare\nmvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:perform\n参考 Extend Jenkins\n"
+        "content": " 环境准备 你需要安装好Java和Maven。\n创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。\n 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。\n运行 在工程根目录下执行 mvn hpi:run\n访问 http://localhost:8080/jenkins/\nJenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。\n单元测试 Jenkins 官方提供了单元测试相关的内容。\n发布 mvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:prepare\nmvn -Darguments=\u0026quot;-DskipTests\u0026quot; release:perform\n实验性版本发布 为了简化发布 beta 版本的插件到特定感兴趣的人群，Jenkins 有一个实验性的更新中心。它包括 alpha 和 beta 版本的插件，这些通常不会包含在常规的更新中心里。\n如果插件的版本中包含 alpha 或 beta 的插件，发布后就会出现在实验性的更新中心里，而不会出现在常规的更新中心。但是，实验性的更新中心也包含常规的版本发布。在所有的更新中心，较新的发布会隐藏掉较老的版本。例如：1.4版本会使得1.3-beta-2在实验中心里看不到。\n用户要使用实验性更新中心的话，只需要在插件管理-》高级的选项卡页面中，设置更新中心地址为 https://updates.jenkins.io/experimental/update-center.json。\n常规的更新中心地址为 https://updates.jenkins.io/update-center.json。\n参考 Extend Jenkins\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/",
@@ -1043,14 +1043,14 @@
         "content": " 根证书公钥(ca.pem)与私钥(ca-key.pem)\nAPI Server 公钥和私钥\n集群管理员公钥和私钥\n从节点公钥和私钥\n根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj \u0026quot;/CN=kube-ca\u0026quot;  API Server 证书 创建 openssl.cnf\n[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4}  openssl genrsa -out apiserver-key.pem 2048 openssl req -new -key apiserver-key.pem -out apiserver.csr -subj \u0026quot;/CN=kube-apiserver\u0026quot; -config openssl.cnf openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf  一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 /etc/kubernetes/ssl/ 路径下\nRef https://blog.csdn.net/shenshouer/article/details/53035948\n"
     },
     {
-        "uri": "http://surenpi.com/categories/k8s/",
+        "uri": "http://surenpi.com/tags/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "http://surenpi.com/tags/k8s/",
+        "uri": "http://surenpi.com/categories/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
@@ -1064,14 +1064,14 @@
         "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\nPatch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某几个字段。如果，每次都使用 kubectl edit 命令操作的话，会比较麻烦。通过 kubectl 的子命令 patch 可以实现快速地实现这个过程。\n该命令，可以通过 json 或者 yaml 格式来对资源*打补丁*。下面，给出一个使用 json 的例子：\nkubectl patch deploy template -n namespace --patch '{\u0026quot;status\u0026quot;:{\u0026quot;phase\u0026quot;:\u0026quot;Pending\u0026quot;}}'\n"
     },
     {
-        "uri": "http://surenpi.com/categories/kubernetes/",
+        "uri": "http://surenpi.com/tags/kubernetes/",
         "title": "Kubernetes",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "http://surenpi.com/tags/kubernetes/",
+        "uri": "http://surenpi.com/categories/kubernetes/",
         "title": "Kubernetes",
         "tags": [],
         "description": "",
