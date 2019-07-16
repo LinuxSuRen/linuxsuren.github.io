@@ -45,7 +45,7 @@
 
 
 
-<meta itemprop="wordCount" content="37">
+<meta itemprop="wordCount" content="190">
 
 
 
@@ -272,6 +272,8 @@ var trackOutboundLink = function(id, url) {
 
 
 
+
+
 <div class="code-copy" id="/static/codes/golang/json/main.go">
 	
 		<div class="action-buttons"></div>
@@ -302,6 +304,96 @@ func main() {
 }
 </code></pre>
 	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/master/static/codes/golang/json/main.go" title="See /codes/golang/json/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See /codes/golang/json/main.go source on GitHub">原文件<i class="icon-github"></i></a>
+</div>
+
+
+<h2 id="数据格式转换">数据格式转换</h2>
+
+<p>下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式</p>
+
+
+
+
+
+<div class="code-copy" id="/static/codes/golang/json-marshal/main.go">
+	
+		<div class="action-buttons"></div>
+		<span class="filename"><i class="icon-website"></i>/codes/golang/json-marshal/main.go</span>
+		<i class="icon-go input"></i>
+	
+		<button class="needs-js copy bg-accent-color-dark f6 top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
+		</button>
+	
+	<pre><code class="language-golang">package main
+
+import (
+	&#34;encoding/json&#34;
+	&#34;fmt&#34;
+	&#34;log&#34;
+	&#34;strings&#34;
+)
+
+var json_str = `{
+	&#34;value&#34;: &#34;GOOD&#34;,
+	&#34;name&#34;:&#34;name&#34;
+}`
+
+var json_bool = `{
+	&#34;value&#34;: false,
+	&#34;name&#34;:&#34;good&#34;
+}`
+
+type Form struct {
+	Value ComposeValue
+	Name  string
+}
+
+type ComposeValue struct {
+	Value string
+}
+
+func (f *ComposeValue) UnmarshalJSON(data []byte) error {
+	originStr := strings.Trim(string(data), `&#34;`)
+	switch str := strings.ToLower(originStr); str {
+	case &#34;true&#34;:
+		f.Value = &#34;true&#34;
+	case &#34;false&#34;:
+		f.Value = &#34;false&#34;
+	default:
+		f.Value = originStr
+	}
+	return nil
+}
+
+func (f ComposeValue) MarshalJSON() ([]byte, error) {
+	return json.Marshal(f.Value)
+}
+
+func (f ComposeValue) String() string {
+	return f.Value
+}
+
+func main() {
+	var data []byte
+	var err error
+
+	form := &amp;Form{}
+	if err := json.Unmarshal([]byte(json_str), form); err != nil {
+		log.Fatal(err)
+	}
+	if data, err = json.Marshal(form); err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(data))
+
+	if err := json.Unmarshal([]byte(json_bool), form); err != nil {
+		log.Fatal(err)
+	}
+	data, _ = json.Marshal(form)
+	fmt.Println(string(data))
+}
+</code></pre>
+	<a role="button" target="_blank" href="https://github.com/LinuxSuRen/surenpi/tree/master/static/codes/golang/json-marshal/main.go" title="See /codes/golang/json-marshal/main.go source on GitHub" class="tooltip see-on-github" data-tooltip="See /codes/golang/json-marshal/main.go source on GitHub">原文件<i class="icon-github"></i></a>
 </div>
 
 

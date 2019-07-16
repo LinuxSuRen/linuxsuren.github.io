@@ -151,7 +151,7 @@
         "title": "Video",
         "tags": [],
         "description": "Video",
-        "content": " 格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。\n"
+        "content": " 格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。\nhttps://youtubemp4.to/\n"
     },
     {
         "uri": "http://surenpi.com/blog/other/scm/github/github-robot/",
@@ -760,7 +760,7 @@
         "title": "Golang with JSON",
         "tags": [],
         "description": "Golang with JSON",
-        "content": "  /codes/golang/json/main.go   package main import ( \u0026#34;encoding/json\u0026#34; \u0026#34;log\u0026#34; ) func main() { jsonStr := ` [\u0026#34;one\u0026#34;, \u0026#34;two\u0026#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), \u0026amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  "
+        "content": "  /codes/golang/json/main.go   package main import ( \u0026#34;encoding/json\u0026#34; \u0026#34;log\u0026#34; ) func main() { jsonStr := ` [\u0026#34;one\u0026#34;, \u0026#34;two\u0026#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), \u0026amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  数据格式转换 下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式\n /codes/golang/json-marshal/main.go   package main import ( \u0026#34;encoding/json\u0026#34; \u0026#34;fmt\u0026#34; \u0026#34;log\u0026#34; \u0026#34;strings\u0026#34; ) var json_str = `{ \u0026#34;value\u0026#34;: \u0026#34;GOOD\u0026#34;, \u0026#34;name\u0026#34;:\u0026#34;name\u0026#34; }` var json_bool = `{ \u0026#34;value\u0026#34;: false, \u0026#34;name\u0026#34;:\u0026#34;good\u0026#34; }` type Form struct { Value ComposeValue Name string } type ComposeValue struct { Value string } func (f *ComposeValue) UnmarshalJSON(data []byte) error { originStr := strings.Trim(string(data), `\u0026#34;`) switch str := strings.ToLower(originStr); str { case \u0026#34;true\u0026#34;: f.Value = \u0026#34;true\u0026#34; case \u0026#34;false\u0026#34;: f.Value = \u0026#34;false\u0026#34; default: f.Value = originStr } return nil } func (f ComposeValue) MarshalJSON() ([]byte, error) { return json.Marshal(f.Value) } func (f ComposeValue) String() string { return f.Value } func main() { var data []byte var err error form := \u0026amp;Form{} if err := json.Unmarshal([]byte(json_str), form); err != nil { log.Fatal(err) } if data, err = json.Marshal(form); err != nil { log.Fatal(err) } fmt.Println(string(data)) if err := json.Unmarshal([]byte(json_bool), form); err != nil { log.Fatal(err) } data, _ = json.Marshal(form) fmt.Println(string(data)) }  原文件  "
     },
     {
         "uri": "http://surenpi.com/blog/language/golang/http/",
