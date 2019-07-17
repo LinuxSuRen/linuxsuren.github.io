@@ -6,10 +6,25 @@
     <description>Recent content in Jenkins API 介绍 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 May 2019 11:54:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/jenkins/api/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blue Ocean</title>
+      <link>http://surenpi.com/blog/devops/jenkins/api/blueocean/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/api/blueocean/</guid>
+      <description>API 列表 获取 JUnit 测试包括的 API 包括如下：
+http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=REGRESSION&amp;amp;start=0&amp;amp;limit=101
+http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED&amp;amp;start=0&amp;amp;limit=101
+ttps://129.28.182.197/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;amp;start=0&amp;amp;limit=101
+http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED&amp;amp;start=0&amp;amp;limit=101
+http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=PASSED&amp;amp;start=0&amp;amp;limit=101
+在 Jenkins 的测试报告中，可以拿到五种状态：  REGRESSION FAILED SKIPPED FIXED PASSED  更多来自 Blue Ocean 的 Restful API 请参考 https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest</description>
+    </item>
     
     <item>
       <title>Token</title>

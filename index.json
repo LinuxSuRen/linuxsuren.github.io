@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/api/blueocean/",
+        "title": "Blue Ocean",
+        "tags": [],
+        "description": "Blue Ocean",
+        "content": " API 列表 获取 JUnit 测试包括的 API 包括如下：\nhttp://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=REGRESSION\u0026amp;start=0\u0026amp;limit=101\nhttp://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED\u0026amp;start=0\u0026amp;limit=101\nttps://129.28.182.197/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED\u0026amp;start=0\u0026amp;limit=101\nhttp://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED\u0026amp;start=0\u0026amp;limit=101\nhttp://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=PASSED\u0026amp;start=0\u0026amp;limit=101\n在 Jenkins 的测试报告中，可以拿到五种状态：  REGRESSION FAILED SKIPPED FIXED PASSED  更多来自 Blue Ocean 的 Restful API 请参考 https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins/",
         "title": "Jenkins",
         "tags": ["Docker", "Helm", "Kubernetes", "Jenkins"],
