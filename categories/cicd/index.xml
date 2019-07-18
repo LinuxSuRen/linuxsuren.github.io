@@ -25,11 +25,8 @@
 Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
 需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175
 挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts
-Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins
-如果希望看到具体内容请查看这里。
-KubeApps 上也可以找到 Jenkins
-版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：
- 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。</description>
+如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied  Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
     </item>
     
     <item>
