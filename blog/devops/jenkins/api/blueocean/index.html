@@ -47,7 +47,7 @@
 
 <meta itemprop="datePublished" content="2019-07-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="28">
+<meta itemprop="wordCount" content="142">
 
 
 
@@ -281,13 +281,35 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=REGRESSION&amp;start=0&amp;limit=101</code></p>
 
-<p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED&amp;start=0&amp;limit=101</code></p>
+<p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED&amp;state!=REGRESSION&amp;start=0&amp;limit=101</code></p>
 
 <p><code>ttps://129.28.182.197/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;start=0&amp;limit=101</code></p>
 
 <p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED&amp;start=0&amp;limit=101</code></p>
 
 <p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=PASSED&amp;start=0&amp;limit=101</code></p>
+
+<p>响应体的结构如下：</p>
+
+<pre><code>{
+	Age int
+	// Duration the time of test
+	Duration float32
+	// ErrorDetails error details of test
+	ErrorDetails string
+	// ErrorStackTrace if the status is erro then error stack trace of test
+	ErrorStackTrace string
+	// HasStdLog indicate whether has standard log outpupt
+	HasStdLog bool
+	// ID id for the test report item
+	ID string
+	// Name is the name of test report item
+	Name  string
+	State string
+	// Status indicates the status of report item
+	Status string
+}
+</code></pre>
 
 <h2 id="在-jenkins-的测试报告中-可以拿到五种状态">在 Jenkins 的测试报告中，可以拿到五种状态：</h2>
 
@@ -298,6 +320,21 @@ var trackOutboundLink = function(id, url) {
 <li>FIXED</li>
 <li>PASSED</li>
 </ul>
+
+<p>其中 <code>REGRESSION</code> 和 <code>FIXED</code> 使用的字段为 <code>state</code></p>
+
+<p><code>FAILED</code> 状态则会和 <code>REGRESSION</code> 配合使用</p>
+
+<p><code>PASSED</code> 和 <code>SKIPPED</code> 则使用的字段为 <code>status</code></p>
+
+<p>上面的 API 返回的状态码可能会包括：400、404、200。当给出的状态值为非法时，例如：<code>status=abc</code> 就会返回 <code>400</code>。当该流水线中没有测试包括时会返回 <code>404</code>。错误时的响应体结构如下：</p>
+
+<pre><code>{
+  &quot;message&quot; : &quot;bad state PASSED&quot;,
+  &quot;code&quot; : 400,
+  &quot;errors&quot; : [ ]
+}
+</code></pre>
 
 <p>更多来自 Blue Ocean 的 Restful API 请参考 <a href="https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest">https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest</a></p>
 
