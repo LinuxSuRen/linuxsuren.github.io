@@ -477,12 +477,12 @@ curl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务
 构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志
 curl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。
 curl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史
+curl -X POST http://localhost:8080/jenkins/job/jobName/1/stop 停止构建
 下面是特定情况的构建：
 curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
-curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志
-插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F &amp;quot;name=@target/demo.</description>
+curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志</description>
     </item>
     
     <item>
