@@ -47,7 +47,7 @@
 
 <meta itemprop="datePublished" content="2019-07-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="163">
+<meta itemprop="wordCount" content="193">
 
 
 
@@ -219,6 +219,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#api-列表">API 列表</a></li>
 <li><a href="#在-jenkins-的测试报告中-可以拿到五种状态">在 Jenkins 的测试报告中，可以拿到五种状态：</a></li>
 <li><a href="#测试报告概览">测试报告概览</a></li>
+<li><a href="#等待输入">等待输入</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -352,6 +353,17 @@ var trackOutboundLink = function(id, url) {
 &quot;skipped&quot;: 0,
 &quot;total&quot;: 2
 }
+</code></pre>
+
+<h2 id="等待输入">等待输入</h2>
+
+<pre><code>curl -v -u 'xxx:yyy' -H 'Jenkins-Crumb: 40b3007303bfde11c3da475d8cae91b4' -H 'Content-Type: application/json' -X POST http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/p31/runs/22/nodes/9/steps/12/ -d '{
+   &quot;id&quot; : &quot;23a650bfcb70a78700d7178183722292&quot;,
+   &quot;parameters&quot; : [{
+     &quot;name&quot; : &quot;branch&quot;,
+     &quot;value&quot; : &quot;master&quot;
+   }]
+ }'
 </code></pre>
 
 <p>更多来自 Blue Ocean 的 Restful API 请参考 <a href="https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest">https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest</a></p>
