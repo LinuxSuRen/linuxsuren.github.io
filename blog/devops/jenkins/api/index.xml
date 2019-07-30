@@ -20,7 +20,7 @@
       <description>API 列表 获取 JUnit 测试包括的 API 包括如下：
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=REGRESSION&amp;amp;start=0&amp;amp;limit=101
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED&amp;amp;state!=REGRESSION&amp;amp;start=0&amp;amp;limit=101
-ttps://129.28.182.197/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;amp;start=0&amp;amp;limit=101
+ttps://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;amp;start=0&amp;amp;limit=101
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED&amp;amp;start=0&amp;amp;limit=101
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=PASSED&amp;amp;start=0&amp;amp;limit=101
 响应体的结构如下：

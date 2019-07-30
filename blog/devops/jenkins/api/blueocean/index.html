@@ -47,7 +47,7 @@
 
 <meta itemprop="datePublished" content="2019-07-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="142">
+<meta itemprop="wordCount" content="163">
 
 
 
@@ -218,6 +218,7 @@ var trackOutboundLink = function(id, url) {
 <ul>
 <li><a href="#api-列表">API 列表</a></li>
 <li><a href="#在-jenkins-的测试报告中-可以拿到五种状态">在 Jenkins 的测试报告中，可以拿到五种状态：</a></li>
+<li><a href="#测试报告概览">测试报告概览</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -283,7 +284,7 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=FAILED&amp;state!=REGRESSION&amp;start=0&amp;limit=101</code></p>
 
-<p><code>ttps://129.28.182.197/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;start=0&amp;limit=101</code></p>
+<p><code>ttps://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=SKIPPED&amp;start=0&amp;limit=101</code></p>
 
 <p><code>http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED&amp;start=0&amp;limit=101</code></p>
 
@@ -333,6 +334,23 @@ var trackOutboundLink = function(id, url) {
   &quot;message&quot; : &quot;bad state PASSED&quot;,
   &quot;code&quot; : 400,
   &quot;errors&quot; : [ ]
+}
+</code></pre>
+
+<h2 id="测试报告概览">测试报告概览</h2>
+
+<p><code>http://localhost:8080/blue/rest/organizations/jenkins/pipelines/folder/pipelines/pipelineName/runs/4/blueTestSummary/</code></p>
+
+<p>返回的 JSON 数据如下：</p>
+
+<pre><code>{
+&quot;existingFailed&quot;: 0,
+&quot;failed&quot;: 0,
+&quot;fixed&quot;: 0,
+&quot;passed&quot;: 2,
+&quot;regressions&quot;: 0,
+&quot;skipped&quot;: 0,
+&quot;total&quot;: 2
 }
 </code></pre>
 
