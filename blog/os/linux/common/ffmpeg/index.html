@@ -45,7 +45,7 @@
 
 
 
-<meta itemprop="wordCount" content="117">
+<meta itemprop="wordCount" content="125">
 
 
 
@@ -212,11 +212,15 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#静态水印">静态水印</a></li>
 <li><a href="#动态水印">动态水印</a></li>
 <li><a href="#合并视频">合并视频</a></li>
 <li><a href="#格式转换">格式转换</a></li>
+<li><a href="#修改分辨率">修改分辨率</a></li>
 <li><a href="#图片缩放">图片缩放</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -281,31 +285,37 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="静态水印">静态水印</h1>
+<h2 id="静态水印">静态水印</h2>
 
 <p><code>ffmpeg -y -i movieFile -vf &quot;movie=watermark.png [watermark]; [in][watermark]  overlay=x:y:opaque [out]&quot; movieWatermark.mp4</code></p>
 
 <p><code>ffmpeg -i jenkins.mov -i watermark.png -filter_complex &quot;overlay=10:10&quot; jenkins.mp4</code></p>
 
-<h1 id="动态水印">动态水印</h1>
+<h2 id="动态水印">动态水印</h2>
 
 <p><code>ffmpeg -y -i movieFile -ignore_loop 0 -i gif.gif -ss start -t duration  -filter_complex overlay=0:0:1 movieGifFile</code></p>
 
 <p><a href="http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/">http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters/</a></p>
 
-<h1 id="合并视频">合并视频</h1>
+<h2 id="合并视频">合并视频</h2>
 
 <p>把视频文件按照顺序写入 <code>files.txt</code>，然后执行命令：</p>
 
 <p><code>ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4</code></p>
 
-<h1 id="格式转换">格式转换</h1>
+<h2 id="格式转换">格式转换</h2>
 
 <p>通过下面的命令，可以实现视频格式的转换：</p>
 
 <p><code>ffmpeg -i demo.mkv -codec copy demo.mp4</code></p>
 
-<h1 id="图片缩放">图片缩放</h1>
+<h2 id="修改分辨率">修改分辨率</h2>
+
+<p>通过下面的命令可以实现视频文件的分辨率修改：</p>
+
+<p><code>ffmpeg -i demo.mp4 -vf scale=1920:1080 demo.high.mp4</code></p>
+
+<h2 id="图片缩放">图片缩放</h2>
 
 <p>假设图片 <code>input.jpg</code> 的尺寸为：320⨉207</p>
 

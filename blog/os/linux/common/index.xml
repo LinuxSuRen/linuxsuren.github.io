@@ -242,8 +242,9 @@ http://ksloan.net/watermarking-videos-from-the-command-line-using-ffmpeg-filters
 ffmpeg -f concat -i files.txt -c copy jenkins-basic-install.mp4
 格式转换 通过下面的命令，可以实现视频格式的转换：
 ffmpeg -i demo.mkv -codec copy demo.mp4
+修改分辨率 通过下面的命令可以实现视频文件的分辨率修改：
+ffmpeg -i demo.mp4 -vf scale=1920:1080 demo.high.mp4
 图片缩放 假设图片 input.jpg 的尺寸为：320⨉207
-ffmpeg -i input.jpg -vf scale=320:240 output_320x240.png 强制设置图片的尺寸
 ffmpeg -i input.</description>
     </item>
     
