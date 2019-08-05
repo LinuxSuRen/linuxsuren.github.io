@@ -255,7 +255,8 @@ curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;
       
       <guid>http://surenpi.com/blog/other/recommendation/technical-website/</guid>
       <description>dev.to X-lab 开放实验室阅读俱乐部
-Code Cartoon</description>
+Code Cartoon
+cloud shell</description>
     </item>
     
     <item>
