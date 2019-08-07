@@ -57,6 +57,16 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/other/recommendation/work/</loc>
+    <lastmod>2019-05-06T12:39:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/os/linux/common/tar/</loc>
+    <lastmod>2019-05-05T14:15:31+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/api/pipeline/</loc>
     <lastmod>2019-05-05T10:26:05+08:00</lastmod>
   </url>
@@ -513,6 +523,10 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/other/packagemanager/gofish/</loc>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/language/golang/goroutines/</loc>
   </url>
   
@@ -728,7 +742,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/os/linux/common/</loc>
-    <lastmod>2019-05-05T09:30:25+08:00</lastmod>
+    <lastmod>2019-05-05T14:15:31+08:00</lastmod>
   </url>
   
   <url>
@@ -1050,6 +1064,10 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/other/packagemanager/</loc>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1116,7 +1134,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/other/recommendation/</loc>
-    <lastmod>2019-05-02T21:21:49+08:00</lastmod>
+    <lastmod>2019-05-06T12:39:54+08:00</lastmod>
   </url>
   
   <url>

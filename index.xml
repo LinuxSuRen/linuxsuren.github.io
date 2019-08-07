@@ -85,6 +85,24 @@ Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permiss
     </item>
     
     <item>
+      <title>Work</title>
+      <link>http://surenpi.com/blog/other/recommendation/work/</link>
+      <pubDate>Mon, 06 May 2019 12:39:54 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/recommendation/work/</guid>
+      <description>http://219.232.200.39/uamsso/</description>
+    </item>
+    
+    <item>
+      <title>Tar</title>
+      <link>http://surenpi.com/blog/os/linux/common/tar/</link>
+      <pubDate>Sun, 05 May 2019 14:15:31 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/os/linux/common/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pipeline</title>
       <link>http://surenpi.com/blog/devops/jenkins/api/pipeline/</link>
       <pubDate>Sun, 05 May 2019 10:26:05 +0800</pubDate>
@@ -130,9 +148,9 @@ echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V  </description>
       <pubDate>Thu, 02 May 2019 08:48:03 +0800</pubDate>
       
       <guid>http://surenpi.com/blog/other/recommendation/learning-english/</guid>
-      <description> 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
+      <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
 网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
-   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   Google no 支持很多种语言    </description>
+   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time</description>
     </item>
     
     <item>
@@ -469,7 +487,8 @@ Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器
       <guid>http://surenpi.com/blog/devops/jenkins/api/core/</guid>
       <description>你可以通过如下的方式来访问 Jenkins：
 单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息
-curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建
+curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建，API 返回码是 201
+``
 curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息
 curl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务
 curl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务
@@ -482,8 +501,7 @@ curl -X POST http://localhost:8080/jenkins/job/jobName/1/stop 停止构建
 下面是特定情况的构建：
 curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
-curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
-curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志</description>
+curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志</description>
     </item>
     
     <item>
@@ -976,8 +994,8 @@ git remote prune origin --dry-run 当然，origin 这里就是远程库的名称
 多个远程库 我们可以在本地 git 仓库中，添加多个远程仓库，请参考下面的命令：
 git remote add origin https://github.com/jenkins-zh/jenkins-cli git remote add gitee https://gitee.com/jenkins-zh/jenkins-cli.git  当我们执行命令 git push 时，默认会把当前分支推送到所关联的远程仓库中，这里通常会是 origin。
 如果，我们希望能同时把代码推送到多个远程仓库中的话，可以先执行如下的命令
-git remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git  删除远程仓库 我们可以通过下面的命令，删除一个远程仓库：
-git remote remove gitee</description>
+git remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git  我们也可以通过下面的命令删除上面的配置
+git remote set-url --delete --push origin https://gitee.</description>
     </item>
     
     <item>
@@ -1060,6 +1078,17 @@ git可以在同一个提交上打多个名称不一样的标签
       <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。
 启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce
 Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    
+    <item>
+      <title>GoFish</title>
+      <link>http://surenpi.com/blog/other/packagemanager/gofish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/packagemanager/gofish/</guid>
+      <description>curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash
+https://gofi.sh/
+https://github.com/fishworks/fish-food</description>
     </item>
     
     <item>
@@ -2105,7 +2134,10 @@ pbpaste 通过命令粘贴</description>
       <description>添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等
 useradd user-name --home /home/user-name --create-home
 su user-name
-userdel user-name</description>
+userdel user-name
+sudo xx is not in the sudoers file.
+这时候可以使用 root 账号修改配置文件来解决：vim /etc/sudoers
+或者把用户加到用户组 sudo 中。 usermod -a -G sudo jenkins</description>
     </item>
     
     <item>

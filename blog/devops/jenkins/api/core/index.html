@@ -47,7 +47,7 @@
 
 <meta itemprop="datePublished" content="2019-01-03T16:29:11&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-03T16:29:11&#43;08:00" />
-<meta itemprop="wordCount" content="112">
+<meta itemprop="wordCount" content="117">
 
 
 
@@ -235,7 +235,10 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#单个任务">单个任务</a></li>
 <li><a href="#搜索任务">搜索任务</a></li>
 <li><a href="#构建历史">构建历史</a></li>
-<li><a href="#插件管理">插件管理</a></li>
+<li><a href="#插件管理">插件管理</a>
+<ul>
+<li><a href="#插件列表">插件列表</a></li>
+</ul></li>
 <li><a href="#重启">重启</a></li>
 <li><a href="#认证">认证</a></li>
 </ul></li>
@@ -301,7 +304,9 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true</code> 获取任务信息</p>
 
-<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/build</code> 触发构建</p>
+<p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/build</code> 触发构建，API 返回码是 201</p>
+
+<p>``</p>
 
 <p><code>curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello</code> 添加描述信息</p>
 
@@ -338,6 +343,10 @@ var trackOutboundLink = function(id, url) {
 <h2 id="插件管理">插件管理</h2>
 
 <p><code>curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F &quot;name=@target/demo.hpi&quot;</code> 上传插件</p>
+
+<h3 id="插件列表">插件列表</h3>
+
+<p>/pluginManager/plugins</p>
 
 <h2 id="重启">重启</h2>
 
@@ -387,9 +396,9 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/api/approve/">Approve</a></li>
 	
-	<li><a href="/blog/os/linux/common/curl/">curl</a></li>
-	
 	<li><a href="/blog/devops/k8s/apiserver/">ApiServer</a></li>
+	
+	<li><a href="/blog/os/linux/common/curl/">curl</a></li>
 	
 </ul>
 
@@ -527,6 +536,12 @@ var trackOutboundLink = function(id, url) {
                 <li  class="f6 fw4">
                   <a href="/blog/other/codequality/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     代码质量
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/other/packagemanager/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    包管理器
                   </a>
                 </li>
               

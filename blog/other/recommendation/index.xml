@@ -6,10 +6,19 @@
     <description>Recent content in 推荐信息 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 May 2019 21:21:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2019 12:39:54 +0800</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/other/recommendation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Work</title>
+      <link>http://surenpi.com/blog/other/recommendation/work/</link>
+      <pubDate>Mon, 06 May 2019 12:39:54 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/recommendation/work/</guid>
+      <description>http://219.232.200.39/uamsso/</description>
+    </item>
     
     <item>
       <title>English Abbreviations</title>
@@ -36,9 +45,9 @@
       <pubDate>Thu, 02 May 2019 08:48:03 +0800</pubDate>
       
       <guid>http://surenpi.com/blog/other/recommendation/learning-english/</guid>
-      <description> 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
+      <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
 网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
-   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   Google no 支持很多种语言    </description>
+   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time</description>
     </item>
     
     <item>

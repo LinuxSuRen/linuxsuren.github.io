@@ -94,7 +94,8 @@ Jenkins-Crumb 需要单独获取。</description>
       <guid>http://surenpi.com/blog/devops/jenkins/api/core/</guid>
       <description>你可以通过如下的方式来访问 Jenkins：
 单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息
-curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建
+curl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建，API 返回码是 201
+``
 curl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息
 curl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务
 curl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务
@@ -107,8 +108,7 @@ curl -X POST http://localhost:8080/jenkins/job/jobName/1/stop 停止构建
 下面是特定情况的构建：
 curl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志
 curl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志
-curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志
-curl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志</description>
+curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志</description>
     </item>
     
   </channel>

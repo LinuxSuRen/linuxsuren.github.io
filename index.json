@@ -84,6 +84,20 @@
         "content": "curl http://localhost:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken --header \u0026quot;Authorization: Basic `echo -n admin:1182fc5ef9b28a630986cb50c0319eb9d0 | base64`\u0026quot; -X POST -d 'newTokenName=name'  返回的数据如下所示：\n{\u0026quot;status\u0026quot;:\u0026quot;ok\u0026quot;,\u0026quot;data\u0026quot;:{\u0026quot;tokenName\u0026quot;:\u0026quot;test\u0026quot;,\u0026quot;tokenUuid\u0026quot;:\u0026quot;3a07e7d7-c864-4474-bc3c-d217938e460e\u0026quot;,\u0026quot;tokenValue\u0026quot;:\u0026quot;1123acbf5d3e93e628a38dc0a671cf0194\u0026quot;}}  "
     },
     {
+        "uri": "http://surenpi.com/blog/other/recommendation/work/",
+        "title": "Work",
+        "tags": [],
+        "description": "Work",
+        "content": "http://219.232.200.39/uamsso/\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/os/linux/common/tar/",
+        "title": "Tar",
+        "tags": [],
+        "description": "Tar",
+        "content": ""
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/api/pipeline/",
         "title": "Pipeline",
         "tags": [],
@@ -116,7 +130,7 @@
         "title": "学习英语",
         "tags": [],
         "description": "介绍一些学习英语的技巧与资源",
-        "content": " 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。\n网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：\n   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   Google no 支持很多种语言    "
+        "content": " 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。\n网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：\n   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time\n"
     },
     {
         "uri": "http://surenpi.com/blog/os/linux/common/zip/",
@@ -312,7 +326,7 @@
         "title": "Jenkins 核心",
         "tags": [],
         "description": "Jenkins 核心的 API",
-        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n搜索任务 curl https://localhost:8080/jenkins/search/suggest?query=test 通过关键字搜索任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/stop 停止构建\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  https://129.28.182.197/jenkins/asynchPeople/api/json //user/admin/submitDescription //user/admin/delete //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/rename //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/Revoke\n"
+        "content": " 你可以通过如下的方式来访问 Jenkins：\n单个任务 curl http://localhost:8080/jenkins/job/jobName/api/json?pretty=true 获取任务信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/build 触发构建，API 返回码是 201\n``\ncurl -X POST http://localhost:8080/jenkins/job/jobName/submitDescription?description=hello 添加描述信息\ncurl -X POST http://localhost:8080/jenkins/job/jobName/disable 禁用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/enable 启用任务\ncurl -X POST http://localhost:8080/jenkins/job/jobName/doDelete 删除任务\n搜索任务 curl https://localhost:8080/jenkins/search/suggest?query=test 通过关键字搜索任务\n构建历史 curl http://localhost:8080/jenkins/job/jobName/1/consoleText 获取构建历史的控制台日志\ncurl http://localhost:8080/jenkins/job/jobName/1/logText/progressiveText?start=0 获取部分日志，并返回是否还有未输出的日志。协议头中的 X-Text-Size 为日志内容的大小，X-More-Data 的值如果为 true 的话则标示还有未输出的日志。\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/doDelete 删除构建历史\ncurl -X POST http://localhost:8080/jenkins/job/jobName/1/stop 停止构建\n下面是特定情况的构建：\ncurl http://localhost:8080/jenkins/job/jobName/lastBuild/consoleText 最近一次构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastFailedBuild/consoleText 最近一次失败构建的日志\ncurl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText 最近一次未成功的构建日志\ncurl http://localhost:8080/jenkins/job/jobName/lastCompletedBuild/consoleText 最近一次完成的构建日志\n插件管理 curl -u admin:token http://localhost:8080/jenkins/pluginManager/uploadPlugin -F \u0026quot;name=@target/demo.hpi\u0026quot; 上传插件\n插件列表 /pluginManager/plugins\n重启 curl -X POST http://localhost:8080/jenkins/safeRestart 必须使用 POST 请求\n认证 这里既支持密码也支持 Token 的方式\ncurl http://localhost:8080/jenkins/job/jobName/api/json -u user:passwd\n在 HTTP 协议头中添加认证信息：\ncurl http://localhost:8080/jenkins/job/jobName/api/json --header \u0026quot;Authorization: Basic `echo -n user:passwd | base64`\u0026quot;  https://129.28.182.197/jenkins/asynchPeople/api/json //user/admin/submitDescription //user/admin/delete //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/rename //%s/user/%s/descriptorByName/jenkins.security.ApiTokenProperty/Revoke\n"
     },
     {
         "uri": "http://surenpi.com/blog/language/golang/slice/",
@@ -676,7 +690,7 @@
         "title": "Git Remote",
         "tags": [],
         "description": "Git 远程库操作",
-        "content": " git remote show origin 可以查看仓库的分支信息，虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。\n这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。\ngit remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：\ngit remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。\n最后，你还需要再把本地的分支删除，命令是 git branch --delete dev。\n多个远程库 我们可以在本地 git 仓库中，添加多个远程仓库，请参考下面的命令：\ngit remote add origin https://github.com/jenkins-zh/jenkins-cli git remote add gitee https://gitee.com/jenkins-zh/jenkins-cli.git  当我们执行命令 git push 时，默认会把当前分支推送到所关联的远程仓库中，这里通常会是 origin。\n如果，我们希望能同时把代码推送到多个远程仓库中的话，可以先执行如下的命令\ngit remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git  删除远程仓库 我们可以通过下面的命令，删除一个远程仓库：\ngit remote remove gitee\n"
+        "content": " git remote show origin 可以查看仓库的分支信息，虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。\n这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。\ngit remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：\ngit remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。\n最后，你还需要再把本地的分支删除，命令是 git branch --delete dev。\n多个远程库 我们可以在本地 git 仓库中，添加多个远程仓库，请参考下面的命令：\ngit remote add origin https://github.com/jenkins-zh/jenkins-cli git remote add gitee https://gitee.com/jenkins-zh/jenkins-cli.git  当我们执行命令 git push 时，默认会把当前分支推送到所关联的远程仓库中，这里通常会是 origin。\n如果，我们希望能同时把代码推送到多个远程仓库中的话，可以先执行如下的命令\ngit remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git  我们也可以通过下面的命令删除上面的配置\ngit remote set-url --delete --push origin https://gitee.com/jenkins-zh/jenkins-cli.git\n删除远程仓库 我们可以通过下面的命令，删除一个远程仓库：\ngit remote remove gitee\n"
     },
     {
         "uri": "http://surenpi.com/blog/other/scm/git/git-reset/",
@@ -747,6 +761,13 @@
         "tags": [],
         "description": "Gitlab 使用介绍",
         "content": " Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。\n启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce\nGitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/other/packagemanager/gofish/",
+        "title": "GoFish",
+        "tags": [],
+        "description": "GoFish",
+        "content": "curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash\nhttps://gofi.sh/\nhttps://github.com/fishworks/fish-food\n"
     },
     {
         "uri": "http://surenpi.com/blog/language/golang/goroutines/",
@@ -1579,7 +1600,7 @@
         "title": "user",
         "tags": [],
         "description": "user",
-        "content": " 添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等\nuseradd user-name --home /home/user-name --create-home\nsu user-name\nuserdel user-name\n"
+        "content": " 添加用户 useradd user-name 添加用户 user-name ，并没有添加用户目录、密码、shell等\nuseradd user-name --home /home/user-name --create-home\nsu user-name\nuserdel user-name\nsudo xx is not in the sudoers file.\n这时候可以使用 root 账号修改配置文件来解决：vim /etc/sudoers\n或者把用户加到用户组 sudo 中。 usermod -a -G sudo jenkins\n"
     },
     {
         "uri": "http://surenpi.com/blog/other/editor/vim/plugins/vim-airline/",
@@ -1629,6 +1650,13 @@
         "tags": [],
         "description": "代码质量相关内容",
         "content": "代码质量相关内容\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/other/packagemanager/",
+        "title": "包管理器",
+        "tags": [],
+        "description": "",
+        "content": ""
     },
     {
         "uri": "http://surenpi.com/blog/",
