@@ -45,7 +45,7 @@
 
 
 
-<meta itemprop="wordCount" content="29">
+<meta itemprop="wordCount" content="67">
 
 
 
@@ -209,6 +209,17 @@ var trackOutboundLink = function(id, url) {
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#多个远程库">多个远程库</a></li>
+<li><a href="#删除远程仓库">删除远程仓库</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -270,9 +281,7 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="remote">remote</h1>
-
-<p><code>git remote show origin</code> 可以查看仓库的分支信息,虽然另外一条命令 <code>git branch -a</code> 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。</p>
+<p><code>git remote show origin</code> 可以查看仓库的分支信息，虽然另外一条命令 <code>git branch -a</code> 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。</p>
 
 <p>这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。</p>
 
@@ -280,7 +289,29 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>git remote prune origin --dry-run</code> 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。</p>
 
-<p>最后，你还需要再把本地的分支删除，命令是 <code>git branch --delete dev</code> 。</p>
+<p>最后，你还需要再把本地的分支删除，命令是 <code>git branch --delete dev</code>。</p>
+
+<h2 id="多个远程库">多个远程库</h2>
+
+<p>我们可以在本地 git 仓库中，添加多个远程仓库，请参考下面的命令：</p>
+
+<pre><code>git remote add origin https://github.com/jenkins-zh/jenkins-cli
+git remote add gitee https://gitee.com/jenkins-zh/jenkins-cli.git
+</code></pre>
+
+<p>当我们执行命令 <code>git push</code> 时，默认会把当前分支推送到所关联的远程仓库中，这里通常会是 <code>origin</code>。</p>
+
+<p>如果，我们希望能同时把代码推送到多个远程仓库中的话，可以先执行如下的命令</p>
+
+<pre><code>git remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli
+git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git
+</code></pre>
+
+<h2 id="删除远程仓库">删除远程仓库</h2>
+
+<p>我们可以通过下面的命令，删除一个远程仓库：</p>
+
+<p><code>git remote remove gitee</code></p>
 
 </div>
 
