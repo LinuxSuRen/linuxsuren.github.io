@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/speach/2019-08-19-jenkins-chinese-community/",
+        "title": "Jenkins 社区在国内的发展",
+        "tags": [],
+        "description": "分享 Jenkins 中文社区作出的一些努力",
+        "content": " class: center, middle\nJenkins 中文社区 .left[.footnote[Power by remark]]\nclass: center, middle\n开源 vs 闭源 工匠～利润\n开放～封闭\n共赢～竞争\n扁平～等级\n自由～局限\n多样～单一\n工匠～利润 .pull-left[ * 通用性\n* 安全性\n* 代码质量\n* 单元测试\n* 迭代流程 * 便于协作 ]\n.pull-right[ * 客户愿意为哪些功能买单 * 要在短时间内实现功能 * 来不及考虑代码质量、安全漏洞 ]\n开放～封闭 .pull-left[ 公开地（所有人都可以参与到）进行需求讨论，公开地评审设计文档、代码、帮助文档，任何人都可以贡献——即使只是错别字 ]\n.pull-right[ 特定的团队负责特定的部分，例如：产品经理=》研发经理=》普通研发=》测试。通常情况下，下游的人员是不会参与到需求层面的，已经到了分析并整理完成后的任务了。 ]\n共赢～竞争 .pull-left[ * 没有具体的职位，允许多人做同一件事情 * 竞争对手也可以合作 * 贡献值是公开的 ]\n.pull-right[ * 同一岗位的人员需求，取决于人员配置以及预算 * 不同岗位的薪资不同 * 看不到在其他项目的贡献 ]\n扁平～等级 .pull-left[ * 没有一言堂 * 自由选择希望改善的任务 * 都是负责人 ]\n.pull-right[ * 领导有非常大的决定权 * 通常是任务分配 ]\n自由～局限 .pull-left[ * 不会受工作背景的限制 * 可以参与任何开源项目 * 随时加入或退出\n .red[没有明确的任期] ]  .pull-right[ * 通常只能做本职的工作 * 受制于决策周期、方向 * 职位等级 * 优先完成任务，而不是质量 ]\n多样～单一 .pull-left[ * 在校大学生 * 研发 * 测试 * 运维 * 市场 * 其他 ]\n.pull-right[ * 有特定工作背景 * 必须通过面试 ]\n.left-column[ Jenkins\n简体中文插件 ]\n.center[ ]\n.left-column[ 社区贡献者 ]\n.img-max-width-80[.center[ ]]\n.left-column[ 社区贡献者 ]\n.img-max-width-80[.center[ ]]\n.left-column[ 几点思考 ]\n 协作的挑战 英语的重要性 原动力 商业vs免费 社区治理  class: center, middle\n持续交付黑客松 开源 开放 任何人、任何岗位都可以报名参加\n黑客 工匠精神 ~ 48小时\nclass: center, middle\n谢谢 共建、共赢、共享 .left[.footnote[Jenkins 中文社区]]\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/api/blueocean/",
         "title": "Blue Ocean",
         "tags": [],
@@ -390,20 +397,6 @@
         "tags": [],
         "description": "",
         "content": ""
-    },
-    {
-        "uri": "http://surenpi.com/speach/jenkins-world-2019/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "Open source community in China\n"
-    },
-    {
-        "uri": "http://surenpi.com/speach/kubecon-2019-shanghai/",
-        "title": "",
-        "tags": [],
-        "description": "",
-        "content": "Title: The battle of CI/CD in Cloud Native Abstract: As a bridge between source codes and product value, CI/CD is playing a very important role. There\u0026rsquo;re many solutions was emerged. Some of them are an open source project, or some just provide the service. Jenkins has a great and very active open community, also has a long history. How does Jenkins could continuously keep a leader ship in the cloud native ecosystem? Especially more and more companies put their products in the kubernetes. Argo is another wonderful CI/CD platform which is kubernetes-based. Let\u0026rsquo;s see how do we choose between Jenkins X, Argo and other solution! Benefit: Introduce the full picture of CI/CD ecosystem. Giving some deep thoughts from a contributor of the Jenkins community. Github: https://github.com/linuxsuren\nTitle: Cloud Native\u0026rsquo;s CI/CD battle Abstract: As a bridge between source code and product value, Cloud Native CI/CD solutions are playing a very important role, hence many solutions are continuously emerging: From open source projects to SaaS. With the increasing adoptions of Kubernetes by multiple enterprises, choosing the correct CI/CD solution can be crucial to quickly achieve success. Jenkins, besides its great and very active and vibrant community, has a long and successful history. How can Jenkins continuously keep its leadership in the Cloud Native ecosystem? Argo is another wonderful, Kubernetes native, CI/CD platform. In this talk, we will deeply explore multiple CI/CD solutions for Kubernetes, their benefits, and pitfalls. Benefit: Introduce the full picture of CI/CD ecosystem. Providing some deep thoughts from a Jenkins community contributor.\nTitle: How to build a Serverless CI/CD Pipeline Abstract: We are facing the a big problem in a demanding CI/CD system. What\u0026rsquo;s really impossible keeping one master always alives. Do we have a better solution? Multiple master or not? I belive that a serverless CI/CD pipeline system could brings you a wonderful experience. Using the strengths of Kubernetes to focus on the real requirement, don\u0026rsquo;t need to manage nodes anymore. No cost for idel time. Launch 10,000+ builds/containers in seconds. Thoese are what a Serverless CI/CD Pipeline system could offers you. Benefit: A chance for community members and enterprises to build their own high availabe, less idel and easy maintenance CI/CD pipeline.\nTitle: How to build a Serverless CI/CD Pipeline Abstract: With more demanding CI/CD requirements, it becomes critical to keep all workflows responsive at all time. To achieve such goal the architecture of the CI/CD system is of paramount importance. In some systems having Master/Node approach, such as Jenkins, keeping the Master alive is crucial. Are there any other solutions that not only solve this problem but take it even further? To make the best use of all available resources, a Kubernetes based Serverless CI/CD solution, would not only solve resource management challenges but also improve the overall user experience, without creating step learning curves to its maintainers. In this talk, we will explore together a solution that is able to launch 10,000+ builds/containers in seconds. Benefit: A chance for community members and enterprises to build their own high available, less idle and easy maintenance CI/CD pipeline.\n"
     },
     {
         "uri": "http://surenpi.com/translation/jenkins/releasing-experimental-updates/",

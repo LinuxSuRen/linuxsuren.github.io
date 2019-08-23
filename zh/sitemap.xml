@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/speach/2019-08-19-jenkins-chinese-community/</loc>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/api/blueocean/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
   </url>
@@ -287,14 +292,6 @@
   
   <url>
     <loc>http://surenpi.com/blog/other/network/chromedp/</loc>
-  </url>
-  
-  <url>
-    <loc>http://surenpi.com/speach/jenkins-world-2019/</loc>
-  </url>
-  
-  <url>
-    <loc>http://surenpi.com/speach/kubecon-2019-shanghai/</loc>
   </url>
   
   <url>
@@ -842,6 +839,7 @@
   
   <url>
     <loc>http://surenpi.com/speach/</loc>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1115,7 +1113,7 @@
   
   <url>
     <loc>http://surenpi.com/</loc>
-    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
