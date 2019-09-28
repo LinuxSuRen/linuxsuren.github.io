@@ -242,7 +242,11 @@ dos2unix yourfile.sh
       
       <guid>http://surenpi.com/blog/other/recommendation/video/</guid>
       <description>格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
-https://youtubemp4.to/</description>
+https://youtubemp4.to/
+下载 我们可以通过一个命令行工具来从 Youtube 上下载视频，首先，使用 brew 来安装命令行：
+brew install youtube-dl
+然后，就可以开始下载了：
+youtube-dl &amp;quot;https://www.youtube.com/watch?v=EtlhC3vw8pA&amp;quot; --proxy 127.0.0.1:1087</description>
     </item>
     
     <item>
@@ -322,6 +326,16 @@ cloud shell</description>
       
       <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-initialization/</guid>
       <description>你可以创建一个 Groovy 脚本文件，例如 $JENKINS_HOME/init.groovy 或者目录 $JENKINS_HOME/init.groovy.d/ 下的任意脚本 .grooy. 它就会在 Jenkins 启动后执行。</description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>http://surenpi.com/blog/os/linux/common/bash/</link>
+      <pubDate>Fri, 01 Mar 2019 17:31:55 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/os/linux/common/bash/</guid>
+      <description>brew 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
+目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d</description>
     </item>
     
     <item>
@@ -724,6 +738,25 @@ Ctrl+X+F 文件名</description>
       <guid>http://surenpi.com/blog/os/linux/common/base64/</guid>
       <description>加密 echo -n 1234 | base64 这里的参数 n 很重要，如果没有的话，会把换行符也包含进去。
 解密 echo MTIzNA== | base64 --d</description>
+    </item>
+    
+    <item>
+      <title>Brew</title>
+      <link>http://surenpi.com/blog/os/mac/brew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/os/mac/brew/</guid>
+      <description> brew 是 MacOS（或者 Linux 操作系统）下的缺省包管理器。
+在有 ruby 环境的操作系统中，可以使用下面的命令快速安装 brew：
+/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+其他的安装方式，请参考这里。
+安装软件 根据来源的不同，brew 包括两类软件，分别是：core、thridparty。
+core 如果你不知道有哪些软件是可以直接安装的话，可以通过搜索命令来搜索：
+brew search curl
+如果可以找到的话，就能用下面的命令来安装：
+brew install curl
+thridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：
+brew tap jenkins-zh/jcli brew install jcli  </description>
     </item>
     
     <item>

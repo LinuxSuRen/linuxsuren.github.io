@@ -172,6 +172,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/os/linux/common/bash/</loc>
+    <lastmod>2019-03-01T17:31:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -342,6 +347,10 @@
   
   <url>
     <loc>http://surenpi.com/blog/os/linux/common/base64/</loc>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/os/mac/brew/</loc>
   </url>
   
   <url>

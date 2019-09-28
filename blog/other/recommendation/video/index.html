@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.54.0" />
+     <meta name="generator" content="Hugo 0.53" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -37,8 +37,7 @@
 <meta property="og:title" content="Video" />
 <meta property="og:description" content="Video" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/other/recommendation/video/" />
-<meta property="article:published_time" content="2019-04-15T12:18:24&#43;08:00"/>
+<meta property="og:url" content="http://surenpi.com/blog/other/recommendation/video/" /><meta property="article:published_time" content="2019-04-15T12:18:24&#43;08:00"/>
 <meta property="article:modified_time" content="2019-04-15T12:18:24&#43;08:00"/>
 
 <meta itemprop="name" content="Video">
@@ -47,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2019-04-15T12:18:24&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-15T12:18:24&#43;08:00" />
-<meta itemprop="wordCount" content="7">
+<meta itemprop="wordCount" content="21">
 
 
 
@@ -214,7 +213,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#格式转换">格式转换</a></li>
+<li>
+<ul>
+<li><a href="#格式转换">格式转换</a>
+<ul>
+<li><a href="#下载">下载</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -279,7 +284,7 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="格式转换">格式转换</h1>
+<h2 id="格式转换">格式转换</h2>
 
 <p>
 
@@ -288,6 +293,16 @@ var trackOutboundLink = function(id, url) {
 <a href="https://www.youtube.com" target="_blank">Youtube</a> 上的视频转换为 <code>mp4</code> 格式并提供下载链接。</p>
 
 <p><a href="https://youtubemp4.to/">https://youtubemp4.to/</a></p>
+
+<h3 id="下载">下载</h3>
+
+<p>我们可以通过一个命令行工具来从 <a href="https://youtube.com">Youtube</a> 上下载视频，首先，使用 <a href="/blog/os/mac/brew">brew</a> 来安装命令行：</p>
+
+<p><code>brew install youtube-dl</code></p>
+
+<p>然后，就可以开始下载了：</p>
+
+<p><code>youtube-dl &quot;https://www.youtube.com/watch?v=EtlhC3vw8pA&quot; --proxy 127.0.0.1:1087</code></p>
 
 </div>
 
