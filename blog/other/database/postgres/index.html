@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="43">
+<meta itemprop="wordCount" content="76">
 
 
 
@@ -217,6 +217,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#获取密码">获取密码</a></li>
 <li><a href="#连接数据库">连接数据库</a></li>
 <li><a href="#查询">查询</a></li>
+<li><a href="#备份和恢复">备份和恢复</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -255,6 +256,8 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>helm install --namespace default stable/postgresql --name postgre</code></p>
 
+<p><code>docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres</code></p>
+
 <h2 id="获取密码">获取密码</h2>
 
 <p><code>export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=&quot;{.data.postgresql-password}&quot; | base64 --decode)</code></p>
@@ -265,9 +268,19 @@ var trackOutboundLink = function(id, url) {
 
 <h2 id="查询">查询</h2>
 
-<p>创建数据库 <code>create database</code></p>
+<p>创建数据库 <code>CREATE DATABASE testdb;</code></p>
 
 <p>查询数据库 <code>\l</code></p>
+
+<p>查询当前数据库中的表 <code>dt</code></p>
+
+<p>选择数据库 <code>\c postgres;</code></p>
+
+<h2 id="备份和恢复">备份和恢复</h2>
+
+<p><code>pg_dump -U [postgres-user] [database-name] &gt; database.sql</code></p>
+
+<p><code>cat database.sql | psql -U [postgres-user] -d [database-name]</code></p>
 
 </div>
 
@@ -373,6 +386,12 @@ var trackOutboundLink = function(id, url) {
                 <li  class="f6 fw4">
                   <a href="/blog/language/python/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     Python
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/typescript/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    TypeScript
                   </a>
                 </li>
               

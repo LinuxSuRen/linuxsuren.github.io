@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="95">
+<meta itemprop="wordCount" content="103">
 
 
 
@@ -219,7 +219,10 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 <li><a href="#delete-pod">Delete pod</a></li>
 <li><a href="#节点">节点</a></li>
-<li><a href="#patch">Patch</a></li>
+<li><a href="#patch">Patch</a>
+<ul>
+<li><a href="#更新镜像">更新镜像</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -341,6 +344,10 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>kubectl patch deploy template -n namespace --patch '{&quot;status&quot;:{&quot;phase&quot;:&quot;Pending&quot;}}'</code></p>
 
+<h2 id="更新镜像">更新镜像</h2>
+
+<p><code>kubectl set image deploy/your-deployment -n namespace imageName=surenpi/image</code></p>
+
 </div>
 
 
@@ -445,6 +452,12 @@ var trackOutboundLink = function(id, url) {
                 <li  class="f6 fw4">
                   <a href="/blog/language/python/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     Python
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/typescript/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    TypeScript
                   </a>
                 </li>
               

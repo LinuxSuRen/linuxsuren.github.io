@@ -6,10 +6,21 @@
     <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 10:35:46 +0800</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jenkins I18n</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/</link>
+      <pubDate>Wed, 01 May 2019 10:35:46 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/</guid>
+      <description>帮助文件 hudson.model.Descriptor
+ 与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下  http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
+http://localhost:8080/jenkins/help/parameter/file.html</description>
+    </item>
     
     <item>
       <title>扩展 Jenkins 的构建（Builder）任务</title>
@@ -27,9 +38,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
-      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
+      <description>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
- getIconFileName getDisplayName getUrlName  约定 </description>
+ getIconFileName getDisplayName getUrlName  hudson.model.queue.FoldableAction
+约定 QueueAction hudson.model.Queue.QueueAction
+方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。
+FoldableAction hudson.model.queue.FoldableAction</description>
     </item>
     
     <item>
@@ -54,6 +68,16 @@ Restricted Usage: @Restricted(NoExternalUse.class)
       <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</guid>
       <description>扩展点 hudson.cli.CLICommand
 Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Handler</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</guid>
+      <description>该扩展点用于决定特定的任务是否会被调度
+hudson.model.Queue.QueueDecisionHandler</description>
     </item>
     
     <item>
@@ -101,6 +125,16 @@ CredentialsStore 凭据存储接口</description>
 public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
 校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
 &amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt;  public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 事件监听</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description>监听队列事件
+hudson.model.queue.QueueListener</description>
     </item>
     
     <item>

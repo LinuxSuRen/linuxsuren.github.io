@@ -17,10 +17,15 @@
       
       <guid>http://surenpi.com/blog/other/database/postgres/</guid>
       <description>安装 helm install --namespace default stable/postgresql --name postgre
+docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=&amp;quot;{.data.postgresql-password}&amp;quot; | base64 --decode)
 连接数据库 kubectl run postgre-postgresql-client --rm --tty -i --restart=&#39;Never&#39; --image docker.io/bitnami/postgresql:11.3.0 --env=&amp;quot;PGPASSWORD=$POSTGRES_PASSWORD&amp;quot; --command -- psql --host postgre-postgresql -U postgres
-查询 创建数据库 create database
-查询数据库 \l</description>
+查询 创建数据库 CREATE DATABASE testdb;
+查询数据库 \l
+查询当前数据库中的表 dt
+选择数据库 \c postgres;
+备份和恢复 pg_dump -U [postgres-user] [database-name] &amp;gt; database.sql
+cat database.</description>
     </item>
     
   </channel>

@@ -30,14 +30,15 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/k8s/apiserver/</guid>
-      <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+      <description>类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
 执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
 认证 首先，需要从 Secret 中获取 Token，参考命令如下：
 kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
 上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
 然后，通过如下类似的命令即可访问到集群的 API：
 curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
-  </description>
+  Restful k8s.io/apiserver/pkg/registry/rest.NamedCreater POST 类的接口
+k8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口</description>
     </item>
     
     <item>
@@ -46,11 +47,12 @@ curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorizatio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/k8s/ingress/</guid>
-      <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
+      <description>Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
 Rewrite Ingress 支持地址重写，具体请查看参考。
 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
 这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
-ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
+ nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description>
     </item>
     
     <item>

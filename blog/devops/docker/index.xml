@@ -6,9 +6,25 @@
     <description>Recent content in 容器技术 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Thu, 16 May 2019 12:55:33 +0800</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Elastic Search</title>
+      <link>http://surenpi.com/blog/devops/docker/elastic-search/</link>
+      <pubDate>Thu, 16 May 2019 12:55:33 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/docker/elastic-search/</guid>
+      <description>docker run -p 9200:9200 -p 9300:9300 -e &amp;quot;discovery.type=single-node&amp;quot; docker.elastic.co/elasticsearch/elasticsearch:5
+可视化 docker run -p 9100:9100 mobz/elasticsearch-head:5
+kibana
+docker run -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16
+docker run -e &amp;ldquo;XPACK_GRAPH_ENABLED=false&amp;rdquo; &amp;ndash;link goofy_curie:elasticsearch -e &amp;ldquo;ELASTICSEARCH_URL=http://localhost:9200&amp;quot; -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16
+docker run &amp;ndash;name kibana &amp;ndash;link goofy_curie:elasticsearch -e &amp;ldquo;ELASTICSEARCH_URL=http://10.222.0.1:9200&amp;quot; &amp;ndash;net default -p 5601:5601 kibana:5
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:es241_l240_k461</description>
+    </item>
     
     <item>
       <title>Docker Daemon</title>

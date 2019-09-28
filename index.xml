@@ -74,6 +74,18 @@ Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permiss
     </item>
     
     <item>
+      <title>Jenkins 队列</title>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-queue/</link>
+      <pubDate>Wed, 05 Jun 2019 12:52:11 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-queue/</guid>
+      <description>我们知道，在 Jenkins 中执行任务的话，执行过程是： 1. 进入队列 2. 查找是否有可以执行该任务的节点 3. 启动节点执行任务
+这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。
+但是，在实际的企业（或组织）应用中，往往会有更加复杂的场景需求。例如：部分任务的优先级相对比较高、持久化队列等等。有一些需求，已经有相对应的插件可以实现，本文会对默写场景进行描述。
+https://github.com/jenkinsci/purge-build-queue-plugin https://github.com/jenkinsci/priority-sorter-plugin https://github.com/jenkinsci/persistent-build-queue-plugin https://github.com/jenkinsci/merge-queue-plugin</description>
+    </item>
+    
+    <item>
       <title>Hub</title>
       <link>http://surenpi.com/blog/other/scm/github/hub/</link>
       <pubDate>Wed, 29 May 2019 17:50:23 +0800</pubDate>
@@ -100,6 +112,21 @@ Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permiss
       
       <guid>http://surenpi.com/blog/devops/team/jira/</guid>
       <description>docker pull cptactionhank/atlassian-jira-software:latest</description>
+    </item>
+    
+    <item>
+      <title>Elastic Search</title>
+      <link>http://surenpi.com/blog/devops/docker/elastic-search/</link>
+      <pubDate>Thu, 16 May 2019 12:55:33 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/docker/elastic-search/</guid>
+      <description>docker run -p 9200:9200 -p 9300:9300 -e &amp;quot;discovery.type=single-node&amp;quot; docker.elastic.co/elasticsearch/elasticsearch:5
+可视化 docker run -p 9100:9100 mobz/elasticsearch-head:5
+kibana
+docker run -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16
+docker run -e &amp;ldquo;XPACK_GRAPH_ENABLED=false&amp;rdquo; &amp;ndash;link goofy_curie:elasticsearch -e &amp;ldquo;ELASTICSEARCH_URL=http://localhost:9200&amp;quot; -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16
+docker run &amp;ndash;name kibana &amp;ndash;link goofy_curie:elasticsearch -e &amp;ldquo;ELASTICSEARCH_URL=http://10.222.0.1:9200&amp;quot; &amp;ndash;net default -p 5601:5601 kibana:5
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:es241_l240_k461</description>
     </item>
     
     <item>
@@ -182,6 +209,17 @@ echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V  </description>
     </item>
     
     <item>
+      <title>Jenkins I18n</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/</link>
+      <pubDate>Wed, 01 May 2019 10:35:46 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/</guid>
+      <description>帮助文件 hudson.model.Descriptor
+ 与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下  http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
+http://localhost:8080/jenkins/help/parameter/file.html</description>
+    </item>
+    
+    <item>
       <title>Zip</title>
       <link>http://surenpi.com/blog/os/linux/common/zip/</link>
       <pubDate>Wed, 01 May 2019 00:45:56 +0800</pubDate>
@@ -211,6 +249,19 @@ dos2unix yourfile.sh
       <description>解压 unzip git.zip
 列出压缩包中的文件 unzip -l git.zip
 输入压缩包中的文件内容 我们可以把 zip 压缩包中的文件内容解压后读取，但也可以做到直接读取而无需解压 unzip -c git.zip META-INF/MANIFEST.MF</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Backup</title>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-backup/</link>
+      <pubDate>Mon, 29 Apr 2019 11:49:25 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-backup/</guid>
+      <description>本文是把 Jenkins 2.164.2 的数据备份到了 2.175 上。
+插件 首先，我们需要进入到 Jenkins 配置的根目录中（默认为：~/.jenkins）：
+备份
+tar czvf jenkins.plugins.tar.gz plugins/*.jpi cp jenkins.plugins.tar.gz ~  凭据 我需要备份的环境运行在 Kubernetes 集群上，因此，下面是通过命令行 kubectl 把凭据相关的文件拷贝出来的， 读者可以结合自己的情况酌情调整：
+kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secret.key ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/credentials.xml ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secrets ~/.jenkins/secrets -n default  Jenkins 默认会把所有的凭据信息保存到 credentials.xml 这个文件中。</description>
     </item>
     
     <item>
@@ -334,7 +385,8 @@ cloud shell</description>
       <pubDate>Fri, 01 Mar 2019 17:31:55 +0800</pubDate>
       
       <guid>http://surenpi.com/blog/os/linux/common/bash/</guid>
-      <description>brew 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
+      <description>参数 $1 是第一个参数
+命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
 目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d</description>
     </item>
     
@@ -493,7 +545,9 @@ dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl:
       <pubDate>Fri, 04 Jan 2019 16:17:49 +0800</pubDate>
       
       <guid>http://surenpi.com/blog/language/golang/ginkgo/</guid>
-      <description>Ginkgo 是 Golang 的 BDD 测试框架
+      <description>Ginkgo 是 Golang 的 BDD 测试框架。 从它的 官方文档 中可以看到大致的用法。可惜的是，写文本时还没有中文的文档。
+ ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
+   Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
 执行测试 ginkgo test pkg/registry/generic
 IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
     </item>
@@ -657,9 +711,12 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
-      <description> 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
+      <description>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
- getIconFileName getDisplayName getUrlName  约定 </description>
+ getIconFileName getDisplayName getUrlName  hudson.model.queue.FoldableAction
+约定 QueueAction hudson.model.Queue.QueueAction
+方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。
+FoldableAction hudson.model.queue.FoldableAction</description>
     </item>
     
     <item>
@@ -707,14 +764,15 @@ Restricted Usage: @Restricted(NoExternalUse.class)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/k8s/apiserver/</guid>
-      <description> 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
+      <description>类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort
 执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型
 认证 首先，需要从 Secret 中获取 Token，参考命令如下：
 kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
 上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
 然后，通过如下类似的命令即可访问到集群的 API：
 curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
-  </description>
+  Restful k8s.io/apiserver/pkg/registry/rest.NamedCreater POST 类的接口
+k8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口</description>
     </item>
     
     <item>
@@ -1179,11 +1237,12 @@ https://github.com/fishworks/fish-food</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/k8s/ingress/</guid>
-      <description> Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
+      <description>Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.
 Rewrite Ingress 支持地址重写，具体请查看参考。
 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
 这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
-ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  </description>
+ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot;  HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
+ nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description>
     </item>
     
     <item>
@@ -1274,6 +1333,16 @@ SSH 需要安装插件。
 Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。
 静态 Docker 静态的 Docker 容器，是通过命令来启动一个 jnlp 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。
 通常的命令 docker run jenkins/jnlp-slave -url http://jenkins-server:port &amp;lt;secret&amp;gt; &amp;lt;agent name&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Jenkins Handler</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</guid>
+      <description>该扩展点用于决定特定的任务是否会被调度
+hudson.model.Queue.QueueDecisionHandler</description>
     </item>
     
     <item>
@@ -1370,6 +1439,16 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
       <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
       <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
  从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 事件监听</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description>监听队列事件
+hudson.model.queue.QueueListener</description>
     </item>
     
     <item>
@@ -1623,7 +1702,7 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/other/server/nginx/</guid>
-      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  </description>
+      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS </description>
     </item>
     
     <item>
@@ -1651,10 +1730,15 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       
       <guid>http://surenpi.com/blog/other/database/postgres/</guid>
       <description>安装 helm install --namespace default stable/postgresql --name postgre
+docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=&amp;quot;{.data.postgresql-password}&amp;quot; | base64 --decode)
 连接数据库 kubectl run postgre-postgresql-client --rm --tty -i --restart=&#39;Never&#39; --image docker.io/bitnami/postgresql:11.3.0 --env=&amp;quot;PGPASSWORD=$POSTGRES_PASSWORD&amp;quot; --command -- psql --host postgre-postgresql -U postgres
-查询 创建数据库 create database
-查询数据库 \l</description>
+查询 创建数据库 CREATE DATABASE testdb;
+查询数据库 \l
+查询当前数据库中的表 dt
+选择数据库 \c postgres;
+备份和恢复 pg_dump -U [postgres-user] [database-name] &amp;gt; database.sql
+cat database.</description>
     </item>
     
     <item>
@@ -1709,7 +1793,10 @@ $(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/other/codequality/sonarqube/</guid>
-      <description> Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  </description>
+      <description>Docker docker run --restart=always -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  Helm 我们可以通过 helm chart 来快速地安装一个 Sonarqube。下面的例子中，我们使用 postgresql 作为数据库：
+helm install --name postgresql --set postgresqlUsername=sonarUser \ --set postgresqlPassword=sonarPass,postgresqlDatabase=sonarDB \ --set persistence.enabled=false \ --set service.type=NodePort \ stable/postgresql  安装 Sonarqube：
+helm install --name sonaqube \ --set postgresql.postgresServer=10.111.207.76 \ --set postgresql.service.port=30180 \ --set service.type=NodePort \ stable/sonarqube  默认的用户名和密码都是：admin
+安装插件 http://129.28.186.10:30870/admin/marketplace</description>
     </item>
     
     <item>
@@ -1804,6 +1891,17 @@ Leader 当前，很多人称带团队的人之为“领导”，亦或者是“�
       
       <guid>http://surenpi.com/blog/language/golang/testing/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>http://surenpi.com/blog/language/typescript/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/language/typescript/typescript/</guid>
+      <description>Error: Cannot find module &#39;../lib/utils/unsupported.js&#39;
+当遇到上面的错误时，可以试试下面的办法：
+sudo rm -rf /usr/local/lib/node_modules/npm brew reinstall node  </description>
     </item>
     
     <item>

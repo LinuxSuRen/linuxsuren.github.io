@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="29">
+<meta itemprop="wordCount" content="35">
 
 
 
@@ -211,9 +211,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#controller">Controller</a></li>
 <li><a href="#rewrite">Rewrite</a></li>
 <li><a href="#413">413</a></li>
+<li><a href="#https">HTTPS</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -278,15 +282,15 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="controller">Controller</h1>
+<h2 id="controller">Controller</h2>
 
 <p>如何要利用 <code>Ingress</code> 来监听 <code>80</code> 端口的话，需要按照 <code>Controller</code>.</p>
 
-<h1 id="rewrite">Rewrite</h1>
+<h2 id="rewrite">Rewrite</h2>
 
 <p>Ingress 支持地址重写，具体请<a href="https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/rewrite/README.md">查看参考</a>。</p>
 
-<h1 id="413">413</h1>
+<h2 id="413">413</h2>
 
 <p>在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 <code>Request Entity Too Large</code>。</p>
 
@@ -296,6 +300,14 @@ var trackOutboundLink = function(id, url) {
 nginx.ingress.kubernetes.io/proxy-body-size: &quot;0&quot;
 nginx/client_max_body_size: &quot;0&quot;
 </code></pre>
+
+<h2 id="https">HTTPS</h2>
+
+<p>如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：</p>
+
+<p><code>
+nginx.ingress.kubernetes.io/ssl-redirect: &quot;false&quot;
+</code></p>
 
 </div>
 
@@ -401,6 +413,12 @@ nginx/client_max_body_size: &quot;0&quot;
                 <li  class="f6 fw4">
                   <a href="/blog/language/python/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
                     Python
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/typescript/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    TypeScript
                   </a>
                 </li>
               

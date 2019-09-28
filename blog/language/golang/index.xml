@@ -32,7 +32,9 @@ import _ &amp;quot;image/png&amp;quot;</description>
       <pubDate>Fri, 04 Jan 2019 16:17:49 +0800</pubDate>
       
       <guid>http://surenpi.com/blog/language/golang/ginkgo/</guid>
-      <description>Ginkgo 是 Golang 的 BDD 测试框架
+      <description>Ginkgo 是 Golang 的 BDD 测试框架。 从它的 官方文档 中可以看到大致的用法。可惜的是，写文本时还没有中文的文档。
+ ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
+   Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
 执行测试 ginkgo test pkg/registry/generic
 IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
     </item>

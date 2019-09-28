@@ -63,6 +63,13 @@
         "content": " 本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。\n部署 Jenkins 支持几种安装（启动）方式：\n  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。\n然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins\n这种方式，方便简单，但是需要有 Java 环境。\nDocker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。\n需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175\n挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts\n如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts\nCan not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch '/var/jenkins_home/copy_reference_file.log': Permission denied  Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins\n如果希望看到具体内容请查看这里。\nKubeApps 上也可以找到 Jenkins\n版本选择 从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：\n 生产环境：最近一年内的 LTS（长期支持版） 相对正式的环境：最新的 LTS 体验：最新的 Weekly 插件研发：尽可能选择较老的 LTS  参数 Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。\n端口 java -jar jenkins.war --httpPort=1234 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。\nJENKINS_HOME 我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 .jenkins。参数（-D 参数必须要在 -jar 之前）如下：\njava -DJENKINS_HOME=. -jar jenkins.war 或者 java -Duser.home=. -jar jenkins.war\nWeb 上下文 在 Docker 容器环境下，Jenkins 的默认上下文是 /，如果要修改为 /jenkins 的话，修改下面参数的值即可： JENKINS_OPTS=\u0026quot;--prefix=/jenkins\u0026quot;\n时区 如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。\ndocker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts\n向导 Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：\njava -Djenkins.install.runSetupWizard=false -jar jenkins.war\n用户 --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin\n重启 如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。\n访问地址 http://localhost:8080/restart 后点击确认。\n公钥 访问下面的地址可以得到 Jenkins 的公钥：\nhttp://localhost:8080/instance-identity/\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-queue/",
+        "title": "Jenkins 队列",
+        "tags": [],
+        "description": "队列在 Jenkins 中是非常重要的环节",
+        "content": "我们知道，在 Jenkins 中执行任务的话，执行过程是： 1. 进入队列 2. 查找是否有可以执行该任务的节点 3. 启动节点执行任务\n这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。\n但是，在实际的企业（或组织）应用中，往往会有更加复杂的场景需求。例如：部分任务的优先级相对比较高、持久化队列等等。有一些需求，已经有相对应的插件可以实现，本文会对默写场景进行描述。\nhttps://github.com/jenkinsci/purge-build-queue-plugin https://github.com/jenkinsci/priority-sorter-plugin https://github.com/jenkinsci/persistent-build-queue-plugin https://github.com/jenkinsci/merge-queue-plugin\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/other/scm/github/hub/",
         "title": "Hub",
         "tags": [],
@@ -82,6 +89,13 @@
         "tags": [],
         "description": "Jira",
         "content": "docker pull cptactionhank/atlassian-jira-software:latest\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/devops/docker/elastic-search/",
+        "title": "Elastic Search",
+        "tags": [],
+        "description": "Elastic Search",
+        "content": " docker run -p 9200:9200 -p 9300:9300 -e \u0026quot;discovery.type=single-node\u0026quot; docker.elastic.co/elasticsearch/elasticsearch:5\n可视化 docker run -p 9100:9100 mobz/elasticsearch-head:5\nkibana\ndocker run -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16\ndocker run -e \u0026ldquo;XPACK_GRAPH_ENABLED=false\u0026rdquo; \u0026ndash;link goofy_curie:elasticsearch -e \u0026ldquo;ELASTICSEARCH_URL=http://localhost:9200\u0026quot; -p 5601:5601 docker.elastic.co/kibana/kibana:5.6.16\ndocker run \u0026ndash;name kibana \u0026ndash;link goofy_curie:elasticsearch -e \u0026ldquo;ELASTICSEARCH_URL=http://10.222.0.1:9200\u0026quot; \u0026ndash;net default -p 5601:5601 kibana:5\ndocker run -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:es241_l240_k461\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/api/token/",
@@ -140,6 +154,13 @@
         "content": " 有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。\n网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：\n   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/",
+        "title": "Jenkins I18n",
+        "tags": [],
+        "description": "Jenkins I18n",
+        "content": " 帮助文件 hudson.model.Descriptor\n 与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下  http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port\nhttp://localhost:8080/jenkins/help/parameter/file.html\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/os/linux/common/zip/",
         "title": "Zip",
         "tags": [],
@@ -159,6 +180,13 @@
         "tags": [],
         "description": "Unzip",
         "content": " 解压 unzip git.zip\n列出压缩包中的文件 unzip -l git.zip\n输入压缩包中的文件内容 我们可以把 zip 压缩包中的文件内容解压后读取，但也可以做到直接读取而无需解压 unzip -c git.zip META-INF/MANIFEST.MF\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-backup/",
+        "title": "Jenkins Backup",
+        "tags": [],
+        "description": "Jenkins Backup",
+        "content": " 本文是把 Jenkins 2.164.2 的数据备份到了 2.175 上。\n插件 首先，我们需要进入到 Jenkins 配置的根目录中（默认为：~/.jenkins）：\n备份\ntar czvf jenkins.plugins.tar.gz plugins/*.jpi cp jenkins.plugins.tar.gz ~  凭据 我需要备份的环境运行在 Kubernetes 集群上，因此，下面是通过命令行 kubectl 把凭据相关的文件拷贝出来的， 读者可以结合自己的情况酌情调整：\nkubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secret.key ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/credentials.xml ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secrets ~/.jenkins/secrets -n default  Jenkins 默认会把所有的凭据信息保存到 credentials.xml 这个文件中。\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/api/open-api/",
@@ -235,7 +263,7 @@
         "title": "Bash",
         "tags": [],
         "description": "Bash",
-        "content": " brew 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion\n目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d\n"
+        "content": " 参数 $1 是第一个参数\n命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion\n目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/",
@@ -319,7 +347,7 @@
         "title": "Ginkgo",
         "tags": [],
         "description": "Ginkgo",
-        "content": "  Ginkgo 是 Golang 的 BDD 测试框架\n执行测试 ginkgo test pkg/registry/generic\nIDE 插件 VS-Code 的插件 vscode-ginkgo\n"
+        "content": "  Ginkgo 是 Golang 的 BDD 测试框架。 从它的 官方文档 中可以看到大致的用法。可惜的是，写文本时还没有中文的文档。\n ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go\n   Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。\n执行测试 ginkgo test pkg/registry/generic\nIDE 插件 VS-Code 的插件 vscode-ginkgo\n"
     },
     {
         "uri": "http://surenpi.com/blog/language/golang/gmock/",
@@ -431,7 +459,7 @@
         "title": "Action",
         "tags": [],
         "description": "Jenkins Plugin Action",
-        "content": " 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。\n接口 你首先需要实现接口 hudson.model.Action 的三个方法:\n getIconFileName getDisplayName getUrlName  约定 "
+        "content": " 本文介绍如果开发一个 Jenkins 的后端，也就是 Action。\n接口 你首先需要实现接口 hudson.model.Action 的三个方法:\n getIconFileName getDisplayName getUrlName  hudson.model.queue.FoldableAction\n约定 QueueAction hudson.model.Queue.QueueAction\n方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。\nFoldableAction hudson.model.queue.FoldableAction\n"
     },
     {
         "uri": "http://surenpi.com/tags/agent/",
@@ -466,7 +494,7 @@
         "title": "ApiServer",
         "tags": [],
         "description": "ApiServer",
-        "content": " 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n认证 首先，需要从 Secret 中获取 Token，参考命令如下：\nkubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d \u0026gt; token\n上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。\n然后，通过如下类似的命令即可访问到集群的 API：\ncurl -k https://localhost:6443/api/v1/namespaces --header \u0026quot;Authorization: Bearer `cat token`\u0026quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。\n  "
+        "content": " 类型查看 查看所有的资源组 curl --insecure https://localhost:6443/apis/ | grep groupVersion | sort\n执行命令 curl --insecure https://localhost:6443/apis/{api.group}/{version} 可以看到所支持的资源类型\n认证 首先，需要从 Secret 中获取 Token，参考命令如下：\nkubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d \u0026gt; token\n上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。\n然后，通过如下类似的命令即可访问到集群的 API：\ncurl -k https://localhost:6443/api/v1/namespaces --header \u0026quot;Authorization: Bearer `cat token`\u0026quot;   需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。\n  Restful k8s.io/apiserver/pkg/registry/rest.NamedCreater POST 类的接口\nk8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口\n"
     },
     {
         "uri": "http://surenpi.com/blog/other/editor/vim/core/vim-auto-complete/",
@@ -830,7 +858,7 @@
         "title": "Ingress",
         "tags": [],
         "description": "Ingress",
-        "content": " Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.\nRewrite Ingress 支持地址重写，具体请查看参考。\n413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。\n这时，找到对应的 Ingress 添加如下 Annotations 即可解决：\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  "
+        "content": " Controller 如何要利用 Ingress 来监听 80 端口的话，需要按照 Controller.\nRewrite Ingress 支持地址重写，具体请查看参考。\n413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。\n这时，找到对应的 Ingress 添加如下 Annotations 即可解决：\ningress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx.ingress.kubernetes.io/proxy-body-size: \u0026quot;0\u0026quot; nginx/client_max_body_size: \u0026quot;0\u0026quot;  HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：\n nginx.ingress.kubernetes.io/ssl-redirect: \u0026quot;false\u0026quot; \n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins-x/install/",
@@ -917,6 +945,13 @@
         "content": ""
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/",
+        "title": "Jenkins Handler",
+        "tags": [],
+        "description": "Jenkins Handler",
+        "content": "该扩展点用于决定特定的任务是否会被调度\nhudson.model.Queue.QueueDecisionHandler\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-junit/",
         "title": "Jenkins JUnit",
         "tags": [],
@@ -992,6 +1027,13 @@
         "tags": [],
         "description": "Jenkins 主题插件",
         "content": "如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。\n 从这里你能找到很多已经定制好的主题。先给出一个样例。\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/",
+        "title": "Jenkins 事件监听",
+        "tags": [],
+        "description": "Jenkins 事件监听",
+        "content": "监听队列事件\nhudson.model.queue.QueueListener\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-help/",
@@ -1096,7 +1138,7 @@
         "title": "Kubectl",
         "tags": [],
         "description": "Kubectl 的使用",
-        "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\nPatch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某几个字段。如果，每次都使用 kubectl edit 命令操作的话，会比较麻烦。通过 kubectl 的子命令 patch 可以实现快速地实现这个过程。\n该命令，可以通过 json 或者 yaml 格式来对资源*打补丁*。下面，给出一个使用 json 的例子：\nkubectl patch deploy template -n namespace --patch '{\u0026quot;status\u0026quot;:{\u0026quot;phase\u0026quot;:\u0026quot;Pending\u0026quot;}}'\n"
+        "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\nPatch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某几个字段。如果，每次都使用 kubectl edit 命令操作的话，会比较麻烦。通过 kubectl 的子命令 patch 可以实现快速地实现这个过程。\n该命令，可以通过 json 或者 yaml 格式来对资源*打补丁*。下面，给出一个使用 json 的例子：\nkubectl patch deploy template -n namespace --patch '{\u0026quot;status\u0026quot;:{\u0026quot;phase\u0026quot;:\u0026quot;Pending\u0026quot;}}'\n更新镜像 kubectl set image deploy/your-deployment -n namespace imageName=surenpi/image\n"
     },
     {
         "uri": "http://surenpi.com/tags/kubernetes/",
@@ -1194,7 +1236,7 @@
         "title": "Nginx",
         "tags": [],
         "description": "Nginx",
-        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  "
+        "content": " 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS "
     },
     {
         "uri": "http://surenpi.com/blog/language/java/openj9/",
@@ -1229,7 +1271,7 @@
         "title": "Postgres",
         "tags": [],
         "description": "Postgres",
-        "content": " 安装 helm install --namespace default stable/postgresql --name postgre\n获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=\u0026quot;{.data.postgresql-password}\u0026quot; | base64 --decode)\n连接数据库 kubectl run postgre-postgresql-client --rm --tty -i --restart='Never' --image docker.io/bitnami/postgresql:11.3.0 --env=\u0026quot;PGPASSWORD=$POSTGRES_PASSWORD\u0026quot; --command -- psql --host postgre-postgresql -U postgres\n查询 创建数据库 create database\n查询数据库 \\l\n"
+        "content": " 安装 helm install --namespace default stable/postgresql --name postgre\ndocker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres\n获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=\u0026quot;{.data.postgresql-password}\u0026quot; | base64 --decode)\n连接数据库 kubectl run postgre-postgresql-client --rm --tty -i --restart='Never' --image docker.io/bitnami/postgresql:11.3.0 --env=\u0026quot;PGPASSWORD=$POSTGRES_PASSWORD\u0026quot; --command -- psql --host postgre-postgresql -U postgres\n查询 创建数据库 CREATE DATABASE testdb;\n查询数据库 \\l\n查询当前数据库中的表 dt\n选择数据库 \\c postgres;\n备份和恢复 pg_dump -U [postgres-user] [database-name] \u0026gt; database.sql\ncat database.sql | psql -U [postgres-user] -d [database-name]\n"
     },
     {
         "uri": "http://surenpi.com/blog/other/test/postman/",
@@ -1285,7 +1327,7 @@
         "title": "Sonarqube",
         "tags": [],
         "description": "Sonarqube",
-        "content": " Docker docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  "
+        "content": " Docker docker run --restart=always -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  Helm 我们可以通过 helm chart 来快速地安装一个 Sonarqube。下面的例子中，我们使用 postgresql 作为数据库：\nhelm install --name postgresql --set postgresqlUsername=sonarUser \\ --set postgresqlPassword=sonarPass,postgresqlDatabase=sonarDB \\ --set persistence.enabled=false \\ --set service.type=NodePort \\ stable/postgresql  安装 Sonarqube：\nhelm install --name sonaqube \\ --set postgresql.postgresServer=10.111.207.76 \\ --set postgresql.service.port=30180 \\ --set service.type=NodePort \\ stable/sonarqube  默认的用户名和密码都是：admin\n安装插件 http://129.28.186.10:30870/admin/marketplace\n"
     },
     {
         "uri": "http://surenpi.com/blog/language/java/spacevim/",
@@ -1363,6 +1405,20 @@
         "tags": [],
         "description": "Testing",
         "content": ""
+    },
+    {
+        "uri": "http://surenpi.com/blog/language/typescript/",
+        "title": "TypeScript",
+        "tags": [],
+        "description": "TypeScript",
+        "content": "TypeScript\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/language/typescript/typescript/",
+        "title": "TypeScript",
+        "tags": [],
+        "description": "TypeScript",
+        "content": "Error: Cannot find module '../lib/utils/unsupported.js'\n当遇到上面的错误时，可以试试下面的办法：\nsudo rm -rf /usr/local/lib/node_modules/npm brew reinstall node  "
     },
     {
         "uri": "http://surenpi.com/blog/other/document/typora/",
