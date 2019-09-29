@@ -65,17 +65,6 @@ dos2unix yourfile.sh
     </item>
     
     <item>
-      <title>Bash</title>
-      <link>http://surenpi.com/blog/os/linux/common/bash/</link>
-      <pubDate>Fri, 01 Mar 2019 17:31:55 +0800</pubDate>
-      
-      <guid>http://surenpi.com/blog/os/linux/common/bash/</guid>
-      <description>参数 $1 是第一个参数
-命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
-目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d</description>
-    </item>
-    
-    <item>
       <title>Netcat</title>
       <link>http://surenpi.com/blog/os/linux/common/netcat/</link>
       <pubDate>Sun, 13 Jan 2019 19:33:01 +0800</pubDate>

@@ -193,11 +193,6 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/blog/os/linux/common/bash/</loc>
-    <lastmod>2019-03-01T17:31:55+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -743,12 +738,12 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/k8s/</loc>
+    <loc>http://surenpi.com/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/k8s/</loc>
+    <loc>http://surenpi.com/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -757,13 +752,13 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/kubernetes/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <loc>http://surenpi.com/categories/kubernetes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/kubernetes/</loc>
+    <loc>http://surenpi.com/tags/kubernetes/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
