@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/os/linux/common/bash/</loc>
+    <lastmod>2019-09-29T17:31:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/speach/2019-08-19-jenkins-chinese-community/</loc>
     <lastmod>2019-08-19T00:00:00+00:00</lastmod>
   </url>
@@ -772,7 +777,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/os/linux/common/</loc>
-    <lastmod>2019-05-05T14:15:31+08:00</lastmod>
+    <lastmod>2019-09-29T17:31:55+08:00</lastmod>
   </url>
   
   <url>
@@ -1154,7 +1159,7 @@
   
   <url>
     <loc>http://surenpi.com/</loc>
-    <lastmod>2019-08-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-29T17:31:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
