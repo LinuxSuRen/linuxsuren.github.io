@@ -293,6 +293,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/language/java/java8/</loc>
+    <lastmod>2018-06-10T19:12:20+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/other/configuration/ini/</loc>
   </url>
   
@@ -614,6 +619,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/language/java/</loc>
+    <lastmod>2018-06-10T19:12:20+08:00</lastmod>
   </url>
   
   <url>
@@ -743,12 +749,12 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/k8s/</loc>
+    <loc>http://surenpi.com/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/k8s/</loc>
+    <loc>http://surenpi.com/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -757,13 +763,13 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/kubernetes/</loc>
+    <loc>http://surenpi.com/tags/kubernetes/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/kubernetes/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <loc>http://surenpi.com/categories/kubernetes/</loc>
     <priority>0</priority>
   </url>
   

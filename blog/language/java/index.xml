@@ -6,9 +6,21 @@
     <description>Recent content in Java on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Sun, 10 Jun 2018 19:12:20 +0800</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/language/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java8</title>
+      <link>http://surenpi.com/blog/language/java/java8/</link>
+      <pubDate>Sun, 10 Jun 2018 19:12:20 +0800</pubDate>
+      
+      <guid>http://surenpi.com/blog/language/java/java8/</guid>
+      <description>Lambda Collection 判断是否存在特定元素：
+Set&amp;lt;String&amp;gt; set = new HashSet&amp;lt;&amp;gt;(); set.add(&amp;quot;a&amp;quot;); set.add(&amp;quot;b&amp;quot;); boolean exists = set.stream().anyMatch((a) -&amp;gt; a.startsWith(&amp;quot;a&amp;quot;)); System.out.println(exists);  brew 我们可以通过 brew 来安装 java
+brew cask install adoptopenjdk8</description>
+    </item>
     
     <item>
       <title>Docker</title>
