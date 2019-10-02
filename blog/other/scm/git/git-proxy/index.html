@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="49">
+<meta itemprop="wordCount" content="53">
 
 
 
@@ -288,10 +288,10 @@ var trackOutboundLink = function(id, url) {
 
 <h2 id="部分代理">部分代理</h2>
 
-<p>我们也可以对指定的域名配置代理</p>
+<p>我们也可以对指定的域名配置代理，格式为：<code>git config --global http.https://github.com.proxy http://proxyUsername:proxyPassword@proxy.server.com:port</code></p>
 
-<pre><code>git config --global http.https://domain.com.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
-git config --global http.https://domain.com.sslVerify false
+<pre><code>git config --global http.https://github.com.proxy 127.0.0.1:1087
+git config --global http.https://github.com.sslVerify false
 </code></pre>
 
 <h2 id="查看配置">查看配置</h2>
