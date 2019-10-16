@@ -395,7 +395,7 @@
         "uri": "http://surenpi.com/blog/language/java/java8/",
         "title": "Java8",
         "tags": [],
-        "description": "",
+        "description": "Java 相关的内容总结",
         "content": " Lambda Collection 判断是否存在特定元素：\nSet\u0026lt;String\u0026gt; set = new HashSet\u0026lt;\u0026gt;(); set.add(\u0026quot;a\u0026quot;); set.add(\u0026quot;b\u0026quot;); boolean exists = set.stream().anyMatch((a) -\u0026gt; a.startsWith(\u0026quot;a\u0026quot;)); System.out.println(exists);  brew 我们可以通过 brew 来安装 java\nbrew cask install adoptopenjdk8\nExceptions 如果遇到下面在请求 HTTPS 时遇到证书的问题，可能是因为由于自制私有证书导致的。我们可以把私有证书导入 JRE 来解决：\nCaused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target  首先，要先找到 JRE 的位置：which java。目录通常是在：{{Installation_directory}}/{{JDK_version}}/jre/lib/security\n然后，导入证书：\nkeytool -importcert -file selfsigned.crt -keystore {{Installation_directory}}/{{JDK_version}}/jre/lib/security/cacerts\n在导入过程中，可能是需要有 root 权限，并要求输入证书密码。如果你在安装 Java 后没有修改过的话，默认的密码为：changeit。\n"
     },
     {
