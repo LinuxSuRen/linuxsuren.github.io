@@ -294,6 +294,20 @@
         "content": " 修改作者 git commit --amend --author=\u0026quot;Author Name \u0026lt;name@email.com\u0026gt;\u0026quot;\n修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可\n本地/全局 通过参数可以指定是对全局还是当前项目的修改\ngit config --local user.email \u0026lt;name@email.com\u0026gt;\ngit config --global user.email \u0026lt;name@email.com\u0026gt;\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/k8s/tiller/",
+        "title": "Tiller",
+        "tags": [],
+        "description": "Tiller",
+        "content": "第一次使用 helm 时需要进行初始化（如果服务端没有对应的容器启动的话），初始化命令为 helm init\n当执行 helm list 时遇到了下面的报错信息\nError: configmaps is forbidden: User \u0026quot;system:serviceaccount:kube-system:default\u0026quot; cannot list configmaps in the namespace \u0026quot;kube-system\u0026quot;\n你可以通过添加集群管理员权限来修复这个问题：\nkubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/devops/k8s/helm/",
+        "title": "helm",
+        "tags": [],
+        "description": "helm",
+        "content": "helm repo list 列出所有已经配置的 chart 仓库\nhelm status jenkins 插件 chart 安装后的状态，和首次安装后打印出来的内容一致\nhelm get values jenkins 显示 chart 在安装时指定的自定义值\nhelm get values jenkins --revision 1 显示 chart 的历史安装自定义值\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/language/golang/init/",
         "title": "Init",
         "tags": [],

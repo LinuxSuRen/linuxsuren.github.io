@@ -218,6 +218,16 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/devops/k8s/tiller/</loc>
+    <lastmod>2019-02-14T11:15:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/devops/k8s/helm/</loc>
+    <lastmod>2019-02-14T11:15:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/language/golang/init/</loc>
     <lastmod>2019-01-31T15:18:58+08:00</lastmod>
   </url>
@@ -780,6 +790,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/devops/k8s/</loc>
+    <lastmod>2019-02-14T11:15:54+08:00</lastmod>
   </url>
   
   <url>

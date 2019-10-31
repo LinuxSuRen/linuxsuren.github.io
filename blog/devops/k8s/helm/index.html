@@ -9,15 +9,15 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins Kubernetes Plugin - SuRenPi</title>
+    <title>helm - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     
-    <meta name="description" content="Jenkins Kubernetes Plugin">
+    <meta name="description" content="helm">
     
     
-    <meta name="keywords" content="jenkins,plugin,kubernetes">
+    <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -34,21 +34,23 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins Kubernetes Plugin" />
-<meta property="og:description" content="Jenkins Kubernetes Plugin" />
+<meta property="og:title" content="helm" />
+<meta property="og:description" content="helm" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/kubernetes/" />
+<meta property="og:url" content="http://surenpi.com/blog/devops/k8s/helm/" /><meta property="article:published_time" content="2019-02-14T11:15:54&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-14T11:15:54&#43;08:00"/>
 
-<meta itemprop="name" content="Jenkins Kubernetes Plugin">
-<meta itemprop="description" content="Jenkins Kubernetes Plugin">
-
-
-
-<meta itemprop="wordCount" content="104">
+<meta itemprop="name" content="helm">
+<meta itemprop="description" content="helm">
 
 
+<meta itemprop="datePublished" content="2019-02-14T11:15:54&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-14T11:15:54&#43;08:00" />
+<meta itemprop="wordCount" content="28">
 
-<meta itemprop="keywords" content="k8s,plugin,docker,agent," />
+
+
+<meta itemprop="keywords" content="" />
 
         
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4216293-5"></script>
@@ -203,17 +205,7 @@ var trackOutboundLink = function(id, url) {
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
 		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li><a href="#预备知识">预备知识</a></li>
-<li><a href="#基本原理">基本原理</a></li>
-<li><a href="#认证">认证</a></li>
-<li><a href="#pod-模板">Pod 模板</a></li>
-<li><a href="#k8s-代理节点">K8S 代理节点</a></li>
-<li><a href="#多容器">多容器</a></li>
-<li><a href="#排错">排错</a></li>
-</ul>
-</nav>
+  	
 	
 
 	<div date-pref>
@@ -226,13 +218,13 @@ var trackOutboundLink = function(id, url) {
 		</a>
 
 		
-			<a href="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/configuration-as-code/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Configuration as Code ">
+			<a href="http://surenpi.com/blog/devops/k8s/tiller/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Tiller ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
 			</a>
 		
 
 		
-			<a href="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/ssh-slaves/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins SSH Agent">
+			<a href="http://surenpi.com/blog/devops/k8s/ake/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Ake">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -251,13 +243,13 @@ var trackOutboundLink = function(id, url) {
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins Kubernetes Plugin</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">helm</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Jenkins Kubernetes Plugin
+      helm
     </div>
   
 
@@ -270,280 +262,18 @@ var trackOutboundLink = function(id, url) {
 
 <div class="prose" id="prose">
 
+<p><code>helm repo list</code> 列出所有已经配置的 chart 仓库</p>
 
+<p><code>helm status jenkins</code> 插件 chart 安装后的状态，和首次安装后打印出来的内容一致</p>
 
-<p>
+<p><code>helm get values jenkins</code> 显示 chart 在安装时指定的自定义值</p>
 
-<a href="https://kubernetes.io/" target="_blank">Kubernetes</a> 是一个容器编排的系统，而 
-
-<a href="https://plugins.jenkins.io/kubernetes" target="_blank">Kubernetes 插件</a>则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对
-
-<a href="https://github.com/jenkinsci/kubernetes-plugin" target="_blank">插件源码</a>感兴趣的童鞋可以了解下。</p>
-
-<h1 id="预备知识">预备知识</h1>
-
-<p>要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。</p>
-
-<p>Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。</p>
-
-<p>Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。</p>
-
-<p>JNLP 的基本原理。</p>
-
-<h1 id="基本原理">基本原理</h1>
-
-<p>当<a href="/blog/devops/jenkins/basic/jenkins-label/">标签规则</a>匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。</p>
-
-<p>为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。</p>
-
-<p>然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。</p>
-
-<h1 id="认证">认证</h1>
-
-<p>有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 <code>Secret File</code> 类型，并把文件 <code>~/.kube/config</code> 上传即可。这里有<a href="/blog/devops/k8s/kubectl/">如何导出 k8s 集群认证文件</a>的介绍。</p>
-
-<p>导出 Kubernetes 认证文件的命令：</p>
-
-<p><code>curl https://raw.githubusercontent.com/LinuxSuRen/surenpi/master/static/codes/shell/k8s/export-k8s-crt.sh|bash</code></p>
-
-<h1 id="pod-模板">Pod 模板</h1>
-
-<p>一个 Pod 对应 Jenkins 中的一个执行节点，</p>
-
-<h1 id="k8s-代理节点">K8S 代理节点</h1>
-
-<p>该插件在流水线中以支持多种方式使用 K8S 代理节点。通常情况下，我们需要在 Pod 模板中添加一个容器模板，也就是所需要的运行环境，例如：Java、Golang 等语言相关的。在运行期，Kubernetes 插件会自动添加一个 JNLP 的容器。</p>
-
-<p>对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。</p>
-
-<h1 id="多容器">多容器</h1>
-
-<p>Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：</p>
-
-<pre><code>container(&quot;container_name&quot;){
-    echo &quot;hello&quot;
-}
-</code></pre>
-
-<h1 id="排错">排错</h1>
+<p><code>helm get values jenkins --revision 1</code> 显示 chart 的历史安装自定义值</p>
 
 </div>
 
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-
-<table>
-    <tr>
-        <td>类型</td><td>编号</td><td>描述</td>
-    </tr>
-
-
-
-
-
-    
-    <tr>
-        <td>Improvement</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59984" target="_blank">JENKINS-59984</a>
-        </td>
-        <td>
-            Simplify handling of Pod vs. PodTemplate
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59959" target="_blank">JENKINS-59959</a>
-        </td>
-        <td>
-            The Concurrency Limit is not always respected.
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59937" target="_blank">JENKINS-59937</a>
-        </td>
-        <td>
-            Container and Pod template runAsGroup and runAsUser default to root on config roundtrip
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59910" target="_blank">JENKINS-59910</a>
-        </td>
-        <td>
-            Nodes can&#39;t connect to master after Uncaught exception in TcpSlaveAgentListener ConnectionHandler Thread
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Improvement</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59909" target="_blank">JENKINS-59909</a>
-        </td>
-        <td>
-            Easier setup of Windows pods
-        </td>
-    </tr>
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-    
-
-</table>
-
-一共：522个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
-
 
 </aside>
 
@@ -561,21 +291,6 @@ var trackOutboundLink = function(id, url) {
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -803,60 +518,17 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/kubernetes/" class="hide-child link primary-color">
+  <a href="http://surenpi.com/blog/devops/k8s/helm/" class="hide-child link primary-color">
   <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
-    “Jenkins Kubernetes Plugin”
-  </a> was last updated: January 1, 0001
+    “helm”
+  </a> was last updated: February 14, 2019
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/jenkins-plugin/kubernetes.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/k8s/helm.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
       
-
-  
-  
-  
-
-  <div class="nested-lh-copy">
-    <ul class="list dib nested-links ml0 pl0">
-      
-        <li class="db mb2 b">
-          Tags:
-        </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/k8s">
-              k8s
-            </a>
-          </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/plugin">
-              plugin
-            </a>
-          </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/docker">
-              docker
-            </a>
-          </li>
-        
-          <li class="db dib-l mr3">
-            <a class="tag" href="/tags/agent">
-              agent
-            </a>
-          </li>
-        
-              
-      
-        
-        
-      
-    </ul>
-  </div>
 
 
     </div>
