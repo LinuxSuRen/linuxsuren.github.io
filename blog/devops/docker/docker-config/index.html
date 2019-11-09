@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="62">
+<meta itemprop="wordCount" content="72">
 
 
 
@@ -205,10 +205,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#代理">代理</a></li>
 <li><a href="#insecure">Insecure</a></li>
 <li><a href="#user">User</a></li>
 <li><a href="#重启服务">重启服务</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -261,19 +264,22 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="代理">代理</h1>
+<h2 id="代理">代理</h2>
 
-<p>给 Docker 设置代理</p>
+<p>给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置</p>
 
-<p>创建目录 <code>mkdir /etc/systemd/system/docker.service.d</code></p>
-
-<p>编辑配置文件 <code>vim /etc/systemd/system/docker.service.d/http-proxy.conf</code></p>
-
-<pre><code>[Service]
-Environment=&quot;HTTP_PROXY=http://ip:port&quot;
+<pre><code>mkdir -p /etc/systemd/system/docker.service.d
+cat &gt; /etc/systemd/system/docker.service.d/http-proxy.conf &lt;&lt; EOF
+[Service]
+Environment=&quot;HTTP_PROXY=http://your.proxy:8080&quot;
+Environment=&quot;HTTPS_PROXY=http://your.proxy:8080&quot;
+Environment=&quot;NO_PROXY=127.0.0.1,localhost
+EOF
+systemctl daemon-reload
+systemctl restart docker
 </code></pre>
 
-<h1 id="insecure">Insecure</h1>
+<h2 id="insecure">Insecure</h2>
 
 <p><code>vim /etc/systemd/system/docker.service.d/docker.conf</code></p>
 
@@ -290,7 +296,7 @@ ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000
 
 <p><code>DOCKER_OPTS=&quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&quot;</code></p>
 
-<h1 id="user">User</h1>
+<h2 id="user">User</h2>
 
 <p>让普通用户可以执行 docker</p>
 
@@ -300,7 +306,7 @@ ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000
 
 <p><code>sudo service docker restart</code></p>
 
-<h1 id="重启服务">重启服务</h1>
+<h2 id="重启服务">重启服务</h2>
 
 <p>执行命令 <code>systemctl daemon-reload &amp;&amp; systemctl stop docker &amp;&amp; systemctl start docker</code></p>
 

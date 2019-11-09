@@ -2519,10 +2519,8 @@ yum install python-pip</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/devops/docker/docker-config/</guid>
-      <description>代理 给 Docker 设置代理
-创建目录 mkdir /etc/systemd/system/docker.service.d
-编辑配置文件 vim /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service] Environment=&amp;quot;HTTP_PROXY=http://ip:port&amp;quot;  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+      <description>代理 给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置
+mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;quot;HTTP_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;HTTPS_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;NO_PROXY=127.0.0.1,localhost EOF systemctl daemon-reload systemctl restart docker  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
 [Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
 Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：

@@ -343,51 +343,12 @@ var trackOutboundLink = function(id, url) {
 
     
     <tr>
-        <td>Improvement</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59984" target="_blank">JENKINS-59984</a>
-        </td>
-        <td>
-            Simplify handling of Pod vs. PodTemplate
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59959" target="_blank">JENKINS-59959</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60105" target="_blank">JENKINS-60105</a>
         </td>
         <td>
-            The Concurrency Limit is not always respected.
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59937" target="_blank">JENKINS-59937</a>
-        </td>
-        <td>
-            Container and Pod template runAsGroup and runAsUser default to root on config roundtrip
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59910" target="_blank">JENKINS-59910</a>
-        </td>
-        <td>
-            Nodes can&#39;t connect to master after Uncaught exception in TcpSlaveAgentListener ConnectionHandler Thread
+            Kubernetes plugin fails with EKS
         </td>
     </tr>
     
@@ -397,10 +358,49 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Improvement</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-59909" target="_blank">JENKINS-59909</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60088" target="_blank">JENKINS-60088</a>
         </td>
         <td>
-            Easier setup of Windows pods
+            Change pod label - build label from unique key to value. 
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60087" target="_blank">JENKINS-60087</a>
+        </td>
+        <td>
+            Kubernetes nodes failed not removed
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60055" target="_blank">JENKINS-60055</a>
+        </td>
+        <td>
+            NoDelayProvisionerStrategy doesn&#39;t honor CloudProvisionerListener extension point
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60054" target="_blank">JENKINS-60054</a>
+        </td>
+        <td>
+            Wrong umask? Containers with non-root user don&#39;t have permissions to agent durable script folders
         </td>
     </tr>
     
@@ -542,7 +542,7 @@ var trackOutboundLink = function(id, url) {
 
 </table>
 
-一共：522个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：530个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -567,11 +567,11 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
