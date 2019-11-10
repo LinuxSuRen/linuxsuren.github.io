@@ -118,10 +118,8 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
 在 Jira 上申请一个账号，然后创建一个 issues，等待管理员的审核。
 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
 你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
-发布 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform
-跳过测试 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare
-执行发布准备而且无需输入参数 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare -B
-如果上述的过程没有任何错误的话，大概两个小时左右，你就可以在插件官网中找到你的插件了。</description>
+发布 设置你的 Maven 账号，参考下面的配置修改 Maven 的配置文件~/.m2/settings.xml：
+&amp;lt;settings xmlns=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;quot;&amp;gt; &amp;lt;servers&amp;gt; &amp;lt;server&amp;gt; &amp;lt;id&amp;gt;maven.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&amp;gt; &amp;lt;username&amp;gt;...&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;...&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; &amp;lt;/servers&amp;gt; &amp;lt;/settings&amp;gt;  等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform</description>
     </item>
     
     <item>

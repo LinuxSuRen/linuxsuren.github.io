@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="41">
+<meta itemprop="wordCount" content="80">
 
 
 
@@ -205,10 +205,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#创建库">创建库</a></li>
 <li><a href="#提交请求">提交请求</a></li>
 <li><a href="#上传">上传</a></li>
 <li><a href="#发布">发布</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -271,23 +274,41 @@ var trackOutboundLink = function(id, url) {
 
 <p>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。</p>
 
-<h1 id="创建库">创建库</h1>
+<h2 id="创建库">创建库</h2>
 
 <p>你需要在 <a href="https://github.com/">GitHub</a> 上申请一个账号，然后，把你的工程提交上去。</p>
 
-<h1 id="提交请求">提交请求</h1>
+<h2 id="提交请求">提交请求</h2>
 
 <p><a href="https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins#HostingPlugins-Contents">详细阅读托管要求</a></p>
 
 <p>在 <a href="https://issues.jenkins-ci.org">Jira</a> 上申请一个账号，然后<a href="https://issues.jenkins-ci.org/projects/HOSTING">创建</a>一个 issues，等待管理员的审核。</p>
 
-<h1 id="上传">上传</h1>
+<h2 id="上传">上传</h2>
 
 <p>首先，在 Jenkins 的<a href="https://repo.jenkins-ci.org/">成品库</a>上，用上面 Jira 的账号登陆一次，保证该账号是可用的。</p>
 
 <p>你需要 Fork <a href="https://github.com/jenkins-infra/repository-permissions-updater">上传权限申请</a>，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。</p>
 
-<h1 id="发布">发布</h1>
+<h2 id="发布">发布</h2>
+
+<p>设置你的 Maven 账号，参考下面的配置修改 Maven 的配置文件<code>~/.m2/settings.xml</code>：</p>
+
+<pre><code>&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
+ 
+  &lt;servers&gt;
+    &lt;server&gt;
+      &lt;id&gt;maven.jenkins-ci.org&lt;/id&gt; &lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&gt;
+      &lt;username&gt;...&lt;/username&gt;
+      &lt;password&gt;...&lt;/password&gt;
+    &lt;/server&gt;
+  &lt;/servers&gt;
+ 
+&lt;/settings&gt;
+</code></pre>
 
 <p>等一切就绪，你的插件要发布时，只要执行 <code>mvn release:prepare release:perform</code></p>
 
@@ -326,11 +347,11 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
-	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
 </ul>
 
