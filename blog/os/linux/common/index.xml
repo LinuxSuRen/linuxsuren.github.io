@@ -228,14 +228,14 @@ echo abc | tr a-z A-Z 大小写转换</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/os/linux/common/curl/</guid>
-      <description> GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
+      <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
 curl -H &amp;quot;Content-Type:application/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
 curl --header &amp;quot;Authorization: Bearer $token&amp;quot; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;quot;Content-Type:application/json&amp;quot; --data &#39;{&amp;quot;url&amp;quot;:&amp;quot;alauda/cronTabCheck?cronText=sdf&amp;quot;}&#39;  管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
 curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;chart=@jenkins-x-platform-0.0.1607.tgz&amp;quot;
 状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
 输出格式 支持的变量包括：
- content_type filename_effective http_code http_connect http_version  </description>
+ content_type filename_effective http_code http_connect http_version  代理 语法：curl --proxy &amp;lt;[protocol://][user:password@]proxyhost[:port]&amp;gt; url 示例：curl --proxy http://user:password@proxyhost:port http://yourserver.</description>
     </item>
     
     <item>
