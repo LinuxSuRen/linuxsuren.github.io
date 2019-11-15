@@ -1078,6 +1078,14 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/os/linux/common/mkfifo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/os/linux/common/nc/</loc>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/os/mac/open/</loc>
   </url>
   
@@ -1091,6 +1099,10 @@
   
   <url>
     <loc>http://surenpi.com/blog/os/linux/common/split/</loc>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/blog/os/linux/common/tcpdump/</loc>
   </url>
   
   <url>

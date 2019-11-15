@@ -1652,6 +1652,20 @@
         "content": "[INFO] \u0026mdash; maven-gpg-plugin:1.5:sign (sign-artifacts) @ kubernetes-model-generator \u0026mdash; gpg: directory \u0026lsquo;/home/jenkins/.gnupg\u0026rsquo; created gpg: keybox \u0026lsquo;/home/jenkins/.gnupg/pubring.kbx\u0026rsquo; created gpg: no default secret key: No secret key gpg: signing failed: No secret key\ngpg: signing failed: Inappropriate ioctl for device\nhttps://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenkinsci/remoting/pull/280 https://gist.github.com/michaelajr/ff4693bce9fc20e5200b34683aa4ba51\n"
     },
     {
+        "uri": "http://surenpi.com/blog/os/linux/common/mkfifo/",
+        "title": "mkfifo",
+        "tags": [],
+        "description": "make fifos",
+        "content": "nc -lkv localhost 9090 -c \u0026lsquo;tee /dev/stderr | nc -v baidu.com 80 | tee /dev/stderr\u0026rsquo;\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/os/linux/common/nc/",
+        "title": "nc",
+        "tags": [],
+        "description": "arbitrary TCP and UDP connections and listens",
+        "content": " 简单服务器 nc -l localhost 8080 我们可以利用这个来观察接收到的 HTTP 请求\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/os/mac/open/",
         "title": "open",
         "tags": [],
@@ -1678,6 +1692,13 @@
         "tags": [],
         "description": "split",
         "content": " 切割文件 指定每个文件的大小和名称前缀 split -b 10m minikube-v0.26.0.iso minikube-v0.26.0.iso-part-\n合并文件，可以使用命令 cat minikube-v0.26.0.iso-part-* \u0026gt; minikube.iso\n"
+    },
+    {
+        "uri": "http://surenpi.com/blog/os/linux/common/tcpdump/",
+        "title": "tcpdump",
+        "tags": [],
+        "description": "dump traffic on a network",
+        "content": "tcpdump -i lo0 -s0 -v port 8080\ntcpdump dst jenkins-zh.gitee.io -s0 -v\ntcpdump src localhost\ntcpdump -o lo0 -s0 -v port 8080\nsudo tcpflow -p -i lo0 -c port 8080\n"
     },
     {
         "uri": "http://surenpi.com/blog/os/linux/common/telnet/",
