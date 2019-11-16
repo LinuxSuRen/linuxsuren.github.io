@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="72">
+<meta itemprop="wordCount" content="93">
 
 
 
@@ -208,6 +208,7 @@ var trackOutboundLink = function(id, url) {
 <li>
 <ul>
 <li><a href="#代理">代理</a></li>
+<li><a href="#运行时代理">运行时代理</a></li>
 <li><a href="#insecure">Insecure</a></li>
 <li><a href="#user">User</a></li>
 <li><a href="#重启服务">重启服务</a></li>
@@ -273,10 +274,26 @@ cat &gt; /etc/systemd/system/docker.service.d/http-proxy.conf &lt;&lt; EOF
 [Service]
 Environment=&quot;HTTP_PROXY=http://your.proxy:8080&quot;
 Environment=&quot;HTTPS_PROXY=http://your.proxy:8080&quot;
-Environment=&quot;NO_PROXY=127.0.0.1,localhost
+Environment=&quot;NO_PROXY=127.0.0.1,localhost&quot;
 EOF
 systemctl daemon-reload
 systemctl restart docker
+</code></pre>
+
+<h2 id="运行时代理">运行时代理</h2>
+
+<pre><code>{
+        &quot;HttpHeaders&quot;: {
+                &quot;User-Agent&quot;: &quot;Docker-Client/19.03.4 (linux)&quot;
+        },
+        &quot;proxies&quot;: {
+                &quot;default&quot;: {
+                        &quot;httpProxy&quot;: &quot;http://172.17.212.62:3128&quot;,
+                        &quot;httpsProxy&quot;: &quot;http://172.17.212.62:3128&quot;,
+                        &quot;noProxy&quot;: &quot;127.0.0.1,localhost,172.17.212.63&quot;
+                }
+        }
+}
 </code></pre>
 
 <h2 id="insecure">Insecure</h2>

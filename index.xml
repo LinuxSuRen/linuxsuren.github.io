@@ -2550,16 +2550,11 @@ yum install python-pip</description>
       
       <guid>http://surenpi.com/blog/devops/docker/docker-config/</guid>
       <description>代理 给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置
-mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;quot;HTTP_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;HTTPS_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;NO_PROXY=127.0.0.1,localhost EOF systemctl daemon-reload systemctl restart docker  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;quot;HTTP_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;HTTPS_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;NO_PROXY=127.0.0.1,localhost&amp;quot; EOF systemctl daemon-reload systemctl restart docker  运行时代理 { &amp;quot;HttpHeaders&amp;quot;: { &amp;quot;User-Agent&amp;quot;: &amp;quot;Docker-Client/19.03.4 (linux)&amp;quot; }, &amp;quot;proxies&amp;quot;: { &amp;quot;default&amp;quot;: { &amp;quot;httpProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;httpsProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;noProxy&amp;quot;: &amp;quot;127.0.0.1,localhost,172.17.212.63&amp;quot; } } }  Insecure vim /etc/systemd/system/docker.service.d/docker.conf
 [Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000  vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
 Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
-DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
-User 让普通用户可以执行 docker
-sudo groupadd docker
-sudo gpasswd -a ${USER} docker
-sudo service docker restart
-重启服务 执行命令 systemctl daemon-reload &amp;amp;&amp;amp; systemctl stop docker &amp;amp;&amp;amp; systemctl start docker</description>
+DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;</description>
     </item>
     
   </channel>
