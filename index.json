@@ -1260,6 +1260,13 @@
         "content": " 查看温度 安装软件 apt-get install sensord\n然后执行命令 sensors\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/build/nexus/",
+        "title": "Nexus",
+        "tags": [],
+        "description": "Nexus",
+        "content": " 初始密码 Nexus3 的 admin 的初始密码默认会自动生成，并保存在文件 /nexus-data/admin.password 中。\n为了自动化 Nexus 的安装和初始化配置工作，我们需要能够将管理员的初始密码固定或者可以设置。 这时候，你可以通过下面的两个途径来做到：\n 修改 $data-dir/etc/nexus.properties 文件中的值 nexus.security.randompassword 为 false 设置环境变量 NEXUS_SECURITY_RANDOMPASSWORD 的值为 false   See Also\nSonatype community discuss\nSource code\n "
+    },
+    {
         "uri": "http://surenpi.com/blog/other/server/nginx/",
         "title": "Nginx",
         "tags": [],
