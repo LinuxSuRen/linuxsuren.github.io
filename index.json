@@ -42,11 +42,18 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/",
+        "title": "Jenkins 插件调试",
+        "tags": [],
+        "description": "Jenkins 插件调试",
+        "content": " 运行 如果是在 Jenkins core 的源码目录下的话，需要进入到 war 目录；如果是插件的话，通常在根目录下执行：\nmvn hpi:run\n程序正常启动后，会在 target 下生成一个运行时的目录：target/jetty/webapp/\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/os/linux/common/bash/",
         "title": "Bash",
         "tags": [],
         "description": "Bash",
-        "content": " 参数    变量 说明     $# 参数个数   $0 当前脚本文件名   $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2    命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion\n目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d\n"
+        "content": " 参数    变量 说明 示例     $# 参数个数    $0 当前脚本文件名    $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2    $_ 上一条名称的最后一个参数 mkdir temp    命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion\n目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d\n"
     },
     {
         "uri": "http://surenpi.com/speach/2019-08-19-jenkins-chinese-community/",
@@ -1104,13 +1111,6 @@
         "tags": [],
         "description": "Jenkins 插件扩展点",
         "content": " 接口 接口 hudson.ExtensionPoint 用于自动生成文档\n注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。\nDemo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);  "
-    },
-    {
-        "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/",
-        "title": "Jenkins 插件调试",
-        "tags": [],
-        "description": "Jenkins 插件调试",
-        "content": " 运行 在 war 目录下运行：\nmvn hpi:run\n跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：\nmvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。\n指定端口 `mvn hpi:run -Djetty.port=1234\u0026rsquo;\nmvn hpi:run -Djenkins.install.runSetupWizard=true\n指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1\n参考 maven-hpi-plugin\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/",

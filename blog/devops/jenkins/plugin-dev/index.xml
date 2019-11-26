@@ -6,10 +6,27 @@
     <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 01 May 2019 10:35:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jenkins 插件调试</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</guid>
+      <description>运行 如果是在 Jenkins core 的源码目录下的话，需要进入到 war 目录；如果是插件的话，通常在根目录下执行：
+mvn hpi:run
+程序正常启动后，会在 target 下生成一个运行时的目录：target/jetty/webapp/
+跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
+mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
+指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
+mvn hpi:run -Djenkins.install.runSetupWizard=true
+指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
+参考 maven-hpi-plugin</description>
+    </item>
     
     <item>
       <title>Jenkins I18n</title>
@@ -179,22 +196,6 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
       <description> 接口 接口 hudson.ExtensionPoint 用于自动生成文档
 注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。
 Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println);  </description>
-    </item>
-    
-    <item>
-      <title>Jenkins 插件调试</title>
-      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</guid>
-      <description>运行 在 war 目录下运行：
-mvn hpi:run
-跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：
-mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。
-指定端口 `mvn hpi:run -Djetty.port=1234&amp;rsquo;
-mvn hpi:run -Djenkins.install.runSetupWizard=true
-指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1
-参考 maven-hpi-plugin</description>
     </item>
     
   </channel>

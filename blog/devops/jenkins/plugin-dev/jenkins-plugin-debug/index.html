@@ -37,14 +37,16 @@
 <meta property="og:title" content="Jenkins 插件调试" />
 <meta property="og:description" content="Jenkins 插件调试" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" />
+<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" /><meta property="article:published_time" content="2019-11-26T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-11-26T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="Jenkins 插件调试">
 <meta itemprop="description" content="Jenkins 插件调试">
 
 
-
-<meta itemprop="wordCount" content="30">
+<meta itemprop="datePublished" content="2019-11-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-11-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="36">
 
 
 
@@ -205,11 +207,16 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#运行">运行</a></li>
 <li><a href="#跳过测试">跳过测试</a></li>
-<li><a href="#指定端口">指定端口</a></li>
+<li><a href="#指定端口">指定端口</a>
+<ul>
 <li><a href="#指定-jenkins-版本">指定 Jenkins 版本</a></li>
+</ul></li>
 <li><a href="#参考">参考</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -224,11 +231,15 @@ var trackOutboundLink = function(id, url) {
 		</a>
 
 		
-			<a href="http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 插件扩展点 ">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
-			</a>
-		
 
+		
+			<a href="http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-i18n/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins I18n">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
 		
 	</div>
 
@@ -262,29 +273,31 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="运行">运行</h1>
+<h2 id="运行">运行</h2>
 
-<p>在 <code>war</code> 目录下运行：</p>
+<p>如果是在 Jenkins core 的源码目录下的话，需要进入到 <code>war</code> 目录；如果是插件的话，通常在根目录下执行：</p>
 
 <p><code>mvn hpi:run</code></p>
 
-<h1 id="跳过测试">跳过测试</h1>
+<p>程序正常启动后，会在 <code>target</code> 下生成一个运行时的目录：<code>target/jetty/webapp/</code></p>
+
+<h2 id="跳过测试">跳过测试</h2>
 
 <p><code>mvn hpi:run -DskipTests</code> 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：</p>
 
 <p><code>mvn hpi:run -Dmaven.test.skip=true</code> 该命令既不执行测试代码，也不会编译。</p>
 
-<h1 id="指定端口">指定端口</h1>
+<h2 id="指定端口">指定端口</h2>
 
 <p>`mvn hpi:run -Djetty.port=1234&rsquo;</p>
 
 <p><code>mvn hpi:run -Djenkins.install.runSetupWizard=true</code></p>
 
-<h1 id="指定-jenkins-版本">指定 Jenkins 版本</h1>
+<h3 id="指定-jenkins-版本">指定 Jenkins 版本</h3>
 
 <p><code>mvn hpi:run -Djenkins.version=2.121.1</code></p>
 
-<h1 id="参考">参考</h1>
+<h2 id="参考">参考</h2>
 
 <p><a href="https://jenkinsci.github.io/maven-hpi-plugin/run-mojo.html">maven-hpi-plugin</a></p>
 
@@ -315,11 +328,11 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	<li><a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/">Jenkins Kubernetes Plugin</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
@@ -554,7 +567,7 @@ var trackOutboundLink = function(id, url) {
   <a href="http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/" class="hide-child link primary-color">
   <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
     “Jenkins 插件调试”
-  </a> was last updated: January 1, 0001
+  </a> was last updated: November 26, 2019
 </h6>
 
       <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug.md" class="
