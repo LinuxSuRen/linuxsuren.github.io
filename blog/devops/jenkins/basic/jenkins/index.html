@@ -46,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2019-06-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-06-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="171">
+<meta itemprop="wordCount" content="175">
 
 
 
@@ -226,6 +226,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#向导">向导</a></li>
 <li><a href="#用户">用户</a></li>
 </ul></li>
+<li><a href="#https">HTTPS</a></li>
 <li><a href="#重启">重启</a></li>
 <li><a href="#公钥">公钥</a></li>
 </ul></li>
@@ -385,6 +386,10 @@ touch: cannot touch '/var/jenkins_home/copy_reference_file.log': Permission deni
 
 <p><code>--argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin</code></p>
 
+<h2 id="https">HTTPS</h2>
+
+<p><code>--httpsPort=8083 --httpsCertificate=/var/lib/jenkins/cert --httpsPrivateKey=/var/lib/jenkins/pk</code></p>
+
 <h2 id="重启">重启</h2>
 
 <p>如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。</p>
@@ -426,11 +431,11 @@ touch: cannot touch '/var/jenkins_home/copy_reference_file.log': Permission deni
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
-	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
 </ul>
 
