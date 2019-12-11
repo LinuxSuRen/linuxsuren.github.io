@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="20">
+<meta itemprop="wordCount" content="47">
 
 
 
@@ -205,12 +205,16 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#checkfornull">CheckForNull</a></li>
 <li><a href="#extension">Extension</a></li>
 <li><a href="#noexternaluse">NoExternalUse</a></li>
 <li><a href="#initializer">Initializer</a></li>
 <li><a href="#terminator">Terminator</a></li>
 <li><a href="#restricted">Restricted</a></li>
+<li><a href="#whitelisted">Whitelisted</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -271,29 +275,41 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="checkfornull">CheckForNull</h1>
+<h2 id="checkfornull">CheckForNull</h2>
 
-<h1 id="extension">Extension</h1>
+<h2 id="extension">Extension</h2>
 
-<h1 id="noexternaluse">NoExternalUse</h1>
+<h2 id="noexternaluse">NoExternalUse</h2>
 
-<h1 id="initializer">Initializer</h1>
+<h2 id="initializer">Initializer</h2>
 
 <p>Usage: <code>@Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)</code></p>
 
 <p>通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。</p>
 
-<h1 id="terminator">Terminator</h1>
+<h2 id="terminator">Terminator</h2>
 
 <p>Usage: <code>@Terminator(after=TermMilestone.STARTED)</code></p>
 
 <p>上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。</p>
 
-<h1 id="restricted">Restricted</h1>
+<h2 id="restricted">Restricted</h2>
 
 <p>Usage: <code>@Restricted(NoExternalUse.class)</code></p>
 
 <p>上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。</p>
+
+<h2 id="whitelisted">Whitelisted</h2>
+
+<p><code>org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted</code></p>
+
+<p>Jenkins 流水线中的 DSL 语句，会收到沙盒机制的保护。你可能会见到类似如下的错误：</p>
+
+<pre><code>Scripts not permitted to use method groovy.lang.GroovyObjecgt invokeMethod
+Administrators can decide whether to approve or reject this signature.
+</code></pre>
+
+<p>如果对应的方法是在自定义插件中实现的话，通过给对应的方法上增加 <code>@Whitelisted</code> 解决该问题。</p>
 
 </div>
 
@@ -326,9 +342,9 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
 </ul>
 
