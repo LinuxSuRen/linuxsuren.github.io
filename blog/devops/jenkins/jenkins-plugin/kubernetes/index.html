@@ -345,23 +345,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60408" target="_blank">JENKINS-60408</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60610" target="_blank">JENKINS-60610</a>
         </td>
         <td>
-            Workspace Volume configuration not being used
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60396" target="_blank">JENKINS-60396</a>
-        </td>
-        <td>
-            Setting default directory when using container()
+            Unable to set multi label in kubernetes pod template
         </td>
     </tr>
     
@@ -371,10 +358,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60369" target="_blank">JENKINS-60369</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60574" target="_blank">JENKINS-60574</a>
         </td>
         <td>
-            Kubernetes plugin is trying to create PVC when there are no volumes specified
+            Allow override of JENKINS_DIRECT_CONNECTION in Jenkins k8s plugin
         </td>
     </tr>
     
@@ -384,10 +371,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60343" target="_blank">JENKINS-60343</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60551" target="_blank">JENKINS-60551</a>
         </td>
         <td>
-            java.nio.file.AccessDeniedException: /home/jenkins for specific workingDir during NodeProvision by kubernetes yaml syntax
+            KubernetesCloud copy constructor is not copying all field
         </td>
     </tr>
     
@@ -395,12 +382,25 @@ var trackOutboundLink = function(id, url) {
 
     
     <tr>
-        <td>Improvement</td>
+        <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60339" target="_blank">JENKINS-60339</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60547" target="_blank">JENKINS-60547</a>
         </td>
         <td>
-            Inherit pod template from shared library for declarative pipeline
+            KubernetesDeclarativeAgent workingDir is ignored in templating Jenkins agent pod
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-60537" target="_blank">JENKINS-60537</a>
+        </td>
+        <td>
+            Exception when using multiple labels on a pod template
         </td>
     </tr>
     
@@ -542,7 +542,7 @@ var trackOutboundLink = function(id, url) {
 
 </table>
 
-一共：540个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：547个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -569,11 +569,11 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/">Jenkins 插件扩展点</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
 	
 </ul>
 

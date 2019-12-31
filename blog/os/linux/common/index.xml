@@ -197,7 +197,11 @@ PermitRootLogin no
 无密码登录  在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
  在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
   证书登陆 ssh -i test.pem root@localhost
-服务重启 service ssh restart</description>
+服务重启 service ssh restart
+密码传递 我们可以通过 sshpass 给 ssh 传递密码，下面给出一个例子：
+sshpass -p password ssh root@192.168.1.1
+通过 brew 安装的话，可以执行下面的命令：
+brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb</description>
     </item>
     
     <item>

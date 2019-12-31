@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="26">
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -202,6 +202,20 @@ var trackOutboundLink = function(id, url) {
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#允许-root-登陆">允许 Root 登陆</a></li>
+<li><a href="#无密码登录">无密码登录</a></li>
+<li><a href="#证书登陆">证书登陆</a></li>
+<li><a href="#服务重启">服务重启</a></li>
+<li><a href="#密码传递">密码传递</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -261,11 +275,11 @@ var trackOutboundLink = function(id, url) {
 
 <p>配置文件 <code>vim /etc/ssh/sshd_config</code></p>
 
-<h1 id="允许-root-登陆">允许 Root 登陆</h1>
+<h2 id="允许-root-登陆">允许 Root 登陆</h2>
 
 <p>如果你希望允许 <code>root</code> 用户可以通过 <code>ssh</code> 远程登陆的话，可以找到配置文件，并将 <code>PermitRootLogin</code> 设置为 <code>yes</code>。</p>
 
-<h1 id="无密码登录">无密码登录</h1>
+<h2 id="无密码登录">无密码登录</h2>
 
 <ol>
 <li><p>在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）</p></li>
@@ -273,13 +287,23 @@ var trackOutboundLink = function(id, url) {
 <li><p>在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容</p></li>
 </ol>
 
-<h1 id="证书登陆">证书登陆</h1>
+<h2 id="证书登陆">证书登陆</h2>
 
 <p><code>ssh -i test.pem root@localhost</code></p>
 
-<h1 id="服务重启">服务重启</h1>
+<h2 id="服务重启">服务重启</h2>
 
 <p><code>service ssh restart</code></p>
+
+<h2 id="密码传递">密码传递</h2>
+
+<p>我们可以通过 <code>sshpass</code> 给 <code>ssh</code> 传递密码，下面给出一个例子：</p>
+
+<p><code>sshpass -p password ssh root@192.168.1.1</code></p>
+
+<p>通过 brew 安装的话，可以执行下面的命令：</p>
+
+<p><code>brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb</code></p>
 
 </div>
 
