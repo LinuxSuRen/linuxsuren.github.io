@@ -558,6 +558,10 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/translation/git/</loc>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/other/scm/github/</loc>
     <lastmod>2019-05-29T17:50:23+08:00</lastmod>
   </url>
@@ -858,6 +862,10 @@
   <url>
     <loc>http://surenpi.com/tags/pipeline/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</loc>
   </url>
   
   <url>

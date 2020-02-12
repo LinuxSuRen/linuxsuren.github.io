@@ -9,15 +9,15 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins 插件托管 - SuRenPi</title>
+    <title>Please Add .gitattributes To Your Git Repository - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     
-    <meta name="description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上">
+    <meta name="description" content="Git attributes">
     
     
-    <meta name="keywords" content="jenkins,hosting">
+    <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -34,17 +34,17 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins 插件托管" />
-<meta property="og:description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上" />
+<meta property="og:title" content="Please Add .gitattributes To Your Git Repository" />
+<meta property="og:description" content="Git attributes" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/" />
+<meta property="og:url" content="http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/" />
 
-<meta itemprop="name" content="Jenkins 插件托管">
-<meta itemprop="description" content="本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上">
+<meta itemprop="name" content="Please Add .gitattributes To Your Git Repository">
+<meta itemprop="description" content="Git attributes">
 
 
 
-<meta itemprop="wordCount" content="80">
+<meta itemprop="wordCount" content="130">
 
 
 
@@ -202,46 +202,6 @@ var trackOutboundLink = function(id, url) {
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
-		<p class="b">此页面上的内容</p>
-  	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#创建库">创建库</a></li>
-<li><a href="#提交请求">提交请求</a></li>
-<li><a href="#上传">上传</a></li>
-<li><a href="#发布">发布</a></li>
-</ul></li>
-</ul>
-</nav>
-	
-
-	<div date-pref>
-		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-      <path transform="rotate(90 11.704999923706055,12.000000000000002) " d="m15.41,7.41l-1.41,-1.41l-6,6l6,6l1.41,-1.41l-4.58,-4.59l4.58,-4.59z" id="svg_1"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-		</a>
-
-		
-			<a href="http://surenpi.com/blog/devops/jenkins/basic/jenkins-agent/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins Agent ">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
-			</a>
-		
-
-		
-			<a href="http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 标签">
-			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
-	</div>
-
 </aside>
 </div>
 
@@ -251,13 +211,13 @@ var trackOutboundLink = function(id, url) {
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 插件托管</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Please Add .gitattributes To Your Git Repository</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上
+      Git attributes
     </div>
   
 
@@ -272,51 +232,79 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<p>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。</p>
+<p>##　什么是 .gitattributes ？
+当执行 git 动作时，.gitattributes 文件允许你指定由 git 使用的文件和路径的属性，例如：<code>git commit</code> 等。</p>
 
-<h2 id="创建库">创建库</h2>
+<p>换句话说，每当有文件保存或者创建时，git 会根据指定的属性来自动地保存。</p>
 
-<p>你需要在 <a href="https://github.com/">GitHub</a> 上申请一个账号，然后，把你的工程提交上去。</p>
+<p>其中的一个属性是 <em>eol</em>(end of line)，用于配置文件的结尾。本文将会深入了解如何配置文件的结尾行，这样的话，即使在不同的机器、操作系统
+上都可以使得每个开发者都可以使用相同的值。</p>
 
-<h2 id="提交请求">提交请求</h2>
+<h2 id="为什么是-gitattributes-开发者之间的争议">为什么是 .gitattributes（开发者之间的争议 ⚔️ ）?</h2>
 
-<p><a href="https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins#HostingPlugins-Contents">详细阅读托管要求</a></p>
+<p>不是所有的开发者都是一样的，不能因为你是在 Windows 上使用 Visual Studio Code 开发的，就期望别的 Pull Request 也是基于相同的开发
+环境完成的（在 MacOS 上可能用的是 Sublime Text2）。</p>
 
-<p>在 <a href="https://issues.jenkins-ci.org">Jira</a> 上申请一个账号，然后<a href="https://issues.jenkins-ci.org/projects/HOSTING">创建</a>一个 issues，等待管理员的审核。</p>
+<p>正如上面提到的，开发者使用不同的操作系统，默认的文件结尾行就会不同。在 Windows 上默认的是回车换行（Carriage Return Line
+Feed, CRLF），然而，在 Linux/MacOS 上则是换行（Line Feed, LF）。</p>
 
-<h2 id="上传">上传</h2>
+<p>从表面看起来，内容都是一样的，那我们为什么还会困扰呢？??</p>
 
-<p>首先，在 Jenkins 的<a href="https://repo.jenkins-ci.org/">成品库</a>上，用上面 Jira 的账号登陆一次，保证该账号是可用的。</p>
+<p>好的，如果你启用了该功能，并设置属性 <code>endOfLine</code> 为 <code>lf</code> 的话。</p>
 
-<p>你需要 Fork <a href="https://github.com/jenkins-infra/repository-permissions-updater">上传权限申请</a>，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。</p>
-
-<h2 id="发布">发布</h2>
-
-<p>设置你的 Maven 账号，参考下面的配置修改 Maven 的配置文件<code>~/.m2/settings.xml</code>：</p>
-
-<pre><code>&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
-  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-  xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
- 
-  &lt;servers&gt;
-    &lt;server&gt;
-      &lt;id&gt;maven.jenkins-ci.org&lt;/id&gt; &lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&gt;
-      &lt;username&gt;...&lt;/username&gt;
-      &lt;password&gt;...&lt;/password&gt;
-    &lt;/server&gt;
-  &lt;/servers&gt;
- 
-&lt;/settings&gt;
+<pre><code>{
+  &quot;endOfLine&quot;: &quot;lf&quot;
+}
 </code></pre>
 
-<p>等一切就绪，你的插件要发布时，只要执行 <code>mvn release:prepare release:perform</code></p>
+<p>在 Windows 上，开发者会看到如下的检查警告。</p>
 
-<p>跳过测试 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare</code></p>
+<p><img src="../linting-errors.png" alt="linting-errors.png" /></p>
 
-<p>执行发布准备而且无需输入参数 <code>mvn -Darguments=&quot;-DskipTests&quot; release:prepare -B</code></p>
+<p>这时候 <code>.gitattributes</code> 就可以派上用场了 🦸！</p>
 
-<p>如果上述的过程没有任何错误的话，大概两个小时左右，你就可以在<a href="https://plugins.jenkins.io/">插件官网</a>中找到你的插件了。</p>
+<h2 id="新仓库">新仓库</h2>
+
+<p>首先，在仓库的根目录下创建名为 <code>.gitattributes</code> 的文件。</p>
+
+<p>下面，是一份 <code>.gitattributes</code> 文件的样例内容。</p>
+
+<pre><code>*.js    eol=lf
+*.jsx   eol=lf
+*.json  eol=lf
+</code></pre>
+
+<p>把该文件提交并推送到服务器上。</p>
+
+<pre><code>git add .
+git commit -m &quot;Added .gitattributes to repo&quot;
+git push
+</code></pre>
+
+<p>现在，任何人从仓库获取代码后，创建以及修改文件时，git 都会自动地设置好正确的文件结尾。</p>
+
+<h2 id="增加到已有的-git-仓库">增加到已有的 Git 仓库</h2>
+
+<p>正如上面提到的，在仓库的根目录下创建名为 <code>.gitattributes</code> 的文件。一旦文件推送到 git 服务器后，请确保你的本地
+仓库是干净的、无需提交的。使用命令 <code>git status</code> 可以检查是否你的仓库是干净的。</p>
+
+<p><strong>注意</strong>：如果你还有未提及或推送的文件，请确保这些动作已经被执行过了，或者在执行下面的命令前 <code>stash</code> 过。</p>
+
+<h2 id="重置-gitattributes">重置 GitAttributes</h2>
+
+<pre><code>git rm --cached -r
+git reset --hard
+</code></pre>
+
+<p>上面的命令就会根据文件 <code>.gitattributes</code> 中的定义，更新文件的结尾行。</p>
+
+<p>任何变更都会自动使用指定文件的文件结尾行格式。</p>
+
+<p>下一步，可以通知团队成员或者协作者去执行 Git 属性重置的命令。</p>
+
+<p>现在，prettier 就不会在提示有关 CR 的问题了，所有的开发者都可以安心写代码了! ☮️</p>
+
+<p><img src="../no-prettier-linting-errors.png" alt="no-prettier-linting-errors.png" /></p>
 
 </div>
 
@@ -339,21 +327,6 @@ var trackOutboundLink = function(id, url) {
 
 
           
-
-<h2>参考</h2>
-<ul>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
-	
-	<li><a href="/blog/devops/jenkins/basic/jenkins/">Jenkins</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-help/">Jenkins 帮助信息</a></li>
-	
-	<li><a href="/blog/devops/jenkins/pipeline/scripted/">脚本式流水线</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -581,13 +554,13 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/" class="hide-child link primary-color">
+  <a href="http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/" class="hide-child link primary-color">
   <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
-    “Jenkins 插件托管”
+    “Please Add .gitattributes To Your Git Repository”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/jenkins-host.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/translation/git/please-add-gitattributes-to-your-git-repository.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 
