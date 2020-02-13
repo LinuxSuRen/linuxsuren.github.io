@@ -46,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2019-09-29T17:31:55&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-29T17:31:55&#43;08:00" />
-<meta itemprop="wordCount" content="25">
+<meta itemprop="wordCount" content="34">
 
 
 
@@ -212,6 +212,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#参数">参数</a></li>
 <li><a href="#命令自动补全">命令自动补全</a></li>
 <li><a href="#目录">目录</a></li>
+<li><a href="#循环">循环</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -314,6 +315,14 @@ var trackOutboundLink = function(id, url) {
 <h2 id="目录">目录</h2>
 
 <p>我们可以把特定命令的自动补全脚本保存到这个目录中 <code>/usr/local/etc/bash_completion.d</code></p>
+
+<h2 id="循环">循环</h2>
+
+<pre><code>for i in {1..5}
+do
+  echo $i
+done
+</code></pre>
 
 </div>
 
