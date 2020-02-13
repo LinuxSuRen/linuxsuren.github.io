@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</guid>
-      <description>##　什么是 .gitattributes ？ 当执行 git 动作时，.gitattributes 文件允许你指定由 git 使用的文件和路径的属性，例如：git commit 等。
+      <description>什么是 .gitattributes ？ 当执行 git 动作时，.gitattributes 文件允许你指定由 git 使用的文件和路径的属性，例如：git commit 等。
 换句话说，每当有文件保存或者创建时，git 会根据指定的属性来自动地保存。
 其中的一个属性是 eol(end of line)，用于配置文件的结尾。本文将会深入了解如何配置文件的结尾行，这样的话，即使在不同的机器、操作系统 上都可以使得每个开发者都可以使用相同的值。
 为什么是 .gitattributes（开发者之间的争议 ⚔️ ）? 不是所有的开发者都是一样的，不能因为你是在 Windows 上使用 Visual Studio Code 开发的，就期望别的 Pull Request 也是基于相同的开发 环境完成的（在 MacOS 上可能用的是 Sublime Text2）。
@@ -25,7 +25,7 @@
 好的，如果你启用了该功能，并设置属性 endOfLine 为 lf 的话。
 { &amp;quot;endOfLine&amp;quot;: &amp;quot;lf&amp;quot; }  在 Windows 上，开发者会看到如下的检查警告。
 这时候 .gitattributes 就可以派上用场了 🦸！
-新仓库 首先，在仓库的根目录下创建名为 .</description>
+新仓库 首先，在仓库的根目录下创建名为 .gitattributes 的文件。</description>
     </item>
     
   </channel>
