@@ -6,14 +6,15 @@
     <description>Recent content in Git 相关的翻译 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/translation/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Please Add .gitattributes To Your Git Repository</title>
+      <title>请把 .gitattributes 添加到你的 Git 仓库中</title>
       <link>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</guid>
       <description>什么是 .gitattributes ？ 当执行 git 动作时，.gitattributes 文件允许你指定由 git 使用的文件和路径的属性，例如：git commit 等。
