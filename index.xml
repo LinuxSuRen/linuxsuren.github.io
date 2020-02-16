@@ -1851,6 +1851,15 @@ cat database.</description>
     </item>
     
     <item>
+      <title>RPM</title>
+      <link>http://surenpi.com/blog/other/packagemanager/rpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/packagemanager/rpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SSDH</title>
       <link>http://surenpi.com/blog/os/linux/common/sshd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

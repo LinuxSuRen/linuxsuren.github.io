@@ -21,5 +21,14 @@ https://gofi.sh/
 https://github.com/fishworks/fish-food</description>
     </item>
     
+    <item>
+      <title>RPM</title>
+      <link>http://surenpi.com/blog/other/packagemanager/rpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/other/packagemanager/rpm/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
