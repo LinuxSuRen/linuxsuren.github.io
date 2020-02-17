@@ -6,9 +6,26 @@
     <description>Recent content in 构建 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/build/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maven</title>
+      <link>http://surenpi.com/blog/devops/build/maven/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/build/maven/</guid>
+      <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
+跳过运行测试 mvn package -DskipTests=true 跳过测试代码的构建以及运行 mvn package -Dmaven.test.skip=true
+mvn package -U 强制更新快照版本的依赖
+离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：
+mvn clean package --offline
+部署 mvn deploy
+多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树</description>
+    </item>
     
     <item>
       <title>JVM Arguments</title>
@@ -27,24 +44,6 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
       
       <guid>http://surenpi.com/blog/devops/build/java-annotation-processing-builder/</guid>
       <description>See also https://www.baeldung.com/java-annotation-processing-builder</description>
-    </item>
-    
-    <item>
-      <title>Maven</title>
-      <link>http://surenpi.com/blog/devops/build/maven/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/blog/devops/build/maven/</guid>
-      <description>构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true
-跳过测试 mvn package -DskipTests=true
-mvn package -U 强制更新快照版本的依赖
-离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：
-mvn clean package --offline
-部署 mvn deploy
-多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
-&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt;  Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树
-mvn dependency:resolve
-mvn dependency:analyze 依赖分析</description>
     </item>
     
     <item>

@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/build/maven/",
+        "title": "Maven",
+        "tags": [],
+        "description": "Maven 是非常流行的一个 Java 持续构建工具",
+        "content": "   构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过运行测试 mvn package -DskipTests=true 跳过测试代码的构建以及运行 mvn package -Dmaven.test.skip=true\nmvn package -U 强制更新快照版本的依赖\n离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：\nmvn clean package --offline\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n"
+    },
+    {
         "uri": "http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/",
         "title": "请把 .gitattributes 添加到你的 Git 仓库中",
         "tags": [],
@@ -1169,14 +1176,14 @@
         "content": " 根证书公钥(ca.pem)与私钥(ca-key.pem)\nAPI Server 公钥和私钥\n集群管理员公钥和私钥\n从节点公钥和私钥\n根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj \u0026quot;/CN=kube-ca\u0026quot;  API Server 证书 创建 openssl.cnf\n[req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4}  openssl genrsa -out apiserver-key.pem 2048 openssl req -new -key apiserver-key.pem -out apiserver.csr -subj \u0026quot;/CN=kube-apiserver\u0026quot; -config openssl.cnf openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf  一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 /etc/kubernetes/ssl/ 路径下\nRef https://blog.csdn.net/shenshouer/article/details/53035948\n"
     },
     {
-        "uri": "http://surenpi.com/categories/k8s/",
+        "uri": "http://surenpi.com/tags/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "http://surenpi.com/tags/k8s/",
+        "uri": "http://surenpi.com/categories/k8s/",
         "title": "K8s",
         "tags": [],
         "description": "",
@@ -1190,14 +1197,14 @@
         "content": " 查看集群信息 kubectl cluster-info\n下载 wget https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl\n切换上下文 kubectl config use-context dev\n查看上下文 kubectl config current-context\n导出用户证书 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/k8s-create-user.sh | bash -s username  Troubleshooting journalctl -u kubelet -f\nDelete pod kubectl get pods -a | grep Error | cut -d' ' -f 1 | xargs kubectl delete pod\n节点 查看节点列表 kubectl get node\n查看节点详情 kubectl get node -o wide\n显示标签 kubectl get node --show-labels=true\n添加标签 kubectl label node nodeName jenkinsAgent=maven\nPatch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某几个字段。如果，每次都使用 kubectl edit 命令操作的话，会比较麻烦。通过 kubectl 的子命令 patch 可以实现快速地实现这个过程。\n该命令，可以通过 json 或者 yaml 格式来对资源*打补丁*。下面，给出一个使用 json 的例子：\nkubectl patch deploy template -n namespace --patch '{\u0026quot;status\u0026quot;:{\u0026quot;phase\u0026quot;:\u0026quot;Pending\u0026quot;}}'\n更新镜像 kubectl set image deploy/your-deployment -n namespace imageName=surenpi/image\n"
     },
     {
-        "uri": "http://surenpi.com/categories/kubernetes/",
+        "uri": "http://surenpi.com/tags/kubernetes/",
         "title": "Kubernetes",
         "tags": [],
         "description": "",
         "content": ""
     },
     {
-        "uri": "http://surenpi.com/tags/kubernetes/",
+        "uri": "http://surenpi.com/categories/kubernetes/",
         "title": "Kubernetes",
         "tags": [],
         "description": "",
@@ -1251,13 +1258,6 @@
         "tags": [],
         "description": "Mac 快捷键",
         "content": " 按键符号 ⌘(command)\n⌥(option)\n⇧(shift)\n⇪(caps lock)\n⌃(control)\n↩(return)\n⌅(enter)\n快捷键 删除文件 command + delete\n浏览器 关闭选项卡 command + w\n前后切换选项卡 command + \u0026lt;-\n指定顺序切换选项卡 command + 1\n关闭浏览器 command + q\n截图  截取全屏并保存文件 shift + command + 3\n 截取部分并保存文件 shift + command + 4\n 截取全屏并保存粘贴板 shift + control + command + 3\n 截取部分并保存粘贴板 shift + control + command + 4\n  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。\n 开机后按下 command+s\n 进入终端后输入命令 /sbin/mount -uaw`\n 执行命令 rm /var/db/.applesetupdone\n  操作系统重启后，会提示用户重新创建一个管理员身份。注意，这不会删除之前的用户信息。登陆系统后，你可以用户管理功能再次把之前的用户身份找回来。\n"
-    },
-    {
-        "uri": "http://surenpi.com/blog/devops/build/maven/",
-        "title": "Maven",
-        "tags": [],
-        "description": "Maven 是非常流行的一个 Java 持续构建工具",
-        "content": "   构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过测试 mvn package -DskipTests=true\nmvn package -U 强制更新快照版本的依赖\n离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：\nmvn clean package --offline\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/build/maven-repository/",
