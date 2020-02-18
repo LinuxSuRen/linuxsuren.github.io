@@ -46,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2020-02-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="78">
+<meta itemprop="wordCount" content="93">
 
 
 
@@ -207,15 +207,17 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#构建">构建</a></li>
 <li><a href="#离线">离线</a></li>
 <li><a href="#部署">部署</a></li>
-<li><a href="#多模块">多模块</a>
-<ul>
+<li><a href="#多模块">多模块</a></li>
 <li><a href="#部署-1">部署</a></li>
-</ul></li>
 <li><a href="#查看依赖">查看依赖</a></li>
 <li><a href="#调试">调试</a></li>
+<li><a href="#网络代理">网络代理</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -278,7 +280,7 @@ var trackOutboundLink = function(id, url) {
 </div>
 
 
-<h1 id="构建">构建</h1>
+<h2 id="构建">构建</h2>
 
 <p>跳过JavaDoc <code>mvn package -Dmaven.javadoc.skip=true</code></p>
 
@@ -287,17 +289,17 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>mvn package -U</code> 强制更新快照版本的依赖</p>
 
-<h1 id="离线">离线</h1>
+<h2 id="离线">离线</h2>
 
 <p>通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：</p>
 
 <p><code>mvn clean package --offline</code></p>
 
-<h1 id="部署">部署</h1>
+<h2 id="部署">部署</h2>
 
 <p><code>mvn deploy</code></p>
 
-<h1 id="多模块">多模块</h1>
+<h2 id="多模块">多模块</h2>
 
 <h2 id="部署-1">部署</h2>
 
@@ -318,7 +320,7 @@ Note right of Bob: Bob thinks
 Bob--&gt;Alice: I am good thanks!
 </code></pre>
 
-<h1 id="查看依赖">查看依赖</h1>
+<h2 id="查看依赖">查看依赖</h2>
 
 <p><code>mvn dependency:tree</code> 查看依赖树</p>
 
@@ -328,9 +330,27 @@ Bob--&gt;Alice: I am good thanks!
 
 <p><code>mvn help:effective-pom</code></p>
 
-<h1 id="调试">调试</h1>
+<h2 id="调试">调试</h2>
 
 <p><code>mvn package -X</code> 查看调试信息</p>
+
+<h2 id="网络代理">网络代理</h2>
+
+<pre><code>&lt;settings&gt;
+  &lt;proxies&gt;
+   &lt;proxy&gt;
+      &lt;id&gt;example-proxy&lt;/id&gt;
+      &lt;active&gt;true&lt;/active&gt;
+      &lt;protocol&gt;http&lt;/protocol&gt;
+      &lt;host&gt;proxy.example.com&lt;/host&gt;
+      &lt;port&gt;8080&lt;/port&gt;
+      &lt;username&gt;proxyuser&lt;/username&gt;
+      &lt;password&gt;somepassword&lt;/password&gt;
+      &lt;nonProxyHosts&gt;www.google.com|*.example.com&lt;/nonProxyHosts&gt;
+    &lt;/proxy&gt;
+  &lt;/proxies&gt;
+&lt;/settings&gt;
+</code></pre>
 
 </div>
 
