@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="44">
+<meta itemprop="wordCount" content="132">
 
 
 
@@ -277,13 +277,87 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>brew install curl</code></p>
 
-<h2 id="thridparty">thridparty</h2>
+<h3 id="thridparty">thridparty</h3>
 
 <p>如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 <a href="https://github.com/jenkins-zh/homebrew-jcli">homebrew-jcli</a>。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 <a href="https://github.com/jenkins-zh/jenkins-cli">jcli</a> 的例子：</p>
 
 <pre><code>brew tap jenkins-zh/jcli
 brew install jcli
 </code></pre>
+
+<h2 id="其他操作">其他操作</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>brew remove jcli</code></td>
+<td>删除软件</td>
+</tr>
+
+<tr>
+<td><code>brew upgrade jcli</code></td>
+<td>升级软件</td>
+</tr>
+
+<tr>
+<td><code>brew list</code></td>
+<td>列出来已经安装的</td>
+</tr>
+
+<tr>
+<td><code>brew info jcli</code></td>
+<td>查看安装信息</td>
+</tr>
+
+<tr>
+<td><code>brew deps jcli</code></td>
+<td>查看依赖</td>
+</tr>
+
+<tr>
+<td><code>brew outdated</code></td>
+<td>查看可更新的软件</td>
+</tr>
+
+<tr>
+<td><code>brew --repo</code></td>
+<td>查看本地目录</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="代理">代理</h2>
+
+<p>替换上游：</p>
+
+<pre><code>git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+
+git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+
+git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+
+brew update
+</code></pre>
+
+<p>复原：</p>
+
+<pre><code>git -C &quot;$(brew --repo)&quot; remote set-url origin https://github.com/Homebrew/brew.git
+
+git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://github.com/Homebrew/homebrew-core.git
+
+git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+
+brew update
+</code></pre>
+
+<p>参考资料：<a href="https://mirror.tuna.tsinghua.edu.cn/help/homebrew/">https://mirror.tuna.tsinghua.edu.cn/help/homebrew/</a></p>
 
 </div>
 

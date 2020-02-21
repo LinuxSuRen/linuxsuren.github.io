@@ -49,6 +49,20 @@
         "content": "   构建 跳过JavaDoc mvn package -Dmaven.javadoc.skip=true\n跳过运行测试 mvn package -DskipTests=true 跳过测试代码的构建以及运行 mvn package -Dmaven.test.skip=true\nmvn package -U 强制更新快照版本的依赖\n离线 通常情况下，Maven 需要从网络上下载依赖文件，这样的话，执行效率会比较低。如果你确保本地仓库已经有了所有的依赖文件的话，可以添加参数使 Maven 不再从网络上下载，直接使用本地的依赖。例如：\nmvn clean package --offline\n部署 mvn deploy\n多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-deploy-plugin\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.8.2\u0026lt;/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;skip\u0026gt;true\u0026lt;/skip\u0026gt; \u0026lt;/configuration\u0026gt; \u0026lt;/plugin\u0026gt;  Alice-\u0026gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--\u0026gt;Alice: I am good thanks!  查看依赖 mvn dependency:tree 查看依赖树\nmvn dependency:resolve\nmvn dependency:analyze 依赖分析\nmvn help:effective-pom\n调试 mvn package -X 查看调试信息\n网络代理 \u0026lt;settings\u0026gt; \u0026lt;proxies\u0026gt; \u0026lt;proxy\u0026gt; \u0026lt;id\u0026gt;example-proxy\u0026lt;/id\u0026gt; \u0026lt;active\u0026gt;true\u0026lt;/active\u0026gt; \u0026lt;protocol\u0026gt;http\u0026lt;/protocol\u0026gt; \u0026lt;host\u0026gt;proxy.example.com\u0026lt;/host\u0026gt; \u0026lt;port\u0026gt;8080\u0026lt;/port\u0026gt; \u0026lt;username\u0026gt;proxyuser\u0026lt;/username\u0026gt; \u0026lt;password\u0026gt;somepassword\u0026lt;/password\u0026gt; \u0026lt;nonProxyHosts\u0026gt;www.google.com|*.example.com\u0026lt;/nonProxyHosts\u0026gt; \u0026lt;/proxy\u0026gt; \u0026lt;/proxies\u0026gt; \u0026lt;/settings\u0026gt;  "
     },
     {
+        "uri": "http://surenpi.com/translation/other/abd/",
+        "title": "什么是 API 网关",
+        "tags": [],
+        "description": "什么是 API 网关",
+        "content": " 什么是 API 网关？它是一个端口，控制东西的进入，例如：人、流量、请求。如果你已经对微服务有一些了解的话，那么应该已经了解了“API 网关”。\n不仅是在微服务中，API 网关自出现时就开始流行了。那么，到底什么是API 网关呢？\n基本概念 API 网关是鉴于客户端及其依赖的服务之间的一个中间层。\n传统模式 vs 前后端分离 API 网关的主要优势 API 网关的下游 API 网关和服务网格的关系 第三方 API 的来源 "
+    },
+    {
+        "uri": "http://surenpi.com/translation/other/how-do-you-get-familiar-with-a-new-code-base/",
+        "title": "你是如何熟悉一个新的项目的？",
+        "tags": [],
+        "description": "你是如何熟悉一个新的项目的？",
+        "content": "我最近以软件工程师的身份在 DEV 上出现了。更换几次工作后，发现熟悉新的代码是快速适应一个新的角色过程的难题之一。\n当学习软件工程（学校、培训机构、在线教程等等）时，你通常是从头开始，或者项目还 处于早期设计阶段。例如：如果你刚学完 Rails 的教程，你可以利用有限的特性构建 一个博客。\n但是，\n因此，我的问题是：\n 如何熟悉并运行一个全新的、 你会使用什么工具   "
+    },
+    {
         "uri": "http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/",
         "title": "请把 .gitattributes 添加到你的 Git 仓库中",
         "tags": [],
@@ -571,7 +585,7 @@
         "title": "Brew",
         "tags": [],
         "description": "Brew",
-        "content": " brew 是 MacOS（或者 Linux 操作系统）下的缺省包管理器。\n在有 ruby 环境的操作系统中，可以使用下面的命令快速安装 brew：\n/usr/bin/ruby -e \u0026quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\u0026quot;\n其他的安装方式，请参考这里。\n安装软件 根据来源的不同，brew 包括两类软件，分别是：core、thridparty。\ncore 如果你不知道有哪些软件是可以直接安装的话，可以通过搜索命令来搜索：\nbrew search curl\n如果可以找到的话，就能用下面的命令来安装：\nbrew install curl\nthridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：\nbrew tap jenkins-zh/jcli brew install jcli  "
+        "content": " brew 是 MacOS（或者 Linux 操作系统）下的缺省包管理器。\n在有 ruby 环境的操作系统中，可以使用下面的命令快速安装 brew：\n/usr/bin/ruby -e \u0026quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\u0026quot;\n其他的安装方式，请参考这里。\n安装软件 根据来源的不同，brew 包括两类软件，分别是：core、thridparty。\ncore 如果你不知道有哪些软件是可以直接安装的话，可以通过搜索命令来搜索：\nbrew search curl\n如果可以找到的话，就能用下面的命令来安装：\nbrew install curl\nthridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：\nbrew tap jenkins-zh/jcli brew install jcli  其他操作    命令 描述     brew remove jcli 删除软件   brew upgrade jcli 升级软件   brew list 列出来已经安装的   brew info jcli 查看安装信息   brew deps jcli 查看依赖   brew outdated 查看可更新的软件   brew --repo 查看本地目录    代理 替换上游：\ngit -C \u0026quot;$(brew --repo)\u0026quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git git -C \u0026quot;$(brew --repo homebrew/core)\u0026quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git git -C \u0026quot;$(brew --repo homebrew/cask)\u0026quot; remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git brew update  复原：\ngit -C \u0026quot;$(brew --repo)\u0026quot; remote set-url origin https://github.com/Homebrew/brew.git git -C \u0026quot;$(brew --repo homebrew/core)\u0026quot; remote set-url origin https://github.com/Homebrew/homebrew-core.git git -C \u0026quot;$(brew --repo homebrew/cask)\u0026quot; remote set-url origin https://github.com/Homebrew/homebrew-cask.git brew update  参考资料：https://mirror.tuna.tsinghua.edu.cn/help/homebrew/\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/",
@@ -1797,6 +1811,13 @@
         "tags": [],
         "description": "代码质量相关内容",
         "content": "代码质量相关内容\n"
+    },
+    {
+        "uri": "http://surenpi.com/translation/other/",
+        "title": "其他类型的翻译",
+        "tags": [],
+        "description": "其他类型的翻译",
+        "content": ""
     },
     {
         "uri": "http://surenpi.com/blog/other/packagemanager/",
