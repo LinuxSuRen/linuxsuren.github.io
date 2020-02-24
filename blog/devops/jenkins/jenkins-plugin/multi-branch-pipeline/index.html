@@ -46,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2020-02-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="22">
+<meta itemprop="wordCount" content="60">
 
 
 
@@ -212,6 +212,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#背景">背景</a></li>
 <li><a href="#特点">特点</a></li>
 <li><a href="#分支扫描">分支扫描</a></li>
+<li><a href="#webhook">Webhook</a></li>
 <li><a href="#缺点">缺点</a></li>
 </ul></li>
 </ul>
@@ -283,6 +284,47 @@ var trackOutboundLink = function(id, url) {
 <p><code>-Dcom.cloudbees.hudson.plugins.folder.computed.ThrottleComputationQueueTaskDispatcher.LIMIT=12</code></p>
 
 <p>要注意的是，插件会选择上面的限制值和当前系统的核心数中的较小值。</p>
+
+<h2 id="webhook">Webhook</h2>
+
+<p>多分支流水线，可以自动添加 webhook 到 git 服务上，并基于 webhook 推送的事件负责分支流水线的生命流程管理。下面，是部分 git 服务中
+所对应的 webhook 地址：</p>
+
+<table>
+<thead>
+<tr>
+<th>git 服务</th>
+<th>地址</th>
+<th>ContentType</th>
+<th>限制</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Bitbucket</td>
+<td><code>http://localhost:8080/jenkins/bitbucket-scmsource-hook/notify</code></td>
+<td></td>
+<td>每个仓库最多有50个 ｜</td>
+</tr>
+
+<tr>
+<td>Gitlab</td>
+<td><code>http://localhost:8080/jenkins/gitlab-webhook/post</code></td>
+<td><code>application/json</code></td>
+<td>｜</td>
+</tr>
+
+<tr>
+<td>GitHub</td>
+<td><code>http://localhost:8080/jenkins/github-webhook/</code></td>
+<td><code>application/json</code></td>
+<td>｜</td>
+</tr>
+</tbody>
+</table>
+
+<p>Jenkins 中的多分支流水线删除后，也会同时删除 Bitbucket 中的 webhook 记录，但是 GitHub 不会。</p>
 
 <h2 id="缺点">缺点</h2>
 
