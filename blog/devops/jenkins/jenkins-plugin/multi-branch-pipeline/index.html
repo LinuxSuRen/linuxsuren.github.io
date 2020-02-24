@@ -9,12 +9,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Multi Branch Pipeline - SuRenPi</title>
+    <title>多分支流水线 - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     
-    <meta name="description" content="Multi Branch Pipeline">
+    <meta name="description" content="多分支流水线">
     
     
     <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
@@ -34,19 +34,19 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Multi Branch Pipeline" />
-<meta property="og:description" content="Multi Branch Pipeline" />
+<meta property="og:title" content="多分支流水线" />
+<meta property="og:description" content="多分支流水线" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/" /><meta property="article:published_time" content="2019-04-15T20:07:45&#43;08:00"/>
-<meta property="article:modified_time" content="2019-04-15T20:07:45&#43;08:00"/>
+<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/" /><meta property="article:published_time" content="2020-02-24T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-24T00:00:00&#43;00:00"/>
 
-<meta itemprop="name" content="Multi Branch Pipeline">
-<meta itemprop="description" content="Multi Branch Pipeline">
+<meta itemprop="name" content="多分支流水线">
+<meta itemprop="description" content="多分支流水线">
 
 
-<meta itemprop="datePublished" content="2019-04-15T20:07:45&#43;08:00" />
-<meta itemprop="dateModified" content="2019-04-15T20:07:45&#43;08:00" />
-<meta itemprop="wordCount" content="17">
+<meta itemprop="datePublished" content="2020-02-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="22">
 
 
 
@@ -207,9 +207,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#背景">背景</a></li>
 <li><a href="#特点">特点</a></li>
+<li><a href="#分支扫描">分支扫描</a></li>
 <li><a href="#缺点">缺点</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -245,13 +249,13 @@ var trackOutboundLink = function(id, url) {
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Multi Branch Pipeline</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">多分支流水线</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Multi Branch Pipeline
+      多分支流水线
     </div>
   
 
@@ -266,23 +270,31 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="背景">背景</h1>
+<h2 id="背景">背景</h2>
 
 <p>通常的 Git 分支策略中，会有固定分支和临时分支。对于固定的，我们可以给每个分支都创建一条流水线。
 但对于临时分支，有些团队的做法，会把分支作为参数。</p>
 
 <p>但实际上，单个代码仓库完全可以使用同一个流水线，也就是多分支流水线</p>
 
-<h1 id="特点">特点</h1>
+<h2 id="特点">特点</h2>
 
 <p>支持基于一定的策略，扫描分支、PR、标签（tag），对符合过滤条件的会动态创建流水线。
 当分支等被删除后，多分支流水线可以把之前创建出来的流水线删除。</p>
 
 <p>多分支流水线，本质上是存放流水线的容器（类似于文件夹）。</p>
 
-<h1 id="缺点">缺点</h1>
+<h2 id="分支扫描">分支扫描</h2>
 
-<p>对于 PR 的动态发现，目前只有GitHub 和 Bitbucket 支持。</p>
+<p>默认支持的分支并发扫描可能是不够的，这时候，我们可以通过增加系统配置来修改：</p>
+
+<p><code>-Dcom.cloudbees.hudson.plugins.folder.computed.ThrottleComputationQueueTaskDispatcher.LIMIT=12</code></p>
+
+<p>要注意的是，插件会选择上面的限制值和当前系统的核心数中的较小值。</p>
+
+<h2 id="缺点">缺点</h2>
+
+<p>对于 PR 的动态发现，目前只有 <code>GitHub</code>、<code>Gitlab</code> 和 <code>Bitbucket</code> 支持。</p>
 
 </div>
 
@@ -534,8 +546,8 @@ var trackOutboundLink = function(id, url) {
       <h6 class="f4 dark-gray mb2">
   <a href="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/" class="hide-child link primary-color">
   <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
-    “Multi Branch Pipeline”
-  </a> was last updated: April 15, 2019
+    “多分支流水线”
+  </a> was last updated: February 24, 2020
 </h6>
 
       <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline.md" class="
