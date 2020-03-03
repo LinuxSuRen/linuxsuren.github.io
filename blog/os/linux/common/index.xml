@@ -212,10 +212,10 @@ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Librar
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/os/linux/common/shell/</guid>
-      <description>下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+      <description>执行最近的命令 有几种方法可以快速地执行最近执行过的命令： * !! 或者 !-1 执行上一个命令 * !u 执行上一个以 u 开头的命令 * Ctrl+R 搜索命令 * Ctrl+P Ctrl+O
+下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径
-$(dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot;) 脚本所在的相对目录</description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi  if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.</description>
     </item>
     
     <item>
