@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/",
+        "title": "Jenkins 调试",
+        "tags": [],
+        "description": "Jenkins 调试",
+        "content": " mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\nDocker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。\n添加如下环境变量\nJAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/",
         "title": "多分支流水线",
         "tags": [],
@@ -306,13 +313,6 @@
         "tags": [],
         "description": "Acronym",
         "content": "PTAL please take a look\nLGTM look good to me\nhttps://www.smart-words.org/abbreviations/text.html\n"
-    },
-    {
-        "uri": "http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/",
-        "title": "Jenkins 调试",
-        "tags": [],
-        "description": "Jenkins 调试",
-        "content": " mvn jenkins-dev:run\nmvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录\njava -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数\nmvn clean install -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dmaven.javadoc.skip=true\nDocker 如果需要调试运行在 Docker 中的 Jenkins 实例的话，可以通过增加 JVM 参数来实现。对 Jenkins 启动过程感兴趣的同学，可以自行翻阅jenkins.sh来了解更多细节。\n添加如下环境变量\nJAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/",

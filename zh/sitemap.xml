@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</loc>
+    <lastmod>2020-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
   </url>
@@ -225,11 +230,6 @@
   <url>
     <loc>http://surenpi.com/opensource/acronym/</loc>
     <lastmod>2019-03-24T23:02:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -692,7 +692,7 @@
   
   <url>
     <loc>http://surenpi.com/blog/devops/jenkins/basic/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1232,7 +1232,7 @@
   
   <url>
     <loc>http://surenpi.com/</loc>
-    <lastmod>2020-02-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
