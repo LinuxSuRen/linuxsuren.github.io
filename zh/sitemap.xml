@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>http://surenpi.com/blog/devops/jenkins/basic/system_var/</loc>
+    <lastmod>2020-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</loc>
     <lastmod>2020-03-06T00:00:00+00:00</lastmod>
   </url>
@@ -794,12 +799,12 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/k8s/</loc>
+    <loc>http://surenpi.com/categories/k8s/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/k8s/</loc>
+    <loc>http://surenpi.com/tags/k8s/</loc>
     <priority>0</priority>
   </url>
   
@@ -808,13 +813,13 @@
   </url>
   
   <url>
-    <loc>http://surenpi.com/tags/kubernetes/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <loc>http://surenpi.com/categories/kubernetes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://surenpi.com/categories/kubernetes/</loc>
+    <loc>http://surenpi.com/tags/kubernetes/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

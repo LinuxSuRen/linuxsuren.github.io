@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Jenkins 系统属性配置</title>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/system_var/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/system_var/</guid>
+      <description>Jenkins 有很多不包含在 UI 中的配置，可以应对一些特殊情况：
+   Key Values     hudson.model.DownloadService.noSignatureCheck true    </description>
+    </item>
+    
+    <item>
       <title>Jenkins 调试</title>
       <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>

@@ -9,12 +9,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>Jenkins Basic - SuRenPi</title>
+    <title>Jenkins 系统属性配置 - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     
-    <meta name="description" content="Jenkins Basic">
+    <meta name="description" content="Jenkins 系统属性配置">
     
     
     <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
@@ -27,7 +27,6 @@
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
       
 
-    <link rel="alternate" type="application/rss&#43;xml" href="http://surenpi.com/blog/devops/jenkins/basic/index.xml">
     <link href='/dist/main.css' rel='stylesheet' type="text/css" />
 <style>
   img.avatar {
@@ -35,15 +34,22 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="Jenkins Basic" />
-<meta property="og:description" content="Jenkins Basic" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/basic/" />
-<meta property="og:updated_time" content="2020-03-06T00:00:00&#43;00:00"/>
+<meta property="og:title" content="Jenkins 系统属性配置" />
+<meta property="og:description" content="Jenkins 系统属性配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://surenpi.com/blog/devops/jenkins/basic/system_var/" /><meta property="article:published_time" content="2020-03-06T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-03-06T00:00:00&#43;00:00"/>
 
-<meta itemprop="name" content="Jenkins Basic">
-<meta itemprop="description" content="Jenkins Basic">
+<meta itemprop="name" content="Jenkins 系统属性配置">
+<meta itemprop="description" content="Jenkins 系统属性配置">
 
+
+<meta itemprop="dateModified" content="2020-03-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="8">
+
+
+
+<meta itemprop="keywords" content="" />
 
         
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4216293-5"></script>
@@ -190,12 +196,102 @@ var trackOutboundLink = function(id, url) {
     
     <main role="main" class="content-with-sidebar pb7 pb0-ns">
       
-  
-  
-  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+<main>
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
 
-  <div class="flex">
-    <div class="dn db-l w-20">
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+		<p class="b">此页面上的内容</p>
+  	
+	
+
+	<div date-pref>
+		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path id="svg_1" d="m15.41,7.41l-1.41,-1.41l-6,6l6,6l1.41,-1.41l-4.58,-4.59l4.58,-4.59z" transform="rotate(90 11.704999923706055,12.000000000000002)"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+		</a>
+
+		
+
+		
+			<a href="http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 调试">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins 系统属性配置</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Jenkins 系统属性配置
+    </div>
+  
+
+  
+  
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+<p>Jenkins 有很多不包含在 UI 中的配置，可以应对一些特殊情况：</p>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Values</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>hudson.model.DownloadService.noSignatureCheck</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+
+</aside>
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="linuxsuren/linuxsuren.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="linuxsuren"
+        async>
+</script>
+
+
+
+          
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
         
 <nav role="navigation">
   <ul class="list pa0 nl2">
@@ -409,285 +505,32 @@ var trackOutboundLink = function(id, url) {
   </ul>
 </nav>
 
-    </div>
-
-    <div class="w-100 w-80-l ph0 ph4-l">
-      <article class="w-100 nested-copy-line-height nested-links nested-img">
-        <h1 class="primary-color-dark f2">
-          Jenkins Basic
-        </h1>
-        <div class=" mid-gray f5 f4-l">
-          
-        </div>
-      </article>
-
-      
-
-      <div class="flex flex-wrap">
-        
-        <section class="flex-ns flex-wrap justify-between w-100">
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/system_var/" class="link primary-color dim">Jenkins 系统属性配置</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 系统属性配置
-        
-
-        <a href="/blog/devops/jenkins/basic/system_var/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-debug/" class="link primary-color dim">Jenkins 调试</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 调试
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-debug/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins/" class="link primary-color dim">Jenkins</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 是一个开源的 CI/CD 平台，本文是对其进行简单的介绍
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-queue/" class="link primary-color dim">Jenkins 队列</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          队列在 Jenkins 中是非常重要的环节
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-queue/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-backup/" class="link primary-color dim">Jenkins Backup</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins Backup
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-backup/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-initialization/" class="link primary-color dim">Jenkins Initialization</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins Initialization
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-initialization/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/course/" class="link primary-color dim">Jenkins 培训</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 培训大纲
-        
-
-        <a href="/blog/devops/jenkins/basic/course/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-agent/" class="link primary-color dim">Jenkins Agent</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins Agent
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-agent/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-host/" class="link primary-color dim">Jenkins 插件托管</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          本文介绍如何把一个 Jenkins 插件托管到 Jenkins 的 Github 上
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-host/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative  weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/blog/devops/jenkins/basic/jenkins-label/" class="link primary-color dim">Jenkins 标签</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Jenkins 标签
-        
-
-        <a href="/blog/devops/jenkins/basic/jenkins-label/" class="f6 mt2 db link primary-color dim">
-          查看更多 &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-        </section>
       </div>
 
+    </div>
+  </article>
+
+  <div id="backtotop"><a href="#"></a></div>
+
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="http://surenpi.com/blog/devops/jenkins/basic/system_var/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
+    “Jenkins 系统属性配置”
+  </a> was last updated: March 6, 2020
+</h6>
+
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/system_var.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+" target="_blank">改善此页</a>
+
       
 
 
     </div>
-
   </div>
-
-</div>
+</main>
 
     </main>
 
