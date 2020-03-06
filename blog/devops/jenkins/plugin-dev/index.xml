@@ -6,10 +6,19 @@
     <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jenkins 事件监听</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description>   类型 接口 描述     监听队列事件 hudson.model.queue.QueueListener    任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件   任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件    </description>
+    </item>
     
     <item>
       <title>Jenkins 插件调试</title>
@@ -145,16 +154,6 @@ CredentialsStore 凭据存储接口</description>
 public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; }  细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
 校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
 &amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt;  public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 事件监听</title>
-      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
-      <description>监听队列事件
-hudson.model.queue.QueueListener</description>
     </item>
     
     <item>

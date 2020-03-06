@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Jenkins 事件监听</title>
+      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description>   类型 接口 描述     监听队列事件 hudson.model.queue.QueueListener    任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件   任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件    </description>
+    </item>
+    
+    <item>
       <title>Jenkins 系统属性配置</title>
       <link>http://surenpi.com/blog/devops/jenkins/basic/system_var/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
@@ -1598,16 +1607,6 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
       <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
       <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
  从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 事件监听</title>
-      <link>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
-      <description>监听队列事件
-hudson.model.queue.QueueListener</description>
     </item>
     
     <item>
