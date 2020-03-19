@@ -406,5 +406,17 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
 \$</description>
     </item>
     
+    <item>
+      <title>确定 Linux 发行版的版本信息</title>
+      <link>http://surenpi.com/blog/os/linux/common/determine-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/os/linux/common/determine-version/</guid>
+      <description>Ubuntu lsb_release -a
+## cat /etc/redhat-release
+cat /proc/version
+cat /etc/issue</description>
+    </item>
+    
   </channel>
 </rss>

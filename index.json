@@ -1967,6 +1967,13 @@
         "content": "流水线插件从 2.5 版本开始支持申明式流水线。\n申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：\n codes/jenkinsfile/declarative.groovy   pipeline { agent { label \u0026#39;master\u0026#39; } stages { stage(\u0026#39;one\u0026#39;) { when { branch \u0026#39;master\u0026#39; } steps { echo \u0026#39;Hello World\u0026#39; } } } post { always { echo \u0026#39;I will always say Hello again!\u0026#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。\n"
     },
     {
+        "uri": "http://surenpi.com/blog/os/linux/common/determine-version/",
+        "title": "确定 Linux 发行版的版本信息",
+        "tags": [],
+        "description": "确定 Linux 发行版的版本信息",
+        "content": " Ubuntu lsb_release -a\n## cat /etc/redhat-release\ncat /proc/version\ncat /etc/issue\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/other/terminal/",
         "title": "终端",
         "tags": [],
