@@ -9,12 +9,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>TR - SuRenPi</title>
+    <title>Shell Example - SuRenPi</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
     
-    <meta name="description" content="TR">
+    <meta name="description" content="Shell Example">
     
     
     <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
@@ -34,17 +34,17 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="TR" />
-<meta property="og:description" content="TR" />
+<meta property="og:title" content="Shell Example" />
+<meta property="og:description" content="Shell Example" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://surenpi.com/blog/os/linux/common/tr/" />
+<meta property="og:url" content="http://surenpi.com/blog/os/linux/common/shell-example/" />
 
-<meta itemprop="name" content="TR">
-<meta itemprop="description" content="TR">
+<meta itemprop="name" content="Shell Example">
+<meta itemprop="description" content="Shell Example">
 
 
 
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="31">
 
 
 
@@ -202,6 +202,16 @@ var trackOutboundLink = function(id, url) {
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#输出文件制定行">输出文件制定行</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -209,13 +219,13 @@ var trackOutboundLink = function(id, url) {
 		</a>
 
 		
-			<a href="http://surenpi.com/blog/os/linux/common/shell-example/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Shell Example ">
+			<a href="http://surenpi.com/blog/os/linux/common/shell/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Shell ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
 			</a>
 		
 
 		
-			<a href="http://surenpi.com/blog/os/linux/common/curl/" class="dib f6 pr1 hover-bg-light-gray br-100" title="curl">
+			<a href="http://surenpi.com/blog/os/linux/common/tr/" class="dib f6 pr1 hover-bg-light-gray br-100" title="TR">
 			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
 			</a>
 		
@@ -230,13 +240,13 @@ var trackOutboundLink = function(id, url) {
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">TR</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Shell Example</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      TR
+      Shell Example
     </div>
   
 
@@ -249,9 +259,26 @@ var trackOutboundLink = function(id, url) {
 
 <div class="prose" id="prose">
 
-<p><code>cat .m2/settings.xml | tr -s [:blank:]</code> 清除空白字符</p>
 
-<p><code>echo abc | tr a-z A-Z</code> 大小写转换</p>
+
+<h2 id="输出文件制定行">输出文件制定行</h2>
+
+<p>Solution 1</p>
+
+<pre><code>num=0 head -n 10 file.txt | while read line;
+do
+    if [ &quot;$num&quot; == &quot;9&quot; ]; then
+        echo $line;
+        break; 
+    fi;
+    num=$((num+1)); 
+done
+</code></pre>
+
+<p>Solution 2</p>
+
+<pre><code>awk 'NR==10' file.txt
+</code></pre>
 
 </div>
 
@@ -501,13 +528,13 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="http://surenpi.com/blog/os/linux/common/tr/" class="hide-child link primary-color">
+  <a href="http://surenpi.com/blog/os/linux/common/shell-example/" class="hide-child link primary-color">
   <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
-    “TR”
+    “Shell Example”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/os/linux/common/tr.md" class="
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/os/linux/common/shell-example.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

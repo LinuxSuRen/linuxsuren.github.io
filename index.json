@@ -1407,6 +1407,13 @@
         "content": " 执行最近的命令 有几种方法可以快速地执行最近执行过的命令： * !! 或者 !-1 执行上一个命令 * !u 执行上一个以 u 开头的命令 * Ctrl+R 搜索命令 * Ctrl+P Ctrl+O\n下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2\n文件路径 从文件路径中提取文件名和目录\npath=/var/www/1.log echo $(basename $path) echo $(dirname $path)  文件是否存在 if [ ! -f \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  if [ ! -d \u0026quot;env.sh\u0026quot; ]; then echo \u0026quot;we need the env.sh to setup vars\u0026quot; exit -1 else echo \u0026quot;file exists\u0026quot; fi  脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径\n$(dirname \u0026quot;${BASH_SOURCE[0]}\u0026quot;) 脚本所在的相对目录\n参数 Shell 脚本可以像其他的命令行一样接收参数\n   变量名称 解释     $1 第一个参数   $2 第二个参数   $@ 完整的参数列表   $# 参数个数    逻辑判断 if [[ \u0026quot;1\u0026quot; == \u0026quot;1\u0026quot; \u0026amp;\u0026amp; \u0026quot;2\u0026quot; == \u0026quot;2\u0026quot; ]]; then echo \u0026quot;equal\u0026quot; fi  循环 获取当前目录下的文件并循环打印出文件名：\nfor f in `ls`; do echo $f done  函数 我们可以在 shell 脚本中用下面的方式来定义函数：\nfunction_name(){ echo \u0026quot;hello\u0026quot; } function_name  "
     },
     {
+        "uri": "http://surenpi.com/blog/os/linux/common/shell-example/",
+        "title": "Shell Example",
+        "tags": [],
+        "description": "Shell Example",
+        "content": " 输出文件制定行 Solution 1\nnum=0 head -n 10 file.txt | while read line; do if [ \u0026quot;$num\u0026quot; == \u0026quot;9\u0026quot; ]; then echo $line; break; fi; num=$((num+1)); done  Solution 2\nawk 'NR==10' file.txt  "
+    },
+    {
         "uri": "http://surenpi.com/blog/other/codequality/sonarqube/",
         "title": "Sonarqube",
         "tags": [],
