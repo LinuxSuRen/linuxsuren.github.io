@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="54">
+<meta itemprop="wordCount" content="60">
 
 
 
@@ -202,6 +202,19 @@ var trackOutboundLink = function(id, url) {
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#切换标签">切换标签</a></li>
+<li><a href="#删除分支">删除分支</a></li>
+<li><a href="#拉取分支">拉取分支</a></li>
+<li><a href="#推送分支">推送分支</a></li>
+</ul></li>
+</ul>
+</nav>
+	
 
 	<div date-pref>
 		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
@@ -251,12 +264,12 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="切换标签">切换标签</h1>
+<h2 id="切换标签">切换标签</h2>
 
 <p><code>git branch</code> 列出本地分支
 <code>git checkout master</code> 切换到本地 master 分支</p>
 
-<h1 id="删除分支">删除分支</h1>
+<h2 id="删除分支">删除分支</h2>
 
 <p><code>git branch --delete abc</code> 删除分支 abc</p>
 
@@ -266,11 +279,15 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>git remote prune origin</code></p>
 
-<h1 id="拉取分支">拉取分支</h1>
+<h2 id="拉取分支">拉取分支</h2>
 
 <p><code>git checkout -b abc</code> 基于当前分支创建新分支</p>
 
 <p><code>git checkout --track origin/abc</code> 拉取远程分支</p>
+
+<h2 id="推送分支">推送分支</h2>
+
+<p><code>git push origin local-branch:remote-branch</code> 推送本地分支到远程上不同的分支</p>
 
 </div>
 
