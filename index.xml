@@ -1091,6 +1091,17 @@ curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&a
     </item>
     
     <item>
+      <title>Docker multi-stage technology</title>
+      <link>http://surenpi.com/blog/devops/docker/multi-stage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/docker/multi-stage/</guid>
+      <description>We can build our application in Dockerfile. But we don&amp;rsquo;t want the whole thing in our final docker image. Docker multi-stage technology could help us the reduce the size.
+FROM golang:1.12 AS builder WORKDIR /work RUN git clone https://github.com/devops-ws/learn-pipeline-go &amp;amp;&amp;amp; \ cd learn-pipeline-go &amp;amp;&amp;amp; go build -o go-server RUN ls -hal FROM alpine:3.10 COPY --from=builder /work/learn-pipeline-go/go-server . CMD [&#39;go-server&#39;]  After built this: docker build . -t go-server
+then we can test it: docker run go-server</description>
+    </item>
+    
+    <item>
       <title>Docker 命令</title>
       <link>http://surenpi.com/blog/devops/docker/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

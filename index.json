@@ -714,6 +714,13 @@
         "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v1/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/docker/multi-stage/",
+        "title": "Docker multi-stage technology",
+        "tags": [],
+        "description": "Docker multi-stage technology",
+        "content": "We can build our application in Dockerfile. But we don\u0026rsquo;t want the whole thing in our final docker image. Docker multi-stage technology could help us the reduce the size.\nFROM golang:1.12 AS builder WORKDIR /work RUN git clone https://github.com/devops-ws/learn-pipeline-go \u0026amp;\u0026amp; \\ cd learn-pipeline-go \u0026amp;\u0026amp; go build -o go-server RUN ls -hal FROM alpine:3.10 COPY --from=builder /work/learn-pipeline-go/go-server . CMD ['go-server']  After built this: docker build . -t go-server\nthen we can test it: docker run go-server\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/docker/docker/",
         "title": "Docker 命令",
         "tags": [],
