@@ -1091,6 +1091,16 @@ curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&a
     </item>
     
     <item>
+      <title>Docker image build tools landscape</title>
+      <link>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</guid>
+      <description>There&amp;rsquo;re many tools could help us to build docker image.
+   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.    </description>
+    </item>
+    
+    <item>
       <title>Docker multi-stage technology</title>
       <link>http://surenpi.com/blog/devops/docker/multi-stage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
