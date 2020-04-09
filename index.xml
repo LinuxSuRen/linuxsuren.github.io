@@ -1742,6 +1742,15 @@ Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System
     </item>
     
     <item>
+      <title>K8S landscape</title>
+      <link>http://surenpi.com/blog/devops/k8s/k8s-landscape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/k8s/k8s-landscape/</guid>
+      <description>   Name Description     microk8s MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge.    </description>
+    </item>
+    
+    <item>
       <title>K8S 证书</title>
       <link>http://surenpi.com/blog/devops/k8s/cert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
