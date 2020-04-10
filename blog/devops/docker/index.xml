@@ -6,10 +6,20 @@
     <description>Recent content in 容器技术 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 16 May 2019 12:55:33 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/blog/devops/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker image build tools landscape</title>
+      <link>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</guid>
+      <description>There&amp;rsquo;re many tools could help us to build docker image.
+   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes    </description>
+    </item>
     
     <item>
       <title>Elastic Search</title>
@@ -66,16 +76,6 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       <guid>http://surenpi.com/blog/devops/docker/docker-api/</guid>
       <description>获取 Token：
 curl -X POST https://hub.docker.com/v1/users/login -d &#39;{&amp;quot;username&amp;quot;:&amp;quot;user&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;password&amp;quot;}&#39; -H &#39;Content-Type: application/json&#39;</description>
-    </item>
-    
-    <item>
-      <title>Docker image build tools landscape</title>
-      <link>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</guid>
-      <description>There&amp;rsquo;re many tools could help us to build docker image.
-   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.    </description>
     </item>
     
     <item>

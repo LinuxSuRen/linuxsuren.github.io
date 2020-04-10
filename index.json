@@ -42,6 +42,13 @@
         "content": "容器技术\n"
     },
     {
+        "uri": "http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/",
+        "title": "Docker image build tools landscape",
+        "tags": [],
+        "description": "Docker image build tools landscape",
+        "content": "There\u0026rsquo;re many tools could help us to build docker image.\n   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes    "
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/",
         "title": "Jenkins 事件监听",
         "tags": [],
@@ -712,13 +719,6 @@
         "tags": [],
         "description": "Docker Api",
         "content": "获取 Token：\ncurl -X POST https://hub.docker.com/v1/users/login -d '{\u0026quot;username\u0026quot;:\u0026quot;user\u0026quot;,\u0026quot;password\u0026quot;:\u0026quot;password\u0026quot;}' -H 'Content-Type: application/json'\n"
-    },
-    {
-        "uri": "http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/",
-        "title": "Docker image build tools landscape",
-        "tags": [],
-        "description": "Docker image build tools landscape",
-        "content": "There\u0026rsquo;re many tools could help us to build docker image.\n   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.    "
     },
     {
         "uri": "http://surenpi.com/blog/devops/docker/multi-stage/",
