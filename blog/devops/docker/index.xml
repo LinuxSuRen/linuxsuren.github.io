@@ -18,7 +18,7 @@
       
       <guid>http://surenpi.com/blog/devops/docker/docker-build-tools-landscape/</guid>
       <description>There&amp;rsquo;re many tools could help us to build docker image.
-   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes   ko Build and deploy Go applications on Kubernetes   s2i A tool for building artifacts from source and injecting into container images    </description>
+   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes   ko Build and deploy Go applications on Kubernetes   s2i A tool for building artifacts from source and injecting into container images   makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.</description>
     </item>
     
     <item>
