@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="40">
+<meta itemprop="wordCount" content="43">
 
 
 
@@ -205,9 +205,15 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#environment">Environment</a></li>
+<li>
+<ul>
+<li><a href="#environment">Environment</a>
+<ul>
+<li><a href="#gogc">GOGC</a></li>
+</ul></li>
 <li><a href="#proxy">Proxy</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -260,7 +266,7 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 
 <p>环境变量 <code>GOROOT</code> 是 Golang 的安装根目录</p>
 
@@ -272,7 +278,11 @@ var trackOutboundLink = function(id, url) {
 <li>pkg 生成编译文件的目录</li>
 </ul>
 
-<h1 id="proxy">Proxy</h1>
+<h3 id="gogc">GOGC</h3>
+
+<p><code>GOGC</code> 是用来控制内存垃圾回收（GC）被触发时的比例，默认值为：<code>GOGC=100</code>。<code>GOGC=off</code>可以完全关闭垃圾回收。</p>
+
+<h2 id="proxy">Proxy</h2>
 
 <p>在使用命令 <code>go get xxx</code> 时，如果需要翻墙的话，可以考虑下面的方案</p>
 
@@ -280,7 +290,7 @@ var trackOutboundLink = function(id, url) {
 
 <p>设置忽略的代理 <code>git config --global no.proxy '*.github.com'</code></p>
 
-<h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="troubleshooting">Troubleshooting</h2>
 
 <p><code>--oom-kill-disable=false</code></p>
 
