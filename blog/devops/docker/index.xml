@@ -107,8 +107,9 @@ docker run jenkins --name ci-jenkins
 如果要查看所有（包括已经停止的）容器话，可以使用参数：docker ps -a。
 停止容器 我们可以使用命令 docker stop 94a5fa599b05 来停止容器。这里的参数，是容器的ID。当然，我们也可以把容器的名称作为参数。
 日志 docker logs -f 94a5fa599b05
-删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。
-通过过滤镜像名称批量删除容器 docker stop $(docker ps | grep hello | awk &#39;{print $1}&#39;) &amp;amp;&amp;amp; docker rm $(docker ps | grep hello | awk &#39;{print $1}&#39;)</description>
+当一个容器运行当时间长了以后，就可能会由于日志输出积累过多导致日志文件占用过多的存储。我们可以通过下面的命令，简单地删除来自容器中的日志文件：
+find /var/lib/docker/containers/ -type f -name &amp;quot;*.log&amp;quot; -delete
+删除容器 我们可以通过命令 docker rm 94a5fa599b05 删除一个容器。当然，前提条件是该容器处于已停止的状态。</description>
     </item>
     
     <item>
