@@ -1505,6 +1505,13 @@
         "content": ""
     },
     {
+        "uri": "http://surenpi.com/blog/other/browser/chrome/",
+        "title": "Talk something about Chrome",
+        "tags": [],
+        "description": "Talk something about Chrome",
+        "content": "When you cannot visit a website with HTTPS, please click the blank place then type the following text:\nthisisunsafe\n"
+    },
+    {
         "uri": "http://surenpi.com/blog/devops/team/",
         "title": "Team",
         "tags": [],
