@@ -43,7 +43,9 @@ keytool -importcert -file selfsigned.crt -keystore {{Installation_directory}}/{{
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/language/java/jvm/</guid>
-      <description>查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all</description>
+      <description> 查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all
+切换 JAVA_HOME 如果需要在多个版本的 Java 之间切换的话，可以试试下面的命令（在 MacOS 下做的测试）：
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`  </description>
     </item>
     
     <item>
