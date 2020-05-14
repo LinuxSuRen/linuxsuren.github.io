@@ -253,7 +253,7 @@ curl --header &amp;quot;Authorization: Bearer $token&amp;quot; --insecure https:
 curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;chart=@jenkins-x-platform-0.0.1607.tgz&amp;quot;
 状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
 输出格式 支持的变量包括：
- content_type filename_effective http_code http_connect http_version  代理 语法：curl --proxy &amp;lt;[protocol://][user:password@]proxyhost[:port]&amp;gt; url 示例：curl --proxy http://user:password@proxyhost:port http://yourserver.</description>
+ content_type filename_effective http_code http_connect http_version  代理 curl 默认会从环境变量中获取代理配置信息，但如果给定了参数 --proxy 的话，就会使用参数中给定的。</description>
     </item>
     
     <item>

@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="76">
+<meta itemprop="wordCount" content="110">
 
 
 
@@ -303,8 +303,29 @@ var trackOutboundLink = function(id, url) {
 
 <h2 id="代理">代理</h2>
 
-<p>语法：<code>curl --proxy &lt;[protocol://][user:password@]proxyhost[:port]&gt; url</code>
-示例：<code>curl --proxy http://user:password@proxyhost:port http://yourserver.com</code></p>
+<p><code>curl</code> 默认会从环境变量中获取代理配置信息，但如果给定了参数 <code>--proxy</code> 的话，就会使用参数中给定的。</p>
+
+<p>Linux 下，添加环境环境变量为：<code>export http_proxy=127.0.0.1:8080</code> 以及 <code>export https_proxy=127.0.0.1:8080</code>。这里需要注意的是：<code>HTTP_PROXY</code> 是不支持的。</p>
+
+<p>语法：<code>curl --proxy &lt;[protocol://][user:password@]proxyhost[:port]&gt; url</code></p>
+
+<p>示例：<code>curl --proxy http://user:password@proxyhost:port http://yourserver.com</code></p>
+
+<p>我们可以使用 Nginx 作为一个代理服务器，参考配置如下：</p>
+
+<pre><code>server {
+  resolver 8.8.8.8;
+  listen 80;
+
+  location ~ .*/releases/.* {
+    proxy_pass https://nexus.xxx.xxx/repository/github-proxy$request_uri;
+  }
+
+  location / {
+    proxy_pass http://$http_host$request_uri;
+  }
+}
+</code></pre>
 
 </div>
 
