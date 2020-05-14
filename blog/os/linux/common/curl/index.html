@@ -315,7 +315,7 @@ var trackOutboundLink = function(id, url) {
 
 <pre><code>server {
   resolver 8.8.8.8;
-  listen 80;
+  listen 8080;
 
   location ~ .*/releases/.* {
     proxy_pass https://nexus.xxx.xxx/repository/github-proxy$request_uri;
