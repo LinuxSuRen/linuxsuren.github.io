@@ -1881,7 +1881,8 @@ Source code
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://surenpi.com/blog/other/server/nginx/</guid>
-      <description> 重定向 server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  HTTPS </description>
+      <description>Nginx 配置文件的一大特点是：必须要以分号结尾。
+变量    Name Description     $scheme The scheme of HTTP request, could be http, https   $host    $request_uri ]    逻辑判断 ngx_http_rewrite_module rewrite server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } }  return Syntax: return code [text]; return code URL; return URL; Default: - Context: server, location, if  if ($host = &amp;quot;github.</description>
     </item>
     
     <item>
@@ -2549,8 +2550,8 @@ sudo xx is not in the sudoers file.
 为了方便使用，我们可以为 wget 添加一个别名，如下所示：
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
 递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载
-wget各种选项分类列表
- 启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
+HSTS wget http://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-darwin-amd64.tar.gz --no-hsts
+选项分类列表  启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
  记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
     </item>
     

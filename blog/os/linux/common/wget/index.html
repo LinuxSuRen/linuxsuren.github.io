@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="273">
+<meta itemprop="wordCount" content="277">
 
 
 
@@ -205,8 +205,13 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#代理">代理</a></li>
 <li><a href="#递归下载">递归下载</a></li>
+<li><a href="#hsts">HSTS</a></li>
+<li><a href="#选项分类列表">选项分类列表</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -259,7 +264,7 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="代理">代理</h1>
+<h2 id="代理">代理</h2>
 
 <p>通过命令参数设置代理 <code>wget https://google.com -e &quot;https_proxy=http://localhost:1234&quot;</code></p>
 
@@ -267,11 +272,15 @@ var trackOutboundLink = function(id, url) {
 
 <p><code>alias wall-wget='wget -e &quot;https_proxy=http://localhost:8123&quot; '</code></p>
 
-<h1 id="递归下载">递归下载</h1>
+<h2 id="递归下载">递归下载</h2>
 
 <p><code>wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/</code> 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载</p>
 
-<p>wget各种选项分类列表</p>
+<h2 id="hsts">HSTS</h2>
+
+<p><code>wget http://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-darwin-amd64.tar.gz --no-hsts</code></p>
+
+<h2 id="选项分类列表">选项分类列表</h2>
 
 <ul>
 <li>启动</li>

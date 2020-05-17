@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="16">
+<meta itemprop="wordCount" content="61">
 
 
 
@@ -205,8 +205,17 @@ var trackOutboundLink = function(id, url) {
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li><a href="#重定向">重定向</a></li>
+<li>
+<ul>
+<li><a href="#变量">变量</a></li>
+<li><a href="#逻辑判断">逻辑判断</a></li>
+<li><a href="#ngx-http-rewrite-module">ngx_http_rewrite_module</a>
+<ul>
+<li><a href="#rewrite">rewrite</a></li>
+<li><a href="#return">return</a></li>
+</ul></li>
 <li><a href="#https">HTTPS</a></li>
+</ul></li>
 </ul>
 </nav>
 	
@@ -255,7 +264,41 @@ var trackOutboundLink = function(id, url) {
 
 
 
-<h1 id="重定向">重定向</h1>
+<p>Nginx 配置文件的一大特点是：必须要以分号结尾。</p>
+
+<h2 id="变量">变量</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>$scheme</code></td>
+<td>The scheme of HTTP request, could be <code>http</code>, <code>https</code></td>
+</tr>
+
+<tr>
+<td><code>$host</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>$request_uri</code></td>
+<td>]</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="逻辑判断">逻辑判断</h2>
+
+<h2 id="ngx-http-rewrite-module">ngx_http_rewrite_module</h2>
+
+<h3 id="rewrite">rewrite</h3>
 
 <pre><code>server {
         listen 80;
@@ -267,7 +310,21 @@ var trackOutboundLink = function(id, url) {
 }
 </code></pre>
 
-<h1 id="https">HTTPS</h1>
+<h3 id="return">return</h3>
+
+<pre><code>Syntax: return code [text];
+        return code URL;
+        return URL;
+Default: -
+Context: server, location, if
+</code></pre>
+
+<pre><code>if ($host = &quot;github.com&quot;) {
+        return 301 https://nexus-b.alauda.cn/repository/github-proxy$request_uri;
+}
+</code></pre>
+
+<h2 id="https">HTTPS</h2>
 
 </div>
 
