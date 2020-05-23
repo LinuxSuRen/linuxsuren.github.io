@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .footnote {
+      position: absolute;
+      bottom: 3em;
+    }
+
+    li p {
+      line-height: 1.25em;
+    }
+
+    .red {
+      color: #fa0000;
+    }
+
+    .large {
+      font-size: 2em;
+    }
+
+    a,
+    a>code {
+      color: rgb(249, 38, 114);
+      text-decoration: none;
+    }
+
+    code {
+      background: #e7e8e2;
+      border-radius: 5px;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .remark-code-line-highlighted {
+      background-color: #373832;
+    }
+
+    .pull-left {
+      float: left;
+      width: 47%;
+    }
+
+    .pull-right {
+      float: right;
+      width: 47%;
+    }
+
+    .pull-right~p {
+      clear: both;
+    }
+
+    #slideshow .slide .content code {
+      font-size: 0.8em;
+    }
+
+    #slideshow .slide .content pre code {
+      font-size: 0.9em;
+      padding: 15px;
+    }
+
+    .inverse {
+      background: #272822;
+      color: #777872;
+      text-shadow: 0 0 20px #333;
+    }
+
+    .inverse h1,
+    .inverse h2 {
+      color: #f3f3f3;
+      line-height: 0.8em;
+    }
+
+     
+    #slide-inverse .footnote {
+      bottom: 12px;
+      left: 20px;
+    }
+
+    #slide-how .slides {
+      font-size: 0.9em;
+      position: absolute;
+      top: 151px;
+      right: 140px;
+    }
+
+    #slide-how .slides h3 {
+      margin-top: 0.2em;
+    }
+
+    #slide-how .slides .first,
+    #slide-how .slides .second {
+      padding: 1px 20px;
+      height: 90px;
+      width: 120px;
+      -moz-box-shadow: 0 0 10px #777;
+      -webkit-box-shadow: 0 0 10px #777;
+      box-shadow: 0 0 10px #777;
+    }
+
+    #slide-how .slides .first {
+      background: #fff;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 1;
+    }
+
+    #slide-how .slides .second {
+      position: relative;
+      background: #fff;
+      z-index: 0;
+    }
+
+     
+    .left-column {
+      color: #777;
+      width: 20%;
+      height: 92%;
+      float: left;
+    }
+
+    .left-column h2:last-of-type,
+    .left-column h3:last-child {
+      color: #000;
+    }
+
+    .right-column {
+      width: 75%;
+      float: right;
+      padding-top: 1em;
+    }
+
+    .left-column-eq {
+      width: 50%;
+      height: 92%;
+      float: left;
+    }
+
+    .right-column-eq {
+      width: 50%;
+      height: 92%;
+      float: left;
+    }
+
+    .img-max-width-80-per img {
+      max-width: 80%;
+    }
+
+    .img-max-width-200 img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    .img-max-height-200 img {
+      max-height: 200px;
+    }
+  </style>
+  <script src="/remark-latest.min.js"></script>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: center, middle, inverse
+# 流水线众生相之
+Jenkins 对话 Tekton
+
+---
+class: inverse
+## About Me
+
+.left-column-eq[
+* [CDF Ambassador](https://cd.foundation/ambassador-program-overview-application/community-ambassador-cohort20/)
+* [GSoC mentor](https://www.jenkins.io/projects/gsoc/)
+* [Jenkins Press Contact in China](https://www.jenkins.io/press/)
+* [Jenkins Chinese Localization](https://www.jenkins.io/sigs/chinese-localization/)
+]
+
+.right-column-eq[
+* [Jenkins CLI](https://github.com/jenkins-zh/jenkins-cli)
+* [Jenkins Chinese Simplified Plugin](https://github.com/jenkinsci/localization-zh-cn-plugin)
+* [Jenkins Distribution Formulas](https://github.com/jenkins-zh/jenkins-formulas)
+* [Wechat backend](https://github.com/jenkins-zh/wechat-backend)
+]
+
+---
+class: inverse
+## 流水线 vs 手工
+
+.left-column-eq[
+* 易执行，可复用
+* 代码
+* 可视化
+* 统计信息
+* review
+]
+
+.right-column-eq[
+* 繁琐，易出错
+* 文档 &#43; 脚本
+* 依赖个人
+]
+
+---
+class: inverse
+## 相关产品
+
+.left-column-eq[
+.img-max-width-200[
+![github](/images/logo/github.jpeg)
+]
+.img-max-width-200[
+![jenkins](/images/logo/jenkins.png)
+]
+.img-max-width-200[
+![travisci](/images/logo/travisci.png)
+]
+]
+
+.right-column-eq[
+.img-max-width-200[
+![tekton](/images/logo/tekton.png)
+]
+.img-max-width-200[
+![gitlab](/images/logo/gitlab.png)
+]
+.img-max-width-200[
+![circleci](/images/logo/circleci.png)
+]
+]
+
+---
+class: inverse
+## Jenkins vs Tekton
+
+.left-column-eq[
+* 传统部署、容器部署
+* 非常成熟、丰富的插件
+* UI、CLI 功能完整
+* Jenkinsfile、groovy
+* 动态构建节点
+* 单点故障
+* 本地文件系统存储
+]
+
+.right-column-eq[
+* Kubernetes
+* v1beta1
+* CRD、yaml
+* UI Dashboard
+* Task、Pipeline 使用灵活
+]
+
+---
+class: center, middle
+## Jenkins
+
+Jenkins automation server
+
+---
+class: inverse
+## Jenkinsfile
+
+```Jenkinsfile
+pipeline {
+    agent none
+    stages {
+        stage(&#39;Example Build&#39;) {
+            steps {
+                echo &#39;Hello World&#39;
+            }
+        }
+        stage(&#39;Example Deploy&#39;) {
+            when {
+                beforeOptions true
+                branch &#39;testing&#39;
+            }
+            options {
+                lock label: &#39;testing-deploy-envs&#39;, quantity: 1, variable: &#39;deployEnv&#39;
+            }
+            steps {
+                echo &#34;Deploying to ${deployEnv}&#34;
+            }
+        }
+    }
+}
+```
+
+---
+class: inverse
+## 专业的组件做专业的事情
+
+* 凭据 -&gt; k8s
+    * 备份恢复
+* 系统配置 -&gt; git
+    * 配置修改的审核
+* 数据文件 -&gt; 共享存储
+* 用户认证 -&gt; oidc(ladp)
+
+---
+class: inverse
+## Jenkins 节点标签
+
+* 与节点连接类型结偶
+* 每个节点可以有多个标签
+* 名称命名要有业务意义
+    * linux、java、mem-high
+* 逻辑关系
+    * linux &amp; java
+* 有哪些标签可以用？
+
+---
+class: inverse
+## Jenkins 节点管理
+
+* 当好 master
+* 推荐使用动态节点
+* 一定要有 limit
+* k8s 节点的限制
+* k8s 节点的伸缩
+
+---
+class: inverse
+## 构建优化
+
+* 避免串行构建
+* 内存、CPU 资源合理分配
+* Docker registry mirror
+* Maven mirror
+* HTTP proxy
+* 构建状态监控
+
+---
+class: center, middle
+## Tekton
+
+A K8s-native Pipeline resource.
+
+---
+class: inverse
+## Tekton
+
+.left-column-eq[
+### Task
+```
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: echo-hello-world
+spec:
+  steps:
+    - name: echo
+      image: ubuntu
+      command:
+        - echo
+      args:
+        - &#34;Hello World&#34;
+```
+]
+
+.right-column-eq[
+### Task Run
+```
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: echo-hello-world-task-run
+spec:
+  taskRef:
+    name: echo-hello-world
+```
+]
+
+---
+class: inverse
+## Tekton Pipeline
+
+.left-column-eq[
+```
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: tutorial-pipeline
+spec:
+  resources:
+    - name: source-repo
+      type: git
+    - name: web-image
+      type: image
+  tasks:
+    - name: build-skaffold-web
+      taskRef:
+        name: build-docker-image-from-git-source
+      params:
+        - name: pathToDockerFile
+          value: Dockerfile
+        - name: pathToContext
+          value: /workspace/docker-source/examples/microservices/leeroy-web #configure: may change according to your source
+      resources:
+        inputs:
+          - name: docker-source
+            resource: source-repo
+        outputs:
+          - name: builtImage
+            resource: web-image
+```
+]
+
+.right-column-eq[
+```
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: tutorial-pipeline-run-1
+spec:
+  serviceAccountName: tutorial-service
+  pipelineRef:
+    name: tutorial-pipeline
+  resources:
+    - name: source-repo
+      resourceRef:
+        name: skaffold-git
+    - name: web-image
+      resourceRef:
+        name: skaffold-image-leeroy-web
+```
+]
+
+---
+class: inverse
+## Tekton Resources
+
+```
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: skaffold-image-leeroy-web
+spec:
+  type: image
+  params:
+    - name: url
+      value: gcr.io/&lt;use your project&gt;/leeroy-web
+```
+
+---
+class: inverse
+## Installation
+
+* Pipeline
+* Dashboard
+* Trigger
+* [CLI](https://github.com/tektoncd/cli)
+
+```
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
+kubectl apply --filename https://github.com/tektoncd/dashboard/releases/download/v0.6.1.4/tekton-dashboard-release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
+
+brew tap tektoncd/tools
+brew install tektoncd/tools/tektoncd-cli
+```
+
+---
+class: center, middle
+
+## Thanks
+
+.img-max-height-200[
+![jenkins-wechat](/images/qrcode/jenkins-wechat-banner.png)
+![jenkins-wechat](/images/qrcode/jenkins-assistant.jpeg)
+]
+  </textarea>
+  <script>
+    var radio = sessionStorage.getItem('radio')
+    var click = sessionStorage.getItem('click')
+    var touch = sessionStorage.getItem('touch')
+    var scroll = sessionStorage.getItem('scroll')
+    var navigation = {
+      click: click == null ? true : JSON.parse(click),
+      touch: touch == null ? true : JSON.parse(touch),
+      scroll: scroll == null ? true : JSON.parse(scroll),
+    }
+    var slideshow = remark.create({
+      ratio: radio ? radio : '16:9',
+      navigation: navigation,
+    });
+  </script>
+</body>
+
+</html>

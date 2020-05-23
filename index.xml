@@ -6,10 +6,26 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://surenpi.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>流水线众生相之 Jenkins 对话 Tekton</title>
+      <link>http://surenpi.com/blog/devops/jenkins/basic/pipeline-slide/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://surenpi.com/blog/devops/jenkins/basic/pipeline-slide/</guid>
+      <description>class: center, middle, inverse
+流水线众生相之 Jenkins 对话 Tekton
+class: inverse
+About Me .left-column-eq[ * CDF Ambassador * GSoC mentor * Jenkins Press Contact in China * Jenkins Chinese Localization ]
+.right-column-eq[ * Jenkins CLI * Jenkins Chinese Simplified Plugin * Jenkins Distribution Formulas * Wechat backend ]
+class: inverse
+流水线 vs 手工 .left-column-eq[ * 易执行，可复用 * 代码 * 可视化 * 统计信息 * review ]
+.right-column-eq[ * 繁琐，易出错 * 文档 + 脚本 * 依赖个人 ]</description>
+    </item>
     
     <item>
       <title>Docker image build tools landscape</title>
