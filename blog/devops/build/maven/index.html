@@ -46,7 +46,7 @@
 
 <meta itemprop="datePublished" content="2020-02-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="93">
+<meta itemprop="wordCount" content="103">
 
 
 
@@ -217,6 +217,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#查看依赖">查看依赖</a></li>
 <li><a href="#调试">调试</a></li>
 <li><a href="#网络代理">网络代理</a></li>
+<li><a href="#镜像">镜像</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -342,6 +343,18 @@ Bob--&gt;Alice: I am good thanks!
     &lt;/proxy&gt;
   &lt;/proxies&gt;
 &lt;/settings&gt;
+</code></pre>
+
+<h2 id="镜像">镜像</h2>
+
+<pre><code>  &lt;mirrors&gt;
+    &lt;mirror&gt;
+      &lt;id&gt;nexus-aliyun&lt;/id&gt;
+      &lt;name&gt;Nexus aliyun&lt;/name&gt;
+      &lt;url&gt;https://nexus-b.alauda.cn/repository/maven-public/&lt;/url&gt;
+      &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+    &lt;/mirror&gt;
+  &lt;/mirrors&gt;
 </code></pre>
 
 </div>

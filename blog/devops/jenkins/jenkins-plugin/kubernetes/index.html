@@ -335,12 +335,12 @@ var trackOutboundLink = function(id, url) {
 
     
     <tr>
-        <td>New Feature</td>
+        <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62406" target="_blank">JENKINS-62406</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62504" target="_blank">JENKINS-62504</a>
         </td>
         <td>
-            Ability to Set YAML podSpec Tolerations Dynamically
+            Can&#39;t get  streaming pod events log in jenkins console
         </td>
     </tr>
     
@@ -350,23 +350,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62252" target="_blank">JENKINS-62252</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62503" target="_blank">JENKINS-62503</a>
         </td>
         <td>
-            Working directory of jnlp container has changed
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62226" target="_blank">JENKINS-62226</a>
-        </td>
-        <td>
-            After moving Jenkins to another node of Kubernetes cluster, we are experiencing such a issue during build job: &#34;All nodes of label is ... offline&#34;
+            Global defination raw yaml for Pod is ignored
         </td>
     </tr>
     
@@ -376,10 +363,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62204" target="_blank">JENKINS-62204</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62502" target="_blank">JENKINS-62502</a>
         </td>
         <td>
-            Build pods not removed after build finished
+            Executing command not escape double quote
         </td>
     </tr>
     
@@ -389,10 +376,23 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62160" target="_blank">JENKINS-62160</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62485" target="_blank">JENKINS-62485</a>
         </td>
         <td>
-            persistentVolumeClaimWorkspaceVolume produces emptyDir volume instead of PVC volume when used in Declarative pipelines
+            Container tasks (ContainerExecDecorator) not starting on Windows pods
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62412" target="_blank">JENKINS-62412</a>
+        </td>
+        <td>
+            When changing directories in Job within Kubernetes worker, durabletask returns a nonexistent error
         </td>
     </tr>
     
@@ -534,7 +534,7 @@ var trackOutboundLink = function(id, url) {
 
 </table>
 
-一共：595个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：600个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -561,11 +561,11 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/">Jenkins 插件开发</a></li>
-	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
 	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
 </ul>
 
