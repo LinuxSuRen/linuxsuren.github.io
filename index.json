@@ -1320,7 +1320,7 @@
         "title": "Mac 快捷键",
         "tags": [],
         "description": "Mac 快捷键",
-        "content": " 按键符号 ⌘(command)\n⌥(option)\n⇧(shift)\n⇪(caps lock)\n⌃(control)\n↩(return)\n⌅(enter)\n快捷键 删除文件 command + delete\n浏览器 关闭选项卡 command + w\n前后切换选项卡 command + \u0026lt;-\n指定顺序切换选项卡 command + 1\n关闭浏览器 command + q\n截图  截取全屏并保存文件 shift + command + 3\n 截取部分并保存文件 shift + command + 4\n 截取全屏并保存粘贴板 shift + control + command + 3\n 截取部分并保存粘贴板 shift + control + command + 4\n  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。\n 开机后按下 command+s\n 进入终端后输入命令 /sbin/mount -uaw`\n 执行命令 rm /var/db/.applesetupdone\n  操作系统重启后，会提示用户重新创建一个管理员身份。注意，这不会删除之前的用户信息。登陆系统后，你可以用户管理功能再次把之前的用户身份找回来。\n"
+        "content": " 按键符号 ⌘(command)\n⌥(option)\n⇧(shift)\n⇪(caps lock)\n⌃(control)\n↩(return)\n⌅(enter)\n快捷键 删除文件 command + delete\n浏览器 关闭选项卡 command + w\n前后切换选项卡 command + \u0026lt;-\n指定顺序切换选项卡 command + 1\n关闭浏览器 command + q\n截图  截取全屏并保存文件 shift + command + 3\n 截取部分并保存文件 shift + command + 4\n 截取全屏并保存粘贴板 shift + control + command + 3\n 截取部分并保存粘贴板 shift + control + command + 4\n  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。\n 开机后按下 command+s\n 进入终端后输入命令 /sbin/mount -uaw`\n 执行命令 rm /var/db/.applesetupdone\n  操作系统重启后，会提示用户重新创建一个管理员身份。注意，这不会删除之前的用户信息。登陆系统后，你可以用户管理功能再次把之前的用户身份找回来。\n翻盖开机 取消命令：sudo nvram AutoBoot=%00\n启用命令：sudo nvram AutoBoot=%03\n"
     },
     {
         "uri": "http://surenpi.com/blog/devops/build/maven-repository/",

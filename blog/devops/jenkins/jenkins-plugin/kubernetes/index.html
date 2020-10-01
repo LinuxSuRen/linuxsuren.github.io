@@ -337,23 +337,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62504" target="_blank">JENKINS-62504</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-63705" target="_blank">JENKINS-63705</a>
         </td>
         <td>
-            Can&#39;t get  streaming pod events log in jenkins console
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62503" target="_blank">JENKINS-62503</a>
-        </td>
-        <td>
-            Global defination raw yaml for Pod is ignored
+            Concurrency limit not calculated over template anymore in 1.27.1
         </td>
     </tr>
     
@@ -363,23 +350,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62502" target="_blank">JENKINS-62502</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-63687" target="_blank">JENKINS-63687</a>
         </td>
         <td>
-            Executing command not escape double quote
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62485" target="_blank">JENKINS-62485</a>
-        </td>
-        <td>
-            Container tasks (ContainerExecDecorator) not starting on Windows pods
+            Configuring cloud through JCasC results in a duplicate configuration
         </td>
     </tr>
     
@@ -389,10 +363,36 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-62412" target="_blank">JENKINS-62412</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-63683" target="_blank">JENKINS-63683</a>
         </td>
         <td>
-            When changing directories in Job within Kubernetes worker, durabletask returns a nonexistent error
+            Pipelines unstable after upgrading to kubernetes-plugin 1.27.1
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>New Feature</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-63679" target="_blank">JENKINS-63679</a>
+        </td>
+        <td>
+            Provide a way to pass multiple yamlFiles
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Bug</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-63655" target="_blank">JENKINS-63655</a>
+        </td>
+        <td>
+            Performance degradation when running multiple stages in parallel
         </td>
     </tr>
     
@@ -534,7 +534,7 @@ var trackOutboundLink = function(id, url) {
 
 </table>
 
-一共：600个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：625个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -561,9 +561,9 @@ var trackOutboundLink = function(id, url) {
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
 	
-	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/">Jenkins Plugin Dev Credentails</a></li>
-	
 	<li><a href="/blog/devops/jenkins/jenkins-plugin/configuration-as-code/">Configuration as Code</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
 	
 	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/">Jenkins UI</a></li>
 	
