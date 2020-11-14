@@ -44,7 +44,7 @@
 
 
 
-<meta itemprop="wordCount" content="93">
+<meta itemprop="wordCount" content="107">
 
 
 
@@ -211,6 +211,7 @@ var trackOutboundLink = function(id, url) {
 <li><a href="#运行时代理">运行时代理</a></li>
 <li><a href="#insecure">Insecure</a></li>
 <li><a href="#user">User</a></li>
+<li><a href="#并发下载-推送-镜像">并发下载（推送）镜像</a></li>
 <li><a href="#重启服务">重启服务</a></li>
 </ul></li>
 </ul>
@@ -318,6 +319,21 @@ ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000
 <p><code>sudo gpasswd -a ${USER} docker</code></p>
 
 <p><code>sudo service docker restart</code></p>
+
+<h2 id="并发下载-推送-镜像">并发下载（推送）镜像</h2>
+
+<p>下面的示例中给出了如何设置（<code>/etc/docker/daemon.json</code>）并发下载或者推送镜像层的配置：</p>
+
+<pre><code>{
+	&quot;max-concurrent-uploads&quot;: 20,
+	&quot;max-concurrent-downloads&quot;: 20,
+	&quot;registry-mirrors&quot;: [
+		&quot;https://qtzsrp4m.mirror.aliyuncs.com&quot;,
+		&quot;https://hub-mirror.c.163.com&quot;,
+		&quot;https://mirror.baidubce.com&quot;
+	]
+}
+</code></pre>
 
 <h2 id="重启服务">重启服务</h2>
 
