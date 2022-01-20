@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on SuRenPi</title>
-    <link>http://surenpi.com/tags/kubernetes/</link>
+    <link>https://linuxsuren.github.io/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
   War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
@@ -26,7 +22,7 @@ Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 doc
 需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175
 挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts
 如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts
-Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied  Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
     </item>
     
   </channel>

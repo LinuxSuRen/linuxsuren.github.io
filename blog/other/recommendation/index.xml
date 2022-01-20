@@ -1,50 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>推荐信息 on SuRenPi</title>
-    <link>http://surenpi.com/blog/other/recommendation/</link>
+    <link>https://linuxsuren.github.io/blog/other/recommendation/</link>
     <description>Recent content in 推荐信息 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 06 May 2019 12:39:54 +0800</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/blog/other/recommendation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 06 May 2019 12:39:54 +0800</lastBuildDate><atom:link href="https://linuxsuren.github.io/blog/other/recommendation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Work</title>
-      <link>http://surenpi.com/blog/other/recommendation/work/</link>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/work/</link>
       <pubDate>Mon, 06 May 2019 12:39:54 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/other/recommendation/work/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/work/</guid>
       <description>http://219.232.200.39/uamsso/</description>
     </item>
     
     <item>
-      <title>English Abbreviations</title>
-      <link>http://surenpi.com/blog/other/recommendation/english-abbreviations/</link>
-      <pubDate>Thu, 02 May 2019 21:21:49 +0800</pubDate>
-      
-      <guid>http://surenpi.com/blog/other/recommendation/english-abbreviations/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>英语缩写</title>
-      <link>http://surenpi.com/blog/other/recommendation/english-abbreviations/</link>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</link>
       <pubDate>Thu, 02 May 2019 21:21:49 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/other/recommendation/english-abbreviations/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</guid>
       <description>大部分的缩写可以用于写作和口语，下面标注了“写作”的通常只用于写作：
           ASAP as soon as possible    RSVP please reply    RIP rest in peace    BYOB bring you own beer/booze    BBQ barbecue    PIN personal identity number    e.g. example 写作   i.e. that is, restate an idea    etc. et cetera, and so forth    ATM automatic teller machine     </description>
     </item>
     
     <item>
       <title>学习英语</title>
-      <link>http://surenpi.com/blog/other/recommendation/learning-english/</link>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/learning-english/</link>
       <pubDate>Thu, 02 May 2019 08:48:03 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/other/recommendation/learning-english/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/learning-english/</guid>
       <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
 网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
    名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time</description>
@@ -52,10 +39,10 @@
     
     <item>
       <title>Video</title>
-      <link>http://surenpi.com/blog/other/recommendation/video/</link>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/video/</link>
       <pubDate>Mon, 15 Apr 2019 12:18:24 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/other/recommendation/video/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/video/</guid>
       <description>格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
 https://youtubemp4.to/
 下载 我们可以通过一个命令行工具来从 Youtube 上下载视频，首先，使用 brew 来安装命令行：
@@ -66,10 +53,10 @@ youtube-dl &amp;quot;https://www.youtube.com/watch?v=EtlhC3vw8pA&amp;quot; --pro
     
     <item>
       <title>Technical Website</title>
-      <link>http://surenpi.com/blog/other/recommendation/technical-website/</link>
+      <link>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</link>
       <pubDate>Thu, 28 Mar 2019 14:28:05 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/other/recommendation/technical-website/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/recommendation/technical-website/</guid>
       <description>dev.to X-lab 开放实验室阅读俱乐部
 Code Cartoon
 cloud shell</description>

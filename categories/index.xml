@@ -1,57 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on SuRenPi</title>
-    <link>http://surenpi.com/categories/</link>
+    <link>https://linuxsuren.github.io/categories/</link>
     <description>Recent content in Categories on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-	<atom:link href="http://surenpi.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cicd</title>
-      <link>http://surenpi.com/categories/cicd/</link>
+      <title>cicd</title>
+      <link>https://linuxsuren.github.io/categories/cicd/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/categories/cicd/</guid>
+      <guid>https://linuxsuren.github.io/categories/cicd/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Devops</title>
-      <link>http://surenpi.com/categories/devops/</link>
+      <title>DevOps</title>
+      <link>https://linuxsuren.github.io/categories/devops/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/categories/devops/</guid>
+      <guid>https://linuxsuren.github.io/categories/devops/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>K8s</title>
-      <link>http://surenpi.com/categories/k8s/</link>
+      <title>k8s</title>
+      <link>https://linuxsuren.github.io/categories/k8s/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/categories/k8s/</guid>
+      <guid>https://linuxsuren.github.io/categories/k8s/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>http://surenpi.com/categories/kubernetes/</link>
+      <title>kubernetes</title>
+      <link>https://linuxsuren.github.io/categories/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/categories/kubernetes/</guid>
+      <guid>https://linuxsuren.github.io/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Scm</title>
-      <link>http://surenpi.com/categories/scm/</link>
+      <title>scm</title>
+      <link>https://linuxsuren.github.io/categories/scm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/categories/scm/</guid>
+      <guid>https://linuxsuren.github.io/categories/scm/</guid>
       <description></description>
     </item>
     

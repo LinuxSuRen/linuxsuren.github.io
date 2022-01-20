@@ -1,48 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jenkins Basic on SuRenPi</title>
-    <link>http://surenpi.com/blog/devops/jenkins/basic/</link>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/</link>
     <description>Recent content in Jenkins Basic on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/basic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>流水线众生相之 Jenkins 对话 Tekton</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/pipeline-slide/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/pipeline-slide/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/pipeline-slide/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/pipeline-slide/</guid>
       <description>class: center, middle, inverse
 流水线众生相之 Jenkins 对话 Tekton
-class: inverse
-About Me .left-column-eq[ * CDF Ambassador * GSoC mentor * Jenkins Press Contact in China * Jenkins Chinese Localization ]
-.right-column-eq[ * Jenkins CLI * Jenkins Chinese Simplified Plugin * Jenkins Distribution Formulas * Wechat backend ]
-class: inverse
-流水线 vs 手工 .left-column-eq[ * 易执行，可复用 * 代码 * 可视化 * 统计信息 * review ]
-.right-column-eq[ * 繁琐，易出错 * 文档 + 脚本 * 依赖个人 ]</description>
+ class: inverse
+About Me .left-column-eq[
+ CDF Ambassador GSoC mentor Jenkins Press Contact in China Jenkins Chinese Localization ]  .right-column-eq[
+ Jenkins CLI Jenkins Chinese Simplified Plugin Jenkins Distribution Formulas Wechat backend ]   class: inverse
+流水线 vs 手工 .left-column-eq[
+ 易执行，可复用 代码 可视化 统计信息 review ]  .right-column-eq[
+ 繁琐，易出错 文档 + 脚本 依赖个人 ]   class: inverse</description>
     </item>
     
     <item>
       <title>Jenkins 系统属性配置</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/system_var/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/system_var/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</guid>
       <description>Jenkins 有很多不包含在 UI 中的配置，可以应对一些特殊情况：
    Key Values     hudson.model.DownloadService.noSignatureCheck true   hudson.model.DirectoryBrowserSupport.CSP    hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID true   kubernetes.websocket.ping.interval 10000   org.jenkinsci.plugins.gitclient.Git.timeOut 60   -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION true    </description>
     </item>
     
     <item>
       <title>Jenkins 调试</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-debug/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-debug/</guid>
       <description>mvn jenkins-dev:run
 mvn jenkins-dev:run -Djenkins.install.runSetupWizard=true -DJENKINS_HOME=. 需要在目录 war 下运行，并保证没有 work 目录
 java -server -Xms200m -Xmx512m -jar jenkins.war --webroot=/var/cache/jenkins --httpPort=8090 -DJENKINS_HOME=./jenkins-home/ 设置 Jenkins 启动参数
@@ -54,10 +51,10 @@ JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y<
     
     <item>
       <title>Jenkins</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
   War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
@@ -67,60 +64,60 @@ Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 doc
 需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175
 挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts
 如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts
-Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied  Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
     </item>
     
     <item>
       <title>Jenkins 队列</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-queue/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-queue/</link>
       <pubDate>Wed, 05 Jun 2019 12:52:11 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-queue/</guid>
-      <description>我们知道，在 Jenkins 中执行任务的话，执行过程是： 1. 进入队列 2. 查找是否有可以执行该任务的节点 3. 启动节点执行任务
-这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-queue/</guid>
+      <description>我们知道，在 Jenkins 中执行任务的话，执行过程是：
+ 进入队列 查找是否有可以执行该任务的节点 启动节点执行任务  这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。
 但是，在实际的企业（或组织）应用中，往往会有更加复杂的场景需求。例如：部分任务的优先级相对比较高、持久化队列等等。有一些需求，已经有相对应的插件可以实现，本文会对默写场景进行描述。
 https://github.com/jenkinsci/purge-build-queue-plugin https://github.com/jenkinsci/priority-sorter-plugin https://github.com/jenkinsci/persistent-build-queue-plugin https://github.com/jenkinsci/merge-queue-plugin</description>
     </item>
     
     <item>
       <title>Jenkins Backup</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-backup/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-backup/</link>
       <pubDate>Mon, 29 Apr 2019 11:49:25 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-backup/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-backup/</guid>
       <description>本文是把 Jenkins 2.164.2 的数据备份到了 2.175 上。
 插件 首先，我们需要进入到 Jenkins 配置的根目录中（默认为：~/.jenkins）：
 备份
-tar czvf jenkins.plugins.tar.gz plugins/*.jpi cp jenkins.plugins.tar.gz ~  凭据 我需要备份的环境运行在 Kubernetes 集群上，因此，下面是通过命令行 kubectl 把凭据相关的文件拷贝出来的， 读者可以结合自己的情况酌情调整：
-kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secret.key ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/credentials.xml ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secrets ~/.jenkins/secrets -n default  Jenkins 默认会把所有的凭据信息保存到 credentials.xml 这个文件中。</description>
+tar czvf jenkins.plugins.tar.gz plugins/*.jpi cp jenkins.plugins.tar.gz ~ 凭据 我需要备份的环境运行在 Kubernetes 集群上，因此，下面是通过命令行 kubectl 把凭据相关的文件拷贝出来的， 读者可以结合自己的情况酌情调整：
+kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secret.key ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/credentials.xml ~/.jenkins -n default kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secrets ~/.jenkins/secrets -n default Jenkins 默认会把所有的凭据信息保存到 credentials.xml 这个文件中。</description>
     </item>
     
     <item>
       <title>Jenkins Initialization</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-initialization/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-initialization/</link>
       <pubDate>Tue, 26 Mar 2019 14:35:09 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-initialization/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-initialization/</guid>
       <description>你可以创建一个 Groovy 脚本文件，例如 $JENKINS_HOME/init.groovy 或者目录 $JENKINS_HOME/init.groovy.d/ 下的任意脚本 .grooy. 它就会在 Jenkins 启动后执行。</description>
     </item>
     
     <item>
       <title>Jenkins 培训</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/course/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</link>
       <pubDate>Thu, 03 Jan 2019 22:50:02 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/course/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</guid>
       <description>class: center, middle
-Jenkins 培训 大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境  插件管理 构建任务  流水线 多分支流水线 API  计算节点管理  静态 动态   大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施   安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
- 安装手册 Docker  插件管理  介绍 仓库 托管  计算节点管理  节点类型  固定 动态（虚拟机、Docker、Kubernetes）  通道  SSH JNLP  标签（label）  表达式   流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
+Jenkins 培训  大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境   插件管理 构建任务  流水线 多分支流水线 API   计算节点管理  静态 动态     大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施     安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
+ 安装手册 Docker   插件管理  介绍 仓库 托管   计算节点管理  节点类型 固定 动态（虚拟机、Docker、Kubernetes）   通道  SSH JNLP   标签（label） 表达式     流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
     </item>
     
     <item>
       <title>Jenkins Agent</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-agent/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-agent/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-agent/</guid>
       <description>Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。
 默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。
 Jenkins 的节点，通常可以配置如下属性：
@@ -129,15 +126,16 @@ Jenkins 的节点，通常可以配置如下属性：
 SSH 需要安装插件。
 Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。
 静态 Docker 静态的 Docker 容器，是通过命令来启动一个 jnlp 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。
-通常的命令 docker run jenkins/jnlp-slave -url http://jenkins-server:port &amp;lt;secret&amp;gt; &amp;lt;agent name&amp;gt;</description>
+通常的命令 docker run jenkins/jnlp-slave -url http://jenkins-server:port &amp;lt;secret&amp;gt; &amp;lt;agent name&amp;gt;
+设置 Tunnel 端口 docker run jenkins/jnlp-slave -tunnel :&amp;lt;tunnel port&amp;gt; -url http://jenkins-server:port &amp;lt;secret&amp;gt; &amp;lt;agent name&amp;gt;</description>
     </item>
     
     <item>
       <title>Jenkins 插件托管</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-host/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-host/</guid>
       <description>如果你发现 Jenkins 官方的插件中无法满足你的需要，而且愿意把自己写的插件贡献给社区的话，可以参考下面的步骤。
 创建库 你需要在 GitHub 上申请一个账号，然后，把你的工程提交上去。
 提交请求 详细阅读托管要求
@@ -145,15 +143,15 @@ Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们�
 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
 你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
 发布 设置你的 Maven 账号，参考下面的配置修改 Maven 的配置文件~/.m2/settings.xml：
-&amp;lt;settings xmlns=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;quot;&amp;gt; &amp;lt;servers&amp;gt; &amp;lt;server&amp;gt; &amp;lt;id&amp;gt;maven.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&amp;gt; &amp;lt;username&amp;gt;...&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;...&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; &amp;lt;/servers&amp;gt; &amp;lt;/settings&amp;gt;  等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform</description>
+&amp;lt;settings xmlns=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;quot;&amp;gt; &amp;lt;servers&amp;gt; &amp;lt;server&amp;gt; &amp;lt;id&amp;gt;maven.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&amp;gt; &amp;lt;username&amp;gt;...&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;...&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; &amp;lt;/servers&amp;gt; &amp;lt;/settings&amp;gt; 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform</description>
     </item>
     
     <item>
       <title>Jenkins 标签</title>
-      <link>http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/basic/jenkins-label/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
       <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
     </item>
     

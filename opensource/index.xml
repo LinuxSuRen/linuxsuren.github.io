@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>我的开源项目 on SuRenPi</title>
-    <link>http://surenpi.com/opensource/</link>
+    <link>https://linuxsuren.github.io/opensource/</link>
     <description>Recent content in 我的开源项目 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 Mar 2019 23:02:26 +0800</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/opensource/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 24 Mar 2019 23:02:26 +0800</lastBuildDate><atom:link href="https://linuxsuren.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Acronym</title>
-      <link>http://surenpi.com/opensource/acronym/</link>
+      <link>https://linuxsuren.github.io/opensource/acronym/</link>
       <pubDate>Sun, 24 Mar 2019 23:02:26 +0800</pubDate>
       
-      <guid>http://surenpi.com/opensource/acronym/</guid>
+      <guid>https://linuxsuren.github.io/opensource/acronym/</guid>
       <description>PTAL please take a look
 LGTM look good to me
 https://www.smart-words.org/abbreviations/text.html</description>
@@ -24,10 +20,10 @@ https://www.smart-words.org/abbreviations/text.html</description>
     
     <item>
       <title>Why OpenSource</title>
-      <link>http://surenpi.com/opensource/why-opensource/</link>
+      <link>https://linuxsuren.github.io/opensource/why-opensource/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/opensource/why-opensource/</guid>
+      <guid>https://linuxsuren.github.io/opensource/why-opensource/</guid>
       <description>为什么要参与开源事业？这是一个非常好的问题。下面，我会对此发表几个观点。
 先说，为什么会考虑参与开源。在工作了几个年头之后，我发现了一个问题——做了很多的项目，或大或小，我的角色只是个 Coding 的劳动力。 也许有人对此有别的看法，但是，对于走进 IT 行业的头三年了去我差不多就是这么理解的。学习几个框架，写段后端逻辑，改改页面上的按钮、菜单。 由于缺少经验，没有自己的想法，提不出好的建议。有些逻辑能力强的人，会感觉自己能够精通几个框架。但是，这些所谓的框架更新换代太快， 我们又不会总是那么年轻，总是有那么多的时间来无尽地学习。
 然后，某个机会，开始对开源慢慢地有些了解。其实，这是非常地有意思的一件事情。我想，从 Java 开始走向编程之路的程序员们，应该不可能 没有听说过、用过开源的项目。但是，国内这些程序员里，却只有少部分的人尝试过去参与开源。

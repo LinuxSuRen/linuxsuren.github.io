@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jenkins Plugins on SuRenPi</title>
-    <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/</link>
+    <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/</link>
     <description>Recent content in Jenkins Plugins on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/blog/devops/jenkins/jenkins-plugin/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>多分支流水线</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</guid>
       <description>背景 通常的 Git 分支策略中，会有固定分支和临时分支。对于固定的，我们可以给每个分支都创建一条流水线。 但对于临时分支，有些团队的做法，会把分支作为参数。
 但实际上，单个代码仓库完全可以使用同一个流水线，也就是多分支流水线
 特点 支持基于一定的策略，扫描分支、PR、标签（tag），对符合过滤条件的会动态创建流水线。 当分支等被删除后，多分支流水线可以把之前创建出来的流水线删除。
@@ -31,41 +27,42 @@ Webhook 多分支流水线，可以自动添加 webhook 到 git 服务上，并�
     
     <item>
       <title>Pipeline Input Step</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/</link>
       <pubDate>Thu, 04 Apr 2019 11:14:39 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/</guid>
-      <description>该插件实现了一个在构建过程中 允许人工干预的功能， 源代码托管在 Jenkins 的官方仓库中。
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline-input-step/</guid>
+      <description>该插件实现了一个在构建过程中 允许人工干预的功能，
+源代码托管在 Jenkins 的官方仓库中。
 它提供的 DSL 语句为 input，执行到该语句的时候，需要人工决定“通过”或者“拒绝”。它还支持设置允许点击”通过“的人或者组，以及 确认该操作时输入一些参数。
 示例 在下面的例子中，通过的话会打印用户输入的参数 name 的值；如果拒绝的话，当前流水线会直接失败
-script { def approver = input id: &#39;approveId&#39;, message: &#39;need your approve&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;Your name&#39;, name: &#39;name&#39;, trim: false), string(defaultValue: &#39;&#39;, description: &#39;Your age&#39;, name: &#39;age&#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;quot;no data from approver&amp;quot; } }  API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
+script { def approver = input id: &#39;approveId&#39;, message: &#39;need your approve&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;Your name&#39;, name: &#39;name&#39;, trim: false), string(defaultValue: &#39;&#39;, description: &#39;Your age&#39;, name: &#39;age&#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;quot;no data from approver&amp;quot; } } API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
     </item>
     
     <item>
       <title>Embeddable Build Status</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</link>
       <pubDate>Fri, 29 Mar 2019 10:22:52 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/embeddable-build-status/</guid>
       <description>Embeddable Build Status 可以让你在其他的页面中显示的你的项目构建状态。</description>
     </item>
     
     <item>
       <title>孤儿插件</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/adopt/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/adopt/</link>
       <pubDate>Wed, 27 Mar 2019 10:39:37 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/adopt/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/adopt/</guid>
       <description>Jenkins 有众多的插件，但由于各种原因，有些插件的作者不再维护。如果你对这一类插件感兴趣，希望能继续维护下去的话，可以去认领。
 需要被认领的插件.</description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/github/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</link>
       <pubDate>Tue, 08 Jan 2019 21:48:43 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/github/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/github/</guid>
       <description>webhook 该插件提供的默认 webhook 地址为：http://localhost/github-webhook/。
 同时，也提供修改该地址的配置。
 我们需要在 GitHub 的 webhook 设置页面添加，Content type 要选择 application/json
@@ -74,10 +71,10 @@ script { def approver = input id: &#39;approveId&#39;, message: &#39;need your a
     
     <item>
       <title>钉钉通知</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</link>
       <pubDate>Tue, 08 Jan 2019 11:08:06 +0800</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
       <description>支持的特性包括：
  发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
 机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
@@ -90,19 +87,19 @@ dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl:
     
     <item>
       <title>Configuration as Code</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/configuration-as-code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jenkins Kubernetes Plugin</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/kubernetes/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
       <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。
 预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。
 Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。
@@ -117,40 +114,40 @@ JNLP 的基本原理。
     
     <item>
       <title>Jenkins SSH Agent</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/ssh-slaves/</guid>
       <description>在 Jenkins 插件安装界面搜索 ssh-slaves。该方式会通过 ssh 协议来进行通信。</description>
     </item>
     
     <item>
       <title>Jenkins 主题插件</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
       <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
  从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
     </item>
     
     <item>
       <title>Jenkins 流水线插件</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
-      <description> 流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
+      <description>流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
 安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
   结构  /codes/jenkinsfile/simple.groovy   pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
     </item>
     
     <item>
       <title>Jenkins 简体中文插件</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
       <description>Jenkins 的汉化（简体中文）需要安装中文插件。
 具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
 这里有一个视频可以供各位参考。
@@ -159,10 +156,10 @@ JNLP 的基本原理。
     
     <item>
       <title>Jira</title>
-      <link>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/jira/</link>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/jenkins/jenkins-plugin/jira/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/jira/</guid>
       <description>Jira 插件 是 Jira 和 Jenkins 集成的一个插件。在系统配置中，添加 Jira 的配置后，如果在 git 提交日志中包含了 Jira ID 的话，就可以在构建的变更记录中直接点击进入到 Jira 对应到页面。</description>
     </item>
     

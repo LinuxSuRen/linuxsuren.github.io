@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据库 on SuRenPi</title>
-    <link>http://surenpi.com/blog/other/database/</link>
+    <link>https://linuxsuren.github.io/blog/other/database/</link>
     <description>Recent content in 数据库 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    
-	<atom:link href="http://surenpi.com/blog/other/database/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-CN</language><atom:link href="https://linuxsuren.github.io/blog/other/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Postgres</title>
-      <link>http://surenpi.com/blog/other/database/postgres/</link>
+      <link>https://linuxsuren.github.io/blog/other/database/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/other/database/postgres/</guid>
+      <guid>https://linuxsuren.github.io/blog/other/database/postgres/</guid>
       <description>安装 helm install --namespace default stable/postgresql --name postgre
 docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=&amp;quot;{.data.postgresql-password}&amp;quot; | base64 --decode)
@@ -25,7 +21,7 @@ docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecr
 查询当前数据库中的表 dt
 选择数据库 \c postgres;
 备份和恢复 pg_dump -U [postgres-user] [database-name] &amp;gt; database.sql
-cat database.</description>
+cat database.sql | psql -U [postgres-user] -d [database-name]</description>
     </item>
     
   </channel>

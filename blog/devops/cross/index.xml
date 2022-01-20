@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General topic About DevOps on SuRenPi</title>
-    <link>http://surenpi.com/blog/devops/cross/</link>
+    <link>https://linuxsuren.github.io/blog/devops/cross/</link>
     <description>Recent content in General topic About DevOps on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    
-	<atom:link href="http://surenpi.com/blog/devops/cross/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-CN</language><atom:link href="https://linuxsuren.github.io/blog/devops/cross/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CICD tools overview</title>
-      <link>http://surenpi.com/blog/devops/cross/cicd/</link>
+      <link>https://linuxsuren.github.io/blog/devops/cross/cicd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/devops/cross/cicd/</guid>
+      <guid>https://linuxsuren.github.io/blog/devops/cross/cicd/</guid>
       <description>Name Description     Jenkins Jenkins automation server   Tekton A K8s-native Pipeline resource   drone Drone is a Container-Native, Continuous Delivery Platform   JX Jenkins X provides automated CI+CD for Kubernetes with Preview Environments on Pull Requests using Tekton, Knative, Prow, Skaffold and Helm    Fundation CD Fundation is a Neutral Home for the Next Generation of Continuous Delivery Collaboration</description>
     </item>
     

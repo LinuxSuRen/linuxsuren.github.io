@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git 相关的翻译 on SuRenPi</title>
-    <link>http://surenpi.com/translation/git/</link>
+    <link>https://linuxsuren.github.io/translation/git/</link>
     <description>Recent content in Git 相关的翻译 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/translation/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/translation/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>请把 .gitattributes 添加到你的 Git 仓库中</title>
-      <link>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</link>
+      <link>https://linuxsuren.github.io/translation/git/please-add-gitattributes-to-your-git-repository/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/translation/git/please-add-gitattributes-to-your-git-repository/</guid>
+      <guid>https://linuxsuren.github.io/translation/git/please-add-gitattributes-to-your-git-repository/</guid>
       <description>什么是 .gitattributes ？ 当执行 git 动作时，.gitattributes 文件允许你指定由 git 使用的文件和路径的属性，例如：git commit 等。
 换句话说，每当有文件保存或者创建时，git 会根据指定的属性来自动地保存。
 其中的一个属性是 eol(end of line)，用于配置文件的结尾。本文将会深入了解如何配置文件的结尾行，这样的话，即使在不同的机器、操作系统 上都可以使得每个开发者都可以使用相同的值。
@@ -24,9 +20,10 @@
 正如上面提到的，开发者使用不同的操作系统，默认的文件结尾行就会不同。在 Windows 上默认的是回车换行（Carriage Return Line Feed, CRLF），然而，在 Linux/MacOS 上则是换行（Line Feed, LF）。
 从表面看起来，内容都是一样的，那我们为什么还会困扰呢？??
 好的，如果你启用了该功能，并设置属性 endOfLine 为 lf 的话。
-{ &amp;quot;endOfLine&amp;quot;: &amp;quot;lf&amp;quot; }  在 Windows 上，开发者会看到如下的检查警告。
+{ &amp;quot;endOfLine&amp;quot;: &amp;quot;lf&amp;quot; } 在 Windows 上，开发者会看到如下的检查警告。
 这时候 .gitattributes 就可以派上用场了 🦸！
-新仓库 首先，在仓库的根目录下创建名为 .gitattributes 的文件。</description>
+新仓库 首先，在仓库的根目录下创建名为 .gitattributes 的文件。
+下面，是一份 .</description>
     </item>
     
   </channel>

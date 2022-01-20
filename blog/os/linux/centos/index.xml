@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CentOS on SuRenPi</title>
-    <link>http://surenpi.com/blog/os/linux/centos/</link>
+    <link>https://linuxsuren.github.io/blog/os/linux/centos/</link>
     <description>Recent content in CentOS on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    
-	<atom:link href="http://surenpi.com/blog/os/linux/centos/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-CN</language><atom:link href="https://linuxsuren.github.io/blog/os/linux/centos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firewall</title>
-      <link>http://surenpi.com/blog/os/linux/centos/firewall/</link>
+      <link>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/blog/os/linux/centos/firewall/</guid>
+      <guid>https://linuxsuren.github.io/blog/os/linux/centos/firewall/</guid>
       <description>systemctl stop firewalld.service 停止firewall
 systemctl disable firewalld.service 禁止firewall开机启动</description>
     </item>

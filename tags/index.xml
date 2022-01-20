@@ -1,94 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on SuRenPi</title>
-    <link>http://surenpi.com/tags/</link>
+    <link>https://linuxsuren.github.io/tags/</link>
     <description>Recent content in Tags on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://surenpi.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Agent</title>
-      <link>http://surenpi.com/tags/agent/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/tags/agent/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>http://surenpi.com/tags/docker/</link>
+      <link>https://linuxsuren.github.io/tags/docker/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/docker/</guid>
+      <guid>https://linuxsuren.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Helm</title>
-      <link>http://surenpi.com/tags/helm/</link>
+      <link>https://linuxsuren.github.io/tags/helm/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/helm/</guid>
+      <guid>https://linuxsuren.github.io/tags/helm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jenkins</title>
-      <link>http://surenpi.com/tags/jenkins/</link>
+      <link>https://linuxsuren.github.io/tags/jenkins/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/jenkins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>K8s</title>
-      <link>http://surenpi.com/tags/k8s/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://surenpi.com/tags/k8s/</guid>
+      <guid>https://linuxsuren.github.io/tags/jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>http://surenpi.com/tags/kubernetes/</link>
+      <link>https://linuxsuren.github.io/tags/kubernetes/</link>
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/kubernetes/</guid>
+      <guid>https://linuxsuren.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agent</title>
+      <link>https://linuxsuren.github.io/tags/agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/agent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://linuxsuren.github.io/tags/k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pipeline</title>
-      <link>http://surenpi.com/tags/pipeline/</link>
+      <link>https://linuxsuren.github.io/tags/pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/pipeline/</guid>
+      <guid>https://linuxsuren.github.io/tags/pipeline/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Plugin</title>
-      <link>http://surenpi.com/tags/plugin/</link>
+      <title>plugin</title>
+      <link>https://linuxsuren.github.io/tags/plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/plugin/</guid>
+      <guid>https://linuxsuren.github.io/tags/plugin/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ssh</title>
-      <link>http://surenpi.com/tags/ssh/</link>
+      <title>ssh</title>
+      <link>https://linuxsuren.github.io/tags/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://surenpi.com/tags/ssh/</guid>
+      <guid>https://linuxsuren.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
