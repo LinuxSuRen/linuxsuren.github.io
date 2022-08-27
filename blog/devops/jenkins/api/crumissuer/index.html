@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -227,12 +237,12 @@ var trackOutboundLink = function(id, url) {
 <p>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token</p>
 <p><code>curl -u user:passwd  http:/localhost:8080/jenkins/crumbIssuer/api/json</code></p>
 <p>返回值类似于，而如果没有启用该配置的话会返回 <code>404</code></p>
-<pre tabindex="0"><code>{&quot;_class&quot;:&quot;hudson.security.csrf.DefaultCrumbIssuer&quot;,&quot;crumb&quot;:&quot;6e78c5725ea0c522bdcb787d548465aa&quot;,&quot;crumbRequestField&quot;:&quot;Jenkins-Crumb&quot;}
+<pre tabindex="0"><code>{&#34;_class&#34;:&#34;hudson.security.csrf.DefaultCrumbIssuer&#34;,&#34;crumb&#34;:&#34;6e78c5725ea0c522bdcb787d548465aa&#34;,&#34;crumbRequestField&#34;:&#34;Jenkins-Crumb&#34;}
 </code></pre><p>使用该 Crumb 的方式如下：</p>
 <p><code>curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&quot;</code></p>
 <p>使用 Python 获取 Crumb 值：</p>
 <pre tabindex="0"><code>export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s)
-issuer=$(python -c &quot;import json;import os;issuer=os.getenv('issuer');issuer=json.loads(issuer);print issuer['crumb']&quot;)
+issuer=$(python -c &#34;import json;import os;issuer=os.getenv(&#39;issuer&#39;);issuer=json.loads(issuer);print issuer[&#39;crumb&#39;]&#34;)
 </code></pre>
 </div>
 
@@ -556,6 +566,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

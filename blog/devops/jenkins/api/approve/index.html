@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -244,20 +254,20 @@ var trackOutboundLink = function(id, url) {
 <h2 id="无参数">无参数</h2>
 <p>对于没有参数的情况，可以使用下面的两个 API 来核准。</p>
 <pre tabindex="0"><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \
---header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
+--header &#34;Authorization: Basic `echo -n admin:token | base64`&#34; -X POST
 </code></pre><p>下面的 API 是直接无参数的调用</p>
 <pre tabindex="0"><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \
---header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
+--header &#34;Authorization: Basic `echo -n admin:token | base64`&#34; -X POST
 </code></pre><h2 id="有参数">有参数</h2>
 <p>参数需要以 JSON 数组的形式传递。</p>
 <pre tabindex="0"><code>curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \
---header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; \
--X POST -d 'json={&quot;parameter&quot;: [{&quot;name&quot;: &quot;name&quot;, &quot;value&quot;: &quot;bob&quot;}, {&quot;name&quot;: &quot;age&quot;, &quot;value&quot;: &quot;12&quot;}]}'
+--header &#34;Authorization: Basic `echo -n admin:token | base64`&#34; \
+-X POST -d &#39;json={&#34;parameter&#34;: [{&#34;name&#34;: &#34;name&#34;, &#34;value&#34;: &#34;bob&#34;}, {&#34;name&#34;: &#34;age&#34;, &#34;value&#34;: &#34;12&#34;}]}&#39;
 </code></pre><p>如果缺少参数的话，会返回 <code>400</code></p>
 <h1 id="拒绝">拒绝</h1>
 <p>拒绝执行，可以调用下面的 API</p>
 <pre tabindex="0"><code>curl http://localhost:8080/job/pipeline/1/input/inputid/abort \
---header &quot;Authorization: Basic `echo -n admin:token | base64`&quot; -X POST
+--header &#34;Authorization: Basic `echo -n admin:token | base64`&#34; -X POST
 </code></pre>
 </div>
 
@@ -592,6 +602,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

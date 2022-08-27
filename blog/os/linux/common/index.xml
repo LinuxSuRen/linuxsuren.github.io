@@ -14,7 +14,7 @@
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/bash/</guid>
       <description>字符串 替换 echo &amp;quot;ab/c/df&amp;quot; | sed &#39;s/\//-/g&#39;
-参数    变量 说明 示例     $# 参数个数    $0 当前脚本文件名    $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2    $_ 上一条名称的最后一个参数 mkdir temp    命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
+参数 变量 说明 示例 $# 参数个数 $0 当前脚本文件名 $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2 $_ 上一条名称的最后一个参数 mkdir temp 命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
 目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d
 循环 for i in {1..5} do echo $i done </description>
     </item>
@@ -36,8 +36,8 @@
       <guid>https://linuxsuren.github.io/blog/os/linux/common/sort/</guid>
       <description>文件列表排序 使用降序对当前目录中的文件（夹）进行排序 ls | sort -r
 版本号 我们可以借助 sort 命令对版本号进行排序，只需要使用参数 -V 即可，下面的参数 -r 是降序的意思
-echo &amp;quot;2.0 10.0 3.0&amp;quot; | sort -Vr 从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
-echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V </description>
+echo &amp;#34;2.0 10.0 3.0&amp;#34; | sort -Vr 从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
+echo &amp;#34;v2.0 v10.0 v3.0&amp;#34; | sort -V </description>
     </item>
     
     <item>
@@ -128,11 +128,11 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
       <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
 curl -H &amp;quot;Content-Type:application/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
-curl --header &amp;quot;Authorization: Bearer $token&amp;quot; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;quot;Content-Type:application/json&amp;quot; --data &#39;{&amp;quot;url&amp;quot;:&amp;quot;alauda/cronTabCheck?cronText=sdf&amp;quot;}&#39; 管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl --header &amp;#34;Authorization: Bearer $token&amp;#34; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;#34;Content-Type:application/json&amp;#34; --data &amp;#39;{&amp;#34;url&amp;#34;:&amp;#34;alauda/cronTabCheck?cronText=sdf&amp;#34;}&amp;#39; 管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
 curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;chart=@jenkins-x-platform-0.0.1607.tgz&amp;quot;
 状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
 输出格式 支持的变量包括：
- content_type filename_effective http_code http_connect http_version  代理 curl 默认会从环境变量中获取代理配置信息，但如果给定了参数 --proxy 的话，就会使用参数中给定的。</description>
+content_type filename_effective http_code http_connect http_version 代理 curl 默认会从环境变量中获取代理配置信息，但如果给定了参数 --proxy 的话，就会使用参数中给定的。</description>
     </item>
     
     <item>
@@ -216,7 +216,7 @@ hkp://keyserver.ubuntu.com</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
-      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac </description>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;#34;start&amp;#34; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;#34;stop&amp;#34; ;; *) echo &amp;#34;Usage: $0 (start|stop)&amp;#34; ;; esac </description>
     </item>
     
     <item>
@@ -225,7 +225,7 @@ hkp://keyserver.ubuntu.com</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/mkfifo/</guid>
-      <description>nc -lkv localhost 9090 -c &amp;lsquo;tee /dev/stderr | nc -v baidu.com 80 | tee /dev/stderr&amp;rsquo;</description>
+      <description>nc -lkv localhost 9090 -c &amp;rsquo;tee /dev/stderr | nc -v baidu.com 80 | tee /dev/stderr&#39;</description>
     </item>
     
     <item>
@@ -262,9 +262,9 @@ hkp://keyserver.ubuntu.com</description>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
       <description>执行最近的命令 有几种方法可以快速地执行最近执行过的命令：
- !! 或者 !-1 执行上一个命令 !u 执行上一个以 u 开头的命令 Ctrl+R 搜索命令 Ctrl+P Ctrl+O  下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+!! 或者 !-1 执行上一个命令 !u 执行上一个以 u 开头的命令 Ctrl+R 搜索命令 Ctrl+P Ctrl+O 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi 脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径</description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存在 if [ ! -f &amp;#34;env.sh&amp;#34; ]; then echo &amp;#34;we need the env.sh to setup vars&amp;#34; exit -1 else echo &amp;#34;file exists&amp;#34; fi if [ ! -d &amp;#34;env.sh&amp;#34; ]; then echo &amp;#34;we need the env.sh to setup vars&amp;#34; exit -1 else echo &amp;#34;file exists&amp;#34; fi 脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径</description>
     </item>
     
     <item>
@@ -274,8 +274,8 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell-example/</guid>
       <description>输出文件制定行 Solution 1
-num=0 head -n 10 file.txt | while read line; do if [ &amp;quot;$num&amp;quot; == &amp;quot;9&amp;quot; ]; then echo $line; break; fi; num=$((num+1)); done Solution 2
-awk &#39;NR==10&#39; file.txt </description>
+num=0 head -n 10 file.txt | while read line; do if [ &amp;#34;$num&amp;#34; == &amp;#34;9&amp;#34; ]; then echo $line; break; fi; num=$((num+1)); done Solution 2
+awk &amp;#39;NR==10&amp;#39; file.txt </description>
     </item>
     
     <item>
@@ -307,9 +307,9 @@ PermitRootLogin no
       <guid>https://linuxsuren.github.io/blog/os/linux/common/ssh/</guid>
       <description>配置文件 vim /etc/ssh/sshd_config
 允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
-无密码登录   在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
-  在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
-  或者，在需要无密码登录的机器上执行：ssh-copy-id user@ip
+无密码登录 在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
+在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
+或者，在需要无密码登录的机器上执行：ssh-copy-id user@ip
 证书登陆 ssh -i test.pem root@localhost
 服务重启 service ssh restart
 密码传递 我们可以通过 sshpass 给 ssh 传递密码，下面给出一个例子：
@@ -377,8 +377,8 @@ sudo xx is not in the sudoers file.
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
 递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载
 HSTS wget http://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-darwin-amd64.tar.gz --no-hsts
-选项分类列表  启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
- 记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
+选项分类列表 启动 -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
+记录和输入文件 -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
     </item>
     
     <item>
@@ -422,7 +422,7 @@ export PS1=&#39;[/u@/h /W/]/$ &#39;
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/determine-version/</guid>
       <description>Ubuntu lsb_release -a
- cat /etc/redhat-release
+cat /etc/redhat-release
 cat /proc/version
 cat /etc/issue</description>
     </item>

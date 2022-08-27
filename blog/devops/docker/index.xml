@@ -14,7 +14,7 @@
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-build-tools-landscape/</guid>
       <description>There&amp;rsquo;re many tools could help us to build docker image.
-   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes   ko Build and deploy Go applications on Kubernetes   s2i A tool for building artifacts from source and injecting into container images   makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.</description>
+Name Description makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes. kaniko Build Container Images In Kubernetes ko Build and deploy Go applications on Kubernetes s2i A tool for building artifacts from source and injecting into container images makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.</description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@ Docker Version vs API Version</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
       <description>vim /etc/docker/daemon.json
-{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] } 或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
+{ &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://mirror.gcr.io&amp;#34;] } 或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
 或者，在文件 /etc/default/docker 中添加如下配置：
 DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
     </item>
@@ -71,7 +71,7 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/multi-stage/</guid>
       <description>We can build our application in Dockerfile. But we don&amp;rsquo;t want the whole thing in our final docker image. Docker multi-stage technology could help us the reduce the size.
-FROMgolang:1.12 AS builderWORKDIR/workRUN git clone https://github.com/devops-ws/learn-pipeline-go &amp;amp;&amp;amp; \  cd learn-pipeline-go &amp;amp;&amp;amp; go build -o go-serverRUN ls -halFROMalpine:3.10COPY --from=builder /work/learn-pipeline-go/go-server .CMD [&amp;#39;go-server&amp;#39;]After built this: docker build . -t go-server
+FROM golang:1.12 AS builder WORKDIR /work RUN git clone https://github.com/devops-ws/learn-pipeline-go &amp;amp;&amp;amp; \ cd learn-pipeline-go &amp;amp;&amp;amp; go build -o go-server RUN ls -hal FROM alpine:3.10 COPY --from=builder /work/learn-pipeline-go/go-server . CMD [&amp;#39;go-server&amp;#39;] After built this: docker build . -t go-server
 then we can test it: docker run go-server</description>
     </item>
     
@@ -82,7 +82,33 @@ then we can test it: docker run go-server</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
       <description>Filter Images 当前支持的过滤如下：
- dangling（布尔值，true 或 false） label（label=或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+dangling（布尔值，true 或 false） label（label= 或 label== 删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker 基础镜像</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-base/</guid>
+      <description>通常情况下，我们自己的镜像都会依赖于某个基础镜像。下面，是我总结的一些基础镜像。
+Alpine alpine 是一个非常轻量级的 Docker 镜像，大概只有 5.55MB 的大小。它包含一些比较常用的 Linux 命令。
+bash 是很多人使用的 shell，但是，默认（sh）情况下，alpine 并不包含 bash。 如果我们直接在 alpine 中执行 bash 命令的话，可能会报一些貌似没有道理的错误。其实， 你只要在 Dockerfile 中安装一下 bash 即可，下面给出一个示例：
+FROM alpine:latest RUN apk add bash </description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像管理</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
+      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune
+修改 Docker 镜像可以和 Git 一样，进行修改，然后重新推送回去。
+首先，运行一个镜像 docker run -it demo:v1.0 bash
+然后，通过名称等方式获取对应容器的 ID docker ps | grep demo:v1.0
+在之前的容器中，做一些修改，例如：添加一个文件 touch demo
+最后，把修改提交 docker commit -m &#39;fix something&#39; f6591bcdce2c demo:v1.0。如果有需要的话，可以再把修改后的镜像推送回去 docker push demo:v1.0</description>
     </item>
     
     <item>
@@ -110,18 +136,6 @@ find /var/lib/docker/containers/ -type f -name &amp;quot;*.log&amp;quot; -delete
     </item>
     
     <item>
-      <title>Docker 基础镜像</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-base/</guid>
-      <description>通常情况下，我们自己的镜像都会依赖于某个基础镜像。下面，是我总结的一些基础镜像。
-Alpine alpine 是一个非常轻量级的 Docker 镜像，大概只有 5.55MB 的大小。它包含一些比较常用的 Linux 命令。
-bash 是很多人使用的 shell，但是，默认（sh）情况下，alpine 并不包含 bash。 如果我们直接在 alpine 中执行 bash 命令的话，可能会报一些貌似没有道理的错误。其实， 你只要在 Dockerfile 中安装一下 bash 即可，下面给出一个示例：
-FROM alpine:latest RUN apk add bash </description>
-    </item>
-    
-    <item>
       <title>Docker 时间设置</title>
       <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -130,20 +144,6 @@ FROM alpine:latest RUN apk add bash </description>
       <description>通过如下配置，就可以实现对容器内的时区设置：
 ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
 docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
-    </item>
-    
-    <item>
-      <title>Docker 镜像管理</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
-      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune
-修改 Docker 镜像可以和 Git 一样，进行修改，然后重新推送回去。
-首先，运行一个镜像 docker run -it demo:v1.0 bash
-然后，通过名称等方式获取对应容器的 ID docker ps | grep demo:v1.0
-在之前的容器中，做一些修改，例如：添加一个文件 touch demo
-最后，把修改提交 docker commit -m &#39;fix something&#39; f6591bcdce2c demo:v1.0。如果有需要的话，可以再把修改后的镜像推送回去 docker push demo:v1.0</description>
     </item>
     
     <item>
@@ -165,6 +165,15 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
     </item>
     
     <item>
+      <title>How to build a multi-arch docker image</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/multi-arch-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/multi-arch-image/</guid>
+      <description>Install multi-arch binary files in one Dockerfile FROM ubuntu RUN ARCH= &amp;amp;&amp;amp; ARCH_ALIAS= &amp;amp;&amp;amp; dpkgArch=&amp;#34;$(dpkg --print-architecture)&amp;#34; \ &amp;amp;&amp;amp; case &amp;#34;${dpkgArch##*-}&amp;#34; in \ amd64) ARCH=&amp;#39;amd64&amp;#39;;; \ ppc64el) ARCH=&amp;#39;ppc64le&amp;#39;;; \ s390x) ARCH=&amp;#39;s390x&amp;#39;;; \ arm64) ARCH=&amp;#39;arm64&amp;#39;;; \ armhf) ARCH=&amp;#39;armv7l&amp;#39;;; \ i386) ARCH=&amp;#39;x86&amp;#39;;; \ *) echo &amp;#34;unsupported architecture&amp;#34;; exit 1 ;; \ esac &amp;amp;&amp;amp; \ apt-get update &amp;amp;&amp;amp; apt-get install wget -y &amp;amp;&amp;amp; \ wget https://cdn.jsdelivr.net/gh/jenkins-zh/jcli-repo/jcli-linux-$ARCH.tar.gz &amp;amp;&amp;amp; \ tar xzvf jcli-linux-$ARCH.tar.gz &amp;amp;&amp;amp; rm -rf jcli-linux-$ARCH.</description>
+    </item>
+    
+    <item>
       <title>Install Docker</title>
       <link>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -172,6 +181,22 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/</guid>
       <description>查看可用的版本 apt-cache madison docker-ce
 安装指定版本 apt-get install docker-ce=17.12.0~ce-0~ubuntu</description>
+    </item>
+    
+    <item>
+      <title>配置</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
+      <description>代理 给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置
+mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;#34;HTTP_PROXY=http://your.proxy:8080&amp;#34; Environment=&amp;#34;HTTPS_PROXY=http://your.proxy:8080&amp;#34; Environment=&amp;#34;NO_PROXY=127.0.0.1,localhost&amp;#34; EOF systemctl daemon-reload systemctl restart docker 运行时代理 { &amp;#34;HttpHeaders&amp;#34;: { &amp;#34;User-Agent&amp;#34;: &amp;#34;Docker-Client/19.03.4 (linux)&amp;#34; }, &amp;#34;proxies&amp;#34;: { &amp;#34;default&amp;#34;: { &amp;#34;httpProxy&amp;#34;: &amp;#34;http://172.17.212.62:3128&amp;#34;, &amp;#34;httpsProxy&amp;#34;: &amp;#34;http://172.17.212.62:3128&amp;#34;, &amp;#34;noProxy&amp;#34;: &amp;#34;127.0.0.1,localhost,172.17.212.63&amp;#34; } } } Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000 vim /etc/docker/daemon.json
+&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
+Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
+DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
+User 让普通用户可以执行 docker
+sudo groupadd docker</description>
     </item>
     
     <item>
@@ -184,22 +209,6 @@ CMD CMD 为 Docker 镜像在运行时的执行入口，例如：CMD [&amp;quot;e
 yum install -y yum-utils \ device-mapper-persistent-data \ lvm2 添加库
 yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo 查看版本 yum list docker-ce --showduplicates | sort -r
 安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
-    </item>
-    
-    <item>
-      <title>配置</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-config/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
-      <description>代理 给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置
-mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;quot;HTTP_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;HTTPS_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;NO_PROXY=127.0.0.1,localhost&amp;quot; EOF systemctl daemon-reload systemctl restart docker 运行时代理 { &amp;quot;HttpHeaders&amp;quot;: { &amp;quot;User-Agent&amp;quot;: &amp;quot;Docker-Client/19.03.4 (linux)&amp;quot; }, &amp;quot;proxies&amp;quot;: { &amp;quot;default&amp;quot;: { &amp;quot;httpProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;httpsProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;noProxy&amp;quot;: &amp;quot;127.0.0.1,localhost,172.17.212.63&amp;quot; } } } Insecure vim /etc/systemd/system/docker.service.d/docker.conf
-[Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000 vim /etc/docker/daemon.json
-&amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
-Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
-DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
-User 让普通用户可以执行 docker
-sudo groupadd docker</description>
     </item>
     
   </channel>

@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -123,6 +123,16 @@ var trackOutboundLink = function(id, url) {
           </a>
         </li>
       
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
+              
+            
+            
+          </a>
+        </li>
+      
     </ul>
 
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
@@ -193,11 +203,15 @@ var trackOutboundLink = function(id, url) {
 		</a>
 
 		
-			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-centos/" class="dib f6 pl1 hover-bg-light-gray br-100" title="在 CentOS 安装 Docker ">
+			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-ubuntu-install/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Install Docker ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
 			</a>
 		
 
+		
+			<a href="https://linuxsuren.github.io/blog/devops/docker/docker-centos/" class="dib f6 pr1 hover-bg-light-gray br-100" title="在 CentOS 安装 Docker">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+			</a>
 		
 	</div>
 
@@ -234,22 +248,22 @@ var trackOutboundLink = function(id, url) {
 <pre tabindex="0"><code>mkdir -p /etc/systemd/system/docker.service.d
 cat &gt; /etc/systemd/system/docker.service.d/http-proxy.conf &lt;&lt; EOF
 [Service]
-Environment=&quot;HTTP_PROXY=http://your.proxy:8080&quot;
-Environment=&quot;HTTPS_PROXY=http://your.proxy:8080&quot;
-Environment=&quot;NO_PROXY=127.0.0.1,localhost&quot;
+Environment=&#34;HTTP_PROXY=http://your.proxy:8080&#34;
+Environment=&#34;HTTPS_PROXY=http://your.proxy:8080&#34;
+Environment=&#34;NO_PROXY=127.0.0.1,localhost&#34;
 EOF
 systemctl daemon-reload
 systemctl restart docker
 </code></pre><h2 id="运行时代理">运行时代理</h2>
 <pre tabindex="0"><code>{
-        &quot;HttpHeaders&quot;: {
-                &quot;User-Agent&quot;: &quot;Docker-Client/19.03.4 (linux)&quot;
+        &#34;HttpHeaders&#34;: {
+                &#34;User-Agent&#34;: &#34;Docker-Client/19.03.4 (linux)&#34;
         },
-        &quot;proxies&quot;: {
-                &quot;default&quot;: {
-                        &quot;httpProxy&quot;: &quot;http://172.17.212.62:3128&quot;,
-                        &quot;httpsProxy&quot;: &quot;http://172.17.212.62:3128&quot;,
-                        &quot;noProxy&quot;: &quot;127.0.0.1,localhost,172.17.212.63&quot;
+        &#34;proxies&#34;: {
+                &#34;default&#34;: {
+                        &#34;httpProxy&#34;: &#34;http://172.17.212.62:3128&#34;,
+                        &#34;httpsProxy&#34;: &#34;http://172.17.212.62:3128&#34;,
+                        &#34;noProxy&#34;: &#34;127.0.0.1,localhost,172.17.212.63&#34;
                 }
         }
 }
@@ -270,12 +284,12 @@ ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000
 <h2 id="并发下载推送镜像">并发下载（推送）镜像</h2>
 <p>下面的示例中给出了如何设置（<code>/etc/docker/daemon.json</code>）并发下载或者推送镜像层的配置：</p>
 <pre tabindex="0"><code>{
-	&quot;max-concurrent-uploads&quot;: 20,
-	&quot;max-concurrent-downloads&quot;: 20,
-	&quot;registry-mirrors&quot;: [
-		&quot;https://qtzsrp4m.mirror.aliyuncs.com&quot;,
-		&quot;https://hub-mirror.c.163.com&quot;,
-		&quot;https://mirror.baidubce.com&quot;
+	&#34;max-concurrent-uploads&#34;: 20,
+	&#34;max-concurrent-downloads&#34;: 20,
+	&#34;registry-mirrors&#34;: [
+		&#34;https://qtzsrp4m.mirror.aliyuncs.com&#34;,
+		&#34;https://hub-mirror.c.163.com&#34;,
+		&#34;https://mirror.baidubce.com&#34;
 	]
 }
 </code></pre><h2 id="重启服务">重启服务</h2>
@@ -603,6 +617,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

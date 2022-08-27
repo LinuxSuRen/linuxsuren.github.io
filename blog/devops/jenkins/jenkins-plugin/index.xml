@@ -21,7 +21,7 @@
 -Dcom.cloudbees.hudson.plugins.folder.computed.ThrottleComputationQueueTaskDispatcher.LIMIT=12
 要注意的是，插件会选择上面的限制值和当前系统的核心数中的较小值。
 Webhook 多分支流水线，可以自动添加 webhook 到 git 服务上，并基于 webhook 推送的事件负责分支流水线的生命流程管理。下面，是部分 git 服务中 所对应的 webhook 地址：
-   git 服务 地址 ContentType 限制     Bitbucket http://localhost:8080/jenkins/bitbucket-scmsource-hook/notify  每个仓库最多有50个 ｜   Gitlab http://localhost:8080/jenkins/gitlab-webhook/post application/json ｜   GitHub http://localhost:8080/jenkins/github-webhook/ application/json ｜    Jenkins 中的多分支流水线删除后，也会同时删除 Bitbucket 中的 webhook 记录，但是 GitHub 不会。
+git 服务 地址 ContentType 限制 Bitbucket http://localhost:8080/jenkins/bitbucket-scmsource-hook/notify 每个仓库最多有50个 ｜ Gitlab http://localhost:8080/jenkins/gitlab-webhook/post application/json ｜ GitHub http://localhost:8080/jenkins/github-webhook/ application/json ｜ Jenkins 中的多分支流水线删除后，也会同时删除 Bitbucket 中的 webhook 记录，但是 GitHub 不会。
 缺点 对于 PR 的动态发现，目前只有 GitHub、Gitlab 和 Bitbucket 支持。</description>
     </item>
     
@@ -35,7 +35,7 @@ Webhook 多分支流水线，可以自动添加 webhook 到 git 服务上，并�
 源代码托管在 Jenkins 的官方仓库中。
 它提供的 DSL 语句为 input，执行到该语句的时候，需要人工决定“通过”或者“拒绝”。它还支持设置允许点击”通过“的人或者组，以及 确认该操作时输入一些参数。
 示例 在下面的例子中，通过的话会打印用户输入的参数 name 的值；如果拒绝的话，当前流水线会直接失败
-script { def approver = input id: &#39;approveId&#39;, message: &#39;need your approve&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;Your name&#39;, name: &#39;name&#39;, trim: false), string(defaultValue: &#39;&#39;, description: &#39;Your age&#39;, name: &#39;age&#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;quot;no data from approver&amp;quot; } } API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
+script { def approver = input id: &amp;#39;approveId&amp;#39;, message: &amp;#39;need your approve&amp;#39;, parameters: [string(defaultValue: &amp;#39;&amp;#39;, description: &amp;#39;Your name&amp;#39;, name: &amp;#39;name&amp;#39;, trim: false), string(defaultValue: &amp;#39;&amp;#39;, description: &amp;#39;Your age&amp;#39;, name: &amp;#39;age&amp;#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;#34;no data from approver&amp;#34; } } API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
     </item>
     
     <item>
@@ -76,13 +76,13 @@ script { def approver = input id: &#39;approveId&#39;, message: &#39;need your a
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
       <description>支持的特性包括：
- 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
+发送任务状态 发送文本类型的消息 安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
 机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
 自由风格 在 Jenkins 中新建自由风格任务
 在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。
 上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。
 流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：
-dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39;</description>
+dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39; </description>
     </item>
     
     <item>
@@ -122,13 +122,14 @@ JNLP 的基本原理。
     </item>
     
     <item>
-      <title>Jenkins 主题插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <title>Jenkins 简体中文插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
-      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
- 从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
+      <description>Jenkins 的汉化（简体中文）需要安装中文插件。
+具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
+这里有一个视频可以供各位参考。</description>
     </item>
     
     <item>
@@ -139,19 +140,17 @@ JNLP 的基本原理。
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
       <description>流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
 安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
-  结构  /codes/jenkinsfile/simple.groovy   pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+结构 /codes/jenkinsfile/simple.groovy pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件 计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
     </item>
     
     <item>
-      <title>Jenkins 简体中文插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</link>
+      <title>Jenkins 主题插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
-      <description>Jenkins 的汉化（简体中文）需要安装中文插件。
-具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
-这里有一个视频可以供各位参考。
-  </description>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
+从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
     </item>
     
     <item>

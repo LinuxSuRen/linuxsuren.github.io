@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -232,7 +242,7 @@ var trackOutboundLink = function(id, url) {
 <p><code>kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &gt; token</code></p>
 <p>上面的命令，我们从当前的命名空间（namespace）里默认的 <code>Secret</code> 中获取 <code>Token</code>，进行 <code>base64</code> 解密后保存为文件。</p>
 <p>然后，通过如下类似的命令即可访问到集群的 API：</p>
-<pre tabindex="0"><code>curl -k  https://localhost:6443/api/v1/namespaces --header &quot;Authorization: Bearer `cat token`&quot;
+<pre tabindex="0"><code>curl -k  https://localhost:6443/api/v1/namespaces --header &#34;Authorization: Bearer `cat token`&#34;
 </code></pre><!-- raw HTML omitted -->
 <pre><code>&lt;/div&gt;
 
@@ -580,6 +590,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

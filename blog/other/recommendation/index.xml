@@ -17,13 +17,12 @@
     </item>
     
     <item>
-      <title>英语缩写</title>
+      <title>English Abbreviations</title>
       <link>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</link>
       <pubDate>Thu, 02 May 2019 21:21:49 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</guid>
-      <description>大部分的缩写可以用于写作和口语，下面标注了“写作”的通常只用于写作：
-          ASAP as soon as possible    RSVP please reply    RIP rest in peace    BYOB bring you own beer/booze    BBQ barbecue    PIN personal identity number    e.g. example 写作   i.e. that is, restate an idea    etc. et cetera, and so forth    ATM automatic teller machine     </description>
+      <description></description>
     </item>
     
     <item>
@@ -33,8 +32,8 @@
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/learning-english/</guid>
       <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
-网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
-   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time</description>
+网站 名称 梯子 备注 EngVid yes 有初中高不同等级的视频 视频 名称 梯子 备注 和 Emma 学英语 yes How to Talk Like a Native Speaker yes 字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
+名称 梯子 备注 BusinessDictionary no 商业相关的词汇 FreeDictionary no 丰富的词条、习语等 Google no 支持很多种语言 词汇 pharmaceutical condition engineer spare time</description>
     </item>
     
     <item>
@@ -43,7 +42,7 @@
       <pubDate>Mon, 15 Apr 2019 12:18:24 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/video/</guid>
-      <description>格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
+      <description>格式转换 这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
 https://youtubemp4.to/
 下载 我们可以通过一个命令行工具来从 Youtube 上下载视频，首先，使用 brew 来安装命令行：
 brew install youtube-dl

@@ -43,7 +43,7 @@ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
 安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
 通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
 修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {} </description>
+apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;#34;&amp;#34; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {} </description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@ apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http:
 kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
 上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
 然后，通过如下类似的命令即可访问到集群的 API：
-curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
+curl -k https://localhost:6443/api/v1/namespaces --header &amp;#34;Authorization: Bearer `cat token`&amp;#34; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; 需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
 Restful k8s.io/apiserver/pkg/registry/rest.NamedCreater POST 类的接口
 k8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口</description>
     </item>
@@ -73,7 +73,7 @@ k8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口</descripti
 Rewrite Ingress 支持地址重写，具体请查看参考。
 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
 这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
-ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot; HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
+ingress.kubernetes.io/proxy-body-size: &amp;#34;0&amp;#34; nginx.ingress.kubernetes.io/proxy-body-size: &amp;#34;0&amp;#34; nginx/client_max_body_size: &amp;#34;0&amp;#34; HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
 nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description>
     </item>
     
@@ -83,7 +83,7 @@ nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/k8s-landscape/</guid>
-      <description>   Name Description     microk8s MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge.    </description>
+      <description> Name Description microk8s MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge. </description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description
 API Server 公钥和私钥
 集群管理员公钥和私钥
 从节点公钥和私钥
-根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;quot;/CN=kube-ca&amp;quot; API Server 证书 创建 openssl.cnf
+根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;#34;/CN=kube-ca&amp;#34; API Server 证书 创建 openssl.cnf
 [req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4} openssl genrsa -out apiserver-key.</description>
     </item>
     

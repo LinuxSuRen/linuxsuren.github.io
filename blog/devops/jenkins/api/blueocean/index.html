@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -266,30 +276,30 @@ var trackOutboundLink = function(id, url) {
 <p><code>PASSED</code> 和 <code>SKIPPED</code> 则使用的字段为 <code>status</code></p>
 <p>上面的 API 返回的状态码可能会包括：400、404、200。当给出的状态值为非法时，例如：<code>status=abc</code> 就会返回 <code>400</code>。当该流水线中没有测试包括时会返回 <code>404</code>。错误时的响应体结构如下：</p>
 <pre tabindex="0"><code>{
-  &quot;message&quot; : &quot;bad state PASSED&quot;,
-  &quot;code&quot; : 400,
-  &quot;errors&quot; : [ ]
+  &#34;message&#34; : &#34;bad state PASSED&#34;,
+  &#34;code&#34; : 400,
+  &#34;errors&#34; : [ ]
 }
 </code></pre><h2 id="测试报告概览">测试报告概览</h2>
 <p><code>http://localhost:8080/blue/rest/organizations/jenkins/pipelines/folder/pipelines/pipelineName/runs/4/blueTestSummary/</code></p>
 <p>返回的 JSON 数据如下：</p>
 <pre tabindex="0"><code>{
-&quot;existingFailed&quot;: 0,
-&quot;failed&quot;: 0,
-&quot;fixed&quot;: 0,
-&quot;passed&quot;: 2,
-&quot;regressions&quot;: 0,
-&quot;skipped&quot;: 0,
-&quot;total&quot;: 2
+&#34;existingFailed&#34;: 0,
+&#34;failed&#34;: 0,
+&#34;fixed&#34;: 0,
+&#34;passed&#34;: 2,
+&#34;regressions&#34;: 0,
+&#34;skipped&#34;: 0,
+&#34;total&#34;: 2
 }
 </code></pre><h2 id="等待输入">等待输入</h2>
-<pre tabindex="0"><code>curl -v -u 'xxx:yyy' -H 'Jenkins-Crumb: 40b3007303bfde11c3da475d8cae91b4' -H 'Content-Type: application/json' -X POST http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/p31/runs/22/nodes/9/steps/12/ -d '{
-   &quot;id&quot; : &quot;23a650bfcb70a78700d7178183722292&quot;,
-   &quot;parameters&quot; : [{
-     &quot;name&quot; : &quot;branch&quot;,
-     &quot;value&quot; : &quot;master&quot;
+<pre tabindex="0"><code>curl -v -u &#39;xxx:yyy&#39; -H &#39;Jenkins-Crumb: 40b3007303bfde11c3da475d8cae91b4&#39; -H &#39;Content-Type: application/json&#39; -X POST http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/p31/runs/22/nodes/9/steps/12/ -d &#39;{
+   &#34;id&#34; : &#34;23a650bfcb70a78700d7178183722292&#34;,
+   &#34;parameters&#34; : [{
+     &#34;name&#34; : &#34;branch&#34;,
+     &#34;value&#34; : &#34;master&#34;
    }]
- }'
+ }&#39;
 </code></pre><p>更多来自 Blue Ocean 的 Restful API 请参考 <a href="https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest">https://github.com/jenkinsci/blueocean-plugin/tree/master/blueocean-rest</a></p>
 
 </div>
@@ -614,6 +624,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

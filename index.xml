@@ -6,7 +6,30 @@
     <description>Recent content in 开源的技术网站 on SuRenPi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://linuxsuren.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让我们一起了解开源</title>
+      <link>https://linuxsuren.github.io/speach/2022-08-open-source-world/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/speach/2022-08-open-source-world/</guid>
+      <description>class: center, middle
+让我们一起了解开源 .black[@LinuxSuRen]
+name: catalog class: center, middle
+大纲 .black[个人职业发展] &amp;ndash; count: false
+.black[企业与开源] &amp;ndash; count: false
+.black[开源是什么] &amp;ndash; count: false
+.black[开源在哪里] &amp;ndash; count: false
+.black[如何迈出第一步] &amp;ndash; count: false
+.black[深入了解] name: career class: left, middle .left-column[
+职业发展 困境 ]
+.right-column.panding[
+得不到充足的锻炼、成长 复杂的、高难度的任务始终交由经验丰富的人做 技术止于商业诉求 业务线生命周期短 可用优先，质量、性能按需分配 技术选型保守，迭代缓慢 基于职位的决策机制，缺少创新 谁拍板，谁负责，谁受益 人脉圈小，社交范围局限 以同学、（前）同事为主要社交圈 ] .footnote.left.black[目录] class: left, middle、 .left-column[
+职业发展 .gray[困境] 突破 ]
+.right-column.panding[
+跳出舒适区 有机会精益求精 持久深耕特定领域 结识不同领域的有志之士 ] name: company-open-source .</description>
+    </item>
+    
     <item>
       <title>流水线众生相之 Jenkins 对话 Tekton</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/pipeline-slide/</link>
@@ -15,13 +38,15 @@
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/pipeline-slide/</guid>
       <description>class: center, middle, inverse
 流水线众生相之 Jenkins 对话 Tekton
- class: inverse
+class: inverse
 About Me .left-column-eq[
- CDF Ambassador GSoC mentor Jenkins Press Contact in China Jenkins Chinese Localization ]  .right-column-eq[
- Jenkins CLI Jenkins Chinese Simplified Plugin Jenkins Distribution Formulas Wechat backend ]   class: inverse
+CDF Ambassador GSoC mentor Jenkins Press Contact in China Jenkins Chinese Localization ] .right-column-eq[
+Jenkins CLI Jenkins Chinese Simplified Plugin Jenkins Distribution Formulas Wechat backend ] class: inverse
 流水线 vs 手工 .left-column-eq[
- 易执行，可复用 代码 可视化 统计信息 review ]  .right-column-eq[
- 繁琐，易出错 文档 + 脚本 依赖个人 ]   class: inverse</description>
+易执行，可复用 代码 可视化 统计信息 review ] .right-column-eq[
+繁琐，易出错 文档 + 脚本 依赖个人 ] class: inverse
+相关产品 .left-column-eq[ .img-max-width-200[ ] .img-max-width-200[ ] .img-max-width-200[ ] ]
+.right-column-eq[ .</description>
     </item>
     
     <item>
@@ -31,26 +56,7 @@ About Me .left-column-eq[
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-build-tools-landscape/</guid>
       <description>There&amp;rsquo;re many tools could help us to build docker image.
-   Name Description     makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.   kaniko Build Container Images In Kubernetes   ko Build and deploy Go applications on Kubernetes   s2i A tool for building artifacts from source and injecting into container images   makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 事件监听</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
-      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
-      <description>   类型 接口 描述     监听队列事件 hudson.model.queue.QueueListener    任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件   任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件    </description>
-    </item>
-    
-    <item>
-      <title>Jenkins 系统属性配置</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</link>
-      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</guid>
-      <description>Jenkins 有很多不包含在 UI 中的配置，可以应对一些特殊情况：
-   Key Values     hudson.model.DownloadService.noSignatureCheck true   hudson.model.DirectoryBrowserSupport.CSP    hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID true   kubernetes.websocket.ping.interval 10000   org.jenkinsci.plugins.gitclient.Git.timeOut 60   -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION true    </description>
+Name Description makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes. kaniko Build Container Images In Kubernetes ko Build and deploy Go applications on Kubernetes s2i A tool for building artifacts from source and injecting into container images makisu Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes.</description>
     </item>
     
     <item>
@@ -69,6 +75,25 @@ JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y<
     </item>
     
     <item>
+      <title>Jenkins 事件监听</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description> 类型 接口 描述 监听队列事件 hudson.model.queue.QueueListener 任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件 任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件 </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 系统属性配置</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/system_var/</guid>
+      <description>Jenkins 有很多不包含在 UI 中的配置，可以应对一些特殊情况：
+Key Values hudson.model.DownloadService.noSignatureCheck true hudson.model.DirectoryBrowserSupport.CSP hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID true kubernetes.websocket.ping.interval 10000 org.jenkinsci.plugins.gitclient.Git.timeOut 60 -Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION true </description>
+    </item>
+    
+    <item>
       <title>多分支流水线</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/multi-branch-pipeline/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
@@ -82,7 +107,7 @@ JAVA_OPTS=-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y<
 -Dcom.cloudbees.hudson.plugins.folder.computed.ThrottleComputationQueueTaskDispatcher.LIMIT=12
 要注意的是，插件会选择上面的限制值和当前系统的核心数中的较小值。
 Webhook 多分支流水线，可以自动添加 webhook 到 git 服务上，并基于 webhook 推送的事件负责分支流水线的生命流程管理。下面，是部分 git 服务中 所对应的 webhook 地址：
-   git 服务 地址 ContentType 限制     Bitbucket http://localhost:8080/jenkins/bitbucket-scmsource-hook/notify  每个仓库最多有50个 ｜   Gitlab http://localhost:8080/jenkins/gitlab-webhook/post application/json ｜   GitHub http://localhost:8080/jenkins/github-webhook/ application/json ｜    Jenkins 中的多分支流水线删除后，也会同时删除 Bitbucket 中的 webhook 记录，但是 GitHub 不会。
+git 服务 地址 ContentType 限制 Bitbucket http://localhost:8080/jenkins/bitbucket-scmsource-hook/notify 每个仓库最多有50个 ｜ Gitlab http://localhost:8080/jenkins/gitlab-webhook/post application/json ｜ GitHub http://localhost:8080/jenkins/github-webhook/ application/json ｜ Jenkins 中的多分支流水线删除后，也会同时删除 Bitbucket 中的 webhook 记录，但是 GitHub 不会。
 缺点 对于 PR 的动态发现，目前只有 GitHub、Gitlab 和 Bitbucket 支持。</description>
     </item>
     
@@ -93,7 +118,7 @@ Webhook 多分支流水线，可以自动添加 webhook 到 git 服务上，并�
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/bash/</guid>
       <description>字符串 替换 echo &amp;quot;ab/c/df&amp;quot; | sed &#39;s/\//-/g&#39;
-参数    变量 说明 示例     $# 参数个数    $0 当前脚本文件名    $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2    $_ 上一条名称的最后一个参数 mkdir temp    命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
+参数 变量 说明 示例 $# 参数个数 $0 当前脚本文件名 $1 第一个参数，后面的参数则依次类推，例如：第二个参数为$2 $_ 上一条名称的最后一个参数 mkdir temp 命令自动补全 我们可以使用 brew 来安装 bash 的自动补全：brew install bash-completion
 目录 我们可以把特定命令的自动补全脚本保存到这个目录中 /usr/local/etc/bash_completion.d
 循环 for i in {1..5} do echo $i done </description>
     </item>
@@ -112,7 +137,21 @@ mvn clean package --offline
 部署 mvn deploy
 多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
 &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks! 查看依赖 mvn dependency:tree 查看依赖树
-mvn dependency:resolve</description>
+mvn dependency:resolve
+mvn dependency:analyze 依赖分析</description>
+    </item>
+    
+    <item>
+      <title>你是如何熟悉一个新的项目的？</title>
+      <link>https://linuxsuren.github.io/translation/other/how-do-you-get-familiar-with-a-new-code-base/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/translation/other/how-do-you-get-familiar-with-a-new-code-base/</guid>
+      <description>我最近以软件工程师的身份在 DEV 上出现了。更换几次工作后，发现熟悉新的代码是快速适应一个新的角色过程的难题之一。
+当学习软件工程（学校、培训机构、在线教程等等）时，你通常是从头开始，或者项目还 处于早期设计阶段。例如：如果你刚学完 Rails 的教程，你可以利用有限的特性构建 一个博客。
+但是，
+因此，我的问题是：
+如何熟悉并运行一个全新的、 你会使用什么工具 </description>
     </item>
     
     <item>
@@ -128,19 +167,6 @@ mvn dependency:resolve</description>
     </item>
     
     <item>
-      <title>你是如何熟悉一个新的项目的？</title>
-      <link>https://linuxsuren.github.io/translation/other/how-do-you-get-familiar-with-a-new-code-base/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/translation/other/how-do-you-get-familiar-with-a-new-code-base/</guid>
-      <description>我最近以软件工程师的身份在 DEV 上出现了。更换几次工作后，发现熟悉新的代码是快速适应一个新的角色过程的难题之一。
-当学习软件工程（学校、培训机构、在线教程等等）时，你通常是从头开始，或者项目还 处于早期设计阶段。例如：如果你刚学完 Rails 的教程，你可以利用有限的特性构建 一个博客。
-但是，
-因此，我的问题是：
- 如何熟悉并运行一个全新的、 你会使用什么工具   </description>
-    </item>
-    
-    <item>
       <title>请把 .gitattributes 添加到你的 Git 仓库中</title>
       <link>https://linuxsuren.github.io/translation/git/please-add-gitattributes-to-your-git-repository/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
@@ -153,7 +179,7 @@ mvn dependency:resolve</description>
 正如上面提到的，开发者使用不同的操作系统，默认的文件结尾行就会不同。在 Windows 上默认的是回车换行（Carriage Return Line Feed, CRLF），然而，在 Linux/MacOS 上则是换行（Line Feed, LF）。
 从表面看起来，内容都是一样的，那我们为什么还会困扰呢？??
 好的，如果你启用了该功能，并设置属性 endOfLine 为 lf 的话。
-{ &amp;quot;endOfLine&amp;quot;: &amp;quot;lf&amp;quot; } 在 Windows 上，开发者会看到如下的检查警告。
+{ &amp;#34;endOfLine&amp;#34;: &amp;#34;lf&amp;#34; } 在 Windows 上，开发者会看到如下的检查警告。
 这时候 .gitattributes 就可以派上用场了 🦸！
 新仓库 首先，在仓库的根目录下创建名为 .gitattributes 的文件。
 下面，是一份 .</description>
@@ -184,21 +210,27 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       <guid>https://linuxsuren.github.io/speach/2019-08-19-jenkins-chinese-community/</guid>
       <description>class: center, middle
 Jenkins 中文社区 .left[.footnote[Power by remark]]
- class: center, middle
+class: center, middle
 开源 vs 闭源 工匠～利润
 开放～封闭
 共赢～竞争
 扁平～等级
 自由～局限
 多样～单一
- 工匠～利润 .pull-left[
- 通用性 安全性 代码质量 单元测试 迭代流程 便于协作 ]  .pull-right[
- 客户愿意为哪些功能买单 要在短时间内实现功能 来不及考虑代码质量、安全漏洞 ]   开放～封闭 .pull-left[ 公开地（所有人都可以参与到）进行需求讨论，公开地评审设计文档、代码、帮助文档，任何人都可以贡献——即使只是错别字 ]
+工匠～利润 .pull-left[
+通用性 安全性 代码质量 单元测试 迭代流程 便于协作 ] .pull-right[
+客户愿意为哪些功能买单 要在短时间内实现功能 来不及考虑代码质量、安全漏洞 ] 开放～封闭 .pull-left[ 公开地（所有人都可以参与到）进行需求讨论，公开地评审设计文档、代码、帮助文档，任何人都可以贡献——即使只是错别字 ]
 .pull-right[ 特定的团队负责特定的部分，例如：产品经理=》研发经理=》普通研发=》测试。通常情况下，下游的人员是不会参与到需求层面的，已经到了分析并整理完成后的任务了。 ]
- 共赢～竞争 .pull-left[
- 没有具体的职位，允许多人做同一件事情 竞争对手也可以合作 贡献值是公开的 ]  .pull-right[
- 同一岗位的人员需求，取决于人员配置以及预算 不同岗位的薪资不同 看不到在其他项目的贡献 ]   扁平～等级 .pull-left[
- 没有一言堂 自由选择希望改善的任务 都是负责人 ]  .</description>
+共赢～竞争 .pull-left[
+没有具体的职位，允许多人做同一件事情 竞争对手也可以合作 贡献值是公开的 ] .pull-right[
+同一岗位的人员需求，取决于人员配置以及预算 不同岗位的薪资不同 看不到在其他项目的贡献 ] 扁平～等级 .pull-left[
+没有一言堂 自由选择希望改善的任务 都是负责人 ] .pull-right[
+领导有非常大的决定权 通常是任务分配 ] 自由～局限 .pull-left[
+不会受工作背景的限制
+可以参与任何开源项目
+随时加入或退出
+.red[没有明确的任期] ]
+.pull-right[</description>
     </item>
     
     <item>
@@ -214,7 +246,7 @@ ttps://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/run
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?state=FIXED&amp;amp;start=0&amp;amp;limit=101
 http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/runs/7/tests/?status=PASSED&amp;amp;start=0&amp;amp;limit=101
 响应体的结构如下：
-{ Age int // Duration the time of test Duration float32 // ErrorDetails error details of test ErrorDetails string // ErrorStackTrace if the status is erro then error stack trace of test ErrorStackTrace string // HasStdLog indicate whether has standard log outpupt HasStdLog bool // ID id for the test report item ID string // Name is the name of test report item Name string State string // Status indicates the status of report item Status string } 在 Jenkins 的测试报告中，可以拿到五种状态：  REGRESSION FAILED SKIPPED FIXED PASSED  其中 REGRESSION 和 FIXED 使用的字段为 state</description>
+{ Age int // Duration the time of test Duration float32 // ErrorDetails error details of test ErrorDetails string // ErrorStackTrace if the status is erro then error stack trace of test ErrorStackTrace string // HasStdLog indicate whether has standard log outpupt HasStdLog bool // ID id for the test report item ID string // Name is the name of test report item Name string State string // Status indicates the status of report item Status string } 在 Jenkins 的测试报告中，可以拿到五种状态： REGRESSION FAILED SKIPPED FIXED PASSED 其中 REGRESSION 和 FIXED 使用的字段为 state</description>
     </item>
     
     <item>
@@ -225,14 +257,14 @@ http://localhost:8080/jenkins/blue/rest/organizations/jenkins/pipelines/demo/run
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins/</guid>
       <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。
 部署 Jenkins 支持几种安装（启动）方式：
-  War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
+War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。
 然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins
 这种方式，方便简单，但是需要有 Java 环境。
 Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。
 需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175
 挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts
 如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts
-Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &amp;#39;/var/jenkins_home/copy_reference_file.log&amp;#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
     </item>
     
     <item>
@@ -242,7 +274,7 @@ Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permiss
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-queue/</guid>
       <description>我们知道，在 Jenkins 中执行任务的话，执行过程是：
- 进入队列 查找是否有可以执行该任务的节点 启动节点执行任务  这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。
+进入队列 查找是否有可以执行该任务的节点 启动节点执行任务 这里队列的默认行为是：先进先出。这对于很多常规场景下是正常合理的，毕竟首先触发的任务应该先执行。
 但是，在实际的企业（或组织）应用中，往往会有更加复杂的场景需求。例如：部分任务的优先级相对比较高、持久化队列等等。有一些需求，已经有相对应的插件可以实现，本文会对默写场景进行描述。
 https://github.com/jenkinsci/purge-build-queue-plugin https://github.com/jenkinsci/priority-sorter-plugin https://github.com/jenkinsci/persistent-build-queue-plugin https://github.com/jenkinsci/merge-queue-plugin</description>
     </item>
@@ -297,8 +329,8 @@ docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:es241_l240_k461</desc
       <pubDate>Tue, 07 May 2019 11:54:58 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/token/</guid>
-      <description>curl http://localhost:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken --header &amp;quot;Authorization: Basic `echo -n admin:1182fc5ef9b28a630986cb50c0319eb9d0 | base64`&amp;quot; -X POST -d &#39;newTokenName=name&#39; 返回的数据如下所示：
-{&amp;quot;status&amp;quot;:&amp;quot;ok&amp;quot;,&amp;quot;data&amp;quot;:{&amp;quot;tokenName&amp;quot;:&amp;quot;test&amp;quot;,&amp;quot;tokenUuid&amp;quot;:&amp;quot;3a07e7d7-c864-4474-bc3c-d217938e460e&amp;quot;,&amp;quot;tokenValue&amp;quot;:&amp;quot;1123acbf5d3e93e628a38dc0a671cf0194&amp;quot;}} </description>
+      <description>curl http://localhost:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken --header &amp;#34;Authorization: Basic `echo -n admin:1182fc5ef9b28a630986cb50c0319eb9d0 | base64`&amp;#34; -X POST -d &amp;#39;newTokenName=name&amp;#39; 返回的数据如下所示：
+{&amp;#34;status&amp;#34;:&amp;#34;ok&amp;#34;,&amp;#34;data&amp;#34;:{&amp;#34;tokenName&amp;#34;:&amp;#34;test&amp;#34;,&amp;#34;tokenUuid&amp;#34;:&amp;#34;3a07e7d7-c864-4474-bc3c-d217938e460e&amp;#34;,&amp;#34;tokenValue&amp;#34;:&amp;#34;1123acbf5d3e93e628a38dc0a671cf0194&amp;#34;}} </description>
     </item>
     
     <item>
@@ -336,18 +368,17 @@ docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:es241_l240_k461</desc
       <guid>https://linuxsuren.github.io/blog/os/linux/common/sort/</guid>
       <description>文件列表排序 使用降序对当前目录中的文件（夹）进行排序 ls | sort -r
 版本号 我们可以借助 sort 命令对版本号进行排序，只需要使用参数 -V 即可，下面的参数 -r 是降序的意思
-echo &amp;quot;2.0 10.0 3.0&amp;quot; | sort -Vr 从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
-echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V </description>
+echo &amp;#34;2.0 10.0 3.0&amp;#34; | sort -Vr 从下面的例子中可以看到，sort 命令对带字符前缀的情况也同样是支持的：
+echo &amp;#34;v2.0 v10.0 v3.0&amp;#34; | sort -V </description>
     </item>
     
     <item>
-      <title>英语缩写</title>
+      <title>English Abbreviations</title>
       <link>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</link>
       <pubDate>Thu, 02 May 2019 21:21:49 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/english-abbreviations/</guid>
-      <description>大部分的缩写可以用于写作和口语，下面标注了“写作”的通常只用于写作：
-          ASAP as soon as possible    RSVP please reply    RIP rest in peace    BYOB bring you own beer/booze    BBQ barbecue    PIN personal identity number    e.g. example 写作   i.e. that is, restate an idea    etc. et cetera, and so forth    ATM automatic teller machine     </description>
+      <description></description>
     </item>
     
     <item>
@@ -357,8 +388,8 @@ echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V </description>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/learning-english/</guid>
       <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。
-网站    名称 梯子 备注     EngVid yes 有初中高不同等级的视频    视频    名称 梯子 备注     和 Emma 学英语 yes    How to Talk Like a Native Speaker yes     字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
-   名称 梯子 备注     BusinessDictionary no 商业相关的词汇   FreeDictionary no 丰富的词条、习语等   Google no 支持很多种语言    词汇 pharmaceutical condition engineer spare time</description>
+网站 名称 梯子 备注 EngVid yes 有初中高不同等级的视频 视频 名称 梯子 备注 和 Emma 学英语 yes How to Talk Like a Native Speaker yes 字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：
+名称 梯子 备注 BusinessDictionary no 商业相关的词汇 FreeDictionary no 丰富的词条、习语等 Google no 支持很多种语言 词汇 pharmaceutical condition engineer spare time</description>
     </item>
     
     <item>
@@ -368,7 +399,7 @@ echo &amp;quot;v2.0 v10.0 v3.0&amp;quot; | sort -V </description>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-i18n/</guid>
       <description>帮助文件 hudson.model.Descriptor
- 与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下  http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
+与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下 http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
 http://localhost:8080/jenkins/help/parameter/file.html</description>
     </item>
     
@@ -432,7 +463,7 @@ kubectl cp jenkins-599d58c694-sh46d:var/jenkins_home/secret.key ~/.jenkins -n de
       <pubDate>Mon, 15 Apr 2019 12:18:24 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/other/recommendation/video/</guid>
-      <description>格式转换  这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
+      <description>格式转换 这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。
 https://youtubemp4.to/
 下载 我们可以通过一个命令行工具来从 Youtube 上下载视频，首先，使用 brew 来安装命令行：
 brew install youtube-dl
@@ -463,7 +494,7 @@ PR Robot PR Robot</description>
 源代码托管在 Jenkins 的官方仓库中。
 它提供的 DSL 语句为 input，执行到该语句的时候，需要人工决定“通过”或者“拒绝”。它还支持设置允许点击”通过“的人或者组，以及 确认该操作时输入一些参数。
 示例 在下面的例子中，通过的话会打印用户输入的参数 name 的值；如果拒绝的话，当前流水线会直接失败
-script { def approver = input id: &#39;approveId&#39;, message: &#39;need your approve&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;Your name&#39;, name: &#39;name&#39;, trim: false), string(defaultValue: &#39;&#39;, description: &#39;Your age&#39;, name: &#39;age&#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;quot;no data from approver&amp;quot; } } API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
+script { def approver = input id: &amp;#39;approveId&amp;#39;, message: &amp;#39;need your approve&amp;#39;, parameters: [string(defaultValue: &amp;#39;&amp;#39;, description: &amp;#39;Your name&amp;#39;, name: &amp;#39;name&amp;#39;, trim: false), string(defaultValue: &amp;#39;&amp;#39;, description: &amp;#39;Your age&amp;#39;, name: &amp;#39;age&amp;#39;, trim: false)] if (approver != null) { print approver.name } else { print &amp;#34;no data from approver&amp;#34; } } API 对于“通过”或者“拒绝“这样的操作，你可以使用 API 调用的方式来实现。</description>
     </item>
     
     <item>
@@ -473,12 +504,12 @@ script { def approver = input id: &#39;approveId&#39;, message: &#39;need your a
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/api/approve/</guid>
       <description>这里介绍的是核准插件中的 API 使用。
-&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。另外，下面提到的 API 并不是基于 Restful 风格 编写的，实际上是以表单的方式来提交的。也就是说，需要在发送请求时，在协议头中加入 Content-Type: application/x-www-form-urlencoded
+&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; 该 DSL 是基于某一次构建的，因此，下面的 API 都需要对应的构建 ID。另外，还需要对应的 inputid。另外，下面提到的 API 并不是基于 Restful 风格 编写的，实际上是以表单的方式来提交的。也就是说，需要在发送请求时，在协议头中加入 Content-Type: application/x-www-form-urlencoded
 通过 input 这个 DSL 支持接收参数。
 无参数 对于没有参数的情况，可以使用下面的两个 API 来核准。
-curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; -X POST 下面的 API 是直接无参数的调用
-curl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; -X POST 有参数 参数需要以 JSON 数组的形式传递。
-curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;quot;Authorization: Basic `echo -n admin:token | base64`&amp;quot; \ -X POST -d &#39;json={&amp;quot;parameter&amp;quot;: [{&amp;quot;name&amp;quot;: &amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;bob&amp;quot;}, {&amp;quot;name&amp;quot;: &amp;quot;age&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;12&amp;quot;}]}&#39; 如果缺少参数的话，会返回 400</description>
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;#34;Authorization: Basic `echo -n admin:token | base64`&amp;#34; -X POST 下面的 API 是直接无参数的调用
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceedEmpty \ --header &amp;#34;Authorization: Basic `echo -n admin:token | base64`&amp;#34; -X POST 有参数 参数需要以 JSON 数组的形式传递。
+curl http://localhost:8080/job/pipeline/1/input/inputid/proceed \ --header &amp;#34;Authorization: Basic `echo -n admin:token | base64`&amp;#34; \ -X POST -d &amp;#39;json={&amp;#34;parameter&amp;#34;: [{&amp;#34;name&amp;#34;: &amp;#34;name&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;bob&amp;#34;}, {&amp;#34;name&amp;#34;: &amp;#34;age&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;12&amp;#34;}]}&amp;#39; 如果缺少参数的话，会返回 400</description>
     </item>
     
     <item>
@@ -586,8 +617,8 @@ kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-adm
       
       <guid>https://linuxsuren.github.io/blog/language/golang/init/</guid>
       <description>init 函数定义在包（package）中，并有如下的用处：
- 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
- 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数  &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  包初始化只会执行一次，即使会被导入多次。
+初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算 包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
+初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数 &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; 包初始化只会执行一次，即使会被导入多次。
 属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。
 init 函数可以定义多次。
 只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：
@@ -646,10 +677,10 @@ java -jar selenium-server-standalone-{VERSION}.jar
       <description>如果配置了跨站请求伪造保护的话，可以通过下面的命令来获取相应的 Token
 curl -u user:passwd http:/localhost:8080/jenkins/crumbIssuer/api/json
 返回值类似于，而如果没有启用该配置的话会返回 404
-{&amp;quot;_class&amp;quot;:&amp;quot;hudson.security.csrf.DefaultCrumbIssuer&amp;quot;,&amp;quot;crumb&amp;quot;:&amp;quot;6e78c5725ea0c522bdcb787d548465aa&amp;quot;,&amp;quot;crumbRequestField&amp;quot;:&amp;quot;Jenkins-Crumb&amp;quot;} 使用该 Crumb 的方式如下：
+{&amp;#34;_class&amp;#34;:&amp;#34;hudson.security.csrf.DefaultCrumbIssuer&amp;#34;,&amp;#34;crumb&amp;#34;:&amp;#34;6e78c5725ea0c522bdcb787d548465aa&amp;#34;,&amp;#34;crumbRequestField&amp;#34;:&amp;#34;Jenkins-Crumb&amp;#34;} 使用该 Crumb 的方式如下：
 curl -u user:passwd http:/localhost:8080/jenkins/job/jobName/build -X POST --header &amp;quot;Jenkins-Crumb: 6e78c5725ea0c522bdcb787d548465aa&amp;quot;
 使用 Python 获取 Crumb 值：
-export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s) issuer=$(python -c &amp;quot;import json;import os;issuer=os.getenv(&#39;issuer&#39;);issuer=json.loads(issuer);print issuer[&#39;crumb&#39;]&amp;quot;) </description>
+export issuer=$(curl -u admin:$JENKINS_TOKEN $JENKINS_URL/crumbIssuer/api/json -s) issuer=$(python -c &amp;#34;import json;import os;issuer=os.getenv(&amp;#39;issuer&amp;#39;);issuer=json.loads(issuer);print issuer[&amp;#39;crumb&amp;#39;]&amp;#34;) </description>
     </item>
     
     <item>
@@ -681,13 +712,13 @@ Jenkins-Crumb 需要单独获取。</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/dingding-notifications/</guid>
       <description>支持的特性包括：
- 发送任务状态 发送文本类型的消息  安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
+发送任务状态 发送文本类型的消息 安装插件 在 系统管理》插件管理》可选插件 中搜索 dingding-notifications 并安装。
 机器人 在钉钉中新建一个群，然后在群里添加一个机器人，选择自定义类型。
 自由风格 在 Jenkins 中新建自由风格任务
 在 构建后操作 中 添加钉钉通知器配置 。在表单中需要把 Jenkins 的 URL 设置正确——必须让钉钉可以访问到。Token 是刚才在钉钉机器人里的 webhook 里。
 上面的方式，只能发送构建状态，如果要发送自定义消息的话，需要添加 Sending Message To Ding Talk。在高级选项里可以设置。
 流水线 你也可以在流水线（Jenkinsfile）中使用下面是 DSL 来实现发送消息：
-dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39;</description>
+dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl: &#39;http://localhost/jenkins&#39;, message: &#39;messages&#39;, notifyPeople: &#39;18211192837&#39; </description>
     </item>
     
     <item>
@@ -697,8 +728,8 @@ dingTalk accessToken: &#39;token&#39;, imageUrl: &#39;imageUrl&#39;, jenkinsUrl:
       
       <guid>https://linuxsuren.github.io/blog/language/golang/ginkgo/</guid>
       <description>Ginkgo 是 Golang 的 BDD 测试框架。 从它的 官方文档 中可以看到大致的用法。可惜的是，写文本时还没有中文的文档。
-&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
- Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
+&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
+Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
 执行测试 ginkgo test pkg/registry/generic
 IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
     </item>
@@ -711,8 +742,8 @@ IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
       <guid>https://linuxsuren.github.io/blog/language/golang/gmock/</guid>
       <description>GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。
 安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。
-go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen 编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
-测试用例  codes/golang/gmock/foo_test.go   package main import ( &amp;#34;testing&amp;#34; &amp;#34;.</description>
+go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen 编写接口（测试用） codes/golang/gmock/foo.go package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {} 原文件 生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
+测试用例 codes/golang/gmock/foo_test.go package main import ( &amp;#34;testing&amp;#34; &amp;#34;./mock_main&amp;#34; &amp;#34;github.com/golang/mock/gomock&amp;#34; ) func TestFoo(t *testing.T) { ctrl := gomock.</description>
     </item>
     
     <item>
@@ -722,8 +753,11 @@ go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen �
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/course/</guid>
       <description>class: center, middle
-Jenkins 培训  大纲  Jenkins 项目介绍 安装、部署  传统环境 容器环境   插件管理 构建任务  流水线 多分支流水线 API   计算节点管理  静态 动态     大纲  日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍  Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施     安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
- 安装手册 Docker   插件管理  介绍 仓库 托管   计算节点管理  节点类型 固定 动态（虚拟机、Docker、Kubernetes）   通道  SSH JNLP   标签（label） 表达式     流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。</description>
+Jenkins 培训 大纲 Jenkins 项目介绍 安装、部署 传统环境 容器环境 插件管理 构建任务 流水线 多分支流水线 API 计算节点管理 静态 动态 大纲 日志、任务外部存储 权限、认证体系 安全防护 备份、恢复 集成 社区介绍 Gitter &amp;amp;&amp;amp; 邮件组 Meetup 特别兴趣小组（SIG） 基础设施 安装、部署 Jenkins 的版本分为长期支持版（LTS）和每周更新版。
+安装手册 Docker 插件管理 介绍 仓库 托管 计算节点管理 节点类型 固定 动态（虚拟机、Docker、Kubernetes） 通道 SSH JNLP 标签（label） 表达式 流水线（Pipeline） Jenkins 流水线采用 Groovy 来编写，通常会保存在代码库根目录下名为 Jenkinsfile 的文件中。根据写法不同，分为：脚本式、申明式流水线。
+快速入手，参考：
+语法生成器 步骤列表 例子 复用 IDE 插件 .left[.footnote[https://linuxsuren.github.io/blog/devops/jenkins/pipeline/]]
+多分支流水线（Multi-branch Pipeline） 对于使用 Git 作为代码仓库的团队来说，Jenkins 的多分支流水线能够充分地利用 Git 的分支功能，简化重复的工作。简单来说，它可以根据既定的策略动态地创建、删除流水线。而对于部分 Git 服务，还能很好地支持 Pull Request 的流水线构建。</description>
     </item>
     
     <item>
@@ -757,7 +791,7 @@ curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText
       <pubDate>Thu, 03 Jan 2019 10:38:18 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/slice/</guid>
-      <description>  codes/golang/slice/main.go   package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) initMap := map[string]string{ &amp;#34;one&amp;#34;: &amp;#34;first man&amp;#34;, } fmt.Println(initMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  </description>
+      <description> codes/golang/slice/main.go package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) initMap := map[string]string{ &amp;#34;one&amp;#34;: &amp;#34;first man&amp;#34;, } fmt.Println(initMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) } 原文件 </description>
     </item>
     
     <item>
@@ -776,7 +810,7 @@ curl http://localhost:8080/jenkins/job/jobName/lastUnsuccessfulBuild/consoleText
       
       <guid>https://linuxsuren.github.io/blog/language/java/java8/</guid>
       <description>Lambda Collection 判断是否存在特定元素：
-Set&amp;lt;String&amp;gt; set = new HashSet&amp;lt;&amp;gt;(); set.add(&amp;quot;a&amp;quot;); set.add(&amp;quot;b&amp;quot;); boolean exists = set.stream().anyMatch((a) -&amp;gt; a.startsWith(&amp;quot;a&amp;quot;)); System.out.println(exists); brew 我们可以通过 brew 来安装 java
+Set&amp;lt;String&amp;gt; set = new HashSet&amp;lt;&amp;gt;(); set.add(&amp;#34;a&amp;#34;); set.add(&amp;#34;b&amp;#34;); boolean exists = set.stream().anyMatch((a) -&amp;gt; a.startsWith(&amp;#34;a&amp;#34;)); System.out.println(exists); brew 我们可以通过 brew 来安装 java
 brew cask install adoptopenjdk8
 Exceptions 如果遇到下面在请求 HTTPS 时遇到证书的问题，可能是因为由于自制私有证书导致的。我们可以把私有证书导入 JRE 来解决：
 Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target 首先，要先找到 JRE 的位置：which java。目录通常是在：{{Installation_directory}}/{{JDK_version}}/jre/lib/security
@@ -869,7 +903,7 @@ To simplify delivery of beta versions of plugins to interested users, the Jenkin
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
       <description>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
- getIconFileName getDisplayName getUrlName  hudson.model.queue.FoldableAction
+getIconFileName getDisplayName getUrlName hudson.model.queue.FoldableAction
 约定 QueueAction hudson.model.Queue.QueueAction
 方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。
 FoldableAction hudson.model.queue.FoldableAction</description>
@@ -886,7 +920,7 @@ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install python -y
 安装 Support Docker versions [&#39;1.12.6&#39;, &#39;17.03.0&#39;, &#39;17.03.1&#39;, &#39;17.03.2&#39;, &#39;17.12.0&#39;]
 通过命令 curl https://raw.githubusercontent.com/LinuxSuRen/getGo/master/jx-k8s.sh | bash -s ip 安装 Kubernetes
 修改配置文件 使用命令 vim ~/.kube/config，添加如下内容：
-apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;quot;&amp;quot; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {} </description>
+apiVersion: v1 clusters: - cluster: insecure-skip-tls-verify: true server: http://localhost:8080 name: local contexts: - context: cluster: local namespace: jx user: &amp;#34;&amp;#34; name: local current-context: local kind: Config preferences: {} users: - name: local user: as-user-extra: {} </description>
     </item>
     
     <item>
@@ -929,7 +963,7 @@ Scripts not permitted to use method groovy.lang.GroovyObjecgt invokeMethod Admin
 kubectl get secret default-token-m99lz -o jsonpath={.data.token} | base64 --d &amp;gt; token
 上面的命令，我们从当前的命名空间（namespace）里默认的 Secret 中获取 Token，进行 base64 解密后保存为文件。
 然后，通过如下类似的命令即可访问到集群的 API：
-curl -k https://localhost:6443/api/v1/namespaces --header &amp;quot;Authorization: Bearer `cat token`&amp;quot; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
+curl -k https://localhost:6443/api/v1/namespaces --header &amp;#34;Authorization: Bearer `cat token`&amp;#34; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; 需要确保的是，所使用 Token 对应的 ServiceAccount 具有所访问的资源的权限。
 Restful k8s.io/apiserver/pkg/registry/rest.NamedCreater POST 类的接口
 k8s.io/apiserver/pkg/registry/rest.GetterWithOptions GET 类的接口</description>
     </item>
@@ -984,7 +1018,7 @@ brew search curl
 如果可以找到的话，就能用下面的命令来安装：
 brew install curl
 thridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：
-brew tap jenkins-zh/jcli brew install jcli 其他操作    命令 描述     brew remove jcli 删除软件   brew upgrade jcli 升级软件   brew list 列出来已经安装的   brew info jcli 查看安装信息   brew deps jcli 查看依赖   brew outdated 查看可更新的软件   brew --repo 查看本地目录    代理 替换上游：</description>
+brew tap jenkins-zh/jcli brew install jcli 其他操作 命令 描述 brew remove jcli 删除软件 brew upgrade jcli 升级软件 brew list 列出来已经安装的 brew info jcli 查看安装信息 brew deps jcli 查看依赖 brew outdated 查看可更新的软件 brew --repo 查看本地目录 代理 替换上游：</description>
     </item>
     
     <item>
@@ -993,7 +1027,7 @@ brew tap jenkins-zh/jcli brew install jcli 其他操作    命令 描述     bre
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/cross/cicd/</guid>
-      <description>Name Description     Jenkins Jenkins automation server   Tekton A K8s-native Pipeline resource   drone Drone is a Container-Native, Continuous Delivery Platform   JX Jenkins X provides automated CI+CD for Kubernetes with Preview Environments on Pull Requests using Tekton, Knative, Prow, Skaffold and Helm    Fundation CD Fundation is a Neutral Home for the Next Generation of Continuous Delivery Collaboration</description>
+      <description>Name Description Jenkins Jenkins automation server Tekton A K8s-native Pipeline resource drone Drone is a Container-Native, Continuous Delivery Platform JX Jenkins X provides automated CI+CD for Kubernetes with Preview Environments on Pull Requests using Tekton, Knative, Prow, Skaffold and Helm Fundation CD Fundation is a Neutral Home for the Next Generation of Continuous Delivery Collaboration</description>
     </item>
     
     <item>
@@ -1059,11 +1093,11 @@ add-apt-repository ppa:pmcenery/ppa apt-get update apt-get install libimobiledev
       <description>GET 使用 GET 方法请求一个URL地址 curl http://baidu.com
 POST curl -d &amp;quot;param&amp;quot; http://baidu.com
 curl -H &amp;quot;Content-Type:application/json&amp;quot; -X POST -d &amp;quot;param&amp;quot; http://baidu.com
-curl --header &amp;quot;Authorization: Bearer $token&amp;quot; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;quot;Content-Type:application/json&amp;quot; --data &#39;{&amp;quot;url&amp;quot;:&amp;quot;alauda/cronTabCheck?cronText=sdf&amp;quot;}&#39; 管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
+curl --header &amp;#34;Authorization: Bearer $token&amp;#34; --insecure https://localhost:6443/apis/devops.alauda.io/v1alpha1namespaces/zxj/jenkinsbindings/hao/proxy -X POST -H &amp;#34;Content-Type:application/json&amp;#34; --data &amp;#39;{&amp;#34;url&amp;#34;:&amp;#34;alauda/cronTabCheck?cronText=sdf&amp;#34;}&amp;#39; 管道 我们可以通过 curl 下载并执行脚本，例如： curl http://test.com/test.sh | bash -s arg1
 curl http://admin:admin@chartmuseum.jx.k1.surenpi.com/api/charts -F &amp;quot;chart=@jenkins-x-platform-0.0.1607.tgz&amp;quot;
 状态码 curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com 这样获取 HTTP 状态码
 输出格式 支持的变量包括：
- content_type filename_effective http_code http_connect http_version  代理 curl 默认会从环境变量中获取代理配置信息，但如果给定了参数 --proxy 的话，就会使用参数中给定的。</description>
+content_type filename_effective http_code http_connect http_version 代理 curl 默认会从环境变量中获取代理配置信息，但如果给定了参数 --proxy 的话，就会使用参数中给定的。</description>
     </item>
     
     <item>
@@ -1123,7 +1157,7 @@ Docker Version vs API Version</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-mirror/</guid>
       <description>vim /etc/docker/daemon.json
-{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://mirror.gcr.io&amp;quot;] } 或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
+{ &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://mirror.gcr.io&amp;#34;] } 或者，获取在 daemon 启动时传递参数 dockerd --registry-mirror=https://mirror.gcr.io
 或者，在文件 /etc/default/docker 中添加如下配置：
 DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp;quot;</description>
     </item>
@@ -1135,7 +1169,7 @@ DOCKER_OPTS=&amp;quot;${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io&amp
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/multi-stage/</guid>
       <description>We can build our application in Dockerfile. But we don&amp;rsquo;t want the whole thing in our final docker image. Docker multi-stage technology could help us the reduce the size.
-FROMgolang:1.12 AS builderWORKDIR/workRUN git clone https://github.com/devops-ws/learn-pipeline-go &amp;amp;&amp;amp; \  cd learn-pipeline-go &amp;amp;&amp;amp; go build -o go-serverRUN ls -halFROMalpine:3.10COPY --from=builder /work/learn-pipeline-go/go-server .CMD [&amp;#39;go-server&amp;#39;]After built this: docker build . -t go-server
+FROM golang:1.12 AS builder WORKDIR /work RUN git clone https://github.com/devops-ws/learn-pipeline-go &amp;amp;&amp;amp; \ cd learn-pipeline-go &amp;amp;&amp;amp; go build -o go-server RUN ls -hal FROM alpine:3.10 COPY --from=builder /work/learn-pipeline-go/go-server . CMD [&amp;#39;go-server&amp;#39;] After built this: docker build . -t go-server
 then we can test it: docker run go-server</description>
     </item>
     
@@ -1146,7 +1180,33 @@ then we can test it: docker run go-server</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-oper/</guid>
       <description>Filter Images 当前支持的过滤如下：
- dangling（布尔值，true 或 false） label（label=或 label==  删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+dangling（布尔值，true 或 false） label（label= 或 label== 删除包含制定字符串的镜像 docker rmi $(docker images | grep jenkinsx | awk &#39;{print $3}&#39;)</description>
+    </item>
+    
+    <item>
+      <title>Docker 基础镜像</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-base/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-base/</guid>
+      <description>通常情况下，我们自己的镜像都会依赖于某个基础镜像。下面，是我总结的一些基础镜像。
+Alpine alpine 是一个非常轻量级的 Docker 镜像，大概只有 5.55MB 的大小。它包含一些比较常用的 Linux 命令。
+bash 是很多人使用的 shell，但是，默认（sh）情况下，alpine 并不包含 bash。 如果我们直接在 alpine 中执行 bash 命令的话，可能会报一些貌似没有道理的错误。其实， 你只要在 Dockerfile 中安装一下 bash 即可，下面给出一个示例：
+FROM alpine:latest RUN apk add bash </description>
+    </item>
+    
+    <item>
+      <title>Docker 镜像管理</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
+      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune
+修改 Docker 镜像可以和 Git 一样，进行修改，然后重新推送回去。
+首先，运行一个镜像 docker run -it demo:v1.0 bash
+然后，通过名称等方式获取对应容器的 ID docker ps | grep demo:v1.0
+在之前的容器中，做一些修改，例如：添加一个文件 touch demo
+最后，把修改提交 docker commit -m &#39;fix something&#39; f6591bcdce2c demo:v1.0。如果有需要的话，可以再把修改后的镜像推送回去 docker push demo:v1.0</description>
     </item>
     
     <item>
@@ -1174,18 +1234,6 @@ find /var/lib/docker/containers/ -type f -name &amp;quot;*.log&amp;quot; -delete
     </item>
     
     <item>
-      <title>Docker 基础镜像</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-base/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-base/</guid>
-      <description>通常情况下，我们自己的镜像都会依赖于某个基础镜像。下面，是我总结的一些基础镜像。
-Alpine alpine 是一个非常轻量级的 Docker 镜像，大概只有 5.55MB 的大小。它包含一些比较常用的 Linux 命令。
-bash 是很多人使用的 shell，但是，默认（sh）情况下，alpine 并不包含 bash。 如果我们直接在 alpine 中执行 bash 命令的话，可能会报一些貌似没有道理的错误。其实， 你只要在 Dockerfile 中安装一下 bash 即可，下面给出一个示例：
-FROM alpine:latest RUN apk add bash </description>
-    </item>
-    
-    <item>
       <title>Docker 时间设置</title>
       <link>https://linuxsuren.github.io/blog/devops/docker/docker-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1194,20 +1242,6 @@ FROM alpine:latest RUN apk add bash </description>
       <description>通过如下配置，就可以实现对容器内的时区设置：
 ENV TZ=Hongkong RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone Java 如何运行的是 Java 程序的话，还可以通过命令行参数在运行时指定：
 docker run -p 8888:8080 -e JAVA_OPTS=&amp;quot;-Duser.timezone=HongKong&amp;quot; jenkins/jenkins:lts</description>
-    </item>
-    
-    <item>
-      <title>Docker 镜像管理</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-image/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-image/</guid>
-      <description>使用 Docker 一段时间后，就会发现 Docker 镜像会占用很多的存储空间，我们可以通过 prune 命令来清理掉不再使用的镜像 docker image prune
-修改 Docker 镜像可以和 Git 一样，进行修改，然后重新推送回去。
-首先，运行一个镜像 docker run -it demo:v1.0 bash
-然后，通过名称等方式获取对应容器的 ID docker ps | grep demo:v1.0
-在之前的容器中，做一些修改，例如：添加一个文件 touch demo
-最后，把修改提交 docker commit -m &#39;fix something&#39; f6591bcdce2c demo:v1.0。如果有需要的话，可以再把修改后的镜像推送回去 docker push demo:v1.0</description>
     </item>
     
     <item>
@@ -1378,17 +1412,6 @@ get submodule update 更新子模块代码</description>
     </item>
     
     <item>
-      <title>Git 代理</title>
-      <link>https://linuxsuren.github.io/blog/other/scm/git/git-proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/scm/git/git-proxy/</guid>
-      <description>全局代理 git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
-部分代理 我们也可以对指定的域名配置代理，格式为：git config --global http.https://github.com.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
-git config --global http.https://github.com.proxy 127.0.0.1:1087 git config --global http.https://github.com.sslVerify false 查看配置 git config --global --get-regexp http.* git config --get-regexp http.* 取消代理 git config --global --unset http.proxy git config --global --unset http.https://domain.com.proxy git config --global --unset http.sslVerify git config --global --unset http.https://domain.com.sslVerify </description>
-    </item>
-    
-    <item>
       <title>Git 标签（tag）</title>
       <link>https://linuxsuren.github.io/blog/other/scm/git/git-tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1404,6 +1427,17 @@ git tag -a v0.2 -m &#39;here is comment&#39;
 git可以在同一个提交上打多个名称不一样的标签
 获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）
 删除远程标签 git push --delete origin tagname 删除远程的指定标签</description>
+    </item>
+    
+    <item>
+      <title>Git 代理</title>
+      <link>https://linuxsuren.github.io/blog/other/scm/git/git-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/other/scm/git/git-proxy/</guid>
+      <description>全局代理 git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+部分代理 我们也可以对指定的域名配置代理，格式为：git config --global http.https://github.com.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+git config --global http.https://github.com.proxy 127.0.0.1:1087 git config --global http.https://github.com.sslVerify false 查看配置 git config --global --get-regexp http.* git config --get-regexp http.* 取消代理 git config --global --unset http.proxy git config --global --unset http.https://domain.com.proxy git config --global --unset http.sslVerify git config --global --unset http.https://domain.com.sslVerify </description>
     </item>
     
     <item>
@@ -1463,11 +1497,12 @@ https://github.com/fishworks/fish-food</description>
       <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
       <description>Environment 环境变量 GOROOT 是 Golang 的安装根目录
 环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
- src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  GOGC GOGC 是用来控制内存垃圾回收（GC）被触发时的比例，默认值为：GOGC=100。GOGC=off可以完全关闭垃圾回收。
+src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录 GOGC GOGC 是用来控制内存垃圾回收（GC）被触发时的比例，默认值为：GOGC=100。GOGC=off可以完全关闭垃圾回收。
 Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
 设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;
-Package import If you want to use a custom domain in your Go import path, please read more about govanit. Here is a blog related with it.</description>
+Package import If you want to use a custom domain in your Go import path, please read more about govanit. Here is a blog related with it.
+A online service of Go Vanity Server.</description>
     </item>
     
     <item>
@@ -1476,8 +1511,8 @@ Package import If you want to use a custom domain in your Go import path, please
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
-      <description>/codes/golang/json/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  数据格式转换 下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式
- /codes/golang/json-marshal/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;strings&amp;#34; ) var json_str = `{ &amp;#34;value&amp;#34;: &amp;#34;GOOD&amp;#34;, &amp;#34;name&amp;#34;:&amp;#34;name&amp;#34; }` var json_bool = `{ &amp;#34;value&amp;#34;: false, &amp;#34;name&amp;#34;:&amp;#34;good&amp;#34; }` type Form struct { Value ComposeValue Name string } type ComposeValue struct { Value string } func (f *ComposeValue) UnmarshalJSON(data []byte) error { originStr := strings.</description>
+      <description>/codes/golang/json/main.go package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } } 原文件 数据格式转换 下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式
+/codes/golang/json-marshal/main.go package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;strings&amp;#34; ) var json_str = `{ &amp;#34;value&amp;#34;: &amp;#34;GOOD&amp;#34;, &amp;#34;name&amp;#34;:&amp;#34;name&amp;#34; }` var json_bool = `{ &amp;#34;value&amp;#34;: false, &amp;#34;name&amp;#34;:&amp;#34;good&amp;#34; }` type Form struct { Value ComposeValue Name string } type ComposeValue struct { Value string } func (f *ComposeValue) UnmarshalJSON(data []byte) error { originStr := strings.</description>
     </item>
     
     <item>
@@ -1486,7 +1521,7 @@ Package import If you want to use a custom domain in your Go import path, please
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/goroutines/</guid>
-      <description>简单例子  </description>
+      <description>简单例子 </description>
     </item>
     
     <item>
@@ -1534,12 +1569,21 @@ hkp://keyserver.ubuntu.com</description>
     </item>
     
     <item>
+      <title>How to build a multi-arch docker image</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/multi-arch-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/multi-arch-image/</guid>
+      <description>Install multi-arch binary files in one Dockerfile FROM ubuntu RUN ARCH= &amp;amp;&amp;amp; ARCH_ALIAS= &amp;amp;&amp;amp; dpkgArch=&amp;#34;$(dpkg --print-architecture)&amp;#34; \ &amp;amp;&amp;amp; case &amp;#34;${dpkgArch##*-}&amp;#34; in \ amd64) ARCH=&amp;#39;amd64&amp;#39;;; \ ppc64el) ARCH=&amp;#39;ppc64le&amp;#39;;; \ s390x) ARCH=&amp;#39;s390x&amp;#39;;; \ arm64) ARCH=&amp;#39;arm64&amp;#39;;; \ armhf) ARCH=&amp;#39;armv7l&amp;#39;;; \ i386) ARCH=&amp;#39;x86&amp;#39;;; \ *) echo &amp;#34;unsupported architecture&amp;#34;; exit 1 ;; \ esac &amp;amp;&amp;amp; \ apt-get update &amp;amp;&amp;amp; apt-get install wget -y &amp;amp;&amp;amp; \ wget https://cdn.jsdelivr.net/gh/jenkins-zh/jcli-repo/jcli-linux-$ARCH.tar.gz &amp;amp;&amp;amp; \ tar xzvf jcli-linux-$ARCH.tar.gz &amp;amp;&amp;amp; rm -rf jcli-linux-$ARCH.</description>
+    </item>
+    
+    <item>
       <title>HTTP</title>
       <link>https://linuxsuren.github.io/blog/language/golang/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/http/</guid>
-      <description>codes/golang/http/main.go   package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;strings&amp;#34; ) func main() { test() url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) } func test() { data := `json={&amp;#34;parameter&amp;#34;:[{&amp;#34;name&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;bob&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;age&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;12&amp;#34;}]}` inputURL := &amp;amp;url.</description>
+      <description>codes/golang/http/main.go package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;strings&amp;#34; ) func main() { test() url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) } func test() { data := `json={&amp;#34;parameter&amp;#34;:[{&amp;#34;name&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;bob&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;age&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;12&amp;#34;}]}` inputURL := &amp;amp;url.URL{ Host: &amp;#34;jenkins.</description>
     </item>
     
     <item>
@@ -1563,7 +1607,7 @@ hkp://keyserver.ubuntu.com</description>
 Rewrite Ingress 支持地址重写，具体请查看参考。
 413 在通过 Ingress 访问的系统中上传较大文件时，可能会遇到错误 Request Entity Too Large。
 这时，找到对应的 Ingress 添加如下 Annotations 即可解决：
-ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx.ingress.kubernetes.io/proxy-body-size: &amp;quot;0&amp;quot; nginx/client_max_body_size: &amp;quot;0&amp;quot; HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
+ingress.kubernetes.io/proxy-body-size: &amp;#34;0&amp;#34; nginx.ingress.kubernetes.io/proxy-body-size: &amp;#34;0&amp;#34; nginx/client_max_body_size: &amp;#34;0&amp;#34; HTTPS 如果不希望自动跳转到 HTTPS 的话，可以添加如下的注解：
 nginx.ingress.kubernetes.io/ssl-redirect: &amp;quot;false&amp;quot;</description>
     </item>
     
@@ -1630,8 +1674,8 @@ Reference https://www.iterm2.com</description>
       <description>Jenkins 的运行模式，分为 master 和 agent。配置、管理、调度等会由 master 节点来完成，而具体的构建任务则由计算节点（agent）完成。
 默认安装的 Jenkins 会包含一个 master 节点。通常，不会在 master 节点上执行构建任务，只用于调度。
 Jenkins 的节点，通常可以配置如下属性：
- 名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量  类型 Jenkins 支持多种与节点通信的方式。
-  JNLP 默认支持。
+名称 唯一标示 描述 并发构建数 同一时刻可执行的任务数 远程工作目录 标签 空格分割的字符串，通常包含环境信息 启动方式 agent 节点如何启动，通常与 agent 类型相关 工具位置 构建工具的安装位置配置 环境变量 类型 Jenkins 支持多种与节点通信的方式。
+JNLP 默认支持。
 SSH 需要安装插件。
 Docker 这里指的是在 Docker 容器里运行 Jenkins 计算节点。我们可以分为两类：静态、动态。
 静态 Docker 静态的 Docker 容器，是通过命令来启动一个 jnlp 容器。这种方式与 JNLP 其实是相同的机制，都是需要提前在 Jenkins 的节点管理界面添加一个静态节点，然后再启动。
@@ -1655,7 +1699,7 @@ hudson.model.Queue.QueueDecisionHandler</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</guid>
-      <description>断言 @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); } 数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
+      <description>断言 @Test public void basic() { assertThat(&amp;#34;abc&amp;#34;, StringContains.containsString(&amp;#34;a&amp;#34;)); assertThat(&amp;#34;abc&amp;#34;, Matchers.not(StringContains.containsString(&amp;#34;d&amp;#34;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;#34;&amp;#34;); assertEquals(&amp;#34;a&amp;#34;, &amp;#34;a&amp;#34;); } 数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
 例如：该注解加载类 org.test.TestAgent 的方法 test 上的话，就会去加载目录 src/test/resources/org/test/TestAgent/test 中的配置文件。另外，它还有一个 value 参数可以替代使用方法名称。
 框架 Jenkins 的测试框架为 acceptance-test-harness。
 在 pom.xml 中可以修改框架的版本，如下所示：
@@ -1716,11 +1760,11 @@ CredentialsStore 凭据存储接口</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
-      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt; 下拉框 在 jelly 文件添加如下标签：
-&amp;lt;f:entry field=&amp;quot;method&amp;quot; title=&amp;quot;${%Method}&amp;quot;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt; 在对应的后端类的 DescriptorImpl 中添加如下方法：
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;#34;/lib/form&amp;#34;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;#34;Test Connection&amp;#34; method=&amp;#34;verifyConnect&amp;#34; with=&amp;#34;server,credentialsId&amp;#34; progress=&amp;#34;Testing...&amp;#34;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt; 下拉框 在 jelly 文件添加如下标签：
+&amp;lt;f:entry field=&amp;#34;method&amp;#34; title=&amp;#34;${%Method}&amp;#34;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt; 在对应的后端类的 DescriptorImpl 中添加如下方法：
 public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; } 细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
 校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
-&amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.create(fixNull(value), item != null ?</description>
+&amp;lt;f:entry title=&amp;#34;${%Crontab}&amp;#34; field=&amp;#34;crontab&amp;#34;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.create(fixNull(value), item != null ?</description>
     </item>
     
     <item>
@@ -1736,16 +1780,6 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
     </item>
     
     <item>
-      <title>Jenkins 主题插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
-      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
- 从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
-    </item>
-    
-    <item>
       <title>Jenkins 帮助信息</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1757,6 +1791,15 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
     </item>
     
     <item>
+      <title>Jenkins 标签</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
+      <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
+    </item>
+    
+    <item>
       <title>Jenkins 插件开发</title>
       <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1764,7 +1807,7 @@ DevPod 目前只支持 overlay 类型的 Docker 驱动，通过命令 docker inf
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
- 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
+插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
 运行 在工程根目录下执行 mvn hpi:run
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。
@@ -1776,6 +1819,17 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 用户要使用实验性更新中心的话，只需要在插件管理-》高级的选项卡页面中，设置更新中心地址为 https://updates.jenkins.io/experimental/update-center.json。
 常规的更新中心地址为 https://updates.jenkins.io/update-center.json。
 参考 Extend Jenkins</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 插件扩展点</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</guid>
+      <description>接口 接口 hudson.ExtensionPoint 用于自动生成文档
+注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。
+Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println); </description>
     </item>
     
     <item>
@@ -1791,38 +1845,7 @@ mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform
 上传 首先，在 Jenkins 的成品库上，用上面 Jira 的账号登陆一次，保证该账号是可用的。
 你需要 Fork 上传权限申请，然后，根据要求编写对应的 YAML 文件。发起的 PR 通过以后，你就有了上传插件的权限了。
 发布 设置你的 Maven 账号，参考下面的配置修改 Maven 的配置文件~/.m2/settings.xml：
-&amp;lt;settings xmlns=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;quot;&amp;gt; &amp;lt;servers&amp;gt; &amp;lt;server&amp;gt; &amp;lt;id&amp;gt;maven.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&amp;gt; &amp;lt;username&amp;gt;...&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;...&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; &amp;lt;/servers&amp;gt; &amp;lt;/settings&amp;gt; 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 插件扩展点</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</guid>
-      <description>接口 接口 hudson.ExtensionPoint 用于自动生成文档
-注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。
-Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println); </description>
-    </item>
-    
-    <item>
-      <title>Jenkins 标签</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/basic/jenkins-label/</guid>
-      <description>master 是一个特殊的标签，即使任何一个节点上都没有填写该字符串，Jenkins 仍然会去调度 master 节点来运行。</description>
-    </item>
-    
-    <item>
-      <title>Jenkins 流水线插件</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
-      <description>流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
-安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
-  结构  /codes/jenkinsfile/simple.groovy   pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件  计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+&amp;lt;settings xmlns=&amp;#34;http://maven.apache.org/SETTINGS/1.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;#34;&amp;gt; &amp;lt;servers&amp;gt; &amp;lt;server&amp;gt; &amp;lt;id&amp;gt;maven.jenkins-ci.org&amp;lt;/id&amp;gt; &amp;lt;!-- For parent 1.397 or newer; this ID is used for historical reasons and independent of the actual host name --&amp;gt; &amp;lt;username&amp;gt;...&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;...&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; &amp;lt;/servers&amp;gt; &amp;lt;/settings&amp;gt; 等一切就绪，你的插件要发布时，只要执行 mvn release:prepare release:perform</description>
     </item>
     
     <item>
@@ -1833,8 +1856,28 @@ Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/localization-zh-cn/</guid>
       <description>Jenkins 的汉化（简体中文）需要安装中文插件。
 具体操作，打开 Jenkins 的插件管理界面，搜索中文后就能找到该插件。
-这里有一个视频可以供各位参考。
-  </description>
+这里有一个视频可以供各位参考。</description>
+    </item>
+    
+    <item>
+      <title>Jenkins 流水线插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/pipeline/</guid>
+      <description>流水线是 Jenkins 的一大特点，而这点在 DevOps 中显得尤为重要。它可以把一系列过程串起来，并且很好地用图形化的方式展现出来。
+安装 在插件管理界面中搜索 workflow-aggregator 后，勾选点击安装。
+结构 /codes/jenkinsfile/simple.groovy pipeline { agent any stages{ stage(&amp;#34;one&amp;#34;) { steps{ echo &amp;#34;one&amp;#34; } } stage(&amp;#34;two&amp;#34;) { steps{ echo &amp;#34;two&amp;#34; } } } } 原文件 计算节点 Agent 阶段 Stage 后处理 Restful 接口 </description>
+    </item>
+    
+    <item>
+      <title>Jenkins 主题插件</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/jenkins-plugin/simple-theme-plugin/</guid>
+      <description>如果你想让你的 Jenkins 变得更加漂亮一些的话，这里有款 主题插件肯定能满足你的需求。
+从这里你能找到很多已经定制好的主题。先给出一个样例。</description>
     </item>
     
     <item>
@@ -1873,7 +1916,7 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/k8s/k8s-landscape/</guid>
-      <description>   Name Description     microk8s MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge.    </description>
+      <description> Name Description microk8s MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge. </description>
     </item>
     
     <item>
@@ -1886,7 +1929,7 @@ MAVEN_OPTS=&amp;quot;-Xmx1024m&amp;quot; mvn clean 或 mvn -DjvmArgs=&amp;quot;-
 API Server 公钥和私钥
 集群管理员公钥和私钥
 从节点公钥和私钥
-根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;quot;/CN=kube-ca&amp;quot; API Server 证书 创建 openssl.cnf
+根证书 openssl genrsa -out ca-key.pem 2048 openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &amp;#34;/CN=kube-ca&amp;#34; API Server 证书 创建 openssl.cnf
 [req] req_extensions = v3_req distinguished_name = req_distinguished_name [req_distinguished_name] [ v3_req ] basicConstraints = CA:FALSE keyUsage = nonRepudiation, digitalSignature, keyEncipherment subjectAltName = @alt_names [alt_names] DNS.1 = kubernetes DNS.2 = kubernetes.default DNS.3 = kubernetes.default.svc DNS.4 = kubernetes.default.svc.cluster.local IP.1 = ${K8S_SERVICE_IP} IP.2 = ${MASTER_IPV4} openssl genrsa -out apiserver-key.</description>
     </item>
     
@@ -1915,7 +1958,7 @@ Patch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/service/</guid>
-      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;quot;start&amp;quot; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;quot;stop&amp;quot; ;; *) echo &amp;quot;Usage: $0 (start|stop)&amp;quot; ;; esac </description>
+      <description>#!/bin/sh ### BEGIN INIT INFO # Provides: suren # Required-Start: $network $remote_fs $syslog # Required-Stop: $network $remote_fs $syslog # Should-Start: jenkins # Should-Stop: jenkins # Default-Start: 2 3 4 5 # Default-Stop: 0 1 6 # Short-Description: http://surenpi.com # Description: http://surenpi.com ### END INIT INFO case $1 in start) echo &amp;#34;start&amp;#34; nohup java -jar /var/www/jenkins/jenkins.war --httpPort=9099 &amp;gt; /var/www/jenkins/jenkins.log 2&amp;gt; /var/www/ jenkins/jenkins-error.log &amp;amp; ;; stop) echo &amp;#34;stop&amp;#34; ;; *) echo &amp;#34;Usage: $0 (start|stop)&amp;#34; ;; esac </description>
     </item>
     
     <item>
@@ -1945,11 +1988,14 @@ Patch 在调试的时候，我们可能需要反复地修改 k8s 资源中的某
 前后切换选项卡 command + &amp;lt;-
 指定顺序切换选项卡 command + 1
 关闭浏览器 command + q
-截图   截取全屏并保存文件 shift + command + 3
-  截取部分并保存文件 shift + command + 4
-  截取全屏并保存粘贴板 shift + control + command + 3
-  截取部分并保存粘贴板 shift + control + command + 4
-  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
+截图 截取全屏并保存文件 shift + command + 3
+截取部分并保存文件 shift + command + 4
+截取全屏并保存粘贴板 shift + control + command + 3
+截取部分并保存粘贴板 shift + control + command + 4
+丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。
+开机后按下 command+s
+进入终端后输入命令 `/sbin/mount -uaw``
+执行命令 rm /var/db/.</description>
     </item>
     
     <item>
@@ -1992,7 +2038,7 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/mkfifo/</guid>
-      <description>nc -lkv localhost 9090 -c &amp;lsquo;tee /dev/stderr | nc -v baidu.com 80 | tee /dev/stderr&amp;rsquo;</description>
+      <description>nc -lkv localhost 9090 -c &amp;rsquo;tee /dev/stderr | nc -v baidu.com 80 | tee /dev/stderr&#39;</description>
     </item>
     
     <item>
@@ -2031,10 +2077,9 @@ chmodd u+x minikube-linux-amd64 &amp;amp;&amp;amp; mv minikube-linux-amd64 /usr/
       <guid>https://linuxsuren.github.io/blog/devops/build/nexus/</guid>
       <description>初始密码 Nexus3 的 admin 的初始密码默认会自动生成，并保存在文件 /nexus-data/admin.password 中。
 为了自动化 Nexus 的安装和初始化配置工作，我们需要能够将管理员的初始密码固定或者可以设置。 这时候，你可以通过下面的两个途径来做到：
- 修改 $data-dir/etc/nexus.properties 文件中的值 nexus.security.randompassword 为 false 设置环境变量 NEXUS_SECURITY_RANDOMPASSWORD 的值为 false   See Also
+修改 $data-dir/etc/nexus.properties 文件中的值 nexus.security.randompassword 为 false 设置环境变量 NEXUS_SECURITY_RANDOMPASSWORD 的值为 false See Also
 Sonatype community discuss
-Source code
- </description>
+Source code</description>
     </item>
     
     <item>
@@ -2044,7 +2089,7 @@ Source code
       
       <guid>https://linuxsuren.github.io/blog/other/server/nginx/</guid>
       <description>Nginx 配置文件的一大特点是：必须要以分号结尾。
-变量    Name Description     $scheme The scheme of HTTP request, could be http, https   $host    $request_uri ]    逻辑判断 ngx_http_rewrite_module rewrite server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } } return Syntax: return code [text]; return code URL; return URL; Default: - Context: server, location, if if ($host = &amp;quot;github.com&amp;quot;) { return 301 https://nexus-b.</description>
+变量 Name Description $scheme The scheme of HTTP request, could be http, https $host $request_uri ] 逻辑判断 ngx_http_rewrite_module rewrite server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } } return Syntax: return code [text]; return code URL; return URL; Default: - Context: server, location, if if ($host = &amp;#34;github.com&amp;#34;) { return 301 https://nexus-b.alauda.cn/repository/github-proxy$request_uri; } HTTPS </description>
     </item>
     
     <item>
@@ -2138,9 +2183,9 @@ cat database.sql | psql -U [postgres-user] -d [database-name]</description>
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell/</guid>
       <description>执行最近的命令 有几种方法可以快速地执行最近执行过的命令：
- !! 或者 !-1 执行上一个命令 !u 执行上一个以 u 开头的命令 Ctrl+R 搜索命令 Ctrl+P Ctrl+O  下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
+!! 或者 !-1 执行上一个命令 !u 执行上一个以 u 开头的命令 Ctrl+R 搜索命令 Ctrl+P Ctrl+O 下载并执行 curl http://test.com/test.sh | bash -s arg1 arg2
 文件路径 从文件路径中提取文件名和目录
-path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存在 if [ ! -f &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi if [ ! -d &amp;quot;env.sh&amp;quot; ]; then echo &amp;quot;we need the env.sh to setup vars&amp;quot; exit -1 else echo &amp;quot;file exists&amp;quot; fi 脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径</description>
+path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存在 if [ ! -f &amp;#34;env.sh&amp;#34; ]; then echo &amp;#34;we need the env.sh to setup vars&amp;#34; exit -1 else echo &amp;#34;file exists&amp;#34; fi if [ ! -d &amp;#34;env.sh&amp;#34; ]; then echo &amp;#34;we need the env.sh to setup vars&amp;#34; exit -1 else echo &amp;#34;file exists&amp;#34; fi 脚本相关 ${BASH_SOURCE[0]} 脚本所在的相对路径</description>
     </item>
     
     <item>
@@ -2150,8 +2195,8 @@ path=/var/www/1.log echo $(basename $path) echo $(dirname $path) 文件是否存
       
       <guid>https://linuxsuren.github.io/blog/os/linux/common/shell-example/</guid>
       <description>输出文件制定行 Solution 1
-num=0 head -n 10 file.txt | while read line; do if [ &amp;quot;$num&amp;quot; == &amp;quot;9&amp;quot; ]; then echo $line; break; fi; num=$((num+1)); done Solution 2
-awk &#39;NR==10&#39; file.txt </description>
+num=0 head -n 10 file.txt | while read line; do if [ &amp;#34;$num&amp;#34; == &amp;#34;9&amp;#34; ]; then echo $line; break; fi; num=$((num+1)); done Solution 2
+awk &amp;#39;NR==10&amp;#39; file.txt </description>
     </item>
     
     <item>
@@ -2204,9 +2249,9 @@ PermitRootLogin no
       <guid>https://linuxsuren.github.io/blog/os/linux/common/ssh/</guid>
       <description>配置文件 vim /etc/ssh/sshd_config
 允许 Root 登陆 如果你希望允许 root 用户可以通过 ssh 远程登陆的话，可以找到配置文件，并将 PermitRootLogin 设置为 yes。
-无密码登录   在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
-  在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
-  或者，在需要无密码登录的机器上执行：ssh-copy-id user@ip
+无密码登录 在客户端执行命令ssh-keygen生成id_rsa（私钥）、id_rsa_pub（公钥）
+在服务器端~/.ssh/authorized_keys文件中添加id_rsa.pub的内容
+或者，在需要无密码登录的机器上执行：ssh-copy-id user@ip
 证书登陆 ssh -i test.pem root@localhost
 服务重启 service ssh restart
 密码传递 我们可以通过 sshpass 给 ssh 传递密码，下面给出一个例子：
@@ -2221,7 +2266,7 @@ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Librar
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/go-sync/</guid>
-      <description>package main import ( &amp;quot;sync&amp;quot; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() } </description>
+      <description>package main import ( &amp;#34;sync&amp;#34; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() } </description>
     </item>
     
     <item>
@@ -2231,7 +2276,7 @@ brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Librar
       
       <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
       <description>集合 判断 Map 中是否存在指定 Key
-package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } } </description>
+package main import &amp;#34;fmt&amp;#34; func main() { mapTest := map[string]string{ &amp;#34;hao&amp;#34;: &amp;#34;hao value&amp;#34;, } if _, ok := mapTest[&amp;#34;hao&amp;#34;]; ok { fmt.Println(&amp;#34;ok&amp;#34;) } } </description>
     </item>
     
     <item>
@@ -2310,7 +2355,7 @@ Leader 当前，很多人称带团队的人之为“领导”，亦或者是“�
       
       <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
       <description>Action 1.条件语句 2.迭代 3.封装 4.引用
-条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }} 迭代 {{ range . }} {{ end }} {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }} 数组 {{ index &amp;quot;abc&amp;quot; 0 }} </description>
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }} 迭代 {{ range . }} {{ end }} {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }} 数组 {{ index &amp;#34;abc&amp;#34; 0 }} </description>
     </item>
     
     <item>
@@ -2350,7 +2395,7 @@ sudo rm -rf /usr/local/lib/node_modules/npm brew reinstall node </description>
       
       <guid>https://linuxsuren.github.io/blog/other/document/typora/</guid>
       <description>Typora 支持用 Markdown 的方式来“画”流程图。
-流程图 mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  序列图 mermaid.initialize({startOnLoad:true}); sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  甘特图 mermaid.initialize({startOnLoad:true}); gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  参考 https://support.</description>
+流程图 graph LR; A[Hard edge] --&gt;|Link text| B(Round edge) B --&gt; C{Decision} C --&gt;|One| D[Result one] C --&gt;|Two| E[Result two] 序列图 sequenceDiagram participant Alice participant Bob Alice-&gt;&gt;John: Hello John, how are you? loop Healthcheck John-&gt;John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--&gt;Alice: Great! John-&gt;Bob: How about you? Bob--&gt;John: Jolly good! 甘特图 gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d 参考 https://support.</description>
     </item>
     
     <item>
@@ -2399,7 +2444,7 @@ sudo xx is not in the sudoers file.
 :set nopaste
 字符 :set invlist 显示不可见字符
 :set nolist 隐藏不可见字符
-样例配置 set number set incsearch set hlsearch set autoindent &amp;quot;set smartindent set autochdir set ignorecase &amp;quot;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;quot;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;quot;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on </description>
+样例配置 set number set incsearch set hlsearch set autoindent &amp;#34;set smartindent set autochdir set ignorecase &amp;#34;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &amp;#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;#34;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;#34;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on </description>
     </item>
     
     <item>
@@ -2486,9 +2531,9 @@ Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
 将行首增加序列号 let i = 1 | g/./s/^/\=i/ | let i += 1
 将所有包含image331的行中，替换331为从331开始递增的数字 let i = 331 | g/image331/s/331/\=i/ | let i += 1
 从1358行开始进行替换 let i = 792 | 1358,$g/resources\/image/s/\d\d\d/\=i/ | let i += 2
-将所有已开头的行在结尾添加g/^\s*&amp;lt;para&amp;gt;/ s/$/&amp;lt;\/para&amp;gt;
+将所有已开头的行在结尾添加 g/^\s*&amp;lt;para&amp;gt;/ s/$/&amp;lt;\/para&amp;gt;
 把以开头，若干个空白结尾的行删除 g/^\s*&amp;lt;para&amp;gt;\s*&amp;lt;\/para&amp;gt;$/ del
-把以空白字符开头，并且第一个字符不是&amp;lt;的行首添加g!/^\s*&amp;lt;/ s/^/&amp;lt;para&amp;gt;
+把以空白字符开头，并且第一个字符不是&amp;lt;的行首添加 g!/^\s*&amp;lt;/ s/^/&amp;lt;para&amp;gt;
 把中间还有尖括号(&amp;lt;&amp;gt;)的行删除 g/&amp;lt;para&amp;gt;.*[&amp;lt;&amp;gt;].*&amp;lt;\/para&amp;gt;/ del
 找到没有以结尾的行 s/para&amp;gt;.*[^(&amp;lt;\/para&amp;gt;)]$</description>
     </item>
@@ -2540,8 +2585,8 @@ Reference vim-fugitive vim-scripts</description>
 alias wall-wget=&#39;wget -e &amp;quot;https_proxy=http://localhost:8123&amp;quot; &#39;
 递归下载 wget -A .hpi -np -r http://mirrors.jenkins-ci.org/plugins/hugo/ 参数 -A 指定要下载的文件扩展名 -np 不递归父目录 -r 表示递归下载
 HSTS wget http://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-darwin-amd64.tar.gz --no-hsts
-选项分类列表  启动  -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
- 记录和输入文件  -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
+选项分类列表 启动 -V, –version 显示wget的版本后退出 -h, –help 打印语法帮助 -b, –background 启动后转入后台执行 -e, –execute=COMMAND 执行`.wgetrc&amp;rsquo;格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc
+记录和输入文件 -o, –output-file=FILE 把记录写到FILE文件中 -a, –append-output=FILE 把记录追加到FILE文件中 -d, –debug 打印调试输出 -q, –quiet 安静模式(没有输出) -v, –verbose 冗长模式(这是缺省设置) -nv, –non-verbose 关掉冗长模式，但不是安静模式 -i, –input-file=FILE 下载在FILE文件中出现的URLs -F, –force-html 把输入文件当作HTML格式文件对待 -B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀 –sslcertfile=FILE 可选客户端证书 –sslcertkey=KEYFILE 可选客户端证书的KEYFILE –egd-file=FILE 指定EGD socket的文件名</description>
     </item>
     
     <item>
@@ -2585,85 +2630,6 @@ Example ifconfig | xclip -sel clip</description>
     </item>
     
     <item>
-      <title>代理</title>
-      <link>https://linuxsuren.github.io/blog/other/network/proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/other/network/proxy/</guid>
-      <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
-CentOS yum install shadowsocks
-pip install shadowsocks
-sudo pip install shadowsocks --upgrade
-使用 sudo sslocal -c shadowsocks.json -d start
-polipo 安装 sudo apt-get install polipo
-brew install polip
-安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
-使用 polipo socksParentProxy=127.0.0.1:1080
-配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy 参考 如何给 Git 配置代理</description>
-    </item>
-    
-    <item>
-      <title>参数化流水线</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
-      <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
-类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。
-点击这里查看更多的参数类型
-位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：
- codes/jenkinsfile/parameter.groovy   pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件  执行历史 每次执行时的参数值，都可以在执行历史中看到。</description>
-    </item>
-    
-    <item>
-      <title>发布Maven工程到中央仓库</title>
-      <link>https://linuxsuren.github.io/blog/devops/build/maven-release/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
-      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
-新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
-sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
-签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
-gpg --gen-key 生成密钥，成功后，会有类似如下的输出。
-gpg: key 69EC4448C6CE32EB marked as ultimately trusted
-gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
-69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。
-修改settings.xml 增加账户信息：
-&amp;lt;server&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;username&amp;gt;name&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;passwd&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; 设置gpg的profile：
-&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.executable&amp;gt;gpg2&amp;lt;/gpg.executable&amp;gt; &amp;lt;gpg.passphrase&amp;gt;pass&amp;lt;/gpg.passphrase&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt; 需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：
-&amp;lt;gpg.keyname&amp;gt;69EC4448C6CE32EB&amp;lt;/gpg.keyname&amp;gt;
-&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;gpg&amp;lt;/id&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.keyname&amp;gt;4FD28481A917951C&amp;lt;/gpg.keyname&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt; 修改pom文件 &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt; 上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
-&amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
-    </item>
-    
-    <item>
-      <title>命令提示符</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
-      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
-export PS1=&#39;[/u@/h /W/]/$ &#39;
-\u 当前用户帐号
-\h 当前主机名
-\W 当前路径（大写为相对路径，小写为绝对路径）
-\$</description>
-    </item>
-    
-    <item>
-      <title>在 CentOS 安装 Docker</title>
-      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
-      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine 安装依赖：
-yum install -y yum-utils \ device-mapper-persistent-data \ lvm2 添加库
-yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo 查看版本 yum list docker-ce --showduplicates | sort -r
-安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
-    </item>
-    
-    <item>
       <title>安装</title>
       <link>https://linuxsuren.github.io/blog/language/golang/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2700,26 +2666,56 @@ yum install python-pip</description>
     </item>
     
     <item>
-      <title>申明式流水线</title>
-      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <title>参数化流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
-      <description>流水线插件从 2.5 版本开始支持申明式流水线。
-申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
- codes/jenkinsfile/declarative.groovy   pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件  如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/parameterized/</guid>
+      <description>参数化可以避免创建很多相似的流水线，例如：同一个代码仓库，每次希望构建的分支不一样，就可以把分支的名称作为参数。
+类型 流水线支持很多类型的参数，包括：字符串、布尔值、密码、文件，甚至可以获取到其他任务（job）的数据。
+点击这里查看更多的参数类型
+位置 参数可以直接写在 Jenkinsfile 中，也可以在流水线配置界面上添加。下面给出一个在 Jenkinsfile 中添加参数的的例子：
+codes/jenkinsfile/parameter.groovy pipeline { agent { label &amp;#34;master&amp;#34; } parameters { text defaultValue: &amp;#39;Rick&amp;#39;, description: &amp;#39;&amp;#39;, name: &amp;#39;name&amp;#39; } stages{ stage(&amp;#34;one&amp;#34;){ steps{ echo name sh &amp;#39;echo ${name}&amp;#39; } } } } 原文件 执行历史 每次执行时的参数值，都可以在执行历史中看到。</description>
     </item>
     
     <item>
-      <title>确定 Linux 发行版的版本信息</title>
-      <link>https://linuxsuren.github.io/blog/os/linux/common/determine-version/</link>
+      <title>代理</title>
+      <link>https://linuxsuren.github.io/blog/other/network/proxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://linuxsuren.github.io/blog/os/linux/common/determine-version/</guid>
-      <description>Ubuntu lsb_release -a
- cat /etc/redhat-release
-cat /proc/version
-cat /etc/issue</description>
+      <guid>https://linuxsuren.github.io/blog/other/network/proxy/</guid>
+      <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks
+CentOS yum install shadowsocks
+pip install shadowsocks
+sudo pip install shadowsocks --upgrade
+使用 sudo sslocal -c shadowsocks.json -d start
+polipo 安装 sudo apt-get install polipo
+brew install polip
+安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install
+使用 polipo socksParentProxy=127.0.0.1:1080
+配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy 参考 如何给 Git 配置代理</description>
+    </item>
+    
+    <item>
+      <title>发布Maven工程到中央仓库</title>
+      <link>https://linuxsuren.github.io/blog/devops/build/maven-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/build/maven-release/</guid>
+      <description>注册帐号 https://issues.sonatype.org/secure/Signup!default.jspa
+新建项目 https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134
+sonatype对发布的jar有一些要求，必须包括：源码（既然是开源，那么源码肯定是少不了的）、javaDoc、gpg签名。下面介绍如何安装gpg工具，然后生成签名文件。
+签名 参考这里安装gpg。完成后，按照下面的步骤生成密钥。
+gpg --gen-key 生成密钥，成功后，会有类似如下的输出。
+gpg: key 69EC4448C6CE32EB marked as ultimately trusted
+gpg: directory &amp;lsquo;/Users/mac/.gnupg/openpgp-revocs.d&amp;rsquo; created
+69EC4448C6CE32EB就是我们需要的keyname，会在maven的settings.xml中配置。
+修改settings.xml 增加账户信息：
+&amp;lt;server&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;username&amp;gt;name&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;passwd&amp;lt;/password&amp;gt; &amp;lt;/server&amp;gt; 设置gpg的profile：
+&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;hello&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.executable&amp;gt;gpg2&amp;lt;/gpg.executable&amp;gt; &amp;lt;gpg.passphrase&amp;gt;pass&amp;lt;/gpg.passphrase&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt; 需要注意的是，gpg有两个版本gpg和gpg2。maven的gpg插件，默认使用gpg命令来作签名，如果你需要使用gpg2的话，可以在参考上面的配置来修改（gpg.executable）。另外，上面的配置中，直接写了密钥，这样可能是不安全的。你可以在配置文件中配置keyname，如下所示：
+&amp;lt;gpg.keyname&amp;gt;69EC4448C6CE32EB&amp;lt;/gpg.keyname&amp;gt;
+&amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;gpg&amp;lt;/id&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;gpg.keyname&amp;gt;4FD28481A917951C&amp;lt;/gpg.keyname&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt; 修改pom文件 &amp;lt;distributionManagement&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;Sonatype Staging Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/service/local/staging/deploy/maven2&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;snapshotRepository&amp;gt; &amp;lt;id&amp;gt;oss-sonatype-staging&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;OSS Sonatype Nexus Snapshots&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;https://oss.sonatype.org/content/repositories/snapshots&amp;lt;/url&amp;gt; &amp;lt;/snapshotRepository&amp;gt; &amp;lt;/distributionManagement&amp;gt; 上面的配置，描述了版本（release、snapshot）的发布地址。另外，这里的id需要和settings.xml中server的id保持一致。然后，添加生成javaDoc、源码等的Maven插件：
+&amp;lt;profiles&amp;gt; &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;release&amp;lt;/id&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -2728,8 +2724,22 @@ cat /etc/issue</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/scripted/</guid>
-      <description>触发器  codes/jenkinsfile/script-trigger.groovy   node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件  参数化执行 properties([[$class: &amp;#39;JobRestrictionProperty&amp;#39;], parameters([run(description: &amp;#39;&amp;#39;, filter: &amp;#39;ALL&amp;#39;, name: &amp;#39;Name&amp;#39;, projectName: &amp;#39;Project&amp;#39;)]), pipelineTriggers([])] ) 异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
- codes/jenkinsfile/try-catch.groovy   node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件  循环  codes/jenkinsfile/loop.</description>
+      <description>触发器 codes/jenkinsfile/script-trigger.groovy node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件 参数化执行 properties([[$class: &amp;#39;JobRestrictionProperty&amp;#39;], parameters([run(description: &amp;#39;&amp;#39;, filter: &amp;#39;ALL&amp;#39;, name: &amp;#39;Name&amp;#39;, projectName: &amp;#39;Project&amp;#39;)]), pipelineTriggers([])] ) 异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post
+codes/jenkinsfile/try-catch.groovy node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件 循环 codes/jenkinsfile/loop.groovy node(&amp;#39;suren&amp;#39;) { def dev_path = &amp;#39;/opt/suren/bin&amp;#39; def services = [ [ &amp;#39;name&amp;#39;: &amp;#39;admin&amp;#39;, &amp;#39;project&amp;#39;: &amp;#39;admin&amp;#39;, &amp;#39;port&amp;#39;: &amp;#39;7002&amp;#39;, &amp;#39;jarName&amp;#39;: &amp;#39;admin&amp;#39; ] ]; stage(&amp;#39;Copy Artifact&amp;#39;) { for(service in services){ step([$class: &amp;#39;CopyArtifact&amp;#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
+    </item>
+    
+    <item>
+      <title>命令提示符</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/prompting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/prompting/</guid>
+      <description>命令提示符 使用命令 echo $PS1 可以查看当前的命令提示符配置
+export PS1=&#39;[/u@/h /W/]/$ &#39;
+\u 当前用户帐号
+\h 当前主机名
+\W 当前路径（大写为相对路径，小写为绝对路径）
+\$</description>
     </item>
     
     <item>
@@ -2739,13 +2749,48 @@ cat /etc/issue</description>
       
       <guid>https://linuxsuren.github.io/blog/devops/docker/docker-config/</guid>
       <description>代理 给 Docker 设置代理，该代理是在拉取镜像时的网络代理设置
-mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;quot;HTTP_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;HTTPS_PROXY=http://your.proxy:8080&amp;quot; Environment=&amp;quot;NO_PROXY=127.0.0.1,localhost&amp;quot; EOF systemctl daemon-reload systemctl restart docker 运行时代理 { &amp;quot;HttpHeaders&amp;quot;: { &amp;quot;User-Agent&amp;quot;: &amp;quot;Docker-Client/19.03.4 (linux)&amp;quot; }, &amp;quot;proxies&amp;quot;: { &amp;quot;default&amp;quot;: { &amp;quot;httpProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;httpsProxy&amp;quot;: &amp;quot;http://172.17.212.62:3128&amp;quot;, &amp;quot;noProxy&amp;quot;: &amp;quot;127.0.0.1,localhost,172.17.212.63&amp;quot; } } } Insecure vim /etc/systemd/system/docker.service.d/docker.conf
+mkdir -p /etc/systemd/system/docker.service.d cat &amp;gt; /etc/systemd/system/docker.service.d/http-proxy.conf &amp;lt;&amp;lt; EOF [Service] Environment=&amp;#34;HTTP_PROXY=http://your.proxy:8080&amp;#34; Environment=&amp;#34;HTTPS_PROXY=http://your.proxy:8080&amp;#34; Environment=&amp;#34;NO_PROXY=127.0.0.1,localhost&amp;#34; EOF systemctl daemon-reload systemctl restart docker 运行时代理 { &amp;#34;HttpHeaders&amp;#34;: { &amp;#34;User-Agent&amp;#34;: &amp;#34;Docker-Client/19.03.4 (linux)&amp;#34; }, &amp;#34;proxies&amp;#34;: { &amp;#34;default&amp;#34;: { &amp;#34;httpProxy&amp;#34;: &amp;#34;http://172.17.212.62:3128&amp;#34;, &amp;#34;httpsProxy&amp;#34;: &amp;#34;http://172.17.212.62:3128&amp;#34;, &amp;#34;noProxy&amp;#34;: &amp;#34;127.0.0.1,localhost,172.17.212.63&amp;#34; } } } Insecure vim /etc/systemd/system/docker.service.d/docker.conf
 [Service] ExecStart= ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 10.101.101.45:5000 vim /etc/docker/daemon.json
 &amp;quot;insecure-registries&amp;quot; : [&amp;quot;192.168.0.180&amp;quot;]
 Ubuntu 下修改配置文件 vim /etc/default/docker 添加如下内容：
 DOCKER_OPTS=&amp;quot;$DOCKER_OPTS --insecure-registry registry_server_name/ip:port&amp;quot;
 User 让普通用户可以执行 docker
 sudo groupadd docker</description>
+    </item>
+    
+    <item>
+      <title>确定 Linux 发行版的版本信息</title>
+      <link>https://linuxsuren.github.io/blog/os/linux/common/determine-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/os/linux/common/determine-version/</guid>
+      <description>Ubuntu lsb_release -a
+cat /etc/redhat-release
+cat /proc/version
+cat /etc/issue</description>
+    </item>
+    
+    <item>
+      <title>申明式流水线</title>
+      <link>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>流水线插件从 2.5 版本开始支持申明式流水线。
+申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：
+codes/jenkinsfile/declarative.groovy pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件 如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+    </item>
+    
+    <item>
+      <title>在 CentOS 安装 Docker</title>
+      <link>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linuxsuren.github.io/blog/devops/docker/docker-centos/</guid>
+      <description>yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine 安装依赖：
+yum install -y yum-utils \ device-mapper-persistent-data \ lvm2 添加库
+yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo 查看版本 yum list docker-ce --showduplicates | sort -r
+安装 Docker yum install docker-ce 安装执行版本 yum install docker-ce17.12.0.ce-1.el7.centos</description>
     </item>
     
   </channel>

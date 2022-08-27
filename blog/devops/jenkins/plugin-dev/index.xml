@@ -13,7 +13,7 @@
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
-      <description>   类型 接口 描述     监听队列事件 hudson.model.queue.QueueListener    任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件   任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件    </description>
+      <description> 类型 接口 描述 监听队列事件 hudson.model.queue.QueueListener 任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件 任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件 </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ mvn hpi:run -Djenkins.install.runSetupWizard=true
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-i18n/</guid>
       <description>帮助文件 hudson.model.Descriptor
- 与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下  http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
+与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下 http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port
 http://localhost:8080/jenkins/help/parameter/file.html</description>
     </item>
     
@@ -62,7 +62,7 @@ http://localhost:8080/jenkins/help/parameter/file.html</description>
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
       <description>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。
 接口 你首先需要实现接口 hudson.model.Action 的三个方法:
- getIconFileName getDisplayName getUrlName  hudson.model.queue.FoldableAction
+getIconFileName getDisplayName getUrlName hudson.model.queue.FoldableAction
 约定 QueueAction hudson.model.Queue.QueueAction
 方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。
 FoldableAction hudson.model.queue.FoldableAction</description>
@@ -111,7 +111,7 @@ hudson.model.Queue.QueueDecisionHandler</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-junit/</guid>
-      <description>断言 @Test public void basic() { assertThat(&amp;quot;abc&amp;quot;, StringContains.containsString(&amp;quot;a&amp;quot;)); assertThat(&amp;quot;abc&amp;quot;, Matchers.not(StringContains.containsString(&amp;quot;d&amp;quot;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;quot;&amp;quot;); assertEquals(&amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;); } 数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
+      <description>断言 @Test public void basic() { assertThat(&amp;#34;abc&amp;#34;, StringContains.containsString(&amp;#34;a&amp;#34;)); assertThat(&amp;#34;abc&amp;#34;, Matchers.not(StringContains.containsString(&amp;#34;d&amp;#34;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;#34;&amp;#34;); assertEquals(&amp;#34;a&amp;#34;, &amp;#34;a&amp;#34;); } 数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。
 例如：该注解加载类 org.test.TestAgent 的方法 test 上的话，就会去加载目录 src/test/resources/org/test/TestAgent/test 中的配置文件。另外，它还有一个 value 参数可以替代使用方法名称。
 框架 Jenkins 的测试框架为 acceptance-test-harness。
 在 pom.xml 中可以修改框架的版本，如下所示：
@@ -145,11 +145,11 @@ CredentialsStore 凭据存储接口</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
-      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;quot;/lib/form&amp;quot;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;quot;Test Connection&amp;quot; method=&amp;quot;verifyConnect&amp;quot; with=&amp;quot;server,credentialsId&amp;quot; progress=&amp;quot;Testing...&amp;quot;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt; 下拉框 在 jelly 文件添加如下标签：
-&amp;lt;f:entry field=&amp;quot;method&amp;quot; title=&amp;quot;${%Method}&amp;quot;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt; 在对应的后端类的 DescriptorImpl 中添加如下方法：
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;#34;/lib/form&amp;#34;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;#34;Test Connection&amp;#34; method=&amp;#34;verifyConnect&amp;#34; with=&amp;#34;server,credentialsId&amp;#34; progress=&amp;#34;Testing...&amp;#34;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt; 下拉框 在 jelly 文件添加如下标签：
+&amp;lt;f:entry field=&amp;#34;method&amp;#34; title=&amp;#34;${%Method}&amp;#34;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt; 在对应的后端类的 DescriptorImpl 中添加如下方法：
 public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; } 细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。
 校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：
-&amp;lt;f:entry title=&amp;quot;${%Crontab}&amp;quot; field=&amp;quot;crontab&amp;quot;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.create(fixNull(value), item != null ?</description>
+&amp;lt;f:entry title=&amp;#34;${%Crontab}&amp;#34; field=&amp;#34;crontab&amp;#34;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.create(fixNull(value), item != null ?</description>
     </item>
     
     <item>
@@ -171,7 +171,7 @@ public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBo
       <guid>https://linuxsuren.github.io/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
       <description>环境准备 你需要安装好Java和Maven。
 创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。
- 插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
+插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。
 运行 在工程根目录下执行 mvn hpi:run
 访问 http://localhost:8080/jenkins/
 Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。

@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -225,13 +235,13 @@ var trackOutboundLink = function(id, url) {
 <div class="prose" id="prose">
 
 <h1 id="按钮">按钮</h1>
-<pre tabindex="0"><code>&lt;j:jelly  xmlns:f=&quot;/lib/form&quot;&gt;&lt;/j:jelly&gt;
-&lt;f:validateButton title=&quot;Test Connection&quot; method=&quot;verifyConnect&quot; with=&quot;server,credentialsId&quot; progress=&quot;Testing...&quot;&gt;&lt;/f:validateButton&gt;
+<pre tabindex="0"><code>&lt;j:jelly  xmlns:f=&#34;/lib/form&#34;&gt;&lt;/j:jelly&gt;
+&lt;f:validateButton title=&#34;Test Connection&#34; method=&#34;verifyConnect&#34; with=&#34;server,credentialsId&#34; progress=&#34;Testing...&#34;&gt;&lt;/f:validateButton&gt;
 &lt;f:textbox/&gt;
 &lt;f:checkbox/&gt;
 </code></pre><h1 id="下拉框">下拉框</h1>
 <p>在 <code>jelly</code> 文件添加如下标签：</p>
-<pre tabindex="0"><code>&lt;f:entry field=&quot;method&quot; title=&quot;${%Method}&quot;&gt;
+<pre tabindex="0"><code>&lt;f:entry field=&#34;method&#34; title=&#34;${%Method}&#34;&gt;
     &lt;f:select/&gt;
 &lt;/f:entry&gt;
 </code></pre><p>在对应的后端类的 <code>DescriptorImpl</code> 中添加如下方法：</p>
@@ -244,7 +254,7 @@ var trackOutboundLink = function(id, url) {
 </code></pre><p>细心的童鞋肯定能看出来，<code>doFillMethodItems</code> 中间的 <code>Method</code> 就对应页面上的字段名称。</p>
 <h1 id="校验">校验</h1>
 <p>如果你的表单里有一个字段 <code>crontab</code> 希望能添加数据格式校验的话，可以在对应类的 <code>DescriptorImpl</code> 中添加方法来实现：</p>
-<pre tabindex="0"><code>&lt;f:entry title=&quot;${%Crontab}&quot; field=&quot;crontab&quot;&gt;
+<pre tabindex="0"><code>&lt;f:entry title=&#34;${%Crontab}&#34; field=&#34;crontab&#34;&gt;
 &lt;f:textbox/&gt;
 &lt;/f:entry&gt;
 </code></pre><pre tabindex="0"><code>public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) {
@@ -255,19 +265,19 @@ var trackOutboundLink = function(id, url) {
         updateValidationsForNextRun(validations, ctl);
         return FormValidation.aggregate(validations);
     } catch (ANTLRException e) {
-        if (value.trim().indexOf('\n')==-1 &amp;&amp; value.contains(&quot;**&quot;))
+        if (value.trim().indexOf(&#39;\n&#39;)==-1 &amp;&amp; value.contains(&#34;**&#34;))
             return FormValidation.error(Messages.TimerTrigger_MissingWhitespace());
         return FormValidation.error(e.getMessage());
     }
 }
 </code></pre><h1 id="凭据">凭据</h1>
-<pre tabindex="0"><code>&lt;j:jelly xmlns:c=&quot;/lib/credentials&quot;&gt;
+<pre tabindex="0"><code>&lt;j:jelly xmlns:c=&#34;/lib/credentials&#34;&gt;
 &lt;c:select/&gt;
 &lt;/j:jelly&gt;
 </code></pre><h1 id="高级">高级</h1>
 <p>当有些字段具有默认值，通常情况下也无需修改时，你可以把这些字段隐藏起来（只有点击高级选项的时候才会展示）。</p>
 <pre tabindex="0"><code>&lt;f:advanced&gt;
-    &lt;f:entry field=&quot;format&quot; title=&quot;Format&quot;&gt;
+    &lt;f:entry field=&#34;format&#34; title=&#34;Format&#34;&gt;
         &lt;f:textbox/&gt;
     &lt;/f:entry&gt;
 &lt;/f:advanced&gt;
@@ -614,6 +624,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -227,7 +237,7 @@ var trackOutboundLink = function(id, url) {
 <p>从节点公钥和私钥</p>
 <h1 id="根证书">根证书</h1>
 <pre tabindex="0"><code>openssl genrsa -out ca-key.pem 2048
-openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &quot;/CN=kube-ca&quot;
+openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj &#34;/CN=kube-ca&#34;
 </code></pre><h1 id="api-server-证书">API Server 证书</h1>
 <p>创建 <code>openssl.cnf</code></p>
 <pre tabindex="0"><code>[req]
@@ -246,7 +256,7 @@ DNS.4 = kubernetes.default.svc.cluster.local
 IP.1 = ${K8S_SERVICE_IP}
 IP.2 = ${MASTER_IPV4}
 </code></pre><pre tabindex="0"><code>openssl genrsa -out apiserver-key.pem 2048
-openssl req -new -key apiserver-key.pem -out apiserver.csr -subj &quot;/CN=kube-apiserver&quot; -config openssl.cnf
+openssl req -new -key apiserver-key.pem -out apiserver.csr -subj &#34;/CN=kube-apiserver&#34; -config openssl.cnf
 openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf
 </code></pre><p>一般生成的根证书(ca-key.pem, ca.pem)与 apiserver 证书(apiserver-key.pem,apiserver.pem)放置在 Master 节点的 <code>/etc/kubernetes/ssl/</code> 路径下</p>
 <h1 id="ref">Ref</h1>
@@ -574,6 +584,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -251,8 +261,8 @@ var trackOutboundLink = function(id, url) {
 <p>对于希望使用自定义 JNLP 镜像的用户来说，可以多添加一个 JNLP 镜像就可以覆盖了。</p>
 <h1 id="多容器">多容器</h1>
 <p>Pod 里如果包含多个容器的话，在使用的过程中，要注意根据实际情况进行切换。对应的 DSL 语句如下：</p>
-<pre tabindex="0"><code>container(&quot;container_name&quot;){
-    echo &quot;hello&quot;
+<pre tabindex="0"><code>container(&#34;container_name&#34;){
+    echo &#34;hello&#34;
 }
 </code></pre><h1 id="排错">排错</h1>
 
@@ -274,10 +284,23 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-67622" target="_blank">JENKINS-67622</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-69411" target="_blank">JENKINS-69411</a>
         </td>
         <td>
-            Kubernetes Plugin 1.31.3 Errors Connecting to host Cluster
+            Kubernetes-Nodes seems to uses an old remoting version
+        </td>
+    </tr>
+    
+
+
+    
+    <tr>
+        <td>Improvement</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-69401" target="_blank">JENKINS-69401</a>
+        </td>
+        <td>
+            kubernetes plugins ---cannot modify label and lack &#34;system information&#34;
         </td>
     </tr>
     
@@ -287,23 +310,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-67621" target="_blank">JENKINS-67621</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-69306" target="_blank">JENKINS-69306</a>
         </td>
         <td>
-            Order of environment variables differ from config.xml and YAML
-        </td>
-    </tr>
-    
-
-
-    
-    <tr>
-        <td>Bug</td>
-        <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-67608" target="_blank">JENKINS-67608</a>
-        </td>
-        <td>
-            jenkins-agent changed the input arguments
+            Missing &#34;System Information&#34; item on Kubernetes pod agents
         </td>
     </tr>
     
@@ -313,10 +323,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-67592" target="_blank">JENKINS-67592</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-69285" target="_blank">JENKINS-69285</a>
         </td>
         <td>
-            Jenkins starts pipeline before the agent pod is ready
+            Kubernetes agent windows pod workspaceVolume
         </td>
     </tr>
     
@@ -326,10 +336,10 @@ var trackOutboundLink = function(id, url) {
     <tr>
         <td>Bug</td>
         <td>
-            <a href="https://issues.jenkins-ci.org/browse/JENKINS-67575" target="_blank">JENKINS-67575</a>
+            <a href="https://issues.jenkins-ci.org/browse/JENKINS-69270" target="_blank">JENKINS-69270</a>
         </td>
         <td>
-            &#34;cannot start writing logs to a finished node&#34; from PodTemplateStepExecution.onResume
+            tcpSlaveAgentListener/: connect timed out
         </td>
     </tr>
     
@@ -471,7 +481,7 @@ var trackOutboundLink = function(id, url) {
 
 </table>
 
-一共：762个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
+一共：820个，<a href="https://issues.jenkins-ci.org/issues/?jql=component%2520%253D%2520kubernetes-plugin" target="_blank">查看更多</a>
 
 
 </aside>
@@ -849,6 +859,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

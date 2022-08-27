@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -123,6 +123,16 @@ var trackOutboundLink = function(id, url) {
           </a>
         </li>
       
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
+              
+            
+            
+          </a>
+        </li>
+      
     </ul>
 
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
@@ -215,7 +225,7 @@ Feed, CRLF），然而，在 Linux/MacOS 上则是换行（Line Feed, LF）。</
 <p>从表面看起来，内容都是一样的，那我们为什么还会困扰呢？??</p>
 <p>好的，如果你启用了该功能，并设置属性 <code>endOfLine</code> 为 <code>lf</code> 的话。</p>
 <pre tabindex="0"><code>{
-  &quot;endOfLine&quot;: &quot;lf&quot;
+  &#34;endOfLine&#34;: &#34;lf&#34;
 }
 </code></pre><p>在 Windows 上，开发者会看到如下的检查警告。</p>
 <p><img src="../linting-errors.png" alt="linting-errors.png"></p>
@@ -228,7 +238,7 @@ Feed, CRLF），然而，在 Linux/MacOS 上则是换行（Line Feed, LF）。</
 *.json  eol=lf
 </code></pre><p>把该文件提交并推送到服务器上。</p>
 <pre tabindex="0"><code>git add .
-git commit -m &quot;Added .gitattributes to repo&quot;
+git commit -m &#34;Added .gitattributes to repo&#34;
 git push
 </code></pre><p>现在，任何人从仓库获取代码后，创建以及修改文件时，git 都会自动地设置好正确的文件结尾。</p>
 <h2 id="增加到已有的-git-仓库">增加到已有的 Git 仓库</h2>
@@ -566,6 +576,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

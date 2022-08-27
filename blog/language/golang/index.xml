@@ -14,8 +14,8 @@
       
       <guid>https://linuxsuren.github.io/blog/language/golang/init/</guid>
       <description>init 函数定义在包（package）中，并有如下的用处：
- 初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算  包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
- 初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数  &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  包初始化只会执行一次，即使会被导入多次。
+初始化变量（无法在初始化表达中完成的） 注册 执行一次性计算 包初始化 为了使用一个导入的包，首先需要初始化。这是由 Golang 的运行时系统完成，包含如下步骤：
+初始化导入的包（递归） 计算在包级别申明的变量并赋值 执行包中的 init 函数 &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; 包初始化只会执行一次，即使会被导入多次。
 属性 init 函数没有任何参数，也不会返回任何值。而且，它也无法被调用。
 init 函数可以定义多次。
 只在内部导入包 Go 对于没有用到的包是很严格的。有时候，我们可能希望导入一个包，只是为了调用 init 函数。可以按照如下方式来：
@@ -29,8 +29,8 @@ import _ &amp;quot;image/png&amp;quot;</description>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/ginkgo/</guid>
       <description>Ginkgo 是 Golang 的 BDD 测试框架。 从它的 官方文档 中可以看到大致的用法。可惜的是，写文本时还没有中文的文档。
-&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt;  ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
- Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
+&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;admonition-content&amp;quot;&amp;gt; ️⚠️值得注意的是：测试用例的文件必须是以 test 结尾的，例如：foo_test.go
+Gomega 是 Ginkgo 推荐的逻辑判断库，查看 官方文档，了解更多内容。
 执行测试 ginkgo test pkg/registry/generic
 IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
     </item>
@@ -43,8 +43,8 @@ IDE 插件 VS-Code 的插件 vscode-ginkgo</description>
       <guid>https://linuxsuren.github.io/blog/language/golang/gmock/</guid>
       <description>GoMock 是 Go 语言的 Mock 框架。它可以很很好地和 Go 内置的 testing 包集成。
 安装 你只要安装了 Go 就可以通过下面的命令来安装 gomock 和 mockgen 工具。
-go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen 编写接口（测试用）  codes/golang/gmock/foo.go   package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {}  原文件  生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
-测试用例  codes/golang/gmock/foo_test.go   package main import ( &amp;#34;testing&amp;#34; &amp;#34;.</description>
+go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen 编写接口（测试用） codes/golang/gmock/foo.go package main // Foo no-sense interface demo type Foo interface { Max(a, b int) int } func main() {} 原文件 生成 Mock 接口 执行命令 mockgen --source=foo.go --destination foo-mock.go
+测试用例 codes/golang/gmock/foo_test.go package main import ( &amp;#34;testing&amp;#34; &amp;#34;./mock_main&amp;#34; &amp;#34;github.com/golang/mock/gomock&amp;#34; ) func TestFoo(t *testing.T) { ctrl := gomock.</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen �
       <pubDate>Thu, 03 Jan 2019 10:38:18 +0800</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/slice/</guid>
-      <description>  codes/golang/slice/main.go   package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) initMap := map[string]string{ &amp;#34;one&amp;#34;: &amp;#34;first man&amp;#34;, } fmt.Println(initMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) }  原文件  </description>
+      <description> codes/golang/slice/main.go package main import &amp;#34;fmt&amp;#34; func main() { demo4Array() demo4Map() } func demo4Map() { var strMap map[string]string strMap = make(map[string]string) strMap[&amp;#34;name&amp;#34;] = &amp;#34;link&amp;#34; fmt.Println(strMap) initMap := map[string]string{ &amp;#34;one&amp;#34;: &amp;#34;first man&amp;#34;, } fmt.Println(initMap) } func demo4Array() { var array []string array = make([]string, 1) array[0] = &amp;#34;one&amp;#34; array = append(array, &amp;#34;two&amp;#34;) array = append(array, &amp;#34;three&amp;#34;, &amp;#34;four&amp;#34;) others := []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;} array = append(array, others...) fmt.Println(array) fmt.Println(len(array)) } 原文件 </description>
     </item>
     
     <item>
@@ -100,11 +100,12 @@ go get github.com/golang/mock/gomock go install github.com/golang/mock/mockgen �
       <guid>https://linuxsuren.github.io/blog/language/golang/go/</guid>
       <description>Environment 环境变量 GOROOT 是 Golang 的安装根目录
 环境变量 GOPATH 是 Golang 的包依赖目录，包括的目录有：
- src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录  GOGC GOGC 是用来控制内存垃圾回收（GC）被触发时的比例，默认值为：GOGC=100。GOGC=off可以完全关闭垃圾回收。
+src 源码 bin 执行 go get 等命令的二进制文件下载目录 pkg 生成编译文件的目录 GOGC GOGC 是用来控制内存垃圾回收（GC）被触发时的比例，默认值为：GOGC=100。GOGC=off可以完全关闭垃圾回收。
 Proxy 在使用命令 go get xxx 时，如果需要翻墙的话，可以考虑下面的方案
 设置全局代理 git config --global http.proxy &#39;http://192.168.2.9:8123&#39;
 设置忽略的代理 git config --global no.proxy &#39;*.github.com&#39;
-Package import If you want to use a custom domain in your Go import path, please read more about govanit. Here is a blog related with it.</description>
+Package import If you want to use a custom domain in your Go import path, please read more about govanit. Here is a blog related with it.
+A online service of Go Vanity Server.</description>
     </item>
     
     <item>
@@ -113,8 +114,8 @@ Package import If you want to use a custom domain in your Go import path, please
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/json/</guid>
-      <description>/codes/golang/json/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } }  原文件  数据格式转换 下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式
- /codes/golang/json-marshal/main.go   package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;strings&amp;#34; ) var json_str = `{ &amp;#34;value&amp;#34;: &amp;#34;GOOD&amp;#34;, &amp;#34;name&amp;#34;:&amp;#34;name&amp;#34; }` var json_bool = `{ &amp;#34;value&amp;#34;: false, &amp;#34;name&amp;#34;:&amp;#34;good&amp;#34; }` type Form struct { Value ComposeValue Name string } type ComposeValue struct { Value string } func (f *ComposeValue) UnmarshalJSON(data []byte) error { originStr := strings.</description>
+      <description>/codes/golang/json/main.go package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; ) func main() { jsonStr := ` [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;] ` var array []string err := json.Unmarshal([]byte(jsonStr), &amp;amp;array) if err != nil { log.Println(err) } else { log.Println(array) } } 原文件 数据格式转换 下面的例子中，可以将 JSON 中同一个字段不同数据类型统一转换为字符串格式
+/codes/golang/json-marshal/main.go package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;strings&amp;#34; ) var json_str = `{ &amp;#34;value&amp;#34;: &amp;#34;GOOD&amp;#34;, &amp;#34;name&amp;#34;:&amp;#34;name&amp;#34; }` var json_bool = `{ &amp;#34;value&amp;#34;: false, &amp;#34;name&amp;#34;:&amp;#34;good&amp;#34; }` type Form struct { Value ComposeValue Name string } type ComposeValue struct { Value string } func (f *ComposeValue) UnmarshalJSON(data []byte) error { originStr := strings.</description>
     </item>
     
     <item>
@@ -123,7 +124,7 @@ Package import If you want to use a custom domain in your Go import path, please
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/goroutines/</guid>
-      <description>简单例子  </description>
+      <description>简单例子 </description>
     </item>
     
     <item>
@@ -142,7 +143,7 @@ govendor list</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/http/</guid>
-      <description>codes/golang/http/main.go   package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;strings&amp;#34; ) func main() { test() url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) } func test() { data := `json={&amp;#34;parameter&amp;#34;:[{&amp;#34;name&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;bob&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;age&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;12&amp;#34;}]}` inputURL := &amp;amp;url.</description>
+      <description>codes/golang/http/main.go package main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;net/url&amp;#34; &amp;#34;strings&amp;#34; ) func main() { test() url := url.URL{ Host: &amp;#34;linuxsuren.github.io&amp;#34;, Path: &amp;#34;/index.json&amp;#34;, Scheme: &amp;#34;https&amp;#34;, } fmt.Println(url.RequestURI()) fmt.Println(url.String()) response, err := http.Get(url.String()) if err != nil { fmt.Printf(&amp;#34;get error %v\n&amp;#34;, err) return } data, err := ioutil.ReadAll(response.Body) if err != nil { fmt.Printf(&amp;#34;read error %v\n&amp;#34;, err) return } fmt.Println(string(data)) } func test() { data := `json={&amp;#34;parameter&amp;#34;:[{&amp;#34;name&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;bob&amp;#34;},{&amp;#34;name&amp;#34;:&amp;#34;age&amp;#34;,&amp;#34;value&amp;#34;:&amp;#34;12&amp;#34;}]}` inputURL := &amp;amp;url.URL{ Host: &amp;#34;jenkins.</description>
     </item>
     
     <item>
@@ -151,7 +152,7 @@ govendor list</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/go-sync/</guid>
-      <description>package main import ( &amp;quot;sync&amp;quot; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() } </description>
+      <description>package main import ( &amp;#34;sync&amp;#34; ) type Boot struct { count int once sync.Once } func (b *Boot) Init() { b.once.Do(func() { b.count += 1 }) } func main() { b := Boot{ count: 0, } b.Init() } </description>
     </item>
     
     <item>
@@ -161,7 +162,7 @@ govendor list</description>
       
       <guid>https://linuxsuren.github.io/blog/language/golang/syntax/</guid>
       <description>集合 判断 Map 中是否存在指定 Key
-package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]string{ &amp;quot;hao&amp;quot;: &amp;quot;hao value&amp;quot;, } if _, ok := mapTest[&amp;quot;hao&amp;quot;]; ok { fmt.Println(&amp;quot;ok&amp;quot;) } } </description>
+package main import &amp;#34;fmt&amp;#34; func main() { mapTest := map[string]string{ &amp;#34;hao&amp;#34;: &amp;#34;hao value&amp;#34;, } if _, ok := mapTest[&amp;#34;hao&amp;#34;]; ok { fmt.Println(&amp;#34;ok&amp;#34;) } } </description>
     </item>
     
     <item>
@@ -171,7 +172,7 @@ package main import &amp;quot;fmt&amp;quot; func main() { mapTest := map[string]
       
       <guid>https://linuxsuren.github.io/blog/language/golang/template/</guid>
       <description>Action 1.条件语句 2.迭代 3.封装 4.引用
-条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }} 迭代 {{ range . }} {{ end }} {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }} 数组 {{ index &amp;quot;abc&amp;quot; 0 }} </description>
+条件语句 {{ if arg }} code {{ end }} {{ if arg }} code-1 {{ else }} code-2 {{ end }} 迭代 {{ range . }} {{ end }} {{ range $key, $value := . }} {{ $key }} {{ $value }} {{ end }} 数组 {{ index &amp;#34;abc&amp;#34; 0 }} </description>
     </item>
     
     <item>

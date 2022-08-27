@@ -21,7 +21,8 @@ mvn clean package --offline
 部署 mvn deploy
 多模块 部署 如果有一个多模块的 Maven 工程，但是，在发布的时候有些工程不希望发布，例如：example 工程。这时候，可以在不需要发布的模块工程 pom.xml 中添加如下插件配置：
 &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;skip&amp;gt;true&amp;lt;/skip&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks! 查看依赖 mvn dependency:tree 查看依赖树
-mvn dependency:resolve</description>
+mvn dependency:resolve
+mvn dependency:analyze 依赖分析</description>
     </item>
     
     <item>
@@ -73,10 +74,9 @@ https://github.com/pstadler/keybase-gpg-github/issues/11 https://github.com/jenk
       <guid>https://linuxsuren.github.io/blog/devops/build/nexus/</guid>
       <description>初始密码 Nexus3 的 admin 的初始密码默认会自动生成，并保存在文件 /nexus-data/admin.password 中。
 为了自动化 Nexus 的安装和初始化配置工作，我们需要能够将管理员的初始密码固定或者可以设置。 这时候，你可以通过下面的两个途径来做到：
- 修改 $data-dir/etc/nexus.properties 文件中的值 nexus.security.randompassword 为 false 设置环境变量 NEXUS_SECURITY_RANDOMPASSWORD 的值为 false   See Also
+修改 $data-dir/etc/nexus.properties 文件中的值 nexus.security.randompassword 为 false 设置环境变量 NEXUS_SECURITY_RANDOMPASSWORD 的值为 false See Also
 Sonatype community discuss
-Source code
- </description>
+Source code</description>
     </item>
     
     <item>

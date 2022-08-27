@@ -21,7 +21,7 @@
     
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <meta name="generator" content="Hugo 0.92.0" />
+      <meta name="generator" content="Hugo 0.101.0" />
 
       
         <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -117,6 +117,16 @@ var trackOutboundLink = function(id, url) {
             
           <a href="/opensource" class="dim link light-silver">
             开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
               
             
             
@@ -252,17 +262,17 @@ var trackOutboundLink = function(id, url) {
 echo $(basename $path)
 echo $(dirname $path)
 </code></pre><h2 id="文件是否存在">文件是否存在</h2>
-<pre tabindex="0"><code>if [ ! -f &quot;env.sh&quot; ]; then
-    echo &quot;we need the env.sh to setup vars&quot;
+<pre tabindex="0"><code>if [ ! -f &#34;env.sh&#34; ]; then
+    echo &#34;we need the env.sh to setup vars&#34;
     exit -1
 else
-    echo &quot;file exists&quot;
+    echo &#34;file exists&#34;
 fi
-</code></pre><pre tabindex="0"><code>if [ ! -d &quot;env.sh&quot; ]; then
-    echo &quot;we need the env.sh to setup vars&quot;
+</code></pre><pre tabindex="0"><code>if [ ! -d &#34;env.sh&#34; ]; then
+    echo &#34;we need the env.sh to setup vars&#34;
     exit -1
 else
-    echo &quot;file exists&quot;
+    echo &#34;file exists&#34;
 fi
 </code></pre><h2 id="脚本相关">脚本相关</h2>
 <p><code>${BASH_SOURCE[0]}</code> 脚本所在的相对路径</p>
@@ -296,8 +306,8 @@ fi
 </tbody>
 </table>
 <h2 id="逻辑判断">逻辑判断</h2>
-<pre tabindex="0"><code>if [[ &quot;1&quot; == &quot;1&quot; &amp;&amp; &quot;2&quot; == &quot;2&quot; ]]; then
-        echo &quot;equal&quot;
+<pre tabindex="0"><code>if [[ &#34;1&#34; == &#34;1&#34; &amp;&amp; &#34;2&#34; == &#34;2&#34; ]]; then
+        echo &#34;equal&#34;
 fi
 </code></pre><h2 id="循环">循环</h2>
 <p>获取当前目录下的文件并循环打印出文件名：</p>
@@ -308,7 +318,7 @@ done
 </code></pre><h2 id="函数">函数</h2>
 <p>我们可以在 <code>shell</code> 脚本中用下面的方式来定义函数：</p>
 <pre tabindex="0"><code>function_name(){
-    echo &quot;hello&quot;
+    echo &#34;hello&#34;
 }
 function_name
 </code></pre>
@@ -634,6 +644,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
           开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
         </a>
     </li>
   

@@ -22,7 +22,7 @@ brew search curl
 如果可以找到的话，就能用下面的命令来安装：
 brew install curl
 thridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：
-brew tap jenkins-zh/jcli brew install jcli 其他操作    命令 描述     brew remove jcli 删除软件   brew upgrade jcli 升级软件   brew list 列出来已经安装的   brew info jcli 查看安装信息   brew deps jcli 查看依赖   brew outdated 查看可更新的软件   brew --repo 查看本地目录    代理 替换上游：</description>
+brew tap jenkins-zh/jcli brew install jcli 其他操作 命令 描述 brew remove jcli 删除软件 brew upgrade jcli 升级软件 brew list 列出来已经安装的 brew info jcli 查看安装信息 brew deps jcli 查看依赖 brew outdated 查看可更新的软件 brew --repo 查看本地目录 代理 替换上游：</description>
     </item>
     
     <item>
@@ -52,11 +52,14 @@ brew tap jenkins-zh/jcli brew install jcli 其他操作    命令 描述     bre
 前后切换选项卡 command + &amp;lt;-
 指定顺序切换选项卡 command + 1
 关闭浏览器 command + q
-截图   截取全屏并保存文件 shift + command + 3
-  截取部分并保存文件 shift + command + 4
-  截取全屏并保存粘贴板 shift + control + command + 3
-  截取部分并保存粘贴板 shift + control + command + 4
-  丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。</description>
+截图 截取全屏并保存文件 shift + command + 3
+截取部分并保存文件 shift + command + 4
+截取全屏并保存粘贴板 shift + control + command + 3
+截取部分并保存粘贴板 shift + control + command + 4
+丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。
+开机后按下 command+s
+进入终端后输入命令 `/sbin/mount -uaw``
+执行命令 rm /var/db/.</description>
     </item>
     
     <item>
