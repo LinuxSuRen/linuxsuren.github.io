@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on SuRenPi</title>
+    <link>http://localhost:1313/blog/os/mac/</link>
+    <description>Recent content in Mac on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/os/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brew</title>
+      <link>http://localhost:1313/blog/os/mac/brew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/brew/</guid>
+      <description>brew 是 MacOS（或者 Linux 操作系统）下的缺省包管理器。&#xA;在有 ruby 环境的操作系统中，可以使用下面的命令快速安装 brew：&#xA;/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&#xA;其他的安装方式，请参考这里。&#xA;安装软件 根据来源的不同，brew 包括两类软件，分别是：core、thridparty。&#xA;core 如果你不知道有哪些软件是可以直接安装的话，可以通过搜索命令来搜索：&#xA;brew search curl&#xA;如果可以找到的话，就能用下面的命令来安装：&#xA;brew install curl&#xA;thridparty 如何你想要把自己开发的命令行工具可以使用 brew 来安装，也是非常的简单，只要在 GitHub 中提供一个 ruby 文件即可，具体可以参考 homebrew-jcli。那么，对于这种第三方的命令行如何安装呢，也是非常简单，请参考下面 jcli 的例子：&#xA;brew tap jenkins-zh/jcli brew install jcli 其他操作 命令 描述 brew remove jcli 删除软件 brew upgrade jcli 升级软件 brew list 列出来已经安装的 brew info jcli 查看安装信息 brew deps jcli 查看依赖 brew outdated 查看可更新的软件 brew --repo 查看本地目录 代理 替换上游：</description>
+    </item>
+    <item>
+      <title>lsof</title>
+      <link>http://localhost:1313/blog/os/mac/lsof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/lsof/</guid>
+      <description>查看端口占用 lsof -nP -i4TCP:9091</description>
+    </item>
+    <item>
+      <title>Mac 快捷键</title>
+      <link>http://localhost:1313/blog/os/mac/mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/mac/</guid>
+      <description>按键符号 ⌘(command)&#xA;⌥(option)&#xA;⇧(shift)&#xA;⇪(caps lock)&#xA;⌃(control)&#xA;↩(return)&#xA;⌅(enter)&#xA;快捷键 删除文件 command + delete&#xA;浏览器 关闭选项卡 command + w&#xA;前后切换选项卡 command + &amp;lt;-&#xA;指定顺序切换选项卡 command + 1&#xA;关闭浏览器 command + q&#xA;截图 截取全屏并保存文件 shift + command + 3&#xA;截取部分并保存文件 shift + command + 4&#xA;截取全屏并保存粘贴板 shift + control + command + 3&#xA;截取部分并保存粘贴板 shift + control + command + 4&#xA;丢失管理身份 当你的误操作导致丢失了 mac 用户的管理员身份时，可以按照下面的步骤找回管理。&#xA;开机后按下 command+s&#xA;进入终端后输入命令 `/sbin/mount -uaw``&#xA;执行命令 rm /var/db/.</description>
+    </item>
+    <item>
+      <title>open</title>
+      <link>http://localhost:1313/blog/os/mac/open/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/open/</guid>
+      <description>open http://surenpi.com 打开浏览器</description>
+    </item>
+    <item>
+      <title>pbcopy</title>
+      <link>http://localhost:1313/blog/os/mac/pbcopy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/pbcopy/</guid>
+      <description>cat test.log | pbcopy 通过命令行拷贝&#xA;pbpaste 通过命令粘贴</description>
+    </item>
+    <item>
+      <title>U Creator</title>
+      <link>http://localhost:1313/blog/os/mac/u-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/mac/u-creator/</guid>
+      <description>$ diskutil list #查看当前分区情况，记住你的U盘的名称 $ diskutil unmountDisk /dev/disk1 #卸载U盘。这里的disk1是刚刚显示的名称 $ dd if={iso_dir} of=/dev/disk1 bs=1m #进行拷贝 diskutil list #1.找到U盘的代号 比如disk1 diskutil unmountDisk /dev/disk1 #2. diskutil eraseDisk JHFS+ iDisk disk1 #3. brew install e2fsprogs diskutil unmountdisk /dev/disk2s1 sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1 </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
+  <head>
+    <meta charset="utf-8">
+    {{/* https://www.zachleat.com/web/preload/ */}}
+    <link rel="preload" href="{{ "files/muli-latin-200.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "files/muli-latin-400.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "files/muli-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ with .Title }}{{ . }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    {{ with .Description }}
+    <meta name="description" content="{{.}}">
+    {{ else }}
+    <meta name="description" content="某个开源人的博客，记录开源路上的故事。">
+    {{ end }}
+    {{ with .Keywords }}
+    <meta name="keywords" content="{{ delimit . "," "," }}">
+    {{ else }}
+    <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
+    {{ end }}
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+      {{ hugo.Generator }}
+
+      {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      {{ else }}
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      {{ end }}
+
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end -}}
+
+     <link href='{{ "dist/main.css" | relURL }}' rel='stylesheet' type="text/css" />
+      {{- partial "head-additions.html" . -}}
+      {{- template "_internal/opengraph.html" . -}}
+      {{- template "_internal/schema.html" . -}}
+
+      {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+        {{ partial "gtag" . }}
+      {{ end }}
+      <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5281185c68056bb7f9819259f3aaccc8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </head>
+  <body class="ma0 sans-serif bg-primary-color-light{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+    {{ block "nav" . }}{{ partial "site-nav.html" . }}{{ end }}
+    {{ block "header" . }}{{ end }}
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{- partial "site-scripts.html" . -}}{{ end }}
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on SuRenPi</title>
+    <link>http://localhost:1313/tags/jenkins/</link>
+    <description>Recent content in Jenkins on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins</title>
+      <link>http://localhost:1313/blog/devops/jenkins/basic/jenkins/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/basic/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。&#xA;部署 Jenkins 支持几种安装（启动）方式：&#xA;War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。&#xA;然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins&#xA;这种方式，方便简单，但是需要有 Java 环境。&#xA;Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。&#xA;需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175&#xA;挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts&#xA;如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts&#xA;Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &amp;#39;/var/jenkins_home/copy_reference_file.log&amp;#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
+    </item>
+    <item>
+      <title>Jenkins Permission</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    <item>
+      <title>脚本式流水线</title>
+      <link>http://localhost:1313/blog/devops/jenkins/pipeline/scripted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/pipeline/scripted/</guid>
+      <description>触发器 codes/jenkinsfile/script-trigger.groovy node(&amp;#39;local&amp;#39;) { echo &amp;#39;hello&amp;#39; } properties([ buildDiscarder( logRotator( artifactDaysToKeepStr: &amp;#39;&amp;#39;, artifactNumToKeepStr: &amp;#39;&amp;#39;, daysToKeepStr: &amp;#39;5&amp;#39;, numToKeepStr: &amp;#39;10&amp;#39; ) ), pipelineTriggers([ cron(&amp;#39;H 3,12,17 * * *&amp;#39;), scm(&amp;#39;H 3,12,17 * * *&amp;#39;) ]) ]) 原文件 参数化执行 properties([[$class: &amp;#39;JobRestrictionProperty&amp;#39;], parameters([run(description: &amp;#39;&amp;#39;, filter: &amp;#39;ALL&amp;#39;, name: &amp;#39;Name&amp;#39;, projectName: &amp;#39;Project&amp;#39;)]), pipelineTriggers([])] ) 异常 你可以利用处理异常的方式来实现类似于申明式流水线中的 post&#xA;codes/jenkinsfile/try-catch.groovy node { stage(&amp;#34;one&amp;#34;){ try { echo &amp;#34;hello&amp;#34; }catch(error){ echo error.getMessage() }finally{ echo &amp;#34;finally&amp;#34; } } } 原文件 循环 codes/jenkinsfile/loop.groovy node(&amp;#39;suren&amp;#39;) { def dev_path = &amp;#39;/opt/suren/bin&amp;#39; def services = [ [ &amp;#39;name&amp;#39;: &amp;#39;admin&amp;#39;, &amp;#39;project&amp;#39;: &amp;#39;admin&amp;#39;, &amp;#39;port&amp;#39;: &amp;#39;7002&amp;#39;, &amp;#39;jarName&amp;#39;: &amp;#39;admin&amp;#39; ] ]; stage(&amp;#39;Copy Artifact&amp;#39;) { for(service in services){ step([$class: &amp;#39;CopyArtifact&amp;#39;, fingerprintArtifacts: true, flatten: true, projectName: service.</description>
+    </item>
+    <item>
+      <title>申明式流水线</title>
+      <link>http://localhost:1313/blog/devops/jenkins/pipeline/declarative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/pipeline/declarative/</guid>
+      <description>流水线插件从 2.5 版本开始支持申明式流水线。&#xA;申明式流水线（Declarative Pipeline）的语法结构更加清晰，而且兼容脚本式流水线。下面给出一个例子：&#xA;codes/jenkinsfile/declarative.groovy pipeline { agent { label &amp;#39;master&amp;#39; } stages { stage(&amp;#39;one&amp;#39;) { when { branch &amp;#39;master&amp;#39; } steps { echo &amp;#39;Hello World&amp;#39; } } } post { always { echo &amp;#39;I will always say Hello again!&amp;#39; } } } 原文件 如果您对 Jenkins 的流水线功能感兴趣，可以点击这里查看对应的插件介绍。</description>
+    </item>
+  </channel>
+</rss>

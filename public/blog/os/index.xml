@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统 on SuRenPi</title>
+    <link>http://localhost:1313/blog/os/</link>
+    <description>Recent content in 操作系统 on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/os/windows/wsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/os/windows/wsl/</guid>
+      <description>Important actions wsl --shutdown Configuration Below is a sample config file which located %UserProfile%\.wslconfig:&#xA;[wsl2] memory=8GB See more config items from here.&#xA;Below is a sample config file which located at /etc/wsl.config:&#xA;[user] default=suren </description>
+    </item>
+  </channel>
+</rss>

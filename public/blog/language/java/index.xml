@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on SuRenPi</title>
+    <link>http://localhost:1313/blog/language/java/</link>
+    <description>Recent content in Java on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 10 Jun 2018 19:12:20 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/language/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java8</title>
+      <link>http://localhost:1313/blog/language/java/java8/</link>
+      <pubDate>Sun, 10 Jun 2018 19:12:20 +0800</pubDate>
+      <guid>http://localhost:1313/blog/language/java/java8/</guid>
+      <description>Lambda Collection 判断是否存在特定元素：&#xA;Set&amp;lt;String&amp;gt; set = new HashSet&amp;lt;&amp;gt;(); set.add(&amp;#34;a&amp;#34;); set.add(&amp;#34;b&amp;#34;); boolean exists = set.stream().anyMatch((a) -&amp;gt; a.startsWith(&amp;#34;a&amp;#34;)); System.out.println(exists); brew 我们可以通过 brew 来安装 java&#xA;brew cask install adoptopenjdk8&#xA;Exceptions 如果遇到下面在请求 HTTPS 时遇到证书的问题，可能是因为由于自制私有证书导致的。我们可以把私有证书导入 JRE 来解决：&#xA;Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target 首先，要先找到 JRE 的位置：which java。目录通常是在：{{Installation_directory}}/{{JDK_version}}/jre/lib/security&#xA;然后，导入证书：&#xA;keytool -importcert -file selfsigned.crt -keystore {{Installation_directory}}/{{JDK_version}}/jre/lib/security/cacerts&#xA;在导入过程中，可能是需要有 root 权限，并要求输入证书密码。如果你在安装 Java 后没有修改过的话，默认的密码为：changeit。</description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/blog/language/java/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/language/java/docker/</guid>
+      <description>内存限制 镜像 8u151-alpine 在 JVM 的内存使用上有一些限制，它会限制 JVM 使用的最大内存为机器的 1/4。我们可以使用 8u171 以后的版本来解决这个问题。&#xA;参考 Docker OpenJDK</description>
+    </item>
+    <item>
+      <title>JVM</title>
+      <link>http://localhost:1313/blog/language/java/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/language/java/jvm/</guid>
+      <description>查看最大内存 执行命令 java -XX:+PrintFlagsFinal -version | grep HeapSize 或 java -XshowSettings:all&#xA;切换 JAVA_HOME 如果需要在多个版本的 Java 之间切换的话，可以试试下面的命令（在 MacOS 下做的测试）：&#xA;export JAVA_HOME=`/usr/libexec/java_home -v 1.8` </description>
+    </item>
+    <item>
+      <title>OpenJ9</title>
+      <link>http://localhost:1313/blog/language/java/openj9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/language/java/openj9/</guid>
+      <description>下载 点击这里这里可以找到 Java8 的下载链接。&#xA;参考 openj9-docs&#xA;openj9-ci</description>
+    </item>
+    <item>
+      <title>SpaceVim</title>
+      <link>http://localhost:1313/blog/language/java/spacevim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/language/java/spacevim/</guid>
+      <description>Reference Use Vim as a Java IDE</description>
+    </item>
+  </channel>
+</rss>

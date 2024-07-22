@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins 插件开发 on SuRenPi</title>
+    <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/</link>
+    <description>Recent content in Jenkins 插件开发 on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/devops/jenkins/plugin-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins 事件监听</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-listener/</guid>
+      <description> 类型 接口 描述 监听队列事件 hudson.model.queue.QueueListener 任务监听器 hudson.model.listeners.ItemListener 接收 Item 的 CRUD 操作事件 任务执行状态 hudson.model.listeners.RunListener 接收任务构建的事件 </description>
+    </item>
+    <item>
+      <title>Jenkins 插件调试</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/</guid>
+      <description>运行 如果是在 Jenkins core 的源码目录下的话，需要进入到 war 目录；如果是插件的话，通常在根目录下执行：&#xA;mvn hpi:run&#xA;程序正常启动后，会在 target 下生成一个运行时的目录：target/jetty/webapp/&#xA;跳过测试 mvn hpi:run -DskipTests 该命令会跳过测试的执行，但还是会编译测试代码的。如果确实想要加快构建速度而跳过测试的话，建议使用这个命令，而不是下面的：&#xA;mvn hpi:run -Dmaven.test.skip=true 该命令既不执行测试代码，也不会编译。&#xA;指定端口 `mvn hpi:run -Djetty.port=1234&#39;&#xA;mvn hpi:run -Djenkins.install.runSetupWizard=true&#xA;指定 Jenkins 版本 mvn hpi:run -Djenkins.version=2.121.1&#xA;参考 maven-hpi-plugin</description>
+    </item>
+    <item>
+      <title>Jenkins I18n</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-i18n/</link>
+      <pubDate>Wed, 01 May 2019 10:35:46 +0800</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-i18n/</guid>
+      <description>帮助文件 hudson.model.Descriptor&#xA;与当前页面（jelly）在同一个目录下 存放在 webapp/help 目录下 http://localhost:8080/jenkins/descriptor/hudson.ProxyConfiguration/help/port&#xA;http://localhost:8080/jenkins/help/parameter/file.html</description>
+    </item>
+    <item>
+      <title>扩展 Jenkins 的构建（Builder）任务</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/</guid>
+      <description>构建 本文介绍如何扩展 Jenkins 的构建（Builder）任务。&#xA;流水线 </description>
+    </item>
+    <item>
+      <title>Action</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/</guid>
+      <description>本文介绍如果开发一个 Jenkins 的后端，也就是 Action。&#xA;接口 你首先需要实现接口 hudson.model.Action 的三个方法:&#xA;getIconFileName getDisplayName getUrlName hudson.model.queue.FoldableAction&#xA;约定 QueueAction hudson.model.Queue.QueueAction&#xA;方法 shouldSchedule 会决定某一次构建是否会被调度，如果返回 false 的话，这次构建 动作就会被合并。通常情况下，对于用户触发两次构建，这两次之间没有任何变化的话，我们就 只需要构建一次即可，这样可以减少不必要的构建资源浪费。&#xA;FoldableAction hudson.model.queue.FoldableAction</description>
+    </item>
+    <item>
+      <title>Annotation</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/</guid>
+      <description>CheckForNull Extension NoExternalUse Initializer Usage: @Initializer(after=InitMilestone.PLUGINS_PREPARED, fatal=false)&#xA;通过该注解，可以实现在 Jenkins 的特定生命周期阶段来初始化特定方法。&#xA;Terminator Usage: @Terminator(after=TermMilestone.STARTED)&#xA;上面的示例中，表明了使得某个方法在 Jenkins 开始关闭时调用。&#xA;Restricted Usage: @Restricted(NoExternalUse.class)&#xA;上面的示例中，表明了某个方法不允许被直接调用，通常在接口回调中使用。&#xA;Whitelisted org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted&#xA;Jenkins 流水线中的 DSL 语句，会收到沙盒机制的保护。你可能会见到类似如下的错误：&#xA;Scripts not permitted to use method groovy.lang.GroovyObjecgt invokeMethod Administrators can decide whether to approve or reject this signature. 如果对应的方法是在自定义插件中实现的话，通过给对应的方法上增加 @Whitelisted 解决该问题。</description>
+    </item>
+    <item>
+      <title>CLI</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/</guid>
+      <description>扩展点 hudson.cli.CLICommand&#xA;Reference http://wiki.jenkins-ci.org/display/JENKINS/Writing+CLI+commands</description>
+    </item>
+    <item>
+      <title>Jenkins Handler</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-handler/</guid>
+      <description>该扩展点用于决定特定的任务是否会被调度&#xA;hudson.model.Queue.QueueDecisionHandler</description>
+    </item>
+    <item>
+      <title>Jenkins JUnit</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-junit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-junit/</guid>
+      <description>断言 @Test public void basic() { assertThat(&amp;#34;abc&amp;#34;, StringContains.containsString(&amp;#34;a&amp;#34;)); assertThat(&amp;#34;abc&amp;#34;, Matchers.not(StringContains.containsString(&amp;#34;d&amp;#34;))); assertTrue(true); assertFalse(false); assertNull(null); assertNotNull(&amp;#34;&amp;#34;); assertEquals(&amp;#34;a&amp;#34;, &amp;#34;a&amp;#34;); } 数据源 注解 @LocalData 会按照一定的规则去加载 src/test/resources 中的配置文件。&#xA;例如：该注解加载类 org.test.TestAgent 的方法 test 上的话，就会去加载目录 src/test/resources/org/test/TestAgent/test 中的配置文件。另外，它还有一个 value 参数可以替代使用方法名称。&#xA;框架 Jenkins 的测试框架为 acceptance-test-harness。&#xA;在 pom.xml 中可以修改框架的版本，如下所示：&#xA;&amp;lt;properties&amp;gt;&amp;lt;jenkins-test-harness.version&amp;gt;2.28&amp;lt;/jenkins-test-harness.version&amp;gt;&amp;lt;/properties&amp;gt; 通过下面的方式修改 Jenkins 运行测试的版本：&#xA;&amp;lt;properties&amp;gt;&amp;lt;jenkins.version&amp;gt;2.150.1&amp;lt;/jenkins.version&amp;gt;&amp;lt;/properties&amp;gt; 环境变量 如果需要修改运行测试时的 Jenkins 版本，可以在启动 JVM 时指定参数 -Djth.jenkins-war.path=/tmp/jenkins.war</description>
+    </item>
+    <item>
+      <title>Jenkins Permission</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-permission/</guid>
+      <description>Jenkins.get().checkPermission(Jenkins.ADMINISTER);</description>
+    </item>
+    <item>
+      <title>Jenkins Plugin Dev Credentails</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-credential/</guid>
+      <description>IdCredentials 规定了具有 ID 的凭据（Credentials）&#xA;CredentialsProvider 凭据提供接口&#xA;CredentialsStore 凭据存储接口</description>
+    </item>
+    <item>
+      <title>Jenkins UI</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-ui/</guid>
+      <description>按钮 &amp;lt;j:jelly xmlns:f=&amp;#34;/lib/form&amp;#34;&amp;gt;&amp;lt;/j:jelly&amp;gt; &amp;lt;f:validateButton title=&amp;#34;Test Connection&amp;#34; method=&amp;#34;verifyConnect&amp;#34; with=&amp;#34;server,credentialsId&amp;#34; progress=&amp;#34;Testing...&amp;#34;&amp;gt;&amp;lt;/f:validateButton&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;f:checkbox/&amp;gt; 下拉框 在 jelly 文件添加如下标签：&#xA;&amp;lt;f:entry field=&amp;#34;method&amp;#34; title=&amp;#34;${%Method}&amp;#34;&amp;gt; &amp;lt;f:select/&amp;gt; &amp;lt;/f:entry&amp;gt; 在对应的后端类的 DescriptorImpl 中添加如下方法：&#xA;public ListBoxModel doFillMethodItems() { ListBoxModel listBoxModel = new ListBoxModel(); listBoxModel.add(HttpPost.METHOD_NAME); listBoxModel.add(HttpGet.METHOD_NAME); return listBoxModel; } 细心的童鞋肯定能看出来，doFillMethodItems 中间的 Method 就对应页面上的字段名称。&#xA;校验 如果你的表单里有一个字段 crontab 希望能添加数据格式校验的话，可以在对应类的 DescriptorImpl 中添加方法来实现：&#xA;&amp;lt;f:entry title=&amp;#34;${%Crontab}&amp;#34; field=&amp;#34;crontab&amp;#34;&amp;gt; &amp;lt;f:textbox/&amp;gt; &amp;lt;/f:entry&amp;gt; public FormValidation doCheckCrontab(@QueryParameter String value, @AncestorInPath Item item) { try { CronTabList ctl = CronTabList.create(fixNull(value), item != null ?</description>
+    </item>
+    <item>
+      <title>Jenkins 帮助信息</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-help/</guid>
+      <description>正如大家看到的，在 Jenkins 的页面中，有很多地方能看到帮助信息。&#xA;只要在某个页面文件（jelly）的同级目录下添加 help.html 后，就能在页面上看到关于该选项的帮助按钮。&#xA;如果给某个字段添加帮助信息的话，也是类似的做法。例如：要对字段 password 添加帮助信息，就添加文件 help-password.html 即可。</description>
+    </item>
+    <item>
+      <title>Jenkins 插件开发</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev/</guid>
+      <description>环境准备 你需要安装好Java和Maven。&#xA;创建工程 执行命令 mvn --update-snapshots archetype:generate -Dfilter=io.jenkins.archetypes:，然后，根据提示选择骨架类型，以及当前 Maven 工程的信息。&#xA;插件工程的父 POM 里定义了很多信息，包括：Jenkins 的版本、Java 版本、单元测试框架版本等。&#xA;运行 在工程根目录下执行 mvn hpi:run&#xA;访问 http://localhost:8080/jenkins/&#xA;Jenkins 版本选择 理论上，你可以任意选择一个喜欢的 Jenkins 版本来开发。但是，处于严谨的做法，同时也是 Jenkins 官方推荐的。你可以到 Jenkins 的下载页面找一个长期支持版本（LTS）。&#xA;单元测试 Jenkins 官方提供了单元测试相关的内容。&#xA;发布 mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:prepare&#xA;mvn -Darguments=&amp;quot;-DskipTests&amp;quot; release:perform&#xA;实验性版本发布 为了简化发布 beta 版本的插件到特定感兴趣的人群，Jenkins 有一个实验性的更新中心。它包括 alpha 和 beta 版本的插件，这些通常不会包含在常规的更新中心里。&#xA;如果插件的版本中包含 alpha 或 beta 的插件，发布后就会出现在实验性的更新中心里，而不会出现在常规的更新中心。但是，实验性的更新中心也包含常规的版本发布。在所有的更新中心，较新的发布会隐藏掉较老的版本。例如：1.4版本会使得1.3-beta-2在实验中心里看不到。&#xA;用户要使用实验性更新中心的话，只需要在插件管理-》高级的选项卡页面中，设置更新中心地址为 https://updates.jenkins.io/experimental/update-center.json。&#xA;常规的更新中心地址为 https://updates.jenkins.io/update-center.json。&#xA;参考 Extend Jenkins</description>
+    </item>
+    <item>
+      <title>Jenkins 插件扩展点</title>
+      <link>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/plugin-dev/jenkins-plugin-extension/</guid>
+      <description>接口 接口 hudson.ExtensionPoint 用于自动生成文档&#xA;注解 注解 @hudson.Extension 加在实现类上，就可以获取扩展点的实现类列表。&#xA;Demo Jenkins.getInstance().getExtensionList(ManagementLink.class).forEach(System.out::println); </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on SuRenPi</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins</title>
+      <link>http://localhost:1313/blog/devops/jenkins/basic/jenkins/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/basic/jenkins/</guid>
+      <description>本文介绍 Jenkins 相关的内容，包括：如何启动、配置等等。&#xA;部署 Jenkins 支持几种安装（启动）方式：&#xA;War 由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在下载页面，选择一个版本。&#xA;然后，执行命令 java -jar jenkins.war 启动后，就可以通过浏览器访问 http://localhost:8080/jenkins&#xA;这种方式，方便简单，但是需要有 Java 环境。&#xA;Docker 用容器的方式来运行 Jenkins 也很方便。只要执行命令 docker run -p 8080:8080 jenkins/jenkins:lts 即可。&#xA;需要每周更新版的话，直接加上版本号即可 docker run -p 12345:8080 jenkins/jenkins:2.175&#xA;挂载卷 docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts&#xA;如果遇到类似下面的错误，可以尝试设置运行的用户：docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts&#xA;Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions? touch: cannot touch &amp;#39;/var/jenkins_home/copy_reference_file.log&amp;#39;: Permission denied Kubernetes Helm 执行命令 helm install stable/jenkins --name my-jenkins</description>
+    </item>
+    <item>
+      <title>Jenkins Kubernetes Plugin</title>
+      <link>http://localhost:1313/blog/devops/jenkins/jenkins-plugin/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/devops/jenkins/jenkins-plugin/kubernetes/</guid>
+      <description>Kubernetes 是一个容器编排的系统，而 Kubernetes 插件则是 Jenkins 用来调度 K8S 以实现动态计算节点的方式。对 插件源码感兴趣的童鞋可以了解下。&#xA;预备知识 要能够顺利地使用 Kubernetes 的 Jenkins 插件，必须对相关的一些基本知识所有了解。&#xA;Docker 中的基本概念，例如：镜像、容器、卷（Volume）。熟悉如何拉取镜像，启动、停止、查看容器。&#xA;Kubernetes 中的基本概念，例如：命名空间（Namespace）、Pod、PodTemplate、Secret 等。熟悉命令行工具 kubectl 的一些基本操作，查看 Pod 列表、事件、日志等。&#xA;JNLP 的基本原理。&#xA;基本原理 当标签规则匹配到某个 Pod 模板时，插件会尝试根据该模板的配置启动一个 Pod。而该 Pod 在启动过程中，会通过 JNLP 协议来连接 master 节点。&#xA;为了能够让 Pod 连接到 Jenkins 的 master 节点，我们首先需要在“全局安全配置”中开启 JNLP 代理协议，并记住端口。&#xA;然后，在“系统配置”页面中的 Kubernetes 区域配置正确的 Jenkins 以及 JNLP 的地址以及端口。&#xA;认证 有多种方式可以配置 Jenkins 与 Kubernetes 集群集成认证。最简单的就是添加凭据时选择 Secret File 类型，并把文件 ~/.kube/config 上传即可。这里有如何导出 k8s 集群认证文件的介绍。&#xA;导出 Kubernetes 认证文件的命令：</description>
+    </item>
+  </channel>
+</rss>

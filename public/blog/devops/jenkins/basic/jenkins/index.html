@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Jenkins - SuRenPi</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    
+    <meta name="description" content="Jenkins 是一个开源的 CI/CD 平台，本文是对其进行简单的介绍">
+    
+    
+    <meta name="keywords" content="jenkins">
+    
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+      <meta name="generator" content="Hugo 0.129.0">
+
+      
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      
+
+    <link href='/dist/main.css' rel='stylesheet' type="text/css" />
+<style>
+  img.avatar {
+    width: 32px;
+    display: inline;
+  }
+</style>
+<meta property="og:url" content="http://localhost:1313/blog/devops/jenkins/basic/jenkins/">
+  <meta property="og:site_name" content="SuRenPi">
+  <meta property="og:title" content="Jenkins">
+  <meta property="og:description" content="Jenkins 是一个开源的 CI/CD 平台，本文是对其进行简单的介绍">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-06-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-06-12T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="Jenkins">
+
+  <meta itemprop="name" content="Jenkins">
+  <meta itemprop="description" content="Jenkins 是一个开源的 CI/CD 平台，本文是对其进行简单的介绍">
+  <meta itemprop="datePublished" content="2019-06-12T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2019-06-12T00:00:00+00:00">
+  <meta itemprop="wordCount" content="175">
+  <meta itemprop="keywords" content="jenkins">
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4216293-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4216293-5');
+
+
+
+var trackOutboundLink = function(id, url) {
+  console.log("track:", id, url)
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': id,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+
+</script>
+
+      
+      <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5281185c68056bb7f9819259f3aaccc8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </head>
+  <body class="ma0 sans-serif bg-primary-color-light">
+    
+<nav class="bg-primary-color-dark pv4 w-100" role="navigation">
+
+  <div class="center flex-ns flex-wrap items-center justify-start mw9">
+
+    <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
+      <a href="http://localhost:1313/" class="link white">
+         SuRenPi
+      </a>
+    </h1>
+    <ul class="list ma0 pa0 dn dib-l">
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/blog" class="dim link light-silver">
+            博客
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/translation" class="dim link light-silver">
+            翻译
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/opensource" class="dim link light-silver">
+            开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
+              
+            
+            
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
+  <fieldset class="bn ma0 pa0">
+    <label class="clip" for="email-address">Search</label>
+    <input type="search" id="search-input" class="needs-js bg-left bg-transparent bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white"
+      placeholder="搜索文档" type="text"
+      name="email-address" value="" style="background-image:url('/images/icon-search.png');background-size:16px 16px;">
+  </fieldset>
+</form>
+</div>
+
+    <div class="list ma0 pa0 dn dib-l"></div>
+
+    <span class="absolute mt1 mt2-l pr3 right-0 top-0">
+
+  <a href="https://twitter.com/intent/follow?screen_name=linuxsuren" title="Follow on Twitter"
+    class="link-transition twitter link dib z-999 pt3 pt0-l mr2" target="_blank">
+    <svg height="32px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+  <a href="https://weibo.com/linuxsuren" title="Follow on Sina WeiBo" target="_blank"
+  class="link-transition link dib z-999 pt3 pt0-l mr2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32px" 
+    height="32px" viewBox="0 0 50.497 40.648">
+    <path fill="#E99315" d="M50.448 12.132c.217 2.814-.259 6.186-2.117 6.351-3.033.271-1.451-3.07-1.411-5.081.111-5.829-4.865-9.879-9.739-9.879-1.381 0-4.588.936-4.094-1.976.222-1.284 1.31-1.266 2.399-1.411 8.197-1.093 14.386 4.546 14.962 11.996z"/><path fill="#D52A2C" d="M37.04 18.907c3.524 1.928 7.758 2.888 7.056 8.61-.168 1.371-.998 3.203-1.834 4.373-5.957 8.339-23.924 11.844-35.144 5.506C3.355 35.269-.539 32.159.062 25.962c.517-5.333 4.103-9.464 7.622-12.983 3.357-3.359 6.897-5.987 11.714-7.198 5.226-1.314 6.771 3.043 5.363 7.339 3.027-.203 9.442-3.582 12.279-.282 1.25 1.454.771 4.058 0 6.069zm-3.811 13.548c1.129-1.28 2.264-3.231 2.257-5.503-.015-7.014-8.851-9.605-15.806-9.033-3.804.312-6.363 1.115-9.033 2.682-2.179 1.279-4.729 3.36-5.363 6.491-1.427 7.041 6.231 10.35 11.855 10.726 6.498.437 13.002-1.857 16.09-5.363z"/><path fill="#E99315" d="M43.531 12.132c.296 2.149-.319 4.011-1.552 4.093-2.056.137-1.287-1.408-1.412-3.246-.078-1.132-1.016-2.439-1.835-2.823-1.606-.752-4.093.548-4.093-1.693 0-1.664 1.443-1.491 2.259-1.553 3.574-.272 6.216 2.191 6.633 5.222z"/><path d="M27.019 26.246c3.007 9.088-12.66 13.314-15.525 5.504-1.917-5.223 2.686-9.377 7.48-9.879 4.093-.429 7.144 1.658 8.045 4.375zm-7.198 1.553c.638 1.104 2.105.311 1.976-.564-.154-1.013-1.989-.863-1.976.564zm-2.541 4.799c2.634-.627 2.988-5.588-.988-4.658-3.34.78-2.694 5.533.988 4.658z"/>
+</svg>
+
+  </a>
+
+
+  <a class="github-button needs-js link primary-color-dark" href="https://github.com/LinuxSuRen"
+    data-size="large" data-show-count="true" aria-label="Follow LinuxSuRen GitHub"></a>
+
+ </span>
+
+  </div>
+</nav>
+
+    
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
+      
+<main>
+  <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+    <div class="flex-l">
+
+      <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+<aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+		<p class="b">此页面上的内容</p>
+  	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#部署">部署</a>
+      <ul>
+        <li><a href="#war">War</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#kubernetes">Kubernetes</a></li>
+        <li><a href="#helm">Helm</a></li>
+      </ul>
+    </li>
+    <li><a href="#版本选择">版本选择</a></li>
+    <li><a href="#参数">参数</a>
+      <ul>
+        <li><a href="#端口">端口</a></li>
+        <li><a href="#jenkins_home">JENKINS_HOME</a></li>
+        <li><a href="#web-上下文">Web 上下文</a></li>
+        <li><a href="#时区">时区</a></li>
+        <li><a href="#向导">向导</a></li>
+        <li><a href="#用户">用户</a></li>
+      </ul>
+    </li>
+    <li><a href="#https">HTTPS</a></li>
+    <li><a href="#重启">重启</a></li>
+    <li><a href="#公钥">公钥</a></li>
+  </ul>
+</nav>
+	
+
+	<div date-pref>
+		<a href=".." class="dib f6 pl1 hover-bg-light-gray br-100">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path id="svg_1" d="m15.41,7.41l-1.41,-1.41l-6,6l6,6l1.41,-1.41l-4.58,-4.59l4.58,-4.59z" transform="rotate(90 11.704999923706055,12.000000000000002)"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+		</a>
+
+		
+			<a href="http://localhost:1313/blog/devops/jenkins/basic/system_var/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Jenkins 系统属性配置 ">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+			</a>
+		
+
+		
+			<a href="http://localhost:1313/blog/devops/jenkins/basic/jenkins-queue/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Jenkins 队列">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="fill-current" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+			</a>
+		
+	</div>
+
+</aside>
+</div>
+
+      <div class="order-1 w-60-l mw7 ph0 ph5-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns" style="flex-grow:1;">
+        <div class="documentation-copy center measure-wide-l">
+          <div id="readout" class="fixed right-0 bottom-0">
+          </div>
+          <header class="flex-none w-100">
+  
+    
+      <a href="/categories/cicd" class="f6 fw8 mb0 link mid-gray dim mr3">
+        CICD
+      </a>
+    
+      <a href="/categories/devops" class="f6 fw8 mb0 link mid-gray dim mr3">
+        DEV OPS
+      </a>
+    
+  
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Jenkins</h1>
+</header>
+
+<aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+  
+    <div class="f4 fw4 lh-copy">
+      Jenkins 是一个开源的 CI/CD 平台，本文是对其进行简单的介绍
+    </div>
+  
+
+  
+  
+  
+</aside>
+
+
+
+<div class="prose" id="prose">
+
+<p>本文介绍 <a href="https://jenkins.io/zh">Jenkins</a> 相关的内容，包括：如何启动、配置等等。</p>
+<h2 id="部署">部署</h2>
+<p>Jenkins 支持几种安装（启动）方式：</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EtlhC3vw8pA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h3 id="war">War</h3>
+<p>由于 Jenkins 是用 Java 语言来开发的，自然就会有 War 的打包方式。你需要首先在<a href="https://jenkins.io/zh/download/">下载页面</a>，选择一个版本。</p>
+<p>然后，执行命令 <code>java -jar jenkins.war</code> 启动后，就可以通过浏览器访问 <code>http://localhost:8080/jenkins</code></p>
+<p>这种方式，方便简单，但是需要有 Java 环境。</p>
+<h3 id="docker">Docker</h3>
+<p>用容器的方式来运行 Jenkins 也很方便。只要执行命令 <code>docker run -p 8080:8080 jenkins/jenkins:lts</code> 即可。</p>
+<p>需要每周更新版的话，直接加上版本号即可 <code>docker run -p 12345:8080 jenkins/jenkins:2.175</code></p>
+<p>挂载卷 <code>docker run -v /your/home:/var/jenkins_home jenkins/jenkins:lts</code></p>
+<p>如果遇到类似下面的错误，可以尝试设置运行的用户：<code>docker run -u root -v /root/.jenkins:/var/jenkins_home jenkins/jenkins:lts</code></p>
+<pre tabindex="0"><code>Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions?
+touch: cannot touch &#39;/var/jenkins_home/copy_reference_file.log&#39;: Permission denied
+</code></pre><h3 id="kubernetes">Kubernetes</h3>
+<h3 id="helm">Helm</h3>
+<p>执行命令 <code>helm install stable/jenkins --name my-jenkins</code></p>
+<p>如果希望看到具体内容<a href="https://github.com/helm/charts/tree/master/stable/jenkins">请查看这里</a>。</p>
+<p><a href="https://hub.kubeapps.com/charts?q=Jenkins">KubeApps</a> 上也可以找到 Jenkins</p>
+<h2 id="版本选择">版本选择</h2>
+<p>从 Jenkins 官网的下载页面，看到有很多版本可以下载，但是，具体该怎么选择呢。我下面给出一些建议：</p>
+<ul>
+<li>生产环境：最近一年内的 LTS（长期支持版）</li>
+<li>相对正式的环境：最新的 LTS</li>
+<li>体验：最新的 Weekly</li>
+<li><a href="../../plugin-dev/">插件研发</a>：尽可能选择较老的 LTS</li>
+</ul>
+<h2 id="参数">参数</h2>
+<p>Jenkins 在启动过程中，大多数的参数是具有默认值的。但是，对于一些特定的场景下，我们需要设置对应的参数值。</p>
+<h3 id="端口">端口</h3>
+<p><code>java -jar jenkins.war --httpPort=1234</code> 设置 Jenkins 的监听端口。这样 Jenkins 会监听 0.0.0.0 上的端口，也就是外部网络也可以访问。</p>
+<h3 id="jenkins_home">JENKINS_HOME</h3>
+<p>我们可以在启动 Jenkins 时指定家目录，默认值为用户目录下的 <code>.jenkins</code>。参数（<code>-D</code> 参数必须要在 <code>-jar</code> 之前）如下：</p>
+<p><code>java -DJENKINS_HOME=. -jar jenkins.war</code> 或者 <code>java -Duser.home=. -jar jenkins.war</code></p>
+<h3 id="web-上下文">Web 上下文</h3>
+<p>在 Docker 容器环境下，Jenkins 的默认上下文是 <code>/</code>，如果要修改为 <code>/jenkins</code> 的话，修改下面参数的值即可：
+<code>JENKINS_OPTS=&quot;--prefix=/jenkins&quot;</code></p>
+<h3 id="时区">时区</h3>
+<p>如果以 Docker 容器的方式来启动 Jenkins 的话，它默认的是 UTC 时区。 我们可能就需要设置为我们所在的当地时区。</p>
+<p><code>docker run -v /etc/localtime:/etc/localtime -p 8080:8080 jenkins/jenkins:lts</code></p>
+<h3 id="向导">向导</h3>
+<p>Jenkins 在首次运行时，会有一个配置向导，可以通过下面的参数跳过这个向导：</p>
+<p><code>java -Djenkins.install.runSetupWizard=false -jar jenkins.war</code></p>
+<h3 id="用户">用户</h3>
+<p><code>--argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin</code></p>
+<h2 id="https">HTTPS</h2>
+<p><code>--httpsPort=8083 --httpsCertificate=/var/lib/jenkins/cert --httpsPrivateKey=/var/lib/jenkins/pk</code></p>
+<h2 id="重启">重启</h2>
+<p>如果，我们需要重新启动 Jenkins，没有必要把进程杀掉后再次启动。可以直接在 Jenkins 界面上就实现重启。</p>
+<p>访问地址 <code>http://localhost:8080/restart</code> 后点击确认。</p>
+<h2 id="公钥">公钥</h2>
+<p>访问下面的地址可以得到 Jenkins 的公钥：</p>
+<p><code>http://localhost:8080/instance-identity/</code></p>
+
+</div>
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="linuxsuren/linuxsuren.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="linuxsuren"
+        async>
+</script>
+
+
+
+          
+
+<h2>参考</h2>
+<ul>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-debug/">Jenkins 插件调试</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-build/">扩展 Jenkins 的构建（Builder）任务</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-action/">Action</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-annotation/">Annotation</a></li>
+	
+	<li><a href="/blog/devops/jenkins/plugin-dev/jenkins-plugin-dev-cli/">CLI</a></li>
+	
+</ul>
+
+        </div>
+      </div>
+      <div class="order-0 w-20 dn db-l">
+        
+<nav role="navigation">
+  <ul class="list pa0 nl2">
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".devops">DevOps</a>
+
+          
+            <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray db">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/api/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    API
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/cross/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    General topic About DevOps
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/jenkins-x/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins X
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Kubernetes
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/team/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Team
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/build/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    构建
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".language">编程语言</a>
+
+          
+            <ul class="language desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/golang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Golang
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/java/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Java
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/python/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Python
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/typescript/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    TypeScript
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".os">操作系统</a>
+
+          
+            <ul class="os desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/os/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Linux
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/os/mac/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Mac
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/blog/other" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".other">其他内容</a>
+
+          
+        </li>
+    
+  </ul>
+</nav>
+
+      </div>
+
+    </div>
+  </article>
+
+  <div id="backtotop"><a href="#"></a></div>
+
+  <div class="w-100 bg-light-gray">
+    <div class="mw7 pa4 center nested-lh-copy lh-copy">
+      <h6 class="f4 dark-gray mb2">
+  <a href="http://localhost:1313/blog/devops/jenkins/basic/jenkins/" class="hide-child link primary-color">
+  <span class="nl3 child"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="" class="grow" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></span>
+    “Jenkins”
+  </a> was last updated: June 12, 2019
+</h6>
+
+      <a href="https://github.com/linuxsuren/surenpi/edit/master/content/blog/devops/jenkins/basic/jenkins.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+" target="_blank">改善此页</a>
+
+      
+
+  
+  
+  
+
+  <div class="nested-lh-copy">
+    <ul class="list dib nested-links ml0 pl0">
+      
+        <li class="db mb2 b">
+          Tags:
+        </li>
+        
+          <li class="db dib-l mr3">
+            <a class="tag" href="/tags/docker">
+              Docker
+            </a>
+          </li>
+        
+          <li class="db dib-l mr3">
+            <a class="tag" href="/tags/helm">
+              Helm
+            </a>
+          </li>
+        
+          <li class="db dib-l mr3">
+            <a class="tag" href="/tags/kubernetes">
+              Kubernetes
+            </a>
+          </li>
+        
+          <li class="db dib-l mr3">
+            <a class="tag" href="/tags/jenkins">
+              Jenkins
+            </a>
+          </li>
+        
+              
+      
+        
+        
+      
+        
+          <li class="db b mt4 mb2 mr2">
+            Related entries:
+          </li>
+        
+        
+          <li class="db dib-l mb2 mr3">
+            <a href="/blog/devops/jenkins/jenkins-plugin/kubernetes/" class="link">
+              Jenkins Kubernetes Plugin
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+
+    </div>
+  </div>
+</main>
+
+    </main>
+
+    <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+  <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+    <div class="pb3 pt4 w-100 w-50-ns">
+
+      <div class="b f3 light-gray mb3 nested-links tc">
+        由 <a href="https://github.com/LinuxSuRen/surenpi/graphs/contributors" class="link">SuRen</a> 维护<br/><a href='https://github.com/LinuxSuRen/surenpi/actions/'><img src='https://github.com/LinuxSuRen/surenpi/workflows/Deploy%20to%20GitHub%20Pages/badge.svg'></a></div>
+
+      <ul class="center f6 list ma0 mv3 pa0 tc" style="display:none"><li class="dib mr3"><a href="https://github.com/linuxsuren/surenpi/issues/new" class="dim link light-gray pv2">File an Issue</a></li></ul>
+
+      
+
+      
+    </div>
+
+    <div>
+      
+      <img src="https://avatars2.githubusercontent.com/u/1450685?s=460&v=4" with="100" height="100" style="display:none">
+      <a href="https://mp.weixin.qq.com/s/vifdduC3kRGSIMpyL03yVA" target="_blank">
+        <img src="https://jenkins.io/images/jenkins-wechat.png" with="100" height="100">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="f7 gray mb5 mb0-ns ph3 w-100" style="text-align: center;"> 
+    <p class="dib">Copyright 2018–2024 the original authors.</p>
+  </div>
+
+
+  <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    
+
+<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/blog" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          博客
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/translation" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          翻译
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+<div  class="docsmenu mobilemenu pb3 dn">
+    
+
+<ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+</ul>
+
+</div>
+
+<div class="flex dn-l justify-between">
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+</div>
+</div>
+
+</footer>
+
+    <script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/";
+    
+</script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="/dist/app.bundle.js"></script>
+
+
+  </body>
+</html>

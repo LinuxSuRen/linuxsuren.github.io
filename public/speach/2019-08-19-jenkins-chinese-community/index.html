@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <style>
+    .footnote {
+      position: absolute;
+      bottom: 3em;
+    }
+
+    li p {
+      line-height: 1.25em;
+    }
+
+    .red {
+      color: #fa0000;
+    }
+    .gray {
+      color: #777;
+    }
+    .black {
+      color: #000;
+    }
+    .black a {
+      color: inherit;
+    }
+
+    .large {
+      font-size: 2em;
+    }
+
+    a,
+    a>code {
+      color: rgb(249, 38, 114);
+      text-decoration: none;
+    }
+
+    code {
+      background: #e7e8e2;
+      border-radius: 5px;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .remark-code-line-highlighted {
+      background-color: #373832;
+    }
+
+    .pull-left {
+      float: left;
+      width: 47%;
+    }
+
+    .pull-right {
+      float: right;
+      width: 47%;
+    }
+
+    .pull-right~p {
+      clear: both;
+    }
+
+    #slideshow .slide .content code {
+      font-size: 0.8em;
+    }
+
+    #slideshow .slide .content pre code {
+      font-size: 0.9em;
+      padding: 15px;
+    }
+
+    .inverse {
+      background: #272822;
+      color: #777872;
+      text-shadow: 0 0 20px #333;
+    }
+
+    .inverse h1,
+    .inverse h2 {
+      color: #f3f3f3;
+      line-height: 0.8em;
+    }
+
+     
+    #slide-inverse .footnote {
+      bottom: 12px;
+      left: 20px;
+    }
+
+    #slide-how .slides {
+      font-size: 0.9em;
+      position: absolute;
+      top: 151px;
+      right: 140px;
+    }
+
+    #slide-how .slides h3 {
+      margin-top: 0.2em;
+    }
+
+    #slide-how .slides .first,
+    #slide-how .slides .second {
+      padding: 1px 20px;
+      height: 90px;
+      width: 120px;
+      -moz-box-shadow: 0 0 10px #777;
+      -webkit-box-shadow: 0 0 10px #777;
+      box-shadow: 0 0 10px #777;
+    }
+
+    #slide-how .slides .first {
+      background: #fff;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 1;
+    }
+
+    #slide-how .slides .second {
+      position: relative;
+      background: #fff;
+      z-index: 0;
+    }
+
+     
+    .left-column {
+      color: #777;
+      width: 20%;
+      height: 92%;
+      float: left;
+    }
+
+    .left-column h2:last-of-type,
+    .left-column h3:last-child {
+      color: #000;
+    }
+
+    .right-column {
+      width: 75%;
+      float: right;
+      padding-top: 1em;
+    }
+
+    .left-column-eq {
+      width: 45%;
+      height: 92%;
+      float: left;
+    }
+
+    .right-column-eq {
+      width: 45%;
+      margin-left: 10%;
+      height: 92%;
+      float: left;
+    }
+
+    .img-max-width-80-per img {
+      max-width: 80%;
+    }
+
+    .img-max-width-200 img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    .img-max-height-200 img {
+      max-height: 200px;
+    }
+
+    .panding li {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .panding p span {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .vertical-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <script src="/remark-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: center, middle
+# Jenkins 中文社区
+
+.left[.footnote[Power by remark]]
+
+---
+class: center, middle
+# 开源 vs 闭源
+
+工匠～利润  
+开放～封闭  
+共赢～竞争  
+扁平～等级  
+自由～局限  
+多样～单一
+
+---
+# 工匠～利润
+
+.pull-left[
+* 通用性  
+* 安全性  
+* 代码质量  
+* 单元测试  
+* 迭代流程
+* 便于协作
+]
+
+.pull-right[
+* 客户愿意为哪些功能买单
+* 要在短时间内实现功能
+* 来不及考虑代码质量、安全漏洞
+]
+
+---
+# 开放～封闭
+
+.pull-left[
+公开地（所有人都可以参与到）进行需求讨论，公开地评审设计文档、代码、帮助文档，任何人都可以贡献——即使只是错别字
+]
+
+.pull-right[
+特定的团队负责特定的部分，例如：产品经理=》研发经理=》普通研发=》测试。通常情况下，下游的人员是不会参与到需求层面的，已经到了分析并整理完成后的任务了。
+]
+
+---
+# 共赢～竞争
+
+.pull-left[
+* 没有具体的职位，允许多人做同一件事情
+* 竞争对手也可以合作
+* 贡献值是公开的
+]
+
+.pull-right[
+* 同一岗位的人员需求，取决于人员配置以及预算
+* 不同岗位的薪资不同
+* 看不到在其他项目的贡献
+]
+
+---
+# 扁平～等级
+
+.pull-left[
+* 没有一言堂
+* 自由选择希望改善的任务
+* 都是负责人
+]
+
+.pull-right[
+* 领导有非常大的决定权
+* 通常是任务分配
+]
+
+---
+# 自由～局限
+
+.pull-left[
+* 不会受工作背景的限制
+* 可以参与任何开源项目
+* 随时加入或退出
+
+
+* .red[没有明确的任期]
+]
+
+.pull-right[
+* 通常只能做本职的工作
+* 受制于决策周期、方向
+* 职位等级
+* 优先完成任务，而不是质量
+]
+
+---
+# 多样～单一
+
+.pull-left[
+* 在校大学生
+* 研发
+* 测试
+* 运维
+* 市场
+* 其他
+]
+
+.pull-right[
+* 有特定工作背景
+* 必须通过面试
+]
+
+---
+.left-column[
+Jenkins  
+简体中文插件
+]
+
+.center[
+![Jenkins简体中文插件](jenkins-chinese-plugin.jpg)
+]
+
+---
+.left-column[
+社区贡献者
+]
+
+.img-max-width-80[.center[
+![社区贡献者-1](jenkins-zh-github-contributors-1.jpg)
+]]
+
+---
+.left-column[
+社区贡献者
+]
+
+.img-max-width-80[.center[
+![社区贡献者-2](jenkins-zh-github-contributors-2.jpg)
+]]
+
+---
+.left-column[
+几点思考
+]
+
+* 协作的挑战
+* 英语的重要性
+* 原动力
+* 商业vs免费
+* 社区治理
+
+---
+class: center, middle
+# 持续交付黑客松
+### 开源 开放
+任何人、任何岗位都可以报名参加
+### 黑客
+工匠精神 ~ 48小时
+
+---
+class: center, middle
+# 谢谢
+### 共建、共赢、共享
+
+.left[.footnote[Jenkins 中文社区]]
+
+  </textarea>
+  <script>
+    var radio = sessionStorage.getItem('radio')
+    var click = sessionStorage.getItem('click')
+    var touch = sessionStorage.getItem('touch')
+    var scroll = sessionStorage.getItem('scroll')
+    var navigation = {
+      click: click == null ? true : JSON.parse(click),
+      touch: touch == null ? true : JSON.parse(touch),
+      scroll: scroll == null ? true : JSON.parse(scroll),
+    }
+    var slideshow = remark.create({
+      ratio: radio ? radio : '16:9',
+      navigation: navigation,
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="http://localhost:1313/files/muli-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     
+    <title>Speaches - SuRenPi</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    
+    <meta name="description" content="某个开源人的博客，记录开源路上的故事。">
+    
+    
+    <meta name="keywords" content="LinuxSuRen,surenpi,素人网站,素人派,技术博客">
+    
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+      <meta name="generator" content="Hugo 0.129.0">
+
+      
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      
+
+    <link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/speach/index.xml">
+    <link href='/dist/main.css' rel='stylesheet' type="text/css" />
+<style>
+  img.avatar {
+    width: 32px;
+    display: inline;
+  }
+</style>
+<meta property="og:url" content="http://localhost:1313/speach/">
+  <meta property="og:site_name" content="SuRenPi">
+  <meta property="og:title" content="Speaches">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Speaches">
+  <meta itemprop="datePublished" content="2022-08-27T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-08-27T00:00:00+00:00">
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4216293-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4216293-5');
+
+
+
+var trackOutboundLink = function(id, url) {
+  console.log("track:", id, url)
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': id,
+    'transport_type': 'beacon',
+    'event_callback': function(){document.location = url;}
+  });
+}
+
+</script>
+
+      
+      <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?5281185c68056bb7f9819259f3aaccc8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </head>
+  <body class="ma0 sans-serif bg-primary-color-light">
+    
+<nav class="bg-primary-color-dark pv4 w-100" role="navigation">
+
+  <div class="center flex-ns flex-wrap items-center justify-start mw9">
+
+    <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
+      <a href="http://localhost:1313/" class="link white">
+         SuRenPi
+      </a>
+    </h1>
+    <ul class="list ma0 pa0 dn dib-l">
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/blog" class="dim link light-silver">
+            博客
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/translation" class="dim link light-silver">
+            翻译
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/opensource" class="dim link light-silver">
+            开源
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/speach" class="dim link light-silver">
+            Slide
+              
+            
+            
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
+  <fieldset class="bn ma0 pa0">
+    <label class="clip" for="email-address">Search</label>
+    <input type="search" id="search-input" class="needs-js bg-left bg-transparent bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white"
+      placeholder="搜索文档" type="text"
+      name="email-address" value="" style="background-image:url('/images/icon-search.png');background-size:16px 16px;">
+  </fieldset>
+</form>
+</div>
+
+    <div class="list ma0 pa0 dn dib-l"></div>
+
+    <span class="absolute mt1 mt2-l pr3 right-0 top-0">
+
+  <a href="https://twitter.com/intent/follow?screen_name=linuxsuren" title="Follow on Twitter"
+    class="link-transition twitter link dib z-999 pt3 pt0-l mr2" target="_blank">
+    <svg height="32px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+  <a href="https://weibo.com/linuxsuren" title="Follow on Sina WeiBo" target="_blank"
+  class="link-transition link dib z-999 pt3 pt0-l mr2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32px" 
+    height="32px" viewBox="0 0 50.497 40.648">
+    <path fill="#E99315" d="M50.448 12.132c.217 2.814-.259 6.186-2.117 6.351-3.033.271-1.451-3.07-1.411-5.081.111-5.829-4.865-9.879-9.739-9.879-1.381 0-4.588.936-4.094-1.976.222-1.284 1.31-1.266 2.399-1.411 8.197-1.093 14.386 4.546 14.962 11.996z"/><path fill="#D52A2C" d="M37.04 18.907c3.524 1.928 7.758 2.888 7.056 8.61-.168 1.371-.998 3.203-1.834 4.373-5.957 8.339-23.924 11.844-35.144 5.506C3.355 35.269-.539 32.159.062 25.962c.517-5.333 4.103-9.464 7.622-12.983 3.357-3.359 6.897-5.987 11.714-7.198 5.226-1.314 6.771 3.043 5.363 7.339 3.027-.203 9.442-3.582 12.279-.282 1.25 1.454.771 4.058 0 6.069zm-3.811 13.548c1.129-1.28 2.264-3.231 2.257-5.503-.015-7.014-8.851-9.605-15.806-9.033-3.804.312-6.363 1.115-9.033 2.682-2.179 1.279-4.729 3.36-5.363 6.491-1.427 7.041 6.231 10.35 11.855 10.726 6.498.437 13.002-1.857 16.09-5.363z"/><path fill="#E99315" d="M43.531 12.132c.296 2.149-.319 4.011-1.552 4.093-2.056.137-1.287-1.408-1.412-3.246-.078-1.132-1.016-2.439-1.835-2.823-1.606-.752-4.093.548-4.093-1.693 0-1.664 1.443-1.491 2.259-1.553 3.574-.272 6.216 2.191 6.633 5.222z"/><path d="M27.019 26.246c3.007 9.088-12.66 13.314-15.525 5.504-1.917-5.223 2.686-9.377 7.48-9.879 4.093-.429 7.144 1.658 8.045 4.375zm-7.198 1.553c.638 1.104 2.105.311 1.976-.564-.154-1.013-1.989-.863-1.976.564zm-2.541 4.799c2.634-.627 2.988-5.588-.988-4.658-3.34.78-2.694 5.533.988 4.658z"/>
+</svg>
+
+  </a>
+
+
+  <a class="github-button needs-js link primary-color-dark" href="https://github.com/LinuxSuRen"
+    data-size="large" data-show-count="true" aria-label="Follow LinuxSuRen GitHub"></a>
+
+ </span>
+
+  </div>
+</nav>
+
+    
+    <main role="main" class="content-with-sidebar pb7 pb0-ns">
+      
+  
+  
+  <div class="w-100 ph4 pb5 pb6-ns pt1 mt4 pt3-ns">
+
+  <div class="flex">
+    <div class="dn db-l w-20">
+        
+<nav role="navigation">
+  <ul class="list pa0 nl2">
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".devops">DevOps</a>
+
+          
+            <ul class="devops desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/jenkins/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/docker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    容器技术
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/api/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    API
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/cross/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    General topic About DevOps
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/jenkins-x/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Jenkins X
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/k8s/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Kubernetes
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/team/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Team
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/devops/build/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    构建
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".language">编程语言</a>
+
+          
+            <ul class="language desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/golang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Golang
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/java/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Java
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/python/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Python
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/language/typescript/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    TypeScript
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".os">操作系统</a>
+
+          
+            <ul class="os desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/os/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Linux
+                  </a>
+                </li>
+              
+                <li  class="f6 fw4">
+                  <a href="/blog/os/mac/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+                    Mac
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+    
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="/blog/other" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".other">其他内容</a>
+
+          
+        </li>
+    
+  </ul>
+</nav>
+
+    </div>
+
+    <div class="w-100 w-80-l ph0 ph4-l">
+      <article class="w-100 nested-copy-line-height nested-links nested-img">
+        <h1 class="primary-color-dark f2">
+          Speaches
+        </h1>
+        <div class=" mid-gray f5 f4-l">
+          
+        </div>
+      </article>
+
+      
+
+      <div class="flex flex-wrap">
+        
+        <section class="flex-ns flex-wrap justify-between w-100">
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/speach/2022-08-open-source-world/" class="link primary-color dim">让我们一起了解开源</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          致广大开源用户
+        
+
+        <a href="/speach/2022-08-open-source-world/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative  weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/speach/2019-08-19-jenkins-chinese-community/" class="link primary-color dim">Jenkins 社区在国内的发展</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          分享 Jenkins 中文社区作出的一些努力
+        
+
+        <a href="/speach/2019-08-19-jenkins-chinese-community/" class="f6 mt2 db link primary-color dim">
+          查看更多 &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+        </section>
+      </div>
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+    </main>
+
+    <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+  <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+    <div class="pb3 pt4 w-100 w-50-ns">
+
+      <div class="b f3 light-gray mb3 nested-links tc">
+        由 <a href="https://github.com/LinuxSuRen/surenpi/graphs/contributors" class="link">SuRen</a> 维护<br/><a href='https://github.com/LinuxSuRen/surenpi/actions/'><img src='https://github.com/LinuxSuRen/surenpi/workflows/Deploy%20to%20GitHub%20Pages/badge.svg'></a></div>
+
+      <ul class="center f6 list ma0 mv3 pa0 tc" style="display:none"><li class="dib mr3"><a href="https://github.com/linuxsuren/surenpi/issues/new" class="dim link light-gray pv2">File an Issue</a></li></ul>
+
+      
+
+      
+    </div>
+
+    <div>
+      
+      <img src="https://avatars2.githubusercontent.com/u/1450685?s=460&v=4" with="100" height="100" style="display:none">
+      <a href="https://mp.weixin.qq.com/s/vifdduC3kRGSIMpyL03yVA" target="_blank">
+        <img src="https://jenkins.io/images/jenkins-wechat.png" with="100" height="100">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="f7 gray mb5 mb0-ns ph3 w-100" style="text-align: center;"> 
+    <p class="dib">Copyright 2018–2024 the original authors.</p>
+  </div>
+
+
+  <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    
+
+<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/blog" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          博客
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/translation" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          翻译
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/opensource" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          开源
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/speach" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Slide
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+<div  class="docsmenu mobilemenu pb3 dn">
+    
+
+<ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+</ul>
+
+</div>
+
+<div class="flex dn-l justify-between">
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+</div>
+</div>
+
+</footer>
+
+    <script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/";
+    
+</script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="/dist/app.bundle.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>未归类 on SuRenPi</title>
+    <link>http://localhost:1313/blog/other/</link>
+    <description>Recent content in 未归类 on SuRenPi</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 May 2019 17:50:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/other/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hub</title>
+      <link>http://localhost:1313/blog/other/hub/</link>
+      <pubDate>Wed, 29 May 2019 17:50:23 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/hub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git Log</title>
+      <link>http://localhost:1313/blog/other/git-log/</link>
+      <pubDate>Wed, 29 May 2019 17:41:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/git-log/</guid>
+      <description>返回最新的一次提交记录 git log -1&#xA;查看某个文件的提交记录 git log somefile&#xA;查看某个文件的变更内容 git log -p Jenkinsfile</description>
+    </item>
+    <item>
+      <title>Work</title>
+      <link>http://localhost:1313/blog/other/work/</link>
+      <pubDate>Mon, 06 May 2019 12:39:54 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/work/</guid>
+      <description>http://219.232.200.39/uamsso/</description>
+    </item>
+    <item>
+      <title>English Abbreviations</title>
+      <link>http://localhost:1313/blog/other/english-abbreviations/</link>
+      <pubDate>Thu, 02 May 2019 21:21:49 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/english-abbreviations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>学习英语</title>
+      <link>http://localhost:1313/blog/other/learning-english/</link>
+      <pubDate>Thu, 02 May 2019 08:48:03 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/learning-english/</guid>
+      <description>有很多学习英语的资料，可能会用到“梯子”，读者可以根据自身的情况进行选择。&#xA;网站 名称 梯子 备注 EngVid yes 有初中高不同等级的视频 视频 名称 梯子 备注 和 Emma 学英语 yes How to Talk Like a Native Speaker yes 字典 学习英语的过程中，经常会遇到很多生词，这时候就需要使用到字典了。下面推荐几个我在学习中用到的一些：&#xA;名称 梯子 备注 BusinessDictionary no 商业相关的词汇 FreeDictionary no 丰富的词条、习语等 Google no 支持很多种语言 词汇 pharmaceutical condition engineer spare time</description>
+    </item>
+    <item>
+      <title>Video</title>
+      <link>http://localhost:1313/blog/other/video/</link>
+      <pubDate>Mon, 15 Apr 2019 12:18:24 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/video/</guid>
+      <description>格式转换 这个网站可以把 Youtube 上的视频转换为 mp4 格式并提供下载链接。&#xA;https://youtubemp4.to/&#xA;下载 我们可以通过一个命令行工具来从 Youtube 上下载视频，首先，使用 brew 来安装命令行：&#xA;brew install youtube-dl&#xA;然后，就可以开始下载了：&#xA;youtube-dl &amp;quot;https://www.youtube.com/watch?v=EtlhC3vw8pA&amp;quot; --proxy 127.0.0.1:1087</description>
+    </item>
+    <item>
+      <title>GitHub Robot</title>
+      <link>http://localhost:1313/blog/other/github-robot/</link>
+      <pubDate>Sat, 06 Apr 2019 20:57:38 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/github-robot/</guid>
+      <description>这里列出一些 GitHub 中的“机器人”。&#xA;Stale Stale可以监控已有的 PR 列表，对于长期没有更新的 PR 会自动 添加“过期”的标签。当这类 PR 再次有更新或者评论时，自动取消“过期”标签；如果还是没有任何变化的话，会讲对应 的 PR 关闭。&#xA;这样就能做到，提供贡献者及时查看自己相关的 PR 动态。&#xA;utterances utterances 是基于 GitHub 的 Issues 来提供评论功能的服务。 对于使用 Hugo 这样的静态网页式的博客，可以非常方便地添加 网友评论功能——但无需任何数据库的服务。&#xA;PR Robot PR Robot</description>
+    </item>
+    <item>
+      <title>Technical Website</title>
+      <link>http://localhost:1313/blog/other/technical-website/</link>
+      <pubDate>Thu, 28 Mar 2019 14:28:05 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/technical-website/</guid>
+      <description>dev.to X-lab 开放实验室阅读俱乐部&#xA;Code Cartoon&#xA;cloud shell</description>
+    </item>
+    <item>
+      <title>Git Config</title>
+      <link>http://localhost:1313/blog/other/git-config/</link>
+      <pubDate>Tue, 26 Feb 2019 18:04:00 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/git-config/</guid>
+      <description>修改作者 git commit --amend --author=&amp;quot;Author Name &amp;lt;name@email.com&amp;gt;&amp;quot;&#xA;修改提交记录 git commit --amend 执行该命令后直接修改上次的提交记录即可&#xA;本地/全局 通过参数可以指定是对全局还是当前项目的修改&#xA;git config --local user.email &amp;lt;name@email.com&amp;gt;&#xA;git config --global user.email &amp;lt;name@email.com&amp;gt;</description>
+    </item>
+    <item>
+      <title>Git GC</title>
+      <link>http://localhost:1313/blog/other/git-gc/</link>
+      <pubDate>Tue, 29 Jan 2019 15:28:28 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/git-gc/</guid>
+      <description>在当前库中运行一些清理任务，例如：压缩文件版本（减少磁盘占用，提高性能），移除垃圾对象。&#xA;鼓励用户在每个库中定期运行该任务，这样能保持更好的磁盘利用率，以及运行性能。&#xA;一些 git 命令会自动执行 git gc。查看参数 --auto 了解更多细节。如果你希望永久禁用该功能并知道后果的话，可以执行如下命令：&#xA;git config --global gc.auto 0&#xA;本地分支 查看已经合并过的分支&#xA;git branch --merged&#xA;查看未合并过的分支&#xA;git branch --no-merged&#xA;远程分支 清理远程过期的分支引用&#xA;git remote prune origin&#xA;我们也可以在拉取远程分支信息的时候执行清理任务&#xA;git fetch -p&#xA;查看已经合并过的远程分支&#xA;git branch -r --merged&#xA;更多的分支操作</description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>http://localhost:1313/blog/other/selenium/</link>
+      <pubDate>Sat, 19 Jan 2019 19:22:23 +0800</pubDate>
+      <guid>http://localhost:1313/blog/other/selenium/</guid>
+      <description>远程模式 在 下载页面中，找到 Selenium Standalone Server 并下砸，然后执行如下的命令：&#xA;java -jar selenium-server-standalone-{VERSION}.jar&#xA;然后就可以访问 http://localhost:4444/wd/hub</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/chromedp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/chromedp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/eclipse-plugin-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/eclipse-plugin-dev/</guid>
+      <description>Eclipse插件开发 类 ImageDescriptor 在 org.eclipse.jface 中。&#xA;控制台 快捷键 Alt+Shift+F1 查看 UI 界面实现类&#xA;构建 http://www.vogella.com/tutorials/EclipseTycho/article.html http://maven.apache.org/plugins/maven-eclipse-plugin/pde.html</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/ini/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/ini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/toml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/toml/</guid>
+      <description>TOML TOML(Tom&amp;rsquo;s Obvious, Minimal Language) origin</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/other/yaml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/yaml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache2</title>
+      <link>http://localhost:1313/blog/other/apache2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/apache2/</guid>
+      <description>查看工作方式 apachectl -V | grep -i mpm&#xA;配置文件如下：&#xA;&amp;lt;IfModule mpm_prefork_module&amp;gt; StartServers 10 # 启动时进程数 MinSpareServers 5 # 最小空闲进程数 MaxSpareServers 10 # 最大空闲进程数 MaxRequestWorkers 100 # 最大并发进程数 MaxConnectionsPerChild 10000 # 最大连接数限制 &amp;lt;/IfModule&amp;gt; </description>
+    </item>
+    <item>
+      <title>Auto complete</title>
+      <link>http://localhost:1313/blog/other/vim-auto-complete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-auto-complete/</guid>
+      <description>Ctrl+X+P 整行&#xA;Ctrl+X+N 当前文件&#xA;Ctrl+X+K 字典&#xA;Ctrl+X+I 当前以及包含的文件&#xA;Ctrl+X+F 文件名</description>
+    </item>
+    <item>
+      <title>ctrlp</title>
+      <link>http://localhost:1313/blog/other/vim-ctrlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-ctrlp/</guid>
+      <description>Reference ctrlp</description>
+    </item>
+    <item>
+      <title>Directory</title>
+      <link>http://localhost:1313/blog/other/vim-dir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-dir/</guid>
+      <description>:pwd 查看当前目录&#xA;:cd %:p:h 切换目录到当前文件所在目录&#xA;:lcd %:p:h 切换当前窗口的目录到当前文件所在目录</description>
+    </item>
+    <item>
+      <title>Firefox</title>
+      <link>http://localhost:1313/blog/other/firefox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/firefox/</guid>
+      <description>firefox -private</description>
+    </item>
+    <item>
+      <title>Git Branch</title>
+      <link>http://localhost:1313/blog/other/git-branch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-branch/</guid>
+      <description>切换标签 git branch 列出本地分支 git checkout master 切换到本地 master 分支&#xA;删除分支 git branch --delete abc 删除分支 abc&#xA;git push origin --delete abc 删除远程分支&#xA;git branch -v | grep gone | awk &#39;//{print $1}&#39; | xargs git branch -d 删除远程分支不存在的`&#xA;git remote prune origin&#xA;拉取分支 git checkout -b abc 基于当前分支创建新分支&#xA;git checkout --track origin/abc 拉取远程分支&#xA;推送分支 git push origin local-branch:remote-branch 推送本地分支到远程上不同的分支</description>
+    </item>
+    <item>
+      <title>Git Rebase</title>
+      <link>http://localhost:1313/blog/other/git-rebase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-rebase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git Remote</title>
+      <link>http://localhost:1313/blog/other/git-remote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-remote/</guid>
+      <description>git remote show origin 可以查看仓库的分支信息，虽然另外一条命令 git branch -a 能看到所有的远程分支列表，但缺点是无法看到哪些分支是被删除了的。&#xA;这里的场景是：当你建立的feature或者fix分支被合并到了master后，通常会把该分支（远程）删除。那么，本地的分支实际上已经没有了远程所对应的分支了。如果，我们不把本地的分支删除的话，就会导致本地分支的数量越来越多，难以管理。通过上面的命令，我们可以很清晰地看到有哪些远程分支已经被删除。然后，通过下面的命令来清理本地的陈旧分支。&#xA;git remote prune origin 该命令会立即把所有需要修剪（prune）的分支删除。但，如果我们还希望能在删除之前查看有哪些会被删除的话可以执行下面的命令：&#xA;git remote prune origin --dry-run 当然，origin 这里就是远程库的名称，你可以换成你实际的远程库名称。&#xA;最后，你还需要再把本地的分支删除，命令是 git branch --delete dev。&#xA;多个远程库 我们可以在本地 git 仓库中，添加多个远程仓库，请参考下面的命令：&#xA;git remote add origin https://github.com/jenkins-zh/jenkins-cli git remote add gitee https://gitee.com/jenkins-zh/jenkins-cli.git 当我们执行命令 git push 时，默认会把当前分支推送到所关联的远程仓库中，这里通常会是 origin。&#xA;如果，我们希望能同时把代码推送到多个远程仓库中的话，可以先执行如下的命令&#xA;git remote set-url --add --push origin https://github.com/jenkins-zh/jenkins-cli git remote set-url --add --push origin https://gitee.com/jenkins-zh/jenkins-cli.git 我们也可以通过下面的命令删除上面的配置&#xA;git remote set-url --delete --push origin https://gitee.com/jenkins-zh/jenkins-cli.git&#xA;删除远程仓库 我们可以通过下面的命令，删除一个远程仓库：</description>
+    </item>
+    <item>
+      <title>Git Reset</title>
+      <link>http://localhost:1313/blog/other/git-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-reset/</guid>
+      <description>撤销对某个文件的修改 当发现某次 Git 提交中，包含了错误的修改记录，可能误删文件、多提交了文件等。这时候，可以按照如下的流程把提交记录进行修改：&#xA;首先，获取某个文件的提交记录，命令为：git log &amp;lt;filename&amp;gt;&#xA;找到需要恢复到的那次提交记录，执行撤销命令： git reset &amp;lt;commit-id&amp;gt; &amp;lt;filename&amp;gt; 然后 git checkout &amp;lt;filename&amp;gt;&#xA;最后，确认修改：git commit --amend &amp;amp;&amp;amp; git push&#xA;如果在上述的操作之前，push 过的话，记得再次 push 时需要添加 -f 参数。</description>
+    </item>
+    <item>
+      <title>Git Stage</title>
+      <link>http://localhost:1313/blog/other/git-stage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-stage/</guid>
+      <description>我们提交文件，要先执行 git add 然后再执行 git commit。但是，如果在执行 commit 时，发现由于误操作导致一些不希望提交的文件也被 add 了。这时候，我们可以执行命令 git reset HEAD readme.md 来取消该操作。&#xA;git checkout readme.md 可以把 unstage 状态的文件修改丢弃</description>
+    </item>
+    <item>
+      <title>Git Submodule</title>
+      <link>http://localhost:1313/blog/other/git-submodule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-submodule/</guid>
+      <description>子模块 克隆含有子模块的项目 需要在子模块目录中执行命令 git submodule init&#xA;get submodule update 更新子模块代码</description>
+    </item>
+    <item>
+      <title>Git 标签（tag）</title>
+      <link>http://localhost:1313/blog/other/git-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-tag/</guid>
+      <description>标签 git tag v0.1.2-light&#xA;git tag -a v0.2 -m &#39;here is comment&#39;&#xA;切换到标签 git checkout v0.2&#xA;删除标签 git tag -d v0.2&#xA;基于提交记录打标签及 git tag -a v0.2 beab786 -m &#39;from branch hello beab786&#39;&#xA;发布指定的标签 git push origin v0.2&#xA;把所有的标签一次性发布 git push origin --tags&#xA;git可以在同一个提交上打多个名称不一样的标签&#xA;获取远程标签 git fetch --all --tags 这样会获取所有远程库的所有标签（tag）&#xA;删除远程标签 git push --delete origin tagname 删除远程的指定标签</description>
+    </item>
+    <item>
+      <title>Git 代理</title>
+      <link>http://localhost:1313/blog/other/git-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/git-proxy/</guid>
+      <description>全局代理 git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port&#xA;部分代理 我们也可以对指定的域名配置代理，格式为：git config --global http.https://github.com.proxy http://proxyUsername:proxyPassword@proxy.server.com:port&#xA;git config --global http.https://github.com.proxy 127.0.0.1:1087 git config --global http.https://github.com.sslVerify false 查看配置 git config --global --get-regexp http.* git config --get-regexp http.* 取消代理 git config --global --unset http.proxy git config --global --unset http.https://domain.com.proxy git config --global --unset http.sslVerify git config --global --unset http.https://domain.com.sslVerify </description>
+    </item>
+    <item>
+      <title>Gitea</title>
+      <link>http://localhost:1313/blog/other/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/gitea/</guid>
+      <description>docker pull gitea/gitea:latest</description>
+    </item>
+    <item>
+      <title>Gitlab</title>
+      <link>http://localhost:1313/blog/other/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/gitlab/</guid>
+      <description>Docker 我们可以在 Docker 中运行 Gitlab。首先，要拉取镜像 docker pull gitlab/gitlab-ce。&#xA;启动容器的命令 docker run -d -p 1234:80 --rm gitlab/gitlab-ce&#xA;Gitlab 在 DockerHub 上的地址 https://hub.docker.com/r/gitlab/gitlab-ce/</description>
+    </item>
+    <item>
+      <title>GoFish</title>
+      <link>http://localhost:1313/blog/other/gofish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/gofish/</guid>
+      <description>curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash&#xA;https://gofi.sh/&#xA;https://github.com/fishworks/fish-food</description>
+    </item>
+    <item>
+      <title>HTTP Status</title>
+      <link>http://localhost:1313/blog/other/http_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/http_status/</guid>
+      <description>200 300 400 401 未经授权：访问由于凭据无效被拒绝。&#xA;404 无法找到页面&#xA;500 Reference </description>
+    </item>
+    <item>
+      <title>IntelliJ IDEA 快捷键</title>
+      <link>http://localhost:1313/blog/other/idea-shortcut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/idea-shortcut/</guid>
+      <description>Alt+Enter 快速修复（例如：快速地添加import、添加需要从接口中实现的方法等等） Alt+Insert 快速添加getter、setter、toString等方法 Ctrl+Shift+U 大小写切换 Ctrl+E 列出最近的文件 Ctrl+Q 快速显示注释文档 Ctrl+G 定位到行 Ctrl+X 删除行 Ctrl+N 类查找 Ctrl+Shift+Alt+N 方法查找 Ctrl+F12 方法查找 Ctrl+Shift+N 文件查找 Ctrl+Alt+B 定位到实现类中（或者Ctrl+Alt+Left Mouse） Ctrl+Alt+O 删除没有使用的import语句 </description>
+    </item>
+    <item>
+      <title>Iterm2</title>
+      <link>http://localhost:1313/blog/other/iterm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/iterm2/</guid>
+      <description>自动完成 CMD+;&#xA;Reference https://www.iterm2.com</description>
+    </item>
+    <item>
+      <title>Monitor</title>
+      <link>http://localhost:1313/blog/other/monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/monitor/</guid>
+      <description>查看温度 安装软件 apt-get install sensord&#xA;然后执行命令 sensors</description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>http://localhost:1313/blog/other/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/nginx/</guid>
+      <description>Nginx 配置文件的一大特点是：必须要以分号结尾。&#xA;变量 Name Description $scheme The scheme of HTTP request, could be http, https $host $request_uri ] 逻辑判断 ngx_http_rewrite_module rewrite server { listen 80; server_name surenpi.com; location / { rewrite ^ https://linuxsuren.github.io/blog/; } } return Syntax: return code [text]; return code URL; return URL; Default: - Context: server, location, if if ($host = &amp;#34;github.com&amp;#34;) { return 301 https://nexus-b.alauda.cn/repository/github-proxy$request_uri; } HTTPS </description>
+    </item>
+    <item>
+      <title>Postgres</title>
+      <link>http://localhost:1313/blog/other/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/postgres/</guid>
+      <description>安装 helm install --namespace default stable/postgresql --name postgre&#xA;docker run -p 5432:5432 -u root --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres&#xA;获取密码 export POSTGRES_PASSWORD=$(kubectl get secret postgre-postgresql -o jsonpath=&amp;quot;{.data.postgresql-password}&amp;quot; | base64 --decode)&#xA;连接数据库 kubectl run postgre-postgresql-client --rm --tty -i --restart=&#39;Never&#39; --image docker.io/bitnami/postgresql:11.3.0 --env=&amp;quot;PGPASSWORD=$POSTGRES_PASSWORD&amp;quot; --command -- psql --host postgre-postgresql -U postgres&#xA;查询 创建数据库 CREATE DATABASE testdb;&#xA;查询数据库 \l&#xA;查询当前数据库中的表 \dt&#xA;选择数据库 \c postgres;&#xA;备份和恢复 pg_dump -U [postgres-user] [database-name] &amp;gt; database.sql&#xA;cat database.sql | psql -U [postgres-user] -d [database-name]</description>
+    </item>
+    <item>
+      <title>Postman</title>
+      <link>http://localhost:1313/blog/other/postman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/postman/</guid>
+      <description>利用 Postman 可以很方便地基于 HTTP 的 API 做接口测试。</description>
+    </item>
+    <item>
+      <title>RPM</title>
+      <link>http://localhost:1313/blog/other/rpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/rpm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sonarqube</title>
+      <link>http://localhost:1313/blog/other/sonarqube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/sonarqube/</guid>
+      <description>Docker docker run --restart=always -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube Helm 我们可以通过 helm chart 来快速地安装一个 Sonarqube。下面的例子中，我们使用 postgresql 作为数据库：&#xA;helm install --name postgresql --set postgresqlUsername=sonarUser \ --set postgresqlPassword=sonarPass,postgresqlDatabase=sonarDB \ --set persistence.enabled=false \ --set service.type=NodePort \ stable/postgresql 安装 Sonarqube：&#xA;helm install --name sonaqube \ --set postgresql.postgresServer=10.111.207.76 \ --set postgresql.service.port=30180 \ --set service.type=NodePort \ stable/sonarqube 默认的用户名和密码都是：admin&#xA;安装插件 http://129.28.186.10:30870/admin/marketplace</description>
+    </item>
+    <item>
+      <title>Talk something about Chrome</title>
+      <link>http://localhost:1313/blog/other/chrome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/chrome/</guid>
+      <description>When you cannot visit a website with HTTPS, please click the blank place then type the following text:&#xA;thisisunsafe</description>
+    </item>
+    <item>
+      <title>Typora</title>
+      <link>http://localhost:1313/blog/other/typora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/typora/</guid>
+      <description>Typora 支持用 Markdown 的方式来“画”流程图。&#xA;流程图 graph LR; A[Hard edge] --&gt;|Link text| B(Round edge) B --&gt; C{Decision} C --&gt;|One| D[Result one] C --&gt;|Two| E[Result two] 序列图 sequenceDiagram participant Alice participant Bob Alice-&gt;&gt;John: Hello John, how are you? loop Healthcheck John-&gt;John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--&gt;Alice: Great! John-&gt;Bob: How about you? Bob--&gt;John: Jolly good! 甘特图 gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d 参考 https://support.</description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>http://localhost:1313/blog/other/vim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim/</guid>
+      <description>粘贴缩进错乱 让 vim 进入 paste 模式，命令如下：&#xA;:set paste&#xA;解除 paste 模式的命令如下：&#xA;:set nopaste&#xA;字符 :set invlist 显示不可见字符&#xA;:set nolist 隐藏不可见字符&#xA;样例配置 set number set incsearch set hlsearch set autoindent &amp;#34;set smartindent set autochdir set ignorecase &amp;#34;set textwidth=80 set colorcolumn=+1 set tabstop=4 set shiftwidth=4 set expandtab &amp;#39;把tab转为空格 set backspace=indent,start,eol set showmatch set matchtime=1 set ruler set foldmethod=syntax &amp;#34;set foldmethod=indent set foldlevel=0 set encoding=utf-8 set termencoding=utf-8 set langmenu=zh_CN.utf-8 language message zh_CN.utf-8 &amp;#34;set titlestring=中文 set nolist set nocursorline set nocursorcolumn syntax on filetype on </description>
+    </item>
+    <item>
+      <title>VIM Buffer</title>
+      <link>http://localhost:1313/blog/other/vim-buffer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-buffer/</guid>
+      <description>:ls 或 :buffers 列出所有的缓冲区&#xA;:b 1 切换到指定编号的缓冲区&#xA;:sb 1 或 :sbuffer 1 使用缓冲区新建切分窗口</description>
+    </item>
+    <item>
+      <title>VIM bundle</title>
+      <link>http://localhost:1313/blog/other/vim-bundle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-bundle/</guid>
+      <description>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim&#xA;Reference Vundle</description>
+    </item>
+    <item>
+      <title>VIM Command</title>
+      <link>http://localhost:1313/blog/other/vim-cmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-cmd/</guid>
+      <description>命令模式 删除文本 x 删除当前字符 X 删除前一个字符&#xA;dd 删除当前行 D 删除当前字符后的文本&#xA;dw 删除当前单词&#xA;字符替换 R 开启字符串替换模式，知道按下 ESC&#xA;r 替换当前字符&#xA;转换为大写 通过命令 v 选中文本，然后用 U 变成大写，用 u 变为小写。&#xA;通过命令 ~ 可以切换所选或光标所在的字符大小写&#xA;g~~ 切换当前行的大小写&#xA;guu 切换当前行为小写&#xA;gUU 切换当前行为大写&#xA;撤销 u 撤销一次更改 ctrl+r 恢复一次撤销&#xA;剪贴板 :reg 或 :register 或 :dis 或 :display 显示剪贴板&#xA;yy 拷贝当前行&#xA;p 粘贴&#xA;格式化 :left 居左对齐 :right 居右对齐&#xA;数字 ctrl+a 数字+1&#xA;ctrl+x 数字-1&#xA;其他 ctrl+g 显示当前文件路径&#xA;编辑模式 Reference Vim documentation: help Vim documentation: change</description>
+    </item>
+    <item>
+      <title>VIM GoLang</title>
+      <link>http://localhost:1313/blog/other/vim-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-go/</guid>
+      <description>Dependency go get -v github.com/zmb3/gogetdoc go get -v golang.org/x/tools/cmd/guru1 go get -v github.com/golang/lint/golint go get -v github.com/davidrjenni/reftools/cmd/fillstruct&#xA;Action :GoRun :GoBuild :GoTest :GoDef :GoRename Reference vim-go vim-go-tutorial</description>
+    </item>
+    <item>
+      <title>VIM Network</title>
+      <link>http://localhost:1313/blog/other/vim-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-network/</guid>
+      <description>VIM 支持直接编辑网络上的文件。例如：vim https://linuxsuren.github.io/blog/&#xA;Reference http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html</description>
+    </item>
+    <item>
+      <title>VIM Replace</title>
+      <link>http://localhost:1313/blog/other/vim-regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-regex/</guid>
+      <description>简单文本替换 :[range]s[ubtitute]/{pattern}/{string}/[flags] [count]&#xA;全局文本替换 :[range]g[lobal]/{pattern}/[cmd]&#xA;:[range]g[lobal]!/{pattern}/[cmd]&#xA;示例：&#xA;将找到的第一个字符串abc替换为def s/abc/def&#xA;将找到的所有字符串abc替换为def s/abc/def/g&#xA;将包含有字符串abc的行删除 g/abc/ del&#xA;将行首增加序列号 let i = 1 | g/./s/^/\=i/ | let i += 1&#xA;将所有包含image331的行中，替换331为从331开始递增的数字 let i = 331 | g/image331/s/331/\=i/ | let i += 1&#xA;从1358行开始进行替换 let i = 792 | 1358,$g/resources\/image/s/\d\d\d/\=i/ | let i += 2&#xA;将所有已开头的行在结尾添加 g/^\s*&amp;lt;para&amp;gt;/ s/$/&amp;lt;\/para&amp;gt;&#xA;把以开头，若干个空白结尾的行删除 g/^\s*&amp;lt;para&amp;gt;\s*&amp;lt;\/para&amp;gt;$/ del&#xA;把以空白字符开头，并且第一个字符不是&amp;lt;的行首添加 g!/^\s*&amp;lt;/ s/^/&amp;lt;para&amp;gt;&#xA;把中间还有尖括号(&amp;lt;&amp;gt;)的行删除 g/&amp;lt;para&amp;gt;.*[&amp;lt;&amp;gt;].*&amp;lt;\/para&amp;gt;/ del&#xA;找到没有以结尾的行 s/para&amp;gt;.*[^(&amp;lt;\/para&amp;gt;)]$</description>
+    </item>
+    <item>
+      <title>VIM tab</title>
+      <link>http://localhost:1313/blog/other/vim-tab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-tab/</guid>
+      <description>:tabnew a.log 新建选项卡&#xA;:tabNext 切换到下一个选项卡&#xA;:tabprevious 切换到上一个选项卡&#xA;:tabclose 关闭选项卡</description>
+    </item>
+    <item>
+      <title>vim-airline</title>
+      <link>http://localhost:1313/blog/other/vim-airline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-airline/</guid>
+      <description>Reference vim-airline</description>
+    </item>
+    <item>
+      <title>Vim-Fugitive</title>
+      <link>http://localhost:1313/blog/other/vim-fugitive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/vim-fugitive/</guid>
+      <description>Installation git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle&#xA;Usage :Gstatus 查看变更状态，等同于 git status&#xA;:Gcommit % 提交代码，等同于 git commit&#xA;:Gpush 推送代码&#xA;:Gpush -u origin test 推送新的分支&#xA;:Gpull 拉取代码&#xA;Reference vim-fugitive vim-scripts</description>
+    </item>
+    <item>
+      <title>代理</title>
+      <link>http://localhost:1313/blog/other/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/other/proxy/</guid>
+      <description>分类 ssh shadowsocks Ubuntu sudo apt-get install shadowsocks&#xA;CentOS yum install shadowsocks&#xA;pip install shadowsocks&#xA;sudo pip install shadowsocks --upgrade&#xA;使用 sudo sslocal -c shadowsocks.json -d start&#xA;polipo 安装 sudo apt-get install polipo&#xA;brew install polip&#xA;安装依赖 yum install texinfo -y 然后下载源码 git clone https://github.com/jech/polipo.git 最后编译 cd polipo &amp;amp;&amp;amp; make all &amp;amp;&amp;amp; make install&#xA;使用 polipo socksParentProxy=127.0.0.1:1080&#xA;配置终端的代理 HTTP_PROXY=http://127.0.0.1:8123 HTTPS_PROXY=http://127.0.0.1:8123 SOCKS_PROXY=socks5://127.0.0.1:1080 no_proxy=*.baidu.com,localhost,127.0.0.1,192.18.*.*, export HTTP_PROXY HTTPS_PROXY no_proxy 参考 如何给 Git 配置代理</description>
+    </item>
+  </channel>
+</rss>
