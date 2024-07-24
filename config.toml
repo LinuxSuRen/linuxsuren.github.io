@@ -111,10 +111,10 @@ pattern = "2006"
 
 [params]
 ## Gh repo for site footer (include trailing slash)
-ghrepo = "https://github.com/linuxsuren/surenpi/"
+ghrepo = "https://github.com/linuxsuren/linuxsuren.github.io/"
 ## GH Repo for filing a new issue
-github_repo = "https://github.com/linuxsuren/surenpi/issues/new"
-ghdocsrepo = "https://github.com/LinuxSuRen/surenpi/tree/master"
+github_repo = "https://github.com/linuxsuren/linuxsuren.github.io/issues/new"
+ghdocsrepo = "https://github.com/linuxsuren/linuxsuren.github.io/tree/master"
 env = "production"
 
 [params.comments.utterances]
