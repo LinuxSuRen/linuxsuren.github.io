@@ -6,9 +6,19 @@ draft: false
 toc: true
 ---
 
-IDE（Intelligent Development Environment） 对于软件开发者来说，是一个非常重要的工具。
+IDE（Intelligent Development Environment） 对于软件开发者来说，是一个非常重要的工具。好用的 IDE 可以大幅提高开发效率，减少不必要的重复工作。
 
-## GitPod
+就目前而言，本地的 IDE 可能依然是主流的选择。但是，在本地进行开发，也是有着诸多缺点，例如：
+
+* IDE 本身的资源消耗巨大（例如：GoLand 启动就需要 1.4G 内存）
+* 语言框架、库依赖占用大量的磁盘（20G ~ 40G 都很正常，涉及到多种语言开发的话，磁盘消耗往往会翻倍）
+* 涉及到云原生的话，又会很轻松地吃掉你大量的磁盘（40G+）
+
+实际情况是，当在开发大型程序时，你的工作电脑至少需要 8核 16G 内存，并且磁盘空间至少 1T。磁盘最好是固态的，但为了经济考虑可以固态、机械硬盘各 500G。
+
+对于注重研发效率、愿意给工程师提供高配笔记本的的公司也许不需要考虑这一点，但对于很多只给到以上基础配置（甚至都不如）的 Windows 笔记本的话，工作起来会感觉到很难受。
+
+下面，我会介绍一些可以运行在远程的 IDE，本地只需要浏览器或者相应的客户端即可，可以极大地改善研发体验。
 
 ## VSCode Server
 
@@ -33,6 +43,7 @@ code tunnel
 * 无法为团队不同人员自动化地提供 IDE 实例
 * 没有用户认证，无法保证使用安全
 * 缺少实例资源（CUP、内存、硬盘等）控制
+* 没有提供容器镜像版本，只有二进制文件
 
 ## OpenVSCode Server
 
@@ -81,3 +92,21 @@ RUN \
 我在 https://github.com/LinuxSuRen/openvscode-server-images 这个项目中维护了：Golang、Java、NodeJS 以及包含常见前后端的全量镜像，欢迎各位使用。
 
 但需要注意的是，OpenVSCode Server 会从 https://open-vsx.org/ 这里获取插件列表，和 VSCode 的插件中心地址不同。当然，格式上是完全兼容的。
+
+## Coder
+
+[Coder](https://github.com/coder/code-server) 也是一个基于 VSCode 的开源 IDE。核心程序协议为 AGPL。
+
+通过下面的命令启动：
+
+```shell
+docker run -p 8080:8080 ghcr.io/coder/code-server:4.91.1-39
+```
+
+他可以借助 Terraform 在云主机上创建远程 IDE 实例，也可以通过 [JetBrain Gateway](https://www.jetbrains.com/remote-development/gateway/) 来连接。
+
+## 其他相关项目
+
+* https://eclipse.dev/che/
+* https://www.jetbrains.com/space/download/
+* https://github.com/daytonaio/daytona
