@@ -110,3 +110,4 @@ docker run -p 8080:8080 ghcr.io/coder/code-server:4.91.1-39
 * https://eclipse.dev/che/
 * https://www.jetbrains.com/space/download/
 * https://github.com/daytonaio/daytona
+* https://github.com/loft-sh
